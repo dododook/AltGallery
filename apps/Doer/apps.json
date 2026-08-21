@@ -1,0 +1,47 @@
+{
+  "name": "Doer",
+  "subtitle": "Doer AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Doer",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/icon.png",
+  "website": "https://github.com/moliango/doer",
+  "tintColor": "#2B7FFF",
+  "apps": [
+    {
+      "name": "Doer",
+      "bundleIdentifier": "com.naine.doer",
+      "developerName": "moliango",
+      "subtitle": "原生 iOS Linux.do 客户端",
+      "localizedDescription": "原生 iOS Linux.do 客户端，UIKit + Swift。支持话题浏览、帖子详情、回复互动、多主题、小程序与插件。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/miniprogram.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/me.png"
+      ],
+      "tintColor": "#2B7FFF",
+      "versions": [
+        {
+          "version": "1.7-build.16",
+          "date": "2026-08-21",
+          "localizedDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.6-build.11...v1.7-build.16",
+          "downloadURL": "https://github.com/moliango/doer/releases/download/v1.7-build.16/doer-unsigned.ipa",
+          "size": 13822899,
+          "minOSVersion": "15.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.naine.doer",
+      "title": "Doer 1.7-build.16 · 21 Aug 2026",
+      "identifier": "release-v1.7-build.16",
+      "caption": "Doer 1.7-build.16 is available.",
+      "date": "2026-08-21T09:32:29Z",
+      "tintColor": "#2B7FFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png",
+      "notify": true,
+      "url": "https://github.com/moliango/doer/releases/tag/v1.7-build.16"
+    }
+  ]
+}

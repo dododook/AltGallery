@@ -153,6 +153,30 @@
       ]
     },
     {
+      "name": "Doer",
+      "bundleIdentifier": "com.naine.doer",
+      "developerName": "moliango",
+      "subtitle": "原生 iOS Linux.do 客户端",
+      "localizedDescription": "原生 iOS Linux.do 客户端，UIKit + Swift。支持话题浏览、帖子详情、回复互动、多主题、小程序与插件。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/miniprogram.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/me.png"
+      ],
+      "tintColor": "#2B7FFF",
+      "versions": [
+        {
+          "version": "1.7-build.16",
+          "date": "2026-08-21",
+          "localizedDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.6-build.11...v1.7-build.16",
+          "downloadURL": "https://github.com/moliango/doer/releases/download/v1.7-build.16/doer-unsigned.ipa",
+          "size": 13822899,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
       "name": "DolphiniOS",
       "bundleIdentifier": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
       "developerName": "OatmealDome",
@@ -266,11 +290,11 @@
       "tintColor": "#4CAF50",
       "versions": [
         {
-          "version": "2.2.8",
-          "date": "2026-08-15",
-          "localizedDescription": "- 适配 flutter 3.47 (@Predidit)\r\n- 修复 windows 平台部分视频来源只能播放5秒零碎片段的问题 (#2265 #1976 #2301) (@Predidit)\r\n- 兼容更多非标准视频流 (@zhn1100)\r\n- 桌面平台UI性能优化 (@Predidit)",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.8/Kazumi_ios_2.2.8_no_sign.ipa",
-          "size": 29635192,
+          "version": "2.2.9",
+          "date": "2026-08-21",
+          "localizedDescription": "- 优化弹幕检索匹配 (#2453) (@walker1211)\r\n- 重做 android 平台画中画实现，修复进出画中画时的布局异常 (@Predidit)\r\n- 修复 android 平台切换到后台后返回时缓冲卡住的问题 (@Predidit)\r\n- 修复 linux 平台重复启动导致本地数据被清空的问题 (#2462 #2027) (@walker1211)\r\n- 修复 macOS 平台窗口失焦后无法再次点击激活的问题 (#2457) (@walker1211)\r\n- 修复规则批量更新结果提示一闪而过的问题 (#2431) (@walker1211)\r\n- 从历史记录进入播放页时选集列表定位到当前集数 (@NanoShiki)\r\n- 其他 UI 调整 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.2.9/Kazumi_ios_2.2.9_no_sign.ipa",
+          "size": 29638292,
           "minOSVersion": "13.0"
         }
       ]
@@ -470,6 +494,28 @@
   ],
   "news": [
     {
+      "appID": "com.naine.doer",
+      "title": "Doer 1.7-build.16 · 21 Aug 2026",
+      "identifier": "release-v1.7-build.16",
+      "caption": "Doer 1.7-build.16 is available.",
+      "date": "2026-08-21T09:32:29Z",
+      "tintColor": "#2B7FFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png",
+      "notify": true,
+      "url": "https://github.com/moliango/doer/releases/tag/v1.7-build.16"
+    },
+    {
+      "appID": "com.example.kazumi",
+      "title": "Kazumi 2.2.9 · 21 Aug 2026",
+      "identifier": "release-2.2.9",
+      "caption": "Kazumi 2.2.9 is available.",
+      "date": "2026-08-21T06:53:25Z",
+      "tintColor": "#4CAF50",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.2.9"
+    },
+    {
       "appID": "com.kodjodevf.mangayomi",
       "title": "Mangayomi 0.8.8 · 20 Aug 2026",
       "identifier": "release-v0.8.8",
@@ -523,17 +569,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
       "notify": true,
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
-    },
-    {
-      "appID": "com.example.kazumi",
-      "title": "Kazumi 2.2.8 · 15 Aug 2026",
-      "identifier": "release-2.2.8",
-      "caption": "Kazumi 2.2.8 is available.",
-      "date": "2026-08-15T01:52:16Z",
-      "tintColor": "#4CAF50",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.2.8"
     },
     {
       "appID": "ani.baka",
