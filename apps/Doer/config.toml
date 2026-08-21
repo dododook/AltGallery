@@ -1,0 +1,43 @@
+# altgen config for the Doer AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "moliango/doer"
+
+[source]
+name = "Doer"
+subtitle = "Doer AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Doer"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/icon.png"
+website = "https://github.com/moliango/doer"
+tint_color = "#2B7FFF"
+
+[app]
+name = "Doer"
+bundle_identifier = "com.naine.doer"
+developer_name = "moliango"
+subtitle = "原生 iOS Linux.do 客户端"
+description = "原生 iOS Linux.do 客户端，UIKit + Swift。支持话题浏览、帖子详情、回复互动、多主题、小程序与插件。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/home.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/miniprogram.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/me.png",
+]
+tint_color = "#2B7FFF"
+min_os_version = "15.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob). Filenames changed over time:
+# doer-unsigned.ipa, dexoflux-unsigned.ipa, dexo-unsigned.ipa.
+asset_pattern = ".*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by templates/render_news.py
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png"
+
+[output]
+path = "apps.json"

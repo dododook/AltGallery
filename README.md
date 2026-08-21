@@ -41,6 +41,9 @@ A native ARM64 PlayStation 2 emulator for iOS and iPadOS, forked from PCSX2.
 ### <a href="https://github.com/OatmealDome/dolphin-ios"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/DolphiniOS/icon.png" alt="DolphiniOS icon" width="24" align="top"> DolphiniOS</a>
 Dolphin for iOS, reborn — a GameCube and Wii emulator for iPhone and iPad.
 
+### <a href="https://github.com/moliango/doer"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Doer/icon.png" alt="Doer icon" width="24" align="top"> Doer</a>
+原生 iOS Linux.do 客户端，UIKit + Swift，支持多主题、小程序与插件。
+
 ### <a href="https://github.com/MaftyManicEMU/DukeX"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/DukeX/icon.png" alt="DukeX icon" width="24" align="top"> DukeX</a>
 Original Xbox emulation for iOS, built from xemu with a native Swift interface.
 

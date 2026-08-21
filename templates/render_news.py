@@ -97,21 +97,30 @@ _HEX_RE = re.compile(r"^#[0-9a-fA-F]{6}$")
 # Font candidates per role, in preference order. Each is (path, ttc index);
 # the first that loads is used. Helvetica covers Latin, Hiragino Sans GB (and
 # the STHeiti fallback) cover CJK — one per style so the app name / badge can
-# be bolder than the description.
+# be bolder than the description. Windows Arial / Microsoft YaHei are
+# fallbacks so the renderer also works outside macOS.
 FONT_CANDIDATES = {
     "latin": [
         ("/System/Library/Fonts/Helvetica.ttc", 0),  # Regular
+        (r"C:\Windows\Fonts\arial.ttf", 0),
+        (r"C:\Windows\Fonts\segoeui.ttf", 0),
     ],
     "latin_bold": [
         ("/System/Library/Fonts/Helvetica.ttc", 1),  # Bold
+        (r"C:\Windows\Fonts\arialbd.ttf", 0),
+        (r"C:\Windows\Fonts\segoeuib.ttf", 0),
     ],
     "cjk": [
         ("/System/Library/Fonts/Hiragino Sans GB.ttc", 0),  # W3
         ("/System/Library/Fonts/STHeiti Medium.ttc", 1),  # Heiti SC Medium
+        (r"C:\Windows\Fonts\msyh.ttc", 0),
+        (r"C:\Windows\Fonts\simhei.ttf", 0),
     ],
     "cjk_bold": [
         ("/System/Library/Fonts/Hiragino Sans GB.ttc", 2),  # W6
         ("/System/Library/Fonts/STHeiti Medium.ttc", 0),  # Heiti TC Medium
+        (r"C:\Windows\Fonts\msyhbd.ttc", 0),
+        (r"C:\Windows\Fonts\Dengb.ttf", 0),
     ],
 }
 
