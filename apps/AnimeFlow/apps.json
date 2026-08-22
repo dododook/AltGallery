@@ -21,11 +21,11 @@
       "tintColor": "#124EB3",
       "versions": [
         {
-          "version": "2.2.2",
-          "date": "2026-08-01",
-          "localizedDescription": "### 🔄 更新内容\r\n\r\n## 2.2.2 更新\r\n\r\n- 修复视频资源搜索时可能需要多次重试才有结果\r\n- 支持多语言(英语、繁体中文、简体中文)\r\n- 系统架构优化\r\n\r\n---\r\n\r\n### 📦 下载\r\n- 每个设备的安装包后缀: ``苹果手机(.ipa)、 安卓手机(.apk)、windows电脑(.zip)、mac电脑(.dmg)、linux电脑(.tar.gz或.deb)``\r\n- android分多个包: ``v7a(旧手机)、arm64(新手机,推荐用这个)、x86(模拟器) ``\r\n- windows分多个包: ``.zip(解压直接使用)、.exe(安装后使用) ``",
-          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.2.2/AnimeFlow-ios-2.2.2.ipa",
-          "size": 22155735,
+          "version": "2.3.0",
+          "date": "2026-08-21",
+          "localizedDescription": "### 🔄 更新内容\n\n## 2.3.0 更新\n\n- 数据源管理页面支持排序功能\n- 弹幕支持简体中文/繁体中文转换\n- 添加云端播放记录同步(登录后自动开启)\n- 桌面端推荐页今日放送、播放记录区域添加水平滚动按钮(也可以shift+滚轮滚动)\n- 优化用户收藏页面部分ui动画效果\n- 修复调节弹幕透明度时没有实时生效问题\n- 更新软件logo\n\n---\n\n### 📦 下载\n- 每个设备的安装包后缀: ``苹果手机(.ipa)、 安卓手机(.apk)、windows电脑(.zip)、mac电脑(.dmg)、linux电脑(.tar.gz或.deb)``\n- android分多个包: ``v7a(旧手机)、arm64(新手机,推荐用这个)、x86(模拟器) ``\n- windows分多个包: ``.zip(解压直接使用)、.exe(安装后使用) ``",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.3.0/AnimeFlow-ios-2.3.0.ipa",
+          "size": 22611592,
           "minOSVersion": "13.0"
         }
       ]
@@ -34,14 +34,14 @@
   "news": [
     {
       "appID": "com.ligg.anime_flow",
-      "title": "AnimeFlow 2.2.2 · 01 Aug 2026",
-      "identifier": "release-v2.2.2",
-      "caption": "AnimeFlow 2.2.2 is available.",
-      "date": "2026-08-01T19:52:57Z",
+      "title": "AnimeFlow 2.3.0 · 21 Aug 2026",
+      "identifier": "release-v2.3.0",
+      "caption": "AnimeFlow 2.3.0 is available.",
+      "date": "2026-08-21T15:25:20Z",
       "tintColor": "#124EB3",
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
       "notify": true,
-      "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.2.2"
+      "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.3.0"
     }
   ]
 }
