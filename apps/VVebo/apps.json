@@ -1,0 +1,42 @@
+{
+  "name": "VVebo",
+  "subtitle": "VVebo AltStore source by AltGallery",
+  "description": "Pinned AltStore source for VVebo 3.3.31. This IPA is not generated from GitHub Releases by altgen.",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/icon.png",
+  "website": "https://github.com/WangGuibin/IPA-for-self",
+  "tintColor": "#F5C400",
+  "apps": [
+    {
+      "name": "VVebo",
+      "bundleIdentifier": "com.johnil.vvebo",
+      "developerName": "johnil",
+      "subtitle": "已停更的第三方微博客户端",
+      "localizedDescription": "VVebo 3.3.31，已停更的第三方微博客户端。安装包来自公开 GitHub Release 直链，版本不会随原作者自动更新。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/icon.png",
+      "tintColor": "#F5C400",
+      "versions": [
+        {
+          "version": "3.3.31",
+          "buildVersion": "4",
+          "date": "2024-01-09",
+          "localizedDescription": "VVebo 3.3.31",
+          "downloadURL": "https://github.com/WangGuibin/IPA-for-self/releases/download/1.0.0/VVebo_3.3.31.ipa",
+          "size": 24215968,
+          "minOSVersion": "14.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.johnil.vvebo",
+      "title": "VVebo 3.3.31",
+      "identifier": "vvebo-3.3.31",
+      "caption": "VVebo 3.3.31 is available.",
+      "date": "2024-01-09T13:59:51Z",
+      "tintColor": "#F5C400",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/images/news.png",
+      "notify": false
+    }
+  ]
+}

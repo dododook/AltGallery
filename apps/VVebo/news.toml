@@ -1,0 +1,10 @@
+# Static IPA (no config.toml): altgen must not regenerate this app.
+# IPA URL is pinned in apps.json.
+# Render: .venv/Scripts/python.exe templates/render_news.py --out apps/VVebo
+
+name = "VVebo"
+tagline = "已停更的微博客户端"
+
+[colors]
+tint = "#F5C400"
+tint_alt = "#F5C400"

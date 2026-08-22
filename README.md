@@ -77,6 +77,9 @@ A full featured virtual machine host for iOS — run Windows, Android, and more 
 ### <a href="https://github.com/CyrilPeng/Venera-Next"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Venera-Next/icon.png" alt="VeneraNext icon" width="24" align="top"> VeneraNext</a>
 基于 Flutter 的跨平台漫画阅读器，支持本地漫画、WebDAV 漫画源与第三方网络漫画源。
 
+### <a href="https://github.com/WangGuibin/IPA-for-self/releases/download/1.0.0/VVebo_3.3.31.ipa"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/VVebo/icon.png" alt="VVebo icon" width="24" align="top"> VVebo</a>
+已停更的第三方微博客户端（3.3.31，固定 IPA 直链）。
+
 ### <a href="https://github.com/mrdrvt99/YouProEXTRA"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/YouProEXTRA/icon.png" alt="YouProEXTRA icon" width="24" align="top"> YouProEXTRA</a>
 YouTube mod for iOS packed with customizable tweaks — no ads, background playback, downloads, and more.
 
