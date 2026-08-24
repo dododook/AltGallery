@@ -53,7 +53,16 @@ done
 
 if [[ ${#apps[@]} -gt 0 ]]; then
   echo "==> Merging ${#apps[@]} source(s) into all-apps.json"
-  uvx altgen merge -c assets/merge.toml "${apps[@]}"
+  extras=()
+  if [[ -f assets/source-news.json ]]; then
+    extras+=(assets/source-news.json)
+  fi
+  uvx altgen merge -c assets/merge.toml "${apps[@]}" "${extras[@]}"
+  if command -v python3 >/dev/null 2>&1; then
+    python3 templates/inject_announcement.py
+  elif [[ -x .venv/Scripts/python.exe ]]; then
+    .venv/Scripts/python.exe templates/inject_announcement.py
+  fi
 else
   echo "No app sources found — nothing to merge."
 fi
