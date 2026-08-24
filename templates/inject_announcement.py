@@ -18,16 +18,20 @@ def main() -> None:
     if not ANNOUNCEMENT.exists() or not ALL_APPS.exists():
         return
     extra = json.loads(ANNOUNCEMENT.read_text(encoding="utf-8"))
-    message = extra.get("message")
-    if not message:
-        return
     data = json.loads(ALL_APPS.read_text(encoding="utf-8"))
-    data["message"] = message
+    injected = []
+    for key in ("message", "sourceicon", "headerURL"):
+        value = extra.get(key)
+        if value:
+            data[key] = value
+            injected.append(key)
+    if not injected:
+        return
     ALL_APPS.write_text(
         json.dumps(data, ensure_ascii=False, indent=2) + "\n",
         encoding="utf-8",
     )
-    print("==> Injected source announcement into all-apps.json")
+    print("==> Injected", ", ".join(injected), "into all-apps.json")
 
 
 if __name__ == "__main__":
