@@ -7,6 +7,16 @@
 # so there is no need to update every app locally.
 set -euo pipefail
 
+# altgen reads GitHub Releases; unauthenticated calls are capped at 60/hour.
+# GitHub-hosted runners ship `gh` already logged in via GITHUB_TOKEN, but that
+# env var is not always exported to this script — pull it from `gh` when empty.
+if [[ -z "${GITHUB_TOKEN:-}" ]] && command -v gh >/dev/null 2>&1; then
+  token="$(gh auth token 2>/dev/null || true)"
+  if [[ -n "$token" ]]; then
+    export GITHUB_TOKEN="$token"
+  fi
+fi
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
