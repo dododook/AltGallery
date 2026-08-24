@@ -21,12 +21,12 @@
       "tintColor": "#73b480",
       "versions": [
         {
-          "version": "2.1.0",
-          "buildVersion": "5109",
-          "date": "2026-07-12",
-          "localizedDescription": "支持评论区投票\r\n支持显示话题折叠内容\r\n支持显示动态`赞与转发`详情\r\n动态支持点击评论按钮直达评论区\r\n专栏支持跨行复制 #2437 by @My-Responsitories\r\n视频字幕支持未登录使用 #2426 by @My-Responsitories\r\n支持导出 `vtt`、`srt` 格式字幕 co-by @My-Responsitories\r\n解码格式设置改为多选 #2426 by @My-Responsitories #2444 co-by @Starfallan\r\n其他调整 #2426 by @My-Responsitories\r\n\r\n界面优化\r\n调整默认滑动弹簧系数\r\n安卓硬解优先使用 `mediacodec` \r\nLinux 构建优化 #2441 by @VillagerTom\r\n\r\n修复桌面端富文本选中编辑\r\n修复 bug\r\n\r\n其他调整",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.0/PiliPlus_ios_2.1.0%2B5109.ipa",
-          "size": 23440601,
+          "version": "2.1.1.2",
+          "buildVersion": "5231",
+          "date": "2026-08-22",
+          "localizedDescription": "自定义定时关闭时长改为滑动选择 #2632\r\n\r\n修复 #2631 #2636\r\n修复 #1967 #2634 by @My-Responsitories\r\n修复复制 VideoTrack 信息 #2633 by @My-Responsitories",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.1.2/PiliPlus_ios_2.1.1%2B5231.ipa",
+          "size": 23906848,
           "minOSVersion": "14.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "com.example.PiliPlus",
-      "title": "PiliPlus 2.1.0 · 12 Jul 2026",
-      "identifier": "release-2.1.0",
-      "caption": "PiliPlus 2.1.0 is available.",
-      "date": "2026-07-12T04:26:28Z",
+      "title": "PiliPlus 2.1.1.2 · 22 Aug 2026",
+      "identifier": "release-2.1.1.2",
+      "caption": "PiliPlus 2.1.1.2 is available.",
+      "date": "2026-08-22T14:45:46Z",
       "tintColor": "#73b480",
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
       "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.0"
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.1.2"
     }
   ]
 }

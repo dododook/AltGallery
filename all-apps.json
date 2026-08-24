@@ -143,11 +143,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20260820",
-          "date": "2026-08-20",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- UI: the Android internal-resolution set in the Qt and Big Picture pickers\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260819...dfef534426f522d3c9acd5e540a36f303a630018",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260820/ARMSX2-nightly-20260820-dfef534426-iOS-arm64.ipa",
-          "size": 26733967,
+          "version": "nightly-20260823",
+          "date": "2026-08-23",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: give CI builds the RetroAchievements client identity\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260822...1b737e25f07ffc7c9b08938024d121467b507f7b",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260823/ARMSX2-nightly-20260823-1b737e25f0-iOS-arm64.ipa",
+          "size": 26735489,
           "minOSVersion": "17.0"
         }
       ]
@@ -361,12 +361,12 @@
       "tintColor": "#73b480",
       "versions": [
         {
-          "version": "2.1.0",
-          "buildVersion": "5109",
-          "date": "2026-07-12",
-          "localizedDescription": "支持评论区投票\r\n支持显示话题折叠内容\r\n支持显示动态`赞与转发`详情\r\n动态支持点击评论按钮直达评论区\r\n专栏支持跨行复制 #2437 by @My-Responsitories\r\n视频字幕支持未登录使用 #2426 by @My-Responsitories\r\n支持导出 `vtt`、`srt` 格式字幕 co-by @My-Responsitories\r\n解码格式设置改为多选 #2426 by @My-Responsitories #2444 co-by @Starfallan\r\n其他调整 #2426 by @My-Responsitories\r\n\r\n界面优化\r\n调整默认滑动弹簧系数\r\n安卓硬解优先使用 `mediacodec` \r\nLinux 构建优化 #2441 by @VillagerTom\r\n\r\n修复桌面端富文本选中编辑\r\n修复 bug\r\n\r\n其他调整",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.0/PiliPlus_ios_2.1.0%2B5109.ipa",
-          "size": 23440601,
+          "version": "2.1.1.2",
+          "buildVersion": "5231",
+          "date": "2026-08-22",
+          "localizedDescription": "自定义定时关闭时长改为滑动选择 #2632\r\n\r\n修复 #2631 #2636\r\n修复 #1967 #2634 by @My-Responsitories\r\n修复复制 VideoTrack 信息 #2633 by @My-Responsitories",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.1.2/PiliPlus_ios_2.1.1%2B5231.ipa",
+          "size": 23906848,
           "minOSVersion": "14.0"
         }
       ]
@@ -514,6 +514,28 @@
   ],
   "news": [
     {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20260823 · 23 Aug 2026",
+      "identifier": "release-nightly-20260823",
+      "caption": "ARMSX2 nightly-20260823 is available.",
+      "date": "2026-08-23T08:57:58Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260823"
+    },
+    {
+      "appID": "com.example.PiliPlus",
+      "title": "PiliPlus 2.1.1.2 · 22 Aug 2026",
+      "identifier": "release-2.1.1.2",
+      "caption": "PiliPlus 2.1.1.2 is available.",
+      "date": "2026-08-22T14:45:46Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.1.2"
+    },
+    {
       "appID": "com.naine.doer",
       "title": "Doer 1.8-build.17 · 22 Aug 2026",
       "identifier": "release-v1.8-build.17",
@@ -567,17 +589,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/news.png",
       "notify": true,
       "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.13"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20260820 · 20 Aug 2026",
-      "identifier": "release-nightly-20260820",
-      "caption": "ARMSX2 nightly-20260820 is available.",
-      "date": "2026-08-20T09:15:13Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260820"
     },
     {
       "appID": "com.christianselig.Apollo",
@@ -666,17 +677,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/news.png",
       "notify": true,
       "url": "https://github.com/XITRIX/iTorrent/releases/tag/v2.2.0-1"
-    },
-    {
-      "appID": "com.example.PiliPlus",
-      "title": "PiliPlus 2.1.0 · 12 Jul 2026",
-      "identifier": "release-2.1.0",
-      "caption": "PiliPlus 2.1.0 is available.",
-      "date": "2026-07-12T04:26:28Z",
-      "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.0"
     },
     {
       "appID": "app.aidoku.Aidoku",
