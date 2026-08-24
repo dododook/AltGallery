@@ -167,11 +167,11 @@
       "tintColor": "#2B7FFF",
       "versions": [
         {
-          "version": "1.7-build.16",
-          "date": "2026-08-21",
-          "localizedDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.6-build.11...v1.7-build.16",
-          "downloadURL": "https://github.com/moliango/doer/releases/download/v1.7-build.16/doer-unsigned.ipa",
-          "size": 13822899,
+          "version": "1.8-build.17",
+          "date": "2026-08-22",
+          "localizedDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.7-build.16...v1.8-build.17",
+          "downloadURL": "https://github.com/moliango/doer/releases/download/v1.8-build.17/doer-unsigned.ipa",
+          "size": 14004015,
           "minOSVersion": "15.0"
         }
       ]
@@ -514,6 +514,17 @@
   ],
   "news": [
     {
+      "appID": "com.naine.doer",
+      "title": "Doer 1.8-build.17 · 22 Aug 2026",
+      "identifier": "release-v1.8-build.17",
+      "caption": "Doer 1.8-build.17 is available.",
+      "date": "2026-08-22T14:35:34Z",
+      "tintColor": "#2B7FFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png",
+      "notify": true,
+      "url": "https://github.com/moliango/doer/releases/tag/v1.8-build.17"
+    },
+    {
       "appID": "com.ligg.anime_flow",
       "title": "AnimeFlow 2.3.0 · 21 Aug 2026",
       "identifier": "release-v2.3.0",
@@ -523,17 +534,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
       "notify": true,
       "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.3.0"
-    },
-    {
-      "appID": "com.naine.doer",
-      "title": "Doer 1.7-build.16 · 21 Aug 2026",
-      "identifier": "release-v1.7-build.16",
-      "caption": "Doer 1.7-build.16 is available.",
-      "date": "2026-08-21T09:32:29Z",
-      "tintColor": "#2B7FFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png",
-      "notify": true,
-      "url": "https://github.com/moliango/doer/releases/tag/v1.7-build.16"
     },
     {
       "appID": "com.example.kazumi",
