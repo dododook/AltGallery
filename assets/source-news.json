@@ -7,8 +7,8 @@
       "identifier": "altgallery-welcome",
       "caption": "这是 dododook 的自建源。GitHub 项目自动更新；本地 IPA 放到 my-ipas。有想加的包直接说一声。",
       "date": "2026-08-24T12:00:00Z",
-      "tintColor": "#3B82F6",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/icon.png",
+      "tintColor": "#C41E3A",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/source-avatar.png",
       "notify": true,
       "url": "https://github.com/dododook/AltGallery"
     }

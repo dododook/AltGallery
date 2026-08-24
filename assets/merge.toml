@@ -11,9 +11,9 @@
 name = "AltGallery"
 subtitle = "dododook 的自建 IPA 源"
 description = "欢迎使用 AltGallery。GitHub 上的项目会自动跟新版；本地 IPA 放在 dododook/my-ipas。有想加的包直接说一声。"
-icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/source-avatar.png"
 website = "https://github.com/dododook/AltGallery"
-tint_color = "#3B82F6"
+tint_color = "#C41E3A"
 
 [output]
 path = "../all-apps.json"   # resolved against THIS file's directory -> repo root all-apps.json
