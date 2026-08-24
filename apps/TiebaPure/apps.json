@@ -21,11 +21,11 @@
       "tintColor": "#708070",
       "versions": [
         {
-          "version": "1.4.13",
-          "date": "2026-08-20",
-          "localizedDescription": "## 修改内容\n\n- 修复多图帖子首图放大后停留在低清过渡图的问题，并增加受内存与帧数限制的 GIF 动画显示。\n- 修复回复倒序分页只作用于当前已加载页面的问题，并完善楼中楼进入动画、下拉/右滑退出和阅读位置恢复。\n- 修复 iOS 18 长按选择帖子文字时可能出现的布局卡死。\n- 修复登录账号发帖、回帖时 TBS 刷新失败的问题；恢复签名登录校验，并保留发送结果不明确时不自动重试的保护。\n\n## 验证\n\n- GitHub Actions `ci-ok` 全部通过。\n- 本地发布请求与身份夹具测试 48 项通过。\n- 真实账号发帖和回帖均验证成功。",
-          "downloadURL": "https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.13/TiebaPure-v1.4.13-unsigned.ipa",
-          "size": 3509096,
+          "version": "1.4.14",
+          "date": "2026-08-24",
+          "localizedDescription": "## 修改内容\n\n- 新增帖子本地保存：支持完整楼层和楼中楼离线阅读、媒体下载、搜索、回复更新、存储管理及备份导入导出。\n- 新增内置与自定义阅读字体，并完善首页重复点击刷新。\n- 自动检测账号登录失效，提示后清理当前登录态，同时避免旧请求或网络中断误触发退出。\n- 修复 iOS 16 嵌套搜索布局递归卡死、文字选择与导航手势冲突，并将媒体、字体、语音和存储文件 I/O 移出主线程。\n- 加固本地帖子并发写入、媒体事务崩溃恢复、备份校验与字体目录一致性。\n\n## 验证\n\n- GitHub Actions ci-ok 全部通过，包含单元测试、iOS 16 兼容检查、iPhone/iPad UI 测试和 Release 构建。\n- App 与扩展均为 1.4.14 (58)、arm64、最低 iOS 16.4；IPA 压缩结构正常且未签名。\n- 发帖和回帖夹具 UI 测试通过；本次未改动认证写入路径，因此未重复进行真实账号写入测试。",
+          "downloadURL": "https://github.com/infinityf4p/TiebaPure-iOS/releases/download/v1.4.14/TiebaPure-v1.4.14-unsigned.ipa",
+          "size": 3787516,
           "minOSVersion": "16.4"
         }
       ]
@@ -34,14 +34,14 @@
   "news": [
     {
       "appID": "dev.infinityf4p.tiebapure",
-      "title": "TiebaPure 1.4.13 · 20 Aug 2026",
-      "identifier": "release-v1.4.13",
-      "caption": "TiebaPure 1.4.13 is available.",
-      "date": "2026-08-20T15:32:45Z",
+      "title": "TiebaPure 1.4.14 · 24 Aug 2026",
+      "identifier": "release-v1.4.14",
+      "caption": "TiebaPure 1.4.14 is available.",
+      "date": "2026-08-24T01:40:29Z",
       "tintColor": "#708070",
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/news.png",
       "notify": true,
-      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.13"
+      "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.14"
     }
   ]
 }
