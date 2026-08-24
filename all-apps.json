@@ -1,9 +1,9 @@
 {
   "name": "AltGallery",
-  "subtitle": "Curated AltStore sources for IPA projects on GitHub",
-  "description": "AltStore sources generated from GitHub Releases by AltGallery",
-  "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/assets/icon.png",
-  "website": "https://github.com/bebound/AltGallery",
+  "subtitle": "dododook 的自建 IPA 源",
+  "description": "欢迎使用 AltGallery。GitHub 上的项目会自动跟新版；本地 IPA 放在 dododook/my-ipas。有想加的包直接说一声。",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/icon.png",
+  "website": "https://github.com/dododook/AltGallery",
   "tintColor": "#3B82F6",
   "apps": [
     {
@@ -533,6 +533,16 @@
   ],
   "news": [
     {
+      "title": "欢迎使用 AltGallery",
+      "identifier": "altgallery-welcome",
+      "caption": "这是 dododook 的自建源。GitHub 项目自动更新；本地 IPA 放到 my-ipas。有想加的包直接说一声。",
+      "date": "2026-08-24T12:00:00Z",
+      "tintColor": "#3B82F6",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/icon.png",
+      "notify": true,
+      "url": "https://github.com/dododook/AltGallery"
+    },
+    {
       "appID": "dev.infinityf4p.tiebapure",
       "title": "TiebaPure 1.4.14 · 24 Aug 2026",
       "identifier": "release-v1.4.14",
@@ -773,5 +783,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/images/news.png",
       "notify": false
     }
-  ]
+  ],
+  "message": "欢迎使用 AltGallery 自建源\nGitHub 上的 App 会自动跟新版\n本地 IPA 丢过来就会进源\n当前已收录 Doer / VVebo / Kumone 等"
 }
