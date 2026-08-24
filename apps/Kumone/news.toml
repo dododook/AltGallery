@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/Kumone
+
+name = "Kumone"
+tagline = "第三方网易云客户端"
+
+[colors]
+tint = "#C9A227"
+tint_alt = "#C9A227"
