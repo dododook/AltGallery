@@ -300,6 +300,25 @@
       ]
     },
     {
+      "name": "Kumone",
+      "bundleIdentifier": "sb.moe.kumone",
+      "developerName": "Kumone",
+      "subtitle": "第三方网易云音乐客户端",
+      "localizedDescription": "Kumone，第三方网易云音乐客户端。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/icon.png",
+      "tintColor": "#C9A227",
+      "versions": [
+        {
+          "version": "0.2.3",
+          "date": "2026-08-24",
+          "localizedDescription": "Third-party NetEase Cloud Music client. Bundle ID: sb.moe.kumone",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Kumone-0.2.3/Kumone_0.2.3.ipa",
+          "size": 6418809,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
       "name": "Mangayomi",
       "bundleIdentifier": "com.kodjodevf.mangayomi",
       "developerName": "Moustapha Kodjo Amadou",
@@ -513,6 +532,17 @@
     }
   ],
   "news": [
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.2.3 · 24 Aug 2026",
+      "identifier": "release-Kumone-0.2.3",
+      "caption": "Kumone 0.2.3 is available.",
+      "date": "2026-08-24T01:38:10Z",
+      "tintColor": "#C9A227",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Kumone-0.2.3"
+    },
     {
       "appID": "com.armsx2.ios",
       "title": "ARMSX2 nightly-20260823 · 23 Aug 2026",
