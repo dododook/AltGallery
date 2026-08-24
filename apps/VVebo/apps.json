@@ -1,9 +1,9 @@
 {
   "name": "VVebo",
   "subtitle": "VVebo AltStore source by AltGallery",
-  "description": "Pinned AltStore source for VVebo 3.3.31. This IPA is not generated from GitHub Releases by altgen.",
+  "description": "Sideload-friendly VVebo 3.3.31 from missuo/VVeboFix (ad-hoc signed, CloudKit crash guard).",
   "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/icon.png",
-  "website": "https://github.com/WangGuibin/IPA-for-self",
+  "website": "https://github.com/missuo/VVeboFix",
   "tintColor": "#F5C400",
   "apps": [
     {
@@ -11,7 +11,7 @@
       "bundleIdentifier": "com.johnil.vvebo",
       "developerName": "johnil",
       "subtitle": "已停更的第三方微博客户端",
-      "localizedDescription": "VVebo 3.3.31，已停更的第三方微博客户端。安装包来自公开 GitHub Release 直链，版本不会随原作者自动更新。",
+      "localizedDescription": "VVebo 3.3.31 自签版（missuo/VVeboFix）。预注入时间线修复，并处理重签后 CloudKit 闪退。请先卸掉旧的巨魔包再装。",
       "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/icon.png",
       "tintColor": "#F5C400",
       "versions": [
@@ -19,9 +19,9 @@
           "version": "3.3.31",
           "buildVersion": "4",
           "date": "2024-01-09",
-          "localizedDescription": "VVebo 3.3.31",
-          "downloadURL": "https://github.com/WangGuibin/IPA-for-self/releases/download/1.0.0/VVebo_3.3.31.ipa",
-          "size": 24215968,
+          "localizedDescription": "Sideload build from missuo/VVeboFix (ad-hoc signed, CloudKit crash guard, timeline fix dylib).",
+          "downloadURL": "https://github.com/missuo/VVeboFix/releases/download/v1.0.0/VVebo_3.3.31_Fixed-f70d8bf.ipa",
+          "size": 22420059,
           "minOSVersion": "14.0"
         }
       ]
