@@ -16,11 +16,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.2.3",
+          "version": "0.2.5",
           "date": "2026-08-24",
           "localizedDescription": "Third-party NetEase Cloud Music client. Bundle ID: sb.moe.kumone",
-          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Kumone-0.2.3/Kumone_0.2.3.ipa",
-          "size": 6418809,
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Kumone-0.2.5/Kumone_0.2.5.ipa",
+          "size": 6477169,
           "minOSVersion": "16.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.2.3 · 24 Aug 2026",
-      "identifier": "Kumone-release-Kumone-0.2.3",
-      "caption": "Kumone 0.2.3 is available.",
+      "title": "Kumone 0.2.5 · 24 Aug 2026",
+      "identifier": "Kumone-release-Kumone-0.2.5",
+      "caption": "Kumone 0.2.5 is available.",
       "date": "2026-08-24T01:38:10Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/dododook/my-ipas/releases/tag/Kumone-0.2.3"
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Kumone-0.2.5"
     }
   ]
 }

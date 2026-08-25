@@ -1,0 +1,42 @@
+{
+  "name": "Röam",
+  "subtitle": "Röam AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Röam",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/icon.png",
+  "website": "https://github.com/dododook/my-ipas",
+  "tintColor": "#4080E0",
+  "apps": [
+    {
+      "name": "Röam",
+      "bundleIdentifier": "com.mistj.v2ex",
+      "developerName": "mistj",
+      "subtitle": "V2EX 第三方客户端",
+      "localizedDescription": "Röam，V2EX 社区的第三方 iOS 客户端。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/icon.png",
+      "tintColor": "#4080E0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-08-25",
+          "localizedDescription": "V2EX client (Röam). Bundle ID: com.mistj.v2ex",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Roam-1.0.0/Roam_1.0.0.ipa",
+          "size": 1471725,
+          "minOSVersion": "15.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.mistj.v2ex",
+      "title": "Röam 1.0.0 · 25 Aug 2026",
+      "identifier": "Röam-release-Roam-1.0.0",
+      "caption": "Röam 1.0.0 is available.",
+      "date": "2026-08-25T09:57:13Z",
+      "tintColor": "#4080E0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0"
+    }
+  ]
+}

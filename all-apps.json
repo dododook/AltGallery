@@ -143,11 +143,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20260824",
-          "date": "2026-08-24",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GameDB: Fix_Japanese Titles & sort-name\n- Fix Discord stuck on \"Connecting\" (crash loop in :discord)\n- Savers: make every port_free and port_new path unconditional\n- Tap to hold for physical buttons (#612)\n- Fix animated background locking users out of the app\n- tools: the Discord check must not pipe into grep -q\n- tools: fail the release build when Discord is configured but missing\n- Android: fix the miscased GL include that breaks every APK build\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260823...dbd7be271ca8a768df92027e91f25432e2a3b571",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260824/ARMSX2-nightly-20260824-dbd7be271c-iOS-arm64.ipa",
-          "size": 26735543,
+          "version": "nightly-20260825",
+          "date": "2026-08-25",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- SGSR: give it its own sharpness setting rather than sharing FSR's\n- SGSR: add the edge-direction variant, and reach 2.0 without a wider slider\n- LSFG: re-check the DLL after an import rewrites it in place\n- Fix LSFG DLL import verification to handle empty streams and improve file validation\n- SGSR: credit CamilleLaVey in the feature's C++ entry point\n- SGSR: name the sharpness slider after the upscaler it is driving\n- SGSR: reach it from the in-game menu too\n- GS: add SGSR upscaling (Qualcomm Snapdragon Game Super Resolution 1)\n- Thermals: the no-reading sentinel was a positive number\n- Second screen: size the cover cell against the display, not the artwork\n- Second screen: give the cover a real box, say which RA mode is active\n- Second screen: fit the cover, scroll the panel, mark hardcore vs casual\n- Second screen: append the new tiles to existing layouts, not just pristine ones\n- Second screen: cover and RetroAchievements in the default layout\n- Fix crash on launch: achievements polled with no VM\n- Second screen: cover art and more of what RetroAchievements knows\n- Fix theme changes not reaching the panel; collapsible editor toolbar\n- Second screen and OSD: the rest of the batch\n- Touch editor: the panel gets out of the way by itself\n- Second screen: follow the app's theme, tile icons, thermals, backgrounds\n- Second screen: pause that stays, even tiles; on-screen turbo (#619)\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260824...ab1df6fdd6ec663dfab5127497c9506c183b0d6d",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260825/ARMSX2-nightly-20260825-ab1df6fdd6-iOS-arm64.ipa",
+          "size": 26738496,
           "minOSVersion": "17.0"
         }
       ]
@@ -328,11 +328,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.2.3",
+          "version": "0.2.5",
           "date": "2026-08-24",
           "localizedDescription": "Third-party NetEase Cloud Music client. Bundle ID: sb.moe.kumone",
-          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Kumone-0.2.3/Kumone_0.2.3.ipa",
-          "size": 6418809,
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Kumone-0.2.5/Kumone_0.2.5.ipa",
+          "size": 6477169,
           "minOSVersion": "16.0"
         }
       ]
@@ -406,6 +406,25 @@
           "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2/PiliPlus_ios_2.1.2%2B5241.ipa",
           "size": 23940004,
           "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Röam",
+      "bundleIdentifier": "com.mistj.v2ex",
+      "developerName": "mistj",
+      "subtitle": "V2EX 第三方客户端",
+      "localizedDescription": "Röam，V2EX 社区的第三方 iOS 客户端。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/icon.png",
+      "tintColor": "#4080E0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-08-25",
+          "localizedDescription": "V2EX client (Röam). Bundle ID: com.mistj.v2ex",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Roam-1.0.0/Roam_1.0.0.ipa",
+          "size": 1471725,
+          "minOSVersion": "15.0"
         }
       ]
     },
@@ -552,6 +571,28 @@
   ],
   "news": [
     {
+      "appID": "com.mistj.v2ex",
+      "title": "Röam 1.0.0 · 25 Aug 2026",
+      "identifier": "Röam-release-Roam-1.0.0",
+      "caption": "Röam 1.0.0 is available.",
+      "date": "2026-08-25T09:57:13Z",
+      "tintColor": "#4080E0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20260825 · 25 Aug 2026",
+      "identifier": "ARMSX2-release-nightly-20260825",
+      "caption": "ARMSX2 nightly-20260825 is available.",
+      "date": "2026-08-25T09:25:29Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260825"
+    },
+    {
       "appID": "com.mistj.nodeseek",
       "title": "Frök 1.0.7 · 25 Aug 2026",
       "identifier": "Frök-release-Frok-1.0.7",
@@ -582,17 +623,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/source-avatar.png",
       "notify": true,
       "url": "https://github.com/dododook/AltGallery"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20260824 · 24 Aug 2026",
-      "identifier": "ARMSX2-release-nightly-20260824",
-      "caption": "ARMSX2 nightly-20260824 is available.",
-      "date": "2026-08-24T09:29:49Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260824"
     },
     {
       "appID": "com.naine.doer",
@@ -629,14 +659,14 @@
     },
     {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.2.3 · 24 Aug 2026",
-      "identifier": "Kumone-release-Kumone-0.2.3",
-      "caption": "Kumone 0.2.3 is available.",
+      "title": "Kumone 0.2.5 · 24 Aug 2026",
+      "identifier": "Kumone-release-Kumone-0.2.5",
+      "caption": "Kumone 0.2.5 is available.",
       "date": "2026-08-24T01:38:10Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/dododook/my-ipas/releases/tag/Kumone-0.2.3"
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Kumone-0.2.5"
     },
     {
       "appID": "com.ligg.anime_flow",
