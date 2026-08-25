@@ -1,0 +1,42 @@
+{
+  "name": "Frök",
+  "subtitle": "Frök AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Frök",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Frok/icon.png",
+  "website": "https://github.com/dododook/my-ipas",
+  "tintColor": "#4080E0",
+  "apps": [
+    {
+      "name": "Frök",
+      "bundleIdentifier": "com.mistj.nodeseek",
+      "developerName": "mistj",
+      "subtitle": "NodeSeek 第三方客户端",
+      "localizedDescription": "Frök，NodeSeek 社区的第三方 iOS 客户端。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Frok/icon.png",
+      "tintColor": "#4080E0",
+      "versions": [
+        {
+          "version": "1.0.7",
+          "date": "2026-08-25",
+          "localizedDescription": "NodeSeek client (Frök). Bundle ID: com.mistj.nodeseek",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Frok-1.0.7/Frok_1.0.7.ipa",
+          "size": 8659162,
+          "minOSVersion": "15.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.mistj.nodeseek",
+      "title": "Frök 1.0.7 · 25 Aug 2026",
+      "identifier": "Frök-release-Frok-1.0.7",
+      "caption": "Frök 1.0.7 is available.",
+      "date": "2026-08-25T04:33:41Z",
+      "tintColor": "#4080E0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Frok/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Frok-1.0.7"
+    }
+  ]
+}
