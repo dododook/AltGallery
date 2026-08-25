@@ -813,7 +813,5 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/images/news.png",
       "notify": false
     }
-  ],
-  "message": "欢迎使用 AltGallery 自建源\nGitHub 上的 App 会自动跟新版\n本地 IPA 丢过来就会进源\n当前已收录 Doer / VVebo / Kumone 等",
-  "sourceicon": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/source-avatar.png"
+  ]
 }
