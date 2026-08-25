@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/Frok
+
+name = "Frök"
+tagline = "NodeSeek 第三方客户端"
+
+[colors]
+tint = "#4080E0"
+tint_alt = "#4080E0"
