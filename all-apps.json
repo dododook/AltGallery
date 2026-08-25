@@ -143,11 +143,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20260823",
-          "date": "2026-08-23",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: give CI builds the RetroAchievements client identity\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260822...1b737e25f07ffc7c9b08938024d121467b507f7b",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260823/ARMSX2-nightly-20260823-1b737e25f0-iOS-arm64.ipa",
-          "size": 26735489,
+          "version": "nightly-20260824",
+          "date": "2026-08-24",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GameDB: Fix_Japanese Titles & sort-name\n- Fix Discord stuck on \"Connecting\" (crash loop in :discord)\n- Savers: make every port_free and port_new path unconditional\n- Tap to hold for physical buttons (#612)\n- Fix animated background locking users out of the app\n- tools: the Discord check must not pipe into grep -q\n- tools: fail the release build when Discord is configured but missing\n- Android: fix the miscased GL include that breaks every APK build\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260823...dbd7be271ca8a768df92027e91f25432e2a3b571",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260824/ARMSX2-nightly-20260824-dbd7be271c-iOS-arm64.ipa",
+          "size": 26735543,
           "minOSVersion": "17.0"
         }
       ]
@@ -171,7 +171,7 @@
           "date": "2026-08-24",
           "localizedDescription": "**Full Changelog**: https://github.com/moliango/doer/compare/v1.8-build.17...v1.8",
           "downloadURL": "https://github.com/moliango/doer/releases/download/v1.8/doer-unsigned.ipa",
-          "size": 23304438,
+          "size": 23365807,
           "minOSVersion": "15.0"
         }
       ]
@@ -333,11 +333,11 @@
       "tintColor": "#EF4444",
       "versions": [
         {
-          "version": "0.8.8",
-          "date": "2026-08-20",
-          "localizedDescription": "## What's Changed\r\n* Fix extension list row overflow with NSFW badge + repo name by @not-akari in https://github.com/kodjodevf/mangayomi/pull/883\r\n* fix(download): restore downloads to downloads folder instead of local library\r\n* fix #878\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.8.7...v0.8.8",
-          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.8.8/Mangayomi-v0.8.8-ios.ipa",
-          "size": 108136104
+          "version": "0.8.9",
+          "date": "2026-08-24",
+          "localizedDescription": "## What's Changed\r\n* Fix migration screen row overflow by @not-akari in https://github.com/kodjodevf/mangayomi/pull/884\r\n* Fix History screen scroll lag by @not-akari in https://github.com/kodjodevf/mangayomi/pull/885\r\n* Fix Updates and chapter list scroll lag by @not-akari in https://github.com/kodjodevf/mangayomi/pull/886\r\n* Fix warning by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/887\r\n* New feature: backup encryption by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/888\r\n* fix: read downloaded chapters from disk instead of the source by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/889\r\n* Fix chapter sort incorrectly and Added Missing Chapter Header by @not-akari in https://github.com/kodjodevf/mangayomi/pull/890\r\n* Fix overflow in global search result cards by @not-akari in https://github.com/kodjodevf/mangayomi/pull/891\r\n* Add live connection status to Sync screen, redesign layout by @not-akari in https://github.com/kodjodevf/mangayomi/pull/892\r\n* Fixed reader where it launch and causing blank screen by @not-akari in https://github.com/kodjodevf/mangayomi/pull/893\r\n* Fix Isar nested-transaction crash after backup restore and settings sync by @not-akari in https://github.com/kodjodevf/mangayomi/pull/894\r\n* Fix blank reader screen on chapter change by @not-akari in https://github.com/kodjodevf/mangayomi/pull/895\r\n* Surface the real error when an image fails to load by @not-akari in https://github.com/kodjodevf/mangayomi/pull/896\r\n* Fix overflow in tracker library section screen by @not-akari in https://github.com/kodjodevf/mangayomi/pull/897\r\n* Fix migration screen lag by @not-akari in https://github.com/kodjodevf/mangayomi/pull/898\r\n* fix: stop a running update from the updates screen, and a grey box in its list by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/900\r\n* fix: stop dropping decimal chapters and mismatching them on migration (#812) by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/899\r\n* feat: a first run for a fresh install by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/901\r\n* fix: stop settings writes putting back what changed in the meantime by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/904\r\n* Cloudflare Issue Fixed by @not-akari in https://github.com/kodjodevf/mangayomi/pull/910\r\n* Push restored data to sync server after a restore, guarding against r… by @not-akari in https://github.com/kodjodevf/mangayomi/pull/905\r\n* Add dyslexia-friendly font options for novel reader text by @not-akari in https://github.com/kodjodevf/mangayomi/pull/908\r\n* Use correct file extension for images by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/909\r\n* Fix source-installed detection and add mangayomi-backup merge parity by @not-akari in https://github.com/kodjodevf/mangayomi/pull/907\r\n* fix: stop share throwing on Linux, and give it something useful to do by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/903\r\n* feat: keep the errors the app catches, and offer to report them by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/906\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.8.8...v0.8.9",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.8.9/Mangayomi-v0.8.9-ios.ipa",
+          "size": 108580643
         }
       ]
     },
@@ -533,6 +533,17 @@
   ],
   "news": [
     {
+      "appID": "com.kodjodevf.mangayomi",
+      "title": "Mangayomi 0.8.9 · 24 Aug 2026",
+      "identifier": "Mangayomi-release-v0.8.9",
+      "caption": "Mangayomi 0.8.9 is available.",
+      "date": "2026-08-24T12:56:49Z",
+      "tintColor": "#EF4444",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.8.9"
+    },
+    {
       "title": "欢迎使用 AltGallery",
       "identifier": "altgallery-welcome",
       "caption": "这是 dododook 的自建源。GitHub 项目自动更新；本地 IPA 放到 my-ipas。有想加的包直接说一声。",
@@ -543,9 +554,31 @@
       "url": "https://github.com/dododook/AltGallery"
     },
     {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20260824 · 24 Aug 2026",
+      "identifier": "ARMSX2-release-nightly-20260824",
+      "caption": "ARMSX2 nightly-20260824 is available.",
+      "date": "2026-08-24T09:29:49Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260824"
+    },
+    {
+      "appID": "com.naine.doer",
+      "title": "Doer 1.8 · 24 Aug 2026",
+      "identifier": "Doer-release-v1.8",
+      "caption": "Doer 1.8 is available.",
+      "date": "2026-08-24T08:53:11Z",
+      "tintColor": "#2B7FFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png",
+      "notify": true,
+      "url": "https://github.com/moliango/doer/releases/tag/v1.8"
+    },
+    {
       "appID": "com.example.PiliPlus",
       "title": "PiliPlus 2.1.2 · 24 Aug 2026",
-      "identifier": "release-2.1.2",
+      "identifier": "PiliPlus-release-2.1.2",
       "caption": "PiliPlus 2.1.2 is available.",
       "date": "2026-08-24T03:06:40Z",
       "tintColor": "#73b480",
@@ -554,20 +587,9 @@
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2"
     },
     {
-      "appID": "com.naine.doer",
-      "title": "Doer 1.8 · 24 Aug 2026",
-      "identifier": "release-v1.8",
-      "caption": "Doer 1.8 is available.",
-      "date": "2026-08-24T03:06:26Z",
-      "tintColor": "#2B7FFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png",
-      "notify": true,
-      "url": "https://github.com/moliango/doer/releases/tag/v1.8"
-    },
-    {
       "appID": "dev.infinityf4p.tiebapure",
       "title": "TiebaPure 1.4.14 · 24 Aug 2026",
-      "identifier": "release-v1.4.14",
+      "identifier": "TiebaPure-release-v1.4.14",
       "caption": "TiebaPure 1.4.14 is available.",
       "date": "2026-08-24T01:40:29Z",
       "tintColor": "#708070",
@@ -578,7 +600,7 @@
     {
       "appID": "sb.moe.kumone",
       "title": "Kumone 0.2.3 · 24 Aug 2026",
-      "identifier": "release-Kumone-0.2.3",
+      "identifier": "Kumone-release-Kumone-0.2.3",
       "caption": "Kumone 0.2.3 is available.",
       "date": "2026-08-24T01:38:10Z",
       "tintColor": "#C9A227",
@@ -587,20 +609,9 @@
       "url": "https://github.com/dododook/my-ipas/releases/tag/Kumone-0.2.3"
     },
     {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20260823 · 23 Aug 2026",
-      "identifier": "release-nightly-20260823",
-      "caption": "ARMSX2 nightly-20260823 is available.",
-      "date": "2026-08-23T08:57:58Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260823"
-    },
-    {
       "appID": "com.ligg.anime_flow",
       "title": "AnimeFlow 2.3.0 · 21 Aug 2026",
-      "identifier": "release-v2.3.0",
+      "identifier": "AnimeFlow-release-v2.3.0",
       "caption": "AnimeFlow 2.3.0 is available.",
       "date": "2026-08-21T15:25:20Z",
       "tintColor": "#124EB3",
@@ -611,7 +622,7 @@
     {
       "appID": "com.example.kazumi",
       "title": "Kazumi 2.2.9 · 21 Aug 2026",
-      "identifier": "release-2.2.9",
+      "identifier": "Kazumi-release-2.2.9",
       "caption": "Kazumi 2.2.9 is available.",
       "date": "2026-08-21T06:53:25Z",
       "tintColor": "#4CAF50",
@@ -620,20 +631,9 @@
       "url": "https://github.com/Predidit/Kazumi/releases/tag/2.2.9"
     },
     {
-      "appID": "com.kodjodevf.mangayomi",
-      "title": "Mangayomi 0.8.8 · 20 Aug 2026",
-      "identifier": "release-v0.8.8",
-      "caption": "Mangayomi 0.8.8 is available.",
-      "date": "2026-08-20T20:10:05Z",
-      "tintColor": "#EF4444",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.8.8"
-    },
-    {
       "appID": "com.christianselig.Apollo",
       "title": "Apollo for Reddit - GLASS 3.6.0 · 18 Aug 2026",
-      "identifier": "release-v1.15.11_3.6.0",
+      "identifier": "Apollo for Reddit - GLASS-release-v1.15.11_3.6.0",
       "caption": "Apollo for Reddit - GLASS 3.6.0 is available.",
       "date": "2026-08-18T21:35:49Z",
       "tintColor": "#6050F0",
@@ -644,7 +644,7 @@
     {
       "appID": "com.google.ios.youtube",
       "title": "YouProEXTRA 21.24.3 · 16 Aug 2026",
-      "identifier": "release-youproextra-ipa2",
+      "identifier": "YouProEXTRA-release-youproextra-ipa2",
       "caption": "YouProEXTRA 21.24.3 is available.",
       "date": "2026-08-16T22:53:43Z",
       "tintColor": "#FF0000",
@@ -655,7 +655,7 @@
     {
       "appID": "ani.baka",
       "title": "AniBaka 5.0.7 · 12 Aug 2026",
-      "identifier": "release-5.0.7+0811",
+      "identifier": "AniBaka-release-5.0.7+0811",
       "caption": "AniBaka 5.0.7 is available.",
       "date": "2026-08-12T07:34:31Z",
       "tintColor": "#0077B6",
@@ -666,7 +666,7 @@
     {
       "appID": "com.suwayomi.tachideskSorayomi",
       "title": "Tsumiru 1.1.5 · 10 Aug 2026",
-      "identifier": "release-v1.1.5",
+      "identifier": "Tsumiru-release-v1.1.5",
       "caption": "Tsumiru 1.1.5 is available.",
       "date": "2026-08-10T04:16:37Z",
       "tintColor": "#7c7bff",
@@ -677,7 +677,7 @@
     {
       "appID": "com.github.cyrilpeng.veneranext",
       "title": "VeneraNext 1.14.2 · 07 Aug 2026",
-      "identifier": "release-v1.14.2",
+      "identifier": "VeneraNext-release-v1.14.2",
       "caption": "VeneraNext 1.14.2 is available.",
       "date": "2026-08-07T16:03:31Z",
       "tintColor": "#2090E0",
@@ -688,7 +688,7 @@
     {
       "appID": "org.animeko.animeko",
       "title": "Animeko 6.0.0 · 01 Aug 2026",
-      "identifier": "release-v6.0.0",
+      "identifier": "Animeko-release-v6.0.0",
       "caption": "Animeko 6.0.0 is available.",
       "date": "2026-08-01T18:38:19Z",
       "tintColor": "#0050A0",
@@ -699,7 +699,7 @@
     {
       "appID": "app.ehpanda",
       "title": "EhPanda 2.8.1 · 20 Jul 2026",
-      "identifier": "release-v2.8.1",
+      "identifier": "EhPanda-release-v2.8.1",
       "caption": "EhPanda 2.8.1 is available.",
       "date": "2026-07-20T12:12:04Z",
       "tintColor": "#0f766e",
@@ -710,7 +710,7 @@
     {
       "appID": "com.xitrix.iTorrent2",
       "title": "iTorrent 2.2.0-1 · 19 Jul 2026",
-      "identifier": "release-v2.2.0-1",
+      "identifier": "iTorrent-release-v2.2.0-1",
       "caption": "iTorrent 2.2.0-1 is available.",
       "date": "2026-07-19T09:59:41Z",
       "tintColor": "#F19E69",
@@ -721,7 +721,7 @@
     {
       "appID": "app.aidoku.Aidoku",
       "title": "Aidoku 0.8.4 · 03 Jul 2026",
-      "identifier": "release-v0.8.4",
+      "identifier": "Aidoku-release-v0.8.4",
       "caption": "Aidoku 0.8.4 is available.",
       "date": "2026-07-03T05:27:41Z",
       "tintColor": "#FF375F",
@@ -732,7 +732,7 @@
     {
       "appID": "com.mafty.dukex",
       "title": "DukeX 1.0.2 · 30 Jun 2026",
-      "identifier": "release-v1.0.2",
+      "identifier": "DukeX-release-v1.0.2",
       "caption": "DukeX 1.0.2 is available.",
       "date": "2026-06-30T12:21:27Z",
       "tintColor": "#8FCA39",
@@ -743,7 +743,7 @@
     {
       "appID": "me.oatmealdome.DolphiniOS-njb-patreon-beta",
       "title": "DolphiniOS 5.0.0b6 · 20 Jun 2026",
-      "identifier": "release-v5.0.0b6",
+      "identifier": "DolphiniOS-release-v5.0.0b6",
       "caption": "DolphiniOS 5.0.0b6 is available.",
       "date": "2026-06-20T07:01:54Z",
       "tintColor": "#E0B030",
@@ -754,7 +754,7 @@
     {
       "appID": "com.dddevid.musly",
       "title": "Musly 1.0.13 · 10 May 2026",
-      "identifier": "release-v1.0.13",
+      "identifier": "Musly-release-v1.0.13",
       "caption": "Musly 1.0.13 is available.",
       "date": "2026-05-10T21:58:16Z",
       "tintColor": "#FA243C",
@@ -765,7 +765,7 @@
     {
       "appID": "com.utmapp.UTM",
       "title": "UTM 4.7.5 · 03 Jan 2026",
-      "identifier": "release-v4.7.5",
+      "identifier": "UTM-release-v4.7.5",
       "caption": "UTM 4.7.5 is available.",
       "date": "2026-01-03T17:51:54Z",
       "tintColor": "#1a2cc2",
