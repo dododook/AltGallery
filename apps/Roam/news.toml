@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/Roam
+
+name = "Röam"
+tagline = "V2EX 第三方客户端"
+
+[colors]
+tint = "#4080E0"
+tint_alt = "#4080E0"

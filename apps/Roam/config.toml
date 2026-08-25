@@ -1,0 +1,39 @@
+# altgen config for the Röam AltStore source.
+# IPA is hosted on dododook/my-ipas.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "dododook/my-ipas"
+
+[source]
+name = "Röam"
+subtitle = "Röam AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Röam"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/icon.png"
+website = "https://github.com/dododook/my-ipas"
+tint_color = "#4080E0"
+
+[app]
+name = "Röam"
+bundle_identifier = "com.mistj.v2ex"
+developer_name = "mistj"
+subtitle = "V2EX 第三方客户端"
+description = "Röam，V2EX 社区的第三方 iOS 客户端。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/icon.png"
+tint_color = "#4080E0"
+min_os_version = "15.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Only the Röam IPA in dododook/my-ipas; other apps in that repo are ignored.
+asset_pattern = "Roam_.*\\.ipa$"
+version_pattern = "Roam_([0-9.]+)\\.ipa$"
+version_source = "filename"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/images/news.png"
+
+[output]
+path = "apps.json"
