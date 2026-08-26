@@ -1,0 +1,42 @@
+{
+  "name": "JoyComic",
+  "subtitle": "JoyComic AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for JoyComic",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/JoyComic/icon.png",
+  "website": "https://github.com/xiaoqi419/JoyComic",
+  "tintColor": "#F04080",
+  "apps": [
+    {
+      "name": "JoyComic",
+      "bundleIdentifier": "com.example.joycomic",
+      "developerName": "xiaoqi419",
+      "subtitle": "哔咔 & 禁漫双源漫画阅读器",
+      "localizedDescription": "JoyComic，使用 Flutter 构建的 iOS 漫画阅读器，聚合哔咔与禁漫，支持搜索、分类、收藏、下载与多模式阅读。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/JoyComic/icon.png",
+      "tintColor": "#F04080",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-07-24",
+          "localizedDescription": "## 🎉 JoyComic v1.0.0\n\n首个稳定版本发布。聚合哔咔与禁漫双源的 iOS 漫画阅读器，纯 Dart / Flutter 实现。\n\n### 📥 下载\n\n- **joycomic-unsigned.ipa** — 未签名 IPA（17 MB）\n\n### ⚠️ 安装说明\n\n当前 IPA **未签名**，需自签名后方可安装到真机：\n\n1. **TrollStore**（推荐，免签名）：iOS 14.0 - 16.6.1 系统可直接安装\n2. **Sideloadly / AltStore**：使用 Apple ID 自签名，7 天有效期\n3. **自购开发者证书**：使用 `codesign` 或 Xcode 重签\n\n### ✨ 主要功能\n\n- 双源浏览：哔咔 + 禁漫，禁漫普通内容可匿名浏览\n- 内容发现：首页推荐、分类、排行、搜索、以图搜图\n- 五种阅读模式：纵向连续 / 单页左右翻页 / 双页左右翻页\n- 图片处理：禁漫图片解扰、多图床回退、缓存重试\n- 离线阅读：章节下载队列、任务持久化、本地阅读\n- 数据管理：收藏、历史、WebDAV 备份恢复\n- 媒体与诊断：禁漫视频播放、运行日志查看导出\n\n### 🏗️ 技术栈\n\nFlutter 3.32+ / Dart 3.10+，纯 Dart 实现，iOS 工程由 Codemagic CI 自动构建。\n\n### 📄 声明\n\n本项目仅供学习、研究与个人使用。不提供、不存储、不分发任何漫画资源。内容版权归原作者及对应平台所有。使用者应自行判断内容来源的合法性，并承担使用本软件产生的全部责任。\n\n**Full Changelog**: https://github.com/xiaoqi419/JoyComic/commits/v1.0.0",
+          "downloadURL": "https://github.com/xiaoqi419/JoyComic/releases/download/v1.0.0/joycomic-unsigned.ipa",
+          "size": 17055092,
+          "minOSVersion": "13.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.example.joycomic",
+      "title": "JoyComic 1.0.0 · 24 Jul 2026",
+      "identifier": "JoyComic-release-v1.0.0",
+      "caption": "JoyComic 1.0.0 is available.",
+      "date": "2026-07-24T08:06:33Z",
+      "tintColor": "#F04080",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/JoyComic/images/news.png",
+      "notify": true,
+      "url": "https://github.com/xiaoqi419/JoyComic/releases/tag/v1.0.0"
+    }
+  ]
+}
