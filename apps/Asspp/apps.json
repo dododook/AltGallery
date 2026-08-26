@@ -1,0 +1,45 @@
+{
+  "name": "Asspp",
+  "subtitle": "Asspp AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Asspp",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/icon.png",
+  "website": "https://github.com/Lakr233/Asspp",
+  "tintColor": "#4090E0",
+  "apps": [
+    {
+      "name": "Asspp",
+      "bundleIdentifier": "wiki.qaq.Asspp",
+      "developerName": "Lakr233",
+      "subtitle": "多区 App Store 管理工具",
+      "localizedDescription": "Asspp，多账户、多区 App Store 客户端。可切换地区、下载官方 IPA 和历史版本。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/images/home.png"
+      ],
+      "tintColor": "#4090E0",
+      "versions": [
+        {
+          "version": "4.2.1",
+          "date": "2026-06-14",
+          "localizedDescription": "Release 4.2.1",
+          "downloadURL": "https://github.com/Lakr233/Asspp/releases/download/4.2.1/Asspp.ipa",
+          "size": 15162563,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "wiki.qaq.Asspp",
+      "title": "Asspp 4.2.1 · 14 Jun 2026",
+      "identifier": "Asspp-release-4.2.1",
+      "caption": "Asspp 4.2.1 is available.",
+      "date": "2026-06-14T02:47:42Z",
+      "tintColor": "#4090E0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Lakr233/Asspp/releases/tag/4.2.1"
+    }
+  ]
+}
