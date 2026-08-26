@@ -2,7 +2,7 @@
   "name": "YouProEXTRA",
   "subtitle": "YouProEXTRA AltStore source by AltGallery & altgen",
   "description": "Auto-updated AltStore source for YouProEXTRA",
-  "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
   "website": "https://github.com/mrdrvt99/YouProEXTRA",
   "tintColor": "#FF0000",
   "apps": [
@@ -12,10 +12,10 @@
       "developerName": "alibusut",
       "subtitle": "YouTube mod with customizable tweaks",
       "localizedDescription": "YouPro mod of YouTube for iOS. Includes no ads, background playback, downloads, iSponsorBlock, PiP, and a host of customizable tweaks.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/list.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/play.jpg"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/list.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/play.jpg"
       ],
       "tintColor": "#FF0000",
       "versions": [
@@ -39,7 +39,7 @@
       "caption": "YouProEXTRA 21.24.3 is available.",
       "date": "2026-08-16T22:53:43Z",
       "tintColor": "#FF0000",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
       "notify": true,
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
     }

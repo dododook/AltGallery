@@ -12,11 +12,11 @@
       "developerName": "Skitty",
       "subtitle": "Free and open source manga reader for iOS and iPadOS",
       "localizedDescription": "A free and open source manga reading application for iOS and iPadOS.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/library.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/source.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/reader.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/library.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/source.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/reader.png"
       ],
       "tintColor": "#FF375F",
       "versions": [
@@ -36,11 +36,11 @@
       "developerName": "AniBakaBaka",
       "subtitle": "跨平台番剧聚合、媒体播放与弹幕客户端",
       "localizedDescription": "AniBaka 是一个基于 Flutter 的跨平台番剧聚合与媒体播放客户端，支持多番剧源、弹幕、字幕、离线缓存与本地媒体库，并提供动漫实时超分辨率画质增强。",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/images/detail.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/images/player.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/detail.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/player.png"
       ],
       "tintColor": "#0077B6",
       "versions": [
@@ -61,11 +61,11 @@
       "developerName": "openAnimeFlow",
       "subtitle": "跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率与弹幕",
       "localizedDescription": "AnimeFlow 是一个跨平台动漫视频播放应用，支持 Android、iOS、Windows、macOS 与 Linux。内置多数据源与自定义 XPath 爬虫配置，支持基于 Anime4K 的实时视频 4K 超分辨率，对接 Bangumi 同步收藏与追番数据，并支持多平台弹幕源与丰富的弹幕设置。",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/detail.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/comment.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/detail.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/comment.png"
       ],
       "tintColor": "#124EB3",
       "versions": [
@@ -85,11 +85,11 @@
       "developerName": "open-ani",
       "subtitle": "一站式弹幕追番平台",
       "localizedDescription": "Animeko 是一个 Kotlin/Compose Multiplatform 打造的一站式弹幕追番平台，集找番、追番、看番于一体，支持 Bangumi 云同步观看记录、多视频数据源聚合（含 BitTorrent、Jellyfin、Emby）、离线缓存与弹幕云过滤。",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/subject-details.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/episode.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/subject-details.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/episode.png"
       ],
       "tintColor": "#0050A0",
       "versions": [
@@ -109,13 +109,13 @@
       "developerName": "Christian Selig (& Apollo-Reborn contributors)",
       "subtitle": "Apollo-Reborn build with Liquid Glass patch",
       "localizedDescription": "Apollo-Reborn is the community-maintained Apollo sideload build powered by the Apollo-Reborn tweak.\n\nIt restores custom API support, media fixes, uploads, inline media, translation, saved categories, Home Screen and Lock Screen widgets, Liquid Glass support on iOS 26+, and the rest of the project’s ongoing fixes and enhancements.\n\nThese sources are intended for AltStore Classic, SideStore, and Feather. Apollo-Reborn is not compatible with AltStore PAL.\n\nChoose the source variant that matches how you sideload:\n\n• Standard: full app bundle with Apollo’s working extensions plus Apollo-Reborn widgets\n• No Extensions: strips app extensions, including widgets, to reduce App ID usage on free Apple IDs\n• GLASS: adds the Liquid Glass iOS 26 patch and bundled Liquid Glass icon catalog\n• No Extensions + GLASS: combines both options\n\nThe extension-bearing builds (Standard and GLASS) register about 7 App IDs, one per bundled app extension. A free Apple ID can register 10 App IDs per 7 days, so a clean single install fits, but it is easy to exceed if you install under more than one bundle ID, reinstall within the same week, or sideload other extension-bearing apps. If an install fails with an App ID error, use a No Extensions build (1 App ID) or wait for older App IDs to expire. A paid Apple Developer account has a much higher cap.\n\nThis project is not affiliated with Apollo or Christian Selig.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Apollo-Reborn/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/avatar-profile.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/settings.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/custom.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/recents.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/lg-icons.jpg"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/avatar-profile.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/settings.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/custom.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/recents.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/lg-icons.jpg"
       ],
       "tintColor": "#6050F0",
       "versions": [
@@ -134,11 +134,11 @@
       "developerName": "ARMSX2",
       "subtitle": "PlayStation 2 emulator for ARM64",
       "localizedDescription": "A free and open-source PlayStation 2 (PS2) emulator based on PCSX2, with native ARM64 JIT recompilers. Play PS2 games on your phone, PC, or gaming handheld.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/game.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/list.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/settings.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/game.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/list.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/settings.png"
       ],
       "tintColor": "#3CAEFF",
       "versions": [
@@ -182,11 +182,11 @@
       "developerName": "OatmealDome",
       "subtitle": "GameCube and Wii emulator for iOS/iPadOS",
       "localizedDescription": "Dolphin for iOS, reborn. A GameCube and Wii emulator for iPhone and iPad.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DolphiniOS/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/images/game.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/images/settings.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DolphiniOS/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DolphiniOS/images/game.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DolphiniOS/images/settings.png"
       ],
       "tintColor": "#E0B030",
       "versions": [
@@ -206,11 +206,11 @@
       "developerName": "Manic EMU Development Team",
       "subtitle": "Original Xbox emulation for iOS",
       "localizedDescription": "DukeX is an experimental iOS-focused frontend for xemu. It embeds the xemu core in a native Swift shell and presents the Vulkan renderer through MoltenVK and native Metal.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DukeX/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/images/library.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/images/activity.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/images/game.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DukeX/images/library.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DukeX/images/activity.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DukeX/images/game.png"
       ],
       "tintColor": "#8FCA39",
       "versions": [
@@ -230,11 +230,11 @@
       "developerName": "EhPanda-Team",
       "subtitle": "An unofficial E-Hentai App for iOS built with SwiftUI & TCA",
       "localizedDescription": "EhPanda is an unofficial E-Hentai app for iOS & iPadOS built with SwiftUI & TCA. It supports almost all E-Hentai gallery categories, gallery browsing with filters, gallery details with tags & related galleries, posting / editing / replying to comments, H@H archiving, torrent listing, E-Hentai settings, and SNI-bypass (domain fronting) for restricted networks. Localization is built in and the app icon and accent color are customizable.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EhPanda/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/images/detail.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/images/comment.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EhPanda/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EhPanda/images/detail.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EhPanda/images/comment.png"
       ],
       "tintColor": "#0f766e",
       "versions": [
@@ -273,11 +273,11 @@
       "developerName": "XITRIX",
       "subtitle": "Torrent client for iOS",
       "localizedDescription": "iTorrent is an ordinary torrent client for iOS with Files app support and much more.\n\nWhat can this app do:\n\n• Download in the background\n• Live Activity and Dynamic Island progress bar\n• Downloading on external drives\n• Sequential download (use VLC to watch films while loading)\n• Add torrent files from Share menu (Safari and other apps)\n• Add magnet links directly from Safari\n• Store files in Files app\n• File sharing directly from app\n• Download torrent by url\n• Download torrent by magnet\n• Send notification on torrent downloaded\n• Web/WebDav Server\n• Select files download priority\n• Change UI to dark theme\n• Color personalization\n• RSS Feed",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iTorrent/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/detail.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/player.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iTorrent/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iTorrent/images/detail.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iTorrent/images/player.png"
       ],
       "tintColor": "#F19E69",
       "versions": [
@@ -297,14 +297,14 @@
       "developerName": "Predidit",
       "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。",
       "localizedDescription": "使用 Flutter 开发的基于自定义规则的番剧采集与在线观看程序。使用最多五行基于 Xpath 语法的选择器构建自己的规则，支持规则导入与规则分享，支持基于 Anime4K 的实时超分辨率。\n\n其他特性：番剧目录与搜索、分集播放、番剧弹幕、追番列表、历史记录、倍速播放、多视频源支持、配色方案等。",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/home.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/timetable.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/details.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/selection.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/rules.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/rules_edit.jpg"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/home.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/timetable.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/details.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/selection.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/rules.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/rules_edit.jpg"
       ],
       "tintColor": "#4CAF50",
       "versions": [
@@ -343,11 +343,11 @@
       "developerName": "Moustapha Kodjo Amadou",
       "subtitle": "Read manga, novels, and watch anime",
       "localizedDescription": "Mangayomi is an open-source Flutter app for reading manga, novels, and watching anime across multiple platforms.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot1.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot2.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot3.jpg"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot1.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot2.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot3.jpg"
       ],
       "tintColor": "#EF4444",
       "versions": [
@@ -366,11 +366,11 @@
       "developerName": "dddevid",
       "subtitle": "Free Navidrome client & Subsonic music player",
       "localizedDescription": "Musly is a free Navidrome client and Subsonic music player with an Apple Music-inspired interface. Stream your self-hosted library from Navidrome, Subsonic, or Airsonic servers on iOS, Android, desktop, and more.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/detail.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/player.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/detail.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/player.png"
       ],
       "tintColor": "#FA243C",
       "versions": [
@@ -390,11 +390,11 @@
       "developerName": "bggRGjQaUbCoE",
       "subtitle": "使用Flutter开发的BiliBili第三方客户端",
       "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/bangumi.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/dynamic.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/bangumi.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/dynamic.png"
       ],
       "tintColor": "#73b480",
       "versions": [
@@ -434,11 +434,11 @@
       "developerName": "infinityf4p",
       "subtitle": "基于 SwiftUI 的第三方百度贴吧客户端",
       "localizedDescription": "原生 SwiftUI 构建的非官方贴吧 iOS 客户端。未登录访客即可浏览首页推荐、进吧与吧内列表、帖子详情与楼中楼、搜索、图片缩放与视频播放；登录后支持消息、关注与粉丝、收藏帖子（与官方客户端同步）、每日签到、点赞与发帖回复。另有关键词/用户/贴吧屏蔽、浏览历史与阅读位置恢复、iPad 双栏布局，以及 `tiebapure://` 深链接。",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TiebaPure/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/thread.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/search.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TiebaPure/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TiebaPure/images/thread.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TiebaPure/images/search.png"
       ],
       "tintColor": "#708070",
       "versions": [
@@ -458,10 +458,10 @@
       "developerName": "Suwayomi",
       "subtitle": "Native manga & manhwa reader for Suwayomi-Server",
       "localizedDescription": "Tsumiru is a native client for reading manga & manhwa from a Suwayomi-Server instance, built for long webtoon binges. Offline downloads with an on-device catalog, a rebuilt continuous-scroll webtoon reader, incognito mode, and 13 built-in themes.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/list.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/update.jpg"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/list.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/update.jpg"
       ],
       "tintColor": "#7c7bff",
       "versions": [
@@ -481,11 +481,11 @@
       "developerName": "osy",
       "subtitle": "Virtual machines for iOS",
       "localizedDescription": "UTM is a full featured virtual machine host for iOS. In short, it allows you to run Windows, Android, and more on your iPhone and iPad.\n\nThis version requires using AltJIT. Install UTM SE for slower emulation without JIT.\n\nMore information at https://getutm.app/\n\nFeatures:\n\n• Emulate any Processor\n30+ processors supported by qemu including x86_64, ARM64, and RISC-V\n• Run any Operating System\nWindows, Linux, and more natively and securely on iOS within an App\n• Fast Emulation\nPara-virtualization with SPICE and JIT compilation with TCG\n• High Compatibility\niOS 14+ supported. Works on iPhone and iPad. No jailbreak needed\n• Free and Open Source\nUTM and its dependencies are all free and open source\n• Easy to Use\nConfigure and customize your VM in a native UI",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/UTM/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/images/settings.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/images/display.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/UTM/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/UTM/images/settings.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/UTM/images/display.png"
       ],
       "tintColor": "#1a2cc2",
       "versions": [
@@ -505,11 +505,11 @@
       "developerName": "CyrilPeng",
       "subtitle": "跨平台漫画阅读器",
       "localizedDescription": "基于 Flutter 的跨平台漫画阅读器，支持本地漫画、WebDAV 漫画源与第三方网络漫画源，支持 Android、iOS、Windows、Linux、macOS 平台。",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Venera-Next/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/home.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/explorer.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/search.jpg"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Venera-Next/images/home.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Venera-Next/images/explorer.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Venera-Next/images/search.jpg"
       ],
       "tintColor": "#2090E0",
       "versions": [
@@ -550,10 +550,10 @@
       "developerName": "alibusut",
       "subtitle": "YouTube mod with customizable tweaks",
       "localizedDescription": "YouPro mod of YouTube for iOS. Includes no ads, background playback, downloads, iSponsorBlock, PiP, and a host of customizable tweaks.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/list.jpg",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/play.jpg"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/list.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/play.jpg"
       ],
       "tintColor": "#FF0000",
       "versions": [
@@ -577,7 +577,7 @@
       "caption": "PiliPlus 2.1.2.1 is available.",
       "date": "2026-08-26T03:10:08Z",
       "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.1"
     },
@@ -599,7 +599,7 @@
       "caption": "Musly 2.0.1 is available.",
       "date": "2026-08-25T21:44:35Z",
       "tintColor": "#FA243C",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/news.png",
       "notify": true,
       "url": "https://github.com/dddevid/Musly/releases/tag/v2.0.1"
     },
@@ -621,7 +621,7 @@
       "caption": "VeneraNext 1.14.3 is available.",
       "date": "2026-08-25T11:05:27Z",
       "tintColor": "#2090E0",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Venera-Next/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Venera-Next/images/news.png",
       "notify": true,
       "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.14.3"
     },
@@ -643,7 +643,7 @@
       "caption": "ARMSX2 nightly-20260825 is available.",
       "date": "2026-08-25T09:25:29Z",
       "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
       "notify": true,
       "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260825"
     },
@@ -665,7 +665,7 @@
       "caption": "Mangayomi 0.8.9 is available.",
       "date": "2026-08-24T12:56:49Z",
       "tintColor": "#EF4444",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
       "notify": true,
       "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.8.9"
     },
@@ -686,7 +686,7 @@
       "caption": "TiebaPure 1.4.14 is available.",
       "date": "2026-08-24T01:40:29Z",
       "tintColor": "#708070",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TiebaPure/images/news.png",
       "notify": true,
       "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.14"
     },
@@ -697,7 +697,7 @@
       "caption": "AnimeFlow 2.3.0 is available.",
       "date": "2026-08-21T15:25:20Z",
       "tintColor": "#124EB3",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
       "notify": true,
       "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.3.0"
     },
@@ -708,7 +708,7 @@
       "caption": "Kazumi 2.2.9 is available.",
       "date": "2026-08-21T06:53:25Z",
       "tintColor": "#4CAF50",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
       "notify": true,
       "url": "https://github.com/Predidit/Kazumi/releases/tag/2.2.9"
     },
@@ -719,7 +719,7 @@
       "caption": "Apollo for Reddit - GLASS 3.6.0 is available.",
       "date": "2026-08-18T21:35:49Z",
       "tintColor": "#6050F0",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Apollo-Reborn/images/news.png",
       "notify": true,
       "url": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.6.0"
     },
@@ -730,7 +730,7 @@
       "caption": "YouProEXTRA 21.24.3 is available.",
       "date": "2026-08-16T22:53:43Z",
       "tintColor": "#FF0000",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
       "notify": true,
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
     },
@@ -741,7 +741,7 @@
       "caption": "AniBaka 5.0.7 is available.",
       "date": "2026-08-12T07:34:31Z",
       "tintColor": "#0077B6",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/AniBaka/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/news.png",
       "notify": true,
       "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.0.7+0811"
     },
@@ -752,7 +752,7 @@
       "caption": "Tsumiru 1.1.5 is available.",
       "date": "2026-08-10T04:16:37Z",
       "tintColor": "#7c7bff",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/news.png",
       "notify": true,
       "url": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/tag/v1.1.5"
     },
@@ -763,7 +763,7 @@
       "caption": "Animeko 6.0.0 is available.",
       "date": "2026-08-01T18:38:19Z",
       "tintColor": "#0050A0",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
       "notify": true,
       "url": "https://github.com/open-ani/animeko/releases/tag/v6.0.0"
     },
@@ -774,7 +774,7 @@
       "caption": "EhPanda 2.8.1 is available.",
       "date": "2026-07-20T12:12:04Z",
       "tintColor": "#0f766e",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/EhPanda/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EhPanda/images/news.png",
       "notify": true,
       "url": "https://github.com/EhPanda-Team/EhPanda/releases/tag/v2.8.1"
     },
@@ -785,7 +785,7 @@
       "caption": "iTorrent 2.2.0-1 is available.",
       "date": "2026-07-19T09:59:41Z",
       "tintColor": "#F19E69",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/iTorrent/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iTorrent/images/news.png",
       "notify": true,
       "url": "https://github.com/XITRIX/iTorrent/releases/tag/v2.2.0-1"
     },
@@ -796,7 +796,7 @@
       "caption": "Aidoku 0.8.4 is available.",
       "date": "2026-07-03T05:27:41Z",
       "tintColor": "#FF375F",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
       "notify": true,
       "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.8.4"
     },
@@ -807,7 +807,7 @@
       "caption": "DukeX 1.0.2 is available.",
       "date": "2026-06-30T12:21:27Z",
       "tintColor": "#8FCA39",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DukeX/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DukeX/images/news.png",
       "notify": true,
       "url": "https://github.com/MaftyManicEMU/DukeX/releases/tag/v1.0.2"
     },
@@ -818,7 +818,7 @@
       "caption": "DolphiniOS 5.0.0b6 is available.",
       "date": "2026-06-20T07:01:54Z",
       "tintColor": "#E0B030",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/DolphiniOS/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DolphiniOS/images/news.png",
       "notify": true,
       "url": "https://github.com/OatmealDome/dolphin-ios/releases/tag/v5.0.0b6"
     },
@@ -829,7 +829,7 @@
       "caption": "UTM 4.7.5 is available.",
       "date": "2026-01-03T17:51:54Z",
       "tintColor": "#1a2cc2",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/UTM/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/UTM/images/news.png",
       "notify": true,
       "url": "https://github.com/utmapp/UTM/releases/tag/v4.7.5"
     },

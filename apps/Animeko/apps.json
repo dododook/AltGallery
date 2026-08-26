@@ -2,7 +2,7 @@
   "name": "Animeko",
   "subtitle": "Animeko AltStore source by AltGallery & altgen",
   "description": "Auto-updated AltStore source for Animeko",
-  "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/icon.png",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/icon.png",
   "website": "https://github.com/open-ani/animeko",
   "tintColor": "#0050A0",
   "apps": [
@@ -12,11 +12,11 @@
       "developerName": "open-ani",
       "subtitle": "一站式弹幕追番平台",
       "localizedDescription": "Animeko 是一个 Kotlin/Compose Multiplatform 打造的一站式弹幕追番平台，集找番、追番、看番于一体，支持 Bangumi 云同步观看记录、多视频数据源聚合（含 BitTorrent、Jellyfin、Emby）、离线缓存与弹幕云过滤。",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/subject-details.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/episode.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/subject-details.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/episode.png"
       ],
       "tintColor": "#0050A0",
       "versions": [
@@ -39,7 +39,7 @@
       "caption": "Animeko 6.0.0 is available.",
       "date": "2026-08-01T18:38:19Z",
       "tintColor": "#0050A0",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
       "notify": true,
       "url": "https://github.com/open-ani/animeko/releases/tag/v6.0.0"
     }

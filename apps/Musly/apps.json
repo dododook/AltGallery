@@ -2,7 +2,7 @@
   "name": "Musly",
   "subtitle": "Musly AltStore source by AltGallery & altgen",
   "description": "Auto-updated AltStore source for Musly",
-  "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.png",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/icon.png",
   "website": "https://github.com/dddevid/Musly",
   "tintColor": "#FA243C",
   "apps": [
@@ -12,11 +12,11 @@
       "developerName": "dddevid",
       "subtitle": "Free Navidrome client & Subsonic music player",
       "localizedDescription": "Musly is a free Navidrome client and Subsonic music player with an Apple Music-inspired interface. Stream your self-hosted library from Navidrome, Subsonic, or Airsonic servers on iOS, Android, desktop, and more.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/detail.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/player.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/detail.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/player.png"
       ],
       "tintColor": "#FA243C",
       "versions": [
@@ -39,7 +39,7 @@
       "caption": "Musly 2.0.1 is available.",
       "date": "2026-08-25T21:44:35Z",
       "tintColor": "#FA243C",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/news.png",
       "notify": true,
       "url": "https://github.com/dddevid/Musly/releases/tag/v2.0.1"
     }

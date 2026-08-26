@@ -2,7 +2,7 @@
   "name": "Aidoku",
   "subtitle": "Home of Aidoku, free and open source manga reader for iOS and iPadOS",
   "description": "This is the AltStore Source for Aidoku, free and open source manga reader for iOS and iPadOS.\n\nFor full details on what's included, check the website: https://aidoku.app/",
-  "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
   "website": "https://aidoku.app/",
   "tintColor": "#FF375F",
   "apps": [
@@ -12,11 +12,11 @@
       "developerName": "Skitty",
       "subtitle": "Free and open source manga reader for iOS and iPadOS",
       "localizedDescription": "A free and open source manga reading application for iOS and iPadOS.",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/library.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/source.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/reader.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/library.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/source.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/reader.png"
       ],
       "tintColor": "#FF375F",
       "versions": [
@@ -39,7 +39,7 @@
       "caption": "Aidoku 0.8.4 is available.",
       "date": "2026-07-03T05:27:41Z",
       "tintColor": "#FF375F",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
       "notify": true,
       "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.8.4"
     }

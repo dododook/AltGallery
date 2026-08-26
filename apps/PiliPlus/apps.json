@@ -2,7 +2,7 @@
   "name": "PiliPlus",
   "subtitle": "PiliPlus AltStore source by AltGallery & altgen",
   "description": "Auto-updated AltStore source for PiliPlus",
-  "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
   "website": "https://github.com/bggRGjQaUbCoE/PiliPlus",
   "tintColor": "#00AEEF",
   "apps": [
@@ -12,11 +12,11 @@
       "developerName": "bggRGjQaUbCoE",
       "subtitle": "使用Flutter开发的BiliBili第三方客户端",
       "localizedDescription": "使用Flutter开发的BiliBili第三方客户端",
-      "iconURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/icon.png",
       "screenshots": [
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/home.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/bangumi.png",
-        "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/dynamic.png"
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/bangumi.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/dynamic.png"
       ],
       "tintColor": "#73b480",
       "versions": [
@@ -40,7 +40,7 @@
       "caption": "PiliPlus 2.1.2.1 is available.",
       "date": "2026-08-26T03:10:08Z",
       "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.1"
     }
