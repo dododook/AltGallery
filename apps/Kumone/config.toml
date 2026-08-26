@@ -1,24 +1,24 @@
 # altgen config for the Kumone AltStore source.
-# IPA is hosted on dododook/my-ipas (not the original app repo).
+# IPA is the unsigned iOS build on missuo/kumone GitHub Releases.
 # Run: uvx altgen -c config.toml
 
 [github]
-repo = "dododook/my-ipas"
+repo = "missuo/kumone"
 
 [source]
 name = "Kumone"
 subtitle = "Kumone AltStore source by AltGallery & altgen"
 description = "Auto-updated AltStore source for Kumone"
 icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/icon.png"
-website = "https://github.com/dododook/my-ipas"
+website = "https://github.com/missuo/kumone"
 tint_color = "#C9A227"
 
 [app]
 name = "Kumone"
 bundle_identifier = "sb.moe.kumone"
-developer_name = "Kumone"
+developer_name = "missuo"
 subtitle = "第三方网易云音乐客户端"
-description = "Kumone，第三方网易云音乐客户端。"
+description = "Kumone（雲の音），网易云音乐的原生第三方客户端。每个 GitHub Release 附带未签名 iOS IPA。"
 icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/icon.png"
 tint_color = "#C9A227"
 min_os_version = "16.0"
@@ -26,10 +26,8 @@ min_os_version = "16.0"
 [versions]
 strip_v_prefix = true
 include_prereleases = false
-# Only the Kumone IPA in dododook/my-ipas; other apps in that repo are ignored.
-asset_pattern = "Kumone_.*\\.ipa$"
-version_pattern = "Kumone_([0-9.]+)\\.ipa$"
-version_source = "filename"
+# Releases also ship a macOS .zip; only take the unsigned iOS IPA.
+asset_pattern = "Kumone-iOS-.*\\.ipa$"
 
 [news]
 title_template = "{name} {version} · {date}"
