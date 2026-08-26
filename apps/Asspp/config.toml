@@ -1,0 +1,39 @@
+# altgen config for the Asspp AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "Lakr233/Asspp"
+
+[source]
+name = "Asspp"
+subtitle = "Asspp AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Asspp"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/icon.png"
+website = "https://github.com/Lakr233/Asspp"
+tint_color = "#4090E0"
+
+[app]
+name = "Asspp"
+bundle_identifier = "wiki.qaq.Asspp"
+developer_name = "Lakr233"
+subtitle = "多区 App Store 管理工具"
+description = "Asspp，多账户、多区 App Store 客户端。可切换地区、下载官方 IPA 和历史版本。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/images/home.png",
+]
+tint_color = "#4090E0"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases also ship a macOS .zip; only take the iOS IPA.
+asset_pattern = "Asspp\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/images/news.png"
+
+[output]
+path = "apps.json"

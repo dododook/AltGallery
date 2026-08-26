@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/Asspp
+
+name = "Asspp"
+tagline = "多区 App Store 管理工具"
+
+[colors]
+tint = "#4090E0"
+tint_alt = "#4090E0"

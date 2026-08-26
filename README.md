@@ -38,6 +38,9 @@ A community-maintained iOS tweak that keeps Apollo for Reddit working after its 
 ### <a href="https://github.com/ARMSX2/ARMSX2"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/ARMSX2/icon.png" alt="ARMSX2 icon" width="24" align="top"> ARMSX2</a>
 A native ARM64 PlayStation 2 emulator for iOS and iPadOS, forked from PCSX2.
 
+### <a href="https://github.com/Lakr233/Asspp"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Asspp/icon.png" alt="Asspp icon" width="24" align="top"> Asspp</a>
+多账户、多区 App Store 管理工具，可下载官方 IPA 和历史版本。
+
 ### <a href="https://github.com/OatmealDome/dolphin-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DolphiniOS/icon.png" alt="DolphiniOS icon" width="24" align="top"> DolphiniOS</a>
 Dolphin for iOS, reborn — a GameCube and Wii emulator for iPhone and iPad.
 
