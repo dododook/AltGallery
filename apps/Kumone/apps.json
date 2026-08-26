@@ -3,24 +3,24 @@
   "subtitle": "Kumone AltStore source by AltGallery & altgen",
   "description": "Auto-updated AltStore source for Kumone",
   "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/icon.png",
-  "website": "https://github.com/dododook/my-ipas",
+  "website": "https://github.com/missuo/kumone",
   "tintColor": "#C9A227",
   "apps": [
     {
       "name": "Kumone",
       "bundleIdentifier": "sb.moe.kumone",
-      "developerName": "Kumone",
+      "developerName": "missuo",
       "subtitle": "第三方网易云音乐客户端",
-      "localizedDescription": "Kumone，第三方网易云音乐客户端。",
+      "localizedDescription": "Kumone（雲の音），网易云音乐的原生第三方客户端。每个 GitHub Release 附带未签名 iOS IPA。",
       "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/icon.png",
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.2.5",
-          "date": "2026-08-24",
-          "localizedDescription": "Third-party NetEase Cloud Music client. Bundle ID: sb.moe.kumone",
-          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Kumone-0.2.5/Kumone_0.2.5.ipa",
-          "size": 6477169,
+          "version": "0.3.6",
+          "date": "2026-08-26",
+          "localizedDescription": "### Added / 新增\n\n- iOS: immersive iPhone Now Playing — compact track header, synced lyrics, artwork and queue, with pull-to-dismiss and a spatial transition from the mini player (zoom on iOS 18+, matched-geometry below). A new Settings → Appearance toggle switches between the immersive and classic layouts (immersive by default). macOS is unchanged. Thanks @miloquinn (#27).\n- iOS：iPhone 沉浸式播放页——紧凑信息栏、同步歌词、封面与播放队列，支持下拉关闭以及从迷你播放器进入的空间转场（iOS 18+ 用 zoom，更低版本用 matched-geometry）。设置 → 外观新增开关可在沉浸式与经典布局间切换（默认沉浸式）。macOS 不变。感谢 @miloquinn（#27）。\n- iOS 26: a Liquid Glass mini player rendered as the system `tabViewBottomAccessory` — it collapses into an inline layout together with the tab bar when the list scrolls down; iOS 16–25 keep the existing custom glass bar. Thanks @miloquinn (#27).\n- iOS 26：迷你播放器改用系统 `tabViewBottomAccessory` 的液态玻璃样式——列表下滑时随 Tab Bar 收纳为行内样式；iOS 16–25 继续使用现有的自定义玻璃条。感谢 @miloquinn（#27）。\n\n### Improved / 改进\n\n- iOS: refined the compact track list — larger artwork and row height, clearer title/artist/duration hierarchy, track numbers hidden in compact layouts, and playback state shown over the artwork; Dynamic Type preserved. Thanks @miloquinn (#27).\n- iOS：精修紧凑歌曲列表——更大的封面与行高、更清晰的标题/歌手/时长层级、紧凑布局隐藏序号、封面上显示播放状态；保留动态字体适配。感谢 @miloquinn（#27）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.6/Kumone-iOS-0.3.6.ipa",
+          "size": 6846492,
           "minOSVersion": "16.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.2.5 · 24 Aug 2026",
-      "identifier": "Kumone-release-Kumone-0.2.5",
-      "caption": "Kumone 0.2.5 is available.",
-      "date": "2026-08-24T01:38:10Z",
+      "title": "Kumone 0.3.6 · 26 Aug 2026",
+      "identifier": "Kumone-release-v0.3.6",
+      "caption": "Kumone 0.3.6 is available.",
+      "date": "2026-08-26T02:07:11Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/dododook/my-ipas/releases/tag/Kumone-0.2.5"
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.6"
     }
   ]
 }

@@ -321,18 +321,18 @@
     {
       "name": "Kumone",
       "bundleIdentifier": "sb.moe.kumone",
-      "developerName": "Kumone",
+      "developerName": "missuo",
       "subtitle": "第三方网易云音乐客户端",
-      "localizedDescription": "Kumone，第三方网易云音乐客户端。",
+      "localizedDescription": "Kumone（雲の音），网易云音乐的原生第三方客户端。每个 GitHub Release 附带未签名 iOS IPA。",
       "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/icon.png",
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.2.5",
-          "date": "2026-08-24",
-          "localizedDescription": "Third-party NetEase Cloud Music client. Bundle ID: sb.moe.kumone",
-          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Kumone-0.2.5/Kumone_0.2.5.ipa",
-          "size": 6477169,
+          "version": "0.3.6",
+          "date": "2026-08-26",
+          "localizedDescription": "### Added / 新增\n\n- iOS: immersive iPhone Now Playing — compact track header, synced lyrics, artwork and queue, with pull-to-dismiss and a spatial transition from the mini player (zoom on iOS 18+, matched-geometry below). A new Settings → Appearance toggle switches between the immersive and classic layouts (immersive by default). macOS is unchanged. Thanks @miloquinn (#27).\n- iOS：iPhone 沉浸式播放页——紧凑信息栏、同步歌词、封面与播放队列，支持下拉关闭以及从迷你播放器进入的空间转场（iOS 18+ 用 zoom，更低版本用 matched-geometry）。设置 → 外观新增开关可在沉浸式与经典布局间切换（默认沉浸式）。macOS 不变。感谢 @miloquinn（#27）。\n- iOS 26: a Liquid Glass mini player rendered as the system `tabViewBottomAccessory` — it collapses into an inline layout together with the tab bar when the list scrolls down; iOS 16–25 keep the existing custom glass bar. Thanks @miloquinn (#27).\n- iOS 26：迷你播放器改用系统 `tabViewBottomAccessory` 的液态玻璃样式——列表下滑时随 Tab Bar 收纳为行内样式；iOS 16–25 继续使用现有的自定义玻璃条。感谢 @miloquinn（#27）。\n\n### Improved / 改进\n\n- iOS: refined the compact track list — larger artwork and row height, clearer title/artist/duration hierarchy, track numbers hidden in compact layouts, and playback state shown over the artwork; Dynamic Type preserved. Thanks @miloquinn (#27).\n- iOS：精修紧凑歌曲列表——更大的封面与行高、更清晰的标题/歌手/时长层级、紧凑布局隐藏序号、封面上显示播放状态；保留动态字体适配。感谢 @miloquinn（#27）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.6/Kumone-iOS-0.3.6.ipa",
+          "size": 6846492,
           "minOSVersion": "16.0"
         }
       ]
@@ -399,12 +399,12 @@
       "tintColor": "#73b480",
       "versions": [
         {
-          "version": "2.1.2",
-          "buildVersion": "5241",
-          "date": "2026-08-24",
-          "localizedDescription": "支持设置蜂窝网络解码格式 #2571 by @ucxn\r\n合并字体设置 #2611 by @My-Responsitories\r\n增加楼中楼评论排序设置 #2655 by @Meteor-3\r\nmacOS Command+R 刷新推荐 #2537 by @xiejiaxue\r\nAndroid、Windows、Linux 支持从已安装字体中选择字体 #2611 by @My-Responsitories\r\n\r\n修复部分安卓无法播放 #2631 #2642\r\n修复账号退出逻辑 #2666 by @KIDA-MNESIA\r\n修复导入设置 WebDav 配置未更新 #2667 by @KIDA-MNESIA",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2/PiliPlus_ios_2.1.2%2B5241.ipa",
-          "size": 23940004,
+          "version": "2.1.2.1",
+          "buildVersion": "5255",
+          "date": "2026-08-26",
+          "localizedDescription": "支持加载 `bcc` 格式字幕 #2705\r\n播放器启用自动重连 #2446 by @AlinJiang\r\n安卓支持允许三方 APP 访问私有存储，默认关\r\n支持复制设备信息 #2688 by @My-Responsitories\r\n调整部分设置选项界面 #2683 by @My-Responsitories\r\n\r\n修复 #2697 by @My-Responsitories\r\n修复 #2637 #2638 #2647 #2671 #2692",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2.1/PiliPlus_ios_2.1.2%2B5255.ipa",
+          "size": 23937413,
           "minOSVersion": "14.0"
         }
       ]
@@ -571,6 +571,28 @@
   ],
   "news": [
     {
+      "appID": "com.example.PiliPlus",
+      "title": "PiliPlus 2.1.2.1 · 26 Aug 2026",
+      "identifier": "PiliPlus-release-2.1.2.1",
+      "caption": "PiliPlus 2.1.2.1 is available.",
+      "date": "2026-08-26T03:10:08Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.1"
+    },
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.6 · 26 Aug 2026",
+      "identifier": "Kumone-release-v0.3.6",
+      "caption": "Kumone 0.3.6 is available.",
+      "date": "2026-08-26T02:07:11Z",
+      "tintColor": "#C9A227",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.6"
+    },
+    {
       "appID": "com.dddevid.musly",
       "title": "Musly 2.0.1 · 25 Aug 2026",
       "identifier": "Musly-release-v2.0.1",
@@ -658,17 +680,6 @@
       "url": "https://github.com/dododook/AltGallery"
     },
     {
-      "appID": "com.example.PiliPlus",
-      "title": "PiliPlus 2.1.2 · 24 Aug 2026",
-      "identifier": "PiliPlus-release-2.1.2",
-      "caption": "PiliPlus 2.1.2 is available.",
-      "date": "2026-08-24T03:06:40Z",
-      "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2"
-    },
-    {
       "appID": "dev.infinityf4p.tiebapure",
       "title": "TiebaPure 1.4.14 · 24 Aug 2026",
       "identifier": "TiebaPure-release-v1.4.14",
@@ -678,17 +689,6 @@
       "imageURL": "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/TiebaPure/images/news.png",
       "notify": true,
       "url": "https://github.com/infinityf4p/TiebaPure-iOS/releases/tag/v1.4.14"
-    },
-    {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.2.5 · 24 Aug 2026",
-      "identifier": "Kumone-release-Kumone-0.2.5",
-      "caption": "Kumone 0.2.5 is available.",
-      "date": "2026-08-24T01:38:10Z",
-      "tintColor": "#C9A227",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/dododook/my-ipas/releases/tag/Kumone-0.2.5"
     },
     {
       "appID": "com.ligg.anime_flow",
