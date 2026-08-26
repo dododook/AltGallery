@@ -1,0 +1,35 @@
+# altgen config for the JoyComic AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "xiaoqi419/JoyComic"
+
+[source]
+name = "JoyComic"
+subtitle = "JoyComic AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for JoyComic"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/JoyComic/icon.png"
+website = "https://github.com/xiaoqi419/JoyComic"
+tint_color = "#F04080"
+
+[app]
+name = "JoyComic"
+bundle_identifier = "com.example.joycomic"
+developer_name = "xiaoqi419"
+subtitle = "哔咔 & 禁漫双源漫画阅读器"
+description = "JoyComic，使用 Flutter 构建的 iOS 漫画阅读器，聚合哔咔与禁漫，支持搜索、分类、收藏、下载与多模式阅读。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/JoyComic/icon.png"
+tint_color = "#F04080"
+min_os_version = "13.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+asset_pattern = "joycomic-.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/JoyComic/images/news.png"
+
+[output]
+path = "apps.json"

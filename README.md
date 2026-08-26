@@ -59,6 +59,9 @@ NodeSeek 第三方 iOS 客户端。
 ### <a href="https://github.com/XITRIX/iTorrent"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iTorrent/icon.png" alt="iTorrent icon" width="24" align="top"> iTorrent</a>
 Torrent client for iOS.
 
+### <a href="https://github.com/xiaoqi419/JoyComic"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/JoyComic/icon.png" alt="JoyComic icon" width="24" align="top"> JoyComic</a>
+哔咔 & 禁漫双源 iOS 漫画阅读器。
+
 ### <a href="https://github.com/Predidit/Kazumi"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Kazumi/icon.png" alt="Kazumi icon" width="24" align="top"> Kazumi</a>
 基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率。
 
