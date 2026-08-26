@@ -9,7 +9,7 @@ repo = "bggRGjQaUbCoE/PiliPlus"
 name = "PiliPlus"
 subtitle = "PiliPlus AltStore source by AltGallery & altgen"
 description = "Auto-updated AltStore source for PiliPlus"
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/icon.png"
 website = "https://github.com/bggRGjQaUbCoE/PiliPlus"
 tint_color = "#00AEEF"
 
@@ -19,11 +19,11 @@ bundle_identifier = "com.example.PiliPlus"
 developer_name = "bggRGjQaUbCoE"
 subtitle = "使用Flutter开发的BiliBili第三方客户端"
 description = "使用Flutter开发的BiliBili第三方客户端"
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/icon.png"
 screenshots = [
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/home.png",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/bangumi.png",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/dynamic.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/home.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/bangumi.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/dynamic.png",
 ]
 tint_color = "#73b480"
 min_os_version = "14.0"
@@ -39,7 +39,7 @@ build_version_pattern = "\\+(\\d+)\\.ipa$"
 [news]
 title_template = "{name} {version} · {date}"
 # shared promo image rendered by templates/render_news.py
-image_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png"
 
 [output]
 path = "apps.json"

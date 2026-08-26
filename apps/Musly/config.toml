@@ -8,7 +8,7 @@ repo = "dddevid/Musly"
 name = "Musly"
 subtitle = "Musly AltStore source by AltGallery & altgen"
 description = "Auto-updated AltStore source for Musly"
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/icon.png"
 website = "https://github.com/dddevid/Musly"
 tint_color = "#FA243C"
 
@@ -18,11 +18,11 @@ bundle_identifier = "com.dddevid.musly"
 developer_name = "dddevid"
 subtitle = "Free Navidrome client & Subsonic music player"
 description = "Musly is a free Navidrome client and Subsonic music player with an Apple Music-inspired interface. Stream your self-hosted library from Navidrome, Subsonic, or Airsonic servers on iOS, Android, desktop, and more."
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/icon.png"
 screenshots = [
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/home.png",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/detail.png",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/player.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/home.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/detail.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/player.png",
 ]
 tint_color = "#FA243C"
 min_os_version = "15.0"
@@ -37,7 +37,7 @@ asset_pattern = "musly-ios\\.ipa$"
 [news]
 title_template = "{name} {version} · {date}"
 # shared promo image rendered by templates/render_news.py
-image_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Musly/images/news.png"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/news.png"
 
 [output]
 path = "apps.json"

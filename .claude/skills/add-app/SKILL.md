@@ -62,7 +62,7 @@ re-derived from the README by hand.
    d. **Caveats**
       - Still download the icon/screenshots into `apps/<AppName>/` and point
         `icon_url` / `screenshots` at the
-        `raw.githubusercontent.com/bebound/AltGallery/...` URLs — **never** copy
+        `raw.githubusercontent.com/dododook/AltGallery/...` URLs — **never** copy
         the source's remote asset URLs into `config.toml`; AltGallery hosts its
         own copies.
       - `localizedDescription` is often a release-note-style blob; shorten it
@@ -90,7 +90,7 @@ re-derived from the README by hand.
      pointing at the new app's committed icon
    - `[app]`: name, `bundle_identifier`, `developer_name`, subtitle,
      description, `icon_url`, `screenshots` (the
-     `https://raw.githubusercontent.com/bebound/AltGallery/master/apps/<AppName>/images/*.png`
+     `https://raw.githubusercontent.com/dododook/AltGallery/master/apps/<AppName>/images/*.png`
      URLs), `tint_color`, `min_os_version`
    - `[versions]`: matching rules. ⚠️ **`asset_pattern` is a regex, not a
      glob** — to match any ipa use `".*\\.ipa$"`; `"*.ipa"` fails with
@@ -100,7 +100,7 @@ re-derived from the README by hand.
    - `[news]`: copy the PiliPlus block, point `image_url` at the new app's
      `images/news.png`
    - `[output]`: `path = "apps.json"`
-   - All `raw.githubusercontent.com` URLs use the `bebound/AltGallery`
+   - All `raw.githubusercontent.com` URLs use the `dododook/AltGallery`
      repo path.
 
 5. **Sample a tint color** (when the project has no official brand color in
@@ -150,7 +150,7 @@ re-derived from the README by hand.
 9. **Update README** — add the app to **Available Apps**, icon inline before
    the name:
    ```html
-   ### <a href="https://github.com/owner/name"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/<AppName>/icon.png" alt="<AppName> icon" width="24" align="top"> <AppName></a>
+   ### <a href="https://github.com/owner/name"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/<AppName>/icon.png" alt="<AppName> icon" width="24" align="top"> <AppName></a>
    Short one-line description.
    ```
    ⚠️ Use `align="top"` on the icon — `align="center"` renders ~7px low on
@@ -175,7 +175,7 @@ re-derived from the README by hand.
 ## Checklist
 - [ ] fields extracted from the project's own AltStore source (when one exists); `tintColor` normalized to `#RRGGBB`
 - [ ] `apps/<AppName>/{config.toml, news.toml, icon.png, images/*}` all present
-- [ ] icon/screenshots hosted locally and referenced via `bebound/AltGallery` raw URLs (never the source's remote URLs)
+- [ ] icon/screenshots hosted locally and referenced via `dododook/AltGallery` raw URLs (never the source's remote URLs)
 - [ ] `apps.json` regenerated after the last config change; never hand-edited; gitignored (not committed)
 - [ ] `all-apps.json` NOT touched — CI workflow regenerates and commits it
 - [ ] `images/news.png` rendered; not auto-committed

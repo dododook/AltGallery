@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/bebound/AltGallery/master/assets/icon.png" alt="AltGallery" width="120">
+  <img src="https://raw.githubusercontent.com/dododook/AltGallery/master/assets/icon.png" alt="AltGallery" width="120">
 </p>
 
 <h1 align="center">AltGallery</h1>
@@ -7,89 +7,89 @@
 <p>Curated AltStore sources for IPA projects on GitHub. All sources are generated in this repo with <a href="https://github.com/bebound/AltGen">AltGen</a>. It can be used with <a href="https://github.com/altstoreio/Altstore">AltStore</a>, <a href="https://github.com/SideStore/SideStore">SideStore</a>, <a href="https://github.com/LiveContainer/LiveContainer">LiveContainer</a>, <a href="https://github.com/claration/Feather">Feather</a> or other compatible apps.</p>
 
 <p align="center">
-<a href="https://altdirect.app/?url=https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/all-apps.json" target="_blank">
-<img src="https://raw.githubusercontent.com/bebound/AltGallery/master/assets/add-alt-source.png" alt="Add AltSource" width="200">
+<a href="https://altdirect.app/?url=https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/all-apps.json" target="_blank">
+<img src="https://raw.githubusercontent.com/dododook/AltGallery/master/assets/add-alt-source.png" alt="Add AltSource" width="200">
 </a>
 </p>
 
 ## Screenshots
 
-| <img src="https://raw.githubusercontent.com/bebound/AltGallery/master/assets/sidestore.jpg" alt="AltGallery in SideStore" width="200" style="border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"> | <img src="https://raw.githubusercontent.com/bebound/AltGallery/master/assets/sidestore_news.jpg" alt="AltGallery news in SideStore" width="200" style="border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"> | <img src="https://raw.githubusercontent.com/bebound/AltGallery/master/assets/livecontainer.jpg" alt="AltGallery in LiveContainer" width="200" style="border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"> |
+| <img src="https://raw.githubusercontent.com/dododook/AltGallery/master/assets/sidestore.jpg" alt="AltGallery in SideStore" width="200" style="border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"> | <img src="https://raw.githubusercontent.com/dododook/AltGallery/master/assets/sidestore_news.jpg" alt="AltGallery news in SideStore" width="200" style="border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"> | <img src="https://raw.githubusercontent.com/dododook/AltGallery/master/assets/livecontainer.jpg" alt="AltGallery in LiveContainer" width="200" style="border-radius: 18px; box-shadow: 0 4px 12px rgba(0,0,0,0.15);"> |
 | :---: | :---: | :---: |
 | **SideStore** | **SideStore News** | **LiveContainer** |
 
 ## Available Apps
 
-### <a href="https://github.com/Aidoku/Aidoku"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Aidoku/icon.png" alt="Aidoku icon" width="24" align="top"> Aidoku</a>
+### <a href="https://github.com/Aidoku/Aidoku"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Aidoku/icon.png" alt="Aidoku icon" width="24" align="top"> Aidoku</a>
 A free and open source manga reading application for iOS and iPadOS.
 
-### <a href="https://github.com/AniBakaBaka/AniBaka"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/AniBaka/icon.png" alt="AniBaka icon" width="24" align="top"> AniBaka</a>
+### <a href="https://github.com/AniBakaBaka/AniBaka"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AniBaka/icon.png" alt="AniBaka icon" width="24" align="top"> AniBaka</a>
 跨平台番剧聚合与弹幕客户端，多番剧源、多弹幕、高清无广告，支持动漫实时超分辨率。
 
-### <a href="https://github.com/openAnimeFlow/AnimeFlow"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/AnimeFlow/icon.png" alt="AnimeFlow icon" width="24" align="top"> AnimeFlow</a>
+### <a href="https://github.com/openAnimeFlow/AnimeFlow"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AnimeFlow/icon.png" alt="AnimeFlow icon" width="24" align="top"> AnimeFlow</a>
 跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率、Bangumi 同步与弹幕。
 
-### <a href="https://github.com/open-ani/animeko"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Animeko/icon.png" alt="Animeko icon" width="24" align="top"> Animeko</a>
+### <a href="https://github.com/open-ani/animeko"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Animeko/icon.png" alt="Animeko icon" width="24" align="top"> Animeko</a>
 一站式弹幕追番平台，支持 Bangumi 云同步、多视频数据源聚合、离线缓存与弹幕云过滤。
 
-### <a href="https://github.com/Apollo-Reborn/Apollo-Reborn"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Apollo-Reborn/icon.png" alt="Apollo Reborn icon" width="24" align="top"> Apollo Reborn</a>
+### <a href="https://github.com/Apollo-Reborn/Apollo-Reborn"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Apollo-Reborn/icon.png" alt="Apollo Reborn icon" width="24" align="top"> Apollo Reborn</a>
 A community-maintained iOS tweak that keeps Apollo for Reddit working after its June 2023 shutdown.
 
-### <a href="https://github.com/ARMSX2/ARMSX2"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/ARMSX2/icon.png" alt="ARMSX2 icon" width="24" align="top"> ARMSX2</a>
+### <a href="https://github.com/ARMSX2/ARMSX2"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/ARMSX2/icon.png" alt="ARMSX2 icon" width="24" align="top"> ARMSX2</a>
 A native ARM64 PlayStation 2 emulator for iOS and iPadOS, forked from PCSX2.
 
-### <a href="https://github.com/OatmealDome/dolphin-ios"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/DolphiniOS/icon.png" alt="DolphiniOS icon" width="24" align="top"> DolphiniOS</a>
+### <a href="https://github.com/OatmealDome/dolphin-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DolphiniOS/icon.png" alt="DolphiniOS icon" width="24" align="top"> DolphiniOS</a>
 Dolphin for iOS, reborn — a GameCube and Wii emulator for iPhone and iPad.
 
 ### <a href="https://github.com/moliango/doer"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Doer/icon.png" alt="Doer icon" width="24" align="top"> Doer</a>
 原生 iOS Linux.do 客户端，UIKit + Swift，支持多主题、小程序与插件。
 
-### <a href="https://github.com/MaftyManicEMU/DukeX"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/DukeX/icon.png" alt="DukeX icon" width="24" align="top"> DukeX</a>
+### <a href="https://github.com/MaftyManicEMU/DukeX"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DukeX/icon.png" alt="DukeX icon" width="24" align="top"> DukeX</a>
 Original Xbox emulation for iOS, built from xemu with a native Swift interface.
 
-### <a href="https://github.com/EhPanda-Team/EhPanda"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/EhPanda/icon.png" alt="EhPanda icon" width="24" align="top"> EhPanda</a>
+### <a href="https://github.com/EhPanda-Team/EhPanda"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/EhPanda/icon.png" alt="EhPanda icon" width="24" align="top"> EhPanda</a>
 An unofficial E-Hentai App for iOS built with SwiftUI & TCA.
 
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Frok-1.0.7"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Frok/icon.png" alt="Frök icon" width="24" align="top"> Frök</a>
 NodeSeek 第三方 iOS 客户端。
 
-### <a href="https://github.com/XITRIX/iTorrent"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/iTorrent/icon.png" alt="iTorrent icon" width="24" align="top"> iTorrent</a>
+### <a href="https://github.com/XITRIX/iTorrent"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iTorrent/icon.png" alt="iTorrent icon" width="24" align="top"> iTorrent</a>
 Torrent client for iOS.
 
-### <a href="https://github.com/Predidit/Kazumi"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Kazumi/icon.png" alt="Kazumi icon" width="24" align="top"> Kazumi</a>
+### <a href="https://github.com/Predidit/Kazumi"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Kazumi/icon.png" alt="Kazumi icon" width="24" align="top"> Kazumi</a>
 基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率。
 
 ### <a href="https://github.com/missuo/kumone"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Kumone/icon.png" alt="Kumone icon" width="24" align="top"> Kumone</a>
 第三方网易云音乐客户端（雲の音）。
 
-### <a href="https://github.com/kodjodevf/mangayomi"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Mangayomi/icon.png" alt="Mangayomi icon" width="24" align="top"> Mangayomi</a>
+### <a href="https://github.com/kodjodevf/mangayomi"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Mangayomi/icon.png" alt="Mangayomi icon" width="24" align="top"> Mangayomi</a>
 Read manga, novels, and watch anime.
 
-### <a href="https://github.com/dddevid/Musly"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Musly/icon.png" alt="Musly icon" width="24" align="top"> Musly</a>
+### <a href="https://github.com/dddevid/Musly"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Musly/icon.png" alt="Musly icon" width="24" align="top"> Musly</a>
 Free Navidrome client & Subsonic music player with an Apple Music-inspired interface.
 
-### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
+### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
 使用Flutter开发的BiliBili第三方客户端。
 
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
 V2EX 第三方 iOS 客户端。
 
-### <a href="https://github.com/infinityf4p/TiebaPure-iOS"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/TiebaPure/icon.png" alt="TiebaPure icon" width="24" align="top"> TiebaPure</a>
+### <a href="https://github.com/infinityf4p/TiebaPure-iOS"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/TiebaPure/icon.png" alt="TiebaPure icon" width="24" align="top"> TiebaPure</a>
 原生 SwiftUI 构建的非官方贴吧 iOS 客户端，支持浏览、搜索、收藏、媒体查看与本地阅读记录。
 
-### <a href="https://github.com/Suwayomi/Suwayomi-Tsumiru"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Suwayomi-Tsumiru/icon.png" alt="Tsumiru icon" width="24" align="top"> Tsumiru</a>
+### <a href="https://github.com/Suwayomi/Suwayomi-Tsumiru"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Suwayomi-Tsumiru/icon.png" alt="Tsumiru icon" width="24" align="top"> Tsumiru</a>
 A native manga & manhwa reader for Suwayomi-Server, built for long webtoon binges.
 
-### <a href="https://github.com/utmapp/UTM"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/UTM/icon.png" alt="UTM icon" width="24" align="top"> UTM</a>
+### <a href="https://github.com/utmapp/UTM"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/UTM/icon.png" alt="UTM icon" width="24" align="top"> UTM</a>
 A full featured virtual machine host for iOS — run Windows, Android, and more on your iPhone and iPad.
 
-### <a href="https://github.com/CyrilPeng/Venera-Next"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/Venera-Next/icon.png" alt="VeneraNext icon" width="24" align="top"> VeneraNext</a>
+### <a href="https://github.com/CyrilPeng/Venera-Next"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Venera-Next/icon.png" alt="VeneraNext icon" width="24" align="top"> VeneraNext</a>
 基于 Flutter 的跨平台漫画阅读器，支持本地漫画、WebDAV 漫画源与第三方网络漫画源。
 
 ### <a href="https://github.com/missuo/VVeboFix"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/VVebo/icon.png" alt="VVebo icon" width="24" align="top"> VVebo</a>
 已停更的第三方微博客户端（3.3.31 自签版，含时间线修复）。
 
-### <a href="https://github.com/mrdrvt99/YouProEXTRA"><img src="https://raw.githubusercontent.com/bebound/AltGallery/master/apps/YouProEXTRA/icon.png" alt="YouProEXTRA icon" width="24" align="top"> YouProEXTRA</a>
+### <a href="https://github.com/mrdrvt99/YouProEXTRA"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/YouProEXTRA/icon.png" alt="YouProEXTRA icon" width="24" align="top"> YouProEXTRA</a>
 YouTube mod for iOS packed with customizable tweaks — no ads, background playback, downloads, and more.
 
 ## Project Layout

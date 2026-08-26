@@ -9,7 +9,7 @@ repo = "kodjodevf/mangayomi"
 name = "Mangayomi"
 subtitle = "Mangayomi AltStore source by AltGallery & altgen"
 description = "Auto-updated AltStore source for Mangayomi"
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/icon.png"
 website = "https://github.com/kodjodevf/mangayomi"
 tint_color = "#EF4444"
 
@@ -19,11 +19,11 @@ bundle_identifier = "com.kodjodevf.mangayomi"
 developer_name = "Moustapha Kodjo Amadou"
 subtitle = "Read manga, novels, and watch anime"
 description = "Mangayomi is an open-source Flutter app for reading manga, novels, and watching anime across multiple platforms."
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/icon.png"
 screenshots = [
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot1.jpg",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot2.jpg",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot3.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot1.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot2.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/screenshot3.jpg",
 ]
 tint_color = "#EF4444"
 
@@ -36,7 +36,7 @@ asset_pattern = "Mangayomi-.*-ios\\.ipa$"
 [news]
 title_template = "{name} {version} · {date}"
 # shared promo image rendered by templates/render_news.py
-image_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png"
 
 [output]
 path = "apps.json"

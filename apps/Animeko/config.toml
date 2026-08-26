@@ -9,7 +9,7 @@ repo = "open-ani/animeko"
 name = "Animeko"
 subtitle = "Animeko AltStore source by AltGallery & altgen"
 description = "Auto-updated AltStore source for Animeko"
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/icon.png"
 website = "https://github.com/open-ani/animeko"
 tint_color = "#0050A0"
 
@@ -19,11 +19,11 @@ bundle_identifier = "org.animeko.animeko"
 developer_name = "open-ani"
 subtitle = "一站式弹幕追番平台"
 description = "Animeko 是一个 Kotlin/Compose Multiplatform 打造的一站式弹幕追番平台，集找番、追番、看番于一体，支持 Bangumi 云同步观看记录、多视频数据源聚合（含 BitTorrent、Jellyfin、Emby）、离线缓存与弹幕云过滤。"
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/icon.png"
 screenshots = [
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/home.png",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/subject-details.png",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/episode.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/home.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/subject-details.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/episode.png",
 ]
 tint_color = "#0050A0"
 min_os_version = "14.0"
@@ -37,7 +37,7 @@ asset_pattern = ".*\\.ipa$"
 [news]
 title_template = "{name} {version} · {date}"
 # shared promo image rendered by templates/render_news.py
-image_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Animeko/images/news.png"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/news.png"
 
 [output]
 path = "apps.json"

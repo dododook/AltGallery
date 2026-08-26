@@ -9,7 +9,7 @@ repo = "Predidit/Kazumi"
 name = "Kazumi"
 subtitle = "Kazumi AltStore source by AltGallery & altgen"
 description = "Auto-updated AltStore source for Kazumi"
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/icon.png"
 website = "https://github.com/Predidit/Kazumi"
 tint_color = "#4CAF50"
 
@@ -19,14 +19,14 @@ bundle_identifier = "com.example.kazumi"
 developer_name = "Predidit"
 subtitle = "基于自定义规则的番剧采集APP，支持流媒体在线观看，支持弹幕，支持实时超分辨率。"
 description = "使用 Flutter 开发的基于自定义规则的番剧采集与在线观看程序。使用最多五行基于 Xpath 语法的选择器构建自己的规则，支持规则导入与规则分享，支持基于 Anime4K 的实时超分辨率。\n\n其他特性：番剧目录与搜索、分集播放、番剧弹幕、追番列表、历史记录、倍速播放、多视频源支持、配色方案等。"
-icon_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/icon.png"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/icon.png"
 screenshots = [
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/home.jpg",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/timetable.jpg",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/details.jpg",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/selection.jpg",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/rules.jpg",
-  "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/rules_edit.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/home.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/timetable.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/details.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/selection.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/rules.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/rules_edit.jpg",
 ]
 tint_color = "#4CAF50"
 min_os_version = "13.0"
@@ -40,7 +40,7 @@ asset_pattern = "Kazumi_ios_.*\\.ipa$"
 [news]
 title_template = "{name} {version} · {date}"
 # shared promo image rendered by templates/render_news.py
-image_url = "https://raw.githubusercontent.com/bebound/AltGallery/refs/heads/master/apps/Kazumi/images/news.png"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png"
 
 [output]
 path = "apps.json"
