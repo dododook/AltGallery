@@ -16,11 +16,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.6",
+          "version": "0.3.7",
           "date": "2026-08-26",
-          "localizedDescription": "### Added / 新增\n\n- iOS: immersive iPhone Now Playing — compact track header, synced lyrics, artwork and queue, with pull-to-dismiss and a spatial transition from the mini player (zoom on iOS 18+, matched-geometry below). A new Settings → Appearance toggle switches between the immersive and classic layouts (immersive by default). macOS is unchanged. Thanks @miloquinn (#27).\n- iOS：iPhone 沉浸式播放页——紧凑信息栏、同步歌词、封面与播放队列，支持下拉关闭以及从迷你播放器进入的空间转场（iOS 18+ 用 zoom，更低版本用 matched-geometry）。设置 → 外观新增开关可在沉浸式与经典布局间切换（默认沉浸式）。macOS 不变。感谢 @miloquinn（#27）。\n- iOS 26: a Liquid Glass mini player rendered as the system `tabViewBottomAccessory` — it collapses into an inline layout together with the tab bar when the list scrolls down; iOS 16–25 keep the existing custom glass bar. Thanks @miloquinn (#27).\n- iOS 26：迷你播放器改用系统 `tabViewBottomAccessory` 的液态玻璃样式——列表下滑时随 Tab Bar 收纳为行内样式；iOS 16–25 继续使用现有的自定义玻璃条。感谢 @miloquinn（#27）。\n\n### Improved / 改进\n\n- iOS: refined the compact track list — larger artwork and row height, clearer title/artist/duration hierarchy, track numbers hidden in compact layouts, and playback state shown over the artwork; Dynamic Type preserved. Thanks @miloquinn (#27).\n- iOS：精修紧凑歌曲列表——更大的封面与行高、更清晰的标题/歌手/时长层级、紧凑布局隐藏序号、封面上显示播放状态；保留动态字体适配。感谢 @miloquinn（#27）。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.6/Kumone-iOS-0.3.6.ipa",
-          "size": 6846492,
+          "localizedDescription": "### Fixed / 修复\n\n- iOS 16/17: tapping the mini player did nothing — the full-screen Now Playing page never appeared. The pre-iOS-18 presentation matched the page's geometry to the mini player bar (`matchedGeometryEffect(.frame, isSource: false)`), which shrank the whole page to bar size. It now presents full-screen with a bottom slide-up (matching the pull-down-to-dismiss); iOS 18+ keeps its zoom transition. (#28, regression from #27)\n- iOS 16/17：点击迷你播放条没有任何反应——全屏播放页始终弹不出来。iOS 18 以下的呈现用 `matchedGeometryEffect(.frame, isSource: false)` 把播放页的尺寸匹配到了迷你播放条，导致整页被压缩成播放条大小。现在改为全屏呈现 + 底部上滑动画（与下拉关闭方向一致）；iOS 18+ 仍保留 zoom 转场。（#28，#27 引入的回归）",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.7/Kumone-iOS-0.3.7.ipa",
+          "size": 6845820,
           "minOSVersion": "16.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.6 · 26 Aug 2026",
-      "identifier": "Kumone-release-v0.3.6",
-      "caption": "Kumone 0.3.6 is available.",
-      "date": "2026-08-26T02:07:11Z",
+      "title": "Kumone 0.3.7 · 26 Aug 2026",
+      "identifier": "Kumone-release-v0.3.7",
+      "caption": "Kumone 0.3.7 is available.",
+      "date": "2026-08-26T03:44:17Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.6"
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.7"
     }
   ]
 }
