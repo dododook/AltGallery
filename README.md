@@ -77,6 +77,9 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
 V2EX 第三方 iOS 客户端。
 
+### <a href="https://github.com/gholts/sphere."><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sphere/icon.png" alt="Sphere icon" width="24" align="top"> Sphere</a>
+原生 iOS 局域网代理面板，控制 Mihomo / Sing-box 后端。
+
 ### <a href="https://github.com/infinityf4p/TiebaPure-iOS"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/TiebaPure/icon.png" alt="TiebaPure icon" width="24" align="top"> TiebaPure</a>
 原生 SwiftUI 构建的非官方贴吧 iOS 客户端，支持浏览、搜索、收藏、媒体查看与本地阅读记录。
 

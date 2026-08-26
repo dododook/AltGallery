@@ -1,0 +1,40 @@
+# altgen config for the Sphere AltStore source.
+# GitHub repo name includes a trailing period: gholts/sphere.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "gholts/sphere."
+
+[source]
+name = "Sphere"
+subtitle = "Sphere AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Sphere"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sphere/icon.png"
+website = "https://github.com/gholts/sphere."
+tint_color = "#16A34A"
+
+[app]
+name = "Sphere"
+bundle_identifier = "dev.gholts.Sphere"
+developer_name = "Hugo Lee"
+subtitle = "局域网代理面板"
+description = "Sphere，原生 iOS 代理控制器，用于管理 Mihomo / Sing-box 等局域网后端。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sphere/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sphere/images/home.png",
+]
+tint_color = "#16A34A"
+min_os_version = "26.1"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Release assets are named sphere-v1.6.2.ipa
+asset_pattern = "sphere-.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sphere/images/news.png"
+
+[output]
+path = "apps.json"

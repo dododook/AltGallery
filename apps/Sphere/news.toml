@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/Sphere
+
+name = "Sphere"
+tagline = "局域网代理面板"
+
+[colors]
+tint = "#16A34A"
+tint_alt = "#16A34A"
