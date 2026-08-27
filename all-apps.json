@@ -416,11 +416,11 @@
       "tintColor": "#FA243C",
       "versions": [
         {
-          "version": "2.0.1",
-          "date": "2026-08-25",
-          "localizedDescription": "## 🎉 Musly v2.0.1\n\n### 📦 Downloads\n\n**Android:**\n- `app-release.apk` (universal APK for all devices)\n\n**iOS:**\n- `musly-ios.ipa` (sideload with AltStore, Sideloadly, or similar — not signed)\n\n**Windows:**\n- `musly-setup.exe` (setup installer, run to install Musly)\n- `musly-windows.zip` (portable version, extract and run)\n\n**macOS:**\n- `musly-macos.dmg` (drag Musly.app to Applications — not notarized)\n\n**Linux:**\n- `musly-linux-x64.tar.gz` (extract and run musly)\n\n### 📝 Changelog\nSee [CHANGELOG.md](https://github.com/dddevid/Musly/blob/master/CHANGELOG.md)\n\n### 🌍 Translations\nContribute translations at [Crowdin](https://crowdin.com/project/musly)",
-          "downloadURL": "https://github.com/dddevid/Musly/releases/download/v2.0.1/musly-ios.ipa",
-          "size": 13891321,
+          "version": "2.0.2",
+          "date": "2026-08-26",
+          "localizedDescription": "## 🎉 Musly v2.0.2\n\n### 📦 Downloads\n\n**Android:**\n- `app-release.apk` (universal APK for all devices)\n\n**iOS:**\n- `musly-ios.ipa` (sideload with AltStore, Sideloadly, or similar — not signed)\n\n**Windows:**\n- `musly-setup.exe` (setup installer, run to install Musly)\n- `musly-windows.zip` (portable version, extract and run)\n\n**macOS:**\n- `musly-macos.dmg` (drag Musly.app to Applications — not notarized)\n\n**Linux:**\n- `musly-linux-x64.tar.gz` (extract and run musly)\n\n### 📝 Changelog\nSee [CHANGELOG.md](https://github.com/dddevid/Musly/blob/master/CHANGELOG.md)\n\n### 🌍 Translations\nContribute translations at [Crowdin](https://crowdin.com/project/musly)",
+          "downloadURL": "https://github.com/dddevid/Musly/releases/download/v2.0.2/musly-ios.ipa",
+          "size": 13928367,
           "minOSVersion": "15.0"
         }
       ]
@@ -634,6 +634,17 @@
   ],
   "news": [
     {
+      "appID": "com.dddevid.musly",
+      "title": "Musly 2.0.2 · 26 Aug 2026",
+      "identifier": "Musly-release-v2.0.2",
+      "caption": "Musly 2.0.2 is available.",
+      "date": "2026-08-26T20:40:22Z",
+      "tintColor": "#FA243C",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dddevid/Musly/releases/tag/v2.0.2"
+    },
+    {
       "appID": "ani.baka",
       "title": "AniBaka 5.1.0 · 26 Aug 2026",
       "identifier": "AniBaka-release-5.1.0+0823",
@@ -687,17 +698,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.1"
-    },
-    {
-      "appID": "com.dddevid.musly",
-      "title": "Musly 2.0.1 · 25 Aug 2026",
-      "identifier": "Musly-release-v2.0.1",
-      "caption": "Musly 2.0.1 is available.",
-      "date": "2026-08-25T21:44:35Z",
-      "tintColor": "#FA243C",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Musly/images/news.png",
-      "notify": true,
-      "url": "https://github.com/dddevid/Musly/releases/tag/v2.0.1"
     },
     {
       "appID": "com.github.cyrilpeng.veneranext",
