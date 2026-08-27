@@ -16,11 +16,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.8",
-          "date": "2026-08-26",
-          "localizedDescription": "### Fixed / 修复\n\n- macOS / iPad: after opening a card from the Home page (每日推荐, a playlist, album or artist), the sidebar looked stuck — tapping another section did nothing until you pressed Back. Those cards used closure-based `NavigationLink`s, whose pushes live in the stack's internal state rather than the bound `NavigationPath`, so the sidebar's path reset couldn't pop them (and an `.id()` reset does not work inside `NavigationSplitView` — verified on device). The Home cards now use value-based navigation, which the existing sidebar-switch reset clears correctly. (#29)\n- macOS / iPad：从推荐页打开卡片（每日推荐、歌单、专辑、歌手）后，侧边栏看起来卡住——点其他分区没反应，必须先点返回。这些卡片用的是闭包式 `NavigationLink`，其压栈存在于导航栈内部状态、而非绑定的 `NavigationPath`，所以侧边栏的 path 重置弹不掉它们（而 `.id()` 重置在 `NavigationSplitView` 里无效——已在真机验证）。推荐页卡片改为值驱动导航，配合现有的侧边栏切换重置即可正确清空。（#29）",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.8/Kumone-iOS-0.3.8.ipa",
-          "size": 6844573,
+          "version": "0.3.9",
+          "date": "2026-08-27",
+          "localizedDescription": "### Added / 新增\n\n- Settings → 更新: a \"启动时自动检查更新\" toggle. Off suppresses the launch update sheet on iOS and disables Sparkle's scheduled checks on macOS; manual check still works. (#42)\n- 设置 → 更新：新增「启动时自动检查更新」开关。关闭后 iOS 启动不再自动弹更新提示、macOS 停用 Sparkle 定时检查；仍可手动检查。（#42）\n\n### Fixed / 修复\n\n- macOS: clicking the Dock icon reopens the main window after it was closed (e.g. while desktop lyrics keeps the app running). Thanks @kitiho (#34, fixes #30).\n- macOS：主窗口关闭后（例如桌面歌词让 App 常驻时）点击 Dock 图标可重新打开主窗口。感谢 @kitiho（#34，修复 #30）。\n- iOS #31: the bottom mini-player text no longer turns white/unreadable after entering search — the accessory's colour scheme is pinned to the app appearance.\n- iOS #31：进入搜索后底部迷你播放条文字不再变白看不清——已把该控件的配色方案固定为 App 外观。\n- iOS #37: the volume slider in the now-playing page works again — a nested GeometryReader was silently swallowing the drag.\n- iOS #37：播放页的音量滑轨恢复可用——此前一个嵌套的 GeometryReader 把拖动吞掉了。\n- 最近播放（最近一周）now records plays: the client was sending only the `play` weblog and never the `startplay` one that writes the recent-plays list. Thanks @fanyuexiang for the root cause (#33).\n- 最近播放（最近一周）现在能记录了：客户端此前只发了 `play` 打卡、从未发写入「最近播放」列表的 `startplay`。感谢 @fanyuexiang 的根因分析（#33）。\n- Gray-track unblock tries 酷狗 before 酷我 — 酷我 increasingly returns a \"请在酷我音乐APP播放\" promo clip instead of the song, so it is now the last resort. (#44)\n- 灰色歌曲解锁改为先试酷狗再试酷我——酷我越来越多返回「请在酷我音乐APP播放」的提示音而非歌曲，现降为最后备选。（#44）\n\n### Improved / 改进\n\n- Performance: an idle, loaded home page no longer burns ~16% CPU. MarqueeText now animates a render-server CATextLayer instead of a forever SwiftUI animation; the active lyric line is computed once and published only on change; shelves use LazyHStack. Thanks @XerWandeRer (#38).\n- 性能：静止的首页不再持续占用约 16% CPU。跑马灯改为在 render server 侧的 CATextLayer 上做动画（不再是永不停止的 SwiftUI 动画）；当前歌词行集中计算、仅在换行时广播；货架改用 LazyHStack。感谢 @XerWandeRer（#38）。\n- iOS: best-effort now-playing hardening (declare the media session as audio) for the \"can't tap back into the app from the system Now Playing / Dynamic Island\" reports, which otherwise look like an iOS 26/27-beta issue. (#36, #40)\n- iOS：对「无法从系统正在播放 / 灵动岛点回 App」的问题做了尽力而为的加固（声明媒体会话为音频）；该问题很可能是 iOS 26/27 beta 的系统问题。（#36、#40）\n- CI: releases can auto-bump the Homebrew cask (guarded so a missing token can't fail a release). Thanks @Goooler (#43).\n- CI：发布可自动提交 Homebrew cask 版本更新（已加保护，缺 token 也不会让发布失败）。感谢 @Goooler（#43）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.9/Kumone-iOS-0.3.9.ipa",
+          "size": 6851148,
           "minOSVersion": "16.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.8 · 26 Aug 2026",
-      "identifier": "Kumone-release-v0.3.8",
-      "caption": "Kumone 0.3.8 is available.",
-      "date": "2026-08-26T04:33:44Z",
+      "title": "Kumone 0.3.9 · 27 Aug 2026",
+      "identifier": "Kumone-release-v0.3.9",
+      "caption": "Kumone 0.3.9 is available.",
+      "date": "2026-08-27T08:32:20Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.8"
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.9"
     }
   ]
 }
