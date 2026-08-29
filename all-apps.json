@@ -143,11 +143,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20260828",
-          "date": "2026-08-28",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GS: native ASTC texture replacements for Vulkan and OpenGL ES\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260827...dec880e5c8ed08a85d9f242b19bc384d4150bab9",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260828/ARMSX2-nightly-20260828-3eb3684e49-iOS-arm64.ipa",
-          "size": 26753774,
+          "version": "nightly-20260829",
+          "date": "2026-08-29",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- delete PCXS2's AGENTS.md\n- GS: native ASTC texture replacements for Vulkan and OpenGL ES\n- Fall back to CLOCK_MONOTONIC when the arch timer frequency is unset\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260828...97d95b0ce5e7140a7135ed68dbff06df6b1ead49",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260829/ARMSX2-nightly-20260829-97d95b0ce5-iOS-arm64.ipa",
+          "size": 26752743,
           "minOSVersion": "17.0"
         }
       ]
@@ -369,11 +369,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.13",
+          "version": "0.3.14",
           "date": "2026-08-29",
-          "localizedDescription": "### Added / 新增\n\n- **iOS + macOS**: furigana (振假名) shown over the kanji in Japanese lyrics, composing with the karaoke wipe; romaji sokuon and some dictionary readings corrected; a 3-way 歌词注音 setting (无 / 罗马音 / 振假名). Desktop lyrics now show the annotation too (closes #45). Thanks @xyspg (#53, follow-up on #25).\n- **iOS + macOS**：日文歌词汉字上方显示振假名（与逐字高亮叠加）；修正罗马音促音与部分词典读音；歌词注音改为三档设置（无 / 罗马音 / 振假名）；桌面歌词也会显示注音（修复 #45）。感谢 @xyspg（#53，#25 的后续）。\n\n### Fixed / 修复\n\n- **macOS**: the app launches a single main window instead of two overlapping ones, and reopens correctly from the Dock — the scene is now a single-instance `Window`. Thanks @baisensenseng (#52, fixes #58).\n- **macOS**：应用启动只创建单个主窗口（不再出现两个重叠窗口），并能正确从 Dock 重开——场景改为单实例 `Window`。感谢 @baisensenseng（#52，修复 #58）。\n- **iOS**: the mini-player cover no longer reloads/flashes each time you switch tabs — `CachedAsyncImage` seeds from the in-memory cache synchronously. (#46)\n- **iOS**：切换 TabBar 时底部播放栏封面不再重新加载/闪烁——图片会同步从内存缓存取用。（#46）\n- **iOS**: the now-playing zoom transition anchors on the mini player again instead of the screen centre (a regression from the #35 idle-platter fix). (#57)\n- **iOS**：进入/退出播放页的 zoom 转场重新以迷你播放器为锚点（此前退化为屏幕中央，是 #35 修复引入的回归）。（#57）\n\n### Improved / 改进\n\n- **iOS**: the 精选 / 搜索 / 收藏 card lists now show two columns on iPhone (like 推荐), instead of one. (#47)\n- **iOS**：精选 / 搜索 / 收藏 的卡片列表在 iPhone 上改为两列显示（与推荐一致），不再是单列。（#47）",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.13/Kumone-iOS-0.3.13.ipa",
-          "size": 7059138,
+          "localizedDescription": "### Added / 新增\n\n- **iOS + macOS**: a retro vinyl record-player now-playing mode (黑胶模式) — programmatic vinyl + tonearm with swipe-to-switch. Opt in from Settings (the default stays 沉浸模式). Thanks @MikeChongCan (#55).\n- **iOS + macOS**：新增黑胶唱片播放页模式（黑胶模式）——矢量唱片 + 唱臂，可滑动切换。默认仍是沉浸模式，可在设置中选择。感谢 @MikeChongCan（#55）。\n- **macOS**: a \"桌面歌词水平居中\" toggle that locks the floating lyric capsule to the horizontal centre of the screen (vertical drag still works). (#48)\n- **macOS**：新增「桌面歌词水平居中」开关，可把悬浮歌词锁定在屏幕水平中央（仍可上下拖动）。（#48）\n\n### Fixed / 修复\n\n- **macOS**: the desktop-lyrics button in the player bar now reflects its on/off state — it read the setting directly and never re-rendered when toggled. (#48)\n- **macOS**：播放条上的桌面歌词按钮现在会正确反映开/关状态——之前直接读取设置、切换后不重绘，颜色卡住。（#48）",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.14/Kumone-iOS-0.3.14.ipa",
+          "size": 7137029,
           "minOSVersion": "16.0"
         }
       ]
@@ -440,12 +440,12 @@
       "tintColor": "#73b480",
       "versions": [
         {
-          "version": "2.1.2.1",
-          "buildVersion": "5255",
-          "date": "2026-08-26",
-          "localizedDescription": "支持加载 `bcc` 格式字幕 #2705\r\n播放器启用自动重连 #2446 by @AlinJiang\r\n安卓支持允许三方 APP 访问私有存储，默认关\r\n支持复制设备信息 #2688 by @My-Responsitories\r\n调整部分设置选项界面 #2683 by @My-Responsitories\r\n\r\n修复 #2697 by @My-Responsitories\r\n修复 #2637 #2638 #2647 #2671 #2692",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2.1/PiliPlus_ios_2.1.2%2B5255.ipa",
-          "size": 23937413,
+          "version": "2.1.2.2",
+          "buildVersion": "5277",
+          "date": "2026-08-29",
+          "localizedDescription": "回退 #2446\r\n显示视频分 P 序号 #2717\r\n弹幕应用 APP 字体 #2712\r\n支持导入字体 co-by @My-Responsitories\r\n其他调整 #2734 #2767 by @My-Responsitories\r\n\r\n修复 #2716 #2731\r\n修复部分安卓设备无法显示登录验证码 #2642 #2713 by @My-Responsitories",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2.2/PiliPlus_ios_2.1.2%2B5277.ipa",
+          "size": 23936202,
           "minOSVersion": "14.0"
         }
       ]
@@ -634,15 +634,37 @@
   ],
   "news": [
     {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20260829 · 29 Aug 2026",
+      "identifier": "ARMSX2-release-nightly-20260829",
+      "caption": "ARMSX2 nightly-20260829 is available.",
+      "date": "2026-08-29T14:12:37Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260829"
+    },
+    {
+      "appID": "com.example.PiliPlus",
+      "title": "PiliPlus 2.1.2.2 · 29 Aug 2026",
+      "identifier": "PiliPlus-release-2.1.2.2",
+      "caption": "PiliPlus 2.1.2.2 is available.",
+      "date": "2026-08-29T13:58:46Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.2"
+    },
+    {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.13 · 29 Aug 2026",
-      "identifier": "Kumone-release-v0.3.13",
-      "caption": "Kumone 0.3.13 is available.",
-      "date": "2026-08-29T12:01:37Z",
+      "title": "Kumone 0.3.14 · 29 Aug 2026",
+      "identifier": "Kumone-release-v0.3.14",
+      "caption": "Kumone 0.3.14 is available.",
+      "date": "2026-08-29T12:43:10Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.13"
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.14"
     },
     {
       "appID": "org.animeko.animeko",
@@ -665,17 +687,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
       "notify": true,
       "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.4.0"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20260828 · 28 Aug 2026",
-      "identifier": "ARMSX2-release-nightly-20260828",
-      "caption": "ARMSX2 nightly-20260828 is available.",
-      "date": "2026-08-28T04:47:54Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260828"
     },
     {
       "appID": "com.example.kazumi",
@@ -731,17 +742,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/news.png",
       "notify": true,
       "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.1.0+0823"
-    },
-    {
-      "appID": "com.example.PiliPlus",
-      "title": "PiliPlus 2.1.2.1 · 26 Aug 2026",
-      "identifier": "PiliPlus-release-2.1.2.1",
-      "caption": "PiliPlus 2.1.2.1 is available.",
-      "date": "2026-08-26T03:10:08Z",
-      "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.1"
     },
     {
       "appID": "com.mistj.v2ex",
