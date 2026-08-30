@@ -440,12 +440,12 @@
       "tintColor": "#73b480",
       "versions": [
         {
-          "version": "2.1.2.2",
-          "buildVersion": "5277",
-          "date": "2026-08-29",
-          "localizedDescription": "回退 #2446\r\n显示视频分 P 序号 #2717\r\n弹幕应用 APP 字体 #2712\r\n支持导入字体 co-by @My-Responsitories\r\n其他调整 #2734 #2767 by @My-Responsitories\r\n\r\n修复 #2716 #2731\r\n修复部分安卓设备无法显示登录验证码 #2642 #2713 by @My-Responsitories",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2.2/PiliPlus_ios_2.1.2%2B5277.ipa",
-          "size": 23936202,
+          "version": "2.1.2.3",
+          "buildVersion": "5281",
+          "date": "2026-08-30",
+          "localizedDescription": "修复 bug",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.2.3/PiliPlus_ios_2.1.2%2B5281.ipa",
+          "size": 23936722,
           "minOSVersion": "14.0"
         }
       ]
@@ -634,6 +634,17 @@
   ],
   "news": [
     {
+      "appID": "com.example.PiliPlus",
+      "title": "PiliPlus 2.1.2.3 · 30 Aug 2026",
+      "identifier": "PiliPlus-release-2.1.2.3",
+      "caption": "PiliPlus 2.1.2.3 is available.",
+      "date": "2026-08-30T04:20:00Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.3"
+    },
+    {
       "appID": "com.armsx2.ios",
       "title": "ARMSX2 nightly-20260829 · 29 Aug 2026",
       "identifier": "ARMSX2-release-nightly-20260829",
@@ -643,17 +654,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
       "notify": true,
       "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260829"
-    },
-    {
-      "appID": "com.example.PiliPlus",
-      "title": "PiliPlus 2.1.2.2 · 29 Aug 2026",
-      "identifier": "PiliPlus-release-2.1.2.2",
-      "caption": "PiliPlus 2.1.2.2 is available.",
-      "date": "2026-08-29T13:58:46Z",
-      "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.2.2"
     },
     {
       "appID": "sb.moe.kumone",
