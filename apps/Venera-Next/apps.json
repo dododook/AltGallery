@@ -21,12 +21,12 @@
       "tintColor": "#2090E0",
       "versions": [
         {
-          "version": "1.14.4",
-          "buildVersion": "222",
-          "date": "2026-08-28",
-          "localizedDescription": "### 新增\n\n- WebDAV 漫画库支持通过 `metadata.json` 标记深层目录中的漫画根目录；根目录的直接子目录会作为章节，并使用相对路径作为漫画 ID，避免分类目录下的同名漫画互相覆盖。\n\n### 维护\n\n- 修复 Windows Inno Setup 安装包遗漏 Flutter 原生插件 DLL 的问题；现在会完整收集 Release 目录，避免 `super_native_extensions_plugin.dll` 等新增运行库未随安装包发布。\n- 收束漫画展示组件的业务依赖：收藏、历史、本地漫画封面和收藏页显示偏好改由运行时注入，并增加结构检查防止展示层重新依赖具体业务管理器。\n- 收束漫画源功能域依赖：阅读历史元数据契约下沉到基础层，数据同步与 WebDAV 附加源改由运行时注入，并增加结构检查防止反向依赖回退。\n- 更新 `share_plus` 至 12.0.2，包含 iOS 分享流程的稳定性修复。\n- 预处理 Dio 5.11.0 的拦截器兼容性，避免自定义拦截器在异常路径中因缺少 Dio 内部调用链而导致请求挂起。\n- 更新 `battery_plus` 至 7.1.1，并通过 Android release 与 macOS DMG 构建验证。",
-          "downloadURL": "https://github.com/CyrilPeng/Venera-Next/releases/download/v1.14.4/VeneraNext-ios-1.14.4%2B222.ipa",
-          "size": 19867707,
+          "version": "1.15.0",
+          "buildVersion": "223",
+          "date": "2026-08-31",
+          "localizedDescription": "### 新增\n\n- 阅读器新增跨平台夜间调光与自定义亮度控制，支持在阅读设置和底部快捷面板中实时调整，并沿用全局、设备及漫画专属设置优先级。",
+          "downloadURL": "https://github.com/CyrilPeng/Venera-Next/releases/download/v1.15.0/VeneraNext-ios-1.15.0%2B223.ipa",
+          "size": 19875257,
           "minOSVersion": "14.0"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "com.github.cyrilpeng.veneranext",
-      "title": "VeneraNext 1.14.4 · 28 Aug 2026",
-      "identifier": "VeneraNext-release-v1.14.4",
-      "caption": "VeneraNext 1.14.4 is available.",
-      "date": "2026-08-28T00:58:50Z",
+      "title": "VeneraNext 1.15.0 · 31 Aug 2026",
+      "identifier": "VeneraNext-release-v1.15.0",
+      "caption": "VeneraNext 1.15.0 is available.",
+      "date": "2026-08-31T02:23:17Z",
       "tintColor": "#2090E0",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Venera-Next/images/news.png",
       "notify": true,
-      "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.14.4"
+      "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.15.0"
     }
   ]
 }
