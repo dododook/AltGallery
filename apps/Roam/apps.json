@@ -16,11 +16,11 @@
       "tintColor": "#4080E0",
       "versions": [
         {
-          "version": "1.0.0",
-          "date": "2026-08-25",
-          "localizedDescription": "V2EX client (Röam). Bundle ID: com.mistj.v2ex",
-          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Roam-1.0.0/Roam_1.0.0.ipa",
-          "size": 1471725,
+          "version": "1.0.0.2",
+          "date": "2026-08-31",
+          "localizedDescription": "Updated V2EX client IPA (Info.plist still reports 1.0.0). Bundle ID: com.mistj.v2ex",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Roam-1.0.0.2/Roam_1.0.0.2.ipa",
+          "size": 1595220,
           "minOSVersion": "15.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "com.mistj.v2ex",
-      "title": "Röam 1.0.0 · 25 Aug 2026",
-      "identifier": "Röam-release-Roam-1.0.0",
-      "caption": "Röam 1.0.0 is available.",
-      "date": "2026-08-25T09:57:13Z",
+      "title": "Röam 1.0.0.2 · 31 Aug 2026",
+      "identifier": "Röam-release-Roam-1.0.0.2",
+      "caption": "Röam 1.0.0.2 is available.",
+      "date": "2026-08-31T08:22:13Z",
       "tintColor": "#4080E0",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/images/news.png",
       "notify": true,
-      "url": "https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0"
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.2"
     }
   ]
 }

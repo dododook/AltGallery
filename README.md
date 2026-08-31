@@ -77,7 +77,7 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
 使用Flutter开发的BiliBili第三方客户端。
 
-### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
+### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.2"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
 V2EX 第三方 iOS 客户端。
 
 ### <a href="https://github.com/gholts/sphere."><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sphere/icon.png" alt="Sphere icon" width="24" align="top"> Sphere</a>
