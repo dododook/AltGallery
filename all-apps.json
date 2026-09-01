@@ -460,11 +460,11 @@
       "tintColor": "#4080E0",
       "versions": [
         {
-          "version": "1.0.0.2",
-          "date": "2026-08-31",
+          "version": "1.0.0.3",
+          "date": "2026-09-01",
           "localizedDescription": "Updated V2EX client IPA (Info.plist still reports 1.0.0). Bundle ID: com.mistj.v2ex",
-          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Roam-1.0.0.2/Roam_1.0.0.2.ipa",
-          "size": 1595220,
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Roam-1.0.0.3/Roam_1.0.0.3.ipa",
+          "size": 1616650,
           "minOSVersion": "15.0"
         }
       ]
@@ -634,6 +634,17 @@
   ],
   "news": [
     {
+      "appID": "com.mistj.v2ex",
+      "title": "Röam 1.0.0.3 · 01 Sep 2026",
+      "identifier": "Röam-release-Roam-1.0.0.3",
+      "caption": "Röam 1.0.0.3 is available.",
+      "date": "2026-09-01T08:36:05Z",
+      "tintColor": "#4080E0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.3"
+    },
+    {
       "appID": "com.naine.doer",
       "title": "Doer 1.8.4 · 31 Aug 2026",
       "identifier": "Doer-release-v1.8.4",
@@ -643,17 +654,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png",
       "notify": true,
       "url": "https://github.com/moliango/doer/releases/tag/v1.8.4"
-    },
-    {
-      "appID": "com.mistj.v2ex",
-      "title": "Röam 1.0.0.2 · 31 Aug 2026",
-      "identifier": "Röam-release-Roam-1.0.0.2",
-      "caption": "Röam 1.0.0.2 is available.",
-      "date": "2026-08-31T08:22:13Z",
-      "tintColor": "#4080E0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/images/news.png",
-      "notify": true,
-      "url": "https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.2"
     },
     {
       "appID": "com.github.cyrilpeng.veneranext",
