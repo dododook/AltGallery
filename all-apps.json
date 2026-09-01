@@ -143,11 +143,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20260830",
-          "date": "2026-08-30",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- GameDB: replace Fate/Unlimited Codes' eeRoundMode override with eeClampMode 3\n- EE rec fallback: a per-op filter for the fpu group\n- Android: give VU1 its own clamping picker\n- Pad: add a timed-sequence mode to macro buttons\n- VU: two fewer instructions in the multiply's ft predicate\n- microVU: decide the same two cases out of line as COP2 macro\n- COP2 macro: decide products below 2^-79 out of line as well\n- COP2 macro: move the multiply's operand stores off the hot path\n- VU tests: split the edge table at exponent 255\n- COP2 macro: decide small non-zero tails out of line\n- VU tests: a table for tails smaller than 0x8000\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260829...1024c3538ee2ff27fc0f9d5272d76202b8b1c03b",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260830/ARMSX2-nightly-20260830-1024c3538e-iOS-arm64.ipa",
-          "size": 26753559,
+          "version": "nightly-20260901",
+          "date": "2026-09-01",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: drop the FFmpeg license entry, which no longer ships\n- iOS: drop the OSD capture writes the video capture removal left behind\n- eerunner: pass the FPU mask through to ParseGroups\n- GS: remove video capture, and with it the ffmpeg dependency\n- Touch controls: don't auto-hide while the pad is being used\n- LSFG: rebuild the swap chain when frame generation turns on later\n- Quick loading: warn about the space first, and allow removing it after\n- Quick loading: four fixes found by actually running it on the disc\n- Quick loading: stop making the user rename the ELF\n- GS: don't build video capture on Android\n- Outbreak quick loading: make the host: ELF method work on Android\n- Update SettingsRootView.swift for stosdebug\n- Update EmulatorSettingsView.swift for stosdebug\n- Update EmulatorBridge.swift for StosDebug\n- Qt: Update EE and VU recompiler setting descriptions\n- Qt: Add missing setting descriptions\n- GameDB: Port SCPS-15064's patch to SCKA-20027\n- Library: rename and delete categories\n- FullscreenUI: Align setting descriptions with Qt\n- Qt: Update EE and VU recompiler setting descriptions\n- Qt: Add missing setting descriptions\n- Library: custom game categories\n- Deps: Bump `ffmpeg` to 9.0.1\n- Deps: Set minimum required ffmpeg version to 7.1\n- Deps: Get rid of the in-tree ffmpeg headers entirely\n- Deps: Dont hardcode the ffmpeg dlls path\n- GSCapture: Switch the use of `pix_fmts` with `avcodec_get_supported_config()`\n- PAD: Update to latest controller database.\n- VU: fix typo in a constant\n- SW: Fix C rasterizor IIP vector pack (signed->unsigned)\n- GameDB: Fix Japanese Title&Sort\n- GameDB: Port SCPS-15064's patch to SCKA-20027\n- In-game settings: write the per-game INI before the commit, not after\n- Skins: name the creator on each row in the browser\n- GS:MTL: Add workaround for Apple GPU hardware bug\n- translations: Syncing Crowdin translations (#14879)\n- Credit misantronic in code for PRs #616 and #617\n- Let a companion app request recent-games access per caller\n- Android: turn hardcore off while a RetroAchievements host override is active\n- Affinity: pick performance cores by capacity, and make that the default\n- Save states: show when each slot was written, not its filename\n- Slot dates: ask the running VM, not the filename matcher\n- Launch Game: a menu entry for the picker that was already there\n- Per-slot save/load hotkeys, and dates on the in-game slot picker\n- Fix rumble on external pads, macro dialog in landscape, hotkey pop-up discoverability\n- SGSR: adopt the revised upstream maths for the plain variant\n- PAD: Update to latest controller database.\n- Translations: Sync Crowdin translations for 2.8\n- SPU2: Pass IOP cycle count at 64bit\n- Qt: Update Base Translation.\n- Qt/macOS: Keep Fullscreen on the main window\n- GameDB: Add Prioritize Lower depth fix to Steambot Chronicles\n- GS/HW: Avoid detecting shuffles as source of truth for target format\n- GS/TC: Improve single pixel overlap detection in RT in RT\n- EE/IOP: Fix loading elf's through relative path\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260830...6e1e8f0a18f2f5bbcd2e75344d89ff6ba03b5616",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260901/ARMSX2-nightly-20260901-6e1e8f0a18-iOS-arm64.ipa",
+          "size": 26742718,
           "minOSVersion": "17.0"
         }
       ]
@@ -393,11 +393,11 @@
       "tintColor": "#EF4444",
       "versions": [
         {
-          "version": "0.9.0",
-          "date": "2026-08-30",
-          "localizedDescription": "## What's Changed\r\n* fix: say when a JS source fails to load instead of showing it as empty by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/921\r\n* fix: restore bundled TLS roots so Android stops panicking on HTTPS by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/920\r\n* fix: track anime on Simkl as anime, not as a TV show by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/932\r\n* Use correct image extensions by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/926\r\n* fix: stop the library disposing a TabController the tabs still paint from by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/930\r\n* fix: say why AniList refused, stop asking, and fall back where we can by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/911\r\n* fix: only file things that belong in the tracker by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/919\r\n* fix: stop using the player after the reader has left it by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/931\r\n* feat: a live memory readout, so the TV questions can be measured by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/929\r\n* feat: TV is only asked for source and nothing else on the welcome screen cus anime only gate now by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/938\r\n* feat: show what a title is related to, and open it in your sources by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/939\r\n* feat: show which account a tracker is signed in to, and fix the id sent as a name by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/940\r\n* perf(tv): show only the tab the television is on by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/941\r\n* fix: say why a global search had nothing to search by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/943\r\n* fix: raise the two things sitting under a minimum by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/945\r\n* refactor: one definition for the alpha ladder by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/946\r\n* fix: pure black dark mode was not pure, and not black by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/947\r\n* refactor: the chapter dialog follows the theme by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/948\r\n* fix: a season is part of which chapter a chapter is by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/950\r\n* fix: stop telling Linux to use a resolver it does not have by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/952\r\n* Add DbWriteQueue + repository layer, migrate all from raws DB logics into Repositories Logic  by @not-akari in https://github.com/kodjodevf/mangayomi/pull/954\r\n* refactor: one row of pills on the detail page, not a column of buttons by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/942\r\n* fix: the novel reader's controller is gone by the time dispose needs it by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/955\r\n* feat: catch the crashes Dart cannot see by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/913\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.8.9...v0.9.0",
-          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.0/Mangayomi-v0.9.0-ios.ipa",
-          "size": 109850240
+          "version": "0.9.1",
+          "date": "2026-09-01",
+          "localizedDescription": "## What's Changed\r\n* Fix cache collision via chapter hash in filename by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/967\r\n* fix(mihon-service): update genre parsing to handle string input\r\n* refactor(crash-report): remove crash report banner functionality on launch\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.0...v0.9.1",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.1/Mangayomi-v0.9.1-ios.ipa",
+          "size": 109840449
         }
       ]
     },
@@ -634,6 +634,28 @@
   ],
   "news": [
     {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20260901 · 01 Sep 2026",
+      "identifier": "ARMSX2-release-nightly-20260901",
+      "caption": "ARMSX2 nightly-20260901 is available.",
+      "date": "2026-09-01T14:09:27Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260901"
+    },
+    {
+      "appID": "com.kodjodevf.mangayomi",
+      "title": "Mangayomi 0.9.1 · 01 Sep 2026",
+      "identifier": "Mangayomi-release-v0.9.1",
+      "caption": "Mangayomi 0.9.1 is available.",
+      "date": "2026-09-01T12:09:54Z",
+      "tintColor": "#EF4444",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.1"
+    },
+    {
       "appID": "com.mistj.v2ex",
       "title": "Röam 1.0.0.3 · 01 Sep 2026",
       "identifier": "Röam-release-Roam-1.0.0.3",
@@ -665,28 +687,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Venera-Next/images/news.png",
       "notify": true,
       "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.15.0"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20260830 · 30 Aug 2026",
-      "identifier": "ARMSX2-release-nightly-20260830",
-      "caption": "ARMSX2 nightly-20260830 is available.",
-      "date": "2026-08-30T14:18:51Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260830"
-    },
-    {
-      "appID": "com.kodjodevf.mangayomi",
-      "title": "Mangayomi 0.9.0 · 30 Aug 2026",
-      "identifier": "Mangayomi-release-v0.9.0",
-      "caption": "Mangayomi 0.9.0 is available.",
-      "date": "2026-08-30T11:55:05Z",
-      "tintColor": "#EF4444",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.0"
     },
     {
       "appID": "com.example.PiliPlus",
