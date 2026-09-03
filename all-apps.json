@@ -143,11 +143,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20260901",
-          "date": "2026-09-01",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: drop the FFmpeg license entry, which no longer ships\n- iOS: drop the OSD capture writes the video capture removal left behind\n- eerunner: pass the FPU mask through to ParseGroups\n- GS: remove video capture, and with it the ffmpeg dependency\n- Touch controls: don't auto-hide while the pad is being used\n- LSFG: rebuild the swap chain when frame generation turns on later\n- Quick loading: warn about the space first, and allow removing it after\n- Quick loading: four fixes found by actually running it on the disc\n- Quick loading: stop making the user rename the ELF\n- GS: don't build video capture on Android\n- Outbreak quick loading: make the host: ELF method work on Android\n- Update SettingsRootView.swift for stosdebug\n- Update EmulatorSettingsView.swift for stosdebug\n- Update EmulatorBridge.swift for StosDebug\n- Qt: Update EE and VU recompiler setting descriptions\n- Qt: Add missing setting descriptions\n- GameDB: Port SCPS-15064's patch to SCKA-20027\n- Library: rename and delete categories\n- FullscreenUI: Align setting descriptions with Qt\n- Qt: Update EE and VU recompiler setting descriptions\n- Qt: Add missing setting descriptions\n- Library: custom game categories\n- Deps: Bump `ffmpeg` to 9.0.1\n- Deps: Set minimum required ffmpeg version to 7.1\n- Deps: Get rid of the in-tree ffmpeg headers entirely\n- Deps: Dont hardcode the ffmpeg dlls path\n- GSCapture: Switch the use of `pix_fmts` with `avcodec_get_supported_config()`\n- PAD: Update to latest controller database.\n- VU: fix typo in a constant\n- SW: Fix C rasterizor IIP vector pack (signed->unsigned)\n- GameDB: Fix Japanese Title&Sort\n- GameDB: Port SCPS-15064's patch to SCKA-20027\n- In-game settings: write the per-game INI before the commit, not after\n- Skins: name the creator on each row in the browser\n- GS:MTL: Add workaround for Apple GPU hardware bug\n- translations: Syncing Crowdin translations (#14879)\n- Credit misantronic in code for PRs #616 and #617\n- Let a companion app request recent-games access per caller\n- Android: turn hardcore off while a RetroAchievements host override is active\n- Affinity: pick performance cores by capacity, and make that the default\n- Save states: show when each slot was written, not its filename\n- Slot dates: ask the running VM, not the filename matcher\n- Launch Game: a menu entry for the picker that was already there\n- Per-slot save/load hotkeys, and dates on the in-game slot picker\n- Fix rumble on external pads, macro dialog in landscape, hotkey pop-up discoverability\n- SGSR: adopt the revised upstream maths for the plain variant\n- PAD: Update to latest controller database.\n- Translations: Sync Crowdin translations for 2.8\n- SPU2: Pass IOP cycle count at 64bit\n- Qt: Update Base Translation.\n- Qt/macOS: Keep Fullscreen on the main window\n- GameDB: Add Prioritize Lower depth fix to Steambot Chronicles\n- GS/HW: Avoid detecting shuffles as source of truth for target format\n- GS/TC: Improve single pixel overlap detection in RT in RT\n- EE/IOP: Fix loading elf's through relative path\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260830...6e1e8f0a18f2f5bbcd2e75344d89ff6ba03b5616",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260901/ARMSX2-nightly-20260901-6e1e8f0a18-iOS-arm64.ipa",
-          "size": 26742718,
+          "version": "nightly-20260902",
+          "date": "2026-09-02",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- VU div unit: gate the console ceiling on the clamp mode\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260901...82b3e3ece4afa627e64d0cc01bc175d06029d2d8",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260902/ARMSX2-nightly-20260902-82b3e3ece4-iOS-arm64.ipa",
+          "size": 26744122,
           "minOSVersion": "17.0"
         }
       ]
@@ -635,14 +635,14 @@
   "news": [
     {
       "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20260901 · 01 Sep 2026",
-      "identifier": "ARMSX2-release-nightly-20260901",
-      "caption": "ARMSX2 nightly-20260901 is available.",
-      "date": "2026-09-01T14:09:27Z",
+      "title": "ARMSX2 nightly-20260902 · 02 Sep 2026",
+      "identifier": "ARMSX2-release-nightly-20260902",
+      "caption": "ARMSX2 nightly-20260902 is available.",
+      "date": "2026-09-02T21:07:50Z",
       "tintColor": "#3CAEFF",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
       "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260901"
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260902"
     },
     {
       "appID": "com.kodjodevf.mangayomi",
