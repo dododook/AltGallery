@@ -21,11 +21,11 @@
       "tintColor": "#EF4444",
       "versions": [
         {
-          "version": "0.9.1",
-          "date": "2026-09-01",
-          "localizedDescription": "## What's Changed\r\n* Fix cache collision via chapter hash in filename by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/967\r\n* fix(mihon-service): update genre parsing to handle string input\r\n* refactor(crash-report): remove crash report banner functionality on launch\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.0...v0.9.1",
-          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.1/Mangayomi-v0.9.1-ios.ipa",
-          "size": 109840449
+          "version": "0.9.2",
+          "date": "2026-09-03",
+          "localizedDescription": "## What's Changed\r\n* Add assets to constant file by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/968\r\n* fix: triage error reports and resolve reported crashes by @mrandhawa14 in https://github.com/kodjodevf/mangayomi/pull/970\r\n* feat(experimental): add support for Aidoku extensions by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/969\r\n* Optimize local image-folder pages and image handling by @NBA2K1 in https://github.com/kodjodevf/mangayomi/pull/973\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.1...v0.9.2",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.2/Mangayomi-v0.9.2-ios.ipa",
+          "size": 114010180
         }
       ]
     }
@@ -33,14 +33,14 @@
   "news": [
     {
       "appID": "com.kodjodevf.mangayomi",
-      "title": "Mangayomi 0.9.1 · 01 Sep 2026",
-      "identifier": "Mangayomi-release-v0.9.1",
-      "caption": "Mangayomi 0.9.1 is available.",
-      "date": "2026-09-01T12:09:54Z",
+      "title": "Mangayomi 0.9.2 · 03 Sep 2026",
+      "identifier": "Mangayomi-release-v0.9.2",
+      "caption": "Mangayomi 0.9.2 is available.",
+      "date": "2026-09-03T13:58:24Z",
       "tintColor": "#EF4444",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
       "notify": true,
-      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.1"
+      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.2"
     }
   ]
 }
