@@ -16,11 +16,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.14",
-          "date": "2026-08-29",
-          "localizedDescription": "### Added / 新增\n\n- **iOS + macOS**: a retro vinyl record-player now-playing mode (黑胶模式) — programmatic vinyl + tonearm with swipe-to-switch. Opt in from Settings (the default stays 沉浸模式). Thanks @MikeChongCan (#55).\n- **iOS + macOS**：新增黑胶唱片播放页模式（黑胶模式）——矢量唱片 + 唱臂，可滑动切换。默认仍是沉浸模式，可在设置中选择。感谢 @MikeChongCan（#55）。\n- **macOS**: a \"桌面歌词水平居中\" toggle that locks the floating lyric capsule to the horizontal centre of the screen (vertical drag still works). (#48)\n- **macOS**：新增「桌面歌词水平居中」开关，可把悬浮歌词锁定在屏幕水平中央（仍可上下拖动）。（#48）\n\n### Fixed / 修复\n\n- **macOS**: the desktop-lyrics button in the player bar now reflects its on/off state — it read the setting directly and never re-rendered when toggled. (#48)\n- **macOS**：播放条上的桌面歌词按钮现在会正确反映开/关状态——之前直接读取设置、切换后不重绘，颜色卡住。（#48）",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.14/Kumone-iOS-0.3.14.ipa",
-          "size": 7137029,
+          "version": "0.3.16",
+          "date": "2026-09-04",
+          "localizedDescription": "### Added / 新增\n\n- **iOS**: CarPlay Now Playing gains a working Up Next button — tapping it pushes the live playback queue (current track pinned on top, up to 300 upcoming rows), and picking a row jumps straight to that track. Outside FM mode the button row also gains 随机 and 循环 controls whose icons track `shuffleEnabled` / `repeatMode`, and the album-artist button opens the current track's album (falling back to its first artist for cloud-disk tracks with no album). Thanks @MikeChongCan (#54).\n- **iOS**：CarPlay Now Playing 的「播放队列」按钮现在可用——点击弹出实时播放队列（当前曲目置顶，最多 300 条待播），点任意一行直接跳转播放。非 FM 模式下按钮区新增 随机 / 循环 控件，图标跟随 `shuffleEnabled` 与 `repeatMode` 变化；专辑歌手按钮可跳转当前曲目的专辑（云盘歌曲等无专辑信息时回退到第一位歌手）。感谢 @MikeChongCan（#54）。\n- **Build**: `make configure` / `make configure-carplay` select which capabilities the iOS build ships with, plus `make build` / `test` / `app` / `project` wrappers. Run `make` for the list. (#54)\n- **Build**：新增 `make configure` / `make configure-carplay` 切换 iOS 构建包含的能力，另有 `make build` / `test` / `app` / `project` 等封装。执行 `make` 查看全部目标。（#54）\n\n### Changed / 变更\n\n- **iOS**: CarPlay is now excluded from the default build entirely, not just left unsigned — `UISupportsCarPlay` and the `CPTemplateApplicationSceneSessionRoleApplication` scene declaration have moved out of `ios/Config/Info.plist` and are injected, together with the `com.apple.developer.carplay-audio` entitlement, only by `make configure-carplay`. The overlay is written to untracked files and never touches the Xcode project, so enabling CarPlay leaves the working tree clean. Replaces the previous \"uncomment `KumoneIOS.entitlements.example` by hand\" flow. (#54)\n- **iOS**：CarPlay 现在从默认构建中完全移除，而不只是不签名——`UISupportsCarPlay` 与 `CPTemplateApplicationSceneSessionRoleApplication` scene 声明已移出 `ios/Config/Info.plist`，与 `com.apple.developer.carplay-audio` entitlement 一起，仅由 `make configure-carplay` 注入。覆盖文件均不纳入 git 且完全不改动 Xcode 工程，开启 CarPlay 后工作区依然干净。取代原先手动取消注释 `KumoneIOS.entitlements.example` 的流程。（#54）\n\n### Fixed / 修复\n\n- **iOS**: the in-app updater now saves the downloaded IPA into the app's Documents folder — findable in the Files app under On My iPhone ▸ Kumone (the app now enables file sharing) — and opens a share sheet so it can be saved or handed straight to a signing tool (全能签 / ESign / AltStore …), instead of only offering an export dialog that left users unable to locate the file. (#73, #50)\n- **iOS**：应用内更新现在会把下载的 IPA 保存到 App 的 Documents 目录——可在「文件」App ▸ 我的 iPhone ▸ Kumone 里找到（已开启文件共享）——并弹出分享面板，可保存或直接导入签名工具（全能签 / ESign / AltStore 等），不再是之前那种让人找不到文件的导出弹窗。（#73，#50）",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.16/Kumone-iOS-0.3.16.ipa",
+          "size": 7245579,
           "minOSVersion": "16.0"
         }
       ]
@@ -29,14 +29,14 @@
   "news": [
     {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.14 · 29 Aug 2026",
-      "identifier": "Kumone-release-v0.3.14",
-      "caption": "Kumone 0.3.14 is available.",
-      "date": "2026-08-29T12:43:10Z",
+      "title": "Kumone 0.3.16 · 04 Sep 2026",
+      "identifier": "Kumone-release-v0.3.16",
+      "caption": "Kumone 0.3.16 is available.",
+      "date": "2026-09-04T06:38:46Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.14"
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.16"
     }
   ]
 }
