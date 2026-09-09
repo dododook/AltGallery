@@ -1,0 +1,41 @@
+# altgen config for the Feather AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "claration/Feather"
+
+[source]
+name = "Feather"
+subtitle = "Feather AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Feather"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Feather/icon.png"
+website = "https://github.com/claration/Feather"
+tint_color = "#848ef9"
+
+[app]
+name = "Feather"
+bundle_identifier = "thewonderofyou.Feather"
+developer_name = "Samara"
+subtitle = "设备上签名与安装 IPA"
+description = "Feather，面向开发者证书的免费开源侧载工具，支持 AltStore 源、签名安装、Ellekit 注入与应用补丁。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Feather/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Feather/images/library.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Feather/images/repos.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Feather/images/sign.png",
+]
+tint_color = "#848ef9"
+min_os_version = "16.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases also ship Feather_Catalyst.zip; only take the iOS IPA.
+asset_pattern = "Feather\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Feather/images/news.png"
+
+[output]
+path = "apps.json"

@@ -53,6 +53,9 @@ Original Xbox emulation for iOS, built from xemu with a native Swift interface.
 ### <a href="https://github.com/EhPanda-Team/EhPanda"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/EhPanda/icon.png" alt="EhPanda icon" width="24" align="top"> EhPanda</a>
 An unofficial E-Hentai App for iOS built with SwiftUI & TCA.
 
+### <a href="https://github.com/claration/Feather"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Feather/icon.png" alt="Feather icon" width="24" align="top"> Feather</a>
+面向开发者证书的免费开源侧载工具，支持 AltStore 源、签名安装与 Ellekit 注入。
+
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Frok-1.0.7"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Frok/icon.png" alt="Frök icon" width="24" align="top"> Frök</a>
 NodeSeek 第三方 iOS 客户端。
 
@@ -80,6 +83,9 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
 使用Flutter开发的BiliBili第三方客户端。
 
+### <a href="https://github.com/Eslzzyl/Pixiv-SwiftUI"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Pixiv-SwiftUI/icon.png" alt="Pixiv-SwiftUI icon" width="24" align="top"> Pixiv-SwiftUI</a>
+基于 SwiftUI 的 Pixiv 第三方客户端，支持插画、漫画与小说。
+
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.4"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
 V2EX 第三方 iOS 客户端。
 
@@ -100,6 +106,9 @@ A full featured virtual machine host for iOS — run Windows, Android, and more 
 
 ### <a href="https://github.com/missuo/VVeboFix"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/VVebo/icon.png" alt="VVebo icon" width="24" align="top"> VVebo</a>
 已停更的第三方微博客户端（3.3.31 自签版，含时间线修复）。
+
+### <a href="https://github.com/lo-cafe/winston"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Winston/icon.png" alt="Winston icon" width="24" align="top"> Winston</a>
+免费开源的原生 iOS Reddit 客户端。
 
 ### <a href="https://github.com/mrdrvt99/YouProEXTRA"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/YouProEXTRA/icon.png" alt="YouProEXTRA icon" width="24" align="top"> YouProEXTRA</a>
 YouTube mod for iOS packed with customizable tweaks — no ads, background playback, downloads, and more.

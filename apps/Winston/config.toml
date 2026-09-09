@@ -1,0 +1,40 @@
+# altgen config for the Winston AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "lo-cafe/winston"
+
+[source]
+name = "Winston"
+subtitle = "Winston AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Winston"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/icon.png"
+website = "https://github.com/lo-cafe/winston"
+tint_color = "#000000"
+
+[app]
+name = "Winston"
+bundle_identifier = "lo.cafe.winston"
+developer_name = "Kinark"
+subtitle = "原生 Reddit 客户端"
+description = "Winston，免费开源的原生 iOS Reddit 客户端，界面简洁，遵循 Reddit 服务条款。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/images/home.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/images/feed.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/images/comments.png",
+]
+tint_color = "#000000"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+asset_pattern = "winston\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/images/news.png"
+
+[output]
+path = "apps.json"

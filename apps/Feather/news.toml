@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/Feather
+
+name = "Feather"
+tagline = "设备上签名与安装 IPA"
+
+[colors]
+tint = "#848ef9"
+tint_alt = "#848ef9"
