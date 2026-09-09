@@ -1,0 +1,47 @@
+{
+  "name": "Winston",
+  "subtitle": "Winston AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Winston",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/icon.png",
+  "website": "https://github.com/lo-cafe/winston",
+  "tintColor": "#000000",
+  "apps": [
+    {
+      "name": "Winston",
+      "bundleIdentifier": "lo.cafe.winston",
+      "developerName": "Kinark",
+      "subtitle": "原生 Reddit 客户端",
+      "localizedDescription": "Winston，免费开源的原生 iOS Reddit 客户端，界面简洁，遵循 Reddit 服务条款。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/images/feed.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/images/comments.png"
+      ],
+      "tintColor": "#000000",
+      "versions": [
+        {
+          "version": "1.1.5",
+          "date": "2024-06-24",
+          "localizedDescription": "- Fixed placeholder message alignment\r\n- Fixed Reddit API preferences page\r\n- Added localization support\r\n- Cleaned unused code and replaced glitchy book Lottie\r\n- Removed old, unused TipJar component\r\n- Added back GlobalLoaderProvider\r\n- Fixed broken build\r\n- Improved RedditListingFeed component and cleaned up some files\r\n- Fixed many UI bugs and stutters; added new NukeUI Opt components\r\n- Removed redundant code calling setAudioToMixWithOthers three times\r\n- Provided RedditListingFeed with a force refresh handler; fixed UserView issues\r\n- Fixed blur flash on app open\r\n- Fixed cache clear button not working\r\n- Added support for inline image within comments\r\n- Improved spoiler handling in selftext\r\n- Corrected tab bar hit detection in Split View on iPad",
+          "downloadURL": "https://github.com/lo-cafe/winston/releases/download/v1.1.5/winston.ipa",
+          "size": 50003343,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "lo.cafe.winston",
+      "title": "Winston 1.1.5 · 24 Jun 2024",
+      "identifier": "Winston-release-v1.1.5",
+      "caption": "Winston 1.1.5 is available.",
+      "date": "2024-06-24T08:53:08Z",
+      "tintColor": "#000000",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Winston/images/news.png",
+      "notify": true,
+      "url": "https://github.com/lo-cafe/winston/releases/tag/v1.1.5"
+    }
+  ]
+}
