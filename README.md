@@ -68,17 +68,32 @@ Torrent client for iOS.
 ### <a href="https://github.com/Predidit/Kazumi"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Kazumi/icon.png" alt="Kazumi icon" width="24" align="top"> Kazumi</a>
 基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率。
 
+### <a href="https://github.com/Mac-XK/KMusic"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/KMusic/icon.png" alt="KMusic icon" width="24" align="top"> KMusic</a>
+基于 SwiftUI 的多源音乐聚合播放器，支持 iOS/macOS，内置酷我、酷狗、QQ 音乐、网易云等多平台音源与 LRC 歌词同步。
+
 ### <a href="https://github.com/missuo/kumone"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Kumone/icon.png" alt="Kumone icon" width="24" align="top"> Kumone</a>
 第三方网易云音乐客户端（雲の音）。
+
+### <a href="https://github.com/LiveContainer/LiveContainer"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/LiveContainer+SideStore/icon.png" alt="LiveContainer+SideStore icon" width="24" align="top"> LiveContainer+SideStore</a>
+An app launcher that runs iOS apps without actually installing them, with a built-in SideStore for refreshing your apps.
 
 ### <a href="https://github.com/kodjodevf/mangayomi"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Mangayomi/icon.png" alt="Mangayomi icon" width="24" align="top"> Mangayomi</a>
 Read manga, novels, and watch anime.
 
+### <a href="https://github.com/Manic-EMU/ManicEMU"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/ManicEMU/icon.png" alt="ManicEMU icon" width="24" align="top"> ManicEMU</a>
+All-in-one retro game emulator for iOS, with a clean interface and broad platform support.
+
 ### <a href="https://github.com/youshen2/MeloX"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/MeloX/icon.png" alt="MeloX icon" width="24" align="top"> MeloX</a>
 原生 SwiftUI 第三方网易云音乐客户端，参考 Apple Music 界面。
 
+### <a href="https://github.com/singleton-altman/MoviePilotLite"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/MoviePilotLite/icon.png" alt="MoviePilotLite icon" width="24" align="top"> MoviePilotLite</a>
+MoviePilot 移动端，基于 Flutter 实现。
+
 ### <a href="https://github.com/dddevid/Musly"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Musly/icon.png" alt="Musly icon" width="24" align="top"> Musly</a>
 Free Navidrome client & Subsonic music player with an Apple Music-inspired interface.
+
+### <a href="https://github.com/celia-sh/Novella"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Novella/icon.png" alt="Novella icon" width="24" align="top"> Novella</a>
+轻书架第三方客户端，基于 React Native 构建，面向 iOS / iPadOS，支持小说与漫画阅读与社区。
 
 ### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
 使用Flutter开发的BiliBili第三方客户端。
@@ -86,8 +101,17 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/Eslzzyl/Pixiv-SwiftUI"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Pixiv-SwiftUI/icon.png" alt="Pixiv-SwiftUI icon" width="24" align="top"> Pixiv-SwiftUI</a>
 基于 SwiftUI 的 Pixiv 第三方客户端，支持插画、漫画与小说。
 
+### <a href="https://github.com/xmiguel911x/PSX3IOS"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PSX3IOS/icon.png" alt="PSX3IOS icon" width="24" align="top"> PSX3IOS</a>
+A PlayStation 3 emulator for iPhone and iPad, built on RPCS3.
+
+### <a href="https://github.com/liuchuancong/pure_live"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PureLive/icon.png" alt="PureLive icon" width="24" align="top"> PureLive</a>
+基于 Flutter 的开源多平台直播聚合播放器，支持 Bilibili、虎牙、斗鱼、快手、抖音、网易 CC、Twitch 及自定义 M3U/M3U8 直播源。
+
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.4"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
 V2EX 第三方 iOS 客户端。
+
+### <a href="https://github.com/donbytyqi/scenebox"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/SceneBox/icon.png" alt="SceneBox icon" width="24" align="top"> SceneBox</a>
+Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in SwiftUI.
 
 ### <a href="https://github.com/gholts/sphere."><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sphere/icon.png" alt="Sphere icon" width="24" align="top"> Sphere</a>
 原生 iOS 局域网代理面板，控制 Mihomo / Sing-box 后端。
@@ -112,6 +136,9 @@ A full featured virtual machine host for iOS — run Windows, Android, and more 
 
 ### <a href="https://github.com/mrdrvt99/YouProEXTRA"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/YouProEXTRA/icon.png" alt="YouProEXTRA icon" width="24" align="top"> YouProEXTRA</a>
 YouTube mod for iOS packed with customizable tweaks — no ads, background playback, downloads, and more.
+
+### <a href="https://github.com/huamurui/zhihu-minus-minus"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/ZhihuMinusMinus/icon.png" alt="ZhihuMinusMinus icon" width="24" align="top"> ZhihuMinusMinus</a>
+轻量、纯净的第三方知乎客户端，基于 React Native (Expo) 构建，无广告，支持多账号切换、游客模式与深色模式。
 
 ## Project Layout
 
