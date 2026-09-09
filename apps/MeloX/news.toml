@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/MeloX
+
+name = "MeloX"
+tagline = "原生第三方网易云客户端"
+
+[colors]
+tint = "#F02030"
+tint_alt = "#F02030"

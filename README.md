@@ -71,6 +71,9 @@ Torrent client for iOS.
 ### <a href="https://github.com/kodjodevf/mangayomi"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Mangayomi/icon.png" alt="Mangayomi icon" width="24" align="top"> Mangayomi</a>
 Read manga, novels, and watch anime.
 
+### <a href="https://github.com/youshen2/MeloX"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/MeloX/icon.png" alt="MeloX icon" width="24" align="top"> MeloX</a>
+原生 SwiftUI 第三方网易云音乐客户端，参考 Apple Music 界面。
+
 ### <a href="https://github.com/dddevid/Musly"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Musly/icon.png" alt="Musly icon" width="24" align="top"> Musly</a>
 Free Navidrome client & Subsonic music player with an Apple Music-inspired interface.
 
