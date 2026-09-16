@@ -21,11 +21,11 @@
       "tintColor": "#1090F0",
       "versions": [
         {
-          "version": "0.9.2-beta.5-build.56",
-          "date": "2026-09-13",
-          "localizedDescription": "Roam Control 0.9.2 Beta 5 — Build 56\n\nWhat’s changed:\n- Adds bounded location-task registration validation and lifecycle hardening around scheduler setup, cancellation and stale callbacks.\n- Adds fixed configuration and registration states to Connection Health diagnostics for relevant scheduler failures.\n- Adds optional consent-gated self-hosted anonymous telemetry alongside TelemetryDeck.\n- Adds release invariant checks and updated privacy, release and regression documentation.\n- Includes Stop & Restore and interrupted-session reliability improvements carried forward from the current beta work.\n\nValidation:\n- Final IPA installed successfully through SideStore.\n- Fixed-location simulation and Stop & Restore passed on the owner device.\n- Self-hosted telemetry consent OFF and ON paths were verified on the final Build 56 candidate.\n- Backend ingestion of the new scheduler configuration/registration fields was verified.\n\nImportant:\n- This build improves scheduler diagnostics and lifecycle handling, but it does not establish that all iOS schedulerRegistration failures are fixed. External validation is still needed on affected devices.\n\nSHA-256:\nede639ef010e8ba1b4763e112f1fb272d9a56fdbb2267c4d09a504c7fec7cc5a",
-          "downloadURL": "https://github.com/seanhowarthdev/Roam-Control/releases/download/v0.9.2-beta.5-build.56/RoamControl-0.9.2-build56.ipa",
-          "size": 3374919,
+          "version": "0.9.2",
+          "date": "2026-09-14",
+          "localizedDescription": "## Build 61 – Pairing scheduler independence\n\nBuild 61 contains a targeted change for pairing failures seen on some SideStore-resigned installations.\n\n### What was happening\n\nSideStore can change Roam Control's bundle identifier when resigning the app.\n\nOn affected installations, the runtime bundle identifier could therefore differ from the background-task identifiers contained in the IPA. iOS could reject Roam Control's pairing BGTaskScheduler configuration as a result.\n\nIn previous builds, that mismatch could prevent the pairing listener from starting at all.\n\n### What changed in Build 61\n\n- Pairing no longer depends on successful BGTaskScheduler registration or submission.\n- The RPPairing listener now starts directly when a pairing attempt begins.\n- Pairing can continue even when the SideStore runtime bundle identifier does not match the permitted background-task identifier.\n- The scheduler configuration is still retained in diagnostics.\n- A UIKit background-task assertion is used to cover the brief Settings → Developer Mode → Pair with Host transition.\n- Pairing cleanup still occurs on success, failure, cancellation or timeout.\n- Build 60 location-session behaviour is unchanged.\n\n### Testing completed\n\nBuild 61 has been tested successfully on-device with:\n\n- Removing an existing pairing\n- Starting a fresh pairing attempt\n- Leaving Roam Control and opening Settings\n- Settings → Privacy & Security → Developer Mode → Pair with Host\n- Completing the 6-digit pairing flow\n- Saving the new pairing record\n- Starting a location session after pairing\n- Stop & Restore\n\nAutomated tests covering runtime background-task identifiers, pairing/location pre-registration, failure stages, telemetry/privacy behaviour and Build 61 release invariants also pass.\n\nA clean unsigned Release build for arm64 also completed successfully.\n\n### Preview testing\n\nBuild 61 was initially released as a Preview while the pairing change was tested across a wider range of SideStore installations.\n\nFollowing successful real-world testing, Build 61 has now been promoted to the main Roam Control 0.9.2 release.\n\nIf you experience a connection or pairing problem, go to:\n\nSettings → Connection Health → Copy Diagnostics\n\nand include the copied diagnostics with your report.\n\n### Download\n\nInstall the attached `RoamControl-0.9.2-build61.ipa` through SideStore as normal.\n\nSHA-256:\n\n`a6dde76eb02a696347be9ccfc3bff34b4a86745c0de7964811363e88fce1890d`",
+          "downloadURL": "https://github.com/seanhowarthdev/Roam-Control/releases/download/v0.9.2/RoamControl-0.9.2-build61.ipa",
+          "size": 3382913,
           "minOSVersion": "27.0"
         }
       ]
@@ -34,14 +34,14 @@
   "news": [
     {
       "appID": "com.sean.roamcontrol",
-      "title": "Roam Control 0.9.2-beta.5-build.56 · 13 Sep 2026",
-      "identifier": "Roam Control-release-v0.9.2-beta.5-build.56",
-      "caption": "Roam Control 0.9.2-beta.5-build.56 is available.",
-      "date": "2026-09-13T20:36:56Z",
+      "title": "Roam Control 0.9.2 · 14 Sep 2026",
+      "identifier": "Roam Control-release-v0.9.2",
+      "caption": "Roam Control 0.9.2 is available.",
+      "date": "2026-09-14T20:17:44Z",
       "tintColor": "#1090F0",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/news.png",
       "notify": true,
-      "url": "https://github.com/seanhowarthdev/Roam-Control/releases/tag/v0.9.2-beta.5-build.56"
+      "url": "https://github.com/seanhowarthdev/Roam-Control/releases/tag/v0.9.2"
     }
   ]
 }
