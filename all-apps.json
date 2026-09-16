@@ -145,7 +145,7 @@
         {
           "version": "nightly-20260915",
           "date": "2026-09-15",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: translate the new shader wording\n- iOS: show the CRC in Per-Game Settings during a game\n- iOS: move TV/CRT Shader to Filtering and rename the cache button\n- iOS: show readable slider names and plain shader errors\n- iOS: delete downloaded shader packs and saved presets\n- iOS: close the preset list on a pick and select a saved preset\n- iOS: say in the pause menu when a game has its own shader\n- iOS: keep saved shader presets working after an app update\n- iOS: put Preset first on the Shaders page and use plain wording\n- iOS: pick a downloaded shader straight from the download list\n- iOS: document launch links and the library export\n- iOS: translate Copy Launch Link\n- iOS: list games from external folders in the library export\n- iOS: import files opened in the app again\n- iOS: ask before a launch link replaces a running game\n- iOS: copy a game's launch link from its long-press menu\n- iOS: look up the app's own scene, not whichever one comes first\n- iOS: stop leaking a scene configuration on every scene connect\n- iOS: read the hack claim keys from s_gs_keys, where they live now\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260914...418eee65a406497320bb0dab00e5b00a36420b06",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk, sideload it\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\n## What's new\n- iOS: install the Rust iOS target so CI builds keep shaders\n- iOS: translate the new shader wording\n- iOS: show the CRC in Per-Game Settings during a game\n- iOS: move TV/CRT Shader to Filtering and rename the cache button\n- iOS: show readable slider names and plain shader errors\n- iOS: delete downloaded shader packs and saved presets\n- iOS: close the preset list on a pick and select a saved preset\n- iOS: say in the pause menu when a game has its own shader\n- iOS: keep saved shader presets working after an app update\n- iOS: put Preset first on the Shaders page and use plain wording\n- iOS: pick a downloaded shader straight from the download list\n- iOS: document launch links and the library export\n- iOS: translate Copy Launch Link\n- iOS: list games from external folders in the library export\n- iOS: import files opened in the app again\n- iOS: ask before a launch link replaces a running game\n- iOS: copy a game's launch link from its long-press menu\n- iOS: look up the app's own scene, not whichever one comes first\n- iOS: stop leaking a scene configuration on every scene connect\n- iOS: read the hack claim keys from s_gs_keys, where they live now\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260914...736f53fa1c3c8e56a90ad53bd61f84260d09e1f0",
           "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260915/ARMSX2-nightly-20260915-418eee65a4-iOS-arm64.ipa",
           "size": 26850704,
           "minOSVersion": "17.0"
@@ -171,6 +171,30 @@
           "downloadURL": "https://github.com/Lakr233/Asspp/releases/download/4.2.1/Asspp.ipa",
           "size": 15162563,
           "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Beans Music",
+      "bundleIdentifier": "com.beans.app",
+      "developerName": "XIaodou0416",
+      "subtitle": "原生 SwiftUI 多源音乐播放器",
+      "localizedDescription": "Beans Music，开源 SwiftUI 第三方音乐播放器，聚合网易云、QQ 音乐与酷狗，支持歌词、下载、本地歌单与液态玻璃界面。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/player.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/library.png"
+      ],
+      "tintColor": "#F0D050",
+      "versions": [
+        {
+          "version": "1.6.6",
+          "date": "2026-09-06",
+          "localizedDescription": "本次更新：\n\n- 增加网易云音乐和 QQ 音乐歌单广场搜索功能\n- 优化歌曲封面缓存\n- 优化歌词划动后自动回到当前播放歌词的问题\n- 优化整体流畅性，低系统版本请实测反馈\n- 优化网易云私人漫游；如遇问题可尝试心动模式\n- 简化搜索界面，移除均衡器注释\n- 更换酷狗音乐歌单广场接口\n- 修复 QQ 音乐本身有会员但无法播放的问题\n- 修复 iOS 26 以下系统无法返回的问题",
+          "downloadURL": "https://github.com/XIaodou0416/Beans-Music/releases/download/v1.6.6/Beans-unsigned.ipa",
+          "size": 8761833,
+          "minOSVersion": "15.0"
         }
       ]
     },
@@ -374,11 +398,11 @@
       "tintColor": "#4CAF50",
       "versions": [
         {
-          "version": "2.3.1",
-          "date": "2026-09-07",
-          "localizedDescription": "- 重新设计的时间表页面 (@Predidit)\r\n- 重新设计的追番页面 (@Predidit)\r\n- 重新设计的我的页面 (@Predidit)\r\n- 重新设计的视频播放页面 (@Predidit)\r\n- 重新设计的规则管理页面 (@Predidit)\r\n- 重新设计的同步设置页面 (@Predidit)\r\n- 改进Bangumi同步流程 (@zhn1100)",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.1/Kazumi_ios_2.3.1_no_sign.ipa",
-          "size": 29812172,
+          "version": "2.3.3",
+          "date": "2026-09-15",
+          "localizedDescription": "> [!NOTE]\r\n> 这是 2.3.2 的热修复版本，更多更新日志参考 2.3.2",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.3.3/Kazumi_ios_2.3.3_no_sign.ipa",
+          "size": 29823335,
           "minOSVersion": "13.0"
         }
       ]
@@ -734,6 +758,30 @@
       ]
     },
     {
+      "name": "SideStore",
+      "bundleIdentifier": "com.SideStore.SideStore",
+      "developerName": "SideStore Team",
+      "subtitle": "无需电脑的社区侧载商店",
+      "localizedDescription": "SideStore 是 AltStore 的社区分支，用 Apple ID 在设备上签名并安装 IPA，通过 VPN 刷新应用，无需电脑常开。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/images/browse.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/images/apps.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/images/news-shot.png"
+      ],
+      "tintColor": "#A405FA",
+      "versions": [
+        {
+          "version": "0.7.0-alpha",
+          "date": "2026-09-15",
+          "localizedDescription": "## Build Info\r\n\r\nBuilt at (UTC): `Fri Sep 11 21:25:58 2026`\r\nBuilt at (UTC date): `2026-09-11`\r\nCommit SHA: `6032424a0e56c1c319762e786099bdd9186a238b`\r\nVersion: `0.7.0-20260911.328+6032424a`\r\n\r\n#### What's Changed:\r\n- **fixes for 503 during sign-in**: There were some changes from apple server side which broke 0.6.4 and prior versions and prevent them from signing into sidestore. This temporary version addresses the sign-in issue with 503 status code\r\n\r\n#### Full Changelog: [0.6.4...0.7.0-alpha](https://github.com/SideStore/SideStore/compare/0.6.4...0.7.0-alpha)",
+          "downloadURL": "https://github.com/SideStore/SideStore/releases/download/0.7.0-alpha/SideStore.ipa",
+          "size": 27770821,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
       "name": "Sphere",
       "bundleIdentifier": "dev.gholts.Sphere",
       "developerName": "Hugo Lee",
@@ -946,6 +994,28 @@
   ],
   "news": [
     {
+      "appID": "com.example.kazumi",
+      "title": "Kazumi 2.3.3 · 15 Sep 2026",
+      "identifier": "Kazumi-release-2.3.3",
+      "caption": "Kazumi 2.3.3 is available.",
+      "date": "2026-09-15T14:24:43Z",
+      "tintColor": "#4CAF50",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.3.3"
+    },
+    {
+      "appID": "com.SideStore.SideStore",
+      "title": "SideStore 0.7.0-alpha · 15 Sep 2026",
+      "identifier": "SideStore-release-0.7.0-alpha",
+      "caption": "SideStore 0.7.0-alpha is available.",
+      "date": "2026-09-15T11:12:49Z",
+      "tintColor": "#A405FA",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/images/news.png",
+      "notify": true,
+      "url": "https://github.com/SideStore/SideStore/releases/tag/0.7.0-alpha"
+    },
+    {
       "appID": "com.kodjodevf.mangayomi",
       "title": "Mangayomi 0.9.4 · 15 Sep 2026",
       "identifier": "Mangayomi-release-v0.9.4",
@@ -1100,15 +1170,15 @@
       "url": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/tag/v1.2.1"
     },
     {
-      "appID": "com.example.kazumi",
-      "title": "Kazumi 2.3.1 · 07 Sep 2026",
-      "identifier": "Kazumi-release-2.3.1",
-      "caption": "Kazumi 2.3.1 is available.",
-      "date": "2026-09-07T14:33:57Z",
-      "tintColor": "#4CAF50",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
+      "appID": "com.beans.app",
+      "title": "Beans Music 1.6.6 · 06 Sep 2026",
+      "identifier": "Beans Music-release-v1.6.6",
+      "caption": "Beans Music 1.6.6 is available.",
+      "date": "2026-09-06T12:41:32Z",
+      "tintColor": "#F0D050",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/news.png",
       "notify": true,
-      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.3.1"
+      "url": "https://github.com/XIaodou0416/Beans-Music/releases/tag/v1.6.6"
     },
     {
       "appID": "sh.celia.novella",
