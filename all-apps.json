@@ -31,6 +31,30 @@
       ]
     },
     {
+      "name": "AltStore Classic",
+      "bundleIdentifier": "com.rileytestut.AltStore.Beta",
+      "developerName": "Riley Testut",
+      "subtitle": "无需越狱的第三方 App Store",
+      "localizedDescription": "AltStore Classic，Riley Testut 的官方侧载商店。可用 Apple ID 签名并安装 IPA，2.3 起支持远程 AltServer、无需电脑常开刷新。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AltStore-Classic/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AltStore-Classic/images/browse.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AltStore-Classic/images/apps.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AltStore-Classic/images/sources.png"
+      ],
+      "tintColor": "#018084",
+      "versions": [
+        {
+          "version": "2.3b3",
+          "date": "2026-09-16",
+          "localizedDescription": "Official AltStore Classic IPA (CFBundleShortVersionString 2.3b3, CFBundleVersion 57). Bundle ID: com.rileytestut.AltStore.Beta. Minimum iOS 17.4.",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/AltStoreClassic-2.3b3/AltStoreClassic_2.3b3.ipa",
+          "size": 35905742,
+          "minOSVersion": "17.4"
+        }
+      ]
+    },
+    {
       "name": "AniBaka",
       "bundleIdentifier": "ani.baka",
       "developerName": "AniBakaBaka",
@@ -993,6 +1017,17 @@
     }
   ],
   "news": [
+    {
+      "appID": "com.rileytestut.AltStore.Beta",
+      "title": "AltStore Classic 2.3b3 · 16 Sep 2026",
+      "identifier": "AltStore Classic-release-AltStoreClassic-2.3b3",
+      "caption": "AltStore Classic 2.3b3 is available.",
+      "date": "2026-09-16T03:09:12Z",
+      "tintColor": "#018084",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AltStore-Classic/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/AltStoreClassic-2.3b3"
+    },
     {
       "appID": "com.example.kazumi",
       "title": "Kazumi 2.3.3 · 15 Sep 2026",
