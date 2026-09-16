@@ -116,6 +116,9 @@ A PlayStation 3 emulator for iPhone and iPad, built on RPCS3.
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.5"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
 V2EX 第三方 iOS 客户端。
 
+### <a href="https://github.com/seanhowarthdev/Roam-Control"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam-Control/icon.png" alt="Roam Control icon" width="24" align="top"> Roam Control</a>
+SwiftUI 位置模拟工具，可在自己的 iPhone 上选择、测试并移动上报位置。
+
 ### <a href="https://github.com/donbytyqi/scenebox"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/SceneBox/icon.png" alt="SceneBox icon" width="24" align="top"> SceneBox</a>
 Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in SwiftUI.
 

@@ -1,0 +1,43 @@
+# altgen config for the Roam Control AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "seanhowarthdev/Roam-Control"
+
+[source]
+name = "Roam Control"
+subtitle = "Roam Control AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Roam Control"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/icon.png"
+website = "https://github.com/seanhowarthdev/Roam-Control"
+tint_color = "#1090F0"
+
+[app]
+name = "Roam Control"
+bundle_identifier = "com.sean.roamcontrol"
+developer_name = "seanhowarthdev"
+subtitle = "在 iPhone 上选择、测试并移动上报位置"
+description = "Roam Control，SwiftUI 位置模拟工具。可固定坐标、预览步行路线，配合 LocalDevVPN 在自己的 iPhone 上做开发与测试。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/welcome.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/fixed.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/walking.png",
+]
+tint_color = "#1090F0"
+min_os_version = "27.0"
+
+[versions]
+strip_v_prefix = true
+# Skip GitHub prereleases (preview builds). Newest non-prerelease currently
+# is v0.9.2-beta.5-build.56 rather than the v0.9.2 Latest tag.
+include_prereleases = false
+# Filenames vary (RoamControl-0.9.2-Beta3-build53.ipa, RoamControl-0.9.1-build47.ipa).
+asset_pattern = "RoamControl-.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/news.png"
+
+[output]
+path = "apps.json"
