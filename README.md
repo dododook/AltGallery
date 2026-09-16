@@ -23,6 +23,9 @@
 ### <a href="https://github.com/Aidoku/Aidoku"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Aidoku/icon.png" alt="Aidoku icon" width="24" align="top"> Aidoku</a>
 A free and open source manga reading application for iOS and iPadOS.
 
+### <a href="https://github.com/dododook/my-ipas/releases/tag/AltStoreClassic-2.3b3"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AltStore-Classic/icon.png" alt="AltStore Classic icon" width="24" align="top"> AltStore Classic</a>
+Riley Testut 的官方侧载商店，2.3 起支持远程 AltServer。
+
 ### <a href="https://github.com/AniBakaBaka/AniBaka"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AniBaka/icon.png" alt="AniBaka icon" width="24" align="top"> AniBaka</a>
 跨平台番剧聚合与弹幕客户端，多番剧源、多弹幕、高清无广告，支持动漫实时超分辨率。
 
