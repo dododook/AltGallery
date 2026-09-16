@@ -1,0 +1,43 @@
+# altgen config for the SideStore AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "SideStore/SideStore"
+
+[source]
+name = "SideStore"
+subtitle = "SideStore AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for SideStore"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/icon.png"
+website = "https://github.com/SideStore/SideStore"
+tint_color = "#A405FA"
+
+[app]
+name = "SideStore"
+bundle_identifier = "com.SideStore.SideStore"
+developer_name = "SideStore Team"
+subtitle = "无需电脑的社区侧载商店"
+description = "SideStore 是 AltStore 的社区分支，用 Apple ID 在设备上签名并安装 IPA，通过 VPN 刷新应用，无需电脑常开。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/images/browse.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/images/apps.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/images/news-shot.png",
+]
+tint_color = "#A405FA"
+min_os_version = "15.0"
+
+[versions]
+strip_v_prefix = true
+# Nightly/alpha GitHub prereleases are skipped. 0.7.0-alpha is published as
+# Latest (not flagged prerelease); 0.6.4 is titled DO NOT USE.
+include_prereleases = false
+# Releases also ship SideStore.dSYMs.zip and build-logs.zip; only take the IPA.
+asset_pattern = "SideStore\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SideStore/images/news.png"
+
+[output]
+path = "apps.json"

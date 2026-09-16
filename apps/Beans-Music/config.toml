@@ -1,0 +1,40 @@
+# altgen config for the Beans Music AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "XIaodou0416/Beans-Music"
+
+[source]
+name = "Beans Music"
+subtitle = "Beans Music AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Beans Music"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/icon.png"
+website = "https://github.com/XIaodou0416/Beans-Music"
+tint_color = "#F0D050"
+
+[app]
+name = "Beans Music"
+bundle_identifier = "com.beans.app"
+developer_name = "XIaodou0416"
+subtitle = "原生 SwiftUI 多源音乐播放器"
+description = "Beans Music，开源 SwiftUI 第三方音乐播放器，聚合网易云、QQ 音乐与酷狗，支持歌词、下载、本地歌单与液态玻璃界面。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/home.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/player.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/library.png",
+]
+tint_color = "#F0D050"
+min_os_version = "15.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+asset_pattern = "Beans-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/news.png"
+
+[output]
+path = "apps.json"

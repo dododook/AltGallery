@@ -41,6 +41,9 @@ A native ARM64 PlayStation 2 emulator for iOS and iPadOS, forked from PCSX2.
 ### <a href="https://github.com/Lakr233/Asspp"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Asspp/icon.png" alt="Asspp icon" width="24" align="top"> Asspp</a>
 多账户、多区 App Store 管理工具，可下载官方 IPA 和历史版本。
 
+### <a href="https://github.com/XIaodou0416/Beans-Music"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Beans-Music/icon.png" alt="Beans Music icon" width="24" align="top"> Beans Music</a>
+开源 SwiftUI 多源音乐播放器，聚合网易云、QQ 音乐与酷狗。
+
 ### <a href="https://github.com/OatmealDome/dolphin-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DolphiniOS/icon.png" alt="DolphiniOS icon" width="24" align="top"> DolphiniOS</a>
 Dolphin for iOS, reborn — a GameCube and Wii emulator for iPhone and iPad.
 
@@ -112,6 +115,9 @@ V2EX 第三方 iOS 客户端。
 
 ### <a href="https://github.com/donbytyqi/scenebox"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/SceneBox/icon.png" alt="SceneBox icon" width="24" align="top"> SceneBox</a>
 Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in SwiftUI.
+
+### <a href="https://github.com/SideStore/SideStore"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/SideStore/icon.png" alt="SideStore icon" width="24" align="top"> SideStore</a>
+无需电脑的社区侧载商店，用 Apple ID 在设备上签名并刷新 IPA。
 
 ### <a href="https://github.com/gholts/sphere."><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sphere/icon.png" alt="Sphere icon" width="24" align="top"> Sphere</a>
 原生 iOS 局域网代理面板，控制 Mihomo / Sing-box 后端。
