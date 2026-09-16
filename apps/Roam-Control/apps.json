@@ -1,0 +1,47 @@
+{
+  "name": "Roam Control",
+  "subtitle": "Roam Control AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Roam Control",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/icon.png",
+  "website": "https://github.com/seanhowarthdev/Roam-Control",
+  "tintColor": "#1090F0",
+  "apps": [
+    {
+      "name": "Roam Control",
+      "bundleIdentifier": "com.sean.roamcontrol",
+      "developerName": "seanhowarthdev",
+      "subtitle": "在 iPhone 上选择、测试并移动上报位置",
+      "localizedDescription": "Roam Control，SwiftUI 位置模拟工具。可固定坐标、预览步行路线，配合 LocalDevVPN 在自己的 iPhone 上做开发与测试。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/welcome.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/fixed.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/walking.png"
+      ],
+      "tintColor": "#1090F0",
+      "versions": [
+        {
+          "version": "0.9.2-beta.5-build.56",
+          "date": "2026-09-13",
+          "localizedDescription": "Roam Control 0.9.2 Beta 5 — Build 56\n\nWhat’s changed:\n- Adds bounded location-task registration validation and lifecycle hardening around scheduler setup, cancellation and stale callbacks.\n- Adds fixed configuration and registration states to Connection Health diagnostics for relevant scheduler failures.\n- Adds optional consent-gated self-hosted anonymous telemetry alongside TelemetryDeck.\n- Adds release invariant checks and updated privacy, release and regression documentation.\n- Includes Stop & Restore and interrupted-session reliability improvements carried forward from the current beta work.\n\nValidation:\n- Final IPA installed successfully through SideStore.\n- Fixed-location simulation and Stop & Restore passed on the owner device.\n- Self-hosted telemetry consent OFF and ON paths were verified on the final Build 56 candidate.\n- Backend ingestion of the new scheduler configuration/registration fields was verified.\n\nImportant:\n- This build improves scheduler diagnostics and lifecycle handling, but it does not establish that all iOS schedulerRegistration failures are fixed. External validation is still needed on affected devices.\n\nSHA-256:\nede639ef010e8ba1b4763e112f1fb272d9a56fdbb2267c4d09a504c7fec7cc5a",
+          "downloadURL": "https://github.com/seanhowarthdev/Roam-Control/releases/download/v0.9.2-beta.5-build.56/RoamControl-0.9.2-build56.ipa",
+          "size": 3374919,
+          "minOSVersion": "27.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.sean.roamcontrol",
+      "title": "Roam Control 0.9.2-beta.5-build.56 · 13 Sep 2026",
+      "identifier": "Roam Control-release-v0.9.2-beta.5-build.56",
+      "caption": "Roam Control 0.9.2-beta.5-build.56 is available.",
+      "date": "2026-09-13T20:36:56Z",
+      "tintColor": "#1090F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/news.png",
+      "notify": true,
+      "url": "https://github.com/seanhowarthdev/Roam-Control/releases/tag/v0.9.2-beta.5-build.56"
+    }
+  ]
+}
