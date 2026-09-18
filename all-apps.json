@@ -513,11 +513,11 @@
       "tintColor": "#EF4444",
       "versions": [
         {
-          "version": "0.9.4",
-          "date": "2026-09-15",
-          "localizedDescription": "## What's Changed\n* Fix double/int cast crash when syncing settings by @not-akari in https://github.com/kodjodevf/mangayomi/pull/1009\n\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.3...v0.9.4",
-          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.4/Mangayomi-v0.9.4-ios.ipa",
-          "size": 114238780
+          "version": "0.9.5",
+          "date": "2026-09-18",
+          "localizedDescription": "## What's Changed\r\n\r\n## Reader & Novels\r\n\r\n* **Smart Double-Page Mode** (#1008):\r\n  * Automatically switch to double-page view based on screen orientation (landscape/portrait).\r\n  * Chapter transition pages now remain isolated for a natural, seamless reading experience.\r\n* **Complete Novel Reader Overhaul** (#1014):\r\n  * Added double-page reading mode support for novels.\r\n  * Added a **Keep screen on** toggle to prevent the display from turning off while reading (#1014).\r\n  * Added smooth auto-scroll with fine-tuned speed controls.\r\n  * Redesigned Novel bottom bar and settings sheets: more compact, with quick font-size adjustments.\r\n  * Centralized all novel settings under **More > Settings > Novel Reader** (#1014).\r\n* **Smooth Webtoon Scrolling**:\r\n  * Much smoother continuous scrolling without stutter or layout jumps.\r\n  * Fluid auto-scroll that reacts instantly to touch and drag gestures.\r\n* **Reliable Page Error Recovery**:\r\n  * The **Retry** button is now immediately clickable with no menu overlay interference.\r\n  * Added a manual **Refresh** button in the reader top bar to re-fetch fresh pages from the source.\r\n* **Dedicated Page Cache**:\r\n  * Redesigned chapter caching system (100 MB disk limit with automatic cleanup of older files) to save storage and speed up loading times.\r\n\r\n---\r\n\r\n##  Features & User Experience\r\n\r\n* **Quick Resume from History** (#1005):\r\n  * Double-tap or double-click the **History** icon in the navigation bar to instantly jump straight back into your latest read chapter or watched episode (filtered by Manga, Anime, or Novel).\r\n* **One-Tap Global Search**:\r\n  * Tap any title in the entry details header to immediately search for it across all extensions (long-press continues to copy to clipboard).\r\n  * Warns you before adding an entry that is already in your library.\r\n* **Customizable Chapter Swipe Actions** (#1005):\r\n  * Configure left and right swipe gestures for chapters in Reader settings (Mark as Read/Unread, Bookmark, Download, or Disable).\r\n* **Mass Migration from Library** (#1005):\r\n  * Added a dedicated shortcut button in the multi-select bottom action bar to quickly migrate multiple selected entries at once.\r\n* **Automatic Sync** (#1012):\r\n  * Added background auto-sync support and improved sync preference handling.\r\n\r\n---\r\n\r\n## Video Player & Desktop\r\n\r\n* **Desktop Controls & Performance** (#1015):\r\n  * Eliminated stutter caused by mouse hover on the player controls.\r\n  * Added a setting to toggle hardware acceleration on Windows.\r\n* **Audio & Subtitle Tracks**:\r\n  * Better track synchronization, duplicate removal, and cleaner track labels.\r\n\r\n---\r\n\r\n##  Localization\r\n\r\n* Fully updated and completed translations across **17 languages** (French, German, Spanish, Italian, Portuguese, Russian, Chinese, Japanese, Korean, Arabic, and more).\r\n\r\n---\r\n\r\n##  Fixes & Stability\r\n\r\n* Fixed visual layout overflow issues in settings sheets and bottom bars (#1014).\r\n* Improved error handling and reliability for Kitsu discovery (#1011).\r\n* File picker improvements and stability updates (#1010).\r\n\r\n---\r\n\r\n##  Contributors\r\n\r\n* @kodjodevf \r\n* @NBA2K1 (#1010, #1011)\r\n* @not-akari\r\n\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.4...v0.9.5",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.5/Mangayomi-v0.9.5-ios.ipa",
+          "size": 114289495
         }
       ]
     },
@@ -536,11 +536,11 @@
       "tintColor": "#F02040",
       "versions": [
         {
-          "version": "2.0.0",
-          "date": "2026-09-03",
-          "localizedDescription": "> [!NOTE]\r\n> Starting from version 2.0.0, we no longer provide builds of TrollStore JIT. You can package it yourself by following the [guide](https://github.com/Rednick16/TrollStoreJITEnabler).\r\n\r\nThis is a major release focused on a redesigned interface, expanded platform support, and advanced features. Landscape browsing, library management, and external controller navigation have been rebuilt. It also adds several new systems and brings Netplay to eligible Libretro cores.\r\n\r\n\r\n### Before You Update\r\n\r\n- Dreamcast (Flycast): Existing save states will no longer work as of 2.0.0. Convert important save states to in-game saves before updating, or back up the `Flycast/dc` folder yourself.\r\n- Wii: A BootMii-format `keys.bin` is required.\r\n- Symbian: Install firmware in Settings first (`.ROM`; S60v2 and later also need `.RPKG`).\r\n- GameCube / Wii: The core is still being optimized, so heat and frame drops should still be expected.\r\n- MAME: A number of lesser-used arcade systems have been trimmed. Some obscure titles may no longer run.\r\n\r\n### Interface\r\n\r\nLandscape\r\n\r\n- A new landscape library, with most landscape pages redesigned.\r\n- Built-in dynamic backgrounds. You can use or upload ShaderToy (GLSL) scripts to customize them. Only single-Image scripts are supported; complex scripts may increase battery use or heat.\r\n- Multiple customizable card carousel styles.\r\n- Focused background: when a game is selected, its banner can be used as the landscape focus backdrop.\r\n- background music feature in landscape mode—besides built-in tracks, you can upload your own music files to use as background music.\r\n- built in 12 sets of navigation and focus sound effects.\r\n\r\nGame Options and Shortcuts\r\n\r\n- A unified options list and interaction model throughout the app.\r\n- Available actions are automatically arranged and regrouped for the current context.\r\n- Advanced reordering: customize the order and grouping of options.\r\n- A redesigned in-game shortcut menu. Shortcuts can appear on supported skins and in the in-game menu.\r\n\r\nNavigation and Input\r\n\r\n- A global focus and navigation system for iPhone and iPad. You can browse and interact entirely with a controller or keyboard.\r\n- Hold Command or the controller’s Select button to view the shortcut cheatsheet.\r\n- A unified navigation bar for more consistent browsing and editing.\r\n- Many long-press and hidden actions have been replaced with more conventional, iOS-style interactions.\r\n- Batch management and actions.\r\n- Adaptive rotation throughout the app.\r\n- Controllers can be assigned to a player slot. On cores that expect a keyboard, controller inputs can be mapped to keyboard events.\r\n\r\n### Features\r\n\r\nLibrary and Artwork\r\n\r\n- Covers now support separate icon and banner artwork. Box art is used in regular lists, icons in square layouts, and banners as the landscape focus backdrop.\r\n- Online artwork from Libretro Thumbnails and SteamGridDB (Grids / Heroes / Logos / Icons; SteamGridDB requires your own API key).\r\n- Switching platform or category rematches cover art.\r\n\r\nGame Data\r\n\r\n- Game metadata: auto-match, search the database, or edit it yourself (developer, publisher, series, genre, release date, region, overview, and more).\r\n- ESRB ratings and matching icons. Rating icons can be hidden in Settings.\r\n- A redesigned save-state manager with import and export.\r\n- Scoped settings: the same option can be stored at game, platform, or global level, and each can be cleared or reset independently.\r\n- batch scraping for covers, icons, and banners.\r\n- \r\n\r\nShaders and Skins\r\n\r\n- Real-time shader preview, without loading the shader first.\r\n- Redesigned default GBA skin.\r\n- Flex skins now support customizing button size and position.\r\n\r\nAchievements, Cheats, and Netplay\r\n\r\n- RetroAchievements pages are easier to read and load faster.\r\n- MultiSet support: earn subset achievements without a patched ROM. Switching the achievement list only changes what is shown; it does not affect which sets you can unlock while playing.\r\n- Online cheat database: search, multi-select add, and bookmarks.\r\n- Netplay for many Libretro cores: host or join a room, public lobby, LAN scan, relay, spectator mode, and room password. Your Adventurer Card nickname is used as the Netplay display name. You can now trade treasured Pokémon with friends over the network, or go head-to-head on arcade systems.\r\n- Rewind: add it to the shortcut menu, a controller mapping, or TriggerPro, then touch and hold to use it.\r\n\r\nAdvanced Features and Import\r\n\r\n- Core Settings: intended for advanced users. Incorrect values may prevent games from launching. Settings can be reset per game or per platform.\r\n- Settings now include an Adventurer Card, with a customizable nickname and avatar.\r\n- Import games from DukeX.\r\n- Import games from Armsx2.\r\n- PS1 now supports importing `.bin` files directly.\r\n\r\n\r\n### New Systems and Cores\r\n\r\nSymbian (EKA2L1)\r\n\r\n- Supports S60v1, N-Gage 1.0, S60v2, S60v3, N-Gage 2.0, S60v5, and Symbian^3.\r\n- Touch input, firmware management, and system apps.\r\n- Legacy / PPL / TXM JIT.\r\n\r\nPC Engine (Beetle PCE)\r\n\r\n- Supports TurboGrafx-16, TurboGrafx-CD, and SuperGrafx, with subcategory switching.\r\n\r\nNeo Geo Pocket / Color (Beetle NeoPop)\r\n\r\n- Supports Neo Geo Pocket and Neo Geo Pocket Color, with subcategory switching.\r\n\r\nCommodore 64 (VICE x64sc)\r\n\r\n- Full keyboard support, with switching between gamepad and keyboard skins.\r\n\r\nAmiga (PUAE)\r\n\r\n- Full keyboard support, with switching between gamepad and keyboard skins.\r\n\r\nGameCube / Wii (Dolphin)\r\n\r\n- Legacy / PPL / TXM JIT.\r\n- Wii: Wiimote sideways mode.\r\n- Dolphin cheats, including Action Replay Max decryption.\r\n- Wiimote skins for Wii\r\n\r\nOther Cores\r\n\r\n- Mesen-S added for SNES / GB / GBC.\r\n- gpSP added for GBA, and can be switched with mGBA and VBA-M.\r\n\r\n### JIT Fixes and Improvements\r\n\r\n- Fixed JIT failing on TXM devices running iOS 26.6 and later.\r\n- Revised TXM device detection.\r\n- N64 GLideN64 and ParaLLEl RDP now both support JIT.\r\n\r\n### Core Updates\r\n\r\nThe following cores have been updated to the latest upstream stable releases.\r\n\r\n- 3DS (Azahar, Citra)\r\n- PS1 (Beetle PSX HW)\r\n- DOS (DOSBox Pure)\r\n- Dreamcast (Flycast) — see the save-state migration note above\r\n- NDS (melonDS)\r\n- PSP (PPSSPP)\r\n- N64 (Mupen64Plus)\r\n\r\n### Fixes\r\n\r\n- Numerous bug fixes and performance optimizations",
-          "downloadURL": "https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.0/ManicEMU.v2.0.0.SideloadJIT.ipa",
-          "size": 273393210,
+          "version": "2.0.1",
+          "date": "2026-09-18",
+          "localizedDescription": "- Added WonderSwan support\r\n- Added NAOMI, Atomiswave, and System SP arcade support\r\n- Added Flash support\r\n  · Skin button binding\r\n  · Hardware keyboard input\r\n  · Software keyboard input\r\n  · Touch input\r\n- Built-in, self-contained JIT — no external debugger required\r\n- Added Slow Motion\r\n- Improved GameCube and Wii performance\r\n- GameCube now supports multi-disc games\r\n- Improved Wii motion controls\r\n- Simulate the Wii IR pointer by touch\r\n- Add games from other emulators via a link\r\n- Fixed some arcade systems that wouldn’t run\r\n- Fixed Dreamcast games running too fast\r\n- Fixed PSP crashes\r\n- Added NDS lid open/close\r\n- Improved rotation: with orientation lock on in Control Center, the app no longer snaps back to portrait\r\n- In-game shortcut tips can now be turned off\r\n- Landscape library can disable carousel style\r\n- Smoother landscape carousel scrolling\r\n- MultiDisc Helper supports more formats\r\n- Hardware keyboard input for Symbian, Amiga, and C64\r\n- Added RomM support\r\n  · LAN self-hosted servers only\r\n  · Sync only for games imported from RomM\r\n  · Manual sync only, from the service card’s long-press menu\r\n  · Pull ROMs, covers, metadata, manuals, and game saves\r\n- Fixed a launch timeout that could quit the app on older devices\r\n- N64 now supports ROMs larger than 64 MB",
+          "downloadURL": "https://github.com/Manic-EMU/ManicEMU/releases/download/v2.0.1/ManicEMU.v2.0.1.SideloadJIT.ipa",
+          "size": 288525117,
           "minOSVersion": "15.0"
         }
       ]
@@ -585,10 +585,10 @@
       "versions": [
         {
           "version": "1.2.5",
-          "date": "2026-09-11",
-          "localizedDescription": "MoviePilot Release\n\n- Version: 1.2.5\n- Build Date: 2026-09-11\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* Add arm64 APK release artifact and proxy update downloads by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/104\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.2.5-2026-09-07...release-v1.2.5-2026-09-11",
-          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.2.5-2026-09-11/ios-v1.2.5-2026-09-11.ipa",
-          "size": 35225061,
+          "date": "2026-09-18",
+          "localizedDescription": "MoviePilot Release\n\n- Version: 1.2.5\n- Build Date: 2026-09-18\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* Add arm64 APK release artifact and proxy update downloads by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/104\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.2.5-2026-09-07...release-v1.2.5-2026-09-18",
+          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.2.5-2026-09-18/ios-v1.2.5-2026-09-18.ipa",
+          "size": 35225063,
           "minOSVersion": "15.0"
         }
       ]
@@ -798,7 +798,7 @@
         {
           "version": "1.0.3",
           "date": "2026-09-17",
-          "localizedDescription": "What's new\n\n- Trakt sync. Connect your Trakt account in Profile and your watchlist and watched history stay in sync.\n- Picture in Picture on iPhone and iPad.\n- Continue Watching now resumes straight into the player from where you stopped, using the same source as last time (download, debrid link or torrent).\n- IMDb, Rotten Tomatoes and Metacritic ratings on the detail page (add an OMDb key in Settings).\n- Playback recovery: if the video freezes while the audio keeps going, the player notices and recovers by itself. Streams that drop are picked back up too.\n- Chromecast support on iPhone and iPad.\n- Apple TV: the episode row opens on the season and episode you're on, and the player controls and episode panel behave better with the remote.\n- Lots of smaller fixes.\n\nImportant: nothing in this release is signed\n\nNone of the files here are signed with a developer account, and the Mac app is not notarized anymore.\n\nMac: open the dmg and drag SceneBox to Applications. macOS will block it the first time because it isn't notarized. Either right click the app > Open, or go to System Settings > Privacy & Security and press \"Open Anyway\". If it still refuses, run this in Terminal:\n\n    xattr -dr com.apple.quarantine /Applications/SceneBox.app\n\nBecause the Mac app is unsigned it can't use the Keychain the way the signed builds did, so signing in to an account may not work on Mac. \"Continue as guest\" works fine. If you had an older signed version installed, delete it first.\n\niPhone/iPad: the ipa isn't signed (same as before), use Sideloadly, AltStore, SideStore, Feather or ESign with your own Apple ID. Free Apple ID = resign every 7 days (AltStore/SideStore do it for you), paid dev account = one year.\n\nApple TV: Sideloadly works over Wi-Fi. On the TV go to Settings > Remotes and Devices > Remote App and Devices so it shows up, then pick it in Sideloadly.",
+          "localizedDescription": "What's new\n\n- Trakt sync. Connect your Trakt account in Profile and your watchlist and watched history stay in sync.\n- Picture in Picture on iPhone and iPad.\n- Continue Watching now resumes straight into the player from where you stopped, using the same source as last time (download, debrid link or torrent).\n- IMDb, Rotten Tomatoes and Metacritic ratings on the detail page (add an OMDb key in Settings).\n- Playback recovery: if the video freezes while the audio keeps going, the player notices and recovers by itself. Streams that drop are picked back up too.\n- Chromecast support on iPhone and iPad.\n- Apple TV: the episode row opens on the season and episode you're on, and the player controls and episode panel behave better with the remote.\n- Lots of smaller fixes.\n\nImportant: this release is NOT signed. You have to allow it yourself.\n\nNothing here is signed with an Apple developer account and the Mac app is not notarized. macOS and iOS will refuse to open it until you explicitly allow it. This is expected, it's not broken.\n\nMac:\n\n1. Open the dmg and drag SceneBox to Applications.\n2. Open SceneBox. macOS will say it \"could not verify\" the app or that it's from an unidentified developer. Press Done (not Move to Trash).\n3. Go to System Settings > Privacy & Security, scroll down to Security and press \"Open Anyway\" next to SceneBox, then confirm.\n4. From then on it opens normally.\n\nIf you'd rather skip the dialog, run this in Terminal after copying the app to Applications:\n\n    xattr -dr com.apple.quarantine /Applications/SceneBox.app\n\nBecause the Mac app has no developer signature it can't use the Keychain the way the old signed builds did, so signing in to an account may not work on Mac. \"Continue as guest\" works. If you had an older signed version installed, delete it first.\n\niPhone/iPad: the ipa isn't signed, you sign it yourself with Sideloadly, AltStore, SideStore, Feather or ESign with your own Apple ID. Free Apple ID = resign every 7 days (AltStore/SideStore do it for you), paid dev account = one year.\n\nApple TV: Sideloadly works over Wi-Fi. On the TV go to Settings > Remotes and Devices > Remote App and Devices so it shows up, then pick it in Sideloadly.",
           "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.3/SceneBox-1.0.3.ipa",
           "size": 30506464,
           "minOSVersion": "18.0"
@@ -1030,17 +1030,61 @@
       "tintColor": "#0084ff",
       "versions": [
         {
-          "version": "0.6.0",
-          "date": "2026-09-11",
-          "localizedDescription": "Android 为 arm64-v8a preview APK；iOS 为未签名 IPA。SHA256SUMS.txt 可用于校验下载文件。\r\n\r\n<!-- Release notes generated using configuration in .github/release.yml at bf28d4ace7b312dc6acf0f23af85ccbb190ca37d -->\r\n\r\n## 更新内容\r\n\r\n对已有功能能力的补全与修复。\r\n\r\n* feat(comments): 支持图片上传及评论相关操作 (由 @huamurui 提交，PR #70)\r\n* feat: 增加富文本发布功能及可靠的图片上传机制 (由 @huamurui 提交，PR #73)\r\n* feat: 扩展知乎 API 支持及搜索界面 (由 @huamurui 提交，PR #74)\r\n* fix: 增加稳定的导航栏标题 (由 @huamurui 提交，PR #76)\r\n* feat: 接入用户最新发布流与已读状态 (由 @huamurui 提交，PR #78)\r\n* fix: 根据认证状态处理问题数据路由（现在未登录状态能看到的东西会多一些） (由 @huamurui 提交，PR #79)\r\n* fix: 统一处理 API HTTP 错误 (由 @huamurui 提交，PR #80)\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.5.0...v0.6.0",
-          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.6.0/zhihu-minus-minus-v0.6.0-unsigned.ipa",
-          "size": 15783737,
+          "version": "0.6.1",
+          "date": "2026-09-18",
+          "localizedDescription": "Android 为 arm64-v8a preview APK；iOS 为未签名 IPA。 SHA256SUMS.txt 可用于校验下载文件。\r\n\r\n<!-- Release notes generated using configuration in .github/release.yml at ee3304543b6bc42e8f30bc2d0ae82c4d664c21d0 -->\r\n\r\n* fix：首页下拉刷新调整（ios 有神奇的震动效果哦）  @huamurui https://github.com/huamurui/zhihu-minus-minus/pull/84\r\n* feat：ios 首页底部 tab 对接原生元素，ios26+ 会是液态玻璃（可在外观选项处关闭）   @huamurui https://github.com/huamurui/zhihu-minus-minus/pull/86\r\n* fix：回避答案列表滚动时误选正文 @huamurui https://github.com/huamurui/zhihu-minus-minus/pull/88\r\n* fix：修复文章点赞并规范的交互状态 @huamurui https://github.com/huamurui/zhihu-minus-minus/pull/89\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.6.0...v0.6.1",
+          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.6.1/zhihu-minus-minus-v0.6.1-unsigned.ipa",
+          "size": 15808015,
           "minOSVersion": "15.1"
         }
       ]
     }
   ],
   "news": [
+    {
+      "appID": "com.kodjodevf.mangayomi",
+      "title": "Mangayomi 0.9.5 · 18 Sep 2026",
+      "identifier": "Mangayomi-release-v0.9.5",
+      "caption": "Mangayomi 0.9.5 is available.",
+      "date": "2026-09-18T16:45:07Z",
+      "tintColor": "#EF4444",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.5"
+    },
+    {
+      "appID": "com.huamu013.ZhihuMinusMinus",
+      "title": "ZhihuMinusMinus 0.6.1 · 18 Sep 2026",
+      "identifier": "ZhihuMinusMinus-release-v0.6.1",
+      "caption": "ZhihuMinusMinus 0.6.1 is available.",
+      "date": "2026-09-18T12:15:30Z",
+      "tintColor": "#0084ff",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.6.1"
+    },
+    {
+      "appID": "com.aoshuang.manicemu",
+      "title": "ManicEMU 2.0.1 · 18 Sep 2026",
+      "identifier": "ManicEMU-release-v2.0.1",
+      "caption": "ManicEMU 2.0.1 is available.",
+      "date": "2026-09-18T09:29:42Z",
+      "tintColor": "#F02040",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ManicEMU/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.1"
+    },
+    {
+      "appID": "com.altman.moviepilot",
+      "title": "MoviePilotLite 1.2.5 · 18 Sep 2026",
+      "identifier": "MoviePilotLite-release-release-v1.2.5-2026-09-18",
+      "caption": "MoviePilotLite 1.2.5 is available.",
+      "date": "2026-09-18T03:28:40Z",
+      "tintColor": "#8050F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
+      "notify": true,
+      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.2.5-2026-09-18"
+    },
     {
       "appID": "app.scenebox.SceneBox",
       "title": "SceneBox 1.0.3 · 17 Sep 2026",
@@ -1141,17 +1185,6 @@
       "url": "https://github.com/SideStore/SideStore/releases/tag/0.7.0-alpha"
     },
     {
-      "appID": "com.kodjodevf.mangayomi",
-      "title": "Mangayomi 0.9.4 · 15 Sep 2026",
-      "identifier": "Mangayomi-release-v0.9.4",
-      "caption": "Mangayomi 0.9.4 is available.",
-      "date": "2026-09-15T09:17:03Z",
-      "tintColor": "#EF4444",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.4"
-    },
-    {
       "appID": "com.mystyle.purelive.liu",
       "title": "PureLive 3.1.4 · 15 Sep 2026",
       "identifier": "PureLive-release-v3.1.4",
@@ -1218,28 +1251,6 @@
       "url": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.7.1"
     },
     {
-      "appID": "com.huamu013.ZhihuMinusMinus",
-      "title": "ZhihuMinusMinus 0.6.0 · 11 Sep 2026",
-      "identifier": "ZhihuMinusMinus-release-v0.6.0",
-      "caption": "ZhihuMinusMinus 0.6.0 is available.",
-      "date": "2026-09-11T08:09:21Z",
-      "tintColor": "#0084ff",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.6.0"
-    },
-    {
-      "appID": "com.altman.moviepilot",
-      "title": "MoviePilotLite 1.2.5 · 11 Sep 2026",
-      "identifier": "MoviePilotLite-release-release-v1.2.5-2026-09-11",
-      "caption": "MoviePilotLite 1.2.5 is available.",
-      "date": "2026-09-11T03:14:57Z",
-      "tintColor": "#8050F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
-      "notify": true,
-      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.2.5-2026-09-11"
-    },
-    {
       "appID": "com.mistj.v2ex",
       "title": "Röam 1.0.0.5 · 10 Sep 2026",
       "identifier": "Röam-release-Roam-1.0.0.5",
@@ -1304,17 +1315,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
       "notify": true,
       "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.9"
-    },
-    {
-      "appID": "com.aoshuang.manicemu",
-      "title": "ManicEMU 2.0.0 · 03 Sep 2026",
-      "identifier": "ManicEMU-release-v2.0.0",
-      "caption": "ManicEMU 2.0.0 is available.",
-      "date": "2026-09-03T10:06:18Z",
-      "tintColor": "#F02040",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ManicEMU/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.0"
     },
     {
       "appID": "com.miguel.psx3ios",
