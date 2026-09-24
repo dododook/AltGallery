@@ -213,11 +213,11 @@
       "tintColor": "#F0D050",
       "versions": [
         {
-          "version": "1.6.6",
-          "date": "2026-09-06",
-          "localizedDescription": "本次更新：\n\n- 增加网易云音乐和 QQ 音乐歌单广场搜索功能\n- 优化歌曲封面缓存\n- 优化歌词划动后自动回到当前播放歌词的问题\n- 优化整体流畅性，低系统版本请实测反馈\n- 优化网易云私人漫游；如遇问题可尝试心动模式\n- 简化搜索界面，移除均衡器注释\n- 更换酷狗音乐歌单广场接口\n- 修复 QQ 音乐本身有会员但无法播放的问题\n- 修复 iOS 26 以下系统无法返回的问题",
-          "downloadURL": "https://github.com/XIaodou0416/Beans-Music/releases/download/v1.6.6/Beans-unsigned.ipa",
-          "size": 8761833,
+          "version": "1.8.1",
+          "date": "2026-09-24",
+          "localizedDescription": "# Beans Music 1.8.1\n\n### 新增与优化\n\n- 新增 ShipSwift 风格的 Star Nest、Dot Orbit、Dots 和 Grain Gradient 动态壁纸。\n- Grain Gradient 按静态壁纸处理，支持颜色、缩放和对比度调节。\n- “我的”界面保留听歌时长显示，移除播放次数显示。\n\n### 修复与调整\n\n- 听歌时长改为按实际处于播放状态的经过时间统计，暂停、缓冲、拖动和切歌间隙不再计入。\n- 修复反复测试同一首歌或拖动进度导致听歌时长异常增长的问题。",
+          "downloadURL": "https://github.com/XIaodou0416/Beans-Music/releases/download/v1.8.1/Beans-unsigned.ipa",
+          "size": 15107850,
           "minOSVersion": "15.0"
         }
       ]
@@ -1042,6 +1042,17 @@
   ],
   "news": [
     {
+      "appID": "com.beans.app",
+      "title": "Beans Music 1.8.1 · 24 Sep 2026",
+      "identifier": "Beans Music-release-v1.8.1",
+      "caption": "Beans Music 1.8.1 is available.",
+      "date": "2026-09-24T10:36:23Z",
+      "tintColor": "#F0D050",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/news.png",
+      "notify": true,
+      "url": "https://github.com/XIaodou0416/Beans-Music/releases/tag/v1.8.1"
+    },
+    {
       "appID": "com.huamu013.ZhihuMinusMinus",
       "title": "ZhihuMinusMinus 0.6.3 · 24 Sep 2026",
       "identifier": "ZhihuMinusMinus-release-v0.6.3",
@@ -1293,17 +1304,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/images/news.png",
       "notify": true,
       "url": "https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.5"
-    },
-    {
-      "appID": "com.beans.app",
-      "title": "Beans Music 1.6.6 · 06 Sep 2026",
-      "identifier": "Beans Music-release-v1.6.6",
-      "caption": "Beans Music 1.6.6 is available.",
-      "date": "2026-09-06T12:41:32Z",
-      "tintColor": "#F0D050",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/news.png",
-      "notify": true,
-      "url": "https://github.com/XIaodou0416/Beans-Music/releases/tag/v1.6.6"
     },
     {
       "appID": "azki.moye.MeloX",
