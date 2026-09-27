@@ -167,11 +167,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20260926",
-          "date": "2026-09-26",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- GunCon 2: a calibration shot for touch, and aim in surface pixels\n- USB devices: stop the keyboard switch unplugging Port 1\n- USB devices: keep the device list between games on Android\n- GunCon 2: its buttons join the touch layout, and aiming leaves the face buttons alone\n- USB devices: the port row says Not Connected, like the list below it\n- USB devices: list them with no game running, and pick one per port from a dropdown\n- Network: typing a DNS address switches that slot to Manual\n- Texture packs: make deleting a pack reliable\n- Texture packs: install a multi-region pack under the player's own serial\n- Library music: defer to media playback, not to another app's game audio\n- DEV9: bring back the Android HDD image handling\n- Keyboard: type addresses and paths\n- GameDB panel: name the copy-road blending cap and the field shift\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260925...247fa6f09499f69192c52c0542305ed16119518b",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260926/ARMSX2-nightly-20260926-247fa6f094-iOS-arm64.ipa",
-          "size": 30555113,
+          "version": "nightly-20260927",
+          "date": "2026-09-27",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it\n\nComing from an old nightly? It is now a separate app (ARMSX2 Nightly) that installs\nbeside the stable app. The old nightly cannot install a stable over itself, because\nAndroid refuses that version downgrade, so to return to stable: back up your saves\nand memory cards, uninstall the old nightly, then install a stable APK.\n\n## What's new\n- Android: parenthesise the search-sections fallback\n- tests: set the full-disk file size limit in process, not in a forked child\n- GS: include <iterator> for std::back_inserter in the cache file store\n- GS: clear the shader cache on the GS thread\n- GS: cache files named by identity, so two builds keep one each\n- GS: build identity from source files only, following adds and removes\n- GS: cache store review fixes: locks, failed appends, in-place clears\n- GS/Vulkan: record pipeline keys byte for byte\n- GS: hash the cache identity's inputs from a plain glob\n- Android: wipe the GS caches on every new install, and clear all of them\n- Qt, FullscreenUI: Clear Shader Cache\n- GS: Direct3D and frame-generation caches follow the build identity\n- GS/OpenGL: program binaries on the checked store\n- GS/Vulkan: pipeline key lists stamped with the build, checked per record\n- GS/Vulkan: stamp and checksum the SPIR-V and pipeline caches\n- GS: one checked on-disk format for the shader and pipeline caches\n- GS/Vulkan: name the precompile workers within Linux's 15 characters\n- GS/Vulkan: count precompile waits and log each worker's work\n- GS/Vulkan: key lists per configuration, by session, with bounded memory\n- gsrunner: pin precompile off before the command line, not after\n- GS/Vulkan: precompile review fixes: failed jobs, cache dirtiness, indicator\n- GS: pipeline precompile only under the hardware renderer\n- gsrunner: pipeline precompile off unless asked for\n- GS/Vulkan: build each game's recorded pipelines on worker threads at start\n- GS/Vulkan: keep the SPIR-V cache across a driver change\n- GS: count shader and pipeline compilation per stage, per frame\n- tests: pin the DATE mode on a driver-ordered declared feedback loop\n- GS: serve DATE in the pass on a driver-ordered declared feedback loop\n- gsrunner: -no-stencil-buffer, to put the pre-26.2 Turnip DATE choices on one binary\n- Android: end the search jump before the collapse test runs\n- Android: settings search opens the target's section by name\n- Android: end fast-forward hold when combo modifier is released\n- Android: reveal collapsed settings search targets\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20260926...e2f7d015cb2e8f21dabf11f57c26c8f19b3ab51d",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20260927/ARMSX2-nightly-20260927-e2f7d015cb-iOS-arm64.ipa",
+          "size": 30562808,
           "minOSVersion": "17.0"
         }
       ]
@@ -681,11 +681,11 @@
       "tintColor": "#13A1FD",
       "versions": [
         {
-          "version": "0.16.1",
-          "date": "2026-09-26",
-          "localizedDescription": "pixiv-tags-data commit: 541521c99539d08d1aec7a5e01dbf15068eadca0\r\n\r\n## 新功能\r\n\r\n- 引入基于 HTTP/3 (QUIC) 协议的新直连模式，替代原有的 SNI 直连方案，解决近期 Pixiv 调整策略导致的 403 阻断问题  \r\n- 支持图片域名切换，可在 Pixiv 官方源与镜像站之间切换，也许可以提升插画加载速度  \r\n- HTTP/3 流式分片下载支持任务内断点续传\r\n- 新增初次启动常用设置向导\r\n\r\n此版本对直连网络层进行了底层重构，如有网络连接相关问题可通过 issue 反馈。\r\n\r\n## 问题修复\r\n\r\n- 修复小说详情页收藏与取消收藏的请求参数编码问题，解决点击收藏可能引发的状态不同步 (@yamakze )  \r\n- 修复 macOS 端登录弹窗无法通过关闭按钮或 Escape 快捷键退出的问题 (@yamakze )  \r\n- 修正推荐页在网络请求失败时的界面排版\r\n\r\n**Full Changelog**: https://github.com/Eslzzyl/Pixiv-SwiftUI/compare/v0.16.0...v0.16.1",
-          "downloadURL": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/download/v0.16.1/Pixiv-SwiftUI.ipa",
-          "size": 10236041,
+          "version": "0.16.0",
+          "date": "2026-09-16",
+          "localizedDescription": "## 新功能\r\n\r\n- 插画详情页支持水平滑动切换插画\r\n- 插画与小说列表到详情页的过渡改为卡片式缩放展开与收起转场\r\n- 多页插画详情页支持条式阅读（垂直连续滚动）模式，可在设置中与默认翻页模式切换\r\n- 多页插画新增瀑布流浏览页\r\n- 插画详情页简介下方新增作者最新作品横向预览\r\n- 支持自定义代理配置\r\n- macOS 端新增网页登录凭据导出功能面板\r\n- 新增多页插画预取深度设置\r\n- 为详情页的标签区域引入一种根据宽度重排的优化布局，缓解标签区域出现的空白\r\n\r\n此版本对插画详情页的交互和导航做了较大重构，如有问题可通过 issue 反馈。\r\n\r\n## 优化\r\n\r\n- 优化了插画全屏预览的交互\r\n- 优化画质降级与图片预取策略，优先加载当前视口可见图片\r\n- 优化插画与小说的评论区排版与时间展示，为表情包图片设置较长的缓存时间\r\n- 参考 macOS 27 原生 App 优化了 macOS 侧边栏\r\n- 优化 iOS 设置等页面的视觉表现\r\n- 插画详情页的相关推荐卡片支持直接点击收藏\r\n- 优化直连模式连接调度与保活机制，提升网络稳定性，减少假死与无响应现象\r\n- 优化 macOS 下播放动图时的系统资源占用\r\n- 统一各页面的加载骨架屏尺寸与过渡效果，消除加载完成时的页面跳动\r\n- 增大 iOS 个人中心顶部用户卡片的可点击面积\r\n- 优化底层依赖，减小应用安装包体积\r\n\r\n## 问题修复\r\n\r\n- 修复以图搜图无法打开系统相册选图的问题\r\n- 修复插画与小说评论区点击展开子回复无响应的问题\r\n- 修复亮点（Pixivision）详情页上下滚动时画面跳动的问题\r\n- 修复切换账号后仍残留上个账号浏览记录与导航路径的问题\r\n- 修复在小说与排行榜等页面点击个人资料卡片无法进入个人主页的问题\r\n\r\n## 本地化\r\n\r\n- 新增繁体中文与日文支持。译文由 GPT-5.6-Luna 起草并由 GPT-5.6-Terra 润色。如果你发现问题，请通过 PR 或 issue 帮助改进。\r\n- 修正了一些英文本地化问题\r\n\r\npixiv-tags-data commit: 541521c99539d08d1aec7a5e01dbf15068eadca0\r\n\r\n**Full Changelog**: https://github.com/Eslzzyl/Pixiv-SwiftUI/compare/v0.15.0...v0.16.0",
+          "downloadURL": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/download/v0.16.0/Pixiv-SwiftUI.ipa",
+          "size": 10165131,
           "minOSVersion": "17.0"
         }
       ]
@@ -729,11 +729,11 @@
       "tintColor": "#50B0F0",
       "versions": [
         {
-          "version": "3.1.6",
-          "date": "2026-09-26",
-          "localizedDescription": "# 纯粹直播 v3.1.6\n|版本|下载地址|\n|---|---|\n|TV版|[pure_live_TV](https://github.com/liuchuancong/pure_live_TV/releases/latest)|\n|Windows/macOS/Android/iOS版|[pure_live](https://github.com/liuchuancong/pure_live/releases/latest)|\n### 🖥️ Windows 版\n- **Portable ZIP**：解压即用，无需安装\n- **EXE 安装包**：适合所有用户\n- **MSIX 包**：现代应用格式，支持干净卸载\n- 适配：Windows 10/11 x64\n### 🍎 macOS 版\n- macOS 桌面版\n- Universal：Apple Silicon + Intel\n- ZIP / DMG\n### 📱 Android 版\n- Android 8.0+（API 26，FFmpegKit 录制依赖要求）\n- ARM64-v8a\n- ARMv7\n- x86_64\n- 统一 SHA256 校验文件：[**ANDROID_SHA256SUM.txt**](https://github.com/liuchuancong/pure_live/releases/download/v3.1.6/ANDROID_SHA256SUM.txt)\n### 🐧 Linux 版\n- Linux x64\n- Portable tar.gz\n### 🍎 iOS 版\n- unsigned iOS device application\n- TrollStore / ad-hoc IPA\n- ARM64\n### 🔧 Build Metadata\n[**BUILD_METADATA.json**](https://github.com/liuchuancong/pure_live/releases/download/v3.1.6/BUILD_METADATA.json)\n### 📝 本次更新\nversion: 3.1.6\n版本更新：\n- 快手主播搜索改用原生接口，修复此前网页版列表为空；同时下线 11 个长期无法维护的平台（GoodGame、Rumble、Dailymotion、NimoTV、VK、Shopee、淘宝直播、花椒、OPENREC、PopKonTV、TTing），其收藏、历史与分享链接仍可读并明确提示\"已下线\"。\n- 斗鱼登录态改按 Cookie 中的 JWT 判定：新增 LTP0 与 dy_did 输入，Cookie 7 天时效内自动续期，失效前自动刷新、播放失败时强制续期一次。\n- 平台播放修复：FC2 无后缀播放列表、17LIVE 与 Shopee 的 HEVC FLV 继电器、NimoTV 2026-09 流格式、VK 的 vkuser.net CDN、Kick 原生 TLS 通道、Showroom 无演出单元格、LiveMe 精选卡。\n- 分享链路：其他 App 分享的直播间链接可直接打开（冷启动等待导航完成），已下线平台的链接给出明确提示。\n- 多画面：新增一键静音全部；卡顿恢复时保留手动选择的线路。\n- 录播：可选把直播聊天记录与录像一并保存；码率改按文件实际增长计算，任务释放时等待聊天文件写完。\n- 播放器与界面：小窗不再吞掉其上方菜单的点击；双击进入竖屏全屏、再双击收起控制栏；内联控制条全屏按钮常显；房间加载失败显示重试状态而不是一直转圈。\n- Windows / Linux / Android：窗口与可执行文件使用应用名；宽窗口下设置分组不再被拉满；Linux 包内置 libmpv；Android 17 访问局域网代理时申请本地网络权限；Windows 包不再混入旧的 kernel_blob.bin。",
-          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.6/PureLive-3.1.6-4105-ios-arm64-trollstore.ipa",
-          "size": 65178311,
+          "version": "3.1.17",
+          "date": "2026-09-27",
+          "localizedDescription": "# 纯粹直播 v3.1.17\n|版本|下载地址|\n|---|---|\n|TV版|[pure_live_TV](https://github.com/liuchuancong/pure_live_TV/releases/latest)|\n|Windows/macOS/Android/iOS版|[pure_live](https://github.com/liuchuancong/pure_live/releases/latest)|\n### 🖥️ Windows 版\n- **Portable ZIP**：解压即用，无需安装\n- **EXE 安装包**：适合所有用户\n- **MSIX 包**：现代应用格式，支持干净卸载\n- 适配：Windows 10/11 x64\n### 🍎 macOS 版\n- macOS 桌面版\n- Universal：Apple Silicon + Intel\n- ZIP / DMG\n### 📱 Android 版\n- Android 8.0+（API 26，FFmpegKit 录制依赖要求）\n- ARM64-v8a\n- ARMv7\n- x86_64\n- 统一 SHA256 校验文件：[**ANDROID_SHA256SUM.txt**](https://github.com/liuchuancong/pure_live/releases/download/v3.1.17/ANDROID_SHA256SUM.txt)\n### 🐧 Linux 版\n- Linux x64\n- Portable tar.gz\n### 🍎 iOS 版\n- unsigned iOS device application\n- TrollStore / ad-hoc IPA\n- ARM64\n### 🔧 Build Metadata\n[**BUILD_METADATA.json**](https://github.com/liuchuancong/pure_live/releases/download/v3.1.17/BUILD_METADATA.json)\n### 📝 本次更新\nversion: 3.1.17\n版本更新：\n- 斗鱼原画不再每 5 分钟断流（#35）：到期前约 45 秒在后台取得新链接，旧连接继续播放，直到新连接到达一个还没播到的关键帧再接上；两条链接的时间戳在同一条时间线上，播放不卡顿、不重复、不重新缓冲。单个直播间与多画面都已接入；换链接失败时仍回退到断流自动重连。\n-  Android ARMv7 与 x86_64 改用自编 mpv 0.41.0 + FFmpeg 9.0.2 播放库，三种架构解码能力一致（包括旧式 HEVC FLV）。\n- 下线 Kick：kick.com 全部接口被 Cloudflare 按 TLS 指纹拦截，只有 Android 与 Windows 能勉强绕过。现支持 33 个直播平台 + IPTV；已关注的 Kick 主播和分享链接会提示「该平台已下线」。\n- Linux 安装包将自带 libmpv 依赖的 VA-API 等库，不再需要手动安装 libva-wayland2（源码已包含，下次发布 Linux 包时生效）。",
+          "downloadURL": "https://github.com/liuchuancong/pure_live/releases/download/v3.1.17/PureLive-3.1.17-4106-ios-arm64-trollstore.ipa",
+          "size": 65187928,
           "minOSVersion": "15.6"
         }
       ]
@@ -1042,15 +1042,26 @@
   ],
   "news": [
     {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20260927 · 27 Sep 2026",
+      "identifier": "ARMSX2-release-nightly-20260927",
+      "caption": "ARMSX2 nightly-20260927 is available.",
+      "date": "2026-09-27T14:23:43Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260927"
+    },
+    {
       "appID": "com.mystyle.purelive.liu",
-      "title": "PureLive 3.1.6 · 26 Sep 2026",
-      "identifier": "PureLive-release-v3.1.6",
-      "caption": "PureLive 3.1.6 is available.",
-      "date": "2026-09-26T20:12:06Z",
+      "title": "PureLive 3.1.17 · 27 Sep 2026",
+      "identifier": "PureLive-release-v3.1.17",
+      "caption": "PureLive 3.1.17 is available.",
+      "date": "2026-09-27T13:09:49Z",
       "tintColor": "#50B0F0",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PureLive/images/news.png",
       "notify": true,
-      "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.6"
+      "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.17"
     },
     {
       "appID": "com.sean.roamcontrol",
@@ -1075,17 +1086,6 @@
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa3"
     },
     {
-      "appID": "org.eu.eslzzyl.Pixiv-SwiftUI",
-      "title": "Pixiv-SwiftUI 0.16.1 · 26 Sep 2026",
-      "identifier": "Pixiv-SwiftUI-release-v0.16.1",
-      "caption": "Pixiv-SwiftUI 0.16.1 is available.",
-      "date": "2026-09-26T16:13:45Z",
-      "tintColor": "#13A1FD",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/tag/v0.16.1"
-    },
-    {
       "appID": "org.animeko.animeko",
       "title": "Animeko 6.2.0 · 26 Sep 2026",
       "identifier": "Animeko-release-v6.2.0",
@@ -1095,17 +1095,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
       "notify": true,
       "url": "https://github.com/open-ani/animeko/releases/tag/v6.2.0"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20260926 · 26 Sep 2026",
-      "identifier": "ARMSX2-release-nightly-20260926",
-      "caption": "ARMSX2 nightly-20260926 is available.",
-      "date": "2026-09-26T13:22:36Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20260926"
     },
     {
       "appID": "com.ligg.anime_flow",
@@ -1249,6 +1238,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ManicEMU/images/news.png",
       "notify": true,
       "url": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.1"
+    },
+    {
+      "appID": "org.eu.eslzzyl.Pixiv-SwiftUI",
+      "title": "Pixiv-SwiftUI 0.16.0 · 16 Sep 2026",
+      "identifier": "Pixiv-SwiftUI-release-v0.16.0",
+      "caption": "Pixiv-SwiftUI 0.16.0 is available.",
+      "date": "2026-09-16T14:30:25Z",
+      "tintColor": "#13A1FD",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/tag/v0.16.0"
     },
     {
       "appID": "com.naine.doer",
