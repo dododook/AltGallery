@@ -585,10 +585,10 @@
       "versions": [
         {
           "version": "1.2.5",
-          "date": "2026-09-25",
-          "localizedDescription": "MoviePilot Release\n\n- Version: 1.2.5\n- Build Date: 2026-09-25\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* fix: normalize V3 subscribe items for Function Hub mini-calendar by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/106\n* fix: raise iOS deployment target to 15.0 to match Xcode SDK minimum by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/107\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.2.5-2026-09-11...release-v1.2.5-2026-09-25",
-          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.2.5-2026-09-25/ios-v1.2.5-2026-09-25.ipa",
-          "size": 35212719,
+          "date": "2026-10-02",
+          "localizedDescription": "MoviePilot Release\n\n- Version: 1.2.5\n- Build Date: 2026-10-02\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* fix: normalize V3 subscribe items for Function Hub mini-calendar by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/106\n* fix: raise iOS deployment target to 15.0 to match Xcode SDK minimum by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/107\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.2.5-2026-09-11...release-v1.2.5-2026-10-02",
+          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.2.5-2026-10-02/ios-v1.2.5-2026-10-02.ipa",
+          "size": 35212730,
           "minOSVersion": "15.0"
         }
       ]
@@ -1042,6 +1042,17 @@
   ],
   "news": [
     {
+      "appID": "com.altman.moviepilot",
+      "title": "MoviePilotLite 1.2.5 · 02 Oct 2026",
+      "identifier": "MoviePilotLite-release-release-v1.2.5-2026-10-02",
+      "caption": "MoviePilotLite 1.2.5 is available.",
+      "date": "2026-10-02T04:17:54Z",
+      "tintColor": "#8050F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
+      "notify": true,
+      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.2.5-2026-10-02"
+    },
+    {
       "appID": "ani.baka",
       "title": "AniBaka 5.2.0 · 01 Oct 2026",
       "identifier": "AniBaka-release-5.2.0+1001",
@@ -1183,17 +1194,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.5"
-    },
-    {
-      "appID": "com.altman.moviepilot",
-      "title": "MoviePilotLite 1.2.5 · 25 Sep 2026",
-      "identifier": "MoviePilotLite-release-release-v1.2.5-2026-09-25",
-      "caption": "MoviePilotLite 1.2.5 is available.",
-      "date": "2026-09-25T03:42:00Z",
-      "tintColor": "#8050F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
-      "notify": true,
-      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.2.5-2026-09-25"
     },
     {
       "appID": "app.scenebox.SceneBox",
