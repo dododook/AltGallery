@@ -94,11 +94,11 @@
       "tintColor": "#124EB3",
       "versions": [
         {
-          "version": "2.6.1",
-          "date": "2026-09-26",
-          "localizedDescription": "### 🔄 更新内容\n\n## 2.6.1 更新\n\n## 重要修复\n\n- 修复图片加载失败问题 [ech_http](https://github.com/ech-research/ech_http)\n\n## 新增\n\n- 新番时间表添加标签过滤功能\n\n## 优化\n \n- 搜索页面点击历史记录搜索自动取消输入框焦点\n- 优化搜索页面输入框的吸附效果\n- 优化推荐首页的输入框样式\n- 优化社区在线页面布局\n\n## 修复\n\n- 修复字体设置页面开关cdn可能导致的状态错误问题\n- 修复播放页数据源弹窗在移动端搜索时输入框被遮挡问题\n\n---\n\n### 📦 下载\n- 每个设备的安装包后缀: ``苹果手机(.ipa)、 安卓手机(.apk)、windows电脑(.zip或.exe)、mac电脑(.dmg)、linux电脑(.tar.gz或.deb)``\n- android分多个包: ``v7a(32位架构旧手机或TV)、arm64(新手机,推荐用这个)、x86(模拟器) ``\n- windows分多个包: ``.zip(解压直接使用)、.exe(安装后使用) ``",
-          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.1/AnimeFlow-ios-2.6.1.ipa",
-          "size": 29694830,
+          "version": "2.6.2",
+          "date": "2026-10-04",
+          "localizedDescription": "### 🔄 更新内容\n\n## 2.6.2 更新\n\n## 新增\n\n- 番剧收藏支持取消收藏，同步收藏时不在同步已取消的番剧 #82\n- 番剧详情页添加预览图，添加剧集封面\n- 排行榜页面支持两种布局切换 #86\n- 截图成功展示缩略图\n- 升级规则系统支持更多规则配置\n\n## 优化\n \n- 移动端部分设置页面添加全边距,统一最大宽度\n- 优化播放页弹幕设置弹窗布局\n- 删除已失效的数据源\n- 排行榜页面修改条件从新获取数据时添加加载状态反馈\n- 优化播放指示器显示隐藏逻辑\n- 视频源小于两分支不自动标记观看状态\n\n## 修复\n\n- 修复在“我的”页面中登录成功后出现两次页面刷新问题\n- 修复数据源拖拽排序异常问题\n\n---\n\n### 📦 下载\n- 每个设备的安装包后缀: ``苹果手机(.ipa)、 安卓手机(.apk)、windows电脑(.zip或.exe)、mac电脑(.dmg)、linux电脑(.tar.gz或.deb)``\n- android分多个包: ``v7a(32位架构旧手机或TV)、arm64(新手机,推荐用这个)、x86(模拟器) ``\n- windows分多个包: ``.zip(解压直接使用)、.exe(安装后使用) ``",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.2/AnimeFlow-ios-2.6.2.ipa",
+          "size": 29964323,
           "minOSVersion": "13.0"
         }
       ]
@@ -167,11 +167,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20261003",
-          "date": "2026-10-03",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- iOS: stop Settings pages jumping down after Back on a landscape phone\n- iOS: write why an auto-save didn't happen to emulog.txt\n- iOS: auto-save when Back to Menu leaves a game\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261002...9d989ca933a85bb2f1d111fd3b9e5742ac7d2fbe",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261003/ARMSX2-nightly-20261003-9d989ca933-iOS-arm64.ipa",
-          "size": 38988244,
+          "version": "nightly-20261005",
+          "date": "2026-10-05",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- pcsx2: add the DEV9 arcade-board files to the MSVC project\n- Arcade: the System 256 BIOS for every game, the 246 one for Battle Gear 3\n- Arcade controls: a layout for all arcade games\n- Arcade: Arcade controls, the player's own layout per game\n- GS/Vulkan: keep the shared DATE copy's pass untiled with one loop declaration\n- GS/Vulkan: drop the shared DATE stencil copy on a clear inside the pass\n- GS/Vulkan: share one DATE stencil copy across a run of alpha-bit shadow draws\n- GS: name GSAlphaBitLogicOp.h in the MSVC project\n- GS/Vulkan: set and clear alpha bit 7 with a logic op where a read waits per draw\n- microVU: the full-width sign clamp reads the resident clamp bounds\n- GS/HW: draw over-one (Cd - Cs) * As in two hardware passes on the copy road\n- Arcade: keep what games write to a CHD hard drive\n- Arcade: racing games' test menus can be entered\n- Arcade: say which games only reach their attract demo\n- Arcade: every arcade BIOS in use, each game on its own board's\n- Android: let libchdr open arcade hard drive CHDs\n- Android: write the data folder off the main thread, and only when needed\n- Arcade: find games where they are, instead of importing them\n- Arcade: open big hard drive CHDs, and read them like raw images\n- github: fixup templates to point to the right places for ARMSX2\n- iOS: build for the A10, the oldest chip that can install the app\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261004...8f6da1639fb10dcd4a43d84113d770b6edf2c0c1",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261005/ARMSX2-nightly-20261005-8f6da1639f-iOS-arm64.ipa",
+          "size": 39043867,
           "minOSVersion": "17.0"
         }
       ]
@@ -656,12 +656,12 @@
       "tintColor": "#73b480",
       "versions": [
         {
-          "version": "2.1.5",
-          "buildVersion": "5410",
-          "date": "2026-09-25",
-          "localizedDescription": "支持自定义主题颜色 #3009\r\n综合搜索用户过滤黑名单 #3043\r\n可复制文本工具栏默认添加站内搜索按钮 #2984\r\n支持保存 SC 为图片 co-by @My-Responsitories\r\n支持 Windows deeplink #2673 by @HChaZZY\r\n支持 Linux deeplink #2931 by @Tobiichi-Origuchi\r\n降低桌面端 PIP 大小限制 #2735 #2982 by @Aclguh\r\n桌面端支持保存全部图片 #2920 #2983 by @My-Responsitories\r\nLinux 支持内嵌 WebView #3014 #3016 by @Tobiichi-Origuchi co-by @My-Responsitories\r\n其他调整 #2962 #3025 #3027 by @My-Responsitories\r\n\r\n修复分 P 视频链接 #2963\r\n修复滑动快进/退震动失效 #2966\r\n修复小窗模式下画面被 SC 遮挡 #3005\r\n修复无痕模式出现直播入场提示 #2971\r\n修复多次点击截图保存退出视频页面 #3017\r\n修复更新媒体通知、后台连播 #2761 #2943\r\n修复 iOS 静音模式下偶发视频无声修复 #3039 @sounfury\r\n修复部分安卓无法登录 #2930 #3063 by @Tobiichi-Origuchi\r\n修复 macOS 切换全屏控件无法点击 #2917 #2976 by @milk2715093695",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.5/PiliPlus_ios_2.1.5%2B5410.ipa",
-          "size": 23999265,
+          "version": "2.1.6",
+          "buildVersion": "5453",
+          "date": "2026-10-05",
+          "localizedDescription": "支持离线合集归档\r\n支持离线/更新空降片段\r\n添加视频过滤作用域详情\r\n支持切换`番剧`/`剧集`季度\r\n支持横屏时在侧栏显示`番剧`列表\r\n直播聊天显示`主播`标识 #3156\r\n直播聊天只显示点亮的牌子 #3155\r\n用户未直播时在主页显示入口按钮 #3033\r\n从视频切到直播不影响视频倍速 #3112\r\n支持转发同时评论 #3135\r\n@ 用户时置顶被`回复`/`转发`用户 #3123\r\n视频控制栏控件溢出处理 #3085\r\n添加英文文档 #3131 by @maoawa\r\n桌面端画中画记忆窗口位置大小 #2997\r\n收藏夹已满且未收藏时禁用选中 #3113\r\niOS 支持系统 PIP #3160 by @AotianNeo\r\n黑名单屏蔽扩展本地屏蔽，增加过滤搜索、评论\r\n支持按 `Enter` 保存截图 #3101 by @403bug\r\n支持从媒体会话向前/后跳转音视频 #2964 co-by @silverwolf-lv9999\r\n\r\n修复弹幕速度 #3136\r\n修复收藏夹视频跳转 #3137\r\n修复下滑关闭侧栏主页 #3160\r\n修复触控板浏览图片 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/183#issuecomment-5976539299\r\n修复 Windows 26H2 任务栏不在底部时，退出全屏出现窗口偏移 #2901",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.1.6/PiliPlus_ios_2.1.6%2B5453.ipa",
+          "size": 24083344,
           "minOSVersion": "14.0"
         }
       ]
@@ -1005,12 +1005,12 @@
       "tintColor": "#FF0000",
       "versions": [
         {
-          "version": "21.39.4",
-          "buildVersion": "21.39.4",
-          "date": "2026-09-28",
-          "localizedDescription": "### Latest Release, ENJOY!!\r\n> [!NOTE]\r\n> - **YTUHD** is not included. 4K60HDR is available.\r\n> - if you're signed out you can sign in manually. \r\n> - no iSponsorBlock. (unstable in newer builds)\r\n> - for <A15 devices press share button in the arrow down panel and use external player for AV1 videos.\r\n> - - -\r\n> #### Extra Tweaks:\r\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ builds require iOS 17+ now.",
-          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.39.4_1.3.1.ipa",
-          "size": 130023447,
+          "version": "21.40.5",
+          "buildVersion": "21.40.5",
+          "date": "2026-10-05",
+          "localizedDescription": "### Latest Release, ENJOY!!\r\n> [!NOTE]\r\n> - **YTUHD** is not included. 4K60HDR is available.\r\n> - if you're signed out you can sign in manually. \r\n> - no iSponsorBlock. (unstable in newer builds)\r\n> - for <A15 devices press share button in the arrow down panel and use external player for AV1 videos.\r\n> - downloads are unstable for <A15 devices. some will fail due to no av1 codec. \r\n> - - -\r\n> #### Extra Tweaks:\r\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ builds require iOS 17+ now.",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa3/YouProExtra_21.40.5_1.3.1.ipa",
+          "size": 129948434,
           "minOSVersion": "16.0"
         }
       ]
@@ -1042,6 +1042,50 @@
   ],
   "news": [
     {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261005 · 05 Oct 2026",
+      "identifier": "ARMSX2-release-nightly-20261005",
+      "caption": "ARMSX2 nightly-20261005 is available.",
+      "date": "2026-10-05T17:48:58Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261005"
+    },
+    {
+      "appID": "com.example.PiliPlus",
+      "title": "PiliPlus 2.1.6 · 05 Oct 2026",
+      "identifier": "PiliPlus-release-2.1.6",
+      "caption": "PiliPlus 2.1.6 is available.",
+      "date": "2026-10-05T12:36:03Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6"
+    },
+    {
+      "appID": "com.google.ios.youtube",
+      "title": "YouProEXTRA 21.40.5 · 05 Oct 2026",
+      "identifier": "YouProEXTRA-release-youproextra-ipa3",
+      "caption": "YouProEXTRA 21.40.5 is available.",
+      "date": "2026-10-05T01:06:37Z",
+      "tintColor": "#FF0000",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa3"
+    },
+    {
+      "appID": "com.ligg.anime_flow",
+      "title": "AnimeFlow 2.6.2 · 04 Oct 2026",
+      "identifier": "AnimeFlow-release-v2.6.2",
+      "caption": "AnimeFlow 2.6.2 is available.",
+      "date": "2026-10-04T12:32:07Z",
+      "tintColor": "#124EB3",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
+      "notify": true,
+      "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.6.2"
+    },
+    {
       "appID": "sb.moe.kumone",
       "title": "Kumone 0.3.20 · 03 Oct 2026",
       "identifier": "Kumone-release-v0.3.20",
@@ -1051,17 +1095,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
       "url": "https://github.com/missuo/kumone/releases/tag/v0.3.20"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20261003 · 03 Oct 2026",
-      "identifier": "ARMSX2-release-nightly-20261003",
-      "caption": "ARMSX2 nightly-20261003 is available.",
-      "date": "2026-10-03T13:56:46Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261003"
     },
     {
       "appID": "com.huamu013.ZhihuMinusMinus",
@@ -1130,17 +1163,6 @@
       "url": "https://github.com/Apollo-Reborn/Apollo-Reborn/releases/tag/v1.15.11_3.8.5"
     },
     {
-      "appID": "com.google.ios.youtube",
-      "title": "YouProEXTRA 21.39.4 · 28 Sep 2026",
-      "identifier": "YouProEXTRA-release-youproextra-ipa2",
-      "caption": "YouProEXTRA 21.39.4 is available.",
-      "date": "2026-09-28T10:56:07Z",
-      "tintColor": "#FF0000",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
-      "notify": true,
-      "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
-    },
-    {
       "appID": "com.naine.doer",
       "title": "Doer 1.8.5.3 · 28 Sep 2026",
       "identifier": "Doer-release-v1.8.5.3",
@@ -1183,28 +1205,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
       "notify": true,
       "url": "https://github.com/open-ani/animeko/releases/tag/v6.2.0"
-    },
-    {
-      "appID": "com.ligg.anime_flow",
-      "title": "AnimeFlow 2.6.1 · 26 Sep 2026",
-      "identifier": "AnimeFlow-release-v2.6.1",
-      "caption": "AnimeFlow 2.6.1 is available.",
-      "date": "2026-09-26T12:55:01Z",
-      "tintColor": "#124EB3",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
-      "notify": true,
-      "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.6.1"
-    },
-    {
-      "appID": "com.example.PiliPlus",
-      "title": "PiliPlus 2.1.5 · 25 Sep 2026",
-      "identifier": "PiliPlus-release-2.1.5",
-      "caption": "PiliPlus 2.1.5 is available.",
-      "date": "2026-09-25T04:14:09Z",
-      "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.5"
     },
     {
       "appID": "app.scenebox.SceneBox",
