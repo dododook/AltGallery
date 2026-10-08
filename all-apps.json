@@ -167,11 +167,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20261007",
-          "date": "2026-10-07",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: don't tell a user to download the malisx2 pack they selected\n- Tests: pin every Mali Valhall v9 and v11 name the app can meet\n- Android: offer malisx2 on Mali Valhall v9 as well as v11\n- tools: build the Play AAB with NDK 29, like the sideload targets\n- GS/Null: add a mali-g615-malisx2 profile for the RG477V on our driver\n- Android: show the malisx2 notice the way the blending and paid-copy warnings show\n- GS/gsrunner: -no-dual-source runs Vulkan as a device without dual-source blending\n- Android: warn when a supported Mali runs Vulkan without malisx2\n- GS/Vulkan: expanded lines pair their ends by index on every device\n- Android: regenerate the PGO profile after bmd's texture hash changes\n- Android: publish a screenshot to the gallery only once the core has written all of it\n- GS/gsrunner: -no-provoking-vertex runs Vulkan as a device without provokingVertexLast\n- Android: Auto picks Vulkan on Mali Valhall v9 and v11\n- GS: allow push descriptors on malisx2 when it advertises enough of them\n- GS: exempt malisx2 from the Mali destination-read rows once it has ROAA\n- GS/TC: reuse a texture's hash while the pages it reads are unwritten\n- GS: mark local memory pages at the stores the hardware renderer makes\n- GS: stamp the pages of local memory that a store writes\n- GS/TC: hash texture blocks without copying each one into XXH3's buffer\n- GS: exempt malisx2 from the r44p1 self-read rule\n- GS: move the malisx2 identity predicate into the profile layer\n- Android: regenerate the PGO profile for 2.8.2\n- GS: log which driver-profile rules and device rules matched\n- GS: recognise the malisx2 driver as well as its old libmali name\n- Quick menu: Texture Upscaling under the internal resolution\n- i18n: bmd's Texture Upscaling picker and preset scanning in 19 languages\n- Arcade: Soul Calibur II's Conquest card goes in without a note\n- Controls: two controllers plug in Player 2's port again, wherever they play\n- Save states: keep up to five autosaves\n- Controls: several controllers can play one player\n- IOP: an ELF picked through Android's file picker boots again (#759)\n- Android: save state hotkeys always answer, and a held button is let go (#784)\n- Android: the screen resolution override keeps a portrait screen's shape (#790)\n- Touch: hidden extra widgets no longer leave dead spots (#796)\n- Arcade: Soul Calibur II starts with its Conquest card\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261006...e194ae09e6546840dc9854341c3b15424b007495",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261007/ARMSX2-nightly-20261007-e194ae09e6-iOS-arm64.ipa",
-          "size": 39480032,
+          "version": "nightly-20261008",
+          "date": "2026-10-08",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- GS: a dump leaves one .gs.zip holding the dump, driver report and screenshot\n- Android: ask before a hotkey closes the game (#814)\n- Arcade: a dongle swapped beside a loose image replaces the old copy\n- Arcade: ship Soul Calibur II's Conquest card already cleared\n- Memory cards: write Soul Calibur II's Conquest card over in place\n- Arcade: a press goes to the cabinet's JVS board only\n- Android: install NDK 29 in build-all too, and fix comments that still say armv8.1-a\n- Android: default to NDK 29, the compiler the release targets and PGO profile use\n- Android: let a passed -march through instead of overriding it with armv8-a\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261007...b1f3196b9ea6aa4e89907b02dffd63b784d13ed2",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261008/ARMSX2-nightly-20261008-b1f3196b9e-iOS-arm64.ipa",
+          "size": 39479574,
           "minOSVersion": "17.0"
         }
       ]
@@ -753,11 +753,11 @@
       "tintColor": "#1090F0",
       "versions": [
         {
-          "version": "0.9.4",
-          "date": "2026-09-26",
-          "localizedDescription": "Roam Control 0.9.4, Build 74.\n\n### Highlights\n\n#### Backup & Restore\n\n- Added Backup & Restore for favourites, history and supported app preferences.\n- Backups can restore appearance, map style and location compatibility settings too.\n- Pairing and analytics identity are deliberately not included.\n\n#### Freehand routes and walking\n\n- Added **Freehand** route drawing alongside point-by-point route creation.\n- Switch between **Points** and **Freehand** drawing modes.\n- Draw with one finger while using two fingers to pan, zoom or rotate the map.\n- Undo freehand routes one stroke at a time.\n- Redesigned walking and route-planning controls into a more compact layout.\n- Added clearer Start and End markers.\n- Kept Pause, Resume and Stop & Restore easily accessible during active walks.\n- Refined route preview, progress and map behaviour.\n\n#### Location compatibility\n\n- Added automatic coordinate correction for searched and selected locations in Mainland China.\n- Added **Automatic**, **Off** and **Force Correction** compatibility modes.\n- Correction is applied to the simulated device location while the map marker remains where you selected it.\n- Manually entered coordinates are not changed automatically.\n\n#### Sessions, updates and VPNs\n\n- Improved Stop & Restore guidance and real-location reacquisition messaging.\n- Stable update checks now ignore GitHub drafts and prereleases.\n- Updated Connection Health guidance for compatible Personal VPNs and conflicting Device VPN connections.\n- Restored the packaged build timestamp so SideStore re-signing no longer changes the displayed build time.\n\n### Preparing for Roam Control 0.9.5\n\nRoam Control 0.9.5 will require a one-time app migration.\n\nBefore moving to 0.9.5, create a fresh backup from **Settings > Backup & Restore**. Your favourites, history and supported app preferences can then be restored after installing 0.9.5.\n\nPairing is deliberately not included in backups, so the iPhone will need to be paired again after the migration.\n\nFor this 0.9.4 update, install over your existing Roam Control copy as normal to retain your current app data and pairing.\n\nSee the [full changelog](../../blob/main/CHANGELOG.md) for the complete list of changes.\n\n### Requirements\n\n- iOS 27 or newer\n- Developer Mode\n- LocalDevVPN\n- SideStore or another compatible personal-signing workflow\n\n### Verification\n\nSHA-256:\n\n`b55bf4bf6a509dd02731a6e4e97253724857a72cc31085571bd6eda1e5d0ad20`\n\nFile:\n\n`RoamControl-0.9.4-build74.ipa`\n\nRoam Control is intended for development, quality assurance and responsible testing on an iPhone you own and control.",
-          "downloadURL": "https://github.com/seanhowarthdev/Roam-Control/releases/download/v0.9.4/RoamControl-0.9.4-build74.ipa",
-          "size": 3728223,
+          "version": "0.9.7",
+          "date": "2026-10-08",
+          "localizedDescription": "## Stability and reliability improvements\n\nRoam Control 0.9.7 is a maintenance update focused on background location-session reliability and mobile-data connectivity.\n\n### What's improved\n\n- Improved native connection handling for LocalDevVPN.\n- Corrected network-interface selection when LocalDevVPN and a separate Personal VPN are active simultaneously.\n- Improved reliability in tested background and mobile-data scenarios.\n- Verified fixed locations, Walking, Driving, Cycling, Stop & Restore and LocalDevVPN reconnection.\n\nThese improvements were validated on the developer's iPhone. Compatibility with every VPN configuration is not guaranteed.\n\nNo new features, interface changes or pairing implementation changes.\n\n### Installation\n\nRequires iOS 27 or later, Developer Mode and LocalDevVPN.\n\nThe IPA is unsigned and can be signed using SideStore.\n\n**Upgrading directly from 0.9.4?** Back up your favourites, history and supported settings before installing. The app identifier changed in 0.9.5, so existing data will not automatically transfer. Pairing must be completed again.",
+          "downloadURL": "https://github.com/seanhowarthdev/Roam-Control/releases/download/v0.9.7/RoamControl-0.9.7-Build96.ipa",
+          "size": 4111825,
           "minOSVersion": "27.0"
         }
       ]
@@ -1042,6 +1042,28 @@
   ],
   "news": [
     {
+      "appID": "com.sean.roamcontrol",
+      "title": "Roam Control 0.9.7 · 08 Oct 2026",
+      "identifier": "Roam Control-release-v0.9.7",
+      "caption": "Roam Control 0.9.7 is available.",
+      "date": "2026-10-08T19:54:46Z",
+      "tintColor": "#1090F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/news.png",
+      "notify": true,
+      "url": "https://github.com/seanhowarthdev/Roam-Control/releases/tag/v0.9.7"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261008 · 08 Oct 2026",
+      "identifier": "ARMSX2-release-nightly-20261008",
+      "caption": "ARMSX2 nightly-20261008 is available.",
+      "date": "2026-10-08T16:13:44Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261008"
+    },
+    {
       "appID": "com.mystyle.purelive.liu",
       "title": "PureLive 3.1.18 · 08 Oct 2026",
       "identifier": "PureLive-release-v3.1.18",
@@ -1051,17 +1073,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PureLive/images/news.png",
       "notify": true,
       "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.18"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20261007 · 07 Oct 2026",
-      "identifier": "ARMSX2-release-nightly-20261007",
-      "caption": "ARMSX2 nightly-20261007 is available.",
-      "date": "2026-10-07T16:01:51Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261007"
     },
     {
       "appID": "ani.baka",
@@ -1194,17 +1205,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Doer/images/news.png",
       "notify": true,
       "url": "https://github.com/moliango/doer/releases/tag/v1.8.5.3"
-    },
-    {
-      "appID": "com.sean.roamcontrol",
-      "title": "Roam Control 0.9.4 · 26 Sep 2026",
-      "identifier": "Roam Control-release-v0.9.4",
-      "caption": "Roam Control 0.9.4 is available.",
-      "date": "2026-09-26T19:06:01Z",
-      "tintColor": "#1090F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam-Control/images/news.png",
-      "notify": true,
-      "url": "https://github.com/seanhowarthdev/Roam-Control/releases/tag/v0.9.4"
     },
     {
       "appID": "org.animeko.animeko",
