@@ -23,6 +23,9 @@
 ### <a href="https://github.com/Aidoku/Aidoku"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Aidoku/icon.png" alt="Aidoku icon" width="24" align="top"> Aidoku</a>
 A free and open source manga reading application for iOS and iPadOS.
 
+### <a href="https://github.com/LinkPass888/AirBeep"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AirBeep/icon.png" alt="AirBeep icon" width="24" align="top"> AirBeep</a>
+一键静音系统通话录音提示音，自动备份并可恢复。
+
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/AltStoreClassic-2.3b3"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AltStore-Classic/icon.png" alt="AltStore Classic icon" width="24" align="top"> AltStore Classic</a>
 Riley Testut 的官方侧载商店，2.3 起支持远程 AltServer。
 

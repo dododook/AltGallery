@@ -1,0 +1,36 @@
+# altgen config for the AirBeep AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "LinkPass888/AirBeep"
+
+[source]
+name = "AirBeep"
+subtitle = "AirBeep AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for AirBeep"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirBeep/icon.png"
+website = "https://github.com/LinkPass888/AirBeep"
+tint_color = "#2080F0"
+
+[app]
+name = "AirBeep"
+bundle_identifier = "com.linkpass888.airbeep"
+developer_name = "LinkPass888"
+subtitle = "一键静音通话录音提示音"
+description = "AirBeep，开源 iOS 工具。一键将系统通话录音开始/结束提示音替换为等长静音，并自动备份原文件以便恢复。需配对文件与 LocalDevVPN。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirBeep/icon.png"
+tint_color = "#2080F0"
+min_os_version = "26.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases ship airbeep-vX.Y.Z-unsigned.ipa.
+asset_pattern = "airbeep-.*-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirBeep/images/news.png"
+
+[output]
+path = "apps.json"
