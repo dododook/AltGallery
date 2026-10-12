@@ -1,0 +1,46 @@
+{
+  "name": "Sonar",
+  "subtitle": "Sonar AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Sonar",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/icon.png",
+  "website": "https://github.com/can4hou6joeng4/Sonar",
+  "tintColor": "#F09080",
+  "apps": [
+    {
+      "name": "Sonar",
+      "bundleIdentifier": "cn.bobochang.sonar",
+      "developerName": "can4hou6joeng4",
+      "subtitle": "原生 SwiftUI 音乐播放器",
+      "localizedDescription": "Sonar，开源 SwiftUI 音乐播放器。支持 QQ 音乐与网易云搜索、同步歌词、本地歌单与公开歌单导入。公开预览 IPA 不含播放凭据，网易云及 QQ 播放需自行构建并配置 ChKSz Key。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/player.png"
+      ],
+      "tintColor": "#F09080",
+      "versions": [
+        {
+          "version": "1.0.0-preview.2",
+          "date": "2026-10-10",
+          "localizedDescription": "本次 iOS 实验预览加入双音源搜索、最高音质优先和 QQ / 网易云公开歌单迁移，并统一导入界面的应用风格。\n\n### 功能与修复\n\n- 完善 QQ 音乐搜索请求，恢复通过 ChKSz 获取网易云歌曲搜索、歌词、播放及公开歌单数据。\n- 两种音源优先请求母带音质；缺少可用结果时按同一歌曲 ID 逐级降档，服务错误保留明确失败提示。\n- iOS 主页支持搜索框与遮罩交互，保留当前页面上下文。\n- 支持粘贴 QQ 音乐、网易云音乐公开歌单的分享链接或 ID，先预览，再按原顺序合并到个人资料库并去重；读取或保存失败保留已有数据。\n- 歌单导入复用现有主题、歌曲行与弹层组件；Mac 面板接入同一导入能力和音源策略。\n- 明确音频中断、输出切换、静音提示及应用恢复通知在主队列上的隔离，消除设备 Release 构建警告。\n- 更新双语 README、音源配置说明及第三方代码声明，移除当前分发代码中的旧网易客户端适配器并保留历史许可记录。\n\n### 分发说明\n\n- 提供 iOS 17+、arm64 的未签名 IPA、SHA-256 和安装说明；App、Widget 与 Mac 源码构建版本统一为 1.0 (22)。\n- 公开 IPA 不含个人 API 凭据，QQ 播放及网易云相关接口需要使用自己的 ChKSz Key 从源码构建。\n- 本次提供 iOS 安装产物；既有 Mac 实验包保留在 v1.0.0-preview.1，最新 Mac 功能可从共享工程构建。\n- 预览版本仍受第三方服务可用性影响，尚未完成本轮 iPhone 真机验收。\n\n### 下载与安装\n\n- 下载 `Sonar-1.0-build22-unsigned.ipa`、同名 `.sha256` 和 `INSTALL-iOS.md`。\n- 在下载目录运行 `shasum -a 256 -c Sonar-1.0-build22-unsigned.ipa.sha256`。\n- IPA 未签名，安装前需自行签名 App 与 Widget，并配置匹配的描述文件、Bundle ID 和 App Group。\n- 公开包不含个人 API Key；QQ 播放以及网易云相关接口需使用自己的 ChKSz Key 从源码构建，当前没有 App 内 Key 编辑入口。\n\n### 验证\n\n- 从仅含 174 个已跟踪文件的副本构建设备 Release 归档，0 警告、0 错误，无本地测试或 Agent 框架依赖。\n- 最终 IPA 已独立解包核对：App / Widget 1.0 (22)、arm64、iOS 17.0+、无签名材料、凭据配置为空，音源资源与发布提交一致；ZIP 与 SHA-256 校验通过。\n- 本次主队列通知隔离修复的 5 项后台音频通知回归通过，0 失败。功能实现阶段的 51 项回归，以及样式调整后的 17 项导入与备份回归均通过。\n- 本轮尚未完成真机 iPhone 运行验收；第三方接口仍可能返回 503。\n\n### English\n\nThis iOS preview adds QQ / NetEase song search, highest-quality-first parsing, an in-place search overlay, and public-playlist migration with preview and deduplication. The unsigned IPA targets iPhone, iOS 17+, arm64, version 1.0 (22). Sign both the app and widget before installation. No personal API credentials are included: QQ playback and NetEase APIs require your own ChKSz key supplied through a source build. See `INSTALL-iOS.md` and the updated README. The existing Mac preview remains at v1.0.0-preview.1; current Mac features are available from source.\n\nFull changes: https://github.com/can4hou6joeng4/Sonar/compare/v1.0.0-preview.1...v1.0.0-preview.2",
+          "downloadURL": "https://github.com/can4hou6joeng4/Sonar/releases/download/v1.0.0-preview.2/Sonar-1.0-build22-unsigned.ipa",
+          "size": 2717249,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "cn.bobochang.sonar",
+      "title": "Sonar 1.0.0-preview.2 · 10 Oct 2026",
+      "identifier": "Sonar-release-v1.0.0-preview.2",
+      "caption": "Sonar 1.0.0-preview.2 is available.",
+      "date": "2026-10-10T18:38:30Z",
+      "tintColor": "#F09080",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/news.png",
+      "notify": true,
+      "url": "https://github.com/can4hou6joeng4/Sonar/releases/tag/v1.0.0-preview.2"
+    }
+  ]
+}
