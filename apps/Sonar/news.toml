@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/Sonar
+
+name = "Sonar"
+tagline = "原生 SwiftUI 音乐播放器"
+
+[colors]
+tint = "#F09080"
+tint_alt = "#F09080"

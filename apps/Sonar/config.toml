@@ -1,0 +1,41 @@
+# altgen config for the Sonar AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "can4hou6joeng4/Sonar"
+
+[source]
+name = "Sonar"
+subtitle = "Sonar AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Sonar"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/icon.png"
+website = "https://github.com/can4hou6joeng4/Sonar"
+tint_color = "#F09080"
+
+[app]
+name = "Sonar"
+bundle_identifier = "cn.bobochang.sonar"
+developer_name = "can4hou6joeng4"
+subtitle = "原生 SwiftUI 音乐播放器"
+description = "Sonar，开源 SwiftUI 音乐播放器。支持 QQ 音乐与网易云搜索、同步歌词、本地歌单与公开歌单导入。公开预览 IPA 不含播放凭据，网易云及 QQ 播放需自行构建并配置 ChKSz Key。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/home.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/player.png",
+]
+tint_color = "#F09080"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+# Current iOS IPA is only on GitHub prereleases (v1.0.0-preview.2).
+include_prereleases = true
+# Skip the Mac zip on preview.1; iOS assets are Sonar-*-unsigned.ipa.
+asset_pattern = "Sonar-.*-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/news.png"
+
+[output]
+path = "apps.json"

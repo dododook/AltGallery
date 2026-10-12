@@ -128,6 +128,9 @@ Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in Sw
 ### <a href="https://github.com/SideStore/SideStore"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/SideStore/icon.png" alt="SideStore icon" width="24" align="top"> SideStore</a>
 无需电脑的社区侧载商店，用 Apple ID 在设备上签名并刷新 IPA。
 
+### <a href="https://github.com/can4hou6joeng4/Sonar"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sonar/icon.png" alt="Sonar icon" width="24" align="top"> Sonar</a>
+原生 SwiftUI 音乐播放器，支持 QQ / 网易云搜索、歌词与本地歌单。
+
 ### <a href="https://github.com/gholts/sphere."><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sphere/icon.png" alt="Sphere icon" width="24" align="top"> Sphere</a>
 原生 iOS 局域网代理面板，控制 Mihomo / Sing-box 后端。
 
