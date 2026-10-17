@@ -21,11 +21,11 @@
       "tintColor": "#FF375F",
       "versions": [
         {
-          "version": "0.9",
-          "date": "2026-09-03",
-          "localizedDescription": "- OCR dictionary support (iOS 18+): import Yomitan-compatible dictionaries in the app and look up words while reading.\r\n- Suwayomi built-in source: read and track from a Suwayomi instance, just like Komga and Kavita.\r\n- Auto scroll for webtoon reader: enable and press the play button to scroll without touching your device.\r\n- Fixed CloudFlare handling: CloudFlare issues that caused external sources to break should be resolved.\r\n- Overall performance improvements: the library loads much faster (@Amqx), and the webtoon reader was improved.\r\n- Source stability fixes and disable option: the issue where sources were causing the app to crash should not happen again, and now you can even disable a source that is broken until it receives an update.\r\n- Many more things: see [the website](https://aidoku.app/release-notes/) for a more complete list.",
-          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9/Aidoku.ipa",
-          "size": 14731108,
+          "version": "0.9-4",
+          "date": "2026-10-16",
+          "localizedDescription": "A small build update for 0.9 with a number of bug fixes.\r\n\r\n- Fixed some pages not loading in webtoon reader\r\n- Improved webtoon reader memory usage (hopefully fixes crash after reading multiple chapters)\r\n- Fixed crash when searching anywhere in the macOS app\r\n- Various other bug fixes",
+          "downloadURL": "https://github.com/Aidoku/Aidoku/releases/download/v0.9-4/Aidoku.ipa",
+          "size": 14753154,
           "minOSVersion": "15.0"
         }
       ]
@@ -40,11 +40,11 @@
       "tintColor": "#2080F0",
       "versions": [
         {
-          "version": "2.4.0",
-          "date": "2026-10-10",
-          "localizedDescription": "## [2.4.0] - 2026-10-10\r\n\r\n> **English** — Release notes. | **中文** — 发行说明见下方中文版。\r\n\r\n### English / Changed\r\n- Removed the automatic tone-state check that ran at app launch. The app now restores the\r\n  last known state from cache and performs no file access until the user flips\r\n  the switch.\r\n- If anything goes wrong with the tones, you can force the original system\r\n  tones back by changing the system language on the device.\r\n\r\n---\r\n\r\n### 中文 / 变更\r\n- 移除 app 启动时自动执行的提示音文件状态校验。现在打开 app 不再做任何文件读取，改为从本地缓存恢复\r\n  上次的状态，仅在用户拨动开关时才进行实际操作。\r\n- 若提示音出现异常，可通过**更改系统语言**强制恢复为系统默认提示音。\r\n\r\n---\r\n\r\n**Full Changelog**: [v2.3.0...v2.4.0](https://github.com/LinkPass888/AirBeep/compare/v2.3.0...v2.4.0)",
-          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.4.0/airbeep-v2.4.0-unsigned.ipa",
-          "size": 5806194,
+          "version": "2.4.1",
+          "date": "2026-10-16",
+          "localizedDescription": "## [2.4.1] - 2026-10-17\r\n\r\n### English / Fixed\r\n- Configure the native Airlift target once from `AIRLIFT_TARGET_HOST` so setup checks and tone operations share the configured LocalDevVPN peer.\r\n- Complete the Lockdown heartbeat handshake before accessing network services. Keep the existing heartbeat client alive for each operation and abort its task when the tunnel is dropped, including cached-route connections.\r\n- Rebuild the pinned native dependency with the file-read and heartbeat patch; retain checksum and exported-symbol verification.\r\n\r\n### 中文 / 修复\r\n- 支持通过构建设置配置 Airlift 连接地址，连接检查与提示音读写共用同一目标。\r\n- 修复网络 Lockdown 路径缺少 heartbeat 导致服务连接被系统关闭的问题；保活仅限本次操作生命周期。\r\n\n\n## What's Changed\n* Fix Lockdown heartbeat and configurable Airlift target by @kaluli123123 in https://github.com/LinkPass888/AirBeep/pull/22\n\n## New Contributors\n* @kaluli123123 made their first contribution in https://github.com/LinkPass888/AirBeep/pull/22\n\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.4.0...v2.4.1",
+          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.4.1/airbeep-v2.4.1-unsigned.ipa",
+          "size": 5834482,
           "minOSVersion": "26.0"
         }
       ]
@@ -186,11 +186,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20261011",
-          "date": "2026-10-11",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- arcade tests: accept the name as typed where the filesystem ignores case\n- DriverPacks: Manager::GetAvailability uses the manager's own platform\n- catalog tests: rename the tar.gz test entry so it stops clashing with TarEntry\n- SHA256: include 7-Zip's Sha256.h with angle brackets\n- Screenshot harnesses: describe them without naming tools outside this tree\n- Library: a switch to leave a game folder's subfolders out\n- Library: icons keep animating when one of them leaves the screen\n- Android: gyro aim lets go of the sensor while the app is out of sight\n- Android: Discord idles while the app is out of sight\n- Library: stop drawing while the app is out of sight\n- Android: the paused CPU thread sleeps while the app is out of sight\n- Android: let go of the audio device while the app is out of sight\n- Oboe: keep a paused stream paused when it reopens\n- Big Picture: list the Arcade Setup page title for translation\n- Qt: reloading a game's settings after an online patch install can no longer leave the settings window empty\n- Qt: Apply & Restart on the GPU Drivers page asks about and cancels a driver install in progress\n- Big Picture: resuming a game closes the memory card backups window\n- Big Picture: shutting down no longer waits on a texture pack's hit POST or its directory walk, and leaves another UI's cover run alone\n- Windows projects: list the online-packs sources in pcsx2 and common\n- Memory card backups: tell the player when an unreadable card could not be offered for restore\n- Texture packs: an install made from a game's settings switches replacement on there too when the game turns it off\n- Memory card backups: only the boot's reopen takes snapshots, and the default is off on libretro and iOS too\n- GPU Drivers page: listed only where driver packs exist or a pack is installed or selected\n- Driver packs and arcade boot files: the test-load child closes inherited descriptors, a boot-files digest mismatch fails\n- Texture packs: the zip extractor bounds the total it writes and checks free space first\n- Big Picture: texture packs, drivers and arcade setup ask the network only after the page has stayed open for a second\n- Autosave: an autosave a crash left set aside as .drop is put back when its slot is empty\n- Texture packs: an install keeps a replacements folder it did not make, and never follows a symlink when deleting\n- Catalog: parse JSON iteratively so deeply nested input cannot overflow the stack\n- Arcade: an .acgame whose dongle, card or SRAM names leave their folder is refused\n- Qt: the game list type filter keeps each type's enum value so Arcade no longer selects Invalid\n- Big Picture: loading a state of an arcade game with no game running prepares the game first\n- Big Picture: cover style and region choices read their captures before closing the dialog\n- Qt: GPU Drivers page for downloading and choosing a Vulkan driver pack (Linux)\n- Qt: Texture Packs page over the online catalog, with a button in Texture Replacement\n- Qt: automatic cover download with its settings and per-game region\n- Qt: in Big Picture mode, Big Picture asks whether to restore an unreadable memory card\n- Big Picture: Texture Packs page with the online catalog, pack details, installs with progress and cancel, and installed packs, plus a Browse Texture Packs row in the Texture Replacement section\n- Big Picture screenshots: gamesettings:<page> opens the first game's settings on that page, so a per-game page can be shot\n- Qt UI: autosaves in the Load State menu, with interval, count and on-shutdown settings in Advanced\n- Qt UI: memory card backups dialog, an Automatic backups setting, and the boot-time restore question\n- Qt UI: Browse Online on the Patches and Cheats pages searches the community repositories and installs what the player ticks\n- Qt UI: System > Arcade has Insert Coin for each player, Service and Test for a running arcade game\n- Qt UI: an Arcade Controls page remaps a controller's buttons on an arcade game's cabinet, for one game or for all of them\n- Big Picture screenshots: gamesettings:<page> opens a page of the first game's settings, and :browse starts the online patch search\n- Big Picture: Browse Online row on the Patches and Cheats pages that searches the community repositories and installs the picked entries\n- Qt UI: an arcade game is made ready before it starts, and an .acgame opens from Start File and drag and drop\n- Qt UI: Tools > Arcade Setup shows the boot files, the arcade BIOS and which arcade games are ready\n- Big Picture: GPU Drivers settings page with the driver in use, a choice of system driver or installed pack, downloads with progress and cancel, delete, and Restart Now\n- Big Picture: memory card backups window and restore question, autosave tiles in the Load State list, and the autosave settings\n- Big Picture: arcade setup page, per-game arcade controls, pause menu submenu, and games started through Prepare\n- GameList: the image of an arcade game with no .acgame is a game\n- Qt: Local Link as an Ethernet device type on the Network & HDD page\n- Memory cards: a fallback slot for the restore prompt handler, so the host's own dialog wins over Big Picture's\n- Catalog: a one-shot answer one thread waits on while another supplies it, for questions asked while the VM starts\n- Qt UI: -uishot renders a settings page, a dialog or the main window to a PNG on the offscreen platform\n- Big Picture: automatic cover download after the game list settles, with toggle, style and region rows, a per-game region pin and progress notifications\n- Big Picture: Local Link as an Ethernet device type, with host, address, port, peer ID and room code rows and the DHCP rows hidden\n- Big Picture: texture upscale row (Off, RAISR 2x, RAISR 4x) in the Texture Replacement section of the Graphics page\n- Big Picture screenshots: a rescan page and the settings of the first game, so pages that need a game list can be reached\n- Memory cards: back them up before they open at boot, restore with rollback, offer to restore an unreadable one\n- Autosave: a rotating history of autosaves, an interval timer and save on shutdown\n- Catalog: a file-operations interface so multi-step changes on disk can be tested with a failing step\n- Config: settings for autosave interval, count and save on shutdown, and for memory card backups\n- Catalog: Local Link settings rules shared by the UIs, with the room code upper-cased before it is stored\n- Hosts: apply the selected GPU driver pack right after the settings load\n- DriverPacks: list, install, apply and delete GPU driver packs on Linux\n- Catalog: a defensive .tar.gz extractor for downloaded packs\n- Catalog: texture-pack installer, and the seam that makes an installed pack take effect\n- Catalog: tar+zstd and zip extractors for texture packs, with the archive path policy\n- Catalog: texture-pack catalog from the one textures.json, popularity counter, installed-pack record\n- Catalog: ask for compressed responses unless the caller picked an encoding\n- Arcade: ArcadeSetup gets an arcade game ready to boot and says what it still lacks\n- GameList: an arcade game's boot program, image and dongle are no longer listed as games\n- Catalog: online patch and cheat browser that searches the community repositories and installs the chosen sections\n- Catalog: split .pnach files into sections and append sections to an existing file\n- SDL: --headless WxH renders to an offscreen image, and -bigpicture is accepted\n- PINE: UIOpenPage, UIWaitFrames and UIScreenshot drive Big Picture with no display\n- GS: a host with no window can get an offscreen present and read it back\n- Catalog: automatic cover download for game-list entries with no cover\n- Catalog: cover download job that remembers 404s on disk and backs off on a rate limit\n- Catalog: cover URLs per platform and style, and a region index built from the game database\n- BIOS: arcade board dumps no longer show in the console BIOS lists\n- GameList: arcade games listed from their .acgame files\n- Hotkeys: coin for each player, Service and Test for an arcade game\n- Input: an arcade game's controller input drives the JVS board, not the DualShock\n- Arcade: map a controller onto the cabinet's JVS switches for every control mode\n- Catalog: atomic file writes, an on-disk response cache and JSON helpers\n- Catalog: a fetch layer with https-only redirects, byte caps, streaming to file and a fake for tests\n- Tests: add the catalog_tests target with SHA-256 vectors and a fixtures directory\n- Common: add a streaming SHA-256 hasher on the vendored 7-Zip implementation\n- GameDB: Gran Turismo 4 reads its readback asynchronously on mobile\n- Android: a game whose GPU driver was deleted uses the global driver\n- Android: don't strand RunOnCPUThread callers when the VM thread exits\n- Android: rumble every controller assigned to a player\n- Android: show what the game runs, red for non-defaults, readable marks\n- Android: tint settings rows the game database sets or the player changed\n- Android: one rule for whether a game database entry is in force\n- Android: enable ANGLE from per-game settings\n- Android: the Renderer tab's Reset also clears the Graphics API, GPU driver and ANGLE\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261008...0076b5c389ea7296331ad2d96193c6e8d5d314fa",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261011/ARMSX2-nightly-20261011-0076b5c389-iOS-arm64.ipa",
-          "size": 39938405,
+          "version": "nightly-20261016",
+          "date": "2026-10-16",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- About: the app's license, and the licenses of the open-source code it ships\n- Remote play: ask for Android 17's local network permission\n- Remote play: ARMSX2's copyright line on its new files\n- Remote play: the Vulkan buffer extensions both or neither, and a per-driver switch\n- Remote play: the host lets each friend in\n- Remote play: the host's main thread no longer waits on the stream\n- Remote play: no permanent port forward, and a renewal keeps its own port\n- Remote play: a bad pasted code or a peer that resets at once no longer crashes the app\n- Remote play: hosting no longer needs Discord\n- Remote play: WebRTC's license on the encoder taken from its HardwareVideoEncoder\n- Remote play: the join and leave notices and the Wi-Fi QoS option in every language\n- Remote play: the controller reaches everything on its screens\n- Remote play: the host sees who joins and who leaves\n- Remote play: host on OpenGL too\n- Remote play: its strings in all 19 languages\n- Remote play: stream the game to a friend, who plays as player 2\n- Remote play: miniupnpc 2.3.2 for the router port\n- GS/SW: read the palette copy's texels with the source format fixed at compile time\n- GS/SW: copy paletted sprite draws into 16-bit frames straight from local memory\n- GS/SW: build the texture snapshot after the rest of the scanline selector\n- GS: drop the block-dirty bitmap the GPU copy of local memory used\n- GS: skip the block walk of a write whose pages are all marked already\n- GS/TC: decode paletted hash-cache misses on the GPU (gpu_texture_decode)\n- GS/Vulkan: put the GPU texture decode's batching in a class a host test can drive\n- GS: add the gpu_texture_decode setting and a -gpu-texture-decode runner flag\n- GS/Vulkan: compute decode of paletted texture windows from a GPU copy of local memory\n- GS/TC: keep up to 1600 hash-cache entries, under a memory limit\n- GS/TC: key a raw hash-cache window by the hashes of its blocks\n- GS: mark the 256-byte blocks a write touches, in two dirty bitmaps\n- GS/TC: key a paletted hash-cache window by its raw blocks\n- GameDB (mobile): Baldur's Gate: Dark Alliance (PAL) keeps textures resident\n- MTVU: a savestate load no longer reverts VU1 memory to its pre-load contents\n- GameDB (mobile): Baldur's Gate: Dark Alliance II keeps textures resident\n- GameDB (mobile): Baldur's Gate: Dark Alliance keeps textures resident\n- GS/Vulkan: let the texture upload ring grow instead of waiting\n- GS/TC: upload a hash-cache miss from the hash pass's expansion\n- Android: the texture pack \"+\" imports .zip and .tar.zst files\n- catalog tests: check that WaitFor lasts until its deadline, not how many polls fit in it\n- Qt: a double click does not toggle full screen while the mouse works an arcade gun\n- Arcade: a mouse click fires the light gun, and a menu under the pointer keeps it\n- Arcade: mouse buttons work the light gun and the touch panel\n- FullscreenUI: format the on-screen keyboard sources the way clang-format wants them\n- Screenshot harness: textdialog and padkeys pages play controller, keyboard and mouse input into Big Picture\n- FullscreenUI: the RetroAchievements login fields open the on-screen keyboard dialog\n- FullscreenUI: Back in the texture pack search dialog no longer also closes the texture packs window\n- FullscreenUI: Big Picture's text dialog has an on-screen keyboard a controller, touch screen or mouse can type on\n- FullscreenUI: on-screen keyboard model with the key layouts, selection movement and text editing, and its tests\n- EE: pin $a2 and $s1 instead of $k0 and $at\n- EE: reload only the caller-saved pins after the event-test stub's C call\n- EE: keep the lazy-dirty pins in registers across SYSCALL, ERET, EI and MTC0 Status\n- EE event test: look for a pending INTC/DMAC cause before calling out\n- EE event test: skip the VU sync calls when no VU has anything to do\n- tests: pin what the EE event test does on quiet and near-quiet entries\n- eerunner: whole-machine fingerprint for twin runs between JIT builds\n- eerunner: fingerprint all of VU0 for twin runs between JIT builds\n- COP2: the run-ahead sync stub bounces a parked VU0 itself\n- Deps: use a native arm64 DXC on Windows arm64 (fixes 0xc000007b)\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261011...25e7084fdefcf1e9069481a583c38c103b03e8f1",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261016/ARMSX2-nightly-20261016-25e7084fde-iOS-arm64.ipa",
+          "size": 39952375,
           "minOSVersion": "17.0"
         }
       ]
@@ -579,11 +579,11 @@
       "tintColor": "#F02030",
       "versions": [
         {
-          "version": "1.2.1",
-          "date": "2026-09-05",
-          "localizedDescription": "## English\n\nThis MeloX iOS + Apple Watch release was built automatically by GitHub Actions.\n\n### MeloX Website\n\nVisit the [MeloX website](https://melox.luoxe.cn/) for project information and the latest news.\n\n### Download\n\n- `MeloX-iOS-unsigned.ipa`: unsigned iOS package containing the Apple Watch app\n\n### Installation\n\nThe IPA is unsigned and must be signed before installation.\n\n### Build Information\n\n- Version: `v1.2.1`\n- Commit: `1fe5fbab3f554e8529c4847fc54281a472b7b61a`\n- Build: `104`\n\n## 简体中文\n\n这是由 GitHub Actions 自动构建的 MeloX iOS + Apple Watch 发行版本。\n\n### MeloX 官网\n\n访问 [MeloX 官网](https://melox.luoxe.cn/) 了解项目与最新动态。\n\n### 下载说明\n\n- `MeloX-iOS-unsigned.ipa`：包含 Apple Watch App 的 iOS 未签名安装包\n\n### 安装说明\n\n该 IPA 未签名，需要自行签名后安装。\n\n### 版本信息\n\n- 版本：`v1.2.1`\n- Commit：`1fe5fbab3f554e8529c4847fc54281a472b7b61a`\n- 构建编号：`104`\n\n## What's New / 更新内容\n\n## 简体中文\n\n- 增加了多声部同时唱词与独立逐字高亮\n- 增加了收藏专辑入口\n- 修复了蓝牙音频设备断开后播放未自动暂停的问题\n- 修复了逐字歌词切换时的闪烁问题\n- 优化了歌词加载性能和动效连贯性\n- 完善了 TTML 歌词解析\n- 优化了 Apple Watch 逐字歌词获取与回退\n- 优化了播放器菜单的歌词源选择\n\n## English\n\n- Added simultaneous vocal parts with independent word highlighting\n- Added access to favorite albums\n- Fixed playback not pausing when a Bluetooth audio device disconnects\n- Fixed flickering during word-synced lyric transitions\n- Improved lyric loading performance and animation continuity\n- Improved TTML lyric parsing\n- Improved word-synced lyric fetching and fallback on Apple Watch\n- Refined lyric source selection in the player menu",
-          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.2.1/MeloX-iOS-unsigned.ipa",
-          "size": 27542233,
+          "version": "1.3.0",
+          "date": "2026-10-16",
+          "localizedDescription": "## English\n\nThis MeloX iOS + Apple Watch release was built automatically by GitHub Actions.\n\n### MeloX Website\n\nVisit the [MeloX website](https://melox.luoxe.cn/) for project information and the latest news.\n\n### Download\n\n- `MeloX-iOS-unsigned.ipa`: unsigned iOS package containing the Apple Watch app\n\n### Installation\n\nThe IPA is unsigned and must be signed before installation.\n\n### Build Information\n\n- Version: `v1.3.0`\n- Commit: `a41ea0e1e1fa69fb543d827b853fe3aff5420951`\n- Build: `124`\n\n## 简体中文\n\n这是由 GitHub Actions 自动构建的 MeloX iOS + Apple Watch 发行版本。\n\n### MeloX 官网\n\n访问 [MeloX 官网](https://melox.luoxe.cn/) 了解项目与最新动态。\n\n### 下载说明\n\n- `MeloX-iOS-unsigned.ipa`：包含 Apple Watch App 的 iOS 未签名安装包\n\n### 安装说明\n\n该 IPA 未签名，需要自行签名后安装。\n\n### 版本信息\n\n- 版本：`v1.3.0`\n- Commit：`a41ea0e1e1fa69fb543d827b853fe3aff5420951`\n- 构建编号：`124`\n\n## What's New / 更新内容\n\n## 简体中文\n\n- 增加了歌手关注与取消关注，以及可搜索的已关注歌手音乐库页面\n- 增加了搜索联想与输入补全，可在通用设置中开启或关闭\n- 增加了从自建歌单移除歌曲的功能\n- 增加了自建歌单删除功能，支持删除前确认\n- 增加了新建公开与私密歌单，支持在添加歌曲时直接创建歌单\n- 修复了 Apple Music 歌词快速换句时滚动跟不上播放进度的问题\n- 修复了 iPad 全屏歌词边缘露出播放器背景、退出按钮被状态栏遮挡的问题\n- 修复了歌词跳转后与歌曲播放不同步的问题\n- 修复了 EVA 歌词界面进入时未随背景渐入的问题\n- 修复了 iPad 播放器收起与展开歌词按钮的尺寸和对齐问题\n- 优化了全屏天际歌词的换句动画，衔接更自然\n- 优化了搜索分类切换，返回已查看的分类时更快\n- 优化了跳转、暂停与重播时的播放进度显示\n- 优化了 iPad 播放器，采用桌面端样式的双栏布局与常驻播放控制\n\n## English\n\n- Added artist follow controls and a searchable Followed Artists library page\n- Added search suggestions and text completion, with a toggle in General settings\n- Added the ability to remove songs from your own playlists\n- Added deletion of your own playlists with confirmation\n- Added public and private playlist creation, including creating a playlist while adding a song\n- Fixed Apple Music lyrics falling behind playback during rapid line changes\n- Fixed the player background showing around iPad full-screen lyrics and the exit button overlapping the status bar\n- Fixed lyrics falling out of sync with playback after seeking\n- Fixed EVA lyrics appearing abruptly instead of fading in with the background\n- Fixed the size and alignment of the iPad player's collapse and expand-lyrics buttons\n- Improved full-screen Skyline lyrics with smoother transitions between lines\n- Improved search category switching so previously viewed results appear faster\n- Improved progress display when seeking, pausing, and replaying songs\n- Improved the iPad player with a desktop-style two-column layout and persistent playback controls",
+          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.3.0/MeloX-iOS-unsigned.ipa",
+          "size": 27881976,
           "minOSVersion": "26.0"
         }
       ]
@@ -1084,6 +1084,50 @@
   ],
   "news": [
     {
+      "appID": "app.aidoku.Aidoku",
+      "title": "Aidoku 0.9-4 · 16 Oct 2026",
+      "identifier": "Aidoku-release-v0.9-4",
+      "caption": "Aidoku 0.9-4 is available.",
+      "date": "2026-10-16T22:25:27Z",
+      "tintColor": "#FF375F",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.9-4"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261016 · 16 Oct 2026",
+      "identifier": "ARMSX2-release-nightly-20261016",
+      "caption": "ARMSX2 nightly-20261016 is available.",
+      "date": "2026-10-16T19:36:18Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261016"
+    },
+    {
+      "appID": "com.linkpass888.airbeep",
+      "title": "AirBeep 2.4.1 · 16 Oct 2026",
+      "identifier": "AirBeep-release-v2.4.1",
+      "caption": "AirBeep 2.4.1 is available.",
+      "date": "2026-10-16T16:45:23Z",
+      "tintColor": "#2080F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirBeep/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.4.1"
+    },
+    {
+      "appID": "azki.moye.MeloX",
+      "title": "MeloX 1.3.0 · 16 Oct 2026",
+      "identifier": "MeloX-release-v1.3.0",
+      "caption": "MeloX 1.3.0 is available.",
+      "date": "2026-10-16T14:03:47Z",
+      "tintColor": "#F02030",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MeloX/images/news.png",
+      "notify": true,
+      "url": "https://github.com/youshen2/MeloX/releases/tag/v1.3.0"
+    },
+    {
       "appID": "com.utmapp.UTM",
       "title": "UTM 5.0.7 · 16 Oct 2026",
       "identifier": "UTM-release-v5.0.7",
@@ -1194,17 +1238,6 @@
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
     },
     {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20261011 · 11 Oct 2026",
-      "identifier": "ARMSX2-release-nightly-20261011",
-      "caption": "ARMSX2 nightly-20261011 is available.",
-      "date": "2026-10-11T21:12:17Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261011"
-    },
-    {
       "appID": "org.eu.eslzzyl.Pixiv-SwiftUI",
       "title": "Pixiv-SwiftUI 0.16.2 · 11 Oct 2026",
       "identifier": "Pixiv-SwiftUI-release-v0.16.2",
@@ -1236,17 +1269,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
       "notify": true,
       "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.1.6.2"
-    },
-    {
-      "appID": "com.linkpass888.airbeep",
-      "title": "AirBeep 2.4.0 · 10 Oct 2026",
-      "identifier": "AirBeep-release-v2.4.0",
-      "caption": "AirBeep 2.4.0 is available.",
-      "date": "2026-10-10T08:42:06Z",
-      "tintColor": "#2080F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirBeep/images/news.png",
-      "notify": true,
-      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.4.0"
     },
     {
       "appID": "com.naine.doer",
@@ -1401,28 +1423,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Beans-Music/images/news.png",
       "notify": true,
       "url": "https://github.com/XIaodou0416/Beans-Music/releases/tag/v1.6.6"
-    },
-    {
-      "appID": "azki.moye.MeloX",
-      "title": "MeloX 1.2.1 · 05 Sep 2026",
-      "identifier": "MeloX-release-v1.2.1",
-      "caption": "MeloX 1.2.1 is available.",
-      "date": "2026-09-05T03:16:20Z",
-      "tintColor": "#F02030",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MeloX/images/news.png",
-      "notify": true,
-      "url": "https://github.com/youshen2/MeloX/releases/tag/v1.2.1"
-    },
-    {
-      "appID": "app.aidoku.Aidoku",
-      "title": "Aidoku 0.9 · 03 Sep 2026",
-      "identifier": "Aidoku-release-v0.9",
-      "caption": "Aidoku 0.9 is available.",
-      "date": "2026-09-03T20:17:08Z",
-      "tintColor": "#FF375F",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Aidoku/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.9"
     },
     {
       "appID": "com.miguel.psx3ios",

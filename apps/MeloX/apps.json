@@ -21,11 +21,11 @@
       "tintColor": "#F02030",
       "versions": [
         {
-          "version": "1.2.1",
-          "date": "2026-09-05",
-          "localizedDescription": "## English\n\nThis MeloX iOS + Apple Watch release was built automatically by GitHub Actions.\n\n### MeloX Website\n\nVisit the [MeloX website](https://melox.luoxe.cn/) for project information and the latest news.\n\n### Download\n\n- `MeloX-iOS-unsigned.ipa`: unsigned iOS package containing the Apple Watch app\n\n### Installation\n\nThe IPA is unsigned and must be signed before installation.\n\n### Build Information\n\n- Version: `v1.2.1`\n- Commit: `1fe5fbab3f554e8529c4847fc54281a472b7b61a`\n- Build: `104`\n\n## 简体中文\n\n这是由 GitHub Actions 自动构建的 MeloX iOS + Apple Watch 发行版本。\n\n### MeloX 官网\n\n访问 [MeloX 官网](https://melox.luoxe.cn/) 了解项目与最新动态。\n\n### 下载说明\n\n- `MeloX-iOS-unsigned.ipa`：包含 Apple Watch App 的 iOS 未签名安装包\n\n### 安装说明\n\n该 IPA 未签名，需要自行签名后安装。\n\n### 版本信息\n\n- 版本：`v1.2.1`\n- Commit：`1fe5fbab3f554e8529c4847fc54281a472b7b61a`\n- 构建编号：`104`\n\n## What's New / 更新内容\n\n## 简体中文\n\n- 增加了多声部同时唱词与独立逐字高亮\n- 增加了收藏专辑入口\n- 修复了蓝牙音频设备断开后播放未自动暂停的问题\n- 修复了逐字歌词切换时的闪烁问题\n- 优化了歌词加载性能和动效连贯性\n- 完善了 TTML 歌词解析\n- 优化了 Apple Watch 逐字歌词获取与回退\n- 优化了播放器菜单的歌词源选择\n\n## English\n\n- Added simultaneous vocal parts with independent word highlighting\n- Added access to favorite albums\n- Fixed playback not pausing when a Bluetooth audio device disconnects\n- Fixed flickering during word-synced lyric transitions\n- Improved lyric loading performance and animation continuity\n- Improved TTML lyric parsing\n- Improved word-synced lyric fetching and fallback on Apple Watch\n- Refined lyric source selection in the player menu",
-          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.2.1/MeloX-iOS-unsigned.ipa",
-          "size": 27542233,
+          "version": "1.3.0",
+          "date": "2026-10-16",
+          "localizedDescription": "## English\n\nThis MeloX iOS + Apple Watch release was built automatically by GitHub Actions.\n\n### MeloX Website\n\nVisit the [MeloX website](https://melox.luoxe.cn/) for project information and the latest news.\n\n### Download\n\n- `MeloX-iOS-unsigned.ipa`: unsigned iOS package containing the Apple Watch app\n\n### Installation\n\nThe IPA is unsigned and must be signed before installation.\n\n### Build Information\n\n- Version: `v1.3.0`\n- Commit: `a41ea0e1e1fa69fb543d827b853fe3aff5420951`\n- Build: `124`\n\n## 简体中文\n\n这是由 GitHub Actions 自动构建的 MeloX iOS + Apple Watch 发行版本。\n\n### MeloX 官网\n\n访问 [MeloX 官网](https://melox.luoxe.cn/) 了解项目与最新动态。\n\n### 下载说明\n\n- `MeloX-iOS-unsigned.ipa`：包含 Apple Watch App 的 iOS 未签名安装包\n\n### 安装说明\n\n该 IPA 未签名，需要自行签名后安装。\n\n### 版本信息\n\n- 版本：`v1.3.0`\n- Commit：`a41ea0e1e1fa69fb543d827b853fe3aff5420951`\n- 构建编号：`124`\n\n## What's New / 更新内容\n\n## 简体中文\n\n- 增加了歌手关注与取消关注，以及可搜索的已关注歌手音乐库页面\n- 增加了搜索联想与输入补全，可在通用设置中开启或关闭\n- 增加了从自建歌单移除歌曲的功能\n- 增加了自建歌单删除功能，支持删除前确认\n- 增加了新建公开与私密歌单，支持在添加歌曲时直接创建歌单\n- 修复了 Apple Music 歌词快速换句时滚动跟不上播放进度的问题\n- 修复了 iPad 全屏歌词边缘露出播放器背景、退出按钮被状态栏遮挡的问题\n- 修复了歌词跳转后与歌曲播放不同步的问题\n- 修复了 EVA 歌词界面进入时未随背景渐入的问题\n- 修复了 iPad 播放器收起与展开歌词按钮的尺寸和对齐问题\n- 优化了全屏天际歌词的换句动画，衔接更自然\n- 优化了搜索分类切换，返回已查看的分类时更快\n- 优化了跳转、暂停与重播时的播放进度显示\n- 优化了 iPad 播放器，采用桌面端样式的双栏布局与常驻播放控制\n\n## English\n\n- Added artist follow controls and a searchable Followed Artists library page\n- Added search suggestions and text completion, with a toggle in General settings\n- Added the ability to remove songs from your own playlists\n- Added deletion of your own playlists with confirmation\n- Added public and private playlist creation, including creating a playlist while adding a song\n- Fixed Apple Music lyrics falling behind playback during rapid line changes\n- Fixed the player background showing around iPad full-screen lyrics and the exit button overlapping the status bar\n- Fixed lyrics falling out of sync with playback after seeking\n- Fixed EVA lyrics appearing abruptly instead of fading in with the background\n- Fixed the size and alignment of the iPad player's collapse and expand-lyrics buttons\n- Improved full-screen Skyline lyrics with smoother transitions between lines\n- Improved search category switching so previously viewed results appear faster\n- Improved progress display when seeking, pausing, and replaying songs\n- Improved the iPad player with a desktop-style two-column layout and persistent playback controls",
+          "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.3.0/MeloX-iOS-unsigned.ipa",
+          "size": 27881976,
           "minOSVersion": "26.0"
         }
       ]
@@ -34,14 +34,14 @@
   "news": [
     {
       "appID": "azki.moye.MeloX",
-      "title": "MeloX 1.2.1 · 05 Sep 2026",
-      "identifier": "MeloX-release-v1.2.1",
-      "caption": "MeloX 1.2.1 is available.",
-      "date": "2026-09-05T03:16:20Z",
+      "title": "MeloX 1.3.0 · 16 Oct 2026",
+      "identifier": "MeloX-release-v1.3.0",
+      "caption": "MeloX 1.3.0 is available.",
+      "date": "2026-10-16T14:03:47Z",
       "tintColor": "#F02030",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MeloX/images/news.png",
       "notify": true,
-      "url": "https://github.com/youshen2/MeloX/releases/tag/v1.2.1"
+      "url": "https://github.com/youshen2/MeloX/releases/tag/v1.3.0"
     }
   ]
 }
