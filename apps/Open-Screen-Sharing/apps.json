@@ -1,0 +1,42 @@
+{
+  "name": "Open Screen Sharing",
+  "subtitle": "Open Screen Sharing AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Open Screen Sharing",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/icon.png",
+  "website": "https://github.com/nekohasekai/open-screen-sharing",
+  "tintColor": "#3060F0",
+  "apps": [
+    {
+      "name": "Open Screen Sharing",
+      "bundleIdentifier": "io.nekohasekai.screensharing",
+      "developerName": "nekohasekai",
+      "subtitle": "开源 Apple VNC 屏幕共享",
+      "localizedDescription": "Open Screen Sharing，开源 Apple VNC（macOS 屏幕共享）客户端与服务器。针对局域网与公网（Tailscale P2P）优化，并支持 RDP。侧载 IPA 含 App Store 版未提供的 iOS 端 Apple VNC 服务器与从远程 Mac 拖文件。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/icon.png",
+      "tintColor": "#3060F0",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "date": "2026-10-17",
+          "localizedDescription": "* Fixes and improvements",
+          "downloadURL": "https://github.com/nekohasekai/open-screen-sharing/releases/download/v1.0.1/OpenScreenSharing.ipa",
+          "size": 12156799,
+          "minOSVersion": "15.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "io.nekohasekai.screensharing",
+      "title": "Open Screen Sharing 1.0.1 · 17 Oct 2026",
+      "identifier": "Open Screen Sharing-release-v1.0.1",
+      "caption": "Open Screen Sharing 1.0.1 is available.",
+      "date": "2026-10-17T04:21:49Z",
+      "tintColor": "#3060F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png",
+      "notify": true,
+      "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.1"
+    }
+  ]
+}
