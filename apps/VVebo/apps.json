@@ -1,9 +1,9 @@
 {
   "name": "VVebo",
-  "subtitle": "VVebo AltStore source by AltGallery",
-  "description": "Sideload-friendly VVebo 3.3.31 from missuo/VVeboFix (ad-hoc signed, CloudKit crash guard).",
+  "subtitle": "VVebo AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for VVebo",
   "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/icon.png",
-  "website": "https://github.com/missuo/VVeboFix",
+  "website": "https://github.com/dododook/my-ipas",
   "tintColor": "#F5C400",
   "apps": [
     {
@@ -11,17 +11,16 @@
       "bundleIdentifier": "com.johnil.vvebo",
       "developerName": "johnil",
       "subtitle": "已停更的第三方微博客户端",
-      "localizedDescription": "VVebo 3.3.31 自签版（missuo/VVeboFix）。预注入时间线修复，并处理重签后 CloudKit 闪退。请先卸掉旧的巨魔包再装。",
+      "localizedDescription": "VVebo 3.3.31 适配版。已停更的第三方微博客户端，含较新系统上的兼容补丁。请先卸掉旧的巨魔包或旧自签包再装。",
       "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/icon.png",
       "tintColor": "#F5C400",
       "versions": [
         {
-          "version": "3.3.31",
-          "buildVersion": "4",
-          "date": "2024-01-09",
-          "localizedDescription": "Sideload build from missuo/VVeboFix (ad-hoc signed, CloudKit crash guard, timeline fix dylib).",
-          "downloadURL": "https://github.com/missuo/VVeboFix/releases/download/v1.0.0/VVebo_3.3.31_Fixed-f70d8bf.ipa",
-          "size": 22420059,
+          "version": "3.3.31.1",
+          "date": "2026-10-19",
+          "localizedDescription": "Sideload-adapted VVebo 3.3.31 (Info.plist still reports 3.3.31). Bundle ID: com.johnil.vvebo. Minimum iOS 14.0.",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/VVebo-3.3.31.1/VVebo_3.3.31.1.ipa",
+          "size": 22700518,
           "minOSVersion": "14.0"
         }
       ]
@@ -30,13 +29,14 @@
   "news": [
     {
       "appID": "com.johnil.vvebo",
-      "title": "VVebo 3.3.31",
-      "identifier": "vvebo-3.3.31",
-      "caption": "VVebo 3.3.31 is available.",
-      "date": "2024-01-09T13:59:51Z",
+      "title": "VVebo 3.3.31.1 · 19 Oct 2026",
+      "identifier": "VVebo-release-VVebo-3.3.31.1",
+      "caption": "VVebo 3.3.31.1 is available.",
+      "date": "2026-10-19T00:49:37Z",
       "tintColor": "#F5C400",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/images/news.png",
-      "notify": false
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/VVebo-3.3.31.1"
     }
   ]
 }
