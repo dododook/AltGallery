@@ -104,6 +104,9 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/celia-sh/Novella"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Novella/icon.png" alt="Novella icon" width="24" align="top"> Novella</a>
 轻书架第三方客户端，基于 React Native 构建，面向 iOS / iPadOS，支持小说与漫画阅读与社区。
 
+### <a href="https://github.com/nekohasekai/open-screen-sharing"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Open-Screen-Sharing/icon.png" alt="Open Screen Sharing icon" width="24" align="top"> Open Screen Sharing</a>
+开源 Apple VNC 屏幕共享客户端与服务器，针对局域网与公网优化。
+
 ### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
 使用Flutter开发的BiliBili第三方客户端。
 

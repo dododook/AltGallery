@@ -1,0 +1,38 @@
+# altgen config for the Open Screen Sharing AltStore source.
+# Run: uvx altgen -c config.toml
+# Metadata taken from the project's own altstore.json (v1.0.1).
+
+[github]
+repo = "nekohasekai/open-screen-sharing"
+
+[source]
+name = "Open Screen Sharing"
+subtitle = "Open Screen Sharing AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Open Screen Sharing"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/icon.png"
+website = "https://github.com/nekohasekai/open-screen-sharing"
+tint_color = "#3060F0"
+
+[app]
+name = "Open Screen Sharing"
+bundle_identifier = "io.nekohasekai.screensharing"
+developer_name = "nekohasekai"
+subtitle = "开源 Apple VNC 屏幕共享"
+description = "Open Screen Sharing，开源 Apple VNC（macOS 屏幕共享）客户端与服务器。针对局域网与公网（Tailscale P2P）优化，并支持 RDP。侧载 IPA 含 App Store 版未提供的 iOS 端 Apple VNC 服务器与从远程 Mac 拖文件。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/icon.png"
+tint_color = "#3060F0"
+min_os_version = "15.0"
+
+[versions]
+strip_v_prefix = true
+# Nightly is a prerelease with the same IPA filename; keep the stable track.
+include_prereleases = false
+# Releases also ship OpenScreenSharing.pkg (macOS).
+asset_pattern = "OpenScreenSharing\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png"
+
+[output]
+path = "apps.json"

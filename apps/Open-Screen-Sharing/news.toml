@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/Open-Screen-Sharing
+
+name = "Open Screen Sharing"
+tagline = "开源 Apple VNC 屏幕共享"
+
+[colors]
+tint = "#3060F0"
+tint_alt = "#3060F0"
