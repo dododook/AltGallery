@@ -146,8 +146,8 @@ A full featured virtual machine host for iOS — run Windows, Android, and more 
 ### <a href="https://github.com/CyrilPeng/Venera-Next"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Venera-Next/icon.png" alt="VeneraNext icon" width="24" align="top"> VeneraNext</a>
 基于 Flutter 的跨平台漫画阅读器，支持本地漫画、WebDAV 漫画源与第三方网络漫画源。
 
-### <a href="https://github.com/missuo/VVeboFix"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/VVebo/icon.png" alt="VVebo icon" width="24" align="top"> VVebo</a>
-已停更的第三方微博客户端（3.3.31 自签版，含时间线修复）。
+### <a href="https://github.com/dododook/my-ipas/releases/tag/VVebo-3.3.31.1"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/VVebo/icon.png" alt="VVebo icon" width="24" align="top"> VVebo</a>
+已停更的第三方微博客户端（3.3.31 适配版）。
 
 ### <a href="https://github.com/lo-cafe/winston"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Winston/icon.png" alt="Winston icon" width="24" align="top"> Winston</a>
 免费开源的原生 iOS Reddit 客户端。
