@@ -39,7 +39,12 @@ for app_dir in apps/*/; do
     echo "==> Updating $name"
     # Keep going when one GitHub repo 404s or is rate-limited; the existing
     # apps.json (if any) is still merged below.
-    if ! (cd "$app_dir" && uvx altgen -c config.toml); then
+    # Pass --token explicitly: uvx/CI may not surface GITHUB_TOKEN to altgen.
+    token_args=()
+    if [[ -n "${GITHUB_TOKEN:-}" ]]; then
+      token_args=(--token "$GITHUB_TOKEN")
+    fi
+    if ! (cd "$app_dir" && uvx altgen -c config.toml "${token_args[@]}"); then
       echo "Warning: altgen failed for $name — keeping existing apps.json" >&2
     fi
   fi
