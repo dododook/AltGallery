@@ -40,11 +40,11 @@
       "tintColor": "#2080F0",
       "versions": [
         {
-          "version": "2.5.1",
-          "date": "2026-10-18",
-          "localizedDescription": "### English / Changed\r\n- **iOS 18 is now supported.** The deployment target drops from iOS 27 to\r\n  iOS 18.0; the supported range is **iOS/iPadOS 18.0 – 27.2 B2**, and later\r\n  versions cannot be supported. Below iOS 27 the system does not support\r\n  on-device pairing — generate a pairing file on a computer with [iloader](https://github.com/nab138/iloader) or [idevice_pair](https://github.com/jkcoxson/idevice_pair) and import it.\r\n- **The switch is gone.** The home screen now shows two independent actions:\r\n  **Silence recording tone**, and either **Back Up Original Tones** (shown\r\n  until a complete backup exists) or **Restore original tone**. The current\r\n  tone state is no longer displayed — detecting it needs a device read that\r\n  is unreliable on some iOS releases. Successful operations confirm with an\r\n  alert instead.\r\n- The home page version line shows the running system version beside the app\r\n  version, e.g. `iOS 27.1  AirBeep v2.5.1 (9)` (`iPadOS` on iPad).\r\n- Backup is a standalone action: back the originals up before silencing so\r\n  they are always recoverable; the button then flips to Restore. The\r\n  automatic-backup note sits under that button.\r\n\r\n### English / Fixed\r\n- **Flaky airlift reads no longer abort the whole operation.** Each tone file\r\n  is read independently; a failed read is skipped and logged instead of\r\n  failing the silence/restore. The write channel's return code is the source\r\n  of truth, and read-back verification degrades to a log entry when a re-read\r\n  is unavailable.\r\n- **Loopback connect no longer falsely demands Wi-Fi.** Wi-Fi presence is now\r\n  read from the live interface table (`getifaddrs`) instead of\r\n  `NWPathMonitor`, which reports unsatisfied once the VPN owns the default\r\n  path. Wi-Fi is still required.\r\n- The third writable tone file `StartDisclosure.caf` is now replaced too\r\n  (skipped automatically on releases that do not ship it).\r\n- Restore without a backup explains the language-change recovery path instead\r\n  of failing with a generic \"no backup\" error.\r\n- Removed the non-public-behavior disclaimer from the bottom of the home page.\r\n\r\n### English / Added\r\n- **Advanced settings** (About page): set a custom device IP for the loopback\r\n  connection, and inspect the live network-interface table with tunnel/Wi-Fi\r\n  state — self-diagnosis for the \"connection refused / wrong subnet\" reports.\r\n- Runtime interface scan: tunnel dials now adapt to the actual network via\r\n  `al_set_target_hosts` without any route probing.\r\n- Localization hardened: two validation scripts keep the EN/zh-Hans catalogs\r\n  in sync (identical keys, matching placeholders, no untranslated UI literals).\r\n\r\n---\r\n\r\n### 中文 / 变更\r\n- **支持 iOS 18。** 最低系统要求由 iOS 27 降至 iOS 18.0，支持范围为\r\n  **iOS/iPadOS 18.0 – 27.2 B2**，之后的版本无法支持。iOS 27 以下的系统\r\n  不支持本机配对，请在电脑上用 [iloader](https://github.com/nab138/iloader) 或\r\n  [idevice_pair](https://github.com/jkcoxson/idevice_pair) 生成配对文件后导入。\r\n- **取消开关设计。** 首页改为两个独立操作：**静音录音提示音**，以及\r\n  **备份原始提示音**（尚无完整备份时显示）或 **恢复原始提示音**。不再显示\r\n  当前提示音状态——检测状态需要在部分 iOS 版本上不可靠的设备读取；操作\r\n  成功后以弹窗提示。\r\n- 首页版本行在软件版本号左侧显示当前系统版本，例如\r\n  `iOS 27.1  AirBeep v2.5.1 (9)`（iPad 上显示 `iPadOS`）。\r\n- 备份成为独立操作：可先备份再静音，原音始终可找回；按钮随后切换为恢复，\r\n  自动备份说明位于该按钮下方。\r\n\r\n### 中文 / 修复\r\n- **airlift 读取偶发失败不再导致整个操作中断。** 每个提示音文件独立读取，\r\n  失败仅跳过并记录日志；以写入通道的返回码为准，回读校验在无法读取时\r\n  降级为日志记录。\r\n- **回环连接不再误报\"需要连接 Wi-Fi\"。** Wi-Fi 状态改由实时接口表\r\n  （`getifaddrs`）判断，不再使用在 VPN 接管默认路由后总报告不可用的\r\n  `NWPathMonitor`。Wi-Fi 仍为必需条件。\r\n- 同时替换第三个可写提示音文件 `StartDisclosure.caf`（未提供该文件的\r\n  系统版本自动跳过）。\r\n- 无备份时的恢复会明确指引\"更改系统语言\"恢复路径，不再报模糊的\r\n  \"无备份\"错误。\r\n- 删除首页底部\"依赖非公开系统行为\"的免责提示。\r\n\r\n### 中文 / 新增\r\n- **高级设置**（关于页）：可为回环连接设置自定义设备 IP，并查看带\r\n  隧道/Wi-Fi 状态的实时网络接口列表，自行排查\"连接被拒绝 / 网段不对\"问题。\r\n- 运行时接口扫描：通过 `al_set_target_hosts` 让隧道拨号适配实际网络，\r\n  不做任何路由探测。\r\n- 本地化加固：新增两个校验脚本保证中英文目录一致（键相同、占位符匹配、\r\n  无未翻译界面文案）。\r\n\r\n---\r\n\r\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.4.1...v2.5.1",
-          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.5.1/airbeep-v2.5.1-unsigned.ipa",
-          "size": 5876450,
+          "version": "2.5.2",
+          "date": "2026-10-19",
+          "localizedDescription": "## [2.5.2] - 2026-10-19\r\n\r\n### English / Added\r\n- **Check tone status button.** The current tone state can now be checked on\r\n  demand from the home screen. The read channel is unreliable on some iOS\r\n  releases (the AirTraffic move step never completes there), so the check\r\n  reports one of three outcomes: silenced, originals still in place, or\r\n  unverifiable on this device. It never runs automatically and never gates an\r\n  operation.\r\n\r\n### English / Changed\r\n- After silencing, the success alert no longer claims a verified result when\r\n  the read-back could not confirm it; it says the silence was written but\r\n  unverified and points at the tone status check. This covers the\r\n  [issue #6](https://github.com/LinkPass888/AirBeep/issues/6) report where the\r\n  write channel returns success on iOS 27.x while the tones never change.\r\n\r\n---\r\n\r\n### 中文 / 新增\r\n- **校验提示音状态按钮。** 可在首页按需检测当前提示音状态。部分 iOS 版本上\r\n  读取通道不可靠（AirTraffic 搬运步骤始终无法完成），因此检测结果分为三种：\r\n  已静音、原始提示音仍在、本机无法校验。该检测绝不自动运行，也不会阻断\r\n  任何操作。\r\n\r\n### 中文 / 变更\r\n- 静音后的成功弹窗在回读校验无法确认时不再直接宣称成功，改为提示\"静音\r\n  已写入、结果未经校验\"，并引导使用提示音状态校验。对应\r\n  [issue #6](https://github.com/LinkPass888/AirBeep/issues/6) 反馈的\r\n  iOS 27.x 上写入通道返回成功但提示音实际未变的问题。\r\n\r\n**Full Changelog**: https://github.com/LinkPass888/AirBeep/compare/v2.5.1...v2.5.2",
+          "downloadURL": "https://github.com/LinkPass888/AirBeep/releases/download/v2.5.2/airbeep-v2.5.2-unsigned.ipa",
+          "size": 5880046,
           "minOSVersion": "26.0"
         }
       ]
@@ -186,11 +186,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20261018",
-          "date": "2026-10-18",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Tests: three Linux-only expectations are skipped on macOS\n- VU program cache: a copy the preload held is not answered after the session wrote the file\n- tests: VuAotCache.UnusableSavedCodeFallsBackToThePlan no longer races the cache's preload thread\n- vu-aot: the clear with no VM running follows the global setting, not the config a game ended with\n- vu-aot: the compile worker takes the process's processor mask, not that of the thread that starts it\n- Big Picture: a switch for the VU1 ahead-of-time compiler in the System settings\n- Qt: a checkbox for the VU1 ahead-of-time compiler in the Advanced settings\n- vu-aot: turning EnableVUAot off with no VM running clears the compiled cache too\n- VU program cache: opened by the first reset, not by mVUinit\n- Android: a switch for the VU1 ahead-of-time compiler, in the in-game Performance menu and the Performance settings\n- vu-aot: turning EnableVUAot off clears the compiled cache\n- vu-aot: EnableVUAot defaults to on\n- Discord: remote play shows as \"Playing remote play (2 of 2)\" with the game\n- core_test: the item-stamp test reads the IOP's clock at the moment of the apply, not its published position\n- IOP thread: the sleep-handshake hammer runs until it has covered enough sleeps, not for a fixed number of rounds\n- IOP thread: an idle IOP watches the watermark for 500 us before it sleeps, not 50\n- eerunner: --iop-idle-spin-us, the Threaded IOP thread's idle-watch window\n- IOP thread: no acquire loads in the event test after the watermark's release store\n- IOP thread: the OSD's IOP line is drawn on every frame, not only on the frames that refresh it\n- Thread pinning: order the processors by the kernel's capacity table, so a handheld pins to its big cores\n- IOP thread: Android settings for the IOP thread and its lag bound\n- IOP thread: SharedWord uses the compiler's atomic builtins, since Android NDK 28 has no std::atomic_ref\n- IOP thread: Qt and Big Picture settings for the IOP thread and its lag bound\n- IOP thread: its CPU time is shown with the EE, GS and VU1 threads' on the OSD\n- IOP thread: a concurrent IOP thread takes a processor of its own in the thread placement\n- IOP thread: the lag check trusts the last IOP position it saw while that is within the bound\n- IOP thread: the EE's and the IOP's private words and counters sit on separate cache lines\n- IOP thread: an idle IOP watches the watermark, and only a sleeping one is woken\n- IopThread/EeBridge.h: the header comment says where the slice break reads the mode\n- IOP thread: the hold test also covers a lifecycle hold, which falls back to sleeping while it waits\n- IOP thread: a hold no longer gives up when the VM is stopping\n- IOP thread: the lag-bound object test no longer depends on which thread gets there first\n- IOP thread: a test that stopping a thread started inside an event test drops its start hold\n- IOP thread: a Threaded thread started inside an EE event test stays stopped until the next one\n- IOP thread: Threaded tests for what a mutation run showed they missed\n- eerunner and the OSD report the Threaded IOP counters, and eerunner can stress the IOP thread's lifecycle\n- IOP thread: in Threaded mode the host thread's analog button toggle is posted to the IOP thread\n- IOP thread: Threaded runs: the IOP paces itself from the EE's watermark, and the SIF pumps run on the EE thread (variant R)\n- IOP thread: the thread object counts the EE's waits, says when the IOP is stopped, and takes a hook at each hold\n- arm64: the register allocator's state is per thread, so an EE block and an IOP block can compile at once\n- IOP thread: a VM that Initialize leaves Paused holds the IOP, like one that SetState pauses\n- eerunner: work a hotkey defers to the CPU thread runs under the same released pause hold\n- eerunner: --host-action runs its hotkeys without the frame-by-frame pause hold\n- core_test: the DualShock 2 record includes the stick dead zone\n- core_test: the guitar's whammy bar is saved in a state and restored from it\n- core_test: the IOP thread's FPCR after a CPU settings change\n- IOP thread: the CPU thread holds the IOP around the volume, mute, speed and memory card swap hotkeys, and the audio, DEV9, USB and memory card entries assert it\n- IOP thread: pad and USB vibration are posted to the CPU thread in Threaded mode, and a blocking Host::RunOnCPUThread from the IOP thread asserts\n- IOP thread: the physical-disc thread's new-disc callback goes to the IOP thread through a gated host command queue\n- IOP thread: the pad input fields are relaxed atomics, with a record of what every pad type answers to a poll\n- IOP thread: Devel ownership asserts, and the hold the ELF entry point hook was missing\n- IOP thread: the EE's entries into IOP state take a hold, and a PS1 mode switch turns Lockstep off\n- IOP thread: in Lockstep the EE's blanking, its IRQ to the IOP and its once-a-frame jobs go through the E2I queue\n- IOP thread: the IOP position is the EE's 64-bit cycle less what the IOP is owed, with a test across 2^32\n- R5900.h: the plain _cpuEventTest_Shared() is an inline wrapper, so no second copy of the event test is built\n- core_test: the plain _cpuEventTest_Shared() does what the Off instance does\n- x86 files back to master: _cpuEventTest_Shared() stays as a plain function that forwards to the Off instance\n- IOP thread: ChooseModeFor takes the host and conditions, so the demotion of Threaded can be tested\n- eerunner: --settings-churn applies a settings change mid-run, and a run reports what the IOP thread did\n- core_test: the Lockstep event test, its handoff, the holds and the thread's FPCR\n- IOP thread: Lockstep runs the IOP's slice of every EE event test on the IOP thread\n- IOP thread: the test-harness condition is a run-time flag, not a compile-time define\n- IOP thread: Lockstep and Threaded both resolve to Off on a host that is not ARM64\n- Build files: pcsx2/IopThread/SharedWord.h is listed in CMake and in the Visual Studio project\n- The other words the EE and IOP threads share are relaxed atomics: ICFG, the GS video mode, the memory card busy frame\n- SBUS: the registers are read and written with atomic operations on both sides\n- core_test: what each side does to the SBUS registers, value by value, before they are made atomic\n- SIF1: the pump's loop body is two functions, Sif1EeStep and Sif1IopStep\n- SIF0: the pump's loop body is two functions, Sif0IopStep and Sif0EeStep\n- core_test: scripted SIF0 and SIF1 transfers pin what the two pumps do, recorded before they are split\n- IOP JIT: remove iopDispatcherEvent, a stub nothing ever jumps to\n- EeBridge: the places where IOP-side code reaches into EE scheduling or state go through one inline function each\n- IopBridge: the places where the EE reaches into IOP state go through one inline function each\n- Patch: the vsync patches for IOP memory are applied in a pass of their own\n- R5900: the IOP slice and the next-event scheduling in the event test become two named functions\n- IOP thread: the thread object, its pacing loop, holds and Lockstep handoff, not yet used\n- IOP thread: the queues and flags the EE and IOP threads talk through, not yet used\n- IOP thread: Lockstep resolves on any host, whatever the core count or core type\n- IOP thread: settings keys, GameDB key and IopThread::ResolveMode, with no behaviour\n- core_test: FingerprintIop reads without changing anything, and each hash follows its own state\n- eerunner twin: record the IOP-side state (SPU2, SIF, SIO, cdvd) in every frame\n- mVU progcache: the program file times go through UTF-8 paths\n- vu-aot: an installed program joins the list of every start PC it holds a block for\n- mVU progcache: preload the most recently used programs first, and delete the ones unused for 60 days\n- mVU persist: a payload recorded by another build is refused, and replaced by the next save\n- vu-aot: the install audit and install tests cover a region that keeps a w lane in memory\n- vu-aot: the dead-value sweep and the w-lane scan cost less to compile\n- vu-aot: a home whose w lane a loop never writes keeps it in memory\n- vu-aot: roots the builder declined are saved, and not asked for again\n- vu-aot: a value with no use left gives its register back\n- pcsx2-eerunner: --vuaot-no-install uses loaded vu-aot sidecars as plans only\n- vu-aot: saved region code is installed as a program loads\n- vu-aot: VI arithmetic writes straight into its operand's home\n- vu-aot: a VI in a region's register home keeps its upper bits\n- VU interpreter: the end of a program no longer waits for an FMAC or an ILW in flight\n- vu-aot: node registration, branch patching and the first-region count as helpers\n- vu-aot: the worker describes every address in a region's code\n- vu-aot: a region's conditional link tests the VI in one compare\n- vu-aot: sidecar format 2, whose records can carry their region code\n- VU tests: console rows for what the end of a program waits for\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261016...0d525e4bdb02c1111dc47e313ee460481c11874d",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261018/ARMSX2-nightly-20261018-0d525e4bdb-iOS-arm64.ipa",
-          "size": 40304220,
+          "version": "nightly-20261019",
+          "date": "2026-10-19",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- IOP thread: the default lag bound is 24576 EE cycles, up from 6144\n- Android: Reset gives back the player's value for a kept key the settings file no longer has\n- Android: a resolution auto-tune kept survives the next save from the app\n- AutoTune: test that a trial that is not kept never reaches the game's file or the host\n- AutoTune: a setting is kept only when the speed rose, never on a lower cost alone\n- Android: Reset gives back the value the player set in the app, not the global one\n- AutoTune: the EE governor's message says the emulated CPU is underclocked\n- AutoTune: say \"nothing left to try\" once per session, whatever the class\n- AutoTune: keep the game database hints and the unsafe settings warning quiet while it applies\n- AutoTune: settle 1.5 s, not 3 s, after a light change\n- AutoTune: ask the live GS device whether it is Vulkan, not the configuration\n- AutoTune: do not offer the GS back thread where it would share a busy core\n- AutoTune: try the download mode before the GS back thread for a GPU case\n- AutoTune: blending Basic -> Minimum is only tried against the GS on the CPU\n- AutoTune: put the cheap levers before the resolution only where they can matter\n- AutoTune: the percentage on a kept lever is the measured speed change\n- AutoTune: a loss the game's own change explains is not a remembered rejection\n- AutoTune: a trial that clearly made things worse is a remembered rejection\n- AutoTune: keep on the targeted cost only when the speed did not fall\n- AutoTune: tell the Android app about a committed value through a function pointer, not a weak symbol\n- AutoTune: judge a trial on medians, on the cost it targets, and against a baseline taken right before it\n- AutoTune: tell an IOP-bound case from an EE-bound one by the EE's wait, not the IOP thread's CPU share\n- Qt: a game's properties window re-reads its settings file when it comes to the front\n- iOS: Automatic Performance Tuning switch in the emulator settings\n- Android: setup page asking about Automatic Performance Tuning\n- Android: Automatic Performance Tuning switch, and a per-game list and reset\n- Android: keep the values auto-tune saves, and let the app read and reset its record\n- Host: make the default Host::OnAutoTuneCommitted weak\n- AutoTune: the EE governor as a lever\n- AutoTune: an EE blocked on the IOP thread is an IOP case, not an EE case\n- AutoTune: read the EE's waits and dropped frames from the limiter and wait-site tallies\n- EE cycle rate sampler: a tally other consumers can ask for, and one lateness verdict\n- Big Picture: setup step asking about Automatic Performance Tuning\n- Big Picture: per-game 'Reset Auto-Tune' and the list of what auto-tune changed\n- Big Picture: Automatic Performance Tuning switch in the Emulation settings\n- Qt: setup wizard page asking about Automatic Performance Tuning\n- Qt: per-game 'Reset Auto-Tune' button and the list of what auto-tune changed\n- Qt: Automatic Performance Tuning switch on the Emulation settings page\n- AutoTune: format the bottleneck report, and say what Resumed does\n- AutoTune: a busy GPU outranks busy GS threads; tests for the reset on the game's file\n- AutoTune: the applier, and the hooks that run it from the VM\n- AutoTune: the sampler that turns a metrics window into a controller window\n- EE cycle rate: name the new files in the Windows project\n- AutoTune: the per-game settings record, and the reset\n- EE cycle rate: a read API for the governor's state and its latest window\n- EE cycle rate: do not read CTR_EL0 on Darwin\n- EE cycle rate: pin what a per-game opt-in has to write\n- EE cycle rate: a charge on a block entry is patchable, not doomed\n- EE cycle rate: make the runner say which path a transition took\n- EE cycle rate: transition by rewriting the charges, not by resetting\n- EE cycle rate: cache maintenance for many patches, one barrier\n- EE cycle rate: record where every charge immediate actually sits\n- EE cycle rate: classify each charge site's encoding form at emit time\n- EE cycle rate: count what a transition actually throws away\n- EE cycle rate: time the two halves of a transition separately\n- EE cycle rate: keep the session's transition counts out of the controller's reach\n- EE cycle rate: only reset on a limiter change that changed the limiter\n- EE cycle rate: charge a window's time to the rate it actually ran at\n- EE cycle rate: keep the per-frame path a leaf, and stop the trace contradicting itself\n- EE cycle rate: in shadow mode the controller has to be told the switch is on\n- EE cycle rate: a trace with no windows in it still has to say what it is\n- eerunner: --ee-rate-trace, so a scripted run exercises the trace writer\n- EE cycle rate: one word for the overlay, and it is the only thing it may read\n- EE cycle rate: a trace of every window, and a shadow mode to record it in\n- EE cycle rate: close a window at the frame boundary and act on it\n- EE cycle rate: time the EE thread's waits on the GS and VU1 threads\n- EE cycle rate: what a window's frames add up to, as a pure function\n- Perf metrics: one frame-work clock for everyone, not an Android-only one\n- EE cycle rate: pin the precedence rules, especially the one about equal values\n- EE cycle rate: decide whether the governor may run, and say why\n- EE cycle rate: record where the configured selector came from\n- EE cycle rate: a dynamic switch, and a trace path the caches ignore\n- eerunner: script EE cycle-rate transitions, and time what they cost\n- EE cycle rate: give back the step that failed, not the ones that worked\n- EE rec: pin the seven cycle-rate selectors, and which selector emitted code uses\n- microVU: the EE cycle rate is a VU0-only code-generation input\n- EE cycle rate: turn window samples into one step, with no clock and no VM\n- EE cycle rate: separate the configured selector from the one we run at\n- AutoTune: the decision controller, tested by replaying scripted windows\n- PerformanceMetrics: a consistent copy of the last window, and a GPU-timer flag\n- Settings: an auto-tune layer above the game layer, and the AutoTune switch\n- GS: the 24-bit image writer reads three bytes per pixel, not four\n- Controls: all controllers as Player 1, and profiles in the in-game menu\n- Setup: an install a launcher has prepared skips the wizard (#847)\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261018...83fe4e293f71ab5587ef81b06143725bf8c6a30b",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261019/ARMSX2-nightly-20261019-83fe4e293f-iOS-arm64.ipa",
+          "size": 40356686,
           "minOSVersion": "17.0"
         }
       ]
@@ -208,11 +208,11 @@
       "tintColor": "#4090E0",
       "versions": [
         {
-          "version": "4.2.1",
-          "date": "2026-06-14",
-          "localizedDescription": "Release 4.2.1",
-          "downloadURL": "https://github.com/Lakr233/Asspp/releases/download/4.2.1/Asspp.ipa",
-          "size": 15162563,
+          "version": "4.2.2",
+          "date": "2026-10-20",
+          "localizedDescription": "## Changes\n\n- Recover downloads when Apple returns an empty HTTP 500 by retrying the version-pinned request through the bag’s update endpoint.\n- Update ApplePackage to 2.0.3 with Swift 6.2 compatibility fixes.\n- Report Keychain save failures before completing login, and preserve stored data when loading fails.\n- Improve empty account layout, editable device identifiers, and account table column widths.\n- Remove personal metadata from bundled installation certificates and omit the CA private key.\n- Explicitly clear development teams for release builds and check packaged artifacts before publication.\n\n## Installation certificate\n\nThe local installation CA was replaced to remove personal metadata. If you use OTA installation, install and trust the new certificate from Settings after updating.\n\nThe release contains an unsigned iOS IPA and a macOS ZIP without a personal development team.",
+          "downloadURL": "https://github.com/Lakr233/Asspp/releases/download/4.2.2/Asspp.ipa",
+          "size": 16458246,
           "minOSVersion": "17.0"
         }
       ]
@@ -484,11 +484,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.20",
-          "date": "2026-10-03",
-          "localizedDescription": "### Added\n\n- **macOS** (experimental): AutoMix — an Apple-Music-style continuous-playback mode with beat-matched transitions, optional stem separation, loudness compensation and an output-device picker, on a new dual-deck AVAudioEngine backend. Off by default; turn it on in Settings. Thanks @XerWandeRer (#102).\n- **iOS**: search and sort within the Liked Songs playlist. Thanks @yamakze (#121).\n- **Release**: every release now also ships an AltStore / SideStore source (`altstore.json`) for one-tap sideload updates. Thanks @vancez (#112).\n\n### Fixed\n\n- **iOS + macOS**: home-page loading placeholders and the 新碟上架 album cards stay within the content width instead of overflowing it. Thanks @sld272 (#119).\n\n---\n\n### 新增\n\n- **macOS**（实验性）：AutoMix——类 Apple Music 的连续播放模式,支持节拍对齐的过渡、可选的人声 / 伴奏分离、响度补偿与输出设备选择,基于全新的双 deck AVAudioEngine 后端。默认关闭,可在设置里开启。感谢 @XerWandeRer（#102）。\n- **iOS**：「我喜欢的音乐」歌单内支持搜索与排序。感谢 @yamakze（#121）。\n- **发布**：每次发布额外提供 AltStore / SideStore 源（`altstore.json`),可在 AltStore 里一键更新侧载。感谢 @vancez（#112）。\n\n### 修复\n\n- **iOS + macOS**：首页加载占位与「新碟上架」专辑卡片不再超出内容宽度。感谢 @sld272（#119）。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.20/Kumone-iOS-0.3.20.ipa",
-          "size": 7546632,
+          "version": "0.3.21",
+          "date": "2026-10-19",
+          "localizedDescription": "### Added\n\n- **iOS + macOS**: offline downloads — download songs and whole playlists for offline listening, with a 「已下载」 library and a storage page to see usage and manage space. Thanks @xyspg (#111).\n- **macOS**: customizable keyboard shortcuts for playback actions, plus optional system-wide (global) hotkeys — set them under Settings → 快捷键. Global hotkeys are off by default. Thanks @WillowBranch127 (#125, closes #122).\n- **iOS + macOS**: iCloud sync (off by default) — continue playback where another device left off, keep settings in sync, and optionally share your sign-in between devices through iCloud Drive or a folder you choose. Shared sign-ins are encrypted with a sync password you set, and signing out revokes the session once no other device is using it. Thanks @yamakze (#138).\n\n### Fixed\n\n- **iOS + macOS**: NetEase audio now retries on the twin CDN host when one host is unreachable — fixing playback that occasionally stalled mid-queue (progress kept running) or wouldn't replay a just-played song on a poor network. Thanks @xyspg (#115, closes #106).\n- **macOS**: AutoMix no longer jumps the playhead backward (misaligning the progress bar and lyrics) when you pause and then resume. Thanks @WillowBranch127 (#126).\n- **macOS**: AutoMix no longer drops out briefly when you resume after a pause. Thanks @XerWandeRer (#140, closes #136).\n- **macOS**: scrolling the lyrics with a trackpad or mouse wheel no longer snaps back to the current line, and lines stay unblurred while you scroll. Thanks @xyspg (#139).\n- **macOS**: the window buttons stay in place on the immersive now-playing page. Thanks @yxxbc (#130, closes #128).\n- **macOS**: the Settings sub-pages (存储空间, 快捷键) have a back button that no longer overlaps the window controls, and Settings reopens on its main page. Thanks @yamakze (#135).\n\n### Improved\n\n- **iOS + macOS**: the now-playing page uses far less CPU — on macOS about 5% of a core while playing instead of about 50% — and frees its memory while the window is minimised. Thanks @yxxbc (#129, closes #131).\n- **macOS**: large playlists such as Liked Songs (1,000+ songs) scroll and load much more smoothly, artwork is decoded at the size it is shown, and the sidebar animates with less work. After updating, each cached song is downloaded once more on its next play. Thanks @morefreefg (#127).\n- **macOS**: Settings is tidier — AutoMix shows its options only when it is on, keyboard shortcuts switch between in-app and global with a segmented control, and clearing the song cache now runs right away without a confirmation. Thanks @yamakze (#135).\n- **macOS**: on macOS 26 and later the app now uses the current system window style. Thanks @yxxbc (#130).\n\n---\n\n### 新增\n\n- **iOS + macOS**：离线下载——可下载单曲和整个歌单离线收听,新增「已下载」库和存储用量 / 管理页。感谢 @xyspg（#111）。\n- **macOS**：可自定义播放等操作的键盘快捷键,并支持可选的全局(系统级)快捷键——在 设置 → 快捷键 里设置,全局快捷键默认关闭。感谢 @WillowBranch127（#125，关闭 #122）。\n- **iOS + macOS**：iCloud 同步(默认关闭)——在另一台设备上接续播放、同步设置,并可通过 iCloud 云盘或自选文件夹在设备间共享登录。共享的登录信息以你设置的同步密码加密,退出登录时若已没有其他设备在用该会话,会一并注销。感谢 @yamakze（#138）。\n\n### 修复\n\n- **iOS + macOS**：网易云音频在某个 CDN 主机不可达时会自动重试其孪生主机——修复了弱网下偶发的「队列中途卡住(进度还在走)」和「刚听过的歌无法重播」。感谢 @xyspg（#115，关闭 #106）。\n- **macOS**：AutoMix 暂停后恢复播放时,播放头不再往回跳(导致进度条和歌词错位)。感谢 @WillowBranch127（#126）。\n- **macOS**：AutoMix 暂停后恢复播放时不再短暂断音。感谢 @XerWandeRer（#140，关闭 #136）。\n- **macOS**：用触控板或鼠标滚轮翻看歌词时不再被拉回当前句,滚动期间歌词也不再模糊。感谢 @xyspg（#139）。\n- **macOS**：沉浸式播放页上的窗口按钮不再错位。感谢 @yxxbc（#130，关闭 #128）。\n- **macOS**：设置的二级页面(存储空间、快捷键)返回按钮不再与窗口控件重叠,重新打开设置时回到首页。感谢 @yamakze（#135）。\n\n### 改进\n\n- **iOS + macOS**：播放页的 CPU 占用大幅降低——macOS 上播放时约占 5% 个核心,此前约 50%——窗口最小化时还会释放内存。感谢 @yxxbc（#129，关闭 #131）。\n- **macOS**：「我喜欢的音乐」等大歌单(1000 首以上)加载和滚动更流畅,封面按显示尺寸解码,侧边栏动画开销更小。更新后,已缓存的歌曲下次播放时会重新下载一次。感谢 @morefreefg（#127）。\n- **macOS**：设置更简洁——AutoMix 仅在开启后显示子选项,快捷键用分段控件切换应用内 / 全局,清除歌曲缓存改为直接执行,不再弹出确认。感谢 @yamakze（#135）。\n- **macOS**：在 macOS 26 及以上版本,应用改用当前的系统窗口样式。感谢 @yxxbc（#130）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.21/Kumone-iOS-0.3.21.ipa",
+          "size": 8725929,
           "minOSVersion": "16.0"
         }
       ]
@@ -651,11 +651,11 @@
       "tintColor": "#2E2E2E",
       "versions": [
         {
-          "version": "2.5.0",
-          "date": "2026-09-23",
-          "localizedDescription": "<img width=\"800\" alt=\"Banner\" src=\"https://github.com/user-attachments/assets/4deb46d9-8b91-4b8a-a4f4-5d59f9190628\" />\r\n\r\n## **What's Changed 🧐**\r\n\r\n本次更新主要完善了 **书架管理**，并完成了 **组件迁移**。\r\n**仅支持 iOS / iPadOS**。\r\n\r\n### **⚡️ 内容概要**\r\n\r\n* **API**\r\n  跟进新的接口。\r\n  截止发版前 **详情页 / 书架 / 用户摘要** 已经恢复。\r\n  鉴于接口变动频繁，您可以考虑换用网页版。\r\n\r\n* **书架浏览**\r\n  新增 **全部 / 小说 / 漫画** 三种筛选方式。\r\n  文件夹支持递归筛选，子目录存在匹配内容时仍会正确显示。\r\n  进入文件夹后会保留当前筛选类型。\r\n  改进书籍详情跳转和系列信息识别。\r\n\r\n* **用户成长与签到**\r\n  新增距离下一级所需经验展示。\r\n  满级用户现在会显示对应状态。\r\n  签到调整为进入设置页面时尝试，不再需要进行繁琐操作。\r\n  增加签到并发保护，避免重复请求。\r\n  如果支持，签到会以灵动岛形式提示。\r\n\r\n* **界面组件**\r\n  移除 HeroUI Native，迁移至 **PanelUI Native**。\r\n  更新按钮、卡片、标签、输入框、验证码、头像、Skeleton 和编辑器等组件。\r\n  同步调整社区、评论、公告、书籍详情和认证相关页面。\r\n\r\n* **详情页与阅读器**\r\n  改进阅读器图片预览界面。\r\n  分享、保存和关闭操作改用 **Liquid Glass** 按钮。\r\n  修复原生阅读进度条滑块阴影被裁剪的问题。\r\n  改进详情页 BlurHash 颜色采样效果。\r\n\r\n方便的管理更新：[**添加到侧载工具**](https://sideload.celia.sh) ↗️\r\n了解其它项目：[**celia-sh/Hana**](https://github.com/celia-sh/Hana) 🌸\r\n闲聊吹水 / 反馈问题：[**点此加入**](https://t.me/+xNDJEfc_naRlMGEx) ✈️\r\n\r\n> [!CAUTION]\r\n> **本应用与网站没有直接关系**，所以**不要在**社区发布和**本软件**相关的帖子。\r\n> 正确反馈渠道：在仓库开 Issues，或者加入交流群。\r\n> 记得**看完公告和发帖前提示**，以免被网站封禁；如果不看，我只能说：非我封禁，无能为力。\r\n> 请记清楚，这不是官方软件。",
-          "downloadURL": "https://github.com/celia-sh/Novella/releases/download/v2.5.0/Novella-2.5.0-release.ipa",
-          "size": 26047504,
+          "version": "2.6.0",
+          "date": "2026-10-20",
+          "localizedDescription": "<img width=\"800\" alt=\"Banner\" src=\"https://github.com/user-attachments/assets/f4b680a1-ec67-4478-99b8-f31bf9b513b1\" />\r\n\r\n## **What's Changed 🧐**\r\n\r\n本次更新主要带来了 **iPhone Duo 适配** 和 **私信功能**，并重新设计了 **社区、公告与书籍详情**。\r\n**仅支持 iOS / iPadOS**。\r\n\r\n### **⚡️ 内容概要**\r\n\r\n* **平板与可折叠设备**\r\n  大屏与横屏下自动切换为双栏版面。\r\n  页面内容和阅读器会避开可折叠设备的侧边栏。\r\n  窗口尺寸变化时显示过渡效果。\r\n  书籍详情新增横屏版面，完整显示封面。\r\n  统一页面边距、书籍网格间距与标题样式。\r\n\r\n* **私信**\r\n  新增私信，支持一对一交流。\r\n  会话列表显示未读数，并实时更新。\r\n  横屏下以左右分栏显示会话与聊天，临时会话同样显示在侧栏。\r\n\r\n* **社区与公告**\r\n  重新设计社区与公告页面，适配手机与横屏。\r\n  帖子支持显示图片，点击后可全屏浏览。\r\n  分类标签在滚动边缘渐隐。\r\n  个人资料卡片更加紧凑。\r\n\r\n* **阅读器**\r\n  小说分页模式显示准确页码，进度条反映实际分页进度。\r\n  加载过程中锁定阅读进度。\r\n  漫画新增多种显示方式。\r\n  在可折叠设备上，书名与进度显示在侧边栏，以提升内容紧凑性。\r\n  图片预览改为直接打开，并改进对异常章节资源的处理。\r\n\r\n* **界面与体验**\r\n  更新后首次启动时展示本版本亮点，也可在 **设置 › 关于** 中再次查看。\r\n  骨架屏动画同步，并与实际内容对齐。\r\n  圆角统一使用连续曲率。\r\n  使简介预览正确截断，修复长按书籍详情误触快速搜索。\r\n\r\n* **项目整理**\r\n  升级至 Expo SDK 58 与 React Native 0.88，使用 Xcode 27 构建。\r\n  移除对 react-native-paper 的依赖。\r\n  许可证新增附加条款：衍生作品须注明来源，且素材不在 AGPL 授权范围内。\r\n  详见 [ADDITIONAL-TERMS.md](https://github.com/celia-sh/Novella/blob/main/ADDITIONAL-TERMS.md) 与 [BRAND-ASSETS.md](https://github.com/celia-sh/Novella/blob/main/BRAND-ASSETS.md)。\r\n\r\n网页重新设计：[**添加到侧载工具**](https://sideload.celia.sh) ↗️\r\n了解其它项目：[**celia-sh/Hana**](https://github.com/celia-sh/Hana) 🌸\r\n闲聊吹水 / 反馈问题：[**点此加入**](https://t.me/+xNDJEfc_naRlMGEx) ✈️\r\n\r\n> [!CAUTION]\r\n> **本应用与网站没有直接关系**，所以**不要在**社区发布和**本软件**相关的帖子。\r\n> 正确反馈渠道：在仓库开 Issues，或者加入交流群。\r\n> 记得**看完公告和发帖前提示**，以免被网站封禁；如果不看，我只能说：非我封禁，无能为力。\r\n> 请记清楚，这不是官方软件。\r\n\r\n<img width=\"800\" alt=\"Banner\" src=\"https://github.com/user-attachments/assets/239bca0f-8da5-4448-b714-90ecb94cf240\" />",
+          "downloadURL": "https://github.com/celia-sh/Novella/releases/download/v2.6.0/Novella-2.6.0-release.ipa",
+          "size": 29979710,
           "minOSVersion": "16.4"
         }
       ]
@@ -719,11 +719,11 @@
       "tintColor": "#13A1FD",
       "versions": [
         {
-          "version": "0.16.2",
-          "date": "2026-10-11",
-          "localizedDescription": "## 新功能\r\n\r\n- App 更新弹窗新增“跳过此版本”选项，支持忽略指定版本的自动更新提醒\r\n- （v0.16.1 的新功能）HTTP/3 直连模式，修正此前版本的 403 问题\r\n\r\n## 优化\r\n\r\n- 优化了一系列图片的加载逻辑，改善了 v0.16.1 的高发热问题。\r\n\r\n> 性能优化还有很大空间，但暂时推不动了。有想法的朋友期待你的 PR\r\n\r\n## 问题修复\r\n\r\n- 修复手动提交搜索后未清空搜索栏输入内容的问题\r\n- 修复全屏查看图片失败时的降级回退逻辑，优先展示已加载的预览图\r\n- 修复 iOS 端在页面切换或应用切入后台后再返回时，登录弹窗意外关闭的问题\r\n\r\npixiv-tags-data commit: 541521c99539d08d1aec7a5e01dbf15068eadca0\r\n\r\n**Full Changelog**: https://github.com/Eslzzyl/Pixiv-SwiftUI/compare/v0.16.1...v0.16.2",
-          "downloadURL": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/download/v0.16.2/Pixiv-SwiftUI.ipa",
-          "size": 10343925,
+          "version": "0.16.3",
+          "date": "2026-10-19",
+          "localizedDescription": "pixiv-tags-data commit: 541521c99539d08d1aec7a5e01dbf15068eadca0\r\n\r\n**Full Changelog**: https://github.com/Eslzzyl/Pixiv-SwiftUI/compare/v0.16.2...v0.16.3\r\n\r\n这是一个专为 iPad 优化的版本，iOS 和 macOS 用户可以直接跳过此版本。\r\n\r\n## 问题修复\r\n\r\n- 修复 iPad 竖屏插画详情页宽度未随布局更新的问题。\r\n- 修复 iPad 网格列数设置未生效的问题。\r\n- 优化 iPad 新手引导页面的底部安全区域适配。\r\n- 修复 iPad 新手引导底部背景宽度显示异常的问题。",
+          "downloadURL": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/download/v0.16.3/Pixiv-SwiftUI.ipa",
+          "size": 10379203,
           "minOSVersion": "17.0"
         }
       ]
@@ -1090,17 +1090,94 @@
       "tintColor": "#0084ff",
       "versions": [
         {
-          "version": "0.9.1",
-          "date": "2026-10-16",
-          "localizedDescription": "* 正文双击点赞/打开评论 by @AprDeci in https://github.com/huamurui/zhihu-minus-minus/pull/134\r\n* 补充知乎内容广告标志\r\n\r\n## New Contributors\r\n* @AprDeci made their first contribution in https://github.com/huamurui/zhihu-minus-minus/pull/134\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.0...v0.9.1",
-          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.1/zhihu-minus-minus-v0.9.1-unsigned.ipa",
-          "size": 16109036,
+          "version": "0.9.2",
+          "date": "2026-10-20",
+          "localizedDescription": "* fix: 修复关注页异常响应崩溃并补齐脱敏错误诊断 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/136\r\n* 更新一个疑似内容已读的接口调用。（可能无效，即使有效也要用一段时间之后才会改善推流重复的问题）\r\n* 主题色选择修复。\r\n* 小问题 #125 #120 \r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.1...v0.9.2",
+          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.2/zhihu-minus-minus-v0.9.2-unsigned.ipa",
+          "size": 16033253,
           "minOSVersion": "15.1"
         }
       ]
     }
   ],
   "news": [
+    {
+      "appID": "sh.celia.novella",
+      "title": "Novella 2.6.0 · 20 Oct 2026",
+      "identifier": "Novella-release-v2.6.0",
+      "caption": "Novella 2.6.0 is available.",
+      "date": "2026-10-20T07:35:20Z",
+      "tintColor": "#2E2E2E",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/news.png",
+      "notify": true,
+      "url": "https://github.com/celia-sh/Novella/releases/tag/v2.6.0"
+    },
+    {
+      "appID": "com.huamu013.ZhihuMinusMinus",
+      "title": "ZhihuMinusMinus 0.9.2 · 20 Oct 2026",
+      "identifier": "ZhihuMinusMinus-release-v0.9.2",
+      "caption": "ZhihuMinusMinus 0.9.2 is available.",
+      "date": "2026-10-20T06:16:17Z",
+      "tintColor": "#0084ff",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.2"
+    },
+    {
+      "appID": "wiki.qaq.Asspp",
+      "title": "Asspp 4.2.2 · 20 Oct 2026",
+      "identifier": "Asspp-release-4.2.2",
+      "caption": "Asspp 4.2.2 is available.",
+      "date": "2026-10-20T03:08:48Z",
+      "tintColor": "#4090E0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Lakr233/Asspp/releases/tag/4.2.2"
+    },
+    {
+      "appID": "org.eu.eslzzyl.Pixiv-SwiftUI",
+      "title": "Pixiv-SwiftUI 0.16.3 · 19 Oct 2026",
+      "identifier": "Pixiv-SwiftUI-release-v0.16.3",
+      "caption": "Pixiv-SwiftUI 0.16.3 is available.",
+      "date": "2026-10-19T14:07:18Z",
+      "tintColor": "#13A1FD",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/tag/v0.16.3"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261019 · 19 Oct 2026",
+      "identifier": "ARMSX2-release-nightly-20261019",
+      "caption": "ARMSX2 nightly-20261019 is available.",
+      "date": "2026-10-19T13:17:07Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261019"
+    },
+    {
+      "appID": "com.linkpass888.airbeep",
+      "title": "AirBeep 2.5.2 · 19 Oct 2026",
+      "identifier": "AirBeep-release-v2.5.2",
+      "caption": "AirBeep 2.5.2 is available.",
+      "date": "2026-10-19T11:35:11Z",
+      "tintColor": "#2080F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirBeep/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.5.2"
+    },
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.21 · 19 Oct 2026",
+      "identifier": "Kumone-release-v0.3.21",
+      "caption": "Kumone 0.3.21 is available.",
+      "date": "2026-10-19T10:16:25Z",
+      "tintColor": "#C9A227",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.21"
+    },
     {
       "appID": "com.johnil.vvebo",
       "title": "VVebo 3.3.31.1 · 19 Oct 2026",
@@ -1135,17 +1212,6 @@
       "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.6.4"
     },
     {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20261018 · 18 Oct 2026",
-      "identifier": "ARMSX2-release-nightly-20261018",
-      "caption": "ARMSX2 nightly-20261018 is available.",
-      "date": "2026-10-18T14:27:28Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261018"
-    },
-    {
       "appID": "ani.baka",
       "title": "AniBaka 5.2.2 · 18 Oct 2026",
       "identifier": "AniBaka-release-5.2.2+1017",
@@ -1155,17 +1221,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/news.png",
       "notify": true,
       "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.2.2+1017"
-    },
-    {
-      "appID": "com.linkpass888.airbeep",
-      "title": "AirBeep 2.5.1 · 18 Oct 2026",
-      "identifier": "AirBeep-release-v2.5.1",
-      "caption": "AirBeep 2.5.1 is available.",
-      "date": "2026-10-18T05:52:54Z",
-      "tintColor": "#2080F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirBeep/images/news.png",
-      "notify": true,
-      "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.5.1"
     },
     {
       "appID": "io.nekohasekai.screensharing",
@@ -1210,17 +1265,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MeloX/images/news.png",
       "notify": true,
       "url": "https://github.com/youshen2/MeloX/releases/tag/v1.3.0"
-    },
-    {
-      "appID": "com.huamu013.ZhihuMinusMinus",
-      "title": "ZhihuMinusMinus 0.9.1 · 16 Oct 2026",
-      "identifier": "ZhihuMinusMinus-release-v0.9.1",
-      "caption": "ZhihuMinusMinus 0.9.1 is available.",
-      "date": "2026-10-16T12:31:27Z",
-      "tintColor": "#0084ff",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.1"
     },
     {
       "appID": "com.altman.moviepilot",
@@ -1300,17 +1344,6 @@
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
     },
     {
-      "appID": "org.eu.eslzzyl.Pixiv-SwiftUI",
-      "title": "Pixiv-SwiftUI 0.16.2 · 11 Oct 2026",
-      "identifier": "Pixiv-SwiftUI-release-v0.16.2",
-      "caption": "Pixiv-SwiftUI 0.16.2 is available.",
-      "date": "2026-10-11T10:00:59Z",
-      "tintColor": "#13A1FD",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Pixiv-SwiftUI/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Eslzzyl/Pixiv-SwiftUI/releases/tag/v0.16.2"
-    },
-    {
       "appID": "cn.bobochang.sonar",
       "title": "Sonar 1.0.0-preview.2 · 10 Oct 2026",
       "identifier": "Sonar-release-v1.0.0-preview.2",
@@ -1388,17 +1421,6 @@
       "url": "https://github.com/seanhowarthdev/Roam-Control/releases/tag/v0.9.7"
     },
     {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.20 · 03 Oct 2026",
-      "identifier": "Kumone-release-v0.3.20",
-      "caption": "Kumone 0.3.20 is available.",
-      "date": "2026-10-03T15:42:04Z",
-      "tintColor": "#C9A227",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.20"
-    },
-    {
       "appID": "app.scenebox.SceneBox",
       "title": "SceneBox 1.0.4 · 23 Sep 2026",
       "identifier": "SceneBox-release-v1.0.4",
@@ -1408,17 +1430,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SceneBox/images/news.png",
       "notify": true,
       "url": "https://github.com/donbytyqi/scenebox/releases/tag/v1.0.4"
-    },
-    {
-      "appID": "sh.celia.novella",
-      "title": "Novella 2.5.0 · 23 Sep 2026",
-      "identifier": "Novella-release-v2.5.0",
-      "caption": "Novella 2.5.0 is available.",
-      "date": "2026-09-23T04:19:05Z",
-      "tintColor": "#2E2E2E",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/news.png",
-      "notify": true,
-      "url": "https://github.com/celia-sh/Novella/releases/tag/v2.5.0"
     },
     {
       "appID": "com.aoshuang.manicemu",
@@ -1594,17 +1605,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DolphiniOS/images/news.png",
       "notify": true,
       "url": "https://github.com/OatmealDome/dolphin-ios/releases/tag/v5.0.0b6"
-    },
-    {
-      "appID": "wiki.qaq.Asspp",
-      "title": "Asspp 4.2.1 · 14 Jun 2026",
-      "identifier": "Asspp-release-4.2.1",
-      "caption": "Asspp 4.2.1 is available.",
-      "date": "2026-06-14T02:47:42Z",
-      "tintColor": "#4090E0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Asspp/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Lakr233/Asspp/releases/tag/4.2.1"
     },
     {
       "appID": "com.macxk.KMusic",
