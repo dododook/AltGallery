@@ -484,11 +484,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.22",
+          "version": "0.3.23",
           "date": "2026-10-27",
-          "localizedDescription": "### Added\n\n- **iOS + macOS**: a setting to stop the now-playing artwork from opening the album when clicked — Settings → 点击封面打开专辑, on by default. Thanks @danielzmeow (#144, closes #143).\n- **iOS + macOS**: word-by-word lyrics now run for every song — when NetEase has no verbatim timing for a track, the line's time is spread across its characters (the way mygo-cloudmusic does it), so the karaoke wipe no longer falls back to plain line highlighting. Punctuation and spaces light up with the character before them instead of taking singing time of their own.\n\n### Fixed\n\n- **macOS**: the collapse chevron on the immersive now-playing page is clickable again — the hidden toolbar's sidebar-toggle slot was swallowing the click, so the page only answered to Escape.\n- **iOS + macOS**: translations and romaji line up with verbatim lyrics that start a few hundred milliseconds off the plain lyric grid (those lines used to show no translation), and a song that ships verbatim lyrics without a plain body shows its lyrics instead of none.\n- **iOS + macOS**: the English settings page no longer shows untranslated labels for the now-playing mode, ambient colour, desktop lyrics and update options. Thanks @danielzmeow (#145).\n\n---\n\n### 新增\n\n- **iOS + macOS**：新增「点击封面打开专辑」开关（设置 → 播放页），默认开启；关闭后播放页点击封面不再跳转到专辑。感谢 @danielzmeow（#144，关闭 #143）。\n- **iOS + macOS**：逐字歌词覆盖所有歌曲——网易云没有提供逐字时间轴的歌曲，参照 mygo-cloudmusic 的做法把每行时长按字分摊，卡拉OK 式逐字点亮不再退回整行高亮；标点和空格不再占用演唱时间，跟随前一个字点亮。\n\n### 修复\n\n- **macOS**：沉浸式播放页左上角的收起按钮恢复可点击——此前被隐藏工具栏中侧边栏开关的占位区域挡住，只能按 Esc 关闭。\n- **iOS + macOS**：逐字歌词与普通歌词时间轴相差几百毫秒时，翻译和罗马音不再丢失；只有逐字歌词、没有普通歌词的歌曲也能正常显示歌词。\n- **iOS + macOS**：英文界面的设置页补齐了播放页模式、环境色、桌面歌词、更新等选项的翻译。感谢 @danielzmeow（#145）。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.22/Kumone-iOS-0.3.22.ipa",
-          "size": 8731834,
+          "localizedDescription": "### Fixed\n\n- **iOS + macOS**: liking a song no longer fails with \"当前环境异常，已取消喜欢\" — the like, removing a song from Personal FM and song details now go through NetEase's desktop-client API as a device that stays the same across launches, the way mygo-cloudmusic does it (#81).\n\n### Improved\n\n- **iOS + macOS**: every desktop-client request — playback URLs, downloads, search, charts — now identifies this install with a device ID made once and kept, instead of a constant every install shared, which NetEase's risk control had started to refuse.\n\n---\n\n### 修复\n\n- **iOS + macOS**：点击喜欢不再提示「当前环境异常，已取消喜欢」——喜欢、私人漫游中移除歌曲和歌曲详情改走网易云桌面客户端接口，并以每次启动都相同的设备 ID 发送请求，参照 mygo-cloudmusic 的做法（#81）。\n\n### 改进\n\n- **iOS + macOS**：所有桌面客户端接口（播放地址、下载、搜索、排行榜）改用安装时生成并持久保存的设备 ID，不再所有用户共用同一个标识——网易云风控已开始拒绝这种请求。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.23/Kumone-iOS-0.3.23.ipa",
+          "size": 8731691,
           "minOSVersion": "16.0"
         }
       ]
@@ -950,11 +950,11 @@
       "tintColor": "#7c7bff",
       "versions": [
         {
-          "version": "1.6.1",
-          "date": "2026-10-27",
-          "localizedDescription": "A manga and webtoon reader for your [Suwayomi](https://suwayomi.org/) server.\n\n### ⚙️ Changes\n\n- Added **Split tall images** to Reader settings, shown only on devices with a low GPU texture limit (@aaronbamblett)\n\n### 🧩 Fixes\n\n- Fixed very tall webtoon pages looking squashed on devices with a low GPU texture limit (@aaronbamblett)\n- Fixed **More** doing nothing on medium-width desktop windows and tablets, which left **Settings** out of reach (@aaronbamblett)\n- Fixed series opened from a source's full results in Global Search showing a black screen (@aaronbamblett)\n- Fixed Quick Search leaving the reader on screen when opening a series or Global Search while reading (@aaronbamblett)\n\n## Install\n\nYou'll need a running Suwayomi server. See [Getting started](https://tsumiru.app/docs/guides/getting-started).\n\n### Mobile\n\n**Android:** download the universal APK below and open it to install. Smaller APKs for specific chip types are also attached.\n\n**iOS:** the `…-ios.ipa` below is unsigned and has to be sideloaded. Add `https://tsumiru.app/apps.json` as a source in [SideStore](https://sidestore.io/) or [AltStore](https://altstore.io/) to install it and get later releases as updates.\n\n<details>\n<summary>Which sideloading tool should I use?</summary>\n\n- **[SideStore](https://sidestore.io/)** signs and refreshes the app on the device itself, with no computer needed after setup. Best for most people.\n- **[AltStore](https://altstore.io/)** expires every 7 days and only refreshes while a computer running AltServer is switched on and on the same Wi-Fi as your phone.\n- **[TrollStore](https://ios.cfw.guide/installing-trollstore/)** installs permanently with no expiry, but only works on older iPhones and iOS versions with the required vulnerability.\n\nWith SideStore or AltStore the app is re-signed periodically, which those tools automate. There is no App Store build.\n</details>\n\n### Desktop\n\n**Windows:** download `…-windows-x64.zip`, extract it anywhere, and run `tsumiru.exe`.\n\n**macOS:** download `…-macos-x64.zip`, extract it, and move the app to Applications. If macOS blocks the first launch, approve it under System Settings → Privacy & Security.\n\n**Linux:** the Flatpak is recommended and auto-updates.\n\n```sh\nflatpak remote-add --if-not-exists tsumiru https://flatpak.tsumiru.app/index.flatpakrepo\nflatpak install tsumiru app.tsumiru.Tsumiru\n```\n\nExisting Flatpak installs keep receiving updates under `io.github.aaronbamblett.tsumiru`; no data, settings or logins move. AppImage/deb also keep that ID.\n\nFor a portable option, download `…-linux-x86_64.AppImage`, mark it executable with `chmod +x`, and run it.\n\n### Web\n\nDownload `…-web.zip` and serve its contents with any static web server.\n\n[Full documentation](https://tsumiru.app/)",
-          "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.6.1/tsumiru-v1.6.1-ios.ipa",
-          "size": 18278152,
+          "version": "1.6.2",
+          "date": "2026-10-28",
+          "localizedDescription": "A manga and webtoon reader for your [Suwayomi](https://suwayomi.org/) server.\n\n### 🚀 Improvements\n\n- Added back the chapter grid view on the series page, saved per series (@aaronbamblett)\n- Added the reason and a **Cancel** option to failed downloads (@aaronbamblett)\n- Renamed the macOS download to `…-macos-universal.zip` to make clear it runs natively on Apple Silicon and Intel (@aaronbamblett)\n\n### 🧩 Fixes\n\n- Fixed one failing chapter pausing every download and showing the app as offline on a working connection (@aaronbamblett)\n- Fixed the **Filter** button covering the selection bar when selecting titles in a source (@aaronbamblett)\n- Fixed the **Reset** and **Filter** buttons being cut off in the source filter sheet (@aaronbamblett)\n\n*Thanks to our Weblate translators Andrei Stepanov, Constantin Piber and Kisnov for the Catalan, German and Russian updates.*\n\n## Install\n\nYou'll need a running Suwayomi server. See [Getting started](https://tsumiru.app/docs/guides/getting-started).\n\n### Mobile\n\n**Android:** download the universal APK below and open it to install. Smaller APKs for specific chip types are also attached.\n\n**iOS:** the `…-ios.ipa` below is unsigned and has to be sideloaded. Add `https://tsumiru.app/apps.json` as a source in [SideStore](https://sidestore.io/) or [AltStore](https://altstore.io/) to install it and get later releases as updates.\n\n<details>\n<summary>Which sideloading tool should I use?</summary>\n\n- **[SideStore](https://sidestore.io/)** signs and refreshes the app on the device itself, with no computer needed after setup. Best for most people.\n- **[AltStore](https://altstore.io/)** expires every 7 days and only refreshes while a computer running AltServer is switched on and on the same Wi-Fi as your phone.\n- **[TrollStore](https://ios.cfw.guide/installing-trollstore/)** installs permanently with no expiry, but only works on older iPhones and iOS versions with the required vulnerability.\n\nWith SideStore or AltStore the app is re-signed periodically, which those tools automate. There is no App Store build.\n</details>\n\n### Desktop\n\n**Windows:** download `…-windows-x64.zip`, extract it anywhere, and run `tsumiru.exe`.\n\n**macOS:** download `…-macos-universal.zip`, extract it, and move the app to Applications. If macOS blocks the first launch, approve it under System Settings → Privacy & Security.\n\n**Linux:** the Flatpak is recommended and auto-updates.\n\n```sh\nflatpak remote-add --if-not-exists tsumiru https://flatpak.tsumiru.app/index.flatpakrepo\nflatpak install tsumiru app.tsumiru.Tsumiru\n```\n\nExisting Flatpak installs keep receiving updates under `io.github.aaronbamblett.tsumiru`; no data, settings or logins move. AppImage/deb also keep that ID.\n\nFor a portable option, download `…-linux-x86_64.AppImage`, mark it executable with `chmod +x`, and run it.\n\n### Web\n\nDownload `…-web.zip` and serve its contents with any static web server.\n\n[Full documentation](https://tsumiru.app/)",
+          "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.6.2/tsumiru-v1.6.2-ios.ipa",
+          "size": 18312147,
           "minOSVersion": "14.0"
         }
       ]
@@ -1065,12 +1065,12 @@
       "tintColor": "#FF0000",
       "versions": [
         {
-          "version": "21.42.4",
-          "buildVersion": "21.42.4",
-          "date": "2026-10-22",
-          "localizedDescription": "### Latest Release, ENJOY!!\r\n> [!NOTE]\r\n> - **YTUHD** is not included. 4K60HDR is available.\r\n> - if you're signed out you can sign in manually. \r\n> - no iSponsorBlock and YouSlider. (unstable in newer builds)\r\n> - Downloads working partially. depending on hardware codecs. \r\n> \r\n> - - -\r\n> #### Extra Tweaks:\r\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ builds require iOS 17+ now.",
-          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa4/YouProExtra_21.42.4_1.3.1.ipa",
-          "size": 131280986,
+          "version": "21.43.5",
+          "buildVersion": "21.43.5",
+          "date": "2026-10-27",
+          "localizedDescription": "### Latest Release, ENJOY!!\r\n> [!NOTE]\r\n> - **YTUHD** is not included. 4K60HDR is available.\r\n> - if you're signed out you can sign in manually. \r\n> - no iSponsorBlock and YouSlider. (unstable in newer builds)\r\n> - Downloads working partially. depending on hardware codecs. \r\n> - Liquid Glass Support\r\n> \r\n> - - -\r\n> #### Extra Tweaks:\r\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ builds require iOS 17+ now.",
+          "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa2/YouProExtra_21.43.5_1.3.1.ipa",
+          "size": 131707413,
           "minOSVersion": "16.0"
         }
       ]
@@ -1103,25 +1103,36 @@
   "news": [
     {
       "appID": "com.suwayomi.tachideskSorayomi",
-      "title": "Tsumiru 1.6.1 · 27 Oct 2026",
-      "identifier": "Tsumiru-release-v1.6.1",
-      "caption": "Tsumiru 1.6.1 is available.",
-      "date": "2026-10-27T07:47:54Z",
+      "title": "Tsumiru 1.6.2 · 28 Oct 2026",
+      "identifier": "Tsumiru-release-v1.6.2",
+      "caption": "Tsumiru 1.6.2 is available.",
+      "date": "2026-10-28T02:29:20Z",
       "tintColor": "#7c7bff",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Suwayomi-Tsumiru/images/news.png",
       "notify": true,
-      "url": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/tag/v1.6.1"
+      "url": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/tag/v1.6.2"
+    },
+    {
+      "appID": "com.google.ios.youtube",
+      "title": "YouProEXTRA 21.43.5 · 27 Oct 2026",
+      "identifier": "YouProEXTRA-release-youproextra-ipa2",
+      "caption": "YouProEXTRA 21.43.5 is available.",
+      "date": "2026-10-27T21:33:28Z",
+      "tintColor": "#FF0000",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
     },
     {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.22 · 27 Oct 2026",
-      "identifier": "Kumone-release-v0.3.22",
-      "caption": "Kumone 0.3.22 is available.",
-      "date": "2026-10-27T07:21:29Z",
+      "title": "Kumone 0.3.23 · 27 Oct 2026",
+      "identifier": "Kumone-release-v0.3.23",
+      "caption": "Kumone 0.3.23 is available.",
+      "date": "2026-10-27T18:43:19Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.22"
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.23"
     },
     {
       "appID": "io.nekohasekai.screensharing",
@@ -1232,17 +1243,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
       "notify": true,
       "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.2.6-2026-10-23"
-    },
-    {
-      "appID": "com.google.ios.youtube",
-      "title": "YouProEXTRA 21.42.4 · 22 Oct 2026",
-      "identifier": "YouProEXTRA-release-youproextra-ipa4",
-      "caption": "YouProEXTRA 21.42.4 is available.",
-      "date": "2026-10-22T01:08:55Z",
-      "tintColor": "#FF0000",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
-      "notify": true,
-      "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa4"
     },
     {
       "appID": "ani.baka",
