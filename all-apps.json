@@ -186,11 +186,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20261023",
-          "date": "2026-10-23",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: ARMSX2_BUILD_EERUNNER requires ENABLE_RECOMPILER_TEST_HOOKS\n- Android: add the USE_PERF_JITDUMP build option\n- Android: make pcsx2-eerunner buildable as an NDK executable\n- Android: regenerate the PGO profile on the Adreno 722 source\n- Android PGO: record internal-linkage functions by file name, not build path\n- GS: trim one native pixel off each edge when upscaling 2x or more\n- GameDB: nativeCounterDraws for Shadow of the Colossus\n- GS: nativeCounterDraws, draw colour-wrap counter draws at native resolution\n- GameDB: OPHFlagHack for Shadow of the Colossus, as NetherSX2 has it\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261022...90126bdfea7a3ffb1fd288b2f7f0ae0b033af2d6",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261023/ARMSX2-nightly-20261023-90126bdfea-iOS-arm64.ipa",
-          "size": 40376158,
+          "version": "nightly-20261028",
+          "date": "2026-10-28",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- GS: keep shader caches in RAM, one pack per game, written in the background\n- tests: compare a VU pack's age as an integer, which gtest can print on macOS\n- microVU: keep the VU program cache in RAM, one pack file per game\n- microVU: keep one program cache per options sentinel\n- COP2 macro: bound every product's multiplicands from vuClampMode 2\n- GS/Vulkan: describe the pre-rotation switch as troubleshooting, not the sideways fix\n- GS: size the shader chain, Bilinear (Sharp) and CAS against the presentation size\n- GS/Vulkan: the Lottes CRT filter scales to the target rect's own size\n- GS/Vulkan: present filters take the window position from v_tex\n- GS/Vulkan: name the Android window system in the swap chain log line\n- Android: offer the swap chain pre-rotation switch in Fixes\n- GS/Vulkan: say in the swap chain log line when pre-rotation is off by setting\n- GS/Vulkan: a setting to leave the screen's rotation to the compositor\n- Controls: a trigger resting a little above zero no longer holds L2/R2\n- DriverPacks: recognise Adreno when the DRM device is on msm_dpu\n- Discord: the status line shows the game's title instead of ARMSX2\n- Controls: a serial-less game's own controller mapping applies in game\n- Android: translate the IOP thread, VU1 compiler, auto-tune and GPU driver setup strings\n- UI: selection highlights only show while a controller is driving\n- Android: the in-game menu reopens where it was left\n- Textures: fetch catalog.json, the one texture-pack metadata file\n- Textures: read one file, the catalog, for the packs and who made them\n- Qt/Wayland: pre-rotate for the screen's rotation, read from Qt\n- GS/Vulkan: prefer an 8-bit sRGB swap chain format\n- GS/Vulkan: pre-rotate the swap chain when the surface reports a rotation\n- GS/Vulkan: turn the ImGui overlay the same way as the game image\n- Android: offer and recommend ARMSX2 Turnip on the Adreno A12 (613)\n- GS: recognise the Adreno 613 under its \"Adreno A12\" name\n- GS/Vulkan: keep a draw's textures across a mid-draw submit and restart\n- GS/Vulkan: drop the Volumetric renderer from the restart load-op comment\n- Android: getGameSerialFromFd's comment now says gzip images are read\n- Android: accept a wrapped folder-card zip with stray top-level files\n- Android: don't make the UI thread wait on an achievements server change\n- Android: drop the limiter reset from the VM shutdown handler\n- Give each library category picker row its own controller id\n- Fix missing serial and cover for gzip games in the library\n- Fix library XMB wave shader failing to compile on Mali\n- Reset every Performance setting from the Performance tab\n- Show the right empty-library message when folders are configured\n- Send keyboard keys to the search field when the system keyboard is on\n- Open the Achievements tab from the Open Achievements hotkey\n- Edit the running game's mapping from the in-game Controller Mapping\n- Load backup save states from their own file in the Save Manager\n- Refuse to create a memory card over an existing one\n- Run achievements login, logout and server changes on the CPU thread\n- Keep save folders when importing a flat folder memory card zip\n- Apply live speed changes on the CPU thread\n- Resume the VM on the CPU thread after a JNI state operation\n- GS: credit ARMSX2 Contributors in the new files' headers\n- GS/Vulkan: a restarted render pass loads what it drew\n- GS: comb-adaptive deinterlace for movies in frame mode (opt-in)\n- GunCon 2: per-port guns driven by the frontend, and the game's Set Param\n- ImGui: let the frontend show the OSD messages itself\n- CMake: build an out-of-tree frontend through EXTERNAL_FRONTEND_DIR\n- GS: map C32 dirty writes by page masks and reuse them across targets\n- GS: preserve untouched target data and map physical writes\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261023...e3c7d2102e733c35b1bb34c4cff9223341dc035a",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261028/ARMSX2-nightly-20261028-e3c7d2102e-iOS-arm64.ipa",
+          "size": 40405112,
           "minOSVersion": "17.0"
         }
       ]
@@ -484,11 +484,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.23",
-          "date": "2026-10-27",
-          "localizedDescription": "### Fixed\n\n- **iOS + macOS**: liking a song no longer fails with \"当前环境异常，已取消喜欢\" — the like, removing a song from Personal FM and song details now go through NetEase's desktop-client API as a device that stays the same across launches, the way mygo-cloudmusic does it (#81).\n\n### Improved\n\n- **iOS + macOS**: every desktop-client request — playback URLs, downloads, search, charts — now identifies this install with a device ID made once and kept, instead of a constant every install shared, which NetEase's risk control had started to refuse.\n\n---\n\n### 修复\n\n- **iOS + macOS**：点击喜欢不再提示「当前环境异常，已取消喜欢」——喜欢、私人漫游中移除歌曲和歌曲详情改走网易云桌面客户端接口，并以每次启动都相同的设备 ID 发送请求，参照 mygo-cloudmusic 的做法（#81）。\n\n### 改进\n\n- **iOS + macOS**：所有桌面客户端接口（播放地址、下载、搜索、排行榜）改用安装时生成并持久保存的设备 ID，不再所有用户共用同一个标识——网易云风控已开始拒绝这种请求。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.23/Kumone-iOS-0.3.23.ipa",
-          "size": 8731691,
+          "version": "0.3.24",
+          "date": "2026-10-28",
+          "localizedDescription": "### Fixed\n\n- **iOS**: the mini player briefly lost its layout after leaving the Now Playing screen — the accessory placement reads nil for a few seconds while the zoom transition returns it to the tab bar, and the last reported placement is now kept through that interval.\n\n### Improved\n\n- **iOS + macOS**: every request is now routed through NetEase's eapi as the desktop client, as mygo-cloudmusic does; phone-number login and following an artist answer -460 (检测到您的网络环境存在风险) through the eapi, so those calls and the SMS code go through the plain web API, and the QR login uses type 3 with the /nuser/account/get account lookup, as the desktop client does.\n\n---\n\n### 修复\n\n- **iOS**：从正在播放页面返回后，迷你播放器会短暂丢失布局——缩放过渡回到标签栏的几秒内 accessory 位置读取为 nil，现在这段时间内保留上一次上报的位置。\n\n### 改进\n\n- **iOS + macOS**：所有请求改走网易云的 eapi 并以桌面客户端身份发送，参照 mygo-cloudmusic 的做法；手机号登录和关注歌手在 eapi 下返回 -460（检测到您的网络环境存在风险），这几个调用和短信验证码改走普通 Web API，扫码登录改用 type 3 并通过 /nuser/account/get 查询账号，与桌面客户端一致。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.24/Kumone-iOS-0.3.24.ipa",
+          "size": 8727909,
           "minOSVersion": "16.0"
         }
       ]
@@ -881,11 +881,11 @@
       "tintColor": "#F09080",
       "versions": [
         {
-          "version": "1.0.0-preview.2",
-          "date": "2026-10-10",
-          "localizedDescription": "本次 iOS 实验预览加入双音源搜索、最高音质优先和 QQ / 网易云公开歌单迁移，并统一导入界面的应用风格。\n\n### 功能与修复\n\n- 完善 QQ 音乐搜索请求，恢复通过 ChKSz 获取网易云歌曲搜索、歌词、播放及公开歌单数据。\n- 两种音源优先请求母带音质；缺少可用结果时按同一歌曲 ID 逐级降档，服务错误保留明确失败提示。\n- iOS 主页支持搜索框与遮罩交互，保留当前页面上下文。\n- 支持粘贴 QQ 音乐、网易云音乐公开歌单的分享链接或 ID，先预览，再按原顺序合并到个人资料库并去重；读取或保存失败保留已有数据。\n- 歌单导入复用现有主题、歌曲行与弹层组件；Mac 面板接入同一导入能力和音源策略。\n- 明确音频中断、输出切换、静音提示及应用恢复通知在主队列上的隔离，消除设备 Release 构建警告。\n- 更新双语 README、音源配置说明及第三方代码声明，移除当前分发代码中的旧网易客户端适配器并保留历史许可记录。\n\n### 分发说明\n\n- 提供 iOS 17+、arm64 的未签名 IPA、SHA-256 和安装说明；App、Widget 与 Mac 源码构建版本统一为 1.0 (22)。\n- 公开 IPA 不含个人 API 凭据，QQ 播放及网易云相关接口需要使用自己的 ChKSz Key 从源码构建。\n- 本次提供 iOS 安装产物；既有 Mac 实验包保留在 v1.0.0-preview.1，最新 Mac 功能可从共享工程构建。\n- 预览版本仍受第三方服务可用性影响，尚未完成本轮 iPhone 真机验收。\n\n### 下载与安装\n\n- 下载 `Sonar-1.0-build22-unsigned.ipa`、同名 `.sha256` 和 `INSTALL-iOS.md`。\n- 在下载目录运行 `shasum -a 256 -c Sonar-1.0-build22-unsigned.ipa.sha256`。\n- IPA 未签名，安装前需自行签名 App 与 Widget，并配置匹配的描述文件、Bundle ID 和 App Group。\n- 公开包不含个人 API Key；QQ 播放以及网易云相关接口需使用自己的 ChKSz Key 从源码构建，当前没有 App 内 Key 编辑入口。\n\n### 验证\n\n- 从仅含 174 个已跟踪文件的副本构建设备 Release 归档，0 警告、0 错误，无本地测试或 Agent 框架依赖。\n- 最终 IPA 已独立解包核对：App / Widget 1.0 (22)、arm64、iOS 17.0+、无签名材料、凭据配置为空，音源资源与发布提交一致；ZIP 与 SHA-256 校验通过。\n- 本次主队列通知隔离修复的 5 项后台音频通知回归通过，0 失败。功能实现阶段的 51 项回归，以及样式调整后的 17 项导入与备份回归均通过。\n- 本轮尚未完成真机 iPhone 运行验收；第三方接口仍可能返回 503。\n\n### English\n\nThis iOS preview adds QQ / NetEase song search, highest-quality-first parsing, an in-place search overlay, and public-playlist migration with preview and deduplication. The unsigned IPA targets iPhone, iOS 17+, arm64, version 1.0 (22). Sign both the app and widget before installation. No personal API credentials are included: QQ playback and NetEase APIs require your own ChKSz key supplied through a source build. See `INSTALL-iOS.md` and the updated README. The existing Mac preview remains at v1.0.0-preview.1; current Mac features are available from source.\n\nFull changes: https://github.com/can4hou6joeng4/Sonar/compare/v1.0.0-preview.1...v1.0.0-preview.2",
-          "downloadURL": "https://github.com/can4hou6joeng4/Sonar/releases/download/v1.0.0-preview.2/Sonar-1.0-build22-unsigned.ipa",
-          "size": 2717249,
+          "version": "1.0.0-preview.5",
+          "date": "2026-10-29",
+          "localizedDescription": "本次发布 iOS 未签名预览包 **1.0 (27)**，为源码结构整理后的例行预览构建，未改变应用功能行为。macOS 安装包继续使用 v1.0.0。\n\n### 下载与安装\n\n- 下载 IPA、SHA-256 与 `INSTALL-iOS.md`，核对校验值后自行签名。\n- 包含 Widget 扩展；App、Widget 与 App Group 须按所用签名工具配置。\n- 公开包不含个人 ChKSz Key、网易云登录 Cookie 或签名材料。在线功能需要自己的凭据。\n\n### 验证范围\n\n公开包从仅含 Git 已跟踪文件的独立目录进行 iOS Release 构建，凭据字段留空。共享工程构建与本地回归测试通过；上一版引入的搜索框自动重新聚焦策略已在真实设备上用微信输入法验证首次呼出可正常输入。VPhone 的 WidgetKit 限制见安装说明。\n\n### 更新记录\n\n- iOS App 与 Widget 构建号同步为 **1.0 (27)**；本次为源码结构调整后的预览包，未改变应用功能行为，macOS 安装包沿用 v1.0.0。\n- 共享源码按职责归组：新增 `Sonar/App`、`Sonar/Core`、`Sonar/Artwork`、`Sonar/Library`、`Sonar/Playback`、`Sonar/MusicSource`；原 `Sonar/NetEase` 并入 `MusicSource`，`ThemeState.swift` 移入 `DesignSystem`。文件内容未改动，仅位置调整。\n- 合并重复的 `script/` 与 `scripts/` 目录，统一为 `scripts/`，本机调试脚本更名为 `scripts/build-and-run.sh`。\n- 本地录制素材与设计稿目录不再纳入版本控制（`assets/promo-capture/`、`design/`）。\n- 清理搜索框键盘诊断代码：移除无引用的诊断浮层与设置键，键盘事件改为写入系统日志。\n\n此前累计变更见 [CHANGELOG](https://github.com/can4hou6joeng4/Sonar/blob/main/CHANGELOG.md)。",
+          "downloadURL": "https://github.com/can4hou6joeng4/Sonar/releases/download/v1.0.0-preview.5/Sonar-1.0-build27-unsigned.ipa",
+          "size": 2936112,
           "minOSVersion": "17.0"
         }
       ]
@@ -1102,6 +1102,39 @@
   ],
   "news": [
     {
+      "appID": "cn.bobochang.sonar",
+      "title": "Sonar 1.0.0-preview.5 · 29 Oct 2026",
+      "identifier": "Sonar-release-v1.0.0-preview.5",
+      "caption": "Sonar 1.0.0-preview.5 is available.",
+      "date": "2026-10-29T03:46:48Z",
+      "tintColor": "#F09080",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/news.png",
+      "notify": true,
+      "url": "https://github.com/can4hou6joeng4/Sonar/releases/tag/v1.0.0-preview.5"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261028 · 28 Oct 2026",
+      "identifier": "ARMSX2-release-nightly-20261028",
+      "caption": "ARMSX2 nightly-20261028 is available.",
+      "date": "2026-10-28T14:04:50Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261028"
+    },
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.24 · 28 Oct 2026",
+      "identifier": "Kumone-release-v0.3.24",
+      "caption": "Kumone 0.3.24 is available.",
+      "date": "2026-10-28T12:22:49Z",
+      "tintColor": "#C9A227",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.24"
+    },
+    {
       "appID": "com.suwayomi.tachideskSorayomi",
       "title": "Tsumiru 1.6.2 · 28 Oct 2026",
       "identifier": "Tsumiru-release-v1.6.2",
@@ -1122,17 +1155,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
       "notify": true,
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
-    },
-    {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.23 · 27 Oct 2026",
-      "identifier": "Kumone-release-v0.3.23",
-      "caption": "Kumone 0.3.23 is available.",
-      "date": "2026-10-27T18:43:19Z",
-      "tintColor": "#C9A227",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.23"
     },
     {
       "appID": "io.nekohasekai.screensharing",
@@ -1210,17 +1232,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
       "notify": true,
       "url": "https://github.com/open-ani/animeko/releases/tag/v6.4.0"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20261023 · 23 Oct 2026",
-      "identifier": "ARMSX2-release-nightly-20261023",
-      "caption": "ARMSX2 nightly-20261023 is available.",
-      "date": "2026-10-23T14:10:10Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261023"
     },
     {
       "appID": "com.example.kazumi",
@@ -1364,17 +1375,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
       "notify": true,
       "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.9"
-    },
-    {
-      "appID": "cn.bobochang.sonar",
-      "title": "Sonar 1.0.0-preview.2 · 10 Oct 2026",
-      "identifier": "Sonar-release-v1.0.0-preview.2",
-      "caption": "Sonar 1.0.0-preview.2 is available.",
-      "date": "2026-10-10T18:38:30Z",
-      "tintColor": "#F09080",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/news.png",
-      "notify": true,
-      "url": "https://github.com/can4hou6joeng4/Sonar/releases/tag/v1.0.0-preview.2"
     },
     {
       "appID": "com.example.PiliPlus",
