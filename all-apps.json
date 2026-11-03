@@ -113,11 +113,11 @@
       "tintColor": "#124EB3",
       "versions": [
         {
-          "version": "2.6.6",
-          "date": "2026-10-26",
-          "localizedDescription": "### 🔄 更新内容\n\n## 2.6.6 更新\n\n- 这是热修版本，修复桌面端视频解析时切换视频源出现的闪退问题，具体的更新内容在 设置->关于->更新信息页面查看2.6.5更新信息\n\n---\n\n### 📦 下载\n- 每个设备的安装包后缀: ``苹果手机(.ipa)、 安卓手机(.apk)、windows电脑(.zip或.exe)、mac电脑(.dmg)、linux电脑(.tar.gz或.deb)``\n- android分多个包: ``v7a(32位架构旧手机或TV)、arm64(新手机,推荐用这个)、x86(模拟器) ``\n- windows分多个包: ``.zip(解压直接使用)、.exe(安装后使用，推荐用这个) ``",
-          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.6/AnimeFlow-ios-2.6.6.ipa",
-          "size": 29290748,
+          "version": "2.6.7",
+          "date": "2026-11-02",
+          "localizedDescription": "### 🔄 更新内容\r\n\r\n## 2.6.7 更新\r\n\r\n## 新增\r\n\r\n- 播放页竖屏时播放器右上角添加更多功能按钮 #118\r\n- 页面标题栏和导航栏支持磨砂玻璃风格(可在页面设置中关闭恢复旧版风格)\r\n- 新增设备原生播放器内核(支持Android、ios、Macos)，可在视频设置中切换\r\n- 规则下载支持更多线路选择\r\n- 应用内版本更新支持镜像加速选择(下个版本生效)\r\n\r\n## 优化\r\n\r\n- 优化推荐、排行榜、用户收藏页面大屏时滚动卡顿问题\r\n- 播放器缓冲速度不在使用设备实时网速，改用真是的视频缓冲速度(仅支持mpv内核)\r\n\r\n## 修复\r\n\r\n- 修复封面下载失败问题 #121\r\n- 修复mdk内核每次快退视频进度时都需要重新缓冲问题\r\n- 标准化ios包名(需要手动删除旧应用) #117\r\n\r\n---\r\n\r\n### 📦 下载\r\n- 每个设备的安装包后缀: ``苹果手机(.ipa)、 安卓手机(.apk)、windows电脑(.zip或.exe)、mac电脑(.dmg)、linux电脑(.tar.gz或.deb)``\r\n- android分多个包: ``v7a(32位架构旧手机或TV)、arm64(新手机,推荐用这个)、x86(模拟器) ``\r\n- windows分多个包: ``.zip(解压直接使用)、.exe(安装后使用，推荐用这个) ``",
+          "downloadURL": "https://github.com/openAnimeFlow/AnimeFlow/releases/download/v2.6.7/AnimeFlow-ios-2.6.7.ipa",
+          "size": 29378160,
           "minOSVersion": "13.0"
         }
       ]
@@ -484,11 +484,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.24",
-          "date": "2026-10-28",
-          "localizedDescription": "### Fixed\n\n- **iOS**: the mini player briefly lost its layout after leaving the Now Playing screen — the accessory placement reads nil for a few seconds while the zoom transition returns it to the tab bar, and the last reported placement is now kept through that interval.\n\n### Improved\n\n- **iOS + macOS**: every request is now routed through NetEase's eapi as the desktop client, as mygo-cloudmusic does; phone-number login and following an artist answer -460 (检测到您的网络环境存在风险) through the eapi, so those calls and the SMS code go through the plain web API, and the QR login uses type 3 with the /nuser/account/get account lookup, as the desktop client does.\n\n---\n\n### 修复\n\n- **iOS**：从正在播放页面返回后，迷你播放器会短暂丢失布局——缩放过渡回到标签栏的几秒内 accessory 位置读取为 nil，现在这段时间内保留上一次上报的位置。\n\n### 改进\n\n- **iOS + macOS**：所有请求改走网易云的 eapi 并以桌面客户端身份发送，参照 mygo-cloudmusic 的做法；手机号登录和关注歌手在 eapi 下返回 -460（检测到您的网络环境存在风险），这几个调用和短信验证码改走普通 Web API，扫码登录改用 type 3 并通过 /nuser/account/get 查询账号，与桌面客户端一致。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.24/Kumone-iOS-0.3.24.ipa",
-          "size": 8727909,
+          "version": "0.3.26",
+          "date": "2026-11-03",
+          "localizedDescription": "### Added\n\n- **macOS**: desktop lyrics now sing along — with 逐字歌词（卡拉OK） on, the floating line lights up character by character from the song's word timings, the same wipe as the now-playing page; it freezes while paused and keeps running with the main window hidden (#174).\n\n### Improved\n\n- **macOS**: the About window credits MOE AI LLC.\n\n---\n\n### 新增\n\n- **macOS**：桌面歌词支持逐字卡拉 OK——开启「逐字歌词（卡拉OK）」后，悬浮歌词按歌曲的逐字时间逐个亮起，与播放页同一套扫光；暂停时停住，主窗口隐藏时照常运行（#174）。\n\n### 改进\n\n- **macOS**：关于窗口的版权署名改为 MOE AI LLC。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.26/Kumone-iOS-0.3.26.ipa",
+          "size": 4001101,
           "minOSVersion": "16.0"
         }
       ]
@@ -694,12 +694,12 @@
       "tintColor": "#73b480",
       "versions": [
         {
-          "version": "2.2.0",
-          "buildVersion": "5580",
-          "date": "2026-11-01",
-          "localizedDescription": "设置选项调整\r\n支持切换`番剧`/`剧集` PV\r\npgc/pugv api 迁移至 ogv\r\n`我的订阅`详情默认倒序显示\r\n相关推荐过滤屏蔽黑名单 #3276\r\n用户主页支持显示粉丝勋章 #3202\r\n键盘方向键支持长按持续回退 #3379\r\n同步空降助手新片段类型`惊吓` #3368\r\n桌面端进度条支持鼠标悬停预览视频画面\r\n增加桌面端视频底栏时长字体大小 #3372\r\n增加滚轮调节音量开关 #3340 by @Hdy08\r\n侧边栏支持隐藏文字 #3343 by @illumiat\r\n支持`,`/`.`键逐档切换倍速 #3294 by @lzblack\r\n重构 Linux 内嵌 WebView #3423 by @moluopro\r\nLinux 构建依赖调整 #3277 by @Tobiichi-Origuchi\r\nLinux 支持多媒体控制 #3355 by @Tobiichi-Origuchi\r\nLinux 支持检测网络类型 #3164 #3374 by @Tobiichi-Origuchi\r\n`我的`页面支持显示`观看记录`、`稍后再看`、`我的订阅`\r\n支持自定义`buvid` #3253 #3349 co-by @My-Responsitories\r\n缓存面板支持选择音质，修复音质选取问题 #3309 co-by @azkbzxf\r\n支持导出/导入所有数据到压缩包 #3248 by @nlsdt #3313 by @My-Responsitories\r\n其他调整 #3349 by @My-Responsitories\r\n构建脚本不再改写用户的全局 Git 配置 #3360 by @AmCh-Q\r\n\r\n适配更多专栏类型\r\n支持显示 UP 专栏文集 #3316\r\n\r\n首页直播置顶分类标签 #3363\r\n增加全屏 SC 是否显示/不透明度/缩放设置\r\n直播与视频的缓冲区大小区分开 #3308 by @azkbzxf\r\n\r\n支持查看折叠评论 #2391\r\n动态/视频评论 Scheme 改为跳转源页面后定位评论\r\n增加过滤复制视频介绍评论选项 #3312 by @My-Responsitories\r\n增加屏蔽`@`类型评论选项 #2808 #3241 co-by @My-Responsitories\r\n\r\n修复 bug\r\n修复 #3323 #3385\r\n修复专栏跳转评论后内容倒序显示 #3289\r\n修复长用户名被截断 #3359 by @ChenPeeer\r\n修复安卓启动时状态栏颜色 #3332 by @EX3124\r\n修复 Wayland 硬解黑屏 #3261 by @FeiLiuEM\r\n修复 pgc/pugv 分享链接 #3291 by @Starfallan\r\n修复安卓 17 投屏 #2897 #3365 by @TG-Twilight\r\n修复迁移托盘依赖 Linux 菜单显示问题 #3263 by @FeiLiuEM\r\n修复保留 Akamai 原始播放链接及签名参数 #3380 by @aierlma\r\n修复 OriginOS(vivo) 音量条无法二次按下自动收起 #3373 by @SekiBankiYa",
-          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0/PiliPlus_ios_2.2.0%2B5580.ipa",
-          "size": 24921912,
+          "version": "2.2.0.2",
+          "buildVersion": "5598",
+          "date": "2026-11-03",
+          "localizedDescription": "更新投屏依赖 https://github.com/bggRGjQaUbCoE/PiliPlus/issues/2680#issuecomment-6597938908\r\n修复部分视频评论显示不全 #3458\r\n修复播放课堂视频 #3454 by @ucxn\r\n修复 macOS 关闭系统标题栏后无法拖动 #3453 by @NalCol\r\n修复点赞弹幕跳转未留提前量，导致跳转到弹幕时无法加载 #3459 by @Rim-World\r\nChromeOS(ARC) 上不再主动请求屏幕方向，由系统决定窗口方向 #3406 co-by @selcarpa",
+          "downloadURL": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/download/2.2.0.2/PiliPlus_ios_2.2.0%2B5598.ipa",
+          "size": 24933082,
           "minOSVersion": "14.0"
         }
       ]
@@ -1102,6 +1102,39 @@
   ],
   "news": [
     {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.26 · 03 Nov 2026",
+      "identifier": "Kumone-release-v0.3.26",
+      "caption": "Kumone 0.3.26 is available.",
+      "date": "2026-11-03T11:01:25Z",
+      "tintColor": "#C9A227",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.26"
+    },
+    {
+      "appID": "com.example.PiliPlus",
+      "title": "PiliPlus 2.2.0.2 · 03 Nov 2026",
+      "identifier": "PiliPlus-release-2.2.0.2",
+      "caption": "PiliPlus 2.2.0.2 is available.",
+      "date": "2026-11-03T07:43:02Z",
+      "tintColor": "#73b480",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.0.2"
+    },
+    {
+      "appID": "com.ligg.anime_flow",
+      "title": "AnimeFlow 2.6.7 · 02 Nov 2026",
+      "identifier": "AnimeFlow-release-v2.6.7",
+      "caption": "AnimeFlow 2.6.7 is available.",
+      "date": "2026-11-02T19:29:02Z",
+      "tintColor": "#124EB3",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
+      "notify": true,
+      "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.6.7"
+    },
+    {
       "appID": "com.aoshuang.manicemu",
       "title": "ManicEMU 2.0.2 · 02 Nov 2026",
       "identifier": "ManicEMU-release-v2.0.2",
@@ -1144,17 +1177,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
       "notify": true,
       "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.8"
-    },
-    {
-      "appID": "com.example.PiliPlus",
-      "title": "PiliPlus 2.2.0 · 01 Nov 2026",
-      "identifier": "PiliPlus-release-2.2.0",
-      "caption": "PiliPlus 2.2.0 is available.",
-      "date": "2026-11-01T07:33:43Z",
-      "tintColor": "#73b480",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PiliPlus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/bggRGjQaUbCoE/PiliPlus/releases/tag/2.2.0"
     },
     {
       "appID": "com.github.cyrilpeng.veneranext",
@@ -1234,17 +1256,6 @@
       "url": "https://github.com/can4hou6joeng4/Sonar/releases/tag/v1.0.0-preview.5"
     },
     {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.24 · 28 Oct 2026",
-      "identifier": "Kumone-release-v0.3.24",
-      "caption": "Kumone 0.3.24 is available.",
-      "date": "2026-10-28T12:22:49Z",
-      "tintColor": "#C9A227",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.24"
-    },
-    {
       "appID": "com.google.ios.youtube",
       "title": "YouProEXTRA 21.43.5 · 27 Oct 2026",
       "identifier": "YouProEXTRA-release-youproextra-ipa2",
@@ -1265,17 +1276,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png",
       "notify": true,
       "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.4"
-    },
-    {
-      "appID": "com.ligg.anime_flow",
-      "title": "AnimeFlow 2.6.6 · 26 Oct 2026",
-      "identifier": "AnimeFlow-release-v2.6.6",
-      "caption": "AnimeFlow 2.6.6 is available.",
-      "date": "2026-10-26T08:58:38Z",
-      "tintColor": "#124EB3",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
-      "notify": true,
-      "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.6.6"
     },
     {
       "appID": "org.animeko.animeko",
