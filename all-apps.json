@@ -88,12 +88,12 @@
       "tintColor": "#0077B6",
       "versions": [
         {
-          "version": "5.2.3",
-          "buildVersion": "1020",
-          "date": "2026-10-21",
-          "localizedDescription": "- 支持绑定、更换找回邮箱，通过邮箱验证码修改或找回密码；已填写 QQ 的账户可直接使用对应 QQ 邮箱找回。\r\n- 优化自动搜源与换源逻辑，减少重复加载，修复短标题误匹配及历史匹配记录可能关联到其他作品的问题。\r\n- 优化媒体代理、播放鉴权与 HLS 处理，更新部分内置源，改善播放兼容性与去广告处理。\r\n- 优化弹幕加载，减少重复请求，修复部分弹幕颜色解析错误，以及切集后旧弹幕加载结果覆盖当前内容的问题。\r\n- 调整番剧详情、评分、角色、收藏和评论界面，优化桌面播放器侧栏与剧集缩略图展示。\r\n- 公告与置顶评论支持关闭后记住状态，内容更新后再次提示。\r\n- 优化 Bangumi 数据缺失及请求异常的处理，完善网络设置说明。\r\n- 修复 Windows 首次构建可能遗漏原生依赖的问题，并增加发行包依赖校验。\r\n**Full Changelog**: https://github.com/AniBakaBaka/AniBaka/compare/5.2.2+1017...5.2.3+1020",
-          "downloadURL": "https://github.com/AniBakaBaka/AniBaka/releases/download/5.2.3%2B1020/baka-5.2.3%2B1020-ios-unsigned.ipa",
-          "size": 23775885,
+          "version": "5.2.4",
+          "buildVersion": "1101",
+          "date": "2026-11-05",
+          "localizedDescription": "### 新增\r\n\r\n- Windows 新增 AnimeJaNai 实时超分：播放器底栏一键开关，可与 Anime4K、DLSS 叠加；支持 TensorRT / DirectML 后端自动选择，提供质量、均衡、性能三档与原版、Sharp1 两种模型，附细节锐化、亮度、对比度、饱和度、伽马调节及原画/超分同帧对比。\r\n- AnimeJaNai 可选 RIFE 补帧：支持 2×、3×、4× 倍率，提供完整（原分辨率处理）与快速（最高 540p 处理）两种方案。\r\n- 新增“画质设置”面板，整合 AnimeJaNai 与 DLSS 全部选项；播放器内长按增强按钮或进入“实验室”页面均可打开，运行状态、安装进度与诊断信息集中展示。\r\n- Windows 播放器底栏常显 Anime4K / AnimeJaNai / DLSS 开关，点按切换、长按进入画质设置，无需先在实验室开启。\r\n- 评论区改版：正文按 Markdown / BBCode 渲染，评论中的时间点自动识别为跳转链接，点击可seek到对应进度或指定集数；表情贴图正常显示，加载时改用骨架占位。\r\n\r\n### 优化\r\n\r\n- 更新优化内置源规则\r\n- DLSS 与 AnimeJaNai 运行库改由组织维护的 media-kit fork 统一打包，应用内不再捆绑原生桥接代码，减小安装体积。\r\n- 充分优化日志系统\r\n- 优化了一些小细节\r\n\r\n### 使用说明\r\n\r\n- AnimeJaNai 仅支持 Windows；首次启用需联网下载运行库与模型（补帧组件约 441 MiB），下载过程可取消，TensorRT 后端首次使用需编译引擎。\r\n- 后端设为“自动”时，支持的 NVIDIA 显卡优先使用 TensorRT，其余显卡使用 DirectML。\r\n- AnimeJaNai 模型按 CC BY-NC-SA 4.0 分发，仅限非商业用途。\r\n\r\n**Full Changelog**: https://github.com/AniBakaBaka/AniBaka/compare/5.2.3+1020...5.2.4+1101",
+          "downloadURL": "https://github.com/AniBakaBaka/AniBaka/releases/download/5.2.4%2B1101/baka-5.2.4%2B1101-ios-unsigned.ipa",
+          "size": 23708307,
           "minOSVersion": "13.0"
         }
       ]
@@ -441,11 +441,11 @@
       "tintColor": "#4CAF50",
       "versions": [
         {
-          "version": "2.4.2",
-          "date": "2026-10-23",
-          "localizedDescription": "- 修复部分地区规则仓库无法访问的问题",
-          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.2/Kazumi_ios_2.4.2_no_sign.ipa",
-          "size": 30521004,
+          "version": "2.4.3",
+          "date": "2026-11-04",
+          "localizedDescription": "- 新增自定义规则仓库支持 (#2485) (@chendianshuiyin)\r\n- 优化远程投屏体验 (#2797 #2798) (@DSplay123)\r\n- 新增 iPhone Duo 内屏支持 (@Predidit)\r\n- 修复批量下载时排队剧集没有缓存弹幕的问题 (#2780) (@wanxinlei1)\r\n- 修复退出后系统托盘图标残留的问题 (#2762) (@fgfsgsgvo)\r\n- 修复 deb 软件包在精简安装的发行版上无法启动的问题 (#2755) (@Huayuluoshi)\r\n- 优化追番页切换分类时的流畅度 (@Predidit)\r\n- 文档更新 (@Predidit)",
+          "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.3/Kazumi_ios_2.4.3_no_sign.ipa",
+          "size": 30439714,
           "minOSVersion": "13.0"
         }
       ]
@@ -484,11 +484,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.26",
-          "date": "2026-11-03",
-          "localizedDescription": "### Added\n\n- **macOS**: desktop lyrics now sing along — with 逐字歌词（卡拉OK） on, the floating line lights up character by character from the song's word timings, the same wipe as the now-playing page; it freezes while paused and keeps running with the main window hidden (#174).\n\n### Improved\n\n- **macOS**: the About window credits MOE AI LLC.\n\n---\n\n### 新增\n\n- **macOS**：桌面歌词支持逐字卡拉 OK——开启「逐字歌词（卡拉OK）」后，悬浮歌词按歌曲的逐字时间逐个亮起，与播放页同一套扫光；暂停时停住，主窗口隐藏时照常运行（#174）。\n\n### 改进\n\n- **macOS**：关于窗口的版权署名改为 MOE AI LLC。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.26/Kumone-iOS-0.3.26.ipa",
-          "size": 4001101,
+          "version": "0.3.28",
+          "date": "2026-11-04",
+          "localizedDescription": "### Improved\n\n- **macOS**: the bundle identifier is now `sb.moe.kumone`. After updating, settings and caches start fresh, the first-launch check appears once more, the iCloud sync passphrase has to be entered again and system permissions (such as notifications) need granting again; sign-in and offline downloads carry over.\n- **iOS**: the bundle identifier is now `sb.moe.kumone-ios`. AltStore and other sideloading tools install it as a separate app; once it is set up, the old one can be deleted.\n\n---\n\n### 改进\n\n- **macOS**：bundle ID 改为 `sb.moe.kumone`。更新后设置和缓存会重置，需要再做一次首次启动验证、重新输入 iCloud 同步口令，并重新授予通知等系统权限；登录状态和离线下载保留。\n- **iOS**：bundle ID 改为 `sb.moe.kumone-ios`。AltStore 等侧载工具会把它装成一个新的 App，设置好之后可以删除旧版。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.28/Kumone-iOS-0.3.28.ipa",
+          "size": 4037666,
           "minOSVersion": "16.0"
         }
       ]
@@ -1068,7 +1068,7 @@
           "version": "21.44.4",
           "buildVersion": "21.44.4",
           "date": "2026-11-03",
-          "localizedDescription": "### Latest Release, ENJOY!!\r\n> [!NOTE]\r\n> - **YTUHD** is not included. 4K60HDR is available.\r\n> - if you're signed out you can sign in manually. \r\n> - no iSponsorBlock and YouSlider. (unstable in newer builds)\r\n> - Downloads working partially. depending on hardware codecs. \r\n> - Liquid Glass Support\r\n> \r\n> - - -\r\n> #### Extra Tweaks:\r\n> - `YouPip` `YouSlider` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ builds require iOS 17+ now.",
+          "localizedDescription": "### Latest Release, ENJOY!!\r\n> [!NOTE]\r\n> - **YTUHD** is not included. 4K60HDR is available.\r\n> - if you're signed out you can sign in manually. \r\n> - no iSponsorBlock and YouSlider. (unstable in newer builds)\r\n> - Downloads working partially. depending on hardware codecs. \r\n> - Liquid Glass Support\r\n> \r\n> - - -\r\n> #### Extra Tweaks:\r\n> - `YouPip` `YTweaks` `YouSpeed` `YouMute` `YouLoop` `YTABConfig` `YouQuality` `YouChooseQuality`  `YouGetCaption` \r\n> -  `Return-YouTube-Dislikes` `DontEatMyContent` `Open in YouTube (Safari Extension)` `Gonerino` \r\n\r\n> [!WARNING]\r\n> - 21.34.3+ builds require iOS 17+ now.",
           "downloadURL": "https://github.com/mrdrvt99/YouProEXTRA/releases/download/youproextra-ipa3/YouProExtra_21.44.4_1.3.1.ipa",
           "size": 132497784,
           "minOSVersion": "16.0"
@@ -1102,6 +1102,39 @@
   ],
   "news": [
     {
+      "appID": "ani.baka",
+      "title": "AniBaka 5.2.4 · 05 Nov 2026",
+      "identifier": "AniBaka-release-5.2.4+1101",
+      "caption": "AniBaka 5.2.4 is available.",
+      "date": "2026-11-05T04:35:12Z",
+      "tintColor": "#0077B6",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/news.png",
+      "notify": true,
+      "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.2.4+1101"
+    },
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.28 · 04 Nov 2026",
+      "identifier": "Kumone-release-v0.3.28",
+      "caption": "Kumone 0.3.28 is available.",
+      "date": "2026-11-04T13:13:45Z",
+      "tintColor": "#C9A227",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.28"
+    },
+    {
+      "appID": "com.example.kazumi",
+      "title": "Kazumi 2.4.3 · 04 Nov 2026",
+      "identifier": "Kazumi-release-2.4.3",
+      "caption": "Kazumi 2.4.3 is available.",
+      "date": "2026-11-04T12:12:33Z",
+      "tintColor": "#4CAF50",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.3"
+    },
+    {
       "appID": "com.armsx2.ios",
       "title": "ARMSX2 nightly-20261104 · 04 Nov 2026",
       "identifier": "ARMSX2-release-nightly-20261104",
@@ -1122,17 +1155,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
       "notify": true,
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa3"
-    },
-    {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.26 · 03 Nov 2026",
-      "identifier": "Kumone-release-v0.3.26",
-      "caption": "Kumone 0.3.26 is available.",
-      "date": "2026-11-03T11:01:25Z",
-      "tintColor": "#C9A227",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.26"
     },
     {
       "appID": "com.example.PiliPlus",
@@ -1287,28 +1309,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Animeko/images/news.png",
       "notify": true,
       "url": "https://github.com/open-ani/animeko/releases/tag/v6.4.0"
-    },
-    {
-      "appID": "com.example.kazumi",
-      "title": "Kazumi 2.4.2 · 23 Oct 2026",
-      "identifier": "Kazumi-release-2.4.2",
-      "caption": "Kazumi 2.4.2 is available.",
-      "date": "2026-10-23T09:43:33Z",
-      "tintColor": "#4CAF50",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.2"
-    },
-    {
-      "appID": "ani.baka",
-      "title": "AniBaka 5.2.3 · 21 Oct 2026",
-      "identifier": "AniBaka-release-5.2.3+1020",
-      "caption": "AniBaka 5.2.3 is available.",
-      "date": "2026-10-21T11:26:14Z",
-      "tintColor": "#0077B6",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/news.png",
-      "notify": true,
-      "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.2.3+1020"
     },
     {
       "appID": "com.sean.roamcontrol",
