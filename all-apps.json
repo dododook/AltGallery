@@ -603,11 +603,11 @@
       "tintColor": "#8050F0",
       "versions": [
         {
-          "version": "1.3.0",
-          "date": "2026-10-30",
-          "localizedDescription": "MoviePilot Release\n\n- Version: 1.3.0\n- Build Date: 2026-10-30\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* fix(dashboard): 首页媒体库卡片去掉重复信息，改单图封面 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/146\n* feat(android): 新增订阅日历桌面小组件 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/157\n* chore(version): update version to 1.3.0 in pubspec.yaml by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/160\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.2.7-2026-10-30...release-v1.3.0-2026-10-30",
-          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.3.0-2026-10-30/ios-v1.3.0-2026-10-30.ipa",
-          "size": 37444749,
+          "version": "1.3.1",
+          "date": "2026-11-06",
+          "localizedDescription": "MoviePilot Release\n\n- Version: 1.3.1\n- Build Date: 2026-11-06\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* fix(android): 订阅日历小组件去除重复时间文案并适配更多尺寸 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/163\n* 适配 MoviePilot v3 与多服务器:信封按形状解封、设置原生类型、媒体库按可用服务器加载 by @anlan-home in https://github.com/singleton-altman/MoviePilotLite/pull/154\n* Dev by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/164\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.3.0-2026-11-06...release-v1.3.1-2026-11-06",
+          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.3.1-2026-11-06/ios-v1.3.1-2026-11-06.ipa",
+          "size": 37490597,
           "minOSVersion": "15.0"
         }
       ]
@@ -1090,17 +1090,39 @@
       "tintColor": "#0084ff",
       "versions": [
         {
-          "version": "0.9.8",
-          "date": "2026-11-01",
-          "localizedDescription": "进一步处理闪烁跳动；ios26+ 放了更多的液态玻璃🎉\r\n### changes\r\n* feat(ios): 统一 iOS 26 Liquid Glass 导航与悬浮控件 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/172\r\n* fix(animation): 稳定正文渐显与标题接力，减少页面切换闪烁 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/174\r\n* fix(list): 稳定分页与卡片复用，完善个人主页交互 by @huamurui @NobetaSena in https://github.com/huamurui/zhihu-minus-minus/pull/175\r\n\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.7...v0.9.8",
-          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.8/zhihu-minus-minus-v0.9.8-unsigned.ipa",
-          "size": 14501451,
+          "version": "0.9.9",
+          "date": "2026-11-05",
+          "localizedDescription": "一些 ui 调整与问题修复。\r\n\r\n### What's Changed\r\n* fix(ios): 修复系统分享无响应及长图导出失败 by @Cheukfung in https://github.com/huamurui/zhihu-minus-minus/pull/177\r\n* 优化回答悬浮操作栏布局与液态玻璃交互 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/182\r\n* fix(images): 长图在正文和预览中保持清晰 (#147) by @NobetaSena in https://github.com/huamurui/zhihu-minus-minus/pull/157\r\n* fix(iOS): 修复复杂行内公式字形重叠 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/180\r\n* fix(iOS): 改善液态玻璃控件的对比度与布局 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/181\r\n\r\n### New Contributors\r\n* @Cheukfung made their first contribution in https://github.com/huamurui/zhihu-minus-minus/pull/177\r\n \r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.8...v0.9.9\r\n\r\n\r\n<details>\r\n<summary>📱 ios 界面截图 </summary>\r\n\r\n<p>\r\n<img src=\"https://raw.githubusercontent.com/huamurui/zhihu-minus-minus/refs/heads/main/docs/screenshot/v0.9.9/photo_2026-11-05%2019.11.19.jpeg\" width=\"260\" alt=\"更新截图 1\" />\r\n<img src=\"https://raw.githubusercontent.com/huamurui/zhihu-minus-minus/refs/heads/main/docs/screenshot/v0.9.9/photo_2026-11-05%2019.11.21.jpeg\" width=\"260\" alt=\"更新截图 2\" />\r\n<img src=\"https://raw.githubusercontent.com/huamurui/zhihu-minus-minus/refs/heads/main/docs/screenshot/v0.9.9/photo_2026-11-05%2019.11.24.jpeg\" width=\"260\" alt=\"更新截图 3\" />\r\n</p>\r\n\r\n</details>",
+          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.9/zhihu-minus-minus-v0.9.9-unsigned.ipa",
+          "size": 14830602,
           "minOSVersion": "15.1"
         }
       ]
     }
   ],
   "news": [
+    {
+      "appID": "com.altman.moviepilot",
+      "title": "MoviePilotLite 1.3.1 · 06 Nov 2026",
+      "identifier": "MoviePilotLite-release-release-v1.3.1-2026-11-06",
+      "caption": "MoviePilotLite 1.3.1 is available.",
+      "date": "2026-11-06T06:45:48Z",
+      "tintColor": "#8050F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
+      "notify": true,
+      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.3.1-2026-11-06"
+    },
+    {
+      "appID": "com.huamu013.ZhihuMinusMinus",
+      "title": "ZhihuMinusMinus 0.9.9 · 05 Nov 2026",
+      "identifier": "ZhihuMinusMinus-release-v0.9.9",
+      "caption": "ZhihuMinusMinus 0.9.9 is available.",
+      "date": "2026-11-05T12:55:17Z",
+      "tintColor": "#0084ff",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.9"
+    },
     {
       "appID": "ani.baka",
       "title": "AniBaka 5.2.4 · 05 Nov 2026",
@@ -1212,17 +1234,6 @@
       "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.95"
     },
     {
-      "appID": "com.huamu013.ZhihuMinusMinus",
-      "title": "ZhihuMinusMinus 0.9.8 · 01 Nov 2026",
-      "identifier": "ZhihuMinusMinus-release-v0.9.8",
-      "caption": "ZhihuMinusMinus 0.9.8 is available.",
-      "date": "2026-11-01T13:23:20Z",
-      "tintColor": "#0084ff",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.8"
-    },
-    {
       "appID": "com.github.cyrilpeng.veneranext",
       "title": "VeneraNext 1.18.2 · 01 Nov 2026",
       "identifier": "VeneraNext-release-v1.18.2",
@@ -1243,17 +1254,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/news.png",
       "notify": true,
       "url": "https://github.com/celia-sh/Novella/releases/tag/v2.7.0"
-    },
-    {
-      "appID": "com.altman.moviepilot",
-      "title": "MoviePilotLite 1.3.0 · 30 Oct 2026",
-      "identifier": "MoviePilotLite-release-release-v1.3.0-2026-10-30",
-      "caption": "MoviePilotLite 1.3.0 is available.",
-      "date": "2026-10-30T14:03:13Z",
-      "tintColor": "#8050F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
-      "notify": true,
-      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.3.0-2026-10-30"
     },
     {
       "appID": "azki.moye.MeloX",
