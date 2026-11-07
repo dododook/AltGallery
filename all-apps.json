@@ -186,11 +186,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20261104",
-          "date": "2026-11-04",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: graphics problem reports take a savestate by default\n- Android: problem reports scrub the app's own /data paths\n- Android: problem report takes the save state first and stops the game when the dump's frames are recorded\n- GS dump: say where a requested dump is, so the caller can act when its frames are recorded\n- Android: a crash report says which driver the crashed run actually opened\n- Android: problem reports fill in the game's CRC\n- Android: problem reports name the build's commit without the driver report\n- Android: a crash report that fails to build keeps its Not sent line\n- Android: crash startup work runs once per process\n- Android: problem report screens go back a step, ask before deleting, and keep their work off the main thread\n- Android: problem report capture takes the save state after the dump, refreshes the logs, and can be given up on\n- Android: report uploads retry for real, wait for Wi-Fi, can be stopped and no longer trust the clock\n- Android: ask about a crash only when one happened in front of the user\n- Android: problem reports no longer carry the RetroAchievements user, network addresses or file:// paths\n- Android: \"Report a problem\" flow, My reports, and their entry points\n- Android: collect, arm the crash marker, and upload problem reports\n- Android: problem report core, with unit tests\n- Android: JNI calls for the problem report\n- tests: pass the cold-stub test's asm one pointer instead of eight operands\n- SPU2: V_Core::ReadInput returns silence for core 0 in bypass mode\n- IopLagControl.h: include <cstddef> and spell std::size_t\n- Android: the IOP thread starts on where the performance tier is two or three cores\n- Linux: no ordered thread pin when the performance tier cannot hold EE, GS and VU1\n- IOP thread: on by default where the performance tier is two or three cores (Qt and SDL)\n- IOP thread: the GS split counts the IOP thread only where it will run\n- GameDB: IOP thread for the two Korean Shadow of the Colossus releases\n- IOP thread: say in the settings text when it is on, and that the game database turns it on\n- Android: move the stored lag of 24576 to one frame once\n- IOP thread: move a saved lag of 24576 to one frame once (Qt and SDL)\n- IOP thread: Threaded needs a performance tier of at least two cores\n- IOP thread: Threaded on a host whose performance tier is narrower than the threads\n- IOP thread: keep an unpinned IOP thread off the performance tier when the tier is too narrow\n- IOP thread: the lag bound setting defaults to one frame\n- IOP thread: add the SPU2 auto-DMA stream rule to the default set\n- IOP thread: default to one rule, idle with a request out; tests for the lag rules\n- IOP thread: lag rules that tighten a large lag bound while the EE waits on the IOP\n- IOP rec: save only the callee-saved registers IOP code writes\n- tests: IOP ExecuteBlock gives back every callee-saved register\n- IOP rec: keep the IOP clocks in host registers between block ends\n- IOP rec: inline RAM-load fast path, no register flush on loads\n- IOP rec: load RAM through a JIT-emitted stub instead of calling iopMemRead*\n- tests: write the game-shaped SPU2 states to disk for tools/devlib_bench\n- tests: SPU2 cold-cache cycle benchmark and a cachegrind driver\n- AudioStream: poll for chunks on a timer instead of waking the worker for each one\n- tests: write the SPU2 test generator's nested conditionals as if chains\n- AudioStream: stop the stretch worker without draining its queue\n- SPU2: write the reverb FIR resamplers in NEON directly on AArch64\n- tests: freeze the reverb FIR resamplers too, and compare them directly\n- SPU2: leave voices that are not playing out of the voice sum\n- SPU2: interpolate the four voice taps with NEON\n- tests: count branch misses in the SPU2 per-mix benchmark\n- SPU2: read the two IRQ addresses once per mix instead of at every address check\n- SPU2: step the ADSR envelope inline and work out the level step only on overflow\n- SPU2: test the volume slide bit inline before calling V_VolumeSlide::Update\n- tests: SPU2 mixer instructions-per-mix benchmark\n- tests: SPU2 mixer differential test against a frozen copy of the mixer\n- IOP thread: bring the IOP up to the EE when the EE stops a running SIF channel\n- AudioStream: expand and time-stretch on a worker thread\n- AudioStream: acquire the other end's position before reading or writing the ring\n- AudioStream: tests for the ring and the stretcher, and a producer-cost benchmark\n- eerunner: --frame-limiter runs a --liverun at the nominal frame rate\n- IOP thread: watch what the EE does after an overshoot in idle\n- IOP thread: record how late the EE takes the IOP's replies, and whether it was idle\n- EE core: the event test knows it was reached through a fast-forward\n- IOP thread: I2E items carry the IOP's time of production\n- IOP thread: hold one SIF channel of a Lockstep skew (--iop-lockstep-skew-holds-sif0, -sif1)\n- IOP thread: a Lockstep skew variant with held SIF pumps (eerunner --iop-lockstep-skew-holds)\n- IOP thread: a Lockstep skew keeps the EE-to-IOP items the ring cannot hold in a spill queue\n- IOP thread: count deferred SIF pumps and SBUS near-bound waits in the Threaded stats\n- IOP thread: a deterministic Lockstep skew for testing (SetLockstepSkew, eerunner --iop-lockstep-skew)\n- IOP thread: near bound for the EE's SBUS mailbox accesses\n- IOP thread: defer EE-started SIF0/SIF1 pumps through the E2I queue (iopThreadDeferSif)\n- IOP thread: raise the lag ceiling to two frames and grow the E2I ring to match\n- iOS CI: key the prebuilt core cache on the macOS runner image\n- Android: Load / Manage Saves lists every game's saves as one grid\n- Android: on-screen controls follow a connected gamepad\n- Microphone: fixes after landing the Android host microphone\n- Android: host microphone input for the emulated PS2 USB mic\n- USB: stop the config descriptor parser at a zero-length descriptor before reading its type\n- EE rec: fuse shift pairs into one bitfield instruction\n- EE rec: drop the zero test when dividing by a known constant\n- EE rec: shift instead of divide by a constant power of two\n- EE rec: fold the MADD accumulate into smaddl/umaddl\n- EE rec: shift instead of multiply by a constant 0 or power of two\n- EE rec: drop the constant write-back at fastmem and MULT/DIV sites\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261031...720f409f009771e5ba616a84577b783e004854c3",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261104/ARMSX2-nightly-20261104-720f409f00-iOS-arm64.ipa",
-          "size": 40568716,
+          "version": "nightly-20261106",
+          "date": "2026-11-06",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: regenerate the PGO profile on the GS span source\n- GS/HW: a target takes the destination-alpha loop only after more than 64 such draws in a frame\n- GS/Vulkan: the Adreno 613's destination-alpha loop leaves only the targets it reads uncompressed\n- GS/Vulkan: on the Adreno 613 destination-alpha draws read the target in the pass\n- GS: with draw buffering off, the draw's environment is copied once\n- GS: sprite pair layouts enter the two-pass kick kernel, autoflush included\n- GS/SW: build only the colour table entry a row's span reads\n- GS/HW: copy road kernels read the texture a block at a time and write the frame a block row at a time\n- GS/TC: a block grid per target in place of the dirty rectangle lists\n- Android: Auto hides the on-screen controls for a connected pad only on a handheld\n- Android: ask again whether a gamepad is attached when the activity is created\n- GS/HW: compute this draw's cover test before the CPU sprite verdict\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261104...afd93842f99be9ea8d5730a9d20f1222f1b40cd8",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261106/ARMSX2-nightly-20261106-afd93842f9-iOS-arm64.ipa",
+          "size": 40577893,
           "minOSVersion": "17.0"
         }
       ]
@@ -484,11 +484,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.28",
-          "date": "2026-11-04",
-          "localizedDescription": "### Improved\n\n- **macOS**: the bundle identifier is now `sb.moe.kumone`. After updating, settings and caches start fresh, the first-launch check appears once more, the iCloud sync passphrase has to be entered again and system permissions (such as notifications) need granting again; sign-in and offline downloads carry over.\n- **iOS**: the bundle identifier is now `sb.moe.kumone-ios`. AltStore and other sideloading tools install it as a separate app; once it is set up, the old one can be deleted.\n\n---\n\n### 改进\n\n- **macOS**：bundle ID 改为 `sb.moe.kumone`。更新后设置和缓存会重置，需要再做一次首次启动验证、重新输入 iCloud 同步口令，并重新授予通知等系统权限；登录状态和离线下载保留。\n- **iOS**：bundle ID 改为 `sb.moe.kumone-ios`。AltStore 等侧载工具会把它装成一个新的 App，设置好之后可以删除旧版。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.28/Kumone-iOS-0.3.28.ipa",
-          "size": 4037666,
+          "version": "0.3.29",
+          "date": "2026-11-06",
+          "localizedDescription": "### Fixed\n\n- **macOS**: the now-playing page opens and closes cleanly — the page title, search field and sidebar toggle no longer hang over it while it moves, it no longer snaps into place at the end, and the thin white line beside the window buttons is gone; its collapse button is larger, sits in the top-right corner and always answers clicks.\n- **iOS**: adding a song to a playlist from the now-playing page shows the confirmation over the page; a song that is already in the playlist says so, and any other failure is shown inside the playlist picker (#182).\n- **iOS**: the search field stays visible when the Search tab opens.\n\n### Improved\n\n- **macOS**: hiding and showing the sidebar is smooth — the sidebar stays put and the page slides over it, the toggle never leaves its place beside the window buttons, the page title moves with the page, and View → Hide/Show Sidebar (⌃⌘S) is back.\n- **macOS**: the back button follows the sidebar toggle and, like it, is drawn without a glass capsule.\n- **macOS**: in the player bar, the like button sits right after the song title.\n\n---\n\n### 修复\n\n- **macOS**：播放页的打开和收起更干净——移动过程中页面标题、搜索框和侧栏按钮不再浮在播放页上，结束时不再突然跳一下，红绿灯旁的白色细线也没有了；收起按钮更大，移到右上角，并且每次点击都能响应。\n- **iOS**：在播放页把歌曲收藏到歌单时，提示直接显示在播放页上；歌单里已有这首歌时会明确提示，其他失败会显示在歌单选择框里（#182）。\n- **iOS**：打开搜索页时搜索框保持可见。\n\n### 改进\n\n- **macOS**：收起和展开侧栏不再卡顿——侧栏固定不动，由右侧页面滑动覆盖；切换按钮始终在红绿灯旁边不动，页面标题跟随页面移动，「显示」菜单中的「隐藏/显示边栏」（⌃⌘S）也恢复了。\n- **macOS**：返回按钮跟在侧栏按钮之后，并和它一样去掉了玻璃胶囊。\n- **macOS**：播放条里的「喜欢」按钮紧跟在歌名后面。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.29/Kumone-iOS-0.3.29.ipa",
+          "size": 3937238,
           "minOSVersion": "16.0"
         }
       ]
@@ -649,16 +649,7 @@
         "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/detail.png"
       ],
       "tintColor": "#2E2E2E",
-      "versions": [
-        {
-          "version": "2.7.0",
-          "date": "2026-10-31",
-          "localizedDescription": "## Highlights\r\n\r\nWrite community posts in Markdown with a preview. Keep your preferred community sort order between launches. Change your username with a rename card.\r\n\r\n## Fixes\r\n\r\n- Reader title bar now hides with the controls (#213).\r\n- Status bar hides correctly after toast messages (#213).\r\n- Chapter title and page number remain visible with controls hidden (#213).\r\n- Fixed title bar animation on the Duo inner display (#213).\r\n- Fixed layout shifts when opening pages on Duo (#214).\r\n- Post italics, underlines and strikethroughs render correctly (#214).\r\n- Chinese text now displays in italics (#214).\r\n- Post images stay within their table cells (#217).\r\n- Large page titles collapse correctly when scrolling (#216).\r\n\r\n## Other changes\r\n\r\n- Added human verification when requesting registration and password-reset codes (#215).\r\n- Updated shop item usage to follow server availability and results (#215).\r\n- Updated CELIA branding.\r\n\r\n<details>\r\n<summary>Full changelog</summary>\r\n\r\nhttps://github.com/celia-sh/Novella/compare/v2.6.0...v2.7.0\r\n\r\n</details>",
-          "downloadURL": "https://github.com/celia-sh/Novella/releases/download/v2.7.0/Novella-2.7.0-release.ipa",
-          "size": 29786138,
-          "minOSVersion": "16.4"
-        }
-      ]
+      "versions": []
     },
     {
       "name": "Open Screen Sharing",
@@ -670,11 +661,11 @@
       "tintColor": "#3060F0",
       "versions": [
         {
-          "version": "1.0.4",
-          "date": "2026-10-26",
-          "localizedDescription": "* Add iPhone Duo support\r\n* Fixes and improvements",
-          "downloadURL": "https://github.com/nekohasekai/open-screen-sharing/releases/download/v1.0.4/OpenScreenSharing.ipa",
-          "size": 13574772,
+          "version": "1.0.6",
+          "date": "2026-11-07",
+          "localizedDescription": "* Add native touch support for Mac\r\n* Add Quick Input\r\n* Keep the Mac awake\r\n* Allow signing in with another connection's credentials\r\n* Fixes and improvements",
+          "downloadURL": "https://github.com/nekohasekai/open-screen-sharing/releases/download/v1.0.6/OpenScreenSharing.ipa",
+          "size": 13714353,
           "minOSVersion": "15.0"
         }
       ]
@@ -1090,17 +1081,61 @@
       "tintColor": "#0084ff",
       "versions": [
         {
-          "version": "0.9.9",
-          "date": "2026-11-05",
-          "localizedDescription": "一些 ui 调整与问题修复。\r\n\r\n### What's Changed\r\n* fix(ios): 修复系统分享无响应及长图导出失败 by @Cheukfung in https://github.com/huamurui/zhihu-minus-minus/pull/177\r\n* 优化回答悬浮操作栏布局与液态玻璃交互 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/182\r\n* fix(images): 长图在正文和预览中保持清晰 (#147) by @NobetaSena in https://github.com/huamurui/zhihu-minus-minus/pull/157\r\n* fix(iOS): 修复复杂行内公式字形重叠 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/180\r\n* fix(iOS): 改善液态玻璃控件的对比度与布局 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/181\r\n\r\n### New Contributors\r\n* @Cheukfung made their first contribution in https://github.com/huamurui/zhihu-minus-minus/pull/177\r\n \r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.8...v0.9.9\r\n\r\n\r\n<details>\r\n<summary>📱 ios 界面截图 </summary>\r\n\r\n<p>\r\n<img src=\"https://raw.githubusercontent.com/huamurui/zhihu-minus-minus/refs/heads/main/docs/screenshot/v0.9.9/photo_2026-11-05%2019.11.19.jpeg\" width=\"260\" alt=\"更新截图 1\" />\r\n<img src=\"https://raw.githubusercontent.com/huamurui/zhihu-minus-minus/refs/heads/main/docs/screenshot/v0.9.9/photo_2026-11-05%2019.11.21.jpeg\" width=\"260\" alt=\"更新截图 2\" />\r\n<img src=\"https://raw.githubusercontent.com/huamurui/zhihu-minus-minus/refs/heads/main/docs/screenshot/v0.9.9/photo_2026-11-05%2019.11.24.jpeg\" width=\"260\" alt=\"更新截图 3\" />\r\n</p>\r\n\r\n</details>",
-          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.9/zhihu-minus-minus-v0.9.9-unsigned.ipa",
-          "size": 14830602,
+          "version": "0.9.10",
+          "date": "2026-11-06",
+          "localizedDescription": "### What's Changed\r\n* 统一首页导航与内容操作栏外观 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/187\r\n* 调整 Android 页面进入和返回转场 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/186\r\n* 优化文章与想法详情首屏和操作栏 by @huamurui in https://github.com/huamurui/zhihu-minus-minus/pull/188\r\n\r\n<img height=\"500\" alt=\"telegram-cloud-photo-size-5-6296309837490493137-w\" src=\"https://github.com/user-attachments/assets/bbed6e50-bf62-4205-a4ef-65cc71fd9174\" />\r\n\r\n<img height=\"500\" alt=\"telegram-cloud-photo-size-5-6298716015608665964-w\" src=\"https://github.com/user-attachments/assets/99226fd4-0af5-47a7-b3aa-5aae9ac0b929\" />\r\n\r\n**Full Changelog**: https://github.com/huamurui/zhihu-minus-minus/compare/v0.9.9...v0.9.10",
+          "downloadURL": "https://github.com/huamurui/zhihu-minus-minus/releases/download/v0.9.10/zhihu-minus-minus-v0.9.10-unsigned.ipa",
+          "size": 14833319,
           "minOSVersion": "15.1"
         }
       ]
     }
   ],
   "news": [
+    {
+      "appID": "io.nekohasekai.screensharing",
+      "title": "Open Screen Sharing 1.0.6 · 07 Nov 2026",
+      "identifier": "Open Screen Sharing-release-v1.0.6",
+      "caption": "Open Screen Sharing 1.0.6 is available.",
+      "date": "2026-11-07T07:10:23Z",
+      "tintColor": "#3060F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png",
+      "notify": true,
+      "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.6"
+    },
+    {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.29 · 06 Nov 2026",
+      "identifier": "Kumone-release-v0.3.29",
+      "caption": "Kumone 0.3.29 is available.",
+      "date": "2026-11-06T19:18:52Z",
+      "tintColor": "#C9A227",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.29"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261106 · 06 Nov 2026",
+      "identifier": "ARMSX2-release-nightly-20261106",
+      "caption": "ARMSX2 nightly-20261106 is available.",
+      "date": "2026-11-06T15:32:28Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261106"
+    },
+    {
+      "appID": "com.huamu013.ZhihuMinusMinus",
+      "title": "ZhihuMinusMinus 0.9.10 · 06 Nov 2026",
+      "identifier": "ZhihuMinusMinus-release-v0.9.10",
+      "caption": "ZhihuMinusMinus 0.9.10 is available.",
+      "date": "2026-11-06T14:01:41Z",
+      "tintColor": "#0084ff",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.10"
+    },
     {
       "appID": "com.altman.moviepilot",
       "title": "MoviePilotLite 1.3.1 · 06 Nov 2026",
@@ -1111,17 +1146,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
       "notify": true,
       "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.3.1-2026-11-06"
-    },
-    {
-      "appID": "com.huamu013.ZhihuMinusMinus",
-      "title": "ZhihuMinusMinus 0.9.9 · 05 Nov 2026",
-      "identifier": "ZhihuMinusMinus-release-v0.9.9",
-      "caption": "ZhihuMinusMinus 0.9.9 is available.",
-      "date": "2026-11-05T12:55:17Z",
-      "tintColor": "#0084ff",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ZhihuMinusMinus/images/news.png",
-      "notify": true,
-      "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.9.9"
     },
     {
       "appID": "ani.baka",
@@ -1135,17 +1159,6 @@
       "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.2.4+1101"
     },
     {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.28 · 04 Nov 2026",
-      "identifier": "Kumone-release-v0.3.28",
-      "caption": "Kumone 0.3.28 is available.",
-      "date": "2026-11-04T13:13:45Z",
-      "tintColor": "#C9A227",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.28"
-    },
-    {
       "appID": "com.example.kazumi",
       "title": "Kazumi 2.4.3 · 04 Nov 2026",
       "identifier": "Kazumi-release-2.4.3",
@@ -1155,17 +1168,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
       "notify": true,
       "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.3"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20261104 · 04 Nov 2026",
-      "identifier": "ARMSX2-release-nightly-20261104",
-      "caption": "ARMSX2 nightly-20261104 is available.",
-      "date": "2026-11-04T11:52:04Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261104"
     },
     {
       "appID": "com.google.ios.youtube",
@@ -1245,17 +1247,6 @@
       "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.18.2"
     },
     {
-      "appID": "sh.celia.novella",
-      "title": "Novella 2.7.0 · 31 Oct 2026",
-      "identifier": "Novella-release-v2.7.0",
-      "caption": "Novella 2.7.0 is available.",
-      "date": "2026-10-31T07:30:59Z",
-      "tintColor": "#2E2E2E",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/news.png",
-      "notify": true,
-      "url": "https://github.com/celia-sh/Novella/releases/tag/v2.7.0"
-    },
-    {
       "appID": "azki.moye.MeloX",
       "title": "MeloX 1.4.1 · 30 Oct 2026",
       "identifier": "MeloX-release-v1.4.1",
@@ -1287,17 +1278,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/news.png",
       "notify": true,
       "url": "https://github.com/can4hou6joeng4/Sonar/releases/tag/v1.0.0-preview.5"
-    },
-    {
-      "appID": "io.nekohasekai.screensharing",
-      "title": "Open Screen Sharing 1.0.4 · 26 Oct 2026",
-      "identifier": "Open Screen Sharing-release-v1.0.4",
-      "caption": "Open Screen Sharing 1.0.4 is available.",
-      "date": "2026-10-26T16:12:40Z",
-      "tintColor": "#3060F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png",
-      "notify": true,
-      "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.4"
     },
     {
       "appID": "org.animeko.animeko",
