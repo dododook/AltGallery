@@ -1,0 +1,23 @@
+# render_news.py config: ./.venv/bin/python tools/render_news.py --out apps/Madeira
+# Colors left unset are auto-derived: tint from config.toml, background as
+# a light shade of the icon's dominant color.
+
+name = "Madeira"
+tagline = "Bringing PC gaming to your iPhone"
+
+# Color notes — each key below controls one element of the image. All are
+# optional: unset keys are auto-derived. Shown values are the current result.
+[colors]
+# The icon is 78% pure black with an iridescent chrome highlight, so the
+# sampler returns #F0F0B0 (pale sheen) — noise, not a brand color. Pinned to the
+# project's own declared tintColor, which matches the blue-violet hues the
+# icon's few saturated pixels actually carry.
+tint = "#7B68EE"            # NEW UPDATE badge + top-left glow
+# tint_alt = "#7B68EE"      # bottom-right glow (default: [source] tint_color)
+# The gradient is pinned to light shades of the same tint rather than derived:
+# the derived background inherited the icon's pale-yellow sheen.
+background = "#E4E0FB"      # gradient base
+bg_mid = "#F1EFFD"          # gradient mid stop
+bg_dark = "#CEC6F7"         # gradient end stop
+# text_color = "#111111"    # app name (auto white/black)
+tagline_color = "#7B68EE"   # tagline text, pinned to the tint (derived value read pale yellow-green)

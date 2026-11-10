@@ -1,0 +1,17 @@
+# render_news.py config: python3 tools/render_news.py --out apps/Iridium
+# Colors are pinned explicitly: Iridium's icon is pure black-on-white, so the
+# auto-derived tagline picked up a mauve cast from the icon's faint background
+# tint. A neutral grey scale matches the monochrome mark instead.
+
+name = "Iridium"
+tagline = "Windows games on iPhone & iPad"
+
+# Color notes — each key below controls one element of the image.
+[colors]
+tint = "#1C1C1E"          # NEW UPDATE badge + top-left glow
+tint_alt = "#1C1C1E"      # bottom-right glow
+background = "#EDEDED"    # gradient base
+bg_mid = "#F7F7F7"        # gradient mid stop
+bg_dark = "#DCDCDC"       # gradient end stop
+text_color = "#111111"    # app name
+tagline_color = "#6E6E73" # tagline text

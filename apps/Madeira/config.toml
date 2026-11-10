@@ -1,0 +1,48 @@
+# altgen config for the Madeira AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "willfaust/Madeira"
+
+[source]
+name = "Madeira"
+subtitle = "Madeira AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Madeira"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/icon.png"
+website = "https://github.com/willfaust/Madeira"
+tint_color = "#7B68EE"
+
+[app]
+name = "Madeira"
+# The shipped IPA carries this identifier (a typo of "madeira" in the Xcode
+# project, but it is what the binary and therefore AltStore updates use).
+bundle_identifier = "com.willfaust.madeora"
+developer_name = "Will Faust"
+subtitle = "Windows PC games on your iPhone"
+description = "Madeira runs unmodified x86-64 Windows PC games inside a single jailed iOS app: FEX-Emu translates the game's x86 code to ARM64 as it runs, Wine 11.4 built for ARM64EC provides Windows itself, and DXMT plus Madeira's own Direct3D 12 runtime draw Direct3D 9, 10, 11 and 12 through Metal. Games come with a library, Steam sign-in and installs, controller and touch controls, and keyboard, mouse and trackpad input. Requires an iPhone on iOS 26 or later with JIT enabled through StikDebug."
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/icon.png"
+# Ordered as the app presents itself: onboarding, then the game library, then settings.
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/images/introduction.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/images/main.png",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/images/settings.png",
+]
+tint_color = "#7B68EE"
+# MinimumOSVersion of the shipped 0.1.0 IPA; the README notes iOS 26+ is what
+# Madeira currently runs on reliably.
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): each release ships one ipa plus a
+# .ipa.sha256 checksum, which this pattern's end anchor excludes.
+asset_pattern = "Madeira-.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by tools/render_news.py
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/images/news.png"
+
+[output]
+path = "apps.json"

@@ -1,0 +1,42 @@
+# altgen config for the Orchard AltStore source.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "MakrSas/orchard-ios"
+
+[source]
+name = "Orchard"
+subtitle = "Orchard AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Orchard"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orchard/icon.png"
+website = "https://github.com/MakrSas/orchard-ios"
+tint_color = "#F0C060"
+
+[app]
+name = "Orchard"
+bundle_identifier = "com.makr.orchard"
+developer_name = "MakrSas"
+subtitle = "Apple Silicon macOS Ventura running inside an iPhone app"
+description = "Boots a real arm64 macOS Ventura guest on iPhone through Apple's own chain (AVPBooter, iBoot and XNU) on QEMU's apple-vm machine, with the GPU drawn through Metal by reims-vgpu. Requires JIT, a signing tool that adds the increased memory limit, and a macOS VM you make yourself. It is slow — light scenes reach 30–40 fps at best."
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orchard/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orchard/images/main.png",
+]
+tint_color = "#F0C060"
+min_os_version = "16.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# asset_pattern is a regex (not glob): every release ships exactly one unsigned
+# ipa named Orchard.ipa. Tags are v-prefixed but not strict semver (v0.1, v0.2),
+# so no version_pattern is needed once the v is stripped.
+asset_pattern = "^Orchard\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+# shared promo image rendered by tools/render_news.py
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orchard/images/news.png"
+
+[output]
+path = "apps.json"
