@@ -676,6 +676,25 @@
       "versions": []
     },
     {
+      "name": "Odysseus",
+      "bundleIdentifier": "com.mirazbakis.Odysseus",
+      "developerName": "mbakis",
+      "subtitle": "Your sources. Your certificate. Your apps.",
+      "localizedDescription": "Odysseus，基于 Feather 与 FreeSign 的本机签名商店。把各个源的应用收进一个目录，用自己的证书或 Apple ID 签名并安装。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/icon.png",
+      "tintColor": "#B8CCF0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-11-10",
+          "localizedDescription": "Local Odysseus 1.0.0 IPA from Desktop. Bundle com.mirazbakis.Odysseus, min iOS 17.0.",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Odysseus-1.0.0/Odysseus_1.0.0.ipa",
+          "size": 19635179,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
       "name": "Open Screen Sharing",
       "bundleIdentifier": "io.nekohasekai.screensharing",
       "developerName": "nekohasekai",
@@ -1116,6 +1135,17 @@
     }
   ],
   "news": [
+    {
+      "appID": "com.mirazbakis.Odysseus",
+      "title": "Odysseus 1.0.0 · 10 Nov 2026",
+      "identifier": "Odysseus-release-Odysseus-1.0.0",
+      "caption": "Odysseus 1.0.0 is available.",
+      "date": "2026-11-10T06:43:06Z",
+      "tintColor": "#B8CCF0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Odysseus-1.0.0"
+    },
     {
       "appID": "sb.moe.kumone",
       "title": "Kumone 0.3.32 · 09 Nov 2026",
