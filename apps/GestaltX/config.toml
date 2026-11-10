@@ -1,0 +1,37 @@
+# altgen config for the GestaltX AltStore source.
+# Run: uvx altgen -c config.toml
+# No project AltStore source; fields taken from README and IPA Info.plist.
+
+[github]
+repo = "huamidev/GestaltX"
+
+[source]
+name = "GestaltX"
+subtitle = "GestaltX AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for GestaltX"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GestaltX/icon.png"
+website = "https://github.com/huamidev/GestaltX"
+tint_color = "#007AFF"
+
+[app]
+name = "GestaltX"
+bundle_identifier = "com.huami.gestultx"
+developer_name = "huamidev"
+subtitle = "iOS 27 MobileGestalt 编辑器"
+description = "GestaltX，开源 MobileGestalt 编辑工具。支持地区代码、设备预设、备份与本机写入。本机 MobileGestalt 访问需要 iOS 27；IPA 部署目标为 26.0。签名时主应用与分享扩展须使用同一个 App Group。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GestaltX/icon.png"
+tint_color = "#007AFF"
+min_os_version = "26.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases ship GestaltX_X.Y.Z.ipa.
+asset_pattern = "GestaltX_.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GestaltX/images/news.png"
+
+[output]
+path = "apps.json"
