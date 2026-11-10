@@ -50,6 +50,30 @@
       ]
     },
     {
+      "name": "AirCard-iOS",
+      "bundleIdentifier": "com.mak5er.aircard",
+      "developerName": "Mak5er",
+      "subtitle": "Apple Wallet card skins, passcode themes and wallpapers",
+      "localizedDescription": "Customize Apple Wallet card artwork, lock screen passcode dialers and PosterBoard wallpapers directly on device, without a jailbreak. Requires iOS 27 or newer, LocalDevVPN running in loopback mode, and Developer Mode pairing.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirCard/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirCard/images/wallet.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirCard/images/pairing.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirCard/images/wallpapers.png"
+      ],
+      "tintColor": "#5020E0",
+      "versions": [
+        {
+          "version": "1.3.2",
+          "date": "2026-10-04",
+          "localizedDescription": "## What's Changed in v1.3.2 🚀\n\nThis update brings full feature parity with AirCard macOS v1.2.6, restores robust card discovery across all iOS versions, introduces automatic bank/network recognition with custom card nicknames, delivers an ultra-fast tunnel cache (0.02s connections), and completely resolves wallpaper flashing for Collections and Mercury wallpapers.\n\n### 💳 Wallet Card Discovery & Bank Identification\n• **Universal Wallet Log Parser**: Ported the proven `WalletScanParser` from AirCard macOS. Captures cards from `Dashboard loading (...): for SOO+`, `passIDs[InSession]`, `passIDs[global]`, and modern JSON NFC activations (`\"identifier\": \"HEX\"`).\n• **Automatic Bank & Network Detection**: Recognizes Visa, Mastercard, American Express, UnionPay, Discover, and JCB via applet AIDs during selection.\n• **Card Nicknames (Rename)**: Added a direct **Rename** button (✏️) so you can give your cards friendly names like *\"Monobank\"*, *\"Salary Card\"*, or *\"Revolut\"*, safely persisted in app settings.\n• **28-Character Fallback Token Matcher**: Restores dependable card discovery on devices where standard log patterns are redacted.\n\n### ⚡ Ultra-Fast Tunnel Routing (from 10s to 0.02s!)\n• **Working Route Caching**: `rust-core` now caches the active RSD connection route (`LAST_WORKING_ROUTE`), eliminating repeated port and interface scanning.\n• **RSD-First Priority**: Connects directly via RemoteXPC on port 49152, bypassing slow Lockdown retries and broken pipes on iOS 18+.\n• **Eliminated Loopback Policy Drops**: Removed local loopback attempts that caused `policy drop` control channel errors.\n\n### 🖼 Wallpapers (.tendies) — Collections & Mercury Fixes\n• **Dual Injection on iOS 18+**: Wallpapers are now injected into both their primary bundle (`com.apple.WallpaperKit.CollectionsPoster` or `com.apple.MercuryPoster`) and the modern iOS 18+ application container (`com.apple.Posters.CollectionsPosterApp` / `com.apple.Posters.MercuryPosterApp`).\n• **Metadata Synchronization**: Fixed a critical issue where `Wallpaper.plist`'s numeric identifier was randomized out-of-sync with `suggestionMetadata.plist` (`7400.DYNAMIC`), causing wallpapers like Windows 11 to vanish from the Lock Screen gallery.\n• **Mercury Wallpaper Support**: Added recognition for `mercury-descriptors` container folders and registered `com.apple.Posters.MercuryPosterApp` in `PersistedPosterContainerBundleIdentifiers`.\n• **NeoSpring Respring**: Instant springboard reload to apply wallpaper preferences immediately.\n\n### 🧪 Quality & Testing\n• All 24 unit tests passing (`TendiesEngineTests`, `WalletScanParserTests`, `CardPhotoCropTests`, `CardPhotoPickerTests`).\n\n**Full Changelog**: https://github.com/Mak5er/AirCard-iOS/compare/v1.3.1...v1.3.2",
+          "downloadURL": "https://github.com/Mak5er/AirCard-iOS/releases/download/v1.3.2/AirCard-iOS.ipa",
+          "size": 4638147,
+          "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
       "name": "AltStore Classic",
       "bundleIdentifier": "com.rileytestut.AltStore.Beta",
       "developerName": "Riley Testut",
@@ -218,6 +242,31 @@
       ]
     },
     {
+      "name": "BCD",
+      "bundleIdentifier": "com.thebcd69.bcd",
+      "developerName": "thebcd69",
+      "subtitle": "Windows games on iPhone and iPad",
+      "localizedDescription": "A fast, controller-friendly launcher that runs Windows games on iOS and iPadOS with Steam and GOG built in, powered by Wine, FEX and Metal via DXMT.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BCD/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BCD/images/library.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BCD/images/settings.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BCD/images/accounts.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BCD/images/controllers.png"
+      ],
+      "tintColor": "#F070F0",
+      "versions": [
+        {
+          "version": "0.1.634",
+          "date": "2026-11-06",
+          "localizedDescription": "**BCD is in alpha:** an early stage of development, before beta. Many games run, many do not yet, and things can break between builds. When a game fails, please send a log.\n\nThis build brings everything since 0.1.630: OpenGL games, Steam Workshop and game versions, downloads from a PC on your network, an itch.io store, GOG and Epic improvements, an experimental EA store, the fixes for Rockstar's two Social Club updates of 3 and 4 November, Red Dead Redemption 2 with less memory, and new fixes from the logs you sent with Send Log.\n\n> **Rockstar Social Club updates (3 and 4 November):** after Rockstar updated Social Club (2.4.0.296, then 2.4.0.302), the Rockstar Games Launcher stayed a gray window and Red Dead Redemption 2, GTA V and GTA IV could not start. BCD supports both versions now. If your game still shows a gray launcher, use **Reset to Recommended** on its page (see below).\n\n## New\n\n- **OpenGL games:** a game that draws with OpenGL can now run. On the game's page, **Direct3D › OpenGL** chooses **Desktop OpenGL** (through Vulkan on Metal) or **OpenGL ES**; it is off unless chosen, and **Settings › Graphics** says where to find it. Recommended settings turn it on for The Binding of Isaac: Rebirth, Mewgenics, DOOM 3: BFG Edition, Darkest Dungeon, Battle Brothers, Jetboard Joust and Stardew Valley (Desktop OpenGL) and Balatro (OpenGL ES), and Auto-tune turns it on after the failures that need it (no OpenGL context, GameMaker's OpenGL runner, LÖVE games). LÖVE games get a LuaJIT that runs here. Compressed textures of desktop OpenGL games no longer draw black on devices whose graphics chip cannot read them directly.\n- **Steam game versions:** for a game with beta branches, **Options › Version** on its page lists the public build and the betas (a protected beta after its code is entered). The choice applies to the next download, update or repair, or at once.\n- **Steam Workshop:** **Options › Steam › Steam Workshop** on a game's page, and a **Workshop** button on the Library's Steam chip, show your subscribed items, Browse and search, and each item's card. Subscribing, unsubscribing and removing files ask first.\n- **Downloads from a PC on your network:** **Settings › Accounts › Steam › Downloads from a PC on this network** (off by default) takes a game from a PC signed in to the same Steam account on the same network first, and the rest from Steam's servers. **Downloads** says where the data comes from.\n- **itch.io:** sign in with your itch.io API key in **Settings › Accounts › itch.io**. BCD lists the games you bought or claimed, your collections and the free games you add with **Find a game**, and installs their Windows downloads (zip and 7z).\n- **GOG:**\n  - DLC you own installs with the game;\n  - an installed game's page offers **Update** when a newer build or missing DLC is found, and **Repair**, which checks every installed file against the build;\n  - a game's redistributables (for example older Visual C++ runtimes) download with it and install once at its first start; Repair adds them to a game installed before;\n  - a game's install script writes its registry values before the first start.\n- **Epic cloud saves:** on a game's page, **Cloud saves › Turn on** (it asks first). A newer cloud save comes down, after a backup of the local one; **Sync now** sends this device's newer saves up. Off until you turn it on for a game.\n- **EA games (experimental, off):** **Settings › Accounts › EA games (experimental) › Use EA games in BCD** signs in to your EA account, lists your PC games, downloads them and starts them without the EA app. Off, BCD never contacts EA.\n- **Keep running in the background (off by default):** **Settings › Memory & performance › In the background** sets how many minutes a game and a download keep running after BCD leaves the screen, and whether sound plays on.\n- **'Look like this GPU'** has a GeForce GTX 1060 6GB.\n\n## Fixes and improvements\n\n> **Tried one of these games on an earlier build? Reset its settings first.** A game keeps the settings it had until you reset them, so without this it may start with the old ones that failed. On the game's page: **Options › Recommended settings › Reset to Recommended**, then check that **Options › Auto-tune › Auto-tune this game** is on, and start the game again.\n\nEach fix targets the error a log showed; many could not be tested on a device yet, so a game may now get further and still stop at a later point. If it does, please send a new log: it names the next problem.\n\n### Games\n\n- **Red Dead Redemption 2:**\n  - its recommended settings now give the game 4 GB of Helper memory and keep Social Club's browser out of it. In a 10-minute test on an iPhone with 12 GB of RAM the game loaded and played with a peak of 6.0 GB of its 8 GB limit (6.5 GB before) and wrote 1.7 GB to the swap file (4.1 GB before);\n  - on iPads with 16 GB of RAM the game asked for 28 GB of address space, which no address map here can give, and showed its own error. Its recommended settings now report at most 8 GB of memory to it;\n  - the Epic copy starts the Windows services the Rockstar Games Launcher needs.\n- **Rockstar games** (Red Dead Redemption 2, GTA V Legacy and Enhanced, GTA IV): the Social Club fix above. Also:\n  - when Social Club's browser ended out of memory, its memory was never given back, so every restart of it failed at once (\"The CEF browser ... could not restart\"). That memory is given back now;\n  - GTA V: each of the launcher's 200 and more threads held 8 MB of the emulator's memory area that nothing used, until the game's own threads could not start. GTA V's recommended settings now keep that area small;\n  - GTA IV: Social Club's browser found no place for a block it needs on a 4 GB boundary and the launcher said \"CEF browser crashed\". GTA IV's recommended settings now keep such a place free for it.\n- **Marvel's Spider-Man Remastered and Miles Morales:** on A17 Pro, A18, M3 and M4 devices every pass was drawn in one colour. Fixed; nothing changes on newer graphics chips.\n- **Games installed in a folder with non-English characters or a long path** (Spider-Man Remastered among them) could not start. Fixed.\n- **Terraria:** \"Failed to load asset\". Fixed.\n- **Call of Duty: Black Ops, Borderlands 2 and other copy-protected Steam games** started through BCD Dock: BCD now starts Steam's client service first, asks again when Steam answers with error 55, and goes on when Steam has nothing to prepare. Black Ops, Borderlands 2, The Escapists 2 and Dark Souls: Remastered have new or updated recommended settings.\n- **Far Cry 3:** \"Cannot find essential information in the registry\": its install script's language entries are now read. Fixed.\n- **The Witcher 2 (GOG):** its launcher stopped on a missing Visual C++ runtime; the GOG redistributables above fix it (Repair adds them to an installed copy).\n- **Stardew Valley and other .NET games:** Auto-tune can keep an executable copy of their code write-protected, which .NET needs (an experiment); Stardew Valley's recommended settings also use OpenGL.\n- **Counter-Strike: Source and No More Room in Hell:** their recommended settings turn on a cache of folder listings for Windows' case-insensitive file lookups.\n- **FINAL FANTASY TACTICS - The Ivalice Chronicles:** its recommended settings turn on four new Direct3D 12 options (an experiment).\n- **Geometry Dash:** through BCD Dock the game ends on its own about 3 s after the Steam sign-in, before any window; Auto-tune names this stop (known stop) instead of trying other settings.\n- **The Binding of Isaac: Rebirth:** on the first online start of an install, the game's own Steam check can get no answer and show \"Application load error 6\"; the next start plays. Auto-tune says so.\n\n### Graphics\n\n- **Frame generation** now follows only the largest window that presents; another window (a launcher, a browser helper) no longer makes it start over, which made the graphics driver stop some games with MetalFX upscaling.\n- **Direct3D 9:** state blocks keep the sampler and texture-stage states they did not record, and fixed-function lights are cleared before they are packed.\n\n### Launchers and stores\n\n- **Steam:**\n  - the connection tries up to three Steam servers before it gives up, and the library is fetched again when you return to BCD (at most once a minute);\n  - a disk error ends an install at once instead of fetching the same data again; a file two depots list comes from the later one; a file list Steam refused is asked for again with fresh authorization; file lists are kept on the device;\n  - BCD Dock asks Steam about ownership half a second after the sign-in instead of after 5 s, so games start sooner;\n  - launch arguments keep their dashes and quotes (the keyboard's smart punctuation turned them into other characters).\n- **BCD Dock:** **Close** now ends a session whose game's start program is still waiting.\n\n### Controllers and input\n\n- A controller that iOS gives a new identity while it stays connected is read through the new one; before, buttons worked and the sticks stayed at rest.\n- A game waiting for raw input is woken when input arrives.\n\n### Memory and the swap file\n\n- **The swap file:** when the swap file reached its size (swap-mb) with **What can move** set to **Whole reservations**, a game could stop: Red Dead Redemption 2 stayed on its loading screen. Memory a game adds inside space that is already in the swap file now stays in the file; only new space stays out of it once the size is reached. The file on the disk can therefore grow past swap-mb.\n- A program's code that a protector unpacks into the last page of its image is now what the emulator runs (before, that page could become a copy).\n- A rare crash when a thread ended is fixed, and a reused network connection slot is no longer taken for the connection it held before.\n\n### Auto-tune\n\n- New rules for the Rockstar games (the new Social Club versions, the launcher's browser memory, Red Dead Redemption 2's 28 GB request on iPads, Steam's error 113 trace), for Red Dead Redemption 2 on its loading screen when the swap file was full, for OpenGL games, GOG redistributables, copy-protected Steam games, Terraria and Far Cry 3.\n\n### Logs\n\n- Values that look like passwords or tokens are removed from the command lines BCD logs (the game still receives them), and the game's own log lines that BCD copies hide sign-in values.\n- New lines name the code and callers of a fatal fault, a 32-bit lock that hangs, what fills a 32-bit program's address window when a placement fails, and, for a Steam beta download, which depots the beta has its own files for.\n\n### Under the hood\n\n- New switches, off by default, for experiments: `pso-async` and `pso-archive` (Direct3D 12 pipelines built in the background and kept between starts), `d3d12-list8`, `d3d12-hold-view-lists`, `d3d12-bc-decode`, `attachless-split`, `env.MADEIRA_D3D9_DIRECT_MAP`, `env.MADEIRA_SWP_LSE2` (Unity games on older devices), `env.MADEIRA_DIRCACHE`, `env.MADEIRA_SMC_HOT_PAGE`, `env.MADEIRA_FEX_KEEP_DEAD_LOADS`, `env.MADEIRA_WOW_GUARD_INSIDE`, `env.MADEIRA_WOW_PRESSURE_RELEASE_MB`, `env.MADEIRA_WOW_HOLD_FOR`, `env.MADEIRA_JUMBO_ALIGNED`, `env.MADEIRA_FIRST_PROC_OWN_EXIT_FLAG`, `env.MADEIRA_FONT_KEYS_REPAIR`, `env.MADEIRA_SC_ALIGN1G`, `env.MADEIRA_FEX_CALLRET_RESERVE_KB`.\n- Recommended settings can now set Helper memory (`mempool-mb`) for a game.\n- The x86 translator clears its lookup cache correctly under every cache size.\n- Every build now checks that its Windows library folders are complete.\n- New host checks for every change of this build.\n\n**Known issues:**\n- Red Dead Redemption 2 needs about 9.5 GB of RAM in play. Devices with 8 GB of RAM cannot hold it yet.\n- GTA V and Red Dead Redemption 2 from Steam: the Rockstar Launcher sometimes says Steam is not running (error 113, \"please reinstall\") although it is. Fully close BCD and start the game again.\n- Very long GTA V and Red Dead Redemption 2 sessions through BCD Dock can stop when the emulator's address area is full. Fully close BCD (swipe it away) and start again.\n\nInstall help, game reports and ideas: join the [BCD-Games Discord](https://discord.gg/43TmupTVug).\n\n**BCD.ipa**: the unsigned IPA, for sideloading with SideStore, AltStore or LiveContainer. It needs iOS 18 or later and JIT; the README has the details.\n**BCD-source.tar.xz**: the complete source of this build with all its submodules (GPL-3.0).",
+          "downloadURL": "https://github.com/thebcd69/bcd-games/releases/download/v0.1.634/BCD.ipa",
+          "size": 193977007,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
       "name": "Beans Music",
       "bundleIdentifier": "com.beans.app",
       "developerName": "XIaodou0416",
@@ -238,6 +287,30 @@
           "downloadURL": "https://github.com/XIaodou0416/Beans-Music/releases/download/v1.6.6/Beans-unsigned.ipa",
           "size": 8761833,
           "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "DLiPA",
+      "bundleIdentifier": "com.ahmedbafkir.dlipa",
+      "developerName": "Ahmed Bafkir",
+      "subtitle": "Download, install and share App Store IPAs",
+      "localizedDescription": "An iOS app inspired by ipatool. Sign in with your Apple ID to search the App Store, download any app as an IPA, including older versions, and install or share it without a jailbreak.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DLiPA/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DLiPA/images/search.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DLiPA/images/versions.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DLiPA/images/downloads.png"
+      ],
+      "tintColor": "#27A0F4",
+      "versions": [
+        {
+          "version": "1.4",
+          "date": "2026-08-03",
+          "localizedDescription": "## What's Changed \r\n\r\n- Fixed authentication issues\r\n- Multi-language support (AI translations):\r\n  - Chinese, Simplified\r\n  - French\r\n  - German\r\n  - Hindi\r\n  - Indonesian\r\n  - Italian\r\n  - Japanese\r\n  - Korean\r\n  - Russian\r\n  - Spanish\r\n  - Turkish\r\n  - Vietnamese\r\n\r\n## Support the app ♡\r\nIf you find this project useful, I would be very grateful for your support in its continuation and development.\r\n\r\n[![Support DLiPA](https://img.shields.io/badge/PayPal-Support_DLiPA-blue?logo=paypal)](https://www.paypal.com/ncp/payment/RLKKWBYSKSPVU)",
+          "downloadURL": "https://github.com/AhmedBafkir/DLiPA/releases/download/v1.4/DLiPA_v1.4.ipa",
+          "size": 534245,
+          "minOSVersion": "13.0"
         }
       ]
     },
@@ -338,6 +411,29 @@
       ]
     },
     {
+      "name": "Fathom",
+      "bundleIdentifier": "app.fathom.emulator",
+      "developerName": "Leviidev",
+      "subtitle": "x86-64 PC emulator for iOS",
+      "localizedDescription": "An x86-64 PC emulator for iOS. Fathom runs x86-64 Linux programs on an iPhone or iPad by translating them to ARM64 as they execute, using FEXCore - the dynamic recompiler behind FEX-Emu - with a native SwiftUI front end.\n\nImport a statically linked x86-64 Linux executable, open it, press Run. Fathom maps it into a guest address space, hands its instructions to FEXCore's JIT, answers its Linux syscalls, and shows you its output.\n\nJIT requires StikDebug to attach to the process and service the executable-memory traps; Fathom asks for this automatically on launch when it is missing.\n\nPlease note: only statically linked, position-independent executables (-static-pie) run today. Dynamically linked binaries and 32-bit x86 are not supported yet, and threads are not implemented, so a guest runs single-threaded.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fathom/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fathom/images/library.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fathom/images/settings.png"
+      ],
+      "tintColor": "#68D8D8",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-09-14",
+          "localizedDescription": "An x86-64 PC emulator for iOS, running guest code on FEXCore.\n\n2048 and tic tac toe both run. Add them from the Library tab and play with the on-screen arrow keys.\n\n**Downloads**\n- `Fathom.ipa` - the app, unsigned, for sideloading. Needs StikDebug attached for JIT.\n- `tictactoe` - arrows move, Enter places, against a minimax bot that cannot be beaten.\n- `play2048` - arrows slide the board.\n\nCopy the two game binaries into Fathom's Programs folder, or import them from the Library tab.",
+          "downloadURL": "https://github.com/Leviidev/Fathom/releases/download/v1.0.0/Fathom.ipa",
+          "size": 1175175,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
       "name": "Feather",
       "bundleIdentifier": "thewonderofyou.Feather",
       "developerName": "Samara",
@@ -400,6 +496,53 @@
       ]
     },
     {
+      "name": "Husk",
+      "bundleIdentifier": "com.husk.app",
+      "developerName": "Leviidev",
+      "subtitle": "Android app launcher for iOS",
+      "localizedDescription": "Run Android apps on iOS: drop in an APK, tap it, and the Android app opens full-screen on a QEMU guest with hardware-accelerated display and audio. Needs JIT plus a debugger attached at runtime, so it requires a sideloading setup that can provide get-task-allow rather than a plain re-sign.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Husk/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Husk/images/main.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Husk/images/settings.png"
+      ],
+      "tintColor": "#5949E5",
+      "versions": [
+        {
+          "version": "3.4",
+          "date": "2026-11-05",
+          "localizedDescription": "## What's new?\n\n3.4 is a compatibility release. About 97% of the 472 F-Droid apps we test now run, up from 85%. On the 169 Play Store apps we test, about 90% run, not counting apps with anti-tamper or fraud protection, which Husk doesn't try to bypass. All of these numbers are from testing on a Mac.\n\n### More Android apps\n- Microsoft Word opens (Excel and PowerPoint share its libraries)\n- Slack, Gmail, Teams, Deezer, Flipboard and Picsart get past the crashes that stopped them\n- More engines and frameworks start: React Native's new architecture, Qt 6 / QML, and apps using JavaScriptCore\n- libGDX and other OpenGL apps draw again (3.3 broke these)\n- Apps that keep secrets in Android's secure key store work better\n- Apps with big bundled databases open\n- UPnP and network discovery apps can start\n- Apps that declare their launch screen in a split APK can start\n\n### Looks better\n- Rounded buttons are proper pills instead of ellipses\n- Toolbars, window backgrounds and more color formats behave like they do on a phone\n\n### Less \"out of memory\"\n- Fewer `OutOfMemoryError: pthread_create` crashes on installs without extended address space\n- Unity games use less address space on sideloaded installs, and keep their frame rate up\n- New in Settings -> Performance: see whether Increased Memory Limit and Extended Address Space are on for your install\n\n### Also\n- Japanese, thanks to @Yuki-1018\n- Fixed Husk crashing when importing a `.p12`, or at launch with one saved on iOS 27 (#220)\n- The Remove and Uninstall dialogs open next to their buttons on iPad (#218)\n- Winlator's Settings page no longer crashes\n- Husk builds with Xcode 27 and the iOS 27 SDK\n\n## Known Issues\n- Without JIT, Minecraft, some Flutter apps and some LÖVE games can fail. Use StikJIT for those for now\n- Browsers (Firefox, Brave, Opera) don't run yet because they need separate helper processes\n- Husk's Java runtime still has no garbage collector, so big apps can run out of memory in long sessions (#191)\n- Touch doesn't work yet in Godot 3 games (#200)\n- Apps with anti-tamper still won't run, and neither will apps that need Google Play services or a Google account\n- Winlator containers don't run\n- Full Android is still slow. Use the translation layer for games\n\n## Thanks\nThanks to @BartolomeoRusso9, @Dey410 and @Yuki-1018 for their pull requests, and to everyone who sent logs. Crash reports are what made this release possible ❤️\n\n## Links\n- Website: https://itslevii.dev",
+          "downloadURL": "https://github.com/Leviidev/Husk/releases/download/3.4/Husk.ipa",
+          "size": 142303569,
+          "minOSVersion": "16.4"
+        }
+      ]
+    },
+    {
+      "name": "iDeck",
+      "bundleIdentifier": "com.kuschqin.madeira.steamui",
+      "developerName": "kuscholar",
+      "subtitle": "Steam Big Picture on iPhone and iPad",
+      "localizedDescription": "Run Valve’s Steam client in Big Picture and compatible Windows PC games locally on iPhone and iPad through Madeira, Wine, FEX and Metal. Experimental; requires iOS 26+, JIT, and user-provided Steam files.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iDeck/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iDeck/images/configuration.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iDeck/images/steam-home.jpg"
+      ],
+      "tintColor": "#50D0F0",
+      "versions": [
+        {
+          "version": "0.1.3",
+          "buildVersion": "145",
+          "date": "2026-11-06",
+          "localizedDescription": "# Steam64 setup, one step at a time\n\n**Experimental prerelease · Build145 · Known issue: Steam can freeze after the third game exit. This update improves setup; it does not fix that stability issue.**\n\n## What’s new\n\n- **Install Steam64 in the launcher:** downloads the matched Steam/browser packages from Valve over HTTPS, verifies sizes/SHA-256 and installs with rollback. Cancel/retry, Verify/Repair and Return to previous environment are available.\n- **Four clear actions:** Install Steam → Connect LocalDevVPN → Pair this device → Enable JIT. Runtime preparation is automatic, signing/address checks remain mandatory, completed steps are checked/skipped and the view follows the next action.\n- **Pair in iDeck:** starts the existing on-device pairing immediately with live instructions/PIN, without hunting through JIT settings. iOS calls the pairing host Madeira. Advanced methods/import/recovery/account/auto-start settings are collapsed.\n- **Data stays yours:** the original environment remains intact; no auth cache, game or save is silently transferred. Use Valve’s own login and Steam Guard yourself.\n\n## Install and test\n\nDownload `iDeck-0.1.3-alpha.6-build145.ipa` and `SHA256SUMS`, verify the hash, then sign/sideload using your own coherent development main/helper profiles. Keep `MadeiraJITHelper.appex` and debugging permission; signing alone does not activate JIT. Back up saves and keep the same app identity when upgrading—uninstalling can erase local data.\n\nOpen iDeck and follow the highlighted setup step; fully close/reopen when prompted after installing Steam64. For on-device pairing use iOS27; iOS26 offers pairing-file import. Activate JIT again for each new app process.\n\nThe IPA includes the local runtime and pinned source-built open support components, **no Valve Steam client/libcef, games, accounts, maintainer profile or pairing file**. The installer acquires the client from Valve. Both source companions, relink, license/audit and inventory/checksum assets accompany this release.\n\n## What was verified\n\nThe user reports Build144 installation can complete. Build145 passed host ordering/skip/restart/signing/VA checks, installer/rollback/privacy regressions, existing JIT integration checks and full Xcode compilation. Its separate Fresh Test version was development-signed, installed/read back and opened on an iPhone15ProMax; original iDeck was preserved. The public ad-hoc IPA was audited (1480files, no findings), and its105-input relink ran with all30TEXT section hashes matching.\n\nThe complete revised145 first-run UI, another-device sideload/JIT, new Steam login and repeated gameplay have **not** received a new acceptance result; the public IPA was not installed again after ad-hoc packaging. iPad, Bluetooth and arbitrary games are not validated by this release. Full independent-machine/offline runtime rebuilding is not claimed.\n\n## Limits that still matter\n\n- **Third game return may freeze Steam.** Report the first failing stage and game-cycle count.\n- Steam64 does **not** enlarge the device’s virtual address space. Unsupported layouts can still fail;32-bit games/helpers may still hit separate limits. Guards remain enabled.\n- The compatibility snapshot is **Steam manifest1769025840 (January22,2026), CEF126**, held to its matched components. It is not the latest Steam/Chromium and has security/compatibility limitations; future snapshots need fresh review.\n- Game support remains limited. No DRM, authentication or anti-cheat bypass is provided. Never post credentials, Steam Guard data, pairing files, profiles or raw personal logs.\n\nSee [the four-step guide](https://github.com/kuscholar/iDeck/blob/v0.1.3-alpha.6/docs/STEAM64_SETUP.md), [Build145 evidence](https://github.com/kuscholar/iDeck/blob/v0.1.3-alpha.6/docs/release/BUILD145_RESULTS.md) and the bilingual README.",
+          "downloadURL": "https://github.com/kuscholar/iDeck/releases/download/v0.1.3-alpha.6/iDeck-0.1.3-alpha.6-build145.ipa",
+          "size": 173835258,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
       "name": "iPadn",
       "bundleIdentifier": "app.local.iPadn",
       "developerName": "mengangs",
@@ -420,6 +563,29 @@
           "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.8.0/iPadn-1.8.0-unsigned.ipa",
           "size": 43743768,
           "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Iridium",
+      "bundleIdentifier": "software.iridium",
+      "developerName": "intraducine",
+      "subtitle": "Experimental Windows-game runtime for iPhone and iPad",
+      "localizedDescription": "An experimental iPhone and iPad Windows-game runtime, with a native game library and touch, keyboard, mouse, and controller integration. Requires iOS 18+, JIT, and your own game files; compatibility varies by game and device.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Iridium/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Iridium/images/all-games.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Iridium/images/settings.png"
+      ],
+      "tintColor": "#1C1C1E",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "date": "2026-10-04",
+          "localizedDescription": "# Iridium 0.2.0\n\nDownload your Steam games directly in Iridium, manage repairs and updates, and try the updated Windows runtime. Game support remains experimental.\n\n## Download\n\n**[Download Iridium (.ipa)](https://github.com/intraducine/iridium/releases/download/v0.2.0/Iridium-unsigned.ipa)**\n\nRequires **iOS or iPadOS 18+**, JIT, and games you own. You only need the IPA to install; supply your own game files or download owned games from Steam.\n\n## Install\n\n1. Sign and install the IPA and helper with a compatible sideloading tool, or import it into LiveContainer using its supported JIT setup.\n2. Open Iridium and configure JIT in **Launch Support**.\n3. Open **Downloads → Steam** to sign in and queue a game, or use **Add Game** to import a game folder. Choose its executable, add it to your library, then press **Play**.\n\nFor standalone installation, preserve `com.apple.developer.kernel.increased-memory-limit=true` in both Iridium's final app signature and provisioning profile. The anonymous ad-hoc carrier alone grants no installation or memory rights. In LiveContainer, the container process's signature, profile, and JIT setup determine effective rights; importing the guest IPA does not grant them. Both routes still need device validation.\n\nBack up your saves before updating. Update the existing app or LiveContainer entry without deleting its data. Steam repairs and updates keep older installations; saves stored inside an older game folder may need to be copied manually to the new one. Keep that older folder until you have checked your saves.\n\n## What's new\n\n- **Steam downloads in the app.** Sign in with a password or QR code, with Steam Guard support, browse your library, and choose download language, unprotected branch, 32/64-bit files, and owned DLC.\n- **A download queue with verification and repair.** Pause, resume, retry, and prioritize downloads. Check for updates or repair downloaded files while keeping the previous installation.\n- **Clearer storage warnings.** Download checks use the space available to Iridium and account for verified partial files. **Download Anyway** can bypass an estimated-space warning for one attempt; file verification and real out-of-space errors remain enforced.\n- **Updated Windows runtime.** Includes 32-bit WoW64 support and D3D9/D3D12 updates. Support still varies by game and device.\n- **Game prerequisite installers.** Run supported setup steps included with a game, or choose **Game Options → Run Installer** for an EXE or MSI installer you provide. Some installers need interaction. Closing the player requests cancellation; Iridium keeps observing the runtime's exit and reports when a restart is required.\n- **Reduced duplicate runtime data.** Identical Windows runtime files share one packaged copy. The main app's anonymous ad-hoc signature carries only the increased-memory-limit request; helpers remain unsigned until you sign them.\n\n## Known issues\n\n- Physical-device compatibility for these changes has not been established. Some games may fail to launch or have graphics, video, audio, input, save, or shutdown problems. Skyrim speech and mouse attack issues remain unverified.\n- Keep Iridium open while downloading. Downloads pause when the app goes into the background and need to be resumed. Real-account downloads and recovery after Wi-Fi or network loss still need device testing.\n- Steam Cloud, Workshop, Steam Families library discovery, password-protected branches, and desktop Steam services are not included. Games that require Steamworks/DRM, anti-cheat, or other unsupported runtime features may not launch after downloading.\n- Updates keep older game copies and need extra storage. **Download Anyway** does not create free space; exhausting device storage can also prevent other apps from saving.\n- JIT and available memory depend on your device and signing setup; LiveContainer and standalone results can differ. Built-in JIT requires standalone Iridium, debugging permission, a valid pairing file, and LocalDevVPN. Hosted Iridium uses external JIT. Recipient signing, LiveContainer hosting, and game prerequisite success still need device testing.\n\n<details>\n<summary>Source code, licenses, and build details</summary>\n\n## Source and licenses\n\nThe other release files are for source access, rebuilding, and download verification:\n\n- Download both `Iridium-corresponding-source.tar.gz.part01` and `.part02` for the complete matching source package.\n- `Iridium-source-guide.zip` contains license notices, source records, and build/relink instructions.\n- `SHA256SUMS` verifies the IPA, both source parts, and the source guide.\n\nDownload all five release files into one folder, then run:\n\n```sh\nshasum -a 256 -c SHA256SUMS\ncat Iridium-corresponding-source.tar.gz.part01 Iridium-corresponding-source.tar.gz.part02 > Iridium-corresponding-source.tar.gz\nunzip Iridium-source-guide.zip\nshasum -a 256 -c Iridium-source-guide/ASSEMBLED-SHA256SUMS\n```\n\nThe source guide includes the assembled archive's checksum and rebuild instructions. Keep the matching source and guide beside the IPA at this versioned release URL. GitHub's automatic repository ZIP does not contain all required dependency sources.\n\nSource commit: b7e24f9fb4dd17f5d940c4763123f2b00d0e121f\nBuild run: https://github.com/intraducine/iridium/actions/runs/37142663989\n\nApp and helper version: **0.2.0 (115.1)**, minimum iOS **18.0**, confirmed in the actual delivered Info.plist files. The IPA is **399,916,792 bytes**; SHA-256 `1934922a1fcf1509e305a29d6f0d26579a4318ba95dfcf5b406d5e38f88c9763`.\n\nSource checks, Steam native/simulator checks, the full app build, and final binary/package checks passed. Independent IPA inspection confirmed the exact anonymous XML/DER entitlement carrier with no CMS payload or team identity, eight unsigned non-main native binaries, strict bundle verification, runtime hashes, and ZIP modes and symlinks. Unchanged runtime component outputs were reused after provenance checks. These checks do not establish real-account login, owned-game downloads, game compatibility, recipient signing, or physical-device behavior.\n\nApple compiler-runtime notice uncertainty and unsigned-IPA contractual authorization remain documented risks. Retain the license guide in `Iridium-source-guide.zip`.\n\n</details>",
+          "downloadURL": "https://github.com/intraducine/iridium/releases/download/v0.2.0/Iridium-unsigned.ipa",
+          "size": 399916792,
+          "minOSVersion": "18.0"
         }
       ]
     },
@@ -537,6 +703,53 @@
       ]
     },
     {
+      "name": "LightNovelShelf",
+      "bundleIdentifier": "app.lightnovel.shelf",
+      "developerName": "LightNovelShelf",
+      "subtitle": "轻书架官方 Flutter 客户端",
+      "localizedDescription": "轻书架官方 Flutter 客户端，面向 iOS、iPadOS 与 Android，支持书架管理、在线阅读、翻页动画、双页阅读与自动更新。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LightNovelShelf/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LightNovelShelf/images/home.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LightNovelShelf/images/community.jpeg"
+      ],
+      "tintColor": "#4E4592",
+      "versions": [
+        {
+          "version": "1.13.2",
+          "date": "2026-10-18",
+          "localizedDescription": "- 支持自动更新。\n- 平板端新增侧边导航和左右分栏布局。\n- 阅读器默认开启双页显示。\n- 设置页新增重置所有设置。\n- 我的道具新增使用入口，支持使用改名卡。\n- 搜索页移除页码提示。",
+          "downloadURL": "https://github.com/LightNovelShelf/Flutter/releases/download/v1.13.2/app-ios-unsigned.ipa",
+          "size": 11957867,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "LinuxRunner",
+      "bundleIdentifier": "dev.linuxrunner.app",
+      "developerName": "Leminos",
+      "subtitle": "Run ARM64 Linux apps and desktops on iOS",
+      "localizedDescription": "Run ARM64 Linux applications and desktop environments on iOS without a jailbreak, virtual machine, or JIT.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LinuxRunner/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LinuxRunner/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LinuxRunner/images/terminal.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LinuxRunner/images/settings.png"
+      ],
+      "tintColor": "#60B0F0",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "date": "2026-10-27",
+          "localizedDescription": "# LinuxRunner v1.0.1\n\nLinux on your iPhone and iPad. This update adds iPad desktop adaptations, brings Arch Linux ARM into the setup workflow and improves package recovery and desktop sessions.\n\n## What's New\n\n- **iPad support:** window-aware desktop sizing, hardware-keyboard desktop shortcuts and the shared touch/pointer interface. Tested on a physical iPad.\n- **Arch Linux ARM:** install signed packages, use `pacman` and explore an experimental Openbox desktop with LXQt Panel and PCManFM-Qt.\n- **One setup workflow:** **Distributions → Set Up Linux…** installs a distribution or configures an existing environment while preserving its files and accounts.\n\nThe maintainer reports a working Arch graphical desktop and graphical application launches on a physical iPhone using **build 897**. Telegram Desktop has been tested on Arch Linux ARM with login, sending messages and calls. The supplied iPhone capture shows its welcome screen.\n\n## Improvements\n\nArch desktop defaults provide a visible panel, wallpaper and file manager without replacing the user's normal LXQt configuration. Managed graphical launches share the active account's authenticated X11 context. Desktop startup status and Qt diagnostics are more useful when a component fails.\n\nIPA packaging now includes an ad-hoc code signature and a standard ZIP layout. It still needs a compatible signing/provisioning method for ordinary device installation.\n\n## Bug Fixes\n\n- Arch terminal termios2 compatibility.\n- Signed cached-package recovery and consistent handling of orphaned GCC ownership/obsolete recovery state.\n- Qt X11 launch-context failures and desktop profile defaults.\n- Reopening existing desktop sessions and readiness after component crashes.\n- ARM64 vDSO executable mapping and covered filesystem/syscall compatibility gaps.\n\n## Supported Distributions\n\n| Distribution | Experience |\n| --- | --- |\n| Debian GNU/Linux 13 ARM64 | Recommended terminal and LinuxRunner Desktop; KDE Plasma remains experimental. |\n| Arch Linux ARM | Terminal, `pacman` and experimental Openbox/LXQt-component desktop. |\n| Alpine Linux 3.24 ARM64 | Small terminal environment with `apk`; graphical compatibility remains experimental. |\n\n## Installation\n\nDownload the release IPA and sign/install it with your preferred compatible sideloading tool, such as Sideloadly or AltStore Classic. Then use **Distributions → Set Up Linux…** to install Linux inside the app.\n\nSee the [installation guide](https://github.com/mxhm11cr/LinuxRunner#installation) and [Linux setup walkthrough](https://github.com/mxhm11cr/LinuxRunner/blob/v1.0.1/docs/GETTING_STARTED.md). When updating, back up important files and preserve the existing app identity and App Group configuration. Do not uninstall the app as a repair step.\n\n## Known Limitations\n\nThe application interprets ARM64 Linux userspace; it does not boot a Linux kernel, require JIT or use hardware virtualization. System-call and application coverage is incomplete. The configured minimum is iOS/iPadOS 15.0; model/OS compatibility is not universal. iPad support has been physically tested. An older iPhone 11/iOS 17 launch-black-screen report is unresolved.\n\nArch desktop, Debian KDE Plasma and Metal acceleration remain experimental. Arch Plasma/Wayland is unavailable. Some Arch GTK/glycin programs still encounter write-seal compatibility problems. Large applications can be slow or exceed memory limits. iOS/iPadOS may suspend or terminate the app; saved files persist, running processes do not survive termination.\n\n## Downloads\n\n- **LinuxRunner-1.0.1.ipa** — ad-hoc signed, without an Apple provisioning profile. Install with your preferred compatible signing/sideloading method.\n- **LinuxRunner-1.0.1-source.tar.gz** — matching application source and build scripts, pinned build dependencies, matching Alpine source inputs and terminal-renderer sources.\n- **LICENSES.txt** — project and third-party license notices.\n- **SHA256SUMS** — checksums for the IPA, source archive and license notices.\n\nThe IPA is **14,646,386 bytes**. Verify the original download before signing it; signing changes its checksum.\n\n```text\nc571c7ae1dd8ab641930e513254866658dc94f0bee370f1d2623cd462f0fa2ca  LinuxRunner-1.0.1.ipa\n```\n\nGitHub automatic source archives omit submodule contents. Use the separately attached source asset for the dependency-inclusive source distribution.\n\n## Feedback and License\n\n[Report reproducible problems through GitHub Issues](https://github.com/mxhm11cr/LinuxRunner/issues/new/choose), including your device, OS, app version/build, distribution and diagnostic report. Review logs/screenshots for personal information before attaching them.\n\nLinuxRunner derives from [iSH](https://github.com/ish-app/ish) through [ios-linuxkit](https://github.com/rcarmo/ios-linuxkit). The combined application is GPL-3.0-covered; upstream copyright, contribution-specific terms, App Store terms and third-party notices are preserved. See the repository's [license](https://github.com/mxhm11cr/LinuxRunner/blob/v1.0.1/LICENSE.md) and [third-party notices](https://github.com/mxhm11cr/LinuxRunner/blob/v1.0.1/THIRD_PARTY_NOTICES.md).",
+          "downloadURL": "https://github.com/mxhm11cr/LinuxRunner/releases/download/v1.0.1/LinuxRunner-1.0.1.ipa",
+          "size": 14646386,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
       "name": "LiveContainer+SideStore",
       "bundleIdentifier": "com.kdt.livecontainer",
       "developerName": "LiveContainer Team",
@@ -557,6 +770,54 @@
           "downloadURL": "https://github.com/LiveContainer/LiveContainer/releases/download/3.8.0/LiveContainer%2BSideStore.ipa",
           "size": 35403538,
           "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "LSX4",
+      "bundleIdentifier": "com.llayerlinux.LSX4RuntimeProbe",
+      "developerName": "lpfoj",
+      "subtitle": "Open-source PS4/PS5 emulator",
+      "localizedDescription": "An open-source PlayStation 4/5 emulator for Android and iOS. The current iOS build supports PS4 gameplay and requires iOS 26+ with JIT.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LSX4/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LSX4/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LSX4/images/settings.png"
+      ],
+      "tintColor": "#C09050",
+      "versions": [
+        {
+          "version": "128.9934",
+          "buildVersion": "128.9934",
+          "date": "2026-11-08",
+          "localizedDescription": "[Download IPA](https://github.com/lpfoj/lsx4/releases/download/ios-jit-128.9934/LSX4-JIT-128.9934.ipa) · [IPA + English instructions](https://github.com/lpfoj/lsx4/releases/download/ios-jit-128.9934/LSX4-iOS-JIT-128.9934-English.zip)\n\n- Fixed visual issues in select games, including green video frames in **The Last of Us Remastered** and title-screen flicker in **God of War III Remastered**.\n- Updated per-game settings and presets, including a presentation setting for **God of War III Remastered**.\n\n[Installation guide](https://github.com/lpfoj/lsx4/releases/download/ios-jit-128.9934/INSTALLATION.txt)\n\niOS 26+ · JIT. Update using the same signing account and bundle ID. Keep app extensions enabled when signing.",
+          "downloadURL": "https://github.com/lpfoj/lsx4/releases/download/ios-jit-128.9934/LSX4-JIT-128.9934.ipa",
+          "size": 77017813,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "Madeira",
+      "bundleIdentifier": "com.willfaust.madeora",
+      "developerName": "Will Faust",
+      "subtitle": "Windows PC games on your iPhone",
+      "localizedDescription": "Madeira runs unmodified x86-64 Windows PC games inside a single jailed iOS app: FEX-Emu translates the game's x86 code to ARM64 as it runs, Wine 11.4 built for ARM64EC provides Windows itself, and DXMT plus Madeira's own Direct3D 12 runtime draw Direct3D 9, 10, 11 and 12 through Metal. Games come with a library, Steam sign-in and installs, controller and touch controls, and keyboard, mouse and trackpad input. Requires an iPhone on iOS 26 or later with JIT enabled through StikDebug.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/images/introduction.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/images/main.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/images/settings.png"
+      ],
+      "tintColor": "#7B68EE",
+      "versions": [
+        {
+          "version": "0.2.0",
+          "date": "2026-11-04",
+          "localizedDescription": "### New\n- **More stores.** Madeira has a new **GOG** section: sign in with GOG's own login page, see your library, download and update games with the DLC you own, verify and repair them, and play with Galaxy achievements and stats (Madeira stands in for GOG Galaxy). A new **EA app** section: sign in, see your library and download games without the EA app. A new **itch.io** store shows your itch.io games and free games, and downloads and installs them, .7z archives included. **Epic Games** now handles game downloads and cloud saves together.\n- **Store tabs.** With more than one store on the library page, a row of tabs at the top (All, Steam, Other, GOG, itch.io, Epic, EA) shows one store at a time. All is the page as before; the tab you pick is remembered.\n- **Steam:**\n  - DLC downloads with the game, with a switch per DLC\n  - beta branches, with beta codes\n  - a Workshop page per game\n  - achievements\n  - choosing the game's language\n  - downloading from a PC on the same network\n  - faster repairs\n  - a switch that turns Steam Cloud off\n- **A redesigned library.** Game details pages, a starting screen, and Settings split into pages. You can also turn on a zoomable grid in Settings › Appearance › New library grid.\n- **Recommended settings** for many games, with Reset to Recommended. Share Setup sends a game's setup to someone else.\n- **Get Help from Claude** on a game's page shares a fixes guide together with your log and config.\n- **Translations:** German, Spanish, Korean, Brazilian Portuguese and Russian.\n- **External drives**, save backups and Home Screen shortcuts.\n- **Games and downloads keep running** when you leave Madeira.\n- **Wine Mono and Wine Gecko** download for you, without Wine's download windows.\n- **Graphics:**\n  - MetalFX upscaling per game\n  - experimental frame generation\n  - a per-game picker for the graphics card the game sees\n  - FPS limits, including 40 FPS on 120 Hz screens\n  - an optional thermal frame cap\n- **The performance overlay** has a Column layout that you can drag anywhere on the screen.\n- **Controllers and touch controls:**\n  - rumble, adaptive triggers and the lightbar on real controllers\n  - an optional DualSense / DirectInput mode\n  - gyro aim and turbo\n  - touch control gesture zones\n  - a size slider per touch control, and the editor's panels close when you tap outside them\n  - a **Button style** for touch controls: Glass (Liquid Glass) or Solid (plain opaque buttons), in the in-game menu and in Settings › Appearance\n- **On iPad:** Command-V pastes into games, and the mouse wheel scrolls.\n- **On iPhone:** a Bluetooth or USB mouse works with AssistiveTouch on; mouse-look no longer stops at the screen edges.\n- **JIT:** Madeira offers StikDebug when the built-in helper is not available.\n\n### Fixed\n- **Native D3D12:** many fixes, including DXIL tessellation, shader caching and faster pipeline builds.\n- **Memory and JIT:** many fixes, so large 64-bit and 32-bit games crash less often.\n- **Per-game AVX / AVX2**, for games that quit with c000001d.\n- **Steam CEG games** can start through Madeira Dock.\n- **Launchers that offered to install a game that was already installed:** Madeira Dock now writes the Registry values from a game's install scripts before the start, as Steam's desktop client does.\n- **Rockstar Games Launcher / Social Club 2.4.0.296** (the update of 3 November) loads its pages again.\n- **The touch controls' Opacity slider** now fades the buttons on iOS 26; it only faded their labels before.\n- **Game pills:** the 32-bit / 64-bit and DirectX pills under each game are gone, because they were often wrong. The size pill stays.\n\n### Known issues\n- Some Steam games with CEG copy protection still stop with \"Madeira Dock stopped\" on first start.\n- The GOG and EA app sections are new. Please send a log if something goes wrong.\n\n### Install\n- Requires **iOS 26 or later**. In-app pairing and the Madeira JIT shortcut need iOS 27.\n- If your sideloader asks whether to keep app extensions, keep them: Madeira's in-app JIT runs in one.\n- The IPA is ad-hoc signed (no certificate) and carries the app's entitlements, including the increased memory limit. Sideload it with your own Apple ID (SideStore, AltStore, Sideloadly, Plume or similar), which signs it for your device.\n\n### Not included\nThe Microsoft Visual C++ runtime DLLs are not redistributed (see `legal/THIRD-PARTY-NOTICES.md`). Building from source: `tools/fetch-vcruntime.md`.\n\nThanks to everyone who sent pull requests, logs and test results since 0.1.3.",
+          "downloadURL": "https://github.com/willfaust/Madeira/releases/download/v0.2.0/Madeira-0.2.0.ipa",
+          "size": 186400561,
+          "minOSVersion": "17.0"
         }
       ]
     },
@@ -628,6 +889,80 @@
           "downloadURL": "https://github.com/youshen2/MeloX/releases/download/v1.4.1/MeloX-iOS-unsigned.ipa",
           "size": 30440912,
           "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "MiniWatts",
+      "bundleIdentifier": "org.zhaohe.MiniWatts",
+      "developerName": "ResistanceTo",
+      "subtitle": "Battery, charging and thermal instrument",
+      "localizedDescription": "An iPhone battery and charging monitor built on Apple's private APIs: the charger's real watts, how much of that reaches the cell, where the rest goes as heat, and every temperature sensor in the phone. No network code — nothing it reads leaves your phone.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MiniWatts/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MiniWatts/images/power.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MiniWatts/images/thermal.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MiniWatts/images/adapter.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MiniWatts/images/history.jpg"
+      ],
+      "tintColor": "#30E0F0",
+      "versions": [
+        {
+          "version": "1.7.0",
+          "date": "2026-11-07",
+          "localizedDescription": "Unsigned build — sign it with your own Apple ID before installing.\nhttps://github.com/ResistanceTo/MiniWatts#install\n\n## 改进\n\n- **温度可以显示为华氏度。** 设置 → 单位 里可选\"自动 / °C / °F\"。\"自动\"跟随系统地区，以及\"设置 › 通用 › 语言与地区\"里的\"温度\"选项，所以地区使用华氏度的用户升级后会直接看到 °F。App 各页、图表、热力图、悬浮读数、实时活动和小组件都按所选单位显示；原始数据仍显示传感器给出的 °C。(#25)\n- **充电预估。** 充电时，功率页会显示充到 80% 和充到 100% 还要多久，以及大约几点。时间根据电量实际上升的速度推算，不依赖电池能量设置；要等电量变化两次才会出现，通常需要几分钟。80% 以后按典型充电曲线估算，只是近似值。(#27)\n- **显示版本号。** 设置 → 关于 里显示当前版本，原始数据导出的第一行也带上了版本号。(#27)\n- **iPad 布局。** iPad 横屏和 13 英寸竖屏时，各页分成两栏；窄屏时仍是一栏。历史记录里单次充电的详情页在 iPad 上不再横向铺满。(#22)\n- **iPad 热力图。** 在 iPad 上，发热页画的是 iPad 的轮廓，各区域按 iPad Pro 11 英寸的内部布局放置：主板在中间，两侧是电芯，充电芯片在 USB-C 接口旁。设备页和设置里的图标也换成了 iPad。(#13, #22)\n\n## 修复\n\n- 发热：CPU 簇（`pACC`、`eACC`）和图像处理器（`ISP`）等传感器以前被归入\"其他传感器\"，现在算作 SoC，SoC 区域的温度也会把它们算进去。iPhone 11 上 `FrontCameraDie`、`BCMLBSkin` 这类名字连写的传感器以前会被分错区（比如前摄像头被当成机身），现在会先拆词再归类。(#13, #14)\n- 适配器页里\"单次采样\"那段说明以前在中文界面下一直显示英文，现在已有中文。\n\n## 注意\n\n- iPad 相关的改动只在模拟器里验证过，我手上没有 iPad。如果在 iPad 上看到问题，请从 设置 → 原始数据 复制导出并反馈。\n- iPad 上\"来自充电器\"的功率偏低（#13）这次还没有修：要确认其余的输入由哪个传感器测量，需要一份**充电时**导出的原始数据。有 iPad 的话，请在充电时从 设置 → 原始数据 复制导出，贴到 #13。\n- 充电预估无法知道是否开启了充电上限或优化电池充电。如果开着，电池会在上限前停下，\"充到 100%\"的时间就不准。\n\n---\n\n## Improvements\n\n- **Temperatures can be shown in Fahrenheit.** Settings → Units offers Automatic, °C or °F. Automatic follows your region and the Temperature option under Settings › General › Language & Region, so if your region uses Fahrenheit you will see °F straight after updating. Every page, the charts, the heat map, the floating meter, the Live Activity and the widget follow the setting; Raw data still shows the sensors' own °C. (#25)\n- **Charge forecast.** While charging, the Power page shows how long until 80% and until 100%, and roughly when. It is worked out from how fast the battery level is actually rising, so it does not depend on the battery energy setting; it appears once the level has moved twice, usually within a few minutes. Past 80% it follows a typical charging curve and is approximate. (#27)\n- **Version number.** Settings → About shows the installed version, and the first line of the Raw data dump includes it. (#27)\n- **iPad layout.** On an iPad in landscape, and a 13-inch in portrait, every page uses two columns; narrower windows keep one. A session's detail page in History no longer stretches edge to edge on an iPad. (#22)\n- **iPad heat map.** On an iPad the Thermal page draws an iPad, with the zones placed as in an iPad Pro 11-inch: logic board down the middle, a battery cell either side, the charge IC by the USB-C port. The Devices page and Settings use iPad icons too. (#13, #22)\n\n## Fixes\n\n- Thermal: the CPU-cluster (`pACC`, `eACC`) and image-processor (`ISP`) sensors used to land under \"Other sensors\"; they now count as the SoC, and the SoC zone's temperature includes them. On an iPhone 11, run-together sensor names such as `FrontCameraDie` and `BCMLBSkin` were filed in the wrong zone (the front camera as chassis); names are now split into words before they are matched. (#13, #14)\n- Adapter: the one-sample note always showed in English in the Chinese interface; it is now translated.\n\n## Notes\n\n- The iPad changes were checked in the simulator only — I do not have an iPad. If something looks wrong on yours, copy the dump from Settings → Raw data and report it.\n- The low \"from charger\" reading on an iPad (#13) is not fixed yet: finding which sensor carries the rest of the input needs a Raw data dump taken **while charging**. If you have an iPad, please copy one from Settings → Raw data while it charges and post it on #13.\n- The charge forecast cannot tell whether a charge limit or Optimized Battery Charging is on. If one is, the battery stops short and the time to 100% will be wrong.\n\n**Full Changelog**: https://github.com/ResistanceTo/MiniWatts/compare/v1.6.0...v1.7.0",
+          "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.7.0/MiniWatts-unsigned.ipa",
+          "size": 3374224,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Mornye",
+      "bundleIdentifier": "com.zarz.mornye",
+      "developerName": "zarzet",
+      "subtitle": "FLAC Downloader for iOS",
+      "localizedDescription": "Mornye is a Flutter and Rust music app with a full-screen player, hi-res and bit-perfect output, synced word-by-word lyrics, and installable extensions for metadata and audio downloads. Downloads and your own music folders share one local library, and SMB, WebDAV, HTTP or Subsonic servers can stream straight to the phone.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mornye/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mornye/images/nowplaying.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mornye/images/lyrics.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mornye/images/devices.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mornye/images/settings.png"
+      ],
+      "tintColor": "#1E4E4F",
+      "versions": [
+        {
+          "version": "5.3.1",
+          "date": "2026-11-05",
+          "localizedDescription": "### New Features\n\n- **artist**: Give Mornye's album card Music's plus and note\n- **search**: Drop Mornye desktop's filter chips, as in Music\n- **artist**: Shuffle an artist's Library songs from the Mornye hero\n- **mornye**: Music's glass inspector, player actions and Home text\n- **home**: Make Mornye's Home Music's own, picks included\n- **home**: Recently Played and extension playlists for Mornye\n- **theme**: Move a stored red Mornye accent to blue once\n- **search**: Mornye Top Results and a compact desktop toolbar\n- **home**: Open Mornye Home with Top Picks banners\n- **mornye**: Pour menus, fold the bar into one glass, desktop artist row\n- **desktop**: Bring Mornye's chrome and motion closer to Music\n- **track**: Copy a track's streaming service link\n- **library**: Play, queue and delete files from a collection selection\n- **library**: Find downloads that were moved to the download folder (#809)\n- **desktop**: Use the expressive transport in the Material player bar\n- **player**: Make automatic fullscreen lyrics optional\n- **network**: Prefetch upcoming NAS songs to a local cache\n- **library**: Upload local songs to network storage\n- **desktop**: Add application tab back and forward history\n- **cast**: Google Cast on iOS and desktop\n- **cast**: Add a Rust Google Cast sender and media server\n- **lyrics**: Edit and sync lyrics from the player\n- **player**: Open audio files and folders directly\n- **home**: Lay out the Material desktop Home for a wide pane\n- **library**: Save network songs offline with independent copies\n- **files**: Safely reorganize existing library files (#781)\n- Implement plain Windows path handling and matching for file operations by [@kevenchantre](https://github.com/kevenchantre)\n- Enhance library reorganization and file handling by [@kevenchantre](https://github.com/kevenchantre)\n- **files**: Apply folder and filename rules to existing downloads by [@kevenchantre](https://github.com/kevenchantre)\n- **player**: Slide artwork with track swipes (#788)\n- **player**: Slide artwork with track swipe by [@frpboy](https://github.com/frpboy)\n- **library**: Add whole-library metadata re-enrichment (#787) ([#787](https://github.com/mornyeapp/Mornye/pull/787))\n- Add re-enrich all tracks functionality and related UI components by [@kevenchantre](https://github.com/kevenchantre)\n- **lyrics**: Add fast and synced translation modes\n- **android**: Add Google Cast audio output\n- **library**: Add search by saved lyrics\n- **lastfm**: Add desktop account connection and scrobbling\n- **lyrics**: Automatically embed online search results\n- **lyrics**: Sync AI romanization to original word timing\n- **lyrics**: Sync translated phrases to original word timing\n- **network**: Edit metadata and lyrics on SMB and WebDAV\n- **desktop**: Dismiss paused playback from the player bar\n\n### Bug Fixes\n\n- **android**: Register player events before create replies\n- **android**: Move player operations off the UI thread\n- **metadata**: Re-enrich writable network library files\n- **player**: Dismiss search focus when opening now playing\n- **player**: Keep landscape motion covers square and toggle lyric controls\n- **audio**: Clarify Bluetooth codec access and bitrate display\n- **metadata**: Grant file access for Windows artwork paths\n- **artist**: Isolate album notes and clarify download actions\n- **search**: Preserve all extension filters on desktop\n- **home**: Respect feed selection and provider-neutral layouts\n- **audio**: Distinguish exclusive output from bit-perfect playback\n- **home**: Hold Mornye's card until Recently Played loads\n- **home**: Let Top Picks read any extension\n- **artist**: Let Mornye's artist page fall away to near black\n- **home**: Size Mornye's Home shelves as Music's pane does\n- **mixes**: Build again when the cache is empty at the same total\n- **home**: Keep Mornye's Home neutral and enlarge its toolbar glass\n- **artist**: Size the Mornye desktop toolbar as in Music and drop its title\n- **player**: Keep Mornye's layout still when a computer takes over\n- **windows**: Build without the ATL component and find Inno Setup (#764)\n- **orientation**: Let tablets rotate outside the full player (#807)\n- **playback**: Remove missing files from the active queue\n- **windows**: Update WASAPI backend and use driver minimum buffer\n- **playback**: Skip missing local tracks\n- **playback**: Release local audio before deletion\n- **nas**: Accept format hints in metadata proxy URLs\n- **ios**: Play formats AVPlayer cannot open and skip unplayable songs\n- **windows**: Poll connectivity without registering network listeners\n- **lint**: Align Library test overrides and notifier APIs\n- **android**: Keep media controls responsive during artwork reads\n- **desktop**: Keep Escape on the page and record every destination\n- **lyrics**: Translate straight into the saved language\n- **link**: Refresh phone catalogs after desktop file deletion\n- **android**: Restore keyboard viewport after backgrounding\n- **android**: Keep MediaPlayer audio in the platform mixer\n- **ios**: Preserve NAS streaming format hints and native errors\n- **link**: Delete shared phone songs from desktop\n- **desktop**: Keep Material player bar controls inside narrow windows\n- **files**: Align the reorganize flow with the app's UI rules\n- **library**: Preserve artwork and silence automatic scan notices\n- **windows**: Omit unused FFmpegKit native plugin\n- **files**: Keep relocation compatible with system SQLite\n- **windows**: Recognize alternate paths to the same library file (#789)\n- **windows**: Treat verbatim and plain paths as the same file by [@kevenchantre](https://github.com/kevenchantre)\n- **l10n**: Validate and merge Crowdin translations (#734)\n- **download**: Resolve SAF conversion filenames from document metadata (#768)\n- **storage**: Allow cancellable large-file uploads (#762) ([#762](https://github.com/mornyeapp/Mornye/pull/762))\n- **storage**: Decouple upload timeouts for large file transfers by [@Rohitkr0406](https://github.com/Rohitkr0406)\n- **playback**: Support gapless exclusive output and guard metadata lifecycle\n- **android**: Size notification mark for the status bar\n- **android**: Promote download service before queue preparation\n- **lyrics**: Reduce translation latency and recover missing lines\n- **link**: Preserve artwork during remote track changes\n- **player**: Center immersive Material landscape content\n- **link**: Relay playback artwork and metadata across devices\n- **equalizer**: Preserve signed zero in control selectors\n- **audio**: Reconcile USB output status with native playback\n- **lyrics**: Complete Material word lift before stopping the clock\n- **library**: Unify Windows extended path identities\n- **images**: Preserve extension icon crop resolution\n- **android**: Avoid Sony snapshot crash when locking screen\n- **library**: Persist the selected song sort order\n- **covers**: Preserve fresh thumbnail permissions when linking\n- **cache**: Finish decoding invalid analysis artwork\n- **apple**: Guard seek callbacks and scan progress\n- **android**: Cancel blocked SAF worker waits\n- **extensions**: Enforce deadlines while waiting for the VM\n- **network**: Preserve edits and close late requests\n- **lyrics**: Preserve motion across interrupted scrolls\n- **download**: Cancel old attempts before retrying\n- **player**: Preserve transport intent across asynchronous work\n- **link**: Refresh phone library on reconnect\n- **network**: Handle HTTP redirects and clarify connection errors\n- **metadata**: Preserve extension URL fetch errors\n- **link**: Read embedded phone lyrics without cached audio\n- **library**: Avoid duplicate desktop scrollbars\n\n### Performance\n\n- **backend**: Migrate selected data jobs to Rust\n- **link**: Reuse desktop player window state\n- **link**: Filter remote rows and release published phone catalogs\n- **library**: Share Android thumbnail files by content\n- **equalizer**: Isolate control rebuilds and defer serialization\n- **ui**: Back off idle TV focus recovery and retain transfer layout\n- **android**: Stream unchanged CUE scans and retain metadata objects\n- **network**: Reuse cover clients and coalesce permission checks\n- **link**: Send negotiated download queue deltas\n- **autoplay**: Defer taste training and pack vectors on the worker\n- **android**: Defer crash session preference I/O\n- **bridge**: Avoid redundant download and small job codecs\n- **storage**: Move preference blobs to atomic files\n- **covers**: Memoize reference keys and offload index warmup\n- **images**: Bound landscape artwork and extension icon decodes\n- **link**: Suppress idle state heartbeats and redundant pings\n- **player**: Bound Android session queue messages\n- **shell**: Defer idle preload and freeze hidden tab size\n- **library**: Measure uniform desktop song row extents\n- **rewind**: Cache backdrop blur and cap story updates\n- **library**: Reduce schema writes and repeated path migration\n- **library**: Restrict filtered album aggregates\n- **library**: Reuse suggestion matching and playlist seeds\n- **home**: Share counts and reuse unchanged shelves\n- **network**: Keep one Subsonic metadata client per connection\n- **shell**: Keep the Store update count out of MainShell\n- **desktop**: Rebuild only the arrows when a shelf is hovered\n- **shell**: Keep the window size and download count out of MainShell\n- **player**: Set the AutoMix start timer again only when the start moves\n- **player**: Prepare AutoMix only in the last 150 s of a song\n- **library**: Move the incremental scan delta instead of copying it\n- **network**: Keep NAS tag covers the cache already holds\n- **covers**: Link identical Library thumbnails on desktop and iOS\n- **covers**: Flush scan thumbnails once per scan on Apple\n- **ui**: Lazily build large logs and review lists\n- **library**: Batch retained-page refreshes\n\n### Refactoring\n\n- Reorganize and streamline file settings and download queue logic by [@kevenchantre](https://github.com/kevenchantre)\n\n### Testing\n\n- **search**: Note why the Mornye fingerprints changed\n- **network**: Accept the file type in streaming routes\n- Fix native cache cleanup fixtures (#786) ([#786](https://github.com/mornyeapp/Mornye/pull/786))\n- Pass empty cover references to native cleanup by [@frpboy](https://github.com/frpboy)\n- **shell**: Allow idle preloads in rebuild checks\n- **player**: Cover AutoMix lead duration and cancellation\n- **perf**: Measure private native application pipelines\n\n### Chores\n\n- **release**: Let a manual run skip desktop packages\n- Update AltStore source to v5.3.1 by [@github-actions[bot]](https://github.com/github-actions[bot])\n- Neutralize UI terminology and clarify code comments\n- Bump version to 5.3.1 (167)\n- Merge upstream AltStore source update\n- Update AltStore source to v5.3.0 by [@github-actions[bot]](https://github.com/github-actions[bot])\n\n### Merge\n\n- Sync reviewed pull requests from origin main\n\n### Revert\n\n- **player**: Keep the artwork anchored during track swipes\n\n\n### New Contributors\n* @kevenchantre made their first contribution\n* @frpboy made their first contribution\n* @lesecuritae made their first contribution\n* @Rohitkr0406 made their first contribution\n\n\n\n**Full Changelog**: [v5.3.0...v5.3.1](https://github.com/mornyeapp/Mornye/compare/v5.3.0...v5.3.1)\n\n---\n\n### Downloads\n\n#### Android\n\nAndroid APKs: **5.3.1-hotfix.2 (build 168)**. Restricts the Glyph mixer workaround to Nothing devices to address reported volume control issues on other phones.\n\n- **arm64**: `Mornye-v5.3.1-hotfix.2-arm64.apk` (recommended for modern devices)\n- **arm32**: `Mornye-v5.3.1-hotfix.2-arm32.apk` (older devices)\n- `*.apk.idsig`: V4 signatures for `adb install --incremental` only; normal installs do not need them\n\n#### iOS\n- **iOS**: `Mornye-v5.3.1-ios-unsigned.ipa` (sideload required)\n\n`SHA256SUMS.txt` lists the SHA-256 of every file above.\n\n### Installation\n**Android**: Enable \"Install from unknown sources\" and install the APK\n**iOS**: Use AltStore, Sideloadly, or similar tools to sideload the IPA",
+          "downloadURL": "https://github.com/mornyeapp/Mornye/releases/download/v5.3.1/Mornye-v5.3.1-ios-unsigned.ipa",
+          "size": 38671004,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "MoviePilot",
+      "bundleIdentifier": "org.moviepilot.app",
+      "developerName": "jxxghp",
+      "subtitle": "MoviePilot 的 iOS 原生客户端",
+      "localizedDescription": "MoviePilot 的 iOS 客户端，使用系统原生导航、搜索与快捷面板，业务页面、弹窗和插件界面复用 MoviePilot-Frontend，支持 iOS 26+ 的 Liquid Glass、侧滑返回、卡片长按菜单与前后台恢复。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/images/recommend.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/images/downloads.png"
+      ],
+      "tintColor": "#8844F6",
+      "versions": [
+        {
+          "version": "1.2.2",
+          "date": "2026-11-09",
+          "localizedDescription": "MoviePilot iOS 1.2.2，修复嵌套弹窗动画、iOS 16–25 底栏材质与原生搜索分类配色问题。\n\n### 更新内容\n\n- 修复 App 嵌套打开弹窗时直接切换内容的问题，补齐进入子弹窗、返回父弹窗和高度变化的动画，并适配系统“减弱动态效果”。\n- iOS 16–25 的底栏改用超薄系统磨砂材质，保留底页壁纸和明暗主题变化；iOS 26+ 继续使用系统 Liquid Glass。\n- 修复旧系统搜索页分类选中态使用相同强调色绘制背景和前景，导致图标与文字消失的问题。\n- 保留 iOS 16 设备的原生底栏布局、动态搜索按钮和路由确认行为。\n\n### 安装\n\n下载 `MoviePilot-1.2.2-unsigned.ipa` 后自行重签。本包没有 Apple 证书签名，不能直接安装；原生推送需要开发者团队为 `com.moviepilot.app` 启用 Push Notifications，并使用带该权限的生产描述文件，同时重签小组件、保留一致的 App Groups。免费账户须在重签时移除 `aps-environment`，继续使用主屏幕网页通知。\n\n如果旧版使用 `org.moviepilot.app`，新版会作为独立 App 安装，需要重新登录及绑定通知；旧 App 和数据不会自动迁移或删除。重签后 Bundle ID 与已有安装一致时才能覆盖更新，原生推送还须与 Server 的 topics 允许名单一致。\n\nMoviePilot 后台启用 AppPush 后，在 App **右上角三点 → 连接与显示 → 通知 → 开启系统通知** 中授权，再发送测试通知。Apple `.p8` 私钥、Team ID 与 Key ID 由 Server 配置，App 无需填写。开发签名须同时将 App 的 APNs 环境改为 `development`，不能仅替换描述文件。\n\n此版本无需为此更新前端；独立搜索仍需 [MoviePilot-Frontend v3.2.4](https://github.com/jxxghp/MoviePilot-Frontend/releases/tag/v3.2.4) 或更新的兼容版本。真实 Apple 投递、后台及锁屏接收需在具有推送权限的签名和真机上验证。\n\n[安装与续签](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/install.md) · [小组件](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/widgets.md) · [通知配置](https://github.com/jxxghp/MoviePilot-App/blob/main/guides/notifications.md)\n\nRelease 同时提供 `SHA256SUMS`。本包使用 iPhoneOS SDK 和 arm64 架构构建。\n\n构建源码：[aedc6585518f6e5e3d726eed0eea88674eb4e962](https://github.com/jxxghp/MoviePilot-App/commit/aedc6585518f6e5e3d726eed0eea88674eb4e962)。",
+          "downloadURL": "https://github.com/jxxghp/MoviePilot-App/releases/download/v1.2.2/MoviePilot-1.2.2-unsigned.ipa",
+          "size": 4231532,
+          "minOSVersion": "17.0"
         }
       ]
     },
@@ -714,6 +1049,30 @@
       ]
     },
     {
+      "name": "Opaline",
+      "bundleIdentifier": "com.verback.YTLite",
+      "developerName": "verback2308",
+      "subtitle": "YouTube client for iOS 12+",
+      "localizedDescription": "A lightweight YouTube client with SponsorBlock, Return YouTube Dislike, and up to 1080p playback. No ads, no tracking, no dependencies.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Opaline/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Opaline/images/home.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Opaline/images/player.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Opaline/images/channel.jpg"
+      ],
+      "tintColor": "#FF0000",
+      "versions": [
+        {
+          "version": "1.12.0",
+          "date": "2026-09-10",
+          "localizedDescription": "**New**\n\n- Hold anywhere on the video to seek ([#116](https://github.com/verback2308/Opaline/issues/116)). Press and hold on the picture, then drag sideways. The seek bar follows your finger and the video jumps where you let go, so you no longer have to hit the thin bar at the bottom. The taps you already know still work: the sides seek, the middle pauses.\n- Search inside a channel ([#117](https://github.com/verback2308/Opaline/issues/117)). Channel pages have a magnifier now, and whatever you type there searches that channel only. YouTube serves no filters for this kind of search, so there are none in the app either.\n- Get a downloaded video out of the app ([#115](https://github.com/verback2308/Opaline/issues/115)). The menu on a downloaded video has a new \"Save to Files\" row that hands the file to the usual iOS share sheet, so it can go to Files, Photos, AirDrop or another app. It is named after the video, and only the video leaves: subtitles, comments and the saved page stay where they were.\n- Clear the whole search history at once ([#121](https://github.com/verback2308/Opaline/issues/121)). The last row under Recent searches wipes the list, and it asks first.\n\n**Fixes**\n\n- The mini player no longer sits on top of the tab bar ([#118](https://github.com/verback2308/Opaline/issues/118)). Tapping a tab behind the collapsed player switches to that tab instead of reopening the video.\n- Stereo no longer gets spatialized on AirPods ([#119](https://github.com/verback2308/Opaline/issues/119)). Ordinary two-channel sound was being turned into a fake surround field that moved when you turned your head. Video that really is multichannel still spatializes.\n- The \"...\" menu stops closing on its own ([#128](https://github.com/verback2308/Opaline/issues/128)). It was reacting to the device being tilted or put down, which made it look random when you held the phone in your hand.\n\n**Also**\n\n- If your device is older than Opaline supports, the README now points at [a downport for iOS 9](https://github.com/Joeviocoe/Opaline) by another developer, which runs on the iPad 2, iPad 3, iPad mini and iPhone 4S ([#125](https://github.com/verback2308/Opaline/issues/125)).",
+          "downloadURL": "https://github.com/verback2308/Opaline/releases/download/1.12.0/Opaline_1.12.0.ipa",
+          "size": 6685919,
+          "minOSVersion": "12.0"
+        }
+      ]
+    },
+    {
       "name": "Open Screen Sharing",
       "bundleIdentifier": "io.nekohasekai.screensharing",
       "developerName": "nekohasekai",
@@ -729,6 +1088,50 @@
           "downloadURL": "https://github.com/nekohasekai/open-screen-sharing/releases/download/v1.0.6/OpenScreenSharing.ipa",
           "size": 13714353,
           "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "OpenParsec",
+      "bundleIdentifier": "com.aigch.OpenParsec",
+      "developerName": "hugeBlack",
+      "subtitle": "Open Parsec client for iOS/iPadOS",
+      "localizedDescription": "An open-source Parsec client for iOS/iPadOS with mouse, keyboard, and touch-screen support.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/OpenParsec/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/OpenParsec/images/login.png"
+      ],
+      "tintColor": "#BB01F0",
+      "versions": [
+        {
+          "version": "1.4.0",
+          "date": "2026-10-08",
+          "localizedDescription": "Welcome! This is the first versioned release of everything thats been on our nightly since 1.3.0 in may, future releases will be tagged and published this way going forward:\r\n\r\nstreaming\r\n- pauses in the background instead of disconnecting, and reconnects on its own after a drop or a lock (#66, #80, #109)\r\n- pip recovers when its display layer fails, thanks @alantangok (#108)\r\n- audio buffer and race fixes, memcpy clamp from #70 thanks @2extndd (#85, #110)\r\n- connecting no longer kills music thats playing, it mixes instead, plus a status overlay (#86)\r\n\r\ninput\r\n- touchpad style cursor and crisp zoom, thanks @rebelancap (#78)\r\n- zoom viewport stays above the keyboard, thanks @alantangok (#107)\r\n- direct mode and keyboard fixes (#81, #87)\r\n- external pointer fixes and left alt no longer sent as win, thanks @jobsgonnawork (#91)\r\n- option key as command setting (#94)\r\n\r\napp\r\n- login fixes, saved login readable after first unlock (#89, #111)\r\n- fixes from live testing: screen stays awake while streaming, says when the session expired or the host didnt approve, names the host its reconnecting to, cursor and zoom fixes (#105)\r\n- reconnect memory leak and version string fixes from #70, thanks @2extndd (#84)\r\n- error reporting and logging (#77, #90)\r\n- safety fixes and cleanups (#82, #83)\r\n- every nightly has its own build number now so altstore shows it as an update (#112, #95 )\r\n\r\nExpect a 2.0 release in the coming weeks with lots more improvements! Thank you for your support!\r\n\r\n\r\n---\r\n\r\n# Generated by GitHub\r\n\r\n## What's Changed\r\n* Significantly optimized the sound latency performance by @xiaoxuhuanxiang in https://github.com/hugeBlack/OpenParsec/pull/3\r\n* Create altstore.json by @Somiona in https://github.com/hugeBlack/OpenParsec/pull/15\r\n* Fix AltStore .json by @yodaluca23 in https://github.com/hugeBlack/OpenParsec/pull/20\r\n* ci: upgrade deprecated upload artifact action by @underw8 in https://github.com/hugeBlack/OpenParsec/pull/26\r\n* New Features with General UI and Performance Improvements by @danieltarazona in https://github.com/hugeBlack/OpenParsec/pull/41\r\n* Fix fullwidth Unicode characters not passing through virtual keyboard by @Add1ct1ve in https://github.com/hugeBlack/OpenParsec/pull/49\r\n* Move zoom reset on rotate by @studiobloom in https://github.com/hugeBlack/OpenParsec/pull/55\r\n* Implement #58 by @studiobloom in https://github.com/hugeBlack/OpenParsec/pull/60\r\n* Added Picture in Picture by @naive17 in https://github.com/hugeBlack/OpenParsec/pull/62\r\n* fix crash sites and cleanup by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/63\r\n* keyboard remap and key repeat for hardware keyboards by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/64\r\n* reduce battery drain by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/65\r\n* 少映射了幾個全形字符 by @TwhomeGH in https://github.com/hugeBlack/OpenParsec/pull/68\r\n* Touchpad-style cursor control and crisp zoom by @rebelancap in https://github.com/hugeBlack/OpenParsec/pull/78\r\n* pause on background instead of disconnecting by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/66\r\n* Auto reconnect and stuck input fix by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/80\r\n* Direct mode fix by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/81\r\n* small cleanups by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/82\r\n* log sdk binary version and stream status by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/77\r\n* Safety fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/83\r\n* taking fixes from #70 by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/84\r\n* Audio buffer fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/85\r\n* Session status and audio session exclusivity by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/86\r\n* Keyboard fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/87\r\n* Lifecycle and login fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/89\r\n* Error reporting and logging by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/90\r\n* Fix external pointer regressions and Left Alt sent as Win (#88) by @jobsgonnawork in https://github.com/hugeBlack/OpenParsec/pull/91\r\n* Option key as command setting by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/94\r\n* Live test fixes, QUALITY PR! by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/105\r\n* keep zoom viewport above keyboard by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/107\r\n* pip recovery by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/108\r\n* reconnect fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/109\r\n* fix race audio ring buffer by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/110\r\n* Login fixes by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/111\r\n* nightly build number and 1.4.0 by @SandiyosDev in https://github.com/hugeBlack/OpenParsec/pull/112\r\n\r\n## New Contributors\r\n* @xiaoxuhuanxiang made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/3\r\n* @Somiona made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/15\r\n* @yodaluca23 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/20\r\n* @underw8 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/26\r\n* @danieltarazona made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/41\r\n* @Add1ct1ve made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/49\r\n* @studiobloom made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/55\r\n* @naive17 made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/62\r\n* @SandiyosDev made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/63\r\n* @TwhomeGH made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/68\r\n* @rebelancap made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/78\r\n* @jobsgonnawork made their first contribution in https://github.com/hugeBlack/OpenParsec/pull/91\r\n\r\n**Full Changelog**: https://github.com/hugeBlack/OpenParsec/commits/1.4.0",
+          "downloadURL": "https://github.com/hugeBlack/OpenParsec/releases/download/1.4.0/OpenParsec.ipa",
+          "size": 4358332,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Orchard",
+      "bundleIdentifier": "com.makr.orchard",
+      "developerName": "MakrSas",
+      "subtitle": "Apple Silicon macOS Ventura running inside an iPhone app",
+      "localizedDescription": "Boots a real arm64 macOS Ventura guest on iPhone through Apple's own chain (AVPBooter, iBoot and XNU) on QEMU's apple-vm machine, with the GPU drawn through Metal by reims-vgpu. Requires JIT, a signing tool that adds the increased memory limit, and a macOS VM you make yourself. It is slow — light scenes reach 30–40 fps at best.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orchard/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orchard/images/main.png"
+      ],
+      "tintColor": "#F0C060",
+      "versions": [
+        {
+          "version": "0.2",
+          "date": "2026-09-25",
+          "localizedDescription": "Orchard for iPhone 0.2: a faster emulator and a faster Metal path, plus a fix for guests that end up in Recovery.\n\nSetup and settings: [README](https://github.com/MakrSas/orchard-ios#readme).\n\n## Faster\n\nOn an iPhone 15 (A16), light scenes now reach 30–40 frames a second. Dragging a window runs at 10–15 frames a second (in 0.1 it dropped to around 7 once the Dock and menu bar were up).\n\n- **CPU (QEMU TCG)**\n  - The jump cache is bigger and better hashed, and keeps each process's blocks across context switches. Block-lookup misses fell from ~15% to ~3%.\n  - Changing ASID flushes only the user half of the TLB.\n  - The PMU is off, and fewer system-register writes end a translation block or flush the TLB.\n- **Fast pointer authentication** (on by default, in Settings → Machine → Processor). The guest still sees PAC, but no signature is computed. That was 10–15% of the emulator's time. Turn it off if macOS stops booting.\n- **Metal path (reims-vgpu)**\n  - A guest render pass stays on the GPU as one Metal pass, instead of a GPU round trip, a full-frame readback and a re-upload for every draw.\n  - Draw buffers come from a shared ring.\n  - Shader keys hash faster.\n  - Stores write back only the drawn area, with a NEON channel swap straight into guest pages.\n- **Tip:** 960×540 at 30 Hz is the sweet spot. In the guest, Reduce transparency helps dragging windows.\n\n## Fixed\n\n- **Guest stuck in Recovery with no disk.** This was macOS installing an automatic update, which cannot complete on this machine. Turn automatic updates off first thing; the README has the settings and the Terminal commands.\n- **Disk safety.** The disk is flushed when the app goes to the background and on Shut Down, and the log records guest flushes and I/O errors.\n\n## Also since 0.1\n\n- Sound (experimental, Settings → Machine → Sound).\n- A shared folder: Files → Orchard → Shared, mounted in the guest at `http://10.0.2.2:8080`.\n- Internet in the guest works.\n\n## You need\n\n- iOS 16 or later, tested on an iPhone 15 with iOS 27, and a phone with 6 GB of memory or more.\n- A signing tool that adds the increased memory limit capability, and JIT (such as StikDebug).\n- A macOS 13 VM made in UTM on a Mac.\n\nUnofficial, and not affiliated with Apple or ChefKiss. No Apple software is included. Licences: see LICENSE-NOTICE.md.",
+          "downloadURL": "https://github.com/MakrSas/orchard-ios/releases/download/v0.2/Orchard.ipa",
+          "size": 18477287,
+          "minOSVersion": "16.0"
         }
       ]
     },
@@ -782,6 +1185,30 @@
       ]
     },
     {
+      "name": "Playport",
+      "bundleIdentifier": "dev.playport.app",
+      "developerName": "playportdev",
+      "subtitle": "PC games on your iPhone. Natively, no streaming.",
+      "localizedDescription": "Playport runs Windows games, 64-bit and 32-bit, on a stock, non-jailbroken iPhone: install a game from your library onto the phone, pick up a controller and press Play. The game runs on the phone's own CPU and GPU — no PC, no cloud, no stream. Requires iOS 26 or later with JIT enabled through LocalDevVPN or StikDebug.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Playport/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Playport/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Playport/images/library.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Playport/images/game-page.png"
+      ],
+      "tintColor": "#F5B544",
+      "versions": [
+        {
+          "version": "0.5.0",
+          "date": "2026-11-02",
+          "localizedDescription": "# Playport 0.5.0: World of Warcraft, Red Dead Redemption 2, The Witcher 3: Wild Hunt – Remastered and touch controls\n<!-- date: 2026-11-02 -->\n\n**This is the big one. World of Warcraft is on your iPhone.** Install it straight from\nBlizzard through Playport's new **Battle.net** store, sign in and step into Azeroth. **Red\nDead Redemption 2** rides out of Arthur's cabin, **The Witcher 3: Wild Hunt – Remastered**\nplays in Kaer Morhen, and **no controller is needed any more**: on-screen touch controls\nwith three layouts, a full layout editor, a touch keyboard, controller mapping and gyro\naim. Add a redesigned Library, a performance overlay and Vulkan for every game.\n\n> **❤️ Playport is free, and it stays free. If it put a PC game in your pocket, please\n> consider [supporting it on Ko-fi](https://ko-fi.com/playportdev).** Getting World of\n> Warcraft, Red Dead Redemption 2 and The Witcher 3 running on a phone took a lot of work,\n> and every donation buys time for the next release: more games and more fixes.\n>\n> [![Support Playport on Ko-fi](https://img.shields.io/badge/Support_Playport-on_Ko--fi-FF5E5B?style=for-the-badge&logo=kofi&logoColor=white)](https://ko-fi.com/playportdev)\n>\n> A donation is a gift: it buys no licence, no extra rights and no different build, and\n> everyone may keep sharing Playport under its licence.\n\n**Updated IPA (2 November 2026).** The 0.5.0 IPA was replaced with a build that adds three\nfixes:\n\n- 32-bit games that unpack their own code at start-up (The Binding of Isaac: Rebirth, The\n  Witcher 2) no longer crash before their first frame.\n- Playport's Steam client now gives a game Steam's ownership ticket, so The Witcher 2's DRM\n  check passes.\n- A tap on a launcher's window goes to what you see under your finger: The Witcher 2\n  launcher's **Launch game** works.\n\nIf you installed 0.5.0 before this, download it again. `SHA256SUMS` lists the new files.\n\n![World of Warcraft in the world with the on-screen Keyboard & mouse controls and the performance overlay](https://playport.dev/screenshots/wow-touch.webp)\n\n## Highlights\n\n### ⚔️ World of Warcraft, from Battle.net\n**Battle.net is now a store in Playport**, next to Steam, GOG and Epic Games, and World of\nWarcraft shows in everyone's Library. No Battle.net app and no sign-in in Playport: pick\nthe game, press Install, and Playport downloads it from Blizzard's own servers.\n\n- **Retail, Classic, Classic Era and Classic Anniversary**, each with a region picker (US,\n  Europe, Korea or Taiwan; your phone's region by default) and a language. Playport checks\n  the free space before it starts and installs through Downloads, with pause, resume and\n  cancel.\n- **Always up to date:** every Play checks for a new build first and updates through\n  Downloads, then plays. *Check for update* sits on the game's page too.\n- **The game signs itself in**, as on a PC. The in-game menu's new **Type text** opens a\n  field over the game for your email, password and authenticator code, with paste and\n  AutoFill.\n- **It plays.** In our testing World of Warcraft reaches its login screen within about\n  45 seconds of Play and runs in the world at **55–60 FPS**.\n- **Your game, untouched:** Playport runs Blizzard's own Windows client through its\n  translator and changes none of the game's files and none of its code in memory. Before\n  the first Play it tells you plainly that Blizzard does not support Playport.\n\n![The Library's Battle.net store with World of Warcraft](https://playport.dev/screenshots/library-battlenet.webp)\n\n### 🤠 Red Dead Redemption 2 rides\nPress Play and Rockstar's own launcher starts, signs in, hands the game its ticket and gets\nout of the way. Social Club runs on Rockstar's own components, so the game stays signed in\nand saves as it should. One press on Story and you are in Arthur's cabin, on the frontier,\non a phone.\n\n![Arthur Morgan in a winter coat on a snowy cabin porch, snow-covered pines beyond](https://playport.dev/screenshots/rdr2.webp)\n\n### 🐺 The Witcher 3: Wild Hunt – Remastered plays\nThe remastered 4.x build of The Witcher 3 used to stop the moment it started: it needs\nAVX instructions the phone could not offer and asks for far more memory space than an\niPhone app gets. Playport now handles both, and Geralt is back in Kaer Morhen, on the\ngame's Direct3D 12 renderer. The classic 1.32 build still plays as before.\n\n![Geralt walking through a hall of Kaer Morhen past a lit fireplace](https://playport.dev/screenshots/witcher3-remastered.webp)\n\n### 🎮 On-screen controls: play with nothing but the phone\nNo controller? Playport draws its **on-screen controls** over the game. Connect a controller\nand they step aside; disconnect it and they come back (*Settings › Controls*: Automatic,\nAlways or Never).\n\n- **Three layouts, plus Off:** **Gamepad** (sticks, d-pad, A/B/X/Y, bumpers, triggers, View\n  and Menu), **Keyboard & mouse** (a W A S D stick, drag anywhere free to look, key caps\n  around your thumb) and **Point & click** (tap to click or use it as a trackpad, with a\n  magnifier for small targets, plus right click, hover, scroll, keys and Esc).\n- **A three-finger tap** anywhere opens Playport's in-game menu, with any layout. The first\n  time the controls appear on their own, a toast says so.\n- **The layout editor:** add, move, resize, duplicate and remove controls on a grid with\n  snapping guides, undo, reset and switch presets, by touch or with a controller, over the\n  paused game or from *Game options › Controls*. Each game keeps its own layout and its own\n  opacity.\n- **A suggested starting layout:** a game that never asks for a controller in its first\n  20 seconds is offered Keyboard & mouse, once.\n- **A touch keyboard** over the game, with F keys, arrows and sticky Shift, Ctrl and Alt,\n  for consoles, names and the keys a layout lacks.\n- **Any controller as a keyboard and mouse:** *Game options › Controls › Controller* maps\n  every button, stick, trigger and gyro to a controller input, a key with modifiers, a\n  mouse button, mouse movement or the wheel, or a Playport action. Pick **As a controller**,\n  **As keyboard & mouse** or **Custom**.\n- **Gyro aim:** aim by moving the phone, or a DualSense, DualShock 4 or Switch Pro\n  controller, as the mouse or the right stick, per game, with sensitivity, smoothing and a\n  test area to try it before you play.\n\n![The layout editor over World of Warcraft, editing the Keyboard & mouse layout](https://playport.dev/screenshots/touch-editor.webp)\n\n![World of Warcraft on a ship's deck with a blue dragon mount, with the on-screen Gamepad layout](https://playport.dev/screenshots/wow-gamepad.webp)\n\n### 📚 A redesigned Library\nThe stores are now **a column of icons down the Library's left**: All, Steam, GOG, Epic\nGames and Battle.net, every one always there (a store you are signed out of is dimmed).\nThe chosen store's name and game count sit above the grid, and **Installed only** narrows\nany of them with one tap. With a controller, press left from the first column to reach the\nstores, or step through them from anywhere with LT and RT.\n\n![The Library with All games and the store column](https://playport.dev/screenshots/library-0.5.webp)\n\n### 📊 A performance overlay\nA small pill at the top of the game shows the **frame rate, the frame time and your phone's\nthermal state**. Turn it on from the in-game menu or *Settings › Graphics*, and it stays on\nfor every game. It replaces Apple's Metal HUD, which cost CPU time on every frame.\n\n## Also new\n- **Vulkan is every game's graphics backend.** Direct3D 9, 10, 11 and 12 now run on Vulkan\n  over Metal by default. DXMT stays one choice away in *Settings › Graphics › Direct3D* or\n  on the game's page.\n- **Quicker launches:** shaders are compiled faster for Metal on iOS 27, and what the\n  graphics backends and the code translator have done is kept on disk, so a second launch\n  skips the first one's work. *Settings › Storage › Shader cache* shows the space and\n  clears it.\n- **OpenGL games run**, through Mesa's Zink on Vulkan, in 64-bit and 32-bit games alike.\n- **More room for big games:** each Play's memory is planned from your phone's memory and\n  the game's needs, freed memory is reused, and *Settings › Graphics › Donor memory*\n  (Auto by default) lets a game use more than the app alone could hold.\n- **Steam for 32-bit games too:** Playport's own Steam client now serves 32-bit games the\n  same sign-in, ownership check and online tickets as 64-bit ones. **Repair** fetches\n  missing Steamworks Shared files.\n- **Games get what they need, from Play:** an *Installing dependencies* step runs a game's\n  own prerequisite installer once, fetches Steam's or GOG's redistributables, and carries\n  Wine Mono for .NET games.\n- **Publisher launchers:** Rockstar's launcher runs for the games that need it, and a\n  game's own launcher and dialog windows show instead of an empty screen.\n- **Type text** in the in-game menu sends typing, paste and AutoFill to the game's focused\n  field, with a password mode.\n- **Graphics choices are cleaner:** *Aspect ratio* and *Resolution* are separate, and a\n  game can carry its own compatibility defaults (Super Meat Boy's 16:9, Assassin's Creed's\n  Keyboard & mouse layout).\n- **Screenshot** works over Vulkan games, and games that change display mode keep showing.\n- **Settings scrolls** on a landscape phone; *Storage* lists Steamworks Shared, the shader\n  cache and the translator's cache with their sizes.\n- **Newer components:** Wine 11.20 with Valve's latest Proton Wine changes, and current\n  FEX (the translator that runs x86 code on the phone), DXMT, DXVK, vkd3d-proton and Mesa.\n\n## Games\nThe [compatibility list](https://playport.dev/compatibility/) carries every game we and\nplayers have tried. Running since 0.4.0:\n\n- **Runs:** Among Us, Assassin's Creed: Director's Cut Edition, BioShock (GOG), Monster\n  Train (GOG), Duck Paradox (GOG), Spelunky (GOG), Tomb Raider: Anniversary (GOG), Super\n  Meat Boy (Epic), Soccer Online: Ball 3D, #DRIVE Rally, Castle Crashers (demo), Cat Mail\n  Co. (demo) and Football Manager 2022's Resource Archiver.\n- **Runs, with issues listed on their pages:** Counter-Strike and Half-Life (OpenGL),\n  Neverwinter Nights: Enhanced Edition (GOG), Tomb Raider (2013), DiRT 3 Complete Edition,\n  House of Golf 2 (Epic), and the three in the highlights: World of Warcraft, Red Dead\n  Redemption 2 and The Witcher 3: Wild Hunt – Remastered.\n\n## Good to know\n- **World of Warcraft needs your Battle.net account** with an active subscription; the\n  game's own login checks it. Blizzard does not support Playport, and an action on your\n  account is possible: Playport asks you to accept that once before the first Play.\n- **World of Warcraft is big:** retail needs about 132 GB of free space, Classic about\n  80 GB and Classic Era about 5 GB. Our testing covered retail. Busy cities and raids may\n  run slower than the open world.\n- **Red Dead Redemption 2 and The Witcher 3: Wild Hunt – Remastered push the phone to its\n  limits.** Both run close to the app's memory limit and need the increased memory limit\n  from your sideloader. Both heat the phone, and their frame rate drops as it warms;\n  expect long loads and hitches. Red Dead Redemption 2 installs about 120 GB, and we test\n  Story mode only, never Red Dead Online. In bright light some highlights look wrong (a\n  white beard brim, a red ear).\n- **Vulkan is the default now.** If a game looks or behaves worse than on 0.4.0, switch it\n  to **DXMT** on its page (*Game options › Graphics › Direct3D*) and tell us which game.\n- **On-screen controls:** without a controller, the three-finger tap is the only way into\n  the in-game menu. In some games' menus a Point & click tap moves the highlight without\n  opening the item (Portal 2's). A game may show controller prompts while the layout is\n  Off. Gyro aim drives the game's own stick or mouse, so a game's own aim settings still\n  apply.\n- **Big games keep needing memory,** and a game that wants more than the phone can hold\n  still ends.\n- **Tested on one phone** (iOS 27.2). If a game misbehaves, *Report a problem* on its page\n  shares one zip with its logs.\n- Your games, saves and logins are untouched by this update; install over 0.4.0.\n\n## Install\n\nDownload `Playport-0.5.0.ipa` and sideload it with your own Apple ID, keeping the\nincreased memory limit and the JIT helper extension. If you have an earlier version,\ninstall over it: your games, saves and logins stay. Bring your own games from Steam, GOG,\nEpic Games or Files, or install World of Warcraft from Battle.net.\n\nThe complete Corresponding Source of this exact build, the notices and the rebuild\ninstructions are attached as `Playport-0.5.0-source.tar`, `NOTICES.tar` and\n`INSTALL-REBUILD.tar`. `SHA256SUMS` covers every file.",
+          "downloadURL": "https://github.com/playportdev/playport/releases/download/v0.5.0/Playport-0.5.0.ipa",
+          "size": 413322913,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
       "name": "PSX3IOS",
       "bundleIdentifier": "com.miguel.psx3ios",
       "developerName": "xmiguel911x",
@@ -830,6 +1257,29 @@
       ]
     },
     {
+      "name": "RewindBox",
+      "bundleIdentifier": "com.neogamelab.neostation",
+      "developerName": "TarbleFR",
+      "subtitle": "Emulation frontend for iPhone and iPad",
+      "localizedDescription": "An independently maintained iOS/iPadOS fork of NeoStation with a gamepad-friendly, console-style game library and embedded Libretro cores, MeloNX, Dolphin, ARMSX2 and RPCS3 runtimes, JIT workflows and support for user-supplied firmware, keys and BIOS.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RewindBox/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RewindBox/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RewindBox/images/settings.png"
+      ],
+      "tintColor": "#50DD8B",
+      "versions": [
+        {
+          "version": "0.0.10",
+          "date": "2026-10-26",
+          "localizedDescription": "## RewindBox 0.0.10 — Build 559\r\n\r\nEverything since 0.0.9-fix.1 (Build 530).\r\n\r\n### Interface\r\n- Refined Liquid Glass interface: one-line main header, a new \"NeoStation\" style (solid accent pill, matte surfaces, no blur), a working Interface preview with Apply/Revert, and floating side-menu bubbles in Settings and Scraper.\r\n- New options in 12 languages: status bar items, accent colour, controller focus style, LB/RB glyphs and side-menu panel.\r\n- ROM folder changes saved in quick succession no longer fail.\r\n\r\n### Nintendo Switch (embedded MeloNX)\r\n- Backend threading is now on by default, as in the standalone MeloNX app, with a per-game switch.\r\n- Game FPS is shown in the RAM overlay.\r\n- In-game MoltenVK choice: the standalone MeloNX app's own MoltenVK is the default; RewindBox's version remains available and is used automatically if the other fails to load.\r\n- New \"Emulation priority\" option in the in-game menu (default unchanged). The screen no longer auto-locks during a game.\r\n- Closing a game after a GPU teardown error no longer leaves the app stuck on \"closing\": the session is stopped safely and explained.\r\n- Imports report completion without a full library rescan, updates are matched to the installed base game, audio playback starts correctly on the Apple backend, and pipeline compilation errors are handled without breaking later draws.\r\n- A per-second performance line in the app log helps troubleshooting.\r\n\r\n### PlayStation 3 (RPCS3)\r\n- PS3 disc images (.iso) in your library folder now launch through RPCS3: RewindBox reads the disc, offers to install it into RPCS3 (with its .dkey/.key file) and boots it. Renamed or removed images stay in sync, and the original can optionally be deleted after installation.\r\n- The God of War III profile is now actually applied; an old custom configuration previously disabled it silently.\r\n- Engine improvements:\r\n  - SPU code already in the cache loads without rebuilding the LLVM pass pipeline.\r\n  - GPU copies that fully overwrite their destination no longer read the old contents back.\r\n  - Fewer redundant texture hashes, plus a new experimental \"Texture validation per FIFO batch\" setting (automatic for God of War III only).\r\n  - Faster lookup of identical vertex shaders, fewer copies during synchronous shader compilation, fewer redundant pipeline builds, and shader-cache writes moved off the RSX thread.\r\n  - Less CPU spent waiting for the GPU, and faster JIT cache writes.\r\n  - Public ARMSX3 fixes: SPU warm-up order, PKG path containment, debug SELF decryption, in-memory savestate files, cellSaveData SDK 2.6 limit.\r\n  - ISO mounts are preserved when restoring a savestate.\r\n- New experimental \"MoltenVK Asynchronous Submits\" setting (off by default).\r\n- Additional bounded diagnostics (timeline, GPU waits, read-back origins, optimization counters) to measure performance.\r\n\r\nThe first launch of each PS3 game rebuilds its SPU cache once; the PPU cache is kept.\r\n\r\n### Testing status\r\nThese changes passed automated native, sanitizer, ARM64 and packaging checks. FPS, stutter and memory gains on iPhone have not been measured yet. Please report results with your logs.\r\n\r\n### Download\r\n`RewindBox-Build559.ipa` — SHA-256 `f16c2a3529537bfbaa933972ed63f6ce96bb2a9ca176f1e2d1726dcd7896480d`.\r\nAd-hoc signed: re-sign it with SideStore or AltStore before installing. Requires iOS 18.0 or later.\r\n\r\nVersion note: IPA build number 559; the internal app version remains 0.0.8.\r\n\r\nNo firmware, keys, BIOS or game files are bundled.",
+          "downloadURL": "https://github.com/TarbleFR/RewindBox/releases/download/0.0.10/RewindBox-.0.0.10.ipa",
+          "size": 188063063,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
       "name": "Roam Control",
       "bundleIdentifier": "com.sean.roamcontrol",
       "developerName": "seanhowarthdev",
@@ -850,6 +1300,31 @@
           "downloadURL": "https://github.com/seanhowarthdev/Roam-Control/releases/download/v0.9.9/RoamControl-0.9.9-Build105.ipa",
           "size": 4627321,
           "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
+      "name": "Rush Hours",
+      "bundleIdentifier": "com.rushhours.app",
+      "developerName": "ekomlenovic",
+      "subtitle": "Slide the cars, free the red one.",
+      "localizedDescription": "A free sliding-block traffic puzzle: slide the cars and trucks along their lanes to drive the red car out. 700+ campaign levels, daily and weekly challenges, a level creator and optional self-hosted multiplayer — no ads, no in-app purchases, no tracking.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/gameplay.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/map.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/daily.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/creator.png"
+      ],
+      "tintColor": "#E5A019",
+      "versions": [
+        {
+          "version": "2.2.0",
+          "date": "2026-11-09",
+          "localizedDescription": "## Release v2.2.0\n\nNew on the map:\n• Level search: find the levels you do not have 3 stars on, by grid size, number of moves, bosses… and go from one to the next\n• Go straight to a level by typing its number\n• Generator: choose how many levels (up to 100), mix difficulties and grid sizes, set a minimum of moves\n• A generated level no longer unlocks the whole campaign\n\nMulti-platform build from `0d267fa85534d68c90eb99a387dd726da1393c4a`.\n\n### iOS (unsigned IPA)\nInstall with SideStore / AltStore.\n\n### Android (APK)\nDirect install.\n\n### Checksums\n\n| File | MD5 | SHA-256 |\n|---|---|---|\n| `rush-hours-unsigned.ipa` | `b6605fac3f31c4289566e61cd6719a87` | `030fc97819f03898d2a3a39a9a4bc84c43eb18f3e13da7e578bf73439158f78a` |",
+          "downloadURL": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/download/v2.2.0-b67/rush-hours-unsigned.ipa",
+          "size": 19054716,
+          "minOSVersion": "16.4"
         }
       ]
     },
@@ -921,6 +1396,30 @@
       ]
     },
     {
+      "name": "Silverphase",
+      "bundleIdentifier": "com.silverphase.editor",
+      "developerName": "akinal5765-byte",
+      "subtitle": "Native film and print simulation for iPhone and iPad",
+      "localizedDescription": "Take a photograph through camera input, film, development, print and scan. Choose film and paper, then shape the image with exposure, development contrast, filtration and physical frame size, with grain, halation and film edges formed in the same imaging pipeline.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Silverphase/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Silverphase/images/canvas.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Silverphase/images/panel.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Silverphase/images/materials.png"
+      ],
+      "tintColor": "#FF9F0A",
+      "versions": [
+        {
+          "version": "1.1.1",
+          "date": "2026-11-02",
+          "localizedDescription": "> **当前两端下载：** [macOS 1.0.1](https://github.com/akinal5765-byte/Silverphase/releases/tag/v1.0.1) · [iOS 1.1.1](https://github.com/akinal5765-byte/Silverphase/releases/tag/v1.1.1)\n\n新增 **CineStill 800T**，已接入 iOS 与 macOS 的共享胶片目录。\n\n- 采用上游的无防光晕背层回反射模型，提供红色光晕和 **0–8 EV 高光余量**控制。\n- 新增按通用提示词生成的包装风格封面；两端卡片短名称统一为 **800T**，列表保留完整名称 **CineStill 800T**。\n- 复用 Vision3 500T 的原始乳剂数据与印相校准，保留 Hanze Qiu、Andrea Volpato 的来源记录及 GPL / CC BY-SA 声明。\n\n两端独立编号：**macOS 1.0.1（2）**、**iOS 1.1.1（3）**。\n\n[PR #2](https://github.com/akinal5765-byte/Silverphase/pull/2) 已合并。安装包来自提交 `0e0d354c6d4813ec7cdbf6a004a3c3c3fde9525a`，其源码树与合并后的 `main` 一致。包内附构建来源与开源声明，公开包不包含个人照片、私有材料或签名凭据。\n\n## 下载与安装\n\n下载 **`Silverphase-1.1.1-iOS-unsigned.ipa`**，适用于 **arm64、iOS / iPadOS 18 及以上**。\n\n这是**未签名 IPA**，需要自行完成设备签名和描述文件配置；请保留 `Silverphase-iOS-RequiredEntitlements.plist` 中的 Increased Memory Limit 能力。包内不提供证书、私钥或设备描述文件。安装方法见附件 `INSTALL.md`；校验值见 `SHA256SUMS.txt`，构建与来源信息见 `ios-build.json`。\n\n## 验证范围\n\n800T 的模拟器专项检查通过，公共 Release 构建与打包通过。完整移动端冒烟检查在后续读取原图细节时因内存不足中止，因此仍属部分覆盖。\n\n签名开发版本已单独覆盖安装到 Duo，保留照片库和编辑记录；安装后未启动应用或操作验证。此版本不新增真机触控、相册权限、内存能力或全分辨率导出的验收结论。\n\n[详细验证记录](https://github.com/akinal5765-byte/Silverphase/blob/0e0d354c6d4813ec7cdbf6a004a3c3c3fde9525a/performance/VALIDATION-CINESTILL-2026-11-02.md)。",
+          "downloadURL": "https://github.com/akinal5765-byte/Silverphase/releases/download/v1.1.1/Silverphase-1.1.1-iOS-unsigned.ipa",
+          "size": 92284015,
+          "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
       "name": "Sonar",
       "bundleIdentifier": "cn.bobochang.sonar",
       "developerName": "can4hou6joeng4",
@@ -962,6 +1461,30 @@
           "downloadURL": "https://github.com/gholts/sphere./releases/download/v1.6.2/sphere-v1.6.2.ipa",
           "size": 3603023,
           "minOSVersion": "26.1"
+        }
+      ]
+    },
+    {
+      "name": "StikDebug",
+      "bundleIdentifier": "com.stik.stikdebug",
+      "developerName": "StikDebug",
+      "subtitle": "On-device JIT enabler and device toolbox.",
+      "localizedDescription": "An on-device debugger and developer toolbox for iOS versions 17.4+ powered by idevice. Note: requires LocalDevVPN and cannot be used inside LiveContainer to enable JIT for that same LiveContainer.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/StikDebug/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/StikDebug/images/home.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/StikDebug/images/scripts.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/StikDebug/images/settings.png"
+      ],
+      "tintColor": "#3B86F7",
+      "versions": [
+        {
+          "version": "3.2.2",
+          "date": "2026-11-08",
+          "localizedDescription": "- Fix Utsuro, Henge, and \"MeloCafe\"\n\n**Full Changelog**: https://github.com/StikDebug/StikDebug/compare/3.2.1...3.2.2",
+          "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.2.2/StikDebug-3.2.2.ipa",
+          "size": 16924687,
+          "minOSVersion": "17.4"
         }
       ]
     },
@@ -1166,6 +1689,17 @@
       "url": "https://github.com/dododook/my-ipas/releases/tag/Odysseus-1.0.0"
     },
     {
+      "appID": "com.rushhours.app",
+      "title": "Rush Hours 2.2.0 · 09 Nov 2026",
+      "identifier": "Rush Hours-release-v2.2.0-b67",
+      "caption": "Rush Hours 2.2.0 is available.",
+      "date": "2026-11-09T23:36:07Z",
+      "tintColor": "#E5A019",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/tag/v2.2.0-b67"
+    },
+    {
       "appID": "sb.moe.kumone",
       "title": "Kumone 0.3.32 · 09 Nov 2026",
       "identifier": "Kumone-release-v0.3.32",
@@ -1188,6 +1722,17 @@
       "url": "https://github.com/huamidev/GestaltX/releases/tag/v1.0.3"
     },
     {
+      "appID": "org.moviepilot.app",
+      "title": "MoviePilot 1.2.2 · 09 Nov 2026",
+      "identifier": "MoviePilot-release-v1.2.2",
+      "caption": "MoviePilot 1.2.2 is available.",
+      "date": "2026-11-09T13:38:44Z",
+      "tintColor": "#8844F6",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/images/news.png",
+      "notify": true,
+      "url": "https://github.com/jxxghp/MoviePilot-App/releases/tag/v1.2.2"
+    },
+    {
       "appID": "app.local.iPadn",
       "title": "iPadn 1.8.0 · 09 Nov 2026",
       "identifier": "iPadn-release-v1.8.0",
@@ -1197,6 +1742,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iPadn/images/news.png",
       "notify": true,
       "url": "https://github.com/mengangs/ipadn/releases/tag/v1.8.0"
+    },
+    {
+      "appID": "com.stik.stikdebug",
+      "title": "StikDebug 3.2.2 · 08 Nov 2026",
+      "identifier": "StikDebug-release-3.2.2",
+      "caption": "StikDebug 3.2.2 is available.",
+      "date": "2026-11-08T22:05:57Z",
+      "tintColor": "#3B86F7",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/StikDebug/images/news.png",
+      "notify": true,
+      "url": "https://github.com/StikDebug/StikDebug/releases/tag/3.2.2"
     },
     {
       "appID": "com.google.ios.youtube",
@@ -1221,6 +1777,17 @@
       "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261108"
     },
     {
+      "appID": "com.llayerlinux.LSX4RuntimeProbe",
+      "title": "LSX4 128.9934 · 08 Nov 2026",
+      "identifier": "LSX4-release-ios-jit-128.9934",
+      "caption": "LSX4 128.9934 is available.",
+      "date": "2026-11-08T00:33:06Z",
+      "tintColor": "#C09050",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LSX4/images/news.png",
+      "notify": true,
+      "url": "https://github.com/lpfoj/lsx4/releases/tag/ios-jit-128.9934"
+    },
+    {
       "appID": "com.suwayomi.tachideskSorayomi",
       "title": "Tsumiru 1.6.5 · 07 Nov 2026",
       "identifier": "Tsumiru-release-v1.6.5",
@@ -1243,6 +1810,17 @@
       "url": "https://github.com/CyrilPeng/Venera-Next/releases/tag/v1.18.3"
     },
     {
+      "appID": "org.zhaohe.MiniWatts",
+      "title": "MiniWatts 1.7.0 · 07 Nov 2026",
+      "identifier": "MiniWatts-release-v1.7.0",
+      "caption": "MiniWatts 1.7.0 is available.",
+      "date": "2026-11-07T08:08:32Z",
+      "tintColor": "#30E0F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MiniWatts/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ResistanceTo/MiniWatts/releases/tag/v1.7.0"
+    },
+    {
       "appID": "io.nekohasekai.screensharing",
       "title": "Open Screen Sharing 1.0.6 · 07 Nov 2026",
       "identifier": "Open Screen Sharing-release-v1.0.6",
@@ -1252,6 +1830,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png",
       "notify": true,
       "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.6"
+    },
+    {
+      "appID": "com.thebcd69.bcd",
+      "title": "BCD 0.1.634 · 06 Nov 2026",
+      "identifier": "BCD-release-v0.1.634",
+      "caption": "BCD 0.1.634 is available.",
+      "date": "2026-11-06T17:53:12Z",
+      "tintColor": "#F070F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BCD/images/news.png",
+      "notify": true,
+      "url": "https://github.com/thebcd69/bcd-games/releases/tag/v0.1.634"
     },
     {
       "appID": "com.huamu013.ZhihuMinusMinus",
@@ -1276,6 +1865,28 @@
       "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.3.1-2026-11-06"
     },
     {
+      "appID": "com.kuschqin.madeira.steamui",
+      "title": "iDeck 0.1.3 · 06 Nov 2026",
+      "identifier": "iDeck-release-v0.1.3-alpha.6",
+      "caption": "iDeck 0.1.3 is available.",
+      "date": "2026-11-06T05:45:57Z",
+      "tintColor": "#50D0F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iDeck/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kuscholar/iDeck/releases/tag/v0.1.3-alpha.6"
+    },
+    {
+      "appID": "com.zarz.mornye",
+      "title": "Mornye 5.3.1 · 05 Nov 2026",
+      "identifier": "Mornye-release-v5.3.1",
+      "caption": "Mornye 5.3.1 is available.",
+      "date": "2026-11-05T10:34:12Z",
+      "tintColor": "#1E4E4F",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mornye/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mornyeapp/Mornye/releases/tag/v5.3.1"
+    },
+    {
       "appID": "ani.baka",
       "title": "AniBaka 5.2.4 · 05 Nov 2026",
       "identifier": "AniBaka-release-5.2.4+1101",
@@ -1287,6 +1898,17 @@
       "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.2.4+1101"
     },
     {
+      "appID": "com.husk.app",
+      "title": "Husk 3.4 · 05 Nov 2026",
+      "identifier": "Husk-release-3.4",
+      "caption": "Husk 3.4 is available.",
+      "date": "2026-11-05T03:33:53Z",
+      "tintColor": "#5949E5",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Husk/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Leviidev/Husk/releases/tag/3.4"
+    },
+    {
       "appID": "com.example.kazumi",
       "title": "Kazumi 2.4.3 · 04 Nov 2026",
       "identifier": "Kazumi-release-2.4.3",
@@ -1296,6 +1918,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
       "notify": true,
       "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.3"
+    },
+    {
+      "appID": "com.willfaust.madeora",
+      "title": "Madeira 0.2.0 · 04 Nov 2026",
+      "identifier": "Madeira-release-v0.2.0",
+      "caption": "Madeira 0.2.0 is available.",
+      "date": "2026-11-04T03:29:04Z",
+      "tintColor": "#7B68EE",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Madeira/images/news.png",
+      "notify": true,
+      "url": "https://github.com/willfaust/Madeira/releases/tag/v0.2.0"
     },
     {
       "appID": "com.example.PiliPlus",
@@ -1318,6 +1951,28 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
       "notify": true,
       "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.6.7"
+    },
+    {
+      "appID": "com.silverphase.editor",
+      "title": "Silverphase 1.1.1 · 02 Nov 2026",
+      "identifier": "Silverphase-release-v1.1.1",
+      "caption": "Silverphase 1.1.1 is available.",
+      "date": "2026-11-02T16:14:09Z",
+      "tintColor": "#FF9F0A",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Silverphase/images/news.png",
+      "notify": true,
+      "url": "https://github.com/akinal5765-byte/Silverphase/releases/tag/v1.1.1"
+    },
+    {
+      "appID": "dev.playport.app",
+      "title": "Playport 0.5.0 · 02 Nov 2026",
+      "identifier": "Playport-release-v0.5.0",
+      "caption": "Playport 0.5.0 is available.",
+      "date": "2026-11-02T10:13:17Z",
+      "tintColor": "#F5B544",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Playport/images/news.png",
+      "notify": true,
+      "url": "https://github.com/playportdev/playport/releases/tag/v0.5.0"
     },
     {
       "appID": "com.aoshuang.manicemu",
@@ -1373,6 +2028,28 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sonar/images/news.png",
       "notify": true,
       "url": "https://github.com/can4hou6joeng4/Sonar/releases/tag/v1.0.0-preview.5"
+    },
+    {
+      "appID": "dev.linuxrunner.app",
+      "title": "LinuxRunner 1.0.1 · 27 Oct 2026",
+      "identifier": "LinuxRunner-release-v1.0.1",
+      "caption": "LinuxRunner 1.0.1 is available.",
+      "date": "2026-10-27T07:30:48Z",
+      "tintColor": "#60B0F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LinuxRunner/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mxhm11cr/LinuxRunner/releases/tag/v1.0.1"
+    },
+    {
+      "appID": "com.neogamelab.neostation",
+      "title": "RewindBox 0.0.10 · 26 Oct 2026",
+      "identifier": "RewindBox-release-0.0.10",
+      "caption": "RewindBox 0.0.10 is available.",
+      "date": "2026-10-26T23:06:26Z",
+      "tintColor": "#50DD8B",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RewindBox/images/news.png",
+      "notify": true,
+      "url": "https://github.com/TarbleFR/RewindBox/releases/tag/0.0.10"
     },
     {
       "appID": "org.animeko.animeko",
@@ -1452,6 +2129,17 @@
       "url": "https://github.com/dddevid/Musly/releases/tag/v2.0.3"
     },
     {
+      "appID": "app.lightnovel.shelf",
+      "title": "LightNovelShelf 1.13.2 · 18 Oct 2026",
+      "identifier": "LightNovelShelf-release-v1.13.2",
+      "caption": "LightNovelShelf 1.13.2 is available.",
+      "date": "2026-10-18T10:47:40Z",
+      "tintColor": "#4E4592",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LightNovelShelf/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LightNovelShelf/Flutter/releases/tag/v1.13.2"
+    },
+    {
       "appID": "com.utmapp.UTM",
       "title": "UTM 5.0.8 · 17 Oct 2026",
       "identifier": "UTM-release-v5.0.8",
@@ -1507,6 +2195,50 @@
       "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.19"
     },
     {
+      "appID": "com.aigch.OpenParsec",
+      "title": "OpenParsec 1.4.0 · 08 Oct 2026",
+      "identifier": "OpenParsec-release-1.4.0",
+      "caption": "OpenParsec 1.4.0 is available.",
+      "date": "2026-10-08T16:07:29Z",
+      "tintColor": "#BB01F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/OpenParsec/images/news.png",
+      "notify": true,
+      "url": "https://github.com/hugeBlack/OpenParsec/releases/tag/1.4.0"
+    },
+    {
+      "appID": "com.mak5er.aircard",
+      "title": "AirCard-iOS 1.3.2 · 04 Oct 2026",
+      "identifier": "AirCard-iOS-release-v1.3.2",
+      "caption": "AirCard-iOS 1.3.2 is available.",
+      "date": "2026-10-04T12:22:53Z",
+      "tintColor": "#5020E0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AirCard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Mak5er/AirCard-iOS/releases/tag/v1.3.2"
+    },
+    {
+      "appID": "software.iridium",
+      "title": "Iridium 0.2.0 · 04 Oct 2026",
+      "identifier": "Iridium-release-v0.2.0",
+      "caption": "Iridium 0.2.0 is available.",
+      "date": "2026-10-04T02:20:31Z",
+      "tintColor": "#1C1C1E",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Iridium/images/news.png",
+      "notify": true,
+      "url": "https://github.com/intraducine/iridium/releases/tag/v0.2.0"
+    },
+    {
+      "appID": "com.makr.orchard",
+      "title": "Orchard 0.2 · 25 Sep 2026",
+      "identifier": "Orchard-release-v0.2",
+      "caption": "Orchard 0.2 is available.",
+      "date": "2026-09-25T16:12:05Z",
+      "tintColor": "#F0C060",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orchard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/MakrSas/orchard-ios/releases/tag/v0.2"
+    },
+    {
       "appID": "app.scenebox.SceneBox",
       "title": "SceneBox 1.0.4 · 23 Sep 2026",
       "identifier": "SceneBox-release-v1.0.4",
@@ -1540,6 +2272,17 @@
       "url": "https://github.com/SideStore/SideStore/releases/tag/0.7.0-alpha"
     },
     {
+      "appID": "app.fathom.emulator",
+      "title": "Fathom 1.0.0 · 14 Sep 2026",
+      "identifier": "Fathom-release-v1.0.0",
+      "caption": "Fathom 1.0.0 is available.",
+      "date": "2026-09-14T23:13:23Z",
+      "tintColor": "#68D8D8",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fathom/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Leviidev/Fathom/releases/tag/v1.0.0"
+    },
+    {
       "appID": "com.mistj.v2ex",
       "title": "Röam 1.0.0.5 · 10 Sep 2026",
       "identifier": "Röam-release-Roam-1.0.0.5",
@@ -1549,6 +2292,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Roam/images/news.png",
       "notify": true,
       "url": "https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.5"
+    },
+    {
+      "appID": "com.verback.YTLite",
+      "title": "Opaline 1.12.0 · 10 Sep 2026",
+      "identifier": "Opaline-release-1.12.0",
+      "caption": "Opaline 1.12.0 is available.",
+      "date": "2026-09-10T02:02:27Z",
+      "tintColor": "#FF0000",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Opaline/images/news.png",
+      "notify": true,
+      "url": "https://github.com/verback2308/Opaline/releases/tag/1.12.0"
     },
     {
       "appID": "com.beans.app",
@@ -1603,6 +2357,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Sphere/images/news.png",
       "notify": true,
       "url": "https://github.com/gholts/sphere./releases/tag/v1.6.2"
+    },
+    {
+      "appID": "com.ahmedbafkir.dlipa",
+      "title": "DLiPA 1.4 · 03 Aug 2026",
+      "identifier": "DLiPA-release-v1.4",
+      "caption": "DLiPA 1.4 is available.",
+      "date": "2026-08-03T08:46:29Z",
+      "tintColor": "#27A0F4",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/DLiPA/images/news.png",
+      "notify": true,
+      "url": "https://github.com/AhmedBafkir/DLiPA/releases/tag/v1.4"
     },
     {
       "appID": "com.example.joycomic",
