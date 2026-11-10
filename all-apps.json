@@ -381,6 +381,30 @@
       ]
     },
     {
+      "name": "iPadn",
+      "bundleIdentifier": "app.local.iPadn",
+      "developerName": "mengangs",
+      "subtitle": "搜索、下载你拥有的 App",
+      "localizedDescription": "iPadn，开源 App Store 客户端。用你自己的 Apple 账号搜索、下载并安装已购应用，支持历史版本、已下架应用、多地区比价与一键安装。发布的安装包未签名，需自行签名。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iPadn/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iPadn/images/search.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iPadn/images/detail.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iPadn/images/versions.jpg"
+      ],
+      "tintColor": "#111111",
+      "versions": [
+        {
+          "version": "1.8.0",
+          "date": "2026-11-09",
+          "localizedDescription": "## iPadn 1.8.0\n\n适用于 iOS / iPadOS 17 及更新版本；安装包未签名，请用自己的工具签名后安装。\n\n### 新增\n\n- 支持 Apple Store 设备验证（X-Apple-AMD）：登录、购买、下载时按服务器要求自动完成设备注册与验证头生成，减少因设备验证导致的登录或下载失败。验证数据仅保存在本机钥匙串，不随备份迁移。\n- 账号页改为与其他页面一致的大标题页头和底部标签栏样式。\n\n### 修复\n\n- 登录请求改用 Apple 当前的 plist 请求格式，并兼容 `auth.itunes.apple.com` 原生登录节点。\n- 登录、下载节点校验更严格：拒绝编码斜杠和路径穿越，仅接受 Apple 官方购买节点。\n- 签名运行组件在 Windows 检出（CRLF 换行）时也能通过校验。\n- 列表底部增加留白，避免最后一行被标签栏遮挡。\n\n真实账号登录、双重认证和下载授权效果待真机验证。\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n验证：设备 Release 编译与 IPA 检查通过；114 项测试通过，0 项失败，0 项跳过。",
+          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.8.0/iPadn-1.8.0-unsigned.ipa",
+          "size": 43743768,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
       "name": "iTorrent",
       "bundleIdentifier": "com.xitrix.iTorrent2",
       "developerName": "XITRIX",
@@ -484,11 +508,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.29",
-          "date": "2026-11-06",
-          "localizedDescription": "### Fixed\n\n- **macOS**: the now-playing page opens and closes cleanly — the page title, search field and sidebar toggle no longer hang over it while it moves, it no longer snaps into place at the end, and the thin white line beside the window buttons is gone; its collapse button is larger, sits in the top-right corner and always answers clicks.\n- **iOS**: adding a song to a playlist from the now-playing page shows the confirmation over the page; a song that is already in the playlist says so, and any other failure is shown inside the playlist picker (#182).\n- **iOS**: the search field stays visible when the Search tab opens.\n\n### Improved\n\n- **macOS**: hiding and showing the sidebar is smooth — the sidebar stays put and the page slides over it, the toggle never leaves its place beside the window buttons, the page title moves with the page, and View → Hide/Show Sidebar (⌃⌘S) is back.\n- **macOS**: the back button follows the sidebar toggle and, like it, is drawn without a glass capsule.\n- **macOS**: in the player bar, the like button sits right after the song title.\n\n---\n\n### 修复\n\n- **macOS**：播放页的打开和收起更干净——移动过程中页面标题、搜索框和侧栏按钮不再浮在播放页上，结束时不再突然跳一下，红绿灯旁的白色细线也没有了；收起按钮更大，移到右上角，并且每次点击都能响应。\n- **iOS**：在播放页把歌曲收藏到歌单时，提示直接显示在播放页上；歌单里已有这首歌时会明确提示，其他失败会显示在歌单选择框里（#182）。\n- **iOS**：打开搜索页时搜索框保持可见。\n\n### 改进\n\n- **macOS**：收起和展开侧栏不再卡顿——侧栏固定不动，由右侧页面滑动覆盖；切换按钮始终在红绿灯旁边不动，页面标题跟随页面移动，「显示」菜单中的「隐藏/显示边栏」（⌃⌘S）也恢复了。\n- **macOS**：返回按钮跟在侧栏按钮之后，并和它一样去掉了玻璃胶囊。\n- **macOS**：播放条里的「喜欢」按钮紧跟在歌名后面。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.29/Kumone-iOS-0.3.29.ipa",
-          "size": 3937238,
+          "version": "0.3.32",
+          "date": "2026-11-09",
+          "localizedDescription": "### Added\n\n- **iOS**: eight sound-effect presets and a ten-band custom equalizer on the now-playing page and in Settings, with a live response curve. A change applies to the playing track without rebuilding the player (#191).\n\n### Improved\n\n- **iOS**: the app follows the system language, English or Simplified Chinese, as the macOS app does (#191).\n- **Localization**: the English interface is complete on macOS, iOS and CarPlay. Album, playlist, artist and search pages, the iOS updater and CarPlay no longer fall back to Chinese, and VoiceOver reads the now-playing buttons in English. CarPlay play counts use K/M/B in English.\n- **Downloads**: a failed download now says why — the service's own reason (such as a risk-control refusal) or the system error code — instead of only asking you to check the network (#141).\n\n---\n\n### 新增\n\n- **iOS**：播放页和设置里新增八种音效预设和十段自定义均衡器，并带实时频率响应曲线。切换后直接作用于当前播放，不用重建播放器（#191）。\n\n### 改进\n\n- **iOS**：与 macOS 一样跟随系统语言，支持英文和简体中文（#191）。\n- **本地化**：macOS、iOS 与 CarPlay 的英文界面补齐。专辑、歌单、歌手与搜索页面、iOS 更新流程和 CarPlay 不再夹杂中文，播放页按钮的 VoiceOver 朗读也有了英文。CarPlay 的播放次数在英文下使用 K/M/B。\n- **下载**：下载失败时会说明原因（如服务端的风控拒绝）或系统错误码，而不再只提示检查网络（#141）。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.32/Kumone-iOS-0.3.32.ipa",
+          "size": 4060424,
           "minOSVersion": "16.0"
         }
       ]
@@ -1093,6 +1117,28 @@
   ],
   "news": [
     {
+      "appID": "sb.moe.kumone",
+      "title": "Kumone 0.3.32 · 09 Nov 2026",
+      "identifier": "Kumone-release-v0.3.32",
+      "caption": "Kumone 0.3.32 is available.",
+      "date": "2026-11-09T17:49:02Z",
+      "tintColor": "#C9A227",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
+      "notify": true,
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.32"
+    },
+    {
+      "appID": "app.local.iPadn",
+      "title": "iPadn 1.8.0 · 09 Nov 2026",
+      "identifier": "iPadn-release-v1.8.0",
+      "caption": "iPadn 1.8.0 is available.",
+      "date": "2026-11-09T00:04:33Z",
+      "tintColor": "#111111",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iPadn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mengangs/ipadn/releases/tag/v1.8.0"
+    },
+    {
       "appID": "com.google.ios.youtube",
       "title": "YouProEXTRA 21.45.4 · 08 Nov 2026",
       "identifier": "YouProEXTRA-release-youproextra-ipa2",
@@ -1146,17 +1192,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png",
       "notify": true,
       "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.6"
-    },
-    {
-      "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.29 · 06 Nov 2026",
-      "identifier": "Kumone-release-v0.3.29",
-      "caption": "Kumone 0.3.29 is available.",
-      "date": "2026-11-06T19:18:52Z",
-      "tintColor": "#C9A227",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
-      "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.29"
     },
     {
       "appID": "com.huamu013.ZhihuMinusMinus",
