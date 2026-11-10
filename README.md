@@ -149,8 +149,8 @@ MoviePilot 移动端，基于 Flutter 实现。
 ### <a href="https://github.com/dddevid/Musly"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Musly/icon.png" alt="Musly icon" width="24" align="top"> Musly</a>
 Free Navidrome client & Subsonic music player with an Apple Music-inspired interface.
 
-### <a href="https://github.com/celia-sh/Novella"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Novella/icon.png" alt="Novella icon" width="24" align="top"> Novella</a>
-轻书架第三方客户端，基于 React Native 构建，面向 iOS / iPadOS，支持小说与漫画阅读与社区。
+### <a href="https://github.com/dododook/my-ipas/releases/tag/Novella-2.7.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Novella/icon.png" alt="Novella icon" width="24" align="top"> Novella</a>
+轻书架第三方客户端，基于 React Native 构建，面向 iOS / iPadOS。上游已归档，源里保留 2.7.0。
 
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Odysseus-1.0.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Odysseus/icon.png" alt="Odysseus icon" width="24" align="top"> Odysseus</a>
 基于 Feather 的本机签名商店，用自己的证书或 Apple ID 签名并安装应用。

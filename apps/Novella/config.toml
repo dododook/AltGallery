@@ -1,8 +1,10 @@
 # altgen config for the Novella AltStore source.
+# IPA is hosted on dododook/my-ipas. celia-sh/Novella is archived and
+# dropped its GitHub Release IPA assets.
 # Run: uvx altgen -c config.toml
 
 [github]
-repo = "celia-sh/Novella"
+repo = "dododook/my-ipas"
 
 [source]
 name = "Novella"
@@ -17,7 +19,7 @@ name = "Novella"
 bundle_identifier = "sh.celia.novella"
 developer_name = "CELIA"
 subtitle = "轻书架第三方客户端"
-description = "使用 React Native 构建的轻书架第三方客户端，面向 iOS、iPadOS。"
+description = "使用 React Native 构建的轻书架第三方客户端，面向 iOS、iPadOS。上游仓库已归档并撤掉 IPA，本源保留 v2.7.0 未签名包。"
 icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/icon.png"
 screenshots = [
   "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/home.png",
@@ -30,10 +32,10 @@ min_os_version = "16.4"
 [versions]
 strip_v_prefix = true
 include_prereleases = false
-version_pattern = "^(\\d+\\.\\d+\\.\\d+)"
-# asset_pattern is a regex (not glob): every release ships one ipa named
-# Novella-<version>-release.ipa (e.g. Novella-2.3.0-release.ipa)
-asset_pattern = "Novella-.*\\.ipa$"
+# Only the Novella IPA in dododook/my-ipas; other apps in that repo are ignored.
+asset_pattern = "Novella_.*\\.ipa$"
+version_pattern = "Novella_([0-9.]+)\\.ipa$"
+version_source = "filename"
 
 [news]
 title_template = "{name} {version} · {date}"
