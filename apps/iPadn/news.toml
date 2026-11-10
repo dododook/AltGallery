@@ -1,0 +1,8 @@
+# render_news.py config: python templates/render_news.py --out apps/iPadn
+
+name = "iPadn"
+tagline = "搜索、下载你拥有的 App"
+
+[colors]
+tint = "#111111"
+tint_alt = "#111111"

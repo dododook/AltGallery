@@ -68,6 +68,9 @@ An unofficial E-Hentai App for iOS built with SwiftUI & TCA.
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Frok-1.0.7"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Frok/icon.png" alt="Frök icon" width="24" align="top"> Frök</a>
 NodeSeek 第三方 iOS 客户端。
 
+### <a href="https://github.com/mengangs/ipadn"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iPadn/icon.png" alt="iPadn icon" width="24" align="top"> iPadn</a>
+开源 App Store 客户端，用自己的 Apple 账号搜索、下载已购应用与历史版本。
+
 ### <a href="https://github.com/XITRIX/iTorrent"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iTorrent/icon.png" alt="iTorrent icon" width="24" align="top"> iTorrent</a>
 Torrent client for iOS.
 
