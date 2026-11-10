@@ -11,7 +11,7 @@
       "bundleIdentifier": "sh.celia.novella",
       "developerName": "CELIA",
       "subtitle": "轻书架第三方客户端",
-      "localizedDescription": "使用 React Native 构建的轻书架第三方客户端，面向 iOS、iPadOS。",
+      "localizedDescription": "使用 React Native 构建的轻书架第三方客户端，面向 iOS、iPadOS。上游仓库已归档并撤掉 IPA，本源保留 v2.7.0 未签名包。",
       "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/icon.png",
       "screenshots": [
         "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/home.png",
@@ -19,8 +19,29 @@
         "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/detail.png"
       ],
       "tintColor": "#2E2E2E",
-      "versions": []
+      "versions": [
+        {
+          "version": "2.7.0",
+          "date": "2026-11-10",
+          "localizedDescription": "Unsigned IPA from celia-sh/Novella v2.7.0. GitHub Release assets were deleted after the repo was archived; this copy was taken from the still-unexpired Actions artifact novella-unsigned-ipa-v2.7.0 (run 41178967148). SHA256 9948a1474ae7357b1541a10e53bd7071f0caf53542b6939bd1717c4702142ea7",
+          "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Novella-2.7.0/Novella_2.7.0.ipa",
+          "size": 29786138,
+          "minOSVersion": "16.4"
+        }
+      ]
     }
   ],
-  "news": []
+  "news": [
+    {
+      "appID": "sh.celia.novella",
+      "title": "Novella 2.7.0 · 10 Nov 2026",
+      "identifier": "Novella-release-Novella-2.7.0",
+      "caption": "Novella 2.7.0 is available.",
+      "date": "2026-11-10T07:32:34Z",
+      "tintColor": "#2E2E2E",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Novella/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/Novella-2.7.0"
+    }
+  ]
 }
