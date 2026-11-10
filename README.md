@@ -107,6 +107,9 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/celia-sh/Novella"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Novella/icon.png" alt="Novella icon" width="24" align="top"> Novella</a>
 轻书架第三方客户端，基于 React Native 构建，面向 iOS / iPadOS，支持小说与漫画阅读与社区。
 
+### <a href="https://github.com/dododook/my-ipas/releases/tag/Odysseus-1.0.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Odysseus/icon.png" alt="Odysseus icon" width="24" align="top"> Odysseus</a>
+基于 Feather 的本机签名商店，用自己的证书或 Apple ID 签名并安装应用。
+
 ### <a href="https://github.com/nekohasekai/open-screen-sharing"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Open-Screen-Sharing/icon.png" alt="Open Screen Sharing icon" width="24" align="top"> Open Screen Sharing</a>
 开源 Apple VNC 屏幕共享客户端与服务器，针对局域网与公网优化。
 
