@@ -22,11 +22,11 @@
       "tintColor": "#E5A019",
       "versions": [
         {
-          "version": "2.2.0",
-          "date": "2026-11-09",
-          "localizedDescription": "## Release v2.2.0\n\nNew on the map:\n• Level search: find the levels you do not have 3 stars on, by grid size, number of moves, bosses… and go from one to the next\n• Go straight to a level by typing its number\n• Generator: choose how many levels (up to 100), mix difficulties and grid sizes, set a minimum of moves\n• A generated level no longer unlocks the whole campaign\n\nMulti-platform build from `0d267fa85534d68c90eb99a387dd726da1393c4a`.\n\n### iOS (unsigned IPA)\nInstall with SideStore / AltStore.\n\n### Android (APK)\nDirect install.\n\n### Checksums\n\n| File | MD5 | SHA-256 |\n|---|---|---|\n| `rush-hours-unsigned.ipa` | `b6605fac3f31c4289566e61cd6719a87` | `030fc97819f03898d2a3a39a9a4bc84c43eb18f3e13da7e578bf73439158f78a` |",
-          "downloadURL": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/download/v2.2.0-b67/rush-hours-unsigned.ipa",
-          "size": 19054716,
+          "version": "2.2.2",
+          "date": "2026-11-10",
+          "localizedDescription": "## Release v2.2.2\n\nWhat's new:\n• The 3 daily missions now give 200 XP\n• XP bonuses: every day in a row with your missions done or the daily challenge won boosts all the XP you earn, up to ×3\n• An \"XP bonus\" card in your profile, and your bonus at the end of your XP bar\n• Your level has its own emblem, also next to your nickname in multiplayer\n• The streak flame and the freeze snowflake open their own screen\n\nMulti-platform build from `044d3b3e2c5914f27d1754352b5586c6a456ebe4`.\n\n### iOS (unsigned IPA)\nInstall with SideStore / AltStore.\n\n### Android (APK)\nDirect install.\n\n### Checksums\n\n| File | MD5 | SHA-256 |\n|---|---|---|\n| `rush-hours-unsigned.ipa` | `720352e7379f5355addd2844488f5832` | `a5c80e3a17fc2b97a9de7e0666417edc219f79529dbf1ba200b99203bd5e18c5` |",
+          "downloadURL": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/download/v2.2.2-b70/rush-hours-unsigned.ipa",
+          "size": 19091977,
           "minOSVersion": "16.4"
         }
       ]
@@ -35,14 +35,14 @@
   "news": [
     {
       "appID": "com.rushhours.app",
-      "title": "Rush Hours 2.2.0 · 09 Nov 2026",
-      "identifier": "Rush Hours-release-v2.2.0-b67",
-      "caption": "Rush Hours 2.2.0 is available.",
-      "date": "2026-11-09T23:36:07Z",
+      "title": "Rush Hours 2.2.2 · 10 Nov 2026",
+      "identifier": "Rush Hours-release-v2.2.2-b70",
+      "caption": "Rush Hours 2.2.2 is available.",
+      "date": "2026-11-10T17:40:40Z",
       "tintColor": "#E5A019",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/news.png",
       "notify": true,
-      "url": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/tag/v2.2.0-b67"
+      "url": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/tag/v2.2.2-b70"
     }
   ]
 }

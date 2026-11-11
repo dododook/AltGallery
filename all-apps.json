@@ -210,11 +210,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20261108",
-          "date": "2026-11-08",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Texture packs: a This Game list in both browsers, shown while a game runs\n- Driver list: show only the sources built for the device's GPU family\n- arm64: a post-mortem in the log for a fault in recompiled code\n- PageFaultHandler: a reporter for the faults it cannot handle\n- Crash handler: let the fault's own signal kill the process\n- Console: expose the log file's descriptor for crash handlers\n- arm64: read guest words for the post-mortems without allocating\n- AutoTune: lower the Android Display Resolution (HW scaler) to the render resolution when GPU-bound\n- AutoTune: add Disabled to the download mode ladder, and step over a rung that did not help\n- Driver list: a release with one zip per device lists each zip by its own name\n- Translations: the batch's strings in all 19 languages\n- Android: VR mode, named DNS host entries, touch stick travel, MdiEx drivers\n- Auto Progressive Scan: hold Triangle+Cross through Criterion intros\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261107...9144e4ff1fed43756809d8e68b3efc2505a51078",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261108/ARMSX2-nightly-20261108-9144e4ff1f-iOS-arm64.ipa",
-          "size": 40592382,
+          "version": "nightly-20261111",
+          "date": "2026-11-11",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- Android: regenerate the PGO profile on the source with the GS runs build\n- tests: the block hasher's unaligned update stays inside the test memory\n- GS: comments that named removed gsrunner switches, and an include they needed\n- GS/Vulkan: the run machine's development log goes\n- GS/TC: the lean path's mode switch and check halves go\n- gsrunner: the burst memo's switches and statistics line go\n- gsrunner: the readback lane's statistics, trace and switches go\n- gsrunner: the kick's two check modes go\n- GS/Vulkan: the run machine sleeps where runs do not form\n- GS: the vertex buffer grows in 64-bit sizes and fails loudly past a ceiling\n- GS: a reset of the draw buffers frees the buffers it replaces\n- GS/SW: a draw whose frame and Z buffers share pages is not split between workers\n- GS/SW: a texture is not refilled while a queued draw still reads it\n- GS/Vulkan: a run that holds a large draw keeps one state for all its draws\n- GS/Vulkan: a draw that cannot open a run is primed before it is classified\n- GS/Vulkan: the stencil counter resolve pipeline takes blend constants and line width dynamic\n- GS/Vulkan: the run pipeline declares its dynamic state through AddCachedDynamicState\n- GS/Vulkan: the stencil counter resolve pipeline takes blend constants and line width dynamic\n- GS/Vulkan: a run opens at the second of two consecutive draws that share its fixed state\n- GS/Vulkan: a draw with a vertex-selector bit runs never take is refused first, with the pixel-shader check\n- gsrunner: -kick-convert-check runs the kick's old conversion pass beside the new one\n- GS: the kick kernel converts a job in stretches, with nothing tested per vertex\n- GS/Vulkan: the stencil counter resolve pipeline keeps blend constants and line width dynamic\n- GS/Vulkan: the run machine's rings are made by the first draw that would join a run\n- GS/Vulkan: a draw that continues a run still counts toward the readback in-pass kick\n- gsrunner: -kick-decide-check runs the kick's wide decision beside the four-wide one\n- GS: the kick kernel decides on raw 16-bit coordinates, both axes in one lane\n- tests: block identities over held depth words are those of the words\n- GS: choose the block identity by timing the candidates once, on the first use\n- GS/HW: keep the palette's hash while the renderer's palette has not been rewritten\n- GS/CLUT: the palette's alpha range with one LD4 per 16 entries on ARM64\n- tests: pin the alpha range of an expanded palette\n- GS/HW: take a level's block identities in one call, and combine them with AES\n- GS/HW: a CPU clear of whole pages gives their blocks the identity of what it wrote\n- GS/HW: key every texture lookup that names nothing by the identities of its blocks\n- GS: GSBlockId, a cheaper identity for a block of local memory inside one run\n- tests: pin the texture hashes that name dumped and replacement textures\n- gsrunner: the run machine keeps -runs on|off and -runs-log; the probing switches go\n- GS/Vulkan: a draw outside the run program's pixel-shader set is refused first, for two masks\n- GS/Vulkan: declining the targets whose runs do not pay (off, unfinished)\n- GS/Vulkan: draws that alternate two sets of constants reuse the earlier upload\n- gsrunner: -runs-nofill-classic, the classic path's no-fill arm (development)\n- GS/Vulkan: the dear split weighs fill against a host draw, per GPU class\n- tests: a hand-worked case of the kick kernel's four-wide decision\n- gsrunner: the readback lane's measurement scaffolding\n- MTGS: a GS-to-EE read spins only while spinning has been answering it\n- MTGS: a GS-to-EE read spins for its answer, and the GS thread for the next read\n- GS/Vulkan: the in-pass kick spends at most a quarter of the readback wait it saves\n- GS/Vulkan: after the gate refuses an in-pass kick, offer it again 32 draws later\n- GS/Vulkan: in a readback frame the kick also ends a pass of many draws\n- GS/HW: the depth target holds the moved words until local memory is read or written there\n- GS/Vulkan: the run log carries each run's bounding-box area by dear class (development)\n- GS/HW: a Z24 move of colour pages into a depth target stays on the GPU\n- GS: a whole-page Z24 move of colour pages lands as a fixed block permutation\n- GS/HW: a burst's second read comes from its first round trip\n- GS/HW: the target reads of one request share one GPU round trip\n- GS/Vulkan: a run flushed from inside an apply keeps the classic path's chosen pipeline\n- GS: a new draw's first vertices are replayed only where a flush check is asked\n- GS: the kernel's conversion pass stands behind its own interface\n- gsrunner: -runs-no-continue, to price the run machine's shortcut (development)\n- GS/Vulkan: the run log records which fixed state ended a run (development)\n- GS/Vulkan: additive draws join runs\n- GS/Vulkan: recorded keys with raster ordering or a stencil counter are loadable\n- GS: the kernel's driver takes the per-draw environment snapshot itself\n- tests: every recorded pipeline key a draw can make is loadable\n- GS: the kick kernel decides a chunk first and converts only the vertices that stay\n- GS/HW: the CPU memory clear's 24-bit and masked fills keep the old bits with one bit select\n- GS: the burst memo uses GSClut's read serial\n- GS/Vulkan: draws without a depth buffer and expanded sprites join runs\n- GS/Vulkan: the run's header and table set takes a descriptor pool of its own\n- GS/Vulkan: a game's recorded pipeline keys survive every build that keeps the key layout\n- GS cache: a key layout identity, hashed from the pipeline selector definitions alone\n- Android: a new install removes only the GPU caches older builds wrote\n- Android: save the shader caches on every trip to the background, not once per 120 s\n- GS cache: write a change a few seconds after it settles, not only every 30 s\n- GS/Vulkan: on Android, name the linked GLSL compiler by its own versions\n- GS/Vulkan: the driver's pipeline blob is stamped by the driver, not the app's build\n- GS/Vulkan: every game's SPIR-V goes into the device's pack as well\n- GS/Vulkan: warm the GLSL compiler on the compile queue when the device opens\n- GS/Vulkan: the recorded-key precompile runs on GSCompileQueue\n- GS: GSCompileQueue, a worker pool for shader and pipeline builds\n- GS cache: a pack makes its directory again when its file is not there\n- tests: a pack is written after its empty directory was removed\n- GS/TC: a target keeps the end block of its valid area\n- GS/HW: the burst memo rests through runs of block copies\n- GS/HW: three values of Draw() are worked out only where they are read\n- GS/HW: the burst memo leaves alone what the copy road cannot take at level 0\n- GS/TC: the post-draw invalidation returns when no source is under the write\n- GS/TC: the target lookup answers from the front of its list\n- GS/HW: the burst memo prefetches what the next packet compare reads\n- GS/HW: the burst memo invalidates the texture cache once per burst\n- GS/HW: the burst memo tests its block-copy gate first\n- gsrunner: the burst memo's vertex counts and slab footprint\n- GS/HW: the burst memo records into recycled slabs\n- GS: the burst memo has no setting\n- gsrunner: -runs-split-mask, and the run log's per-state change counts\n- GS/Vulkan: a draw that opens a run after a ring or texture-array end needs its program built too\n- GS/Vulkan: the run machine's log counts its refusals by detail\n- GS/Vulkan: a draw that continues a run skips the classic path's device work\n- gsrunner: the run machine's development switches\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261108...22b1a7661fa5b29b54fd310911f16841d672bc6d",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261111/ARMSX2-nightly-20261111-22b1a7661f-iOS-arm64.ipa",
+          "size": 40652510,
           "minOSVersion": "17.0"
         }
       ]
@@ -486,11 +486,11 @@
       "tintColor": "#007AFF",
       "versions": [
         {
-          "version": "1.0.4",
-          "date": "2026-11-10",
-          "localizedDescription": "English | [简体中文](https://github.com/huamidev/GestaltX/blob/v1.0.4/CHANGELOG_ZH-CN.md)\n\nBuild `11101436`.\n\n### Added\n\n- WAPI preset under **Device → Presets**: disable the WAPI regulatory flag or\n  restore the recorded original value. The cached Boolean is resolved from the\n  device's own MobileGestalt image instead of a hard-coded slot (#30).\n- Per-device originals for the WAPI flag. The value survives edits, app\n  restarts, journal migration, and is restored together with the other cached\n  options (#30).\n- New display presets: high-luminance Always-On Display, AOD flipbook and its\n  entry count, HDR photo display, wallpaper parallax control, and experimental\n  PWM and DisplayPort capability flags.\n- New device presets: Collision SOS, Audio Mix, and Spatial FaceTime audio.\n- New intelligence presets: on-device Siri, Audio Intelligence, Personal\n  Translator, Photos Clean Up, Handwriting Synthesis, and always-listening Hey\n  Siri. These remain capability flags; hardware and region still decide what\n  actually runs.\n- Korean localization, bringing the app to eight supported languages (#24).\n- CI now builds an ad-hoc signed IPA automatically and uploads it as an\n  artifact; tag and release runs also attach it to the matching release.\n\n### Changed\n\n- Additional Options and the WAPI row are shown directly in\n  **Device → Presets**. The hidden ten-tap unlock on the About version string\n  was removed.\n- Restore and open actions are disabled while the current document has staged\n  edits. Save or discard them first instead of silently losing the changes\n  (#37).\n- Version bumped to 1.0.4 (`CURRENT_PROJECT_VERSION` 11101436). README version\n  badges and the build date were updated.\n- All new user-facing strings are localized in the eight supported languages\n  (English, Simplified Chinese, Traditional Chinese for Taiwan and Hong Kong,\n  Vietnamese, Russian, Persian, and Korean) (#30, #38).\n\n### Fixed\n\n- Device access now falls back across every signed App Group instead of\n  trusting the first one. This fixes the `MobileGestalt access was denied`\n  error on builds signed with a certificate that carries multiple App Groups\n  (#47).\n- Field editing preserves exact 64-bit integers, including unsigned values\n  above `Int64.max`. Read-back comparison no longer aliases `UInt64.max` with\n  `-1` (#31).\n- Opening a field and applying it unchanged no longer re-parses its display\n  text, preserving sub-millisecond `Date` precision and nested values in\n  arrays and dictionaries (#34).\n- Malformed `ArtworkTraits` values are no longer replaced or lost when a model\n  name or Dynamic Island layout preset is applied. The UI explains that the\n  field must be fixed in MG Control first (#38).\n- Device backup restores reject a different `CacheUUID`, `CacheVersion`, or\n  `CacheData` length before any write, instead of restoring an incompatible\n  cache layout (#32).\n- Saved backups are verified against their recorded size and SHA-256 digest\n  before reuse. Legacy backups without a digest remain readable (#33).\n- Shared plist imports reject FIFOs, sockets, directories, and symlinks instead\n  of blocking on them, while still accepting regular files (#35).\n- File Provider imports coordinate their reads, so placeholders are\n  materialized and concurrent changes cannot corrupt the read (#39).\n- Cancelling the share extension now resumes a stalled provider continuation\n  and cancels the underlying `Progress`, instead of hanging the extension\n  (#36).\n- Rejecting or confirming one shared plist no longer leaves later queued\n  imports waiting for another foreground event. Invalid entries are skipped\n  and the queue continues in order (#40).\n- Backup restore now validates the saved layout before creating a recovery\n  backup or journal entry, so a rejected restore has no side effects (#32).\n\n### Security\n\n- Backup integrity uses a persisted SHA-256 digest. A same-size replacement\n  with another valid plist is detected (#33).\n- Inbox scans and imports open files with `O_NOFOLLOW` and require a regular\n  file descriptor, preventing named-pipe and symlink tricks (#35).\n\n**Full Changelog**: https://github.com/huamidev/GestaltX/compare/v1.0.3...v1.0.4\n\n[1.0.4]: https://github.com/huamidev/GestaltX/releases/tag/v1.0.4",
-          "downloadURL": "https://github.com/huamidev/GestaltX/releases/download/v1.0.4/GestaltX_1.0.4.ipa",
-          "size": 2865180,
+          "version": "1.0.5",
+          "date": "2026-11-11",
+          "localizedDescription": "English | [简体中文](https://github.com/huamidev/GestaltX/blob/144c0c44a762db616089faddfbc0581929ae1a0a/CHANGELOG_ZH-CN.md#105---2026-11-11)\n\nBuild `11111140`.\n\n### Added\n\n- Spanish localization, bringing the app to nine supported locales ([#97](https://github.com/huamidev/GestaltX/pull/97)).\n- iPhone Air model presets ([#92](https://github.com/huamidev/GestaltX/pull/92)) and a Japanese README ([#83](https://github.com/huamidev/GestaltX/pull/83)).\n\n### Changed\n\n- About now lists the supported OS as iOS / iPadOS 27.x. Installation remains\n  available on 26.x, where on-device MobileGestalt access is marked unsupported.\n- Updated Korean translations ([#84](https://github.com/huamidev/GestaltX/pull/84)) and corrected mixed-language text in\n  Traditional Chinese and other locales ([#61](https://github.com/huamidev/GestaltX/pull/61)).\n- Renamed the Chinese Photos Clean Up preset to “照片消除”.\n- Corrected the Internal Build label and added confirmation before enabling\n  this system-wide flag ([#60](https://github.com/huamidev/GestaltX/pull/60)).\n\n### Fixed\n\n- Device access preserves existing App Group cache contents ([#55](https://github.com/huamidev/GestaltX/pull/55)).\n- Reverting Dynamic Island restores its layout together with its capability\n  flag, without discarding unrelated staged artwork changes ([#58](https://github.com/huamidev/GestaltX/pull/58)).\n- Original-value recovery now checks the cache generation and layout, keeps\n  unavailable originals distinct from missing fields, and avoids repeatedly\n  reading old backup history ([#65](https://github.com/huamidev/GestaltX/pull/65), [#66](https://github.com/huamidev/GestaltX/pull/66)).\n- Restoring an unchanged backup skips unnecessary device writes ([#69](https://github.com/huamidev/GestaltX/pull/69)).\n  Failed backup deletions remain retryable ([#70](https://github.com/huamidev/GestaltX/pull/70)), and local backup\n  replacement clears inherited device-ownership status ([#64](https://github.com/huamidev/GestaltX/pull/64)).\n- Exports of verified device backups carry device-bound proof ([#59](https://github.com/huamidev/GestaltX/pull/59)).\n  Temporary export files are removed after sharing or cancellation ([#62](https://github.com/huamidev/GestaltX/pull/62)).\n- Direct file imports are captured before confirmation is deferred ([#63](https://github.com/huamidev/GestaltX/pull/63)),\n  and coordinated reads run off the main thread ([#75](https://github.com/huamidev/GestaltX/pull/75)). Temporary provider\n  failures ([#74](https://github.com/huamidev/GestaltX/pull/74)) or one inaccessible App Group ([#71](https://github.com/huamidev/GestaltX/pull/71)) no longer block\n  other queued imports.\n- Shared import handling checks container boundaries, rejects symlink paths,\n  bounds filename metadata, and cleans abandoned files without interrupting\n  active writers ([#72](https://github.com/huamidev/GestaltX/pull/72), [#73](https://github.com/huamidev/GestaltX/pull/73), [#76](https://github.com/huamidev/GestaltX/pull/76)).\n- Device identity changes are rejected before system writes ([#67](https://github.com/huamidev/GestaltX/pull/67)).\n  Duplicate cache descriptors are validated ([#56](https://github.com/huamidev/GestaltX/pull/56)), and unchanged NaN\n  values compare consistently ([#68](https://github.com/huamidev/GestaltX/pull/68)).\n\n### Download and signing\n\n- Some users report incomplete downloads with Safari on iOS 27. If an IPA is\n  reported as damaged or cannot be extracted, download it again; it may take\n  several attempts. Try another browser if the issue persists. This has not\n  been confirmed as a Safari or iOS defect.\n- Re-sign with a certificate and profile containing at least one usable App\n  Group. Keep the share extension and configure a common App Group for both\n  the app and extension.\n\n**Full Changelog**: https://github.com/huamidev/GestaltX/compare/v1.0.4...v1.0.5",
+          "downloadURL": "https://github.com/huamidev/GestaltX/releases/download/v1.0.5/GestaltX_1.0.5.ipa",
+          "size": 2942882,
           "minOSVersion": "26.0"
         }
       ]
@@ -557,11 +557,11 @@
       "tintColor": "#111111",
       "versions": [
         {
-          "version": "1.8.0",
-          "date": "2026-11-09",
-          "localizedDescription": "## iPadn 1.8.0\n\n适用于 iOS / iPadOS 17 及更新版本；安装包未签名，请用自己的工具签名后安装。\n\n### 新增\n\n- 支持 Apple Store 设备验证（X-Apple-AMD）：登录、购买、下载时按服务器要求自动完成设备注册与验证头生成，减少因设备验证导致的登录或下载失败。验证数据仅保存在本机钥匙串，不随备份迁移。\n- 账号页改为与其他页面一致的大标题页头和底部标签栏样式。\n\n### 修复\n\n- 登录请求改用 Apple 当前的 plist 请求格式，并兼容 `auth.itunes.apple.com` 原生登录节点。\n- 登录、下载节点校验更严格：拒绝编码斜杠和路径穿越，仅接受 Apple 官方购买节点。\n- 签名运行组件在 Windows 检出（CRLF 换行）时也能通过校验。\n- 列表底部增加留白，避免最后一行被标签栏遮挡。\n\n真实账号登录、双重认证和下载授权效果待真机验证。\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n验证：设备 Release 编译与 IPA 检查通过；114 项测试通过，0 项失败，0 项跳过。",
-          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.8.0/iPadn-1.8.0-unsigned.ipa",
-          "size": 43743768,
+          "version": "1.9.2",
+          "date": "2026-11-11",
+          "localizedDescription": "## iPadn 1.9.2\n\n本版本新增「支持 iPadn」页面，改进诊断信息，并修复两个问题。适用于 iOS / iPadOS 17 及更新版本；安装包未签名，请用自己的工具签名后安装。\n\n**支持 iPadn**\n\n- 新增「账号 › 设置 › 支持 iPadn」：iPadn 会一直免费开源、没有广告；如果它帮到了你，可以通过爱发电（支付宝、微信）或 USDT（BEP20）请作者喝杯咖啡，也可以在 GitHub 点个 Star 或帮忙改进翻译。\n\n**下载**\n\n- 修复部分签名方式下下载完成后提示「未能打开文件 CFNetworkDownload_….tmp，因为你没有查看它的权限」（#36）：遇到这种情况会自动改用应用内下载重新下载一次，之后的下载直接在应用内进行，下载时请保持 iPadn 在前台。首次启动时的后台下载检测也会检查文件能否读取。\n\n**诊断**\n\n- 「账号 › 设置 › 维护」新增「复制诊断信息」：在 LiveContainer 等无法弹出分享面板的环境中，可以直接复制后粘贴反馈。\n- 诊断信息会记录最近失败的请求：时间、服务器、接口名称和状态码，不包含账号、链接参数或登录凭据，方便定位下载失败。\n- Apple 返回 401 时，提示登录可能已失效并建议重新登录账号，不再只显示「网络请求失败」。\n\n**应用图标**\n\n- 修复更新 iPadn 后，主屏幕上仍是之前选择的浅色或跟随系统图标，「设置」里却显示为深色。从本版本起 iPadn 会记住你选择的图标；更新前就遇到这种情况时，在「设置 › 应用图标 › 图标主题」中重新选择一次即可。\n\n**English**\n\nAdds a Support iPadn page under Account › Settings: iPadn stays free, open source and ad-free, and you can buy the author a coffee through Afdian or USDT (BEP20) if you like. Fixes downloads that failed with \"you don't have permission to view CFNetworkDownload_….tmp\" under some signing tools (#36): iPadn now downloads such packages again inside the app, and later downloads stay there. Diagnostics now record recent failed requests (time, host, endpoint and status only) and can be copied when the share sheet won't open, as in LiveContainer; a 401 from Apple now suggests signing in again. Also fixes Settings showing the dark icon after an update while the Home Screen kept the light or automatic icon; if this happened before updating, choose the icon theme once more in Settings.\n\n更早版本的更新内容见 [Releases](https://github.com/mengangs/ipadn/releases)。\n\n验证：设备 Release 编译与 IPA 检查通过；136 项测试通过，0 项失败，0 项跳过。",
+          "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v1.9.2/iPadn-1.9.2-unsigned.ipa",
+          "size": 47376820,
           "minOSVersion": "17.0"
         }
       ]
@@ -1279,11 +1279,11 @@
       "tintColor": "#50DD8B",
       "versions": [
         {
-          "version": "0.0.10",
-          "date": "2026-10-26",
-          "localizedDescription": "## RewindBox 0.0.10 — Build 559\r\n\r\nEverything since 0.0.9-fix.1 (Build 530).\r\n\r\n### Interface\r\n- Refined Liquid Glass interface: one-line main header, a new \"NeoStation\" style (solid accent pill, matte surfaces, no blur), a working Interface preview with Apply/Revert, and floating side-menu bubbles in Settings and Scraper.\r\n- New options in 12 languages: status bar items, accent colour, controller focus style, LB/RB glyphs and side-menu panel.\r\n- ROM folder changes saved in quick succession no longer fail.\r\n\r\n### Nintendo Switch (embedded MeloNX)\r\n- Backend threading is now on by default, as in the standalone MeloNX app, with a per-game switch.\r\n- Game FPS is shown in the RAM overlay.\r\n- In-game MoltenVK choice: the standalone MeloNX app's own MoltenVK is the default; RewindBox's version remains available and is used automatically if the other fails to load.\r\n- New \"Emulation priority\" option in the in-game menu (default unchanged). The screen no longer auto-locks during a game.\r\n- Closing a game after a GPU teardown error no longer leaves the app stuck on \"closing\": the session is stopped safely and explained.\r\n- Imports report completion without a full library rescan, updates are matched to the installed base game, audio playback starts correctly on the Apple backend, and pipeline compilation errors are handled without breaking later draws.\r\n- A per-second performance line in the app log helps troubleshooting.\r\n\r\n### PlayStation 3 (RPCS3)\r\n- PS3 disc images (.iso) in your library folder now launch through RPCS3: RewindBox reads the disc, offers to install it into RPCS3 (with its .dkey/.key file) and boots it. Renamed or removed images stay in sync, and the original can optionally be deleted after installation.\r\n- The God of War III profile is now actually applied; an old custom configuration previously disabled it silently.\r\n- Engine improvements:\r\n  - SPU code already in the cache loads without rebuilding the LLVM pass pipeline.\r\n  - GPU copies that fully overwrite their destination no longer read the old contents back.\r\n  - Fewer redundant texture hashes, plus a new experimental \"Texture validation per FIFO batch\" setting (automatic for God of War III only).\r\n  - Faster lookup of identical vertex shaders, fewer copies during synchronous shader compilation, fewer redundant pipeline builds, and shader-cache writes moved off the RSX thread.\r\n  - Less CPU spent waiting for the GPU, and faster JIT cache writes.\r\n  - Public ARMSX3 fixes: SPU warm-up order, PKG path containment, debug SELF decryption, in-memory savestate files, cellSaveData SDK 2.6 limit.\r\n  - ISO mounts are preserved when restoring a savestate.\r\n- New experimental \"MoltenVK Asynchronous Submits\" setting (off by default).\r\n- Additional bounded diagnostics (timeline, GPU waits, read-back origins, optimization counters) to measure performance.\r\n\r\nThe first launch of each PS3 game rebuilds its SPU cache once; the PPU cache is kept.\r\n\r\n### Testing status\r\nThese changes passed automated native, sanitizer, ARM64 and packaging checks. FPS, stutter and memory gains on iPhone have not been measured yet. Please report results with your logs.\r\n\r\n### Download\r\n`RewindBox-Build559.ipa` — SHA-256 `f16c2a3529537bfbaa933972ed63f6ce96bb2a9ca176f1e2d1726dcd7896480d`.\r\nAd-hoc signed: re-sign it with SideStore or AltStore before installing. Requires iOS 18.0 or later.\r\n\r\nVersion note: IPA build number 559; the internal app version remains 0.0.8.\r\n\r\nNo firmware, keys, BIOS or game files are bundled.",
-          "downloadURL": "https://github.com/TarbleFR/RewindBox/releases/download/0.0.10/RewindBox-.0.0.10.ipa",
-          "size": 188063063,
+          "version": "0.0.11",
+          "date": "2026-11-10",
+          "localizedDescription": "# RewindBox 0.0.11 — Build 721\r\n\r\nEverything since RewindBox 0.0.10 (Build 559), brought together in one update.\r\n\r\n## 🎮 PlayStation 3 — RPCS3\r\n\r\n- **Assassin’s Creed:** audio mixing corrections prevent audio periods from being discarded during waits.\r\n- Reduced redundant rendering interruptions and repeated graphics work, including changes to **Vulkan/MoltenVK**.\r\n- Improved texture caching to reuse more previously calculated results.\r\n- **Black Ops II:** corrections to SPU synchronization, memory reservations and waits involved in stalls.\r\n- **Black Ops II:** earlier submission of pending occlusion results, with a separate bounded budget, targets waits on the game’s main CPU threads.\r\n- Corrected short active-wait timing on iPhones with a 1 GHz system counter and adjusted the BO2 writer-lock wait path.\r\n- **Assassin’s Creed:** corrected an atomic SPU write that could overwrite a newer main-CPU value during game exit.\r\n- Improved SPU program preparation and cache reuse to reduce recompilation during gameplay.\r\n- **God of War III:** removed the unintended 30 FPS limit and reduced unnecessary texture validation.\r\n- **God of War III v1.00:** the optional MLAA bypass now applies on a fresh boot as well.\r\n- **Assassin’s Creed IV and Dynasty Warriors 6:** corrected game profiles to use the LLVM PPU recompiler.\r\n- Corrected texture coherence, partial graphics commands and CPU/GPU synchronization paths.\r\n- More reliable retention of mounted ISO images.\r\n- Corrected JIT memory reservation when the usual address range is unavailable, including on certain iOS beta versions.\r\n- Repositioned the **Menu** and **Performance** buttons to better respect touch controls and safe areas.\r\n- Expanded per-game settings and diagnostic tools to identify the causes of stalls more precisely.\r\n\r\n## 🕹️ Nintendo Switch — MeloNX\r\n\r\n- Support for the **keyboard requested by games**, plus touch access to **L3/R3**.\r\n- Corrected controller handling during sessions and when returning to the interface.\r\n- First-frame and GPU-transfer corrections targeting **black screens at launch**.\r\n- Graphics ordering corrections targeting stale frames, flickering and rendering artifacts.\r\n- Corrected shader resource declarations and compilation paths that could prevent parts of a scene from rendering.\r\n- JIT corrections covering branches, translation-block boundaries and register-state preservation.\r\n- Fewer repeated allocations, improved texture reuse and release of resources no longer needed.\r\n- Improved memory-pressure handling and cleanup of resources retained after closing a session.\r\n- **More durable shader and pipeline caches:** saves during gameplay and on pause, background loading and improved reuse between sessions.\r\n- Preparation of previously encountered graphics variants to reduce their reconstruction during gameplay.\r\n- Reduced redundant graphics-resource updates and improved sharing of Metal libraries between compilation workers.\r\n- **Hogwarts Legacy** corrections covering texture copies and handling of certain invalid graphics values.\r\n- Failure to start the iOS audio engine no longer directly aborts the application.\r\n- Compilation cancellation during teardown addresses sessions stuck on “closing,” including the SSBU path.\r\n- Corrected a MoltenVK presentation ownership race: an in-flight presentation retains the drawable it needs.\r\n- Added a fragmentation guard to avoid unnecessary blocking memory cleanup, targeting pauses reproduced from **Super Smash Bros. Ultimate** logs.\r\n\r\n## 🎨 Skins and touch controls\r\n\r\n- Added **GameCube Pocket, Wii Pocket and PS2 Pocket** skins.\r\n- Added **Pocket — Original** variants for GameCube, Wii and PS2 while keeping the existing designs.\r\n- Added **Switch Pocket**, available through **Skins in the Switch playlist menu**.\r\n- Portrait and landscape layouts, with orientation locking where supported by the selected skin and engine.\r\n- Corrected offsets between the drawn buttons and their touch areas.\r\n- Corrected **rectangular press highlights**, pressed states and analog-stick geometry.\r\n- GameCube/Wii analog sticks now move as a complete circle, including the C-stick.\r\n- Bundled skin updates now refresh older installed copies while preserving your selections.\r\n- Restored access to **Skins from the PS2 playlist**.\r\n- Corrected the return from the MeloNX in-game menu so skin buttons and sticks regain input immediately.\r\n- Improved game-screen framing inside Pocket skins, including rounded corners.\r\n- Refined pressed-button visuals so controls sink into their housings rather than simply turning gray.\r\n- Dolphin and PS2 floating session buttons no longer cover skin controls when the skin provides its own Menu button.\r\n\r\n## 🏆 RetroAchievements\r\n\r\n- Centralized sign-in and **Hardcore** settings.\r\n- Corrected repeated sign-outs, credential persistence and migration of older accounts.\r\n- Improved session ownership of notifications and progress, including external-display presentation.\r\n- Achievement text follows the app language when the required Apple translation features are available.\r\n- Improved game recognition, including **CHD and CSO**, with consistent identification in the library and during play.\r\n- Clearer messages distinguish an unrecognized game from an unreadable file.\r\n\r\n## 🧩 Cheats & Enhancements\r\n\r\n- A unified **Cheats & Enhancements** page for each game.\r\n- Access to compatible frame-rate, aspect-ratio, graphics and other available game patches.\r\n- Improved activation, deactivation and restoration of original settings.\r\n- **Corrected unintended Switch cheat activation** when the enable list was missing.\r\n- Cheat state remains usable after the app container moves.\r\n- RewindBox-generated cheat files now contain only the selected programs.\r\n\r\n## 📚 Library, artwork and manuals\r\n\r\n- Reworked 3D cases with more faithful proportions, relief, spines and backs.\r\n- Editable back covers and nondestructive image correction.\r\n- Artwork matching using the ROM’s actual game identifier.\r\n- More reliable batch scraping with better preservation of existing media.\r\n- Improved **French cover and manual** lookup with additional sources.\r\n- Improved scan viewing and zoom.\r\n- Lighter Switch discovery avoids reading entire game files on the main thread.\r\n\r\n## ✨ Interface and navigation\r\n\r\n- New **RewindBox Glacier** style with a reversible preset.\r\n- Bundled offline system artwork.\r\n- Corrections to margins, obscured titles, icon sizes and carousels.\r\n- Corrections to system bubbles and the “⋯” menu.\r\n- An **icons-only main navigation bar**, while retaining accessible names for VoiceOver.\r\n\r\n## 🧪 Experimental renderer\r\n\r\n- Added an **optional native Metal 4 renderer for RPCS3**. Vulkan/MoltenVK remains available and the selected renderer is preserved.\r\n\r\n## Testing and known limits\r\n\r\nThe downloaded Build 721 IPA passed the recorded offline package, source/component identity and delivery checks. RPCS3 Core 919 and MeloNX Core 719 are included. Fresh Flutter, native and delivery-contract checks were executed for this delivery. The downloaded file matches the original private delivery byte for byte.\r\n\r\nAutomated tests and desktop benchmarks do not establish iPhone FPS, audio or gameplay improvements. The complete package has not been gameplay-validated on a physical iPhone. First-use shader compilation and game-specific issues may remain. Cheats and achievement support depend on the game, version and engine.\r\n\r\nLong Hogwarts Legacy pauses and residual BO2 performance problems remain under investigation. This build retains automatic BO2/God of War III comparison windows; their removal belongs to a later build and is not included here.\r\n\r\nSome faithful Pocket layouts have small touch targets or Dynamic Island overlap. Switch Pocket’s HOME and Capture controls are unavailable in this engine; MeloNX does not lock session orientation through the skin. The MeloNX Metal binary-archive prototype, Switch 2 experiment and RPCS3 comparison-only Cores are not included.\r\n\r\n## Download and installation\r\n\r\n**IPA:** [RewindBox-0.0.11.ipa](https://github.com/TarbleFR/RewindBox/releases/download/0.0.11/RewindBox-0.0.11.ipa)\r\n\r\n**SideStore / AltStore Classic source:** [source.json](https://raw.githubusercontent.com/TarbleFR/RewindBox/Claude/source.json)\r\n\r\n- Requires **iOS 18.0 or later**.\r\n- Re-sign with SideStore, AltStore Classic or your usual compatible sideloading tool. This is not a notarized AltStore PAL package or a directly installable Apple distribution build.\r\n- Public release: **0.0.11**. IPA metadata remains **0.0.8, Build 721**; the source preserves those exact values and uses `marketingVersion` to display 0.0.11.\r\n- Size: **267,033,667 bytes**.\r\n- SHA-256: `bc640a83a01de8a623c16fb0b5977edf16ac6010b61c9c2489ae334d3db3c0d7`.\r\n\r\nNo firmware, keys, BIOS or game files are bundled.",
+          "downloadURL": "https://github.com/TarbleFR/RewindBox/releases/download/0.0.11/RewindBox-0.0.11.ipa",
+          "size": 267033667,
           "minOSVersion": "18.0"
         }
       ]
@@ -1328,11 +1328,11 @@
       "tintColor": "#E5A019",
       "versions": [
         {
-          "version": "2.2.0",
-          "date": "2026-11-09",
-          "localizedDescription": "## Release v2.2.0\n\nNew on the map:\n• Level search: find the levels you do not have 3 stars on, by grid size, number of moves, bosses… and go from one to the next\n• Go straight to a level by typing its number\n• Generator: choose how many levels (up to 100), mix difficulties and grid sizes, set a minimum of moves\n• A generated level no longer unlocks the whole campaign\n\nMulti-platform build from `0d267fa85534d68c90eb99a387dd726da1393c4a`.\n\n### iOS (unsigned IPA)\nInstall with SideStore / AltStore.\n\n### Android (APK)\nDirect install.\n\n### Checksums\n\n| File | MD5 | SHA-256 |\n|---|---|---|\n| `rush-hours-unsigned.ipa` | `b6605fac3f31c4289566e61cd6719a87` | `030fc97819f03898d2a3a39a9a4bc84c43eb18f3e13da7e578bf73439158f78a` |",
-          "downloadURL": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/download/v2.2.0-b67/rush-hours-unsigned.ipa",
-          "size": 19054716,
+          "version": "2.2.2",
+          "date": "2026-11-10",
+          "localizedDescription": "## Release v2.2.2\n\nWhat's new:\n• The 3 daily missions now give 200 XP\n• XP bonuses: every day in a row with your missions done or the daily challenge won boosts all the XP you earn, up to ×3\n• An \"XP bonus\" card in your profile, and your bonus at the end of your XP bar\n• Your level has its own emblem, also next to your nickname in multiplayer\n• The streak flame and the freeze snowflake open their own screen\n\nMulti-platform build from `044d3b3e2c5914f27d1754352b5586c6a456ebe4`.\n\n### iOS (unsigned IPA)\nInstall with SideStore / AltStore.\n\n### Android (APK)\nDirect install.\n\n### Checksums\n\n| File | MD5 | SHA-256 |\n|---|---|---|\n| `rush-hours-unsigned.ipa` | `720352e7379f5355addd2844488f5832` | `a5c80e3a17fc2b97a9de7e0666417edc219f79529dbf1ba200b99203bd5e18c5` |",
+          "downloadURL": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/download/v2.2.2-b70/rush-hours-unsigned.ipa",
+          "size": 19091977,
           "minOSVersion": "16.4"
         }
       ]
@@ -1687,6 +1687,61 @@
   ],
   "news": [
     {
+      "appID": "app.local.iPadn",
+      "title": "iPadn 1.9.2 · 11 Nov 2026",
+      "identifier": "iPadn-release-v1.9.2",
+      "caption": "iPadn 1.9.2 is available.",
+      "date": "2026-11-11T11:19:37Z",
+      "tintColor": "#111111",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iPadn/images/news.png",
+      "notify": true,
+      "url": "https://github.com/mengangs/ipadn/releases/tag/v1.9.2"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261111 · 11 Nov 2026",
+      "identifier": "ARMSX2-release-nightly-20261111",
+      "caption": "ARMSX2 nightly-20261111 is available.",
+      "date": "2026-11-11T07:21:22Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261111"
+    },
+    {
+      "appID": "com.huami.gestultx",
+      "title": "GestaltX 1.0.5 · 11 Nov 2026",
+      "identifier": "GestaltX-release-v1.0.5",
+      "caption": "GestaltX 1.0.5 is available.",
+      "date": "2026-11-11T03:45:16Z",
+      "tintColor": "#007AFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GestaltX/images/news.png",
+      "notify": true,
+      "url": "https://github.com/huamidev/GestaltX/releases/tag/v1.0.5"
+    },
+    {
+      "appID": "com.neogamelab.neostation",
+      "title": "RewindBox 0.0.11 · 10 Nov 2026",
+      "identifier": "RewindBox-release-0.0.11",
+      "caption": "RewindBox 0.0.11 is available.",
+      "date": "2026-11-10T19:41:55Z",
+      "tintColor": "#50DD8B",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RewindBox/images/news.png",
+      "notify": true,
+      "url": "https://github.com/TarbleFR/RewindBox/releases/tag/0.0.11"
+    },
+    {
+      "appID": "com.rushhours.app",
+      "title": "Rush Hours 2.2.2 · 10 Nov 2026",
+      "identifier": "Rush Hours-release-v2.2.2-b70",
+      "caption": "Rush Hours 2.2.2 is available.",
+      "date": "2026-11-10T17:40:40Z",
+      "tintColor": "#E5A019",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/tag/v2.2.2-b70"
+    },
+    {
       "appID": "sh.celia.novella",
       "title": "Novella 2.7.0 · 10 Nov 2026",
       "identifier": "Novella-release-Novella-2.7.0",
@@ -1698,17 +1753,6 @@
       "url": "https://github.com/dododook/my-ipas/releases/tag/Novella-2.7.0"
     },
     {
-      "appID": "com.huami.gestultx",
-      "title": "GestaltX 1.0.4 · 10 Nov 2026",
-      "identifier": "GestaltX-release-v1.0.4",
-      "caption": "GestaltX 1.0.4 is available.",
-      "date": "2026-11-10T07:27:47Z",
-      "tintColor": "#007AFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GestaltX/images/news.png",
-      "notify": true,
-      "url": "https://github.com/huamidev/GestaltX/releases/tag/v1.0.4"
-    },
-    {
       "appID": "com.mirazbakis.Odysseus",
       "title": "Odysseus 1.0.0 · 10 Nov 2026",
       "identifier": "Odysseus-release-Odysseus-1.0.0",
@@ -1718,17 +1762,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/images/news.png",
       "notify": true,
       "url": "https://github.com/dododook/my-ipas/releases/tag/Odysseus-1.0.0"
-    },
-    {
-      "appID": "com.rushhours.app",
-      "title": "Rush Hours 2.2.0 · 09 Nov 2026",
-      "identifier": "Rush Hours-release-v2.2.0-b67",
-      "caption": "Rush Hours 2.2.0 is available.",
-      "date": "2026-11-09T23:36:07Z",
-      "tintColor": "#E5A019",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/tag/v2.2.0-b67"
     },
     {
       "appID": "sb.moe.kumone",
@@ -1753,17 +1786,6 @@
       "url": "https://github.com/jxxghp/MoviePilot-App/releases/tag/v1.2.2"
     },
     {
-      "appID": "app.local.iPadn",
-      "title": "iPadn 1.8.0 · 09 Nov 2026",
-      "identifier": "iPadn-release-v1.8.0",
-      "caption": "iPadn 1.8.0 is available.",
-      "date": "2026-11-09T00:04:33Z",
-      "tintColor": "#111111",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iPadn/images/news.png",
-      "notify": true,
-      "url": "https://github.com/mengangs/ipadn/releases/tag/v1.8.0"
-    },
-    {
       "appID": "com.stik.stikdebug",
       "title": "StikDebug 3.2.2 · 08 Nov 2026",
       "identifier": "StikDebug-release-3.2.2",
@@ -1784,17 +1806,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
       "notify": true,
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20261108 · 08 Nov 2026",
-      "identifier": "ARMSX2-release-nightly-20261108",
-      "caption": "ARMSX2 nightly-20261108 is available.",
-      "date": "2026-11-08T15:46:58Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261108"
     },
     {
       "appID": "com.llayerlinux.LSX4RuntimeProbe",
@@ -2059,17 +2070,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LinuxRunner/images/news.png",
       "notify": true,
       "url": "https://github.com/mxhm11cr/LinuxRunner/releases/tag/v1.0.1"
-    },
-    {
-      "appID": "com.neogamelab.neostation",
-      "title": "RewindBox 0.0.10 · 26 Oct 2026",
-      "identifier": "RewindBox-release-0.0.10",
-      "caption": "RewindBox 0.0.10 is available.",
-      "date": "2026-10-26T23:06:26Z",
-      "tintColor": "#50DD8B",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RewindBox/images/news.png",
-      "notify": true,
-      "url": "https://github.com/TarbleFR/RewindBox/releases/tag/0.0.10"
     },
     {
       "appID": "org.animeko.animeko",
