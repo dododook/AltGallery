@@ -17,7 +17,7 @@
       "versions": [
         {
           "version": "1.0.0.5",
-          "date": "2026-09-10",
+          "date": "2026-09-10T06:42:02Z",
           "localizedDescription": "Updated V2EX client IPA (Info.plist still reports 1.0.0). Bundle ID: com.mistj.v2ex",
           "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Roam-1.0.0.5/Roam_1.0.0.5.ipa",
           "size": 5362480,

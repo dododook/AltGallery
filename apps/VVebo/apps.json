@@ -17,7 +17,7 @@
       "versions": [
         {
           "version": "3.3.31.1",
-          "date": "2026-10-19",
+          "date": "2026-10-19T00:49:37Z",
           "localizedDescription": "Sideload-adapted VVebo 3.3.31 (Info.plist still reports 3.3.31). Bundle ID: com.johnil.vvebo. Minimum iOS 14.0.",
           "downloadURL": "https://github.com/dododook/my-ipas/releases/download/VVebo-3.3.31.1/VVebo_3.3.31.1.ipa",
           "size": 22700518,

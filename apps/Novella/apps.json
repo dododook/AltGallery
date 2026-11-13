@@ -22,7 +22,7 @@
       "versions": [
         {
           "version": "2.7.0",
-          "date": "2026-11-10",
+          "date": "2026-11-10T07:32:34Z",
           "localizedDescription": "Unsigned IPA from celia-sh/Novella v2.7.0. GitHub Release assets were deleted after the repo was archived; this copy was taken from the still-unexpired Actions artifact novella-unsigned-ipa-v2.7.0 (run 41178967148). SHA256 9948a1474ae7357b1541a10e53bd7071f0caf53542b6939bd1717c4702142ea7",
           "downloadURL": "https://github.com/dododook/my-ipas/releases/download/Novella-2.7.0/Novella_2.7.0.ipa",
           "size": 29786138,

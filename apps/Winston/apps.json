@@ -22,7 +22,7 @@
       "versions": [
         {
           "version": "1.1.5",
-          "date": "2024-06-24",
+          "date": "2024-06-24T08:53:08Z",
           "localizedDescription": "- Fixed placeholder message alignment\r\n- Fixed Reddit API preferences page\r\n- Added localization support\r\n- Cleaned unused code and replaced glitchy book Lottie\r\n- Removed old, unused TipJar component\r\n- Added back GlobalLoaderProvider\r\n- Fixed broken build\r\n- Improved RedditListingFeed component and cleaned up some files\r\n- Fixed many UI bugs and stutters; added new NukeUI Opt components\r\n- Removed redundant code calling setAudioToMixWithOthers three times\r\n- Provided RedditListingFeed with a force refresh handler; fixed UserView issues\r\n- Fixed blur flash on app open\r\n- Fixed cache clear button not working\r\n- Added support for inline image within comments\r\n- Improved spoiler handling in selftext\r\n- Corrected tab bar hit detection in Split View on iPad",
           "downloadURL": "https://github.com/lo-cafe/winston/releases/download/v1.1.5/winston.ipa",
           "size": 50003343,

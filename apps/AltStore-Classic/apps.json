@@ -22,7 +22,7 @@
       "versions": [
         {
           "version": "2.3b3",
-          "date": "2026-09-16",
+          "date": "2026-09-16T03:09:12Z",
           "localizedDescription": "Official AltStore Classic IPA (CFBundleShortVersionString 2.3b3, CFBundleVersion 57). Bundle ID: com.rileytestut.AltStore.Beta. Minimum iOS 17.4.",
           "downloadURL": "https://github.com/dododook/my-ipas/releases/download/AltStoreClassic-2.3b3/AltStoreClassic_2.3b3.ipa",
           "size": 35905742,
