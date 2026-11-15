@@ -210,11 +210,11 @@
       "tintColor": "#3CAEFF",
       "versions": [
         {
-          "version": "nightly-20261113",
-          "date": "2026-11-13T04:53:50Z",
-          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- microVU0: compute the VU1 register window's address at run time\n- Tests: a persisted VU0 program that uses the window onto VU1's registers\n- Android: link the core with emulated TLS when the minimum API is below 29\n- iOS: give the layout editor and the manifest skin their own views\n- iOS: split the patch and skin library stores by their own sections\n- iOS: split navigation and gameplay views into one file per view\n- iOS: split the controls and skin files along their types\n- iOS: split the dynamic backgrounds into one file per background\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261112...37ed35b88fe9a0164369c8042f2c9aa707e33667",
-          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261113/ARMSX2-nightly-20261113-37ed35b88f-iOS-arm64.ipa",
-          "size": 40715589,
+          "version": "nightly-20261114",
+          "date": "2026-11-14T15:41:20Z",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- macOS: a refused notarization is not a build failure\n- arm64: the crash post-mortem's microVU readers are Linux only\n- GameDB: Stuntman and Driv3r run the EE at Exact clamping\n- arm64: a SIGILL gets the crash post-mortem too\n- arm64: the crash post-mortem names where the lr points\n- arm64: the crash post-mortem's VU microcode comes from the program's copy\n- arm64: the crash post-mortem names the library a pc outside the JIT is in\n- arm64: the crash post-mortem shows the VU microcode at the fault block\n- arm64: the crash post-mortem names the microVU block that holds the pc\n- LSFG: rebuild the swap chain before the acquire, and make it FIFO\n- microVU: don't finish VU1 through a dispatcher that does not exist\n- Tests: a second boot after a VM that stopped with VU1 busy\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261113...6d9511e29e3e00d5ab78899f5292b967ab850ddb",
+          "downloadURL": "https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261114/ARMSX2-nightly-20261114-6d9511e29e-iOS-arm64.ipa",
+          "size": 40717380,
           "minOSVersion": "17.0"
         }
       ]
@@ -693,11 +693,11 @@
       "tintColor": "#C9A227",
       "versions": [
         {
-          "version": "0.3.36",
-          "date": "2026-11-14T10:16:56Z",
-          "localizedDescription": "### Fixed\n\n- **Third-party sources**: for songs Kuwo won't serve, its 11-second clip suggesting Kuwo Music is no longer played as the song; the next source is tried instead, and copies of the clip already in the cache are removed (#212).\n- **iOS 16/17**: opening the now-playing page from the mini player no longer freezes the app on iOS 17. These systems show the lyrics alone; the song's comments stay in its More menu (#213).\n- **Comments**: the comments beside the iPhone lyrics no longer keep spinning after a load is interrupted; they load again on their own (#214).\n- **iOS**: \"Unable to play\" now says why — the request that failed, or the code the service answered with when it gave no playback address (#209).\n\n---\n\n### 修复\n\n- **第三方音源**：酷我不给播放的歌，它返回的「建议去酷我音乐收听」的 11 秒提示音不再被当成歌曲播放，会改为尝试下一个音源，已经缓存的这段提示音也会被清掉（#212）。\n- **iOS 16/17**：在 iOS 17 上从迷你播放条打开播放页不会再卡死。这两个系统上播放页只显示歌词，评论仍可在歌曲的「更多」菜单中查看（#213）。\n- **评论**：iPhone 歌词旁的评论在加载被打断后不会再一直转圈，会自动重新加载（#214）。\n- **iOS**：「无法播放」提示现在会写明原因：请求失败的原因，或网易云没给播放地址时返回的代码（#209）。",
-          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.36/Kumone-iOS-0.3.36.ipa",
-          "size": 4292609,
+          "version": "0.3.37",
+          "date": "2026-11-14T11:23:41Z",
+          "localizedDescription": "![分享评论 · Share a comment](https://raw.githubusercontent.com/missuo/kumone/v0.3.37/docs/releases/0.3.37-comment-share.png)\n\n![macOS 播放页评论 · Comments on the macOS now-playing page](https://raw.githubusercontent.com/missuo/kumone/v0.3.37/docs/releases/0.3.37-macos-comments.png)\n\n### Added\n\n- **Comments**: long-press a comment (right-click on macOS) to share it as a picture — the comment and who wrote it, with the song's title, artist and cover, over the cover's colours — then share it or save it to Photos (copy it on macOS). Copy Comment copies its text.\n- **Comments**: on macOS (and iPad), a Lyrics | Comments switch above the now-playing lyrics shows the playing song's comments in their place; songs without lyrics but with comments now get the column too.\n\n### Fixed\n\n- **iOS 17**: tapping the mini player no longer freezes the app with the now-playing page never appearing; the cause has been found and fixed. Swiping from the lyrics to the comments is back on iOS 16/17 (#213).\n- **Now playing**: on iPhone, the volume panel now closes when you tap anywhere else on the page, not only the speaker button again.\n\n---\n\n### 新增\n\n- **评论**：长按一条评论（macOS 上右键）即可把它分享成一张图片：评论内容和评论者，配上歌名、歌手和专辑封面，底色取自封面；可以直接分享或保存到相册（macOS 上为拷贝图片）。「复制评论」可复制评论文字。\n- **评论**：macOS（以及 iPad）播放页的歌词上方新增「歌词 | 评论」切换，可在歌词的位置查看正在播放歌曲的评论；没有歌词但有评论的歌曲也会显示这一栏。\n\n### 修复\n\n- **iOS 17**：点击迷你播放条后应用卡死、播放页一直出不来的问题已找到原因并修复；iOS 16/17 上也恢复了歌词左滑查看评论（#213）。\n- **播放页**：iPhone 上打开音量面板后，点页面其他任意位置即可关闭，不必再点一次喇叭按钮。",
+          "downloadURL": "https://github.com/missuo/kumone/releases/download/v0.3.37/Kumone-iOS-0.3.37.ipa",
+          "size": 4407346,
           "minOSVersion": "16.0"
         }
       ]
@@ -836,11 +836,11 @@
       "tintColor": "#EF4444",
       "versions": [
         {
-          "version": "0.9.95",
-          "date": "2026-11-01T15:17:25Z",
-          "localizedDescription": "## Why 0.9.95 and not 1.0.0?\r\n\r\nThis release has almost everything planned for 1.0.0: a new design, a rebuilt player and hundreds of fixes. But so much has changed that it needs testing on more devices and libraries than we can cover ourselves.\r\n\r\nSo 0.9.95 is the last step before 1.0.0. The goal now is stability, not new features. If something breaks or looks wrong, please [open an issue](https://github.com/kodjodevf/mangayomi/issues) with your device and app version. 1.0.0 will come once this version has proven solid.\r\n\r\n## Highlights\r\n\r\n* **Shiori, a new design for the whole app:** every screen has been redrawn on one design system, with new navigation, transitions and an ergonomic pass throughout (#1077).\r\n* **A rebuilt video player:** new controls on phone, desktop and TV, plus video filters, audio delay, and volume, brightness and fit kept between episodes.\r\n* **A tracker with no account:** follow your status, progress, score and dates on the device alone (#1121).\r\n* **Work that keeps going on Android:** downloads, library updates, restores and syncs continue in the background, under one notification (#1092).\r\n* **More control over downloads and updates:** download ahead while reading, download new chapters automatically, and choose which series a library update skips (#1091).\r\n\r\n**Before updating:** this is a large release that also touches how your library is stored, so make a backup first (More > Backup and restore).\r\n\r\n## Reader\r\n\r\n* Zoom with Ctrl (⌘ on macOS) and the mouse wheel; the wheel alone moves a zoomed page.\r\n* With \"Navigate to pan\" on, tall pages are read row by row before the page turns.\r\n* Split tall images into slices in webtoon mode.\r\n* Choose which chapters next and previous skip: read, filtered or duplicate.\r\n* Rebind the reader's keyboard shortcuts.\r\n* Separate icons for crop borders on and off.\r\n* Pages and zooms follow your finger more closely, and the webtoon strip glides after a fling.\r\n* Decoded images now have a memory limit, so long chapters no longer keep growing in memory.\r\n* Fixed: lost decoded pages for the next chapter when closing the reader, and chapter list rows with a scanlator failing to lay out.\r\n\r\n## Video player\r\n\r\n* New controls on phone, desktop and TV, with episodes reachable from the top bar and lock and skip under the timeline on mobile.\r\n* **Video filters:** brightness, contrast, saturation, gamma and hue, kept for the next episodes. Gamma is hidden where the video output cannot apply it.\r\n* **Audio delay:** from -5 to +5 seconds.\r\n* Remember volume and brightness between episodes, and keep the fit from one episode to the next.\r\n* New \"Turn subtitles on\" switch, so episodes can start without subtitles.\r\n* \"Use my subtitle style\" now really gives the default style back when turned off.\r\n* VAAPI and VDPAU hardware decoding on Linux.\r\n* Rebind the player's keyboard shortcuts.\r\n* Fixed: a freeze in the player's event handling, crashes when chapter marks change, previous and next buttons on mobile, and controls under the camera cutout in landscape.\r\n\r\n## Library and browsing\r\n\r\n* Swipe sideways to switch between Manga, Anime and Novels, in the library and in Browse.\r\n* Select everything between two entries, in the library and in chapter lists.\r\n* Skip completed series, series with unread chapters or series not started in library updates. The categories' \"Skip updates\" option now takes effect too.\r\n* The Updates badge counts what was found since you last opened Updates, and clears when you visit.\r\n* Hidden media types are respected everywhere: Browse, Updates, History and the tracker library.\r\n* Browse remembers the Sources or Extensions page picked for each media.\r\n* Recommendation cards use the available space and no longer show HTML tags.\r\n* Fixed: opening Updates and History with orphan chapters, and an empty random entry.\r\n\r\n## Downloads\r\n\r\n* Download the next 2, 3, 5 or 10 unread chapters while reading.\r\n* Download new chapters after a library update.\r\n* \"Delete download after reading\" can remove a chapter 1 to 4 back instead, and keeps bookmarked chapters.\r\n* Failed downloads wait before retrying, and follow what a server asks after a 429 or 503.\r\n* Fixed: complete downloads being held back by the series cover, and resumed archives not finishing.\r\n\r\n## Tracking\r\n\r\n* New on-device tracker, with its own shelf in the tracker library.\r\n* Redrawn tracking card.\r\n* Progress now reaches trackers even if you leave the screen first.\r\n\r\n## Extensions\r\n\r\n* Updates are found in every repository, and the app says which one they come from. An update from another repository asks for confirmation before it is installed.\r\n* Extension WebViews are hosted for the extension server, including network and media capture.\r\n* Faster extension installs.\r\n* Repositories with empty source lists are supported.\r\n* Fixed: sources that read a setting in their headers failing to install, and video qualities lost with multiple hosters.\r\n\r\n## Backup, restore and sync\r\n\r\n* Reading time and last-read dates are kept when restoring backups from other apps.\r\n* Anime is kept from backups of unrecognised forks.\r\n* Local archive favorites are included in backups.\r\n* A backup password is only requested when the password is really the problem.\r\n* Refreshing a catalog keeps your reading state, and duplicate chapters are merged safely.\r\n* Fixed: logging in to the sync server on macOS.\r\n\r\n## Security and privacy\r\n\r\n* **Secure screen:** keep the app out of screenshots and the recent apps preview, always or only in incognito mode.\r\n* **Lock after:** ask to authenticate after 1, 2, 5 or 10 minutes away, or only when the app starts.\r\n\r\n## Updates and first launch\r\n\r\n* Onboarding starts by asking for your language.\r\n* Clearer update dialog: installed and new version, date, size, sorted notes and what happens next. You will see it from the next update onwards.\r\n* Pre-releases are now ordered correctly when checking for updates.\r\n* New open source licenses screen in About.\r\n* New Persian translation, and the missing strings translated in every language.\r\n\r\n## Platforms\r\n\r\n* **Android:** fixed a crash where all files access cannot be granted.\r\n* **Android TV:** fixed the Player settings in the anime-only layout, and the repository added on the welcome screen is filed under anime.\r\n* **iOS:** local files stay inside their folder.\r\n* **macOS:** the app icon now fits the system's icon grid.\r\n* **Windows:** sharper 256 px icon, used by the installer too, and more readable crash reports.\r\n* **Linux:** choose which browser opens external links; JPEG is read whichever libjpeg version is installed; fixed webview window crashes.\r\n\r\n## Stability and performance\r\n\r\n* Faster database queries and lower memory use.\r\n* The next chapter preloads on a new page rather than on every frame.\r\n* A page that lost its data now offers a way back instead of crashing.\r\n* The startup error screen says what to do when the database cannot open.\r\n* Handled errors are now recorded, and developer mode shows them with their details.\r\n\r\n## Contributors\r\n\r\nThanks to everyone who contributed to this release: @adobex, @aliafshany, @itsyaba, @Lukas-DS, @matsukiender-star, @MenaHere, @NBA2K1 and @Totara-thib.\r\n\r\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.9...v0.9.95",
-          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.95/Mangayomi-v0.9.95-ios.ipa",
-          "size": 115450399
+          "version": "0.9.96",
+          "date": "2026-11-14T17:16:59Z",
+          "localizedDescription": "## What's Changed\n* fix(appearance): bring back the app-wide Google Fonts picker by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/1127\n* fix: make the genre chip's searches work, in the source and the library by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/1129\n* fix(library) select between option by @Lukas-DS in https://github.com/kodjodevf/mangayomi/pull/1131\n* fix(js): send PUT, DELETE and PATCH from the extension client by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/1132\n* fix(migrate): search a few sources at a time and open the dialog at once by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/1141\n* fix(sync): persist since and lastSync in one awaited write by @sergwei in https://github.com/kodjodevf/mangayomi/pull/1146\n* fix(filters): skip malformed filter options instead of dropping the list by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/1150\n* feat(library): reopen on the last category, and keep the last row clear of the floating bar by @itsyaba in https://github.com/kodjodevf/mangayomi/pull/1122\n* chore: move to Flutter 3.50 and material_ui by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/1154\n* fix(mass-migration): give long titles and the migrate choice room on phones by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/1153\n* fix(library): hide continue-reading button when caught up by @itsyaba in https://github.com/kodjodevf/mangayomi/pull/1155\n* feat(detail): long press the In library heart to edit categories by @itsyaba in https://github.com/kodjodevf/mangayomi/pull/1160\n* fix(chapters): show a swiped chapter as read at once by @itsyaba in https://github.com/kodjodevf/mangayomi/pull/1159\n* fix(downloads): queue order, pause/resume, and move to top/bottom by @itsyaba in https://github.com/kodjodevf/mangayomi/pull/1156\n* fix(reader): delete a read download once the reader closes by @itsyaba in https://github.com/kodjodevf/mangayomi/pull/1157\n* Sync between devices, and a standalone sync server by @kodjodevf in https://github.com/kodjodevf/mangayomi/pull/1158\n* feat(library): option to hide the active filter chips by @itsyaba in https://github.com/kodjodevf/mangayomi/pull/1162\n\n## New Contributors\n* @sergwei made their first contribution in https://github.com/kodjodevf/mangayomi/pull/1146\n\n**Full Changelog**: https://github.com/kodjodevf/mangayomi/compare/v0.9.95...v0.9.96",
+          "downloadURL": "https://github.com/kodjodevf/mangayomi/releases/download/v0.9.96/Mangayomi-v0.9.96-ios.ipa",
+          "size": 117340839
         }
       ]
     },
@@ -1687,15 +1687,37 @@
   ],
   "news": [
     {
+      "appID": "com.kodjodevf.mangayomi",
+      "title": "Mangayomi 0.9.96 · 14 Nov 2026",
+      "identifier": "Mangayomi-release-v0.9.96",
+      "caption": "Mangayomi 0.9.96 is available.",
+      "date": "2026-11-14T17:16:59Z",
+      "tintColor": "#EF4444",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.96"
+    },
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261114 · 14 Nov 2026",
+      "identifier": "ARMSX2-release-nightly-20261114",
+      "caption": "ARMSX2 nightly-20261114 is available.",
+      "date": "2026-11-14T15:41:20Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261114"
+    },
+    {
       "appID": "sb.moe.kumone",
-      "title": "Kumone 0.3.36 · 14 Nov 2026",
-      "identifier": "Kumone-release-v0.3.36",
-      "caption": "Kumone 0.3.36 is available.",
-      "date": "2026-11-14T10:16:56Z",
+      "title": "Kumone 0.3.37 · 14 Nov 2026",
+      "identifier": "Kumone-release-v0.3.37",
+      "caption": "Kumone 0.3.37 is available.",
+      "date": "2026-11-14T11:23:41Z",
       "tintColor": "#C9A227",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
-      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.36"
+      "url": "https://github.com/missuo/kumone/releases/tag/v0.3.37"
     },
     {
       "appID": "com.example.PiliPlus",
@@ -1773,17 +1795,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/OpenParsec/images/news.png",
       "notify": true,
       "url": "https://github.com/hugeBlack/OpenParsec/releases/tag/2.0.0"
-    },
-    {
-      "appID": "com.armsx2.ios",
-      "title": "ARMSX2 nightly-20261113 · 13 Nov 2026",
-      "identifier": "ARMSX2-release-nightly-20261113",
-      "caption": "ARMSX2 nightly-20261113 is available.",
-      "date": "2026-11-13T04:53:50Z",
-      "tintColor": "#3CAEFF",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
-      "notify": true,
-      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261113"
     },
     {
       "appID": "com.altman.moviepilot",
@@ -2037,17 +2048,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ManicEMU/images/news.png",
       "notify": true,
       "url": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.2"
-    },
-    {
-      "appID": "com.kodjodevf.mangayomi",
-      "title": "Mangayomi 0.9.95 · 01 Nov 2026",
-      "identifier": "Mangayomi-release-v0.9.95",
-      "caption": "Mangayomi 0.9.95 is available.",
-      "date": "2026-11-01T15:17:25Z",
-      "tintColor": "#EF4444",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.95"
     },
     {
       "appID": "azki.moye.MeloX",
