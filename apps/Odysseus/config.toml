@@ -11,7 +11,7 @@ subtitle = "Odysseus AltStore source by AltGallery & altgen"
 description = "Auto-updated AltStore source for Odysseus"
 icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/icon.png"
 website = "https://github.com/yaog6700-bit/Odysseus1"
-tint_color = "#B8CCF0"
+tint_color = "#FF603F"
 
 [app]
 name = "Odysseus"
@@ -20,7 +20,7 @@ developer_name = "yaog6700-bit"
 subtitle = "Your sources. Your certificate. Your apps."
 description = "Odysseus，基于 Feather 与 FreeSign 的本机签名商店。把各个源的应用收进一个目录，用自己的证书或 Apple ID 签名并安装。"
 icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/icon.png"
-tint_color = "#B8CCF0"
+tint_color = "#FF603F"
 min_os_version = "17.0"
 
 [versions]

@@ -4,5 +4,5 @@ name = "Odysseus"
 tagline = "Your sources. Your certificate. Your apps."
 
 [colors]
-tint = "#B8CCF0"
-tint_alt = "#B8CCF0"
+tint = "#FF603F"
+tint_alt = "#C364F7"
