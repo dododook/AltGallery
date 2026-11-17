@@ -1,0 +1,8 @@
+# render_news.py config: python3 templates/render_news.py --out apps/Breeze
+
+name = "Breeze"
+tagline = "Flutter 插件化漫画阅读器"
+
+[colors]
+tint = "#E03030"
+tint_alt = "#FF6B6B"

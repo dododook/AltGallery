@@ -56,6 +56,9 @@ A native ARM64 PlayStation 2 emulator for iOS and iPadOS, forked from PCSX2.
 ### <a href="https://github.com/thebcd69/bcd-games"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/BCD/icon.png" alt="BCD icon" width="24" align="top"> BCD</a>
 在 iPhone 和 iPad 上运行 Windows 游戏，内置 Steam / GOG，基于 Wine、FEX 与 Metal。
 
+### <a href="https://github.com/breeze-project-org/Breeze"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Breeze/icon.png" alt="Breeze icon" width="24" align="top"> Breeze</a>
+使用 Flutter 构建的开源漫画阅读器，通过插件接入多个漫画源。
+
 ### <a href="https://github.com/OatmealDome/dolphin-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DolphiniOS/icon.png" alt="DolphiniOS icon" width="24" align="top"> DolphiniOS</a>
 Dolphin for iOS, reborn — a GameCube and Wii emulator for iPhone and iPad.
 

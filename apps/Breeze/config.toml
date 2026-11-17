@@ -1,0 +1,38 @@
+# altgen config for the Breeze AltStore source.
+# IPA from breeze-project-org/Breeze releases (unsigned Breeze-iOS-*.ipa).
+# No project AltStore source; fields taken from README and ios/Runner.xcodeproj.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "breeze-project-org/Breeze"
+
+[source]
+name = "Breeze"
+subtitle = "Breeze AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Breeze"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Breeze/icon.png"
+website = "https://github.com/breeze-project-org/Breeze"
+tint_color = "#E03030"
+
+[app]
+name = "Breeze"
+bundle_identifier = "com.zephyr.breeze"
+developer_name = "windy"
+subtitle = "Flutter 插件化漫画阅读器"
+description = "Breeze，使用 Flutter 构建的开源漫画阅读器。通过插件接入多个漫画源，支持书架、下载、追更与 iOS 图片超分。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Breeze/icon.png"
+tint_color = "#E03030"
+min_os_version = "15.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases ship Breeze-iOS-vX.Y.Z.ipa (README also mentions Breeze-iOS.ipa).
+asset_pattern = "^Breeze-iOS.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Breeze/images/news.png"
+
+[output]
+path = "apps.json"
