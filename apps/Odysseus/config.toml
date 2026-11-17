@@ -1,23 +1,22 @@
 # altgen config for the Odysseus AltStore source.
-# IPA is hosted on dododook/my-ipas (upstream has no v1.0.0 asset yet).
-# Metadata taken from the project's app-repo.json.
+# IPA from yaog6700-bit/Odysseus1 releases (same bundle as mirazbakis/Odysseus).
 # Run: uvx altgen -c config.toml
 
 [github]
-repo = "dododook/my-ipas"
+repo = "yaog6700-bit/Odysseus1"
 
 [source]
 name = "Odysseus"
 subtitle = "Odysseus AltStore source by AltGallery & altgen"
 description = "Auto-updated AltStore source for Odysseus"
 icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/icon.png"
-website = "https://github.com/mirazbakis/Odysseus"
+website = "https://github.com/yaog6700-bit/Odysseus1"
 tint_color = "#B8CCF0"
 
 [app]
 name = "Odysseus"
 bundle_identifier = "com.mirazbakis.Odysseus"
-developer_name = "mbakis"
+developer_name = "yaog6700-bit"
 subtitle = "Your sources. Your certificate. Your apps."
 description = "Odysseus，基于 Feather 与 FreeSign 的本机签名商店。把各个源的应用收进一个目录，用自己的证书或 Apple ID 签名并安装。"
 icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/icon.png"
@@ -27,10 +26,8 @@ min_os_version = "17.0"
 [versions]
 strip_v_prefix = true
 include_prereleases = false
-# Only the Odysseus IPA in dododook/my-ipas; other apps in that repo are ignored.
-asset_pattern = "Odysseus_.*\\.ipa$"
-version_pattern = "Odysseus_([0-9.]+)\\.ipa$"
-version_source = "filename"
+# Releases ship a single Odysseus.ipa.
+asset_pattern = "^Odysseus\\.ipa$"
 
 [news]
 title_template = "{name} {version} · {date}"

@@ -152,7 +152,7 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Novella-2.7.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Novella/icon.png" alt="Novella icon" width="24" align="top"> Novella</a>
 轻书架第三方客户端，基于 React Native 构建，面向 iOS / iPadOS。上游已归档，源里保留 2.7.0。
 
-### <a href="https://github.com/dododook/my-ipas/releases/tag/Odysseus-1.0.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Odysseus/icon.png" alt="Odysseus icon" width="24" align="top"> Odysseus</a>
+### <a href="https://github.com/yaog6700-bit/Odysseus1"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Odysseus/icon.png" alt="Odysseus icon" width="24" align="top"> Odysseus</a>
 基于 Feather 的本机签名商店，用自己的证书或 Apple ID 签名并安装应用。
 
 ### <a href="https://github.com/verback2308/Opaline"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Opaline/icon.png" alt="Opaline icon" width="24" align="top"> Opaline</a>
