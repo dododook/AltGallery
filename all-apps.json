@@ -1045,7 +1045,7 @@
       "subtitle": "Your sources. Your certificate. Your apps.",
       "localizedDescription": "Odysseus，基于 Feather 与 FreeSign 的本机签名商店。把各个源的应用收进一个目录，用自己的证书或 Apple ID 签名并安装。",
       "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/icon.png",
-      "tintColor": "#B8CCF0",
+      "tintColor": "#FF603F",
       "versions": [
         {
           "version": "1.0.1",
@@ -1714,7 +1714,7 @@
       "identifier": "Odysseus-release-1.0.1",
       "caption": "Odysseus 1.0.1 is available.",
       "date": "2026-11-17T06:47:23Z",
-      "tintColor": "#B8CCF0",
+      "tintColor": "#FF603F",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/images/news.png",
       "notify": true,
       "url": "https://github.com/yaog6700-bit/Odysseus1/releases/tag/1.0.1"
