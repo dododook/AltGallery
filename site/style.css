@@ -1,0 +1,1083 @@
+/* Design plan
+   Apple-style marketing page in two full-viewport chapters:
+   chapter one is the catalog intro with a horizontally scrolling rail of
+   recently updated apps, chapter two is the whole library. Scrolling is
+   left entirely to the reader — no scroll snapping anywhere. Every app opens
+   a detail sheet instead of expanding inline.
+   Color: Apple neutrals — #f5f5f7 paper / #000 ink, system blue accent, and
+   per-app tints used only as soft washes. Type: the system UI stack (SF Pro on
+   Apple platforms, PingFang for Chinese), tight tracking on display sizes,
+   tabular numerals for versions, sizes and dates. No webfonts.
+   Motion: one easing family (out-quint for entrances, the sheet curve for the
+   modal), staggered reveals, and a springy detail sheet. All of it collapses
+   under prefers-reduced-motion. */
+  :root {
+    color-scheme: light;
+    --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+    --font-mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
+    --bg: #f5f5f7;
+    --surface: #ffffff;
+    --surface-2: #ececf1;
+    --fg: #1d1d1f;
+    --soft: #424245;
+    --muted: #6e6e73;
+    --line: #dcdce1;
+    --accent: #0071e3;
+    --accent-ink: #0066cc;
+    --accent-soft: rgba(0, 113, 227, 0.12);
+    --on-accent: #ffffff;
+    --segment-bg: rgba(118, 118, 128, 0.12);
+    --segment-on: #ffffff;
+    --nav-bg: rgba(245, 245, 247, 0.72);
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.04), 0 10px 26px -14px rgba(0, 0, 0, 0.22);
+    --shadow-lg: 0 20px 44px -20px rgba(0, 0, 0, 0.3), 0 2px 6px rgba(0, 0, 0, 0.05);
+    --modal-backdrop: rgba(0, 0, 0, 0.38);
+    --nav-h: 52px;
+    --nav-total: calc(var(--nav-h) + env(safe-area-inset-top, 0px));
+    --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+    --ease-sheet: cubic-bezier(0.32, 0.72, 0, 1);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      color-scheme: dark;
+      --bg: #000000;
+      --surface: #1c1c1e;
+      --surface-2: #2c2c2e;
+      --fg: #f5f5f7;
+      --soft: #c7c7cc;
+      --muted: #8e8e93;
+      --line: rgba(255, 255, 255, 0.13);
+      --accent: #0a84ff;
+      --accent-ink: #64b0ff;
+      --accent-soft: rgba(10, 132, 255, 0.18);
+      --segment-bg: rgba(118, 118, 128, 0.24);
+      --segment-on: #636366;
+      --nav-bg: rgba(18, 18, 20, 0.72);
+      --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 26px -14px rgba(0, 0, 0, 0.8);
+      --shadow-lg: 0 24px 52px -22px rgba(0, 0, 0, 0.9), 0 2px 6px rgba(0, 0, 0, 0.4);
+      --modal-backdrop: rgba(0, 0, 0, 0.58);
+    }
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+    -webkit-text-size-adjust: 100%;
+  }
+  /* The app sheet's scroll lock, and the whole of it: the page is never taken
+     out of flow, so opening or closing a sheet leaves the document geometry — and
+     with it every rasterized tile of the catalog — untouched. `overflow: hidden`
+     holds wheel and keyboard scrolling; iOS, which keeps scrolling the document
+     under a finger anyway, is held by the touchmove guard on the sheet (see
+     app.js). */
+  html.is-locked {
+    overflow: hidden;
+    scroll-behavior: auto;
+  }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.47;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  ::selection { background: var(--accent); color: var(--on-accent); }
+  a { color: inherit; }
+  img { max-width: 100%; }
+  button { font-family: inherit; }
+  :where(a, button, input, [tabindex]):focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+  :where(button, input) { -webkit-tap-highlight-color: transparent; }
+
+  /* Ambient color behind the hero, kept very low so text stays crisp. */
+  .aurora {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  .aurora .blob {
+    position: absolute;
+    width: min(72vw, 880px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.16;
+    will-change: transform;
+  }
+  .aurora .b1 {
+    top: -30%;
+    left: -12%;
+    background: radial-gradient(circle at 50% 50%, #0a84ff, transparent 62%);
+    animation: drift-a 30s ease-in-out infinite alternate;
+  }
+  .aurora .b2 {
+    top: 6%;
+    right: -20%;
+    background: radial-gradient(circle at 50% 50%, #bf5af2, transparent 62%);
+    opacity: 0.12;
+    animation: drift-b 38s ease-in-out infinite alternate;
+  }
+  @media (prefers-color-scheme: dark) {
+    .aurora .blob { opacity: 0.24; }
+    .aurora .b2 { opacity: 0.16; }
+  }
+  @keyframes drift-a { to { transform: translate3d(6%, 8%, 0) scale(1.08); } }
+  @keyframes drift-b { to { transform: translate3d(-7%, 10%, 0) scale(1.12); } }
+
+  main { position: relative; z-index: 1; }
+
+  /* Navigation */
+  .nav {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 100;
+    padding-top: env(safe-area-inset-top, 0px);
+    background: var(--nav-bg);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .nav.scrolled { border-bottom-color: var(--line); }
+  .nav-inner {
+    width: 100%;
+    max-width: 1180px;
+    height: var(--nav-h);
+    margin-inline: auto;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 12px;
+  }
+  .brand {
+    justify-self: start;
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: var(--fg);
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    white-space: nowrap;
+  }
+  .brand-mark {
+    width: 24px;
+    height: 24px;
+    border-radius: 7px;
+    object-fit: cover;
+    background: var(--surface-2);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+  }
+  .nav-links { display: flex; gap: 4px; }
+  .nav-links a {
+    padding: 6px 13px;
+    border-radius: 999px;
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+  .nav-links a:hover { color: var(--fg); }
+  .nav-links a.active { color: var(--fg); background: color-mix(in srgb, var(--fg) 8%, transparent); }
+  .controls {
+    justify-self: end;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  .segment {
+    display: inline-flex;
+    gap: 2px;
+    padding: 2px;
+    border-radius: 999px;
+    background: var(--segment-bg);
+  }
+  .segment button {
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.4;
+    /* Never below the 44px a fingertip wants by much: this is the whole control
+       surface on a phone, where the compact pill would otherwise be ~26px. */
+    min-height: 28px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+  .segment button:hover { color: var(--fg); }
+  .segment button[aria-pressed="true"] {
+    background: var(--segment-on);
+    color: var(--fg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.14);
+  }
+  .segment button:disabled { opacity: 0.55; cursor: not-allowed; }
+  @media (prefers-color-scheme: dark) {
+    .segment button[aria-pressed="true"] { color: #ffffff; }
+  }
+
+  /* Pages */
+  .page { position: relative; }
+  .hero-page {
+    max-width: 1220px;
+    margin-inline: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: calc(var(--nav-total) + clamp(10px, 2.6vh, 32px)) clamp(20px, 4vw, 48px) clamp(10px, 2vh, 20px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(10px, 2vh, 28px);
+  }
+  .hero {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  .hero > * { animation: rise 0.9s var(--ease-out) both; }
+  .hero > :nth-child(1) { animation-delay: 0.02s; }
+  .hero > :nth-child(2) { animation-delay: 0.08s; }
+  .hero > :nth-child(3) { animation-delay: 0.12s; }
+  .hero > :nth-child(4) { animation-delay: 0.18s; }
+  .hero > :nth-child(5) { animation-delay: 0.24s; }
+  .hero > :nth-child(6) { animation-delay: 0.3s; }
+  .hero > :nth-child(7) { animation-delay: 0.36s; }
+  .hero > :nth-child(8) { animation-delay: 0.42s; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px) scale(0.985); filter: blur(6px); }
+    to { opacity: 1; transform: none; filter: none; }
+  }
+
+  .hero-icon {
+    width: clamp(66px, 7vw, 84px);
+    height: clamp(66px, 7vw, 84px);
+    object-fit: cover;
+    border-radius: 24%;
+    background: var(--surface-2);
+    margin-bottom: clamp(10px, 1.8vh, 18px);
+    box-shadow:
+      0 18px 44px -16px color-mix(in srgb, var(--accent) 60%, transparent),
+      0 2px 8px rgba(0, 0, 0, 0.12);
+  }
+  .eyebrow {
+    margin: 0;
+    color: var(--accent-ink);
+    font-size: 11.5px;
+    font-weight: 650;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .hero h1 {
+    margin: 9px 0 0;
+    font-size: clamp(44px, 7.6vw, 82px);
+    font-weight: 700;
+    line-height: 1.02;
+    letter-spacing: -0.045em;
+    color: var(--fg);
+    text-wrap: balance;
+  }
+  @supports ((background-clip: text) or (-webkit-background-clip: text)) {
+    .hero h1 {
+      background: linear-gradient(180deg, var(--fg) 42%, color-mix(in srgb, var(--fg) 58%, var(--accent)) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+  }
+  .hero-sub {
+    margin: clamp(10px, 1.4vh, 16px) 0 0;
+    max-width: 46ch;
+    color: var(--soft);
+    font-size: clamp(16px, 1.8vw, 21px);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    text-wrap: balance;
+  }
+  .hero-meta {
+    margin: 13px 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 6px 10px;
+    color: var(--muted);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+  }
+  .hero-meta .sep { color: var(--line); }
+  .hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: clamp(16px, 2.4vh, 26px);
+  }
+  .hero-clients { margin: 13px 0 0; color: var(--muted); font-size: 12.5px; }
+  .mode-note { margin: 5px 0 0; color: var(--muted); font-size: 12px; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 42px;
+    padding: 10px 22px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-decoration: none;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: transform 0.3s var(--ease-out), background-color 0.2s ease, filter 0.2s ease, box-shadow 0.3s ease;
+  }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--on-accent);
+    box-shadow: 0 8px 22px -12px color-mix(in srgb, var(--accent) 85%, transparent);
+  }
+  .btn-primary:hover { filter: brightness(1.08); transform: translateY(-1px); }
+  .btn-ghost {
+    background: color-mix(in srgb, var(--fg) 7%, transparent);
+    color: var(--fg);
+  }
+  .btn-ghost:hover { background: color-mix(in srgb, var(--fg) 11%, transparent); transform: translateY(-1px); }
+  .btn:active { transform: scale(0.97); }
+  .btn svg { flex: 0 0 auto; }
+  .btn[aria-disabled="true"] { opacity: 0.55; pointer-events: none; }
+
+  /* Recently updated rail */
+  .recent { width: 100%; min-width: 0; }
+  .recent-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+  .recent-head h2 {
+    margin: 0;
+    font-size: clamp(18px, 1.8vw, 22px);
+    font-weight: 650;
+    letter-spacing: -0.02em;
+  }
+  .rail-tools { display: flex; gap: 6px; }
+  .rail-btn {
+    appearance: none;
+    width: 34px;
+    height: 34px;
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: color-mix(in srgb, var(--surface) 70%, transparent);
+    color: var(--soft);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, opacity 0.2s ease, transform 0.2s ease;
+  }
+  .rail-btn:hover:not(:disabled) { color: var(--fg); background: var(--surface); transform: scale(1.05); }
+  .rail-btn:disabled { opacity: 0.35; cursor: default; }
+  /* The strip is translated by Embla, never scrolled, so the clip and the edge
+     fade both live on this wrapper: WebKit repaints a masked element on every
+     frame it moves, and the mask has to stay off the moving part. The two
+     custom properties say which edges are faded; a zero-width stop is a hard
+     edge, so no fade and no mask at all are the same thing. The prefixed copy
+     is unnecessary: color-mix() below already requires a browser that has
+     unprefixed mask-image. */
+  .rail-fade {
+    --rail-fade: 48px;
+    --fade-left: 0px;
+    --fade-right: var(--rail-fade);
+    overflow: hidden;
+    /* A sideways drag belongs to the strip and a vertical one to the page: this
+       is what tells iOS, before the first move, not to claim the gesture for the
+       page and leave Embla's preventDefault too late to do anything. */
+    touch-action: pan-y;
+    mask-image: linear-gradient(
+      to right,
+      transparent 0,
+      #000 var(--fade-left),
+      #000 calc(100% - var(--fade-right)),
+      transparent 100%
+    );
+  }
+  .track {
+    display: flex;
+    gap: 16px;
+    padding: 4px 0 8px;
+    /* Nothing that would make this element an offsetParent — no transform, no
+       `will-change: transform`, no containment. Embla measures the slides with
+       offsetLeft/offsetTop and compares them to the container's own, so turning
+       the strip into a containing block puts the two in different coordinate
+       spaces: every snap shifts by the strip's offset, and the loop wraps 48px
+       short of the seam (cards overlapping at the ends). */
+  }
+  /* `gap` only exists between items, so with `loop: true` the wrap — which Embla
+     measures as the content extent — closes the last/first seam with no gap at
+     all. This is the documented workaround: the last slide carries the trailing
+     gap as a margin. The strip's own horizontal padding has to be zero with it,
+     because Embla adds that inset to the loop length too (a 2px padding showed
+     up as an 18px seam). */
+  .recent-card:last-child { margin-right: 16px; }
+  /* Falls back to the plain scroller when the vendored Embla build is missing.
+     That strip pans itself, so the touch-action hint above only belongs to the
+     Embla one. */
+  .rail-fade.native { overflow: visible; touch-action: auto; }
+  .rail-fade.native .track {
+    overflow-x: auto;
+    /* A sideways drag stays in the rail instead of chaining to the page, the
+       iOS back-swipe or the bounce. */
+    overscroll-behavior-x: contain;
+    scrollbar-width: none;
+  }
+  .rail-fade.native .track::-webkit-scrollbar { display: none; }
+  /* Only the fallback scroller has ends to fade: at the start the left edge is
+     solid and the right one fades (the default); at the end it is the other way
+     round, and with both ends reached nothing fades at all. The looping rail
+     never reaches an end, so both edges stay faded. */
+  .rail-fade.at-end { --fade-left: var(--rail-fade); --fade-right: 0px; }
+  .rail-fade.at-start.at-end { --fade-left: 0px; --fade-right: 0px; }
+  .rail-fade.loop { --fade-left: var(--rail-fade); }
+  .recent-card {
+    appearance: none;
+    flex: 0 0 clamp(232px, 25vw, 320px);
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  /* The entry animation goes on the card's children, never on the card: a card
+     is an Embla slide, and Embla writes those transforms itself when the loop
+     wraps one round, so an animation holding a transform of its own would win
+     over it (see the "How Embla Carousel Works" notes). `backwards` rather than
+     `both` for the same reason: the last keyframe must not linger, or it would
+     also beat the hover transform on .recent-media. */
+  .recent-card.enter > * { animation: rise 0.8s var(--ease-out) backwards; animation-delay: calc(var(--i, 0) * 55ms + 120ms); }
+  .recent-media {
+    position: relative;
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 1px solid var(--line);
+    background: var(--surface-2);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.5s var(--ease-out), box-shadow 0.5s var(--ease-out);
+  }
+  /* The promo tile mirrors tools/render_news.py: a pale gradient in the app's
+     tint, two tint glows, the rounded icon over a NEW UPDATE badge, and the
+     name + tagline on the right. Container units keep it exact at any size. */
+  .recent-media.promo {
+    container-type: inline-size;
+    display: grid;
+    grid-template-columns: max-content minmax(0, 1fr);
+    align-items: center;
+    /* Percentages, not cqw: a container's own gap resolves against an
+       ancestor container, which would leave this column far too wide. */
+    column-gap: 9%;
+    padding: 5% 5.5%;
+    background:
+      radial-gradient(80% 130% at 18% 35%, color-mix(in srgb, var(--tint, var(--accent)) 32%, transparent), transparent 68%),
+      radial-gradient(90% 140% at 92% 110%, color-mix(in srgb, var(--tint-alt, var(--accent)) 22%, transparent), transparent 72%),
+      linear-gradient(135deg, #fdfdff 0%, color-mix(in srgb, var(--tint, var(--accent)) 13%, #f4f4f9) 55%, color-mix(in srgb, var(--tint, var(--accent)) 21%, #eceef5) 100%);
+  }
+  .promo-left { display: flex; flex-direction: column; align-items: center; gap: 2.8cqw; min-width: 0; }
+  .promo-icon { width: 21cqw; height: 21cqw; border-radius: 23%; box-shadow: 0 6px 16px -4px rgba(20, 24, 40, 0.28); }
+  .promo-icon::after { box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6); }
+  .promo-badge {
+    white-space: nowrap;
+    padding: 0.5em 0.9em;
+    border-radius: 999px;
+    border: 1px solid color-mix(in srgb, var(--tint, var(--accent)) 42%, transparent);
+    background: color-mix(in srgb, var(--tint, var(--accent)) 10%, transparent);
+    color: color-mix(in srgb, var(--tint, var(--accent)) 80%, #17181c);
+    font-size: clamp(6.5px, 2.7cqw, 9px);
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .promo-copy { display: flex; flex-direction: column; gap: 2.4cqw; min-width: 0; }
+  /* One line, never wrapped: fitPromoNames() shrinks the font for long names.
+     The ellipsis is the floor it stops at (9px) still not being enough. */
+  .promo-name {
+    font-size: clamp(18px, 10cqw, 32px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: #15161a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .promo-tagline {
+    font-size: clamp(11px, 4.3cqw, 14px);
+    line-height: 1.32;
+    color: color-mix(in srgb, var(--tint, var(--accent)) 45%, #3c3d44);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .recent-caption { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding-inline: 2px; }
+  .recent-meta { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; }
+  .recent-chev { color: var(--muted); flex: 0 0 auto; }
+  /* Hover belongs to a real pointer. On iOS a tap leaves :hover stuck on the card
+     it landed on, and its transition would then keep a lifted, shadowed card
+     under the finger for the whole drag. A touch only gets the press feedback. */
+  @media (hover: hover) and (pointer: fine) {
+    .recent-card:hover .recent-chev { color: var(--fg); }
+    .recent-card:hover .recent-media { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+  }
+  @media (hover: none) {
+    /* No press transition either: the drag should follow the finger at once. */
+    .recent-media { transition: none; }
+  }
+  .recent-card:active .recent-media { transform: translateY(-1px) scale(0.99); }
+  .recent-card:focus-visible { outline: none; }
+  .recent-card:focus-visible .recent-media { box-shadow: 0 0 0 3px var(--accent), var(--shadow-lg); }
+
+  .scroll-cue {
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+    padding: 7px 14px;
+    border-radius: 999px;
+    color: var(--muted);
+    font-size: 12.5px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease;
+  }
+  .scroll-cue:hover { color: var(--fg); background: color-mix(in srgb, var(--fg) 6%, transparent); }
+  .scroll-cue svg { animation: cue 2.6s ease-in-out infinite; }
+  @keyframes cue {
+    0%, 100% { transform: translateY(0); opacity: 0.55; }
+    50% { transform: translateY(3px); opacity: 1; }
+  }
+
+  /* Library */
+  .library-page {
+    max-width: 1180px;
+    margin-inline: auto;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding: calc(var(--nav-total) + clamp(24px, 5vh, 56px)) clamp(16px, 4vw, 48px) 36px;
+  }
+  .library-head { margin-bottom: 22px; }
+  .display {
+    margin: 10px 0 0;
+    font-size: clamp(34px, 5.4vw, 58px);
+    font-weight: 700;
+    line-height: 1.05;
+    letter-spacing: -0.04em;
+  }
+  .library-count {
+    margin: 12px 0 0;
+    color: var(--muted);
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+  }
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  }
+  [data-reveal].in { opacity: 1; transform: none; }
+
+  .toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 22px;
+  }
+  .search { position: relative; flex: 1 1 240px; min-width: 0; }
+  .search input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--surface);
+    color: var(--fg);
+    font: inherit;
+    font-size: 14.5px;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  }
+  .search input::placeholder { color: var(--muted); }
+  .search input:focus {
+    border-color: color-mix(in srgb, var(--accent) 55%, var(--line));
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+  .search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+    pointer-events: none;
+  }
+  .sort-seg { padding: 3px; }
+  .sort-seg button { padding: 7px 14px; font-size: 12.5px; }
+  input:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .card {
+    --tint: var(--accent);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* The tint wash is a background layer, not an ::before overlay: an
+       absolutely positioned pseudo-element paints above the card's own text,
+       which softens the title for nothing. */
+    background:
+      radial-gradient(120% 90% at 0% 0%, color-mix(in srgb, var(--tint) 13%, transparent), transparent 62%),
+      var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    transition: transform 0.4s var(--ease-out), box-shadow 0.4s var(--ease-out), border-color 0.25s ease;
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--accent) 28%, var(--line));
+    box-shadow: var(--shadow-lg);
+  }
+  .card:active { transform: translateY(-1px) scale(0.997); }
+  .card:focus-within { border-color: color-mix(in srgb, var(--accent) 45%, var(--line)); }
+  .card.enter { animation: card-in 0.7s var(--ease-out) both; animation-delay: calc(min(var(--i, 0), 16) * 30ms); }
+  @keyframes card-in {
+    from { opacity: 0; transform: translateY(16px) scale(0.985); }
+  }
+  .card-open {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 18px 18px 12px;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .card-open:focus-visible { outline: none; }
+  .card-top { display: flex; align-items: flex-start; gap: 12px; min-width: 0; }
+  .icon-tile {
+    position: relative;
+    display: grid;
+    place-items: center;
+    flex: 0 0 auto;
+    overflow: hidden;
+    border-radius: 23%;
+    background: color-mix(in srgb, var(--tint, var(--accent)) 16%, var(--surface-2));
+  }
+  .icon-tile::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--fg) 10%, transparent);
+    pointer-events: none;
+  }
+  .icon-tile img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+  .icon-letter {
+    font-size: 20px;
+    font-weight: 650;
+    color: color-mix(in srgb, var(--tint, var(--accent)) 70%, var(--fg));
+    opacity: 0.8;
+  }
+  .card .icon-tile { width: 54px; height: 54px; }
+  .card-heading { min-width: 0; flex: 1; display: flex; flex-direction: column; gap: 2px; padding-top: 2px; }
+  .card-name {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    overflow-wrap: anywhere;
+  }
+  .card-dev {
+    color: var(--muted);
+    font-size: 12.5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .ver {
+    display: inline-block;
+    flex: 0 0 auto;
+    max-width: 92px;
+    padding: 3px 9px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    color: var(--muted);
+    font-size: 11.5px;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .card-sub {
+    margin: 0;
+    color: var(--soft);
+    font-size: 13.5px;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  .card-foot {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0 18px 16px;
+    margin-top: auto;
+  }
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 4px 10px;
+    min-width: 0;
+    color: var(--muted);
+    font-size: 11.5px;
+    font-variant-numeric: tabular-nums;
+  }
+  .card-meta span + span { position: relative; }
+  .card-meta span + span::before {
+    content: "·";
+    position: absolute;
+    left: -7px;
+    color: var(--line);
+  }
+  .btn-mini {
+    margin-left: auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 6px 11px;
+    border-radius: 999px;
+    background: var(--accent-soft);
+    color: var(--accent-ink);
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  .btn-mini:hover { background: color-mix(in srgb, var(--accent) 20%, transparent); transform: scale(1.04); }
+  .btn-mini:active { transform: scale(0.96); }
+
+  .empty {
+    margin: 48px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14.5px;
+  }
+  .status { margin: 40px 0; text-align: center; color: var(--muted); font-size: 14.5px; }
+  .status a { color: var(--accent-ink); }
+  /* Only rendered with JavaScript off, where the catalog never gets built. */
+  .noscript {
+    margin: 0;
+    padding: calc(var(--nav-total) + 24px) 20px 0;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+  }
+  .noscript a { color: var(--accent-ink); }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: clamp(40px, 7vh, 72px);
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 12.5px;
+  }
+  .footer p { margin: 0; }
+  .footer a { color: var(--muted); text-decoration: none; transition: color 0.2s ease; }
+  .footer a:hover { color: var(--fg); }
+  .footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+
+  /* Skeleton */
+  .card.skeleton { pointer-events: none; background: var(--surface); animation: sk-pulse 1.8s ease-in-out infinite; }
+  .sk-icon { flex: 0 0 54px; width: 54px; height: 54px; border-radius: 23%; background: var(--surface-2); }
+  .sk-lines { flex: 1; display: flex; flex-direction: column; gap: 8px; padding-top: 6px; }
+  .sk-line { height: 11px; border-radius: 6px; background: var(--surface-2); }
+  .sk-line.w35 { width: 35%; }
+  .sk-line.w50 { width: 50%; }
+  .sk-line.w70 { width: 70%; }
+  .sk-line.w90 { width: 90%; }
+  @keyframes sk-pulse { 50% { opacity: 0.55; } }
+  .recent-card.skeleton { pointer-events: none; animation: sk-pulse 1.8s ease-in-out infinite; }
+  .recent-card.skeleton .recent-media { box-shadow: none; }
+  .recent-card.skeleton .recent-caption { min-height: 18px; }
+
+  /* Detail sheet */
+  .modal {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: max(16px, env(safe-area-inset-top, 0px)) 16px max(16px, env(safe-area-inset-bottom, 0px));
+  }
+  .modal[hidden] { display: none; }
+  .modal-backdrop {
+    position: absolute;
+    inset: 0;
+    background: var(--modal-backdrop);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    backdrop-filter: blur(18px) saturate(140%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .modal-panel {
+    position: relative;
+    width: min(880px, 100%);
+    /* `svh` is the viewport with the browser UI fully expanded, i.e. a constant,
+       while the overlay this panel is centred in is the actual viewport and grows
+       when iOS collapses its toolbars as the page scrolls. Capped in `svh` the
+       sheet therefore sits in a taller box — same height, more air around it —
+       and reads as "smaller" once the page is scrolled. `dvh` follows the room
+       that is really there, and still never overflows it; the `svh` line stays
+       first as the fallback for browsers without dynamic units. */
+    max-height: min(88svh, 940px);
+    max-height: min(88dvh, 940px);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--surface);
+    border-radius: 28px;
+    box-shadow: 0 40px 110px -24px rgba(0, 0, 0, 0.55), 0 0 0 1px color-mix(in srgb, var(--fg) 8%, transparent);
+    opacity: 0;
+    transform: translateY(20px) scale(0.965);
+    transition: opacity 0.35s var(--ease-sheet), transform 0.5s var(--ease-sheet);
+    outline: none;
+  }
+  .modal.open .modal-backdrop { opacity: 1; }
+  .modal.open .modal-panel { opacity: 1; transform: none; }
+  .modal-scroll {
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: clamp(22px, 3.2vw, 36px);
+  }
+  .modal-scroll::-webkit-scrollbar { width: 10px; }
+  .modal-scroll::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--fg) 18%, transparent);
+    border: 3px solid var(--surface);
+    border-radius: 999px;
+  }
+  .modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 3;
+    width: 36px;
+    height: 36px;
+    display: grid;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: var(--surface-2);
+    color: var(--muted);
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  }
+  .modal-close:hover { background: color-mix(in srgb, var(--fg) 14%, var(--surface-2)); color: var(--fg); transform: scale(1.06); }
+  .modal-close:active { transform: scale(0.94); }
+
+  .m-head { display: flex; align-items: flex-start; gap: 18px; padding-right: 34px; }
+  .m-icon { width: clamp(64px, 9vw, 84px); height: clamp(64px, 9vw, 84px); border-radius: 24%; }
+  .m-icon .icon-letter { font-size: 28px; }
+  .m-titles { min-width: 0; flex: 1; }
+  .m-dev { margin: 0; color: var(--accent-ink); font-size: 13px; font-weight: 600; }
+  .m-title {
+    margin: 3px 0 0;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 700;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+    overflow-wrap: anywhere;
+  }
+  .m-sub { margin: 7px 0 0; color: var(--soft); font-size: 14.5px; line-height: 1.45; }
+  .m-pills { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 13px; }
+  .m-pills span {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--surface-2);
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .m-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .m-actions .btn { min-height: 38px; padding: 8px 17px; font-size: 13.5px; }
+  .m-section { margin-top: clamp(22px, 3.4vw, 30px); }
+  .m-section > h3 {
+    margin: 0 0 9px;
+    font-size: 15px;
+    font-weight: 650;
+    letter-spacing: -0.01em;
+  }
+  .m-section > h3 span { color: var(--muted); font-weight: 500; }
+  .shots {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding: 2px 2px 8px;
+    scrollbar-width: none;
+  }
+  .shots::-webkit-scrollbar { display: none; }
+  .shots img {
+    height: clamp(220px, 34vh, 340px);
+    width: auto;
+    max-width: none;
+    display: block;
+    flex: 0 0 auto;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    background: var(--surface-2);
+  }
+  .md { max-width: 68ch; color: var(--soft); font-size: 14.5px; line-height: 1.6; overflow-wrap: anywhere; }
+  .md p { margin: 0 0 9px; }
+  .md p:last-child { margin-bottom: 0; }
+  .md-title { margin: 14px 0 6px; color: var(--fg); font-size: 14.5px; font-weight: 650; }
+  .md-title:first-child { margin-top: 0; }
+  .md ul, .md ol { margin: 0 0 9px 19px; padding: 0; }
+  .md li { margin: 3px 0; }
+  .md code { padding: 1px 5px; border-radius: 5px; background: var(--surface-2); font-family: var(--font-mono); font-size: 12.5px; }
+  .md pre { margin: 0 0 10px; padding: 12px 14px; overflow: auto; border-radius: 12px; background: var(--surface-2); }
+  .md pre code { padding: 0; background: none; }
+  .md a { color: var(--accent-ink); text-decoration: underline; text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); text-underline-offset: 2px; }
+  .md a:hover { text-decoration-color: var(--accent); }
+  .md hr { margin: 12px 0; border: 0; border-top: 1px solid var(--line); }
+  .md-row { color: var(--muted); font-size: 12.5px; }
+  .m-notes .md {
+    padding: 15px 17px;
+    border-radius: 16px;
+    background: var(--surface-2);
+    font-size: 13.5px;
+  }
+
+  /* Short desktop windows: trim the hero so chapter one still fits in one
+     screen on common 800- and 768-pixel-tall displays. */
+  @media (min-width: 700px) and (max-height: 850px) {
+    .hero-icon { width: 68px; height: 68px; margin-bottom: 10px; }
+    .hero h1 { font-size: clamp(40px, 6.6vw, 66px); }
+    .hero-sub { margin-top: 9px; font-size: clamp(15px, 1.6vw, 18px); }
+    .hero-clients { margin-top: 10px; }
+    .mode-note { margin-top: 3px; }
+    .hero-actions { margin-top: 14px; }
+    .recent-head { margin-bottom: 8px; }
+  }
+  /* Responsive */
+  @media (max-width: 760px) {
+    .nav-inner { grid-template-columns: auto 1fr; }
+    .nav-links { display: none; }
+    .controls { gap: 6px; }
+    .segment button { padding: 5px 9px; font-size: 11.5px; min-height: 32px; }
+    .toolbar { gap: 8px; }
+    .sort-seg { margin-left: auto; }
+    .m-head { gap: 14px; }
+  }
+  @media (max-width: 640px) {
+    .modal { align-items: flex-end; padding: 0; }
+    .modal-panel {
+      width: 100%;
+      /* Same reason as the base rule: the sheet slides up from the bottom edge
+         of the real viewport, not of the smallest possible one. */
+      max-height: 92svh;
+      max-height: 92dvh;
+      border-radius: 24px 24px 0 0;
+      transform: translateY(64px);
+    }
+    .modal.open .modal-panel { transform: none; }
+    .modal-panel::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 36px;
+      height: 5px;
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--fg) 20%, transparent);
+      z-index: 3;
+      pointer-events: none;
+    }
+    .modal-scroll { padding-top: 26px; padding-bottom: max(26px, env(safe-area-inset-bottom, 0px)); }
+    .m-head { padding-right: 30px; }
+    .m-actions .btn { flex: 1 1 auto; }
+    .recent-card { flex-basis: min(72vw, 300px); }
+  }
+  @media (max-width: 560px) {
+    .hero-page { padding-top: calc(var(--nav-total) + 14px); }
+    .hero-sub { font-size: 15.5px; }
+    .hero-actions .btn { padding: 10px 18px; font-size: 14px; }
+    .grid { grid-template-columns: minmax(0, 1fr); }
+    .shots img { height: 230px; }
+    .rail-tools { display: none; }
+  }
+  @media (max-width: 440px) {
+    .brand > span { display: none; }
+    .nav-inner { gap: 10px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.001ms !important;
+      animation-delay: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+    }
+    .hero > *, .recent-card.enter > *, .card.enter { opacity: 1; transform: none; filter: none; }
+    [data-reveal] { opacity: 1; transform: none; }
+    .recent-card:hover .recent-media,
+    .recent-card:active .recent-media { transform: none; }
+  }
