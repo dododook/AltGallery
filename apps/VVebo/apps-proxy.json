@@ -1,0 +1,42 @@
+{
+  "name": "VVebo",
+  "subtitle": "VVebo AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for VVebo",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/icon.png",
+  "website": "https://github.com/dododook/my-ipas",
+  "tintColor": "#F5C400",
+  "apps": [
+    {
+      "name": "VVebo",
+      "bundleIdentifier": "com.johnil.vvebo",
+      "developerName": "johnil",
+      "subtitle": "已停更的第三方微博客户端",
+      "localizedDescription": "VVebo 3.3.31 适配版。已停更的第三方微博客户端，含较新系统上的兼容补丁。请先卸掉旧的巨魔包或旧自签包再装。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/icon.png",
+      "tintColor": "#F5C400",
+      "versions": [
+        {
+          "version": "3.3.31.1",
+          "date": "2026-10-19T00:49:37Z",
+          "localizedDescription": "Sideload-adapted VVebo 3.3.31 (Info.plist still reports 3.3.31). Bundle ID: com.johnil.vvebo. Minimum iOS 14.0.",
+          "downloadURL": "https://gh-proxy.com/https://github.com/dododook/my-ipas/releases/download/VVebo-3.3.31.1/VVebo_3.3.31.1.ipa",
+          "size": 22700518,
+          "minOSVersion": "14.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.johnil.vvebo",
+      "title": "VVebo 3.3.31.1 · 19 Oct 2026",
+      "identifier": "VVebo-release-VVebo-3.3.31.1",
+      "caption": "VVebo 3.3.31.1 is available.",
+      "date": "2026-10-19T00:49:37Z",
+      "tintColor": "#F5C400",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VVebo/images/news.png",
+      "notify": true,
+      "url": "https://github.com/dododook/my-ipas/releases/tag/VVebo-3.3.31.1"
+    }
+  ]
+}

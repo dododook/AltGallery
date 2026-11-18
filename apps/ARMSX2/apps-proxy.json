@@ -1,0 +1,47 @@
+{
+  "name": "ARMSX2",
+  "subtitle": "ARMSX2 AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for ARMSX2",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
+  "website": "https://github.com/ARMSX2/ARMSX2",
+  "tintColor": "#3CAEFF",
+  "apps": [
+    {
+      "name": "ARMSX2",
+      "bundleIdentifier": "com.armsx2.ios",
+      "developerName": "ARMSX2",
+      "subtitle": "PlayStation 2 emulator for ARM64",
+      "localizedDescription": "A free and open-source PlayStation 2 (PS2) emulator based on PCSX2, with native ARM64 JIT recompilers. Play PS2 games on your phone, PC, or gaming handheld.",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/game.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/list.png",
+        "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/settings.png"
+      ],
+      "tintColor": "#3CAEFF",
+      "versions": [
+        {
+          "version": "nightly-20261114",
+          "date": "2026-11-14T15:41:20Z",
+          "localizedDescription": "Automated nightly build for community testing (unsigned).\n\nEvery download is named `ARMSX2-nightly-DATE-COMMIT-PLATFORM`, so builds\nfrom different nights stay distinguishable after you have downloaded them.\n\n- macOS arm64: macOS-arm64.tar.xz\n- Linux arm64: Linux-arm64-4K-pages.AppImage on most distros, or the 16K one on Asahi Linux and other Apple Silicon kernels (run getconf PAGESIZE if unsure)\n- Windows arm64: Windows-arm64.zip\n- RetroArch on Linux arm64: Linux-arm64-libretro-core.tar.zst, a 4K-page build\n- Bare-display kmsdrm handhelds: Linux-arm64-SDL-handheld.tar.zst, a 4K-page build (Rocknix and Batocera run compositors, so use the Qt AppImage there instead)\n- Android: Android-arm64.apk (installs as ARMSX2 Nightly, alongside the stable app)\n- iOS: iOS-arm64.ipa, unsigned, sideload it (installs as ARMSX2 Nightly, alongside the stable app)\n\nComing from an old nightly? Nightlies are now a separate app, ARMSX2 Nightly, next to stable.\n\n- Android: stable cannot install over an old nightly. Back up your saves and memory cards, uninstall the old nightly, then install the stable APK.\n- iOS: your old nightly is the ARMSX2 iOS app and still has your saves. Copy them into ARMSX2 Nightly with the Files app.\n\n## What's new\n- macOS: a refused notarization is not a build failure\n- arm64: the crash post-mortem's microVU readers are Linux only\n- GameDB: Stuntman and Driv3r run the EE at Exact clamping\n- arm64: a SIGILL gets the crash post-mortem too\n- arm64: the crash post-mortem names where the lr points\n- arm64: the crash post-mortem's VU microcode comes from the program's copy\n- arm64: the crash post-mortem names the library a pc outside the JIT is in\n- arm64: the crash post-mortem shows the VU microcode at the fault block\n- arm64: the crash post-mortem names the microVU block that holds the pc\n- LSFG: rebuild the swap chain before the acquire, and make it FIFO\n- microVU: don't finish VU1 through a dispatcher that does not exist\n- Tests: a second boot after a VM that stopped with VU1 busy\n\nFull changelog: https://github.com/ARMSX2/ARMSX2/compare/nightly-20261113...6d9511e29e3e00d5ab78899f5292b967ab850ddb",
+          "downloadURL": "https://gh-proxy.com/https://github.com/ARMSX2/ARMSX2/releases/download/nightly-20261114/ARMSX2-nightly-20261114-6d9511e29e-iOS-arm64.ipa",
+          "size": 40717380,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.armsx2.ios",
+      "title": "ARMSX2 nightly-20261114 · 14 Nov 2026",
+      "identifier": "ARMSX2-release-nightly-20261114",
+      "caption": "ARMSX2 nightly-20261114 is available.",
+      "date": "2026-11-14T15:41:20Z",
+      "tintColor": "#3CAEFF",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261114"
+    }
+  ]
+}

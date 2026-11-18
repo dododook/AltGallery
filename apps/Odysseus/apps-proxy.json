@@ -1,0 +1,42 @@
+{
+  "name": "Odysseus",
+  "subtitle": "Odysseus AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Odysseus",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/icon.png",
+  "website": "https://github.com/yaog6700-bit/Odysseus1",
+  "tintColor": "#FF603F",
+  "apps": [
+    {
+      "name": "Odysseus",
+      "bundleIdentifier": "com.mirazbakis.Odysseus",
+      "developerName": "yaog6700-bit",
+      "subtitle": "Your sources. Your certificate. Your apps.",
+      "localizedDescription": "Odysseus，基于 Feather 与 FreeSign 的本机签名商店。把各个源的应用收进一个目录，用自己的证书或 Apple ID 签名并安装。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/icon.png",
+      "tintColor": "#FF603F",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "date": "2026-11-17T06:47:23Z",
+          "localizedDescription": "Odysseus，基于 Feather 与 FreeSign 的本机签名商店。把各个源的应用收进一个目录，用自己的证书或 Apple ID 签名并安装。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/yaog6700-bit/Odysseus1/releases/download/1.0.1/Odysseus.ipa",
+          "size": 20129771,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.mirazbakis.Odysseus",
+      "title": "Odysseus 1.0.1 · 17 Nov 2026",
+      "identifier": "Odysseus-release-1.0.1",
+      "caption": "Odysseus 1.0.1 is available.",
+      "date": "2026-11-17T06:47:23Z",
+      "tintColor": "#FF603F",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Odysseus/images/news.png",
+      "notify": true,
+      "url": "https://github.com/yaog6700-bit/Odysseus1/releases/tag/1.0.1"
+    }
+  ]
+}
