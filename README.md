@@ -35,6 +35,9 @@ Riley Testut 的官方侧载商店，2.3 起支持远程 AltServer。
 ### <a href="https://github.com/AniBakaBaka/AniBaka"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AniBaka/icon.png" alt="AniBaka icon" width="24" align="top"> AniBaka</a>
 跨平台番剧聚合与弹幕客户端，多番剧源、多弹幕、高清无广告，支持动漫实时超分辨率。
 
+### <a href="https://github.com/Sle2p/AniCh"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AniCh/icon.png" alt="AniCh icon" width="24" align="top"> AniCh</a>
+支持超分辨率的在线动漫弹幕播放器，多平台、多番剧源，提供倍速播放、追番管理、弹幕过滤与离线缓存。
+
 ### <a href="https://github.com/openAnimeFlow/AnimeFlow"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/AnimeFlow/icon.png" alt="AnimeFlow icon" width="24" align="top"> AnimeFlow</a>
 跨平台动漫视频播放器，支持多数据源、实时 4K 超分辨率、Bangumi 同步与弹幕。
 
@@ -77,6 +80,9 @@ Original Xbox emulation for iOS, built from xemu with a native Swift interface.
 ### <a href="https://github.com/EhPanda-Team/EhPanda"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/EhPanda/icon.png" alt="EhPanda icon" width="24" align="top"> EhPanda</a>
 An unofficial E-Hentai App for iOS built with SwiftUI & TCA.
 
+### <a href="https://github.com/Kianuni/Erosion-CN"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Erosion-CN/icon.png" alt="Erosion-CN icon" width="24" align="top"> Erosion-CN</a>
+iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱，基于 worse_query，内置写入安全加固与原厂状态恢复。
+
 ### <a href="https://github.com/claration/Feather"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Feather/icon.png" alt="Feather icon" width="24" align="top"> Feather</a>
 面向开发者证书的免费开源侧载工具，支持 AltStore 源、签名安装与 Ellekit 注入。
 
@@ -88,6 +94,9 @@ NodeSeek 第三方 iOS 客户端。
 
 ### <a href="https://github.com/huamidev/GestaltX"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/GestaltX/icon.png" alt="GestaltX icon" width="24" align="top"> GestaltX</a>
 iOS 27 MobileGestalt 编辑器，支持地区代码、设备预设与备份。
+
+### <a href="https://github.com/pookjw/HermesEnabler"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/HermesEnabler/icon.png" alt="HermesEnabler icon" width="24" align="top"> HermesEnabler</a>
+给任意 Apple Watch 开启 Hermès / Ultra 表盘，以及显示、传感器与 Siri 调整。需要 watchOS 27.0–27.3 beta 1。
 
 ### <a href="https://github.com/Leviidev/Husk"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Husk/icon.png" alt="Husk icon" width="24" align="top"> Husk</a>
 在 iOS 上运行 Android 应用：导入 APK 即可全屏打开，需要 JIT 与调试器。
@@ -109,6 +118,9 @@ Torrent client for iOS.
 
 ### <a href="https://github.com/Predidit/Kazumi"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Kazumi/icon.png" alt="Kazumi icon" width="24" align="top"> Kazumi</a>
 基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率。
+
+### <a href="https://github.com/LinkPass888/Kazumi-Swift"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Kazumi-Swift/icon.png" alt="Kazumi-Swift icon" width="24" align="top"> Kazumi-Swift</a>
+基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率，使用 SwiftUI 实现。
 
 ### <a href="https://github.com/Mac-XK/KMusic"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/KMusic/icon.png" alt="KMusic icon" width="24" align="top"> KMusic</a>
 基于 SwiftUI 的多源音乐聚合播放器，支持 iOS/macOS，内置酷我、酷狗、QQ 音乐、网易云等多平台音源与 LRC 歌词同步。
@@ -215,8 +227,14 @@ Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in Sw
 ### <a href="https://github.com/gholts/sphere."><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sphere/icon.png" alt="Sphere icon" width="24" align="top"> Sphere</a>
 原生 iOS 局域网代理面板，控制 Mihomo / Sing-box 后端。
 
+### <a href="https://github.com/ishtiaq156/stats"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Stats/icon.png" alt="Stats icon" width="24" align="top"> Stats</a>
+在 iPhone 上看 Mac 系统状态，本地加密连接，需配套 Mac 端。
+
 ### <a href="https://github.com/StikDebug/StikDebug"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/StikDebug/icon.png" alt="StikDebug icon" width="24" align="top"> StikDebug</a>
 基于 idevice 的本机 JIT 开启器与开发者工具箱，需要 iOS 17.4+。
+
+### <a href="https://github.com/swipt-automation/swipt"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Swipt/icon.png" alt="Swipt icon" width="24" align="top"> Swipt</a>
+iOS 自动化平台：JavaScript swiplets、TypeScript SDK 与 MCP API。
 
 ### <a href="https://github.com/infinityf4p/TiebaPure-iOS"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/TiebaPure/icon.png" alt="TiebaPure icon" width="24" align="top"> TiebaPure</a>
 原生 SwiftUI 构建的非官方贴吧 iOS 客户端，支持浏览、搜索、收藏、媒体查看与本地阅读记录。
@@ -230,11 +248,23 @@ A full featured virtual machine host for iOS — run Windows, Android, and more 
 ### <a href="https://github.com/CyrilPeng/Venera-Next"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Venera-Next/icon.png" alt="VeneraNext icon" width="24" align="top"> VeneraNext</a>
 基于 Flutter 的跨平台漫画阅读器，支持本地漫画、WebDAV 漫画源与第三方网络漫画源。
 
+### <a href="https://github.com/vrcm-team/VRCM"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/VRCM/icon.png" alt="VRCM icon" width="24" align="top"> VRCM</a>
+把 VRChat 社交带到手机上：好友网络、共同游玩记录、双向相册与见面名片。
+
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/VVebo-3.3.31.1"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/VVebo/icon.png" alt="VVebo icon" width="24" align="top"> VVebo</a>
 已停更的第三方微博客户端（3.3.31 适配版）。
 
 ### <a href="https://github.com/lo-cafe/winston"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Winston/icon.png" alt="Winston icon" width="24" align="top"> Winston</a>
 免费开源的原生 iOS Reddit 客户端。
+
+### <a href="https://github.com/kolbicz/WQFiles"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/WQFiles/icon.png" alt="WQ Files icon" width="24" align="top"> WQ Files</a>
+iOS 26/27 文件管理器（worse_query），可浏览其他 App 容器、编辑 plist / hex / SQLite，无需越狱。
+
+### <a href="https://github.com/Kianuni/WQGuard"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/WQGuard/icon.png" alt="WQGuard icon" width="24" align="top"> WQGuard</a>
+iOS 沙盒越权检测与侧载 IPA 审查工具，面向 iOS 26.2+ / 27.x。
+
+### <a href="https://github.com/MchinaMd57764/WQToolkit"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/WQToolkit/icon.png" alt="WQToolkit icon" width="24" align="top"> WQToolkit</a>
+浏览、清理自己的 App 容器与 App Group，无需越狱。
 
 ### <a href="https://github.com/mrdrvt99/YouProEXTRA"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/YouProEXTRA/icon.png" alt="YouProEXTRA icon" width="24" align="top"> YouProEXTRA</a>
 YouTube mod for iOS packed with customizable tweaks — no ads, background playback, downloads, and more.
