@@ -10,7 +10,7 @@
 [source]
 name = "AltGallery"
 subtitle = "dododook 的自建 IPA 源"
-description = "欢迎使用 AltGallery。GitHub 上的项目会自动跟上新版本；本地 IPA 放在 dododook/my-ipas。想加应用直接说一声。"
+description = "欢迎使用 AltGallery，GitHub 上的项目会自动更新。谢谢⭐"
 icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/source-avatar.png"
 website = "https://github.com/dododook/AltGallery"
 tint_color = "#C41E3A"

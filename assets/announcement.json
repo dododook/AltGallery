@@ -1,11 +1,11 @@
 {
-  "message": "欢迎使用 AltGallery 自建源\nGitHub 上的应用会自动跟上新版本\n本地 IPA 放进 dododook/my-ipas 就会进源\n想加应用直接说一声",
+  "message": "欢迎使用 AltGallery，GitHub 上的项目会自动更新。谢谢⭐",
   "sourceicon": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/source-avatar.png",
   "news": [
     {
       "title": "欢迎使用 AltGallery",
       "identifier": "altgallery-welcome",
-      "caption": "这是 dododook 的自建源。GitHub 上的项目会自动跟上新版本；本地 IPA 放在 dododook/my-ipas。想加应用直接说一声。",
+      "caption": "欢迎使用 AltGallery，GitHub 上的项目会自动更新。谢谢⭐",
       "date": "2026-08-24T12:00:00Z",
       "tintColor": "#C41E3A",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/source-avatar.png",
