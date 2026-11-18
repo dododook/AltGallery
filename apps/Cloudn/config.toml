@@ -1,0 +1,43 @@
+# altgen config for the Cloudn AltStore source.
+# Fields taken from mengangs/Cloudn altstore.json.
+# IPA from GitHub Releases: Cloudn-vX.Y.Z.ipa
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "mengangs/Cloudn"
+
+[source]
+name = "Cloudn"
+subtitle = "Cloudn AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Cloudn"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Cloudn/icon.png"
+website = "https://github.com/mengangs/Cloudn"
+tint_color = "#B4532F"
+
+[app]
+name = "Cloudn"
+bundle_identifier = "com.mengangs.Cloudn"
+developer_name = "mengangs"
+subtitle = "网盘分享与短视频高速解析下载"
+description = "Cloudn，开源网盘与短视频解析下载器。粘贴分享链接即可解析、预览并高速下载，支持网盘、短视频、GitHub 与磁力，所有解析在手机本地完成。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Cloudn/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Cloudn/images/showcase.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Cloudn/images/extras.jpg",
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Cloudn/images/ipad.jpg",
+]
+tint_color = "#B4532F"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases ship Cloudn-vX.Y.Z.ipa plus SHA256SUMS.txt.
+asset_pattern = "^Cloudn-v.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Cloudn/images/news.png"
+
+[output]
+path = "apps.json"
