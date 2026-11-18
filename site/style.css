@@ -293,12 +293,14 @@
   }
   .hero h1 {
     margin: 9px 0 0;
-    /* Negative tracking + background-clip:text clips the last glyph (the y). */
-    padding-inline: 0.12em;
+    /* background-clip:text clips ink that sticks out of the line box —
+       the y's descender and right side. Padding keeps both inside. */
+    padding: 0.08em 0.14em 0.2em;
     font-size: clamp(44px, 7.6vw, 82px);
     font-weight: 700;
-    line-height: 1.12;
+    line-height: 1.2;
     letter-spacing: -0.045em;
+    overflow: visible;
     color: var(--fg);
     text-wrap: balance;
   }
