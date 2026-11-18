@@ -123,6 +123,30 @@
       ]
     },
     {
+      "name": "AniCh",
+      "bundleIdentifier": "app.anich",
+      "developerName": "Sle2p",
+      "subtitle": "支持超分辨率的在线动漫弹幕播放器",
+      "localizedDescription": "支持超分辨率、多平台、多番剧源与多弹幕的在线动漫播放应用，高清无广告。提供番剧索引与搜索、倍速播放、观看记录、追番管理、弹幕过滤与举报、分集评论和离线缓存。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniCh/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniCh/images/home.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniCh/images/detail.jpg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniCh/images/play.jpg"
+      ],
+      "tintColor": "#F0E0D0",
+      "versions": [
+        {
+          "version": "1.5.27",
+          "date": "2026-10-05T03:15:29Z",
+          "localizedDescription": "- 修复内存泄漏的问题",
+          "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.27/anich-ios-no_sign-1.5.27.ipa",
+          "size": 41226765,
+          "minOSVersion": "12.0"
+        }
+      ]
+    },
+    {
       "name": "AnimeFlow",
       "bundleIdentifier": "com.ligg.anime_flow",
       "developerName": "openAnimeFlow",
@@ -454,6 +478,30 @@
       ]
     },
     {
+      "name": "Erosion-CN",
+      "bundleIdentifier": "com.jbdotparty.Erosion",
+      "developerName": "Kianuni",
+      "subtitle": "iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱",
+      "localizedDescription": "Erosion MobileGestalt 工具箱的简体中文本地化版本，针对 iOS / iPadOS 27.x 的系统配置强化了写入与备份流程，并部分支持 iOS / iPadOS 26.x。重签名时至少需要一个 App Group 权限。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Erosion-CN/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Erosion-CN/images/home.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Erosion-CN/images/tweaks.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Erosion-CN/images/files.jpeg"
+      ],
+      "tintColor": "#D07030",
+      "versions": [
+        {
+          "version": "1.0.5",
+          "date": "2026-11-17T23:33:43Z",
+          "localizedDescription": "## Erosion-CN v1.0.5 (Build 30)\n\n> [!IMPORTANT]\n> **System Compatibility / 系统兼容性提示**  \n> - **Supported / 完整支持**：`iOS / iPadOS 27.0 – 27.2.1` and `27.3 beta 1` (`24C503*`).  \n> - **Patched / 已封堵**：Apple patched `worse_query` starting in **`iOS 27.3 beta 2` (`24C5049d+`)**. Do **NOT** update past `27.3 beta 1` if you rely on Erosion-CN.\n\n---\n\n### What's New / 更新内容\n\n1. **Fixed Unresponsive \"Clean Selected\" in Container Cache Cleaner (`CacheCleanerView`) / 修复容器缓存「一键清理已选」不生效** *(Thanks to [@KindLin99](https://github.com/KindLin99) for reporting [#53](https://github.com/Kianuni/Erosion-CN/issues/53) / 感谢 [@KindLin99](https://github.com/KindLin99) 反馈 [#53](https://github.com/Kianuni/Erosion-CN/issues/53))*\n   - **Separated Button Styles in Overview Card**：Assigned `.borderless` to **Rescan** (`重新扫描`) and promoted **Clean Selected** (`一键清理已选`) to a full-width `.borderedProminent` button snapshotting targets prior to confirmation, eliminating SwiftUI `List` multi-button tap hijacking.\n   - **Prevented Row Hit-Box Hijacking**：Replaced inline `NavigationLink` on **Inspect** (`查看`) with a `.borderless` button + `.navigationDestination(item:)` so tapping row checkboxes or **Clean** (`清理`) never triggers accidental navigation.\n   - **Ad-Sentinel Protection & Re-Sized Refresh**：Unified scan/purge traversal depth (`Library/Caches` depth `7`, `tmp` depth `6`), skipped `.erosion_adlock` anti-recreate ad folders during cleanup, and updated remaining bytes / auth failure reporting accurately after purge.\n\n2. **Explicit Read-Only & Sentinel State in `InfoViewer` / 文件详情页只读与防重建状态提示**\n   - When a directory or file is already at `0555` / `0444`, the **Set Read-Only** preset button now automatically disables and displays `Already Read-Only` (`当前已是只读锁死状态`) or `Read-Only & Sentinel Active` (`当前已是只读防重建锁死状态`) alongside an `Anti-Recreate Lock` row (`Active (.erosion_adlock)`).\n   - **Restore Read-Write** and **Apply** buttons disable when permissions already match, and restoring write permission on a sentinel directory from `InfoViewer` cleanly unlinks `.erosion_adlock`.\n\n3. **Target Highlighting & Auto-Scroll on Ad Locator (`FileBrowserView` / `AdCacheBlockerView`) / 去广告「定位」自动高亮与居中定位**\n   - Tapping **Locate** (`定位`) in Splash Ad Blocker now highlights the target ad folder/config inside its parent directory and scrolls smoothly to center it, with read-only sandbox grants for locator browsing and container grants ordered prior to `lstat` attribute checks.\n\n> 📜 Full changelog / 完整更新日志：**[CHANGELOG.md](https://github.com/Kianuni/Erosion-CN/blob/main/CHANGELOG.md)** · User Guide / 使用指南：**[USAGE_GUIDE.md](https://github.com/Kianuni/Erosion-CN/blob/main/USAGE_GUIDE.md)**\n\n---\n\n### Install & Checksum / 下载安装与校验\n\n- **SideStore / AltStore / Feather Official Source / 官方更新源**：`https://raw.githubusercontent.com/Kianuni/Erosion-CN/main/apps.json` *(auto-synced by CI after release / 发版后由 GitHub Actions 自动同步)*\n- **IPA Asset / 安装包文件**：`Erosion_v1.0.5_Bilingual.ipa` (`6,875,541` bytes; preserve `App Group` entitlements when signing)\n- **SHA-256**：`408c50a9bbb2a84ece90393875bab5d7240f02e784e7a34aaa4d61d7a44a41c3`",
+          "downloadURL": "https://github.com/Kianuni/Erosion-CN/releases/download/v1.0.5/Erosion_v1.0.5_Bilingual.ipa",
+          "size": 6875541,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
       "name": "Fathom",
       "bundleIdentifier": "app.fathom.emulator",
       "developerName": "Leviidev",
@@ -535,6 +583,28 @@
           "downloadURL": "https://github.com/huamidev/GestaltX/releases/download/v1.1.1/GestaltX_1.1.1.ipa",
           "size": 6774794,
           "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "HermesEnabler",
+      "bundleIdentifier": "com.example.HermesEnabler",
+      "developerName": "pookjw",
+      "subtitle": "Enable Hermès Watch Faces on any Apple Watch",
+      "localizedDescription": "Enable Hermès and Ultra watch faces on any Apple Watch, along with display, sensor, and Siri tweaks backed by MobileGestalt changes and automatic backups. Requires watchOS 27.0 through 27.3 beta 1 and a paid Apple Developer account.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/HermesEnabler/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/HermesEnabler/images/watch.jpg"
+      ],
+      "tintColor": "#70C0F0",
+      "versions": [
+        {
+          "version": "1.0",
+          "date": "2026-11-16T09:22:09Z",
+          "localizedDescription": "- Added support for DeviceSupportsWatchSpeakerPlayback.\r\n- Users have reported that the app does not work on watchOS 26. It is not officially supported, but the implementation has been retained.",
+          "downloadURL": "https://github.com/pookjw/HermesEnabler/releases/download/1.6.2/HermesEnabler.ipa",
+          "size": 963892,
+          "minOSVersion": "17.0"
         }
       ]
     },
@@ -699,6 +769,30 @@
           "downloadURL": "https://github.com/Predidit/Kazumi/releases/download/2.4.4/Kazumi_ios_2.4.4_no_sign.ipa",
           "size": 30341213,
           "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
+      "name": "Kazumi-Swift",
+      "bundleIdentifier": "com.linkpass.kazumi",
+      "developerName": "LinkPass888",
+      "subtitle": "基于自定义规则的番剧采集APP，支持流媒体在线观看、弹幕与实时超分辨率，使用 SwiftUI 实现。",
+      "localizedDescription": "基于自定义规则的番剧采集与在线观看客户端，带弹幕。原生 SwiftUI 实现，界面使用 iOS 26 的液态玻璃材质，随系统外观与辅助功能设置变化。\n\n内置 mpv 播放内核与 Anime4K 实时超分辨率，支持弹弹play 弹幕、Bangumi 追番绑定、时间表、下载与 WebDAV 备份。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi-Swift/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi-Swift/images/01-recommend.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi-Swift/images/02-detail.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi-Swift/images/03-player.jpeg"
+      ],
+      "tintColor": "#45A992",
+      "versions": [
+        {
+          "version": "3.0.7",
+          "date": "2026-11-16T02:26:09Z",
+          "localizedDescription": "### 新增\n\n- 播放器截图写入番剧名、集数和播放进度时刻三个图片关键词；「播放设置 → 片头片尾」下方新增「截图写入番剧关键词」开关，默认开启\n- 「设置 → 外观与界面」新增「搜索结果显示 NSFW」开关，默认关闭。关闭时搜索不使用 Bangumi Token，并过滤受限条目；开启且配置有效 Token 后，搜索可同时返回普通与受限条目，受限详情和选集按需鉴权。Bangumi 账号需注册满 60 天；Token 失效时自动退回普通搜索\n- 两个新增开关均纳入设置备份，恢复后立即生效\n\n### 修复\n\n- 修复部分规则在上游可以检索、在本应用却无结果的问题，对齐上游的节点 XPath 解析方式，同时修正选集解析（[#32](https://github.com/LinkPass888/Kazumi-Swift/issues/32)）\n- 搜索页点击「取消」不再退出页面，只撤销本轮输入并收起键盘，保留原有搜索结果\n\n### 优化\n\n- 时间表与搜索统一过滤无中文名的条目，同时保留原名本身为中文的国创条目",
+          "downloadURL": "https://github.com/LinkPass888/Kazumi-Swift/releases/download/3.0.7/Kazumi_ios_3.0.7_no_sign.ipa",
+          "size": 24159040,
+          "minOSVersion": "26.0"
         }
       ]
     },
@@ -1517,6 +1611,28 @@
       ]
     },
     {
+      "name": "Stats",
+      "bundleIdentifier": "com.ishtiaqsyed.StatsForIOS",
+      "developerName": "ishtiaq156",
+      "subtitle": "Your Mac's activity, at a glance",
+      "localizedDescription": "View your Mac's system activity on iPhone over a local encrypted connection. A native, local-first system monitor with a lightweight Mac companion and a mobile dashboard.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Stats/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Stats/images/link.jpeg"
+      ],
+      "tintColor": "#2090F0",
+      "versions": [
+        {
+          "version": "0.3.17",
+          "date": "2026-11-18T00:25:30Z",
+          "localizedDescription": "Stats for iPhone 0.3.17 makes the Mac device card more compact and adds a manual refresh.\n\n## What's changed\n\n- See more live metrics sooner with the shorter Mac card. The card keeps the device render, Mac name, chip, connection status, and alerts.\n- Tap the Mac card to open About This Mac. It is still available in Dashboard Settings.\n- Tap the refresh icon to request a new snapshot, recent history, and updated Mac details.\n\n## Download\n\n**Stats for iPhone 0.3.17 (build 20)** requires iOS 17 or later. The arm64 IPA is unsigned for AltStore, SideStore, and LiveContainer.\n\n**SHA-256** f9b77cb1a4a1cdeca6df54993992eb7906e4b4fa0d7cc6fe38f34c3b1ea1e688\n\n[Full changelog](https://github.com/ishtiaq156/stats/compare/v0.3.25...v0.3.26)",
+          "downloadURL": "https://github.com/ishtiaq156/stats/releases/download/v0.3.26/Stats-v0.3.17-iOS.ipa",
+          "size": 2861581,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
       "name": "StikDebug",
       "bundleIdentifier": "com.stik.stikdebug",
       "developerName": "StikDebug",
@@ -1537,6 +1653,30 @@
           "downloadURL": "https://github.com/StikDebug/StikDebug/releases/download/3.2.2/StikDebug-3.2.2.ipa",
           "size": 16924687,
           "minOSVersion": "17.4"
+        }
+      ]
+    },
+    {
+      "name": "Swipt",
+      "bundleIdentifier": "io.nekohasekai.swipt",
+      "developerName": "nekohasekai",
+      "subtitle": "The universal iOS automation platform",
+      "localizedDescription": "Swipt automates this iPhone or iPad with JavaScript swiplets. It bundles a TypeScript SDK built on CoreDevice and the accessibility services, plus an MCP-compatible API for driving and debugging swiplets from your computer.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Swipt/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Swipt/images/swiplets.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Swipt/images/developer.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Swipt/images/pair.jpeg"
+      ],
+      "tintColor": "#455A64",
+      "versions": [
+        {
+          "version": "0.1.0",
+          "date": "2026-11-14T04:28:34Z",
+          "localizedDescription": "* Fix wrong and unsourced claims in comments\n* Fix the inner display of iPhone Duo being ignored\n* Translate the CLI with i18next\n* Enable strict type checking for the CLI and the dev tools\n* Add contexts to the CLI translations\n* Rework the swipt-driver interface and add API tokens to swipt driver\n* Fix the driver build tool ignoring unpack options for ZIP archives\n* Replace the hand-written ZIP code of the CLI with fflate\n* Simplify screen streaming and recording\n* Share one atomic file write\n* Fix mDNS browsing and name conflict handling\n* Simplify the JavaScriptCore adapter\n* Add swipt driver to serve a device from the computer\n* Build the Linux and Windows driver with the WebKit of a Bun release\n* Port the driver and the CLI to Linux and Windows\n* Follow Apple's terms and style guides in the CLI translations\n* Improve automatic unlocking\n* Remove unsourced and misattributed claims from comments\n* Require iOS 26 for the accessibility API\n* Fix network lockdown connections closing without a heartbeat\n* Extend Swiplet icon colors\n* Add the chart and data grid components\n* Remove the guards against bad values from Swiplets\n* Add stream actions and the process API\n* Fix lifecycle and concurrency bugs\n* Simplify loopback VPN setup\n* Fix cancellation and validation bugs\n* Follow the Apple Style Guide in the CLI strings\n* Allow sideload install to downgrade Swipt\n* Fix fetch crashing in Swiplet interfaces\n* Clean up legacy designs\n* Pause services and the API while the device is unavailable\n* Replace the background audio with the developer service\n* Fix slow detection of unsupported networks\n* Resolve DNS with the system configuration on iOS\n* Detect the foreground app right after connecting\n* Connect touch input before the first tap\n* Send input without checking the lock state\n* Split the CLI commands into one file each\n* Fix the detection of the foreground app\n* Download swiplet updates on demand and show progress\n* Number enumerations with iota\n* Skip unchanged builds in dev install\n* Reformat code\n* Fix the position of the repository loading indicator\n* Fix choosing VPN addresses that do not loop back\n* Generate the CLI's Protobuf code as TypeScript\n* Move the CLI to TypeScript\n* Generate Protobuf code with buf\n* Version releases automatically and publish packages on release\n* Use the stable official swiplets feed in stable builds\n* Replace outdated Developer Disk Images\n* Fix tunnel uploads stalling on large TLS records\n* Fix loopback setup not advancing after the tunnel is found\n* Merge the release workflow into the build workflow\n* Fix publishing when the new draft is not listed yet\n* Reject outdated swiplets\n* Add available() and minimum iOS versions for swiplets\n* Support iOS 17.4\n* Fix calls hanging when their results can't be converted\n* Fix accessibility snapshots failing on infinite frames\n* Refactor the screen API\n* Cancel Vision requests when the call is aborted\n* Accept only file handles as files\n* Track the foreground app without accessibility and close idle accessibility connections\n* Fix setup failing to open Swipt\n* Fix slow device list\n* Fix screen-viewing notification dismissal\n* Add CONTRIBUTING.md\n* Fix leaked accessibility connections\n* Check the API level against the last stable release\n* Improve accessibility reads and taps\n* Add HTTP APIs\n* Restore missing localizations\n* Detect loopback VPNs with IPv6 addresses\n* Add swiplet API levels and an updates sheet\n* Add Tailscale support\n* Improve Cloudflare tunnel setup\n* Preserve error causes\n* Show that cellular data is unsupported in setup\n* Recover automation from dropped device connections\n* Update outdated Developer Disk Images\n* Add basic vphone support\n* Separate the app intents API and match the system dialogs\n* Move graphics to Objective-C in cgo\n* Fix setup failing while Swipt relaunches\n* Share the install flow between sideload and dev\n* Fix missing Developer Disk Image in IPA\n* Share the bundle identifier between sideload and dev builds\n* Preserve the swiplet order in swiplets.json\n* Add sideload setup command\n* Persist the simulated location\n* Add the official swiplet repository\n* Move preferredLocalizations to @swipt/api/localization\n* Remove the expo-localization shim from extensions\n* Add place search to swiplets\n* Add expo-maps to swiplets\n* Fix database change events firing before commit\n* Close the screen feed sooner when idle\n* Fix the swiplet runtime without the dev menu\n* Fix element taps and their timeline events\n* Fix updating Swipt on a locked device\n* Print API URLs after sideloading\n* Cache sideload downloads\n* Re-provision when the signing certificate is revoked\n* Add skills update workflow\n* Build only what changed\n* Localize the CLI\n* Add CLI translations\n* Move documentation to swipt.io\n* Fix sideload masking device errors\n* Clean up documentation content\n* Imprve the pairing guide\n* Fix pairing expiring in the background\n* Fix swipt-server published to GitHub releases\n* Localize the documentation\n* Add initial documentation\n* Add documentation site\n* Open Settings when the developer is not trusted\n* Reuse the ExpoModulesJSI build in the app\n* Improve CI caching and reliability\n* Only list sideloaded devices for update and uninstall\n* Add sideload command\n* Add app icon\n* Update DeveloperDiskImage\n* Add CLI REPL server\n* Format with bun fmt\n* Move simple development commands back to the Makefile\n* Add golangci-lint and fix lint issues\n* Fix the Swipt package versions in new projects\n* Fix the missing installed build check\n* Fix the REPL output format\n* Fix expo-sqlite missing APIs\n* Fix per-iteration let bindings in Swiplet interfaces\n* Fix bad values from Swiplets crashing Swipt\n* Build ExpoModulesCore from source\n* Give Swiplet interfaces the web APIs of extensions\n* Isolate Swiplet interfaces from each other\n* Support import in the REPL\n* Fix crypto.subtle missing algorithms\n* Fix TextDecoder missing legacy encodings\n* Load parts of the runtime on demand\n* Fix web APIs that didn't follow their standards\n* Remove the network APIs\n* Remove expo-file-system\n* Give each Swiplet and the REPL a cache directory\n* Fix native bindings leaking to Swiplets\n* Reduce the memory used by ASCII scripts\n* Choose the install device by name or UDID\n* Rework networking for Swiplets\n* Update frontend dependencies\n* Add SQLite support for Swiplets\n* Fix the CI build\n* Build and install the app with one command\n* Organize the CLI by what each command operates on\n* Make the SDK usable without helper scripts\n* Refactor onboarding UI\n* Add swiplet info, reordering and database tables\n* Hold taps for a millisecond and drop the hold option and the rest after drags\n* Add accessibility.tap, which taps an element once a tap would reach it\n* Retry a launch when the previous process is still exiting\n* Reopen the swiplet behind an error notification and give interfaces reportError\n* Localize the App Shortcuts phrases with strings files\n* Skip screen probes while the region keeps changing and trace recording.find\n* Recognize text at the density its minimum height needs\n* Fix touch moves dropped by the device\n* Share one downscaled frame between screen comparisons\n* Keep the input connection when unlocking an unlocked device\n* Keep the screen geometry while its orientation holds\n* Tell the foreground app from the device's process states\n* Trace screen matching, input and the screen feed\n* Give the REPL a data directory\n* Find matches in screen recordings\n* Localize the app and swiplets\n* Add screen.find\n* Align recording frames with the event clock\n* Recognize text in the device languages by default\n* Use the Remote Desktop mode for the screen feed\n* Cache the lock state for input\n* Replace accessibility locators with find and element actions\n* Add README\n* Report swiplet interface errors and logs\n* Fix the swiplet archive layout\n* Use a standard alert to confirm swiplet deletion\n* Support worklets in swiplet interfaces\n* Rebuild the runtime bundle when shared sources change\n* Apply Metro transforms in swiplet builds\n* Improve CI caching\n* Show swiplet interfaces full screen and snapshot the front app by default\n* Fix the publish check ignoring the CLI\n* Refactor the CLI\n* Import swiplets only as .swiplet files and simplify the swiplet list\n* Merge the Go CLI into the npm CLI\n* Describe sources in package.json\n* Publish packages only when they change\n* Localize repository names\n* Align repository rows with the add row\n* Fix URL fields\n* Add repository icons\n* Put Add Repository first\n* Copy the license when publishing\n* List swiplets relative to the source by default\n* Add swiplet repositories\n* Fix nightly package publishing\n* Add .swiplet files and the npm API packages\n* Restructure swiplet SDK and add shared file system API\n* Fix loopback VPN prompt\n* Move protobuf to internal/proto\n* Add swiplet\n* Separate local and Cloudflare MCP servers\n* Fix setText not registering as an edit in text views\n* Add Cloudflare tunnel for MCP server\n* Replace slog with sing logger\n* Fix workflow file list paths\n* Move workflow editor bar to keyboard accessory\n* Advertise MCP server via Bonjour and show local host name\n* Move automatic unlock to its own page and apply changes live\n* Simplify server start and stop with MCP\n* Init commit",
+          "downloadURL": "https://github.com/swipt-automation/swipt/releases/download/nightly/Swipt.ipa",
+          "size": 48174010,
+          "minOSVersion": "16.4"
         }
       ]
     },
@@ -1637,6 +1777,30 @@
       ]
     },
     {
+      "name": "VRCM",
+      "bundleIdentifier": "io.github.vrcmteam.vrcm",
+      "developerName": "vrcm-team",
+      "subtitle": "Bring your VRChat social life to your phone",
+      "localizedDescription": "VRCM is a cross-platform VRChat companion focused on social connection and convenience. Explore your social circles, remember time spent together, and move smoothly from shared links to worlds, interactions, and real-world meetups.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VRCM/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VRCM/images/Feature-Friend-Network.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VRCM/images/Feature-Gallery-Mobile.png",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VRCM/images/Feature-Meetup-Card.png"
+      ],
+      "tintColor": "#6451f1",
+      "versions": [
+        {
+          "version": "1.1.6",
+          "date": "2026-11-16T13:50:14Z",
+          "localizedDescription": "## 新增\n\n- Android 和 iOS 支持通过相机或相册扫描 VRChat 链接，图片包含多个二维码时可选择识别结果。\n- 支持扫码审批 VRChat 设备登录，展示请求时间和来源地区；Android 新增扫一扫桌面快捷方式。\n- 新增独立“我的二维码”页面，支持个人主页码、样式切换和分享卡片。\n- 统计数据支持 SQLite 导入导出，可导入 VRCM 或 VRCX 数据库，预览导入内容并去重合并。\n- 设置按账号安全、外观、通知、隐私与数据等分类，集中管理已保存账号的切换和登出。\n- 好友动态新增名字和模型变更记录，并提供独立的模型筛选分类。\n\n## 优化\n\n- 群组房间支持邀请自己，世界详情加载来源房间，展开的房间卡片可打开房主主页。\n- 资料编辑适配 VRChat 新接口，保存简介、社交链接和语言后同步刷新状态。\n\n## 修复\n\n- 后台登录会话失效时自动恢复，避免好友与动态更新长期中断。\n- 修复玩家批量清理在列表刚加载完时点击无响应，以及登录续期后剩余请求中断的问题；避免迟到的续期通知覆盖已成功的语音开关状态。\n- 修复 Android 大型统计快照读取、系统文件选择器导入和导出文件句柄释放问题。\n- 应用内更新遇到包名或签名不匹配的 APK 时停止更新，避免继续换源重试。\n- 修复 Windows 渐进背景模糊导致的卡死、群组代表状态跨资料页不同步，以及模型列表的平台支持标记错误。\n\n****************\n\n## New Features\n\n- Scan VRChat links with the camera or from photos on Android and iOS, and choose a result when an image contains multiple QR codes.\n- Approve VRChat device sign-ins by scanning a code, with the request time and source region shown; Android also adds a launcher shortcut to the scanner.\n- Added a separate My QR Code page with a profile code, appearance options, and a shareable card.\n- Import and export statistics as SQLite files, with support for VRCM and VRCX databases, an import preview, and duplicate merging.\n- Settings are organized into account security, appearance, notifications, privacy and data, and other categories, with saved-account switching and sign-out in one place.\n- Friend activity now includes display-name and avatar changes, with a dedicated avatar filter.\n\n## Optimizations\n\n- Invite yourself to group instances, load the source instance in world details, and open the owner's profile from an expanded instance card.\n- Profile editing follows VRChat's updated API and refreshes the saved bio, social links, and languages consistently.\n\n## Bug Fixes\n\n- Automatically restore expired background sessions to resume friend and activity updates.\n- Fixed bulk player cleanup ignoring clicks just after loading or interrupting remaining requests after session renewal; delayed renewal notifications no longer overwrite successful mute or unmute actions.\n- Fixed large statistics snapshots, imports through Android document providers, and file-handle cleanup after exports.\n- In-app updates stop when an APK has a mismatched package name or signature instead of retrying other mirrors.\n- Fixed Windows freezes caused by progressive backdrop blur, group representation falling out of sync across profiles, and incorrect platform-support indicators in avatar lists.\n\n详情 / Details: <https://github.com/vrcm-team/VRCM/tree/main/docs/releases/1.1.6.md>",
+          "downloadURL": "https://github.com/vrcm-team/VRCM/releases/download/1.1.6/VRCM-v1.1.6.ipa",
+          "size": 23232985,
+          "minOSVersion": "15.3"
+        }
+      ]
+    },
+    {
       "name": "VVebo",
       "bundleIdentifier": "com.johnil.vvebo",
       "developerName": "johnil",
@@ -1676,6 +1840,76 @@
           "downloadURL": "https://github.com/lo-cafe/winston/releases/download/v1.1.5/winston.ipa",
           "size": 50003343,
           "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "WQ Files",
+      "bundleIdentifier": "cz.kolbi.wqfiles",
+      "developerName": "kolbicz",
+      "subtitle": "File manager for iOS 26 and 27 (worse_query)",
+      "localizedDescription": "File browser, app data manager and cache cleaner for iOS 26 and 27, built on the worse_query sandbox technique. Browse other apps' containers, edit plists, hex and SQLite databases, and back up, restore or clear app data without a jailbreak or kernel exploit.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQFiles/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQFiles/images/home.jpeg"
+      ],
+      "tintColor": "#1E8FC7",
+      "versions": [
+        {
+          "version": "0.9.18",
+          "date": "2026-11-17T15:21:21Z",
+          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.18\n\nYour own inspectors, your own cleaning targets, and Japanese.\n\n## New\n\n- **Custom inspectors** ([#45](https://github.com/kolbicz/WQFiles/issues/45)): small JavaScript programs that show a file's contents your way. Long-press a file → **Open As → Custom Inspector…**. WQ Files ships only the runtime; the inspectors are yours.\n  - **Install:** open a `.zip` holding an inspector with WQ Files (share sheet, AirDrop, Files app), or copy its folder into **Settings → Inspectors**. Installing one with the same name again updates it.\n  - **Write one:** a folder with `manifest.json` and `inspect.js`. The script gets the file as bytes, as text and, for property lists, already parsed, and returns sections with rows or text. A `data.json` can hold your own lookup tables. Two examples and the full format are in the [README](https://github.com/kolbicz/WQFiles#custom-inspectors).\n  - **Results:** tap a value to copy it; Share sends everything as text. Script errors show with their line number.\n  - **Safe by design:** inspectors only read. A script has no access to other files, the network or the app, and is stopped after 2 seconds.\n- **Your own folders and files in the Cache Cleaner:** long-press a folder or file inside an app's data → **Add to Cache Cleaner**. Instagram, for example, keeps uploaded videos in `Library/Application Support/Instagram/VideoUpload` long after they're posted.\n  - Choose **Always Select** (selected after every scan and by Select All, like caches) or **Select by Hand** (you pick it each time). Long-press it in the Cache Cleaner to switch **Select Automatically** later, or to take it off the list.\n  - A folder is emptied (the folder itself stays), a file is deleted.\n  - Only add what the app can do without: anything it keeps there (drafts, downloads, logins) is gone once cleaned. The app's settings folders can't be added.\n  - Saved per app, so it keeps working when the app moves to a new container.\n- **Japanese** ([#69](https://github.com/kolbicz/WQFiles/pull/69)), the 14th language. Thanks to kinboy56.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `177b383c541f6deb04db331a8c7b5ed3ba8f574d85e24a72cb867f3699550a18`",
+          "downloadURL": "https://github.com/kolbicz/WQFiles/releases/download/v0.9.18/WQFiles.ipa",
+          "size": 2171189,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "WQGuard",
+      "bundleIdentifier": "com.wqguard.app",
+      "developerName": "Kianuni",
+      "subtitle": "iOS 沙盒越权检测与侧载 IPA 审查工具",
+      "localizedDescription": "面向 iOS 26.2+ / iOS 27.x 的零依赖、100% 物理只读沙盒逃逸检测引擎、Mach-O 静态二进制审计与多端固件 CVE 防护系统",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/dashboard.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/firmware.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/ipa.jpeg"
+      ],
+      "tintColor": "#00C7A5",
+      "versions": [
+        {
+          "version": "1.2.2",
+          "date": "2026-11-16T12:29:58Z",
+          "localizedDescription": "## WQGuard v1.2.2 (Build 16)\n\n全栈中英双语支持正式发布（解决 Issue #1 / Resolves #1）。\n\n---\n\n### English Release Notes\n\n- **Full-Stack English Localization (`en` / `zh-Hans`)** (Resolves [#1](https://github.com/Kianuni/WQGuard/issues/1), thanks to `@i0ntempest`):\n  - Fixed `WQStrings` explicit `.lproj` bundle lookup so English systems no longer fall back to `CFBundleDevelopmentRegion = zh-Hans`.\n  - Localized all SwiftUI views and `ScanViewModel`, including the **Dashboard** active engine badge & queued `.ipa` summary, the entire **Scan Sources & Pairing** tutorial (`InstalledScanConfigSheet`), and the **IPA Scan** tab lower notes & queue controls (`IPAScanView`).\n  - Localized `InfoPlist.strings` (`en` / `zh-Hans`, including `NSLocalNetworkUsageDescription`).\n  - Localized `WQGuardCore` (`WQLocale`, firmware CVE posture radar, detection indicators, remediation guidance, Lockdown/instproxy diagnostics, and proxy shield headers/comments bumped to `#!version=1.2.2`).\n- **Verification**:\n  - `swift test --disable-sandbox -Xswiftc -strict-concurrency=complete`: **685 tests passed, 0 failures** (`LocalizationBilingualTests`, `SurgeModuleTests`, `SecurityAuditV121RegressionTests`, etc.).\n\n### 中文更新说明\n\n- **全栈中英双语本地化（修复 [#1](https://github.com/Kianuni/WQGuard/issues/1)，感谢 `@i0ntempest` 反馈）**：\n  - 修复 `WQStrings` 在 `CFBundleDevelopmentRegion = zh-Hans` 下部分英文键回退到简体中文的 `.lproj` 解析问题，并同步 `en.lproj` / `zh-Hans.lproj`（含 `InfoPlist.strings`）。\n  - 完整本地化 **仪表盘活跃引擎计数角标与待扫 IPA 摘要**、**扫描源与无线配对完整教程页 (`InstalledScanConfigSheet`)**、**IPA 扫描底部说明与队列控制 (`IPAScanView`)**、设置页及 `ScanViewModel`。\n  - 通过新增 `WQLocale` 完成 `WQGuardCore` 核心引擎全链路双语输出（固件漏洞雷达、风险指标描述与修复建议、配对/代理状态诊断及 5 端流量防护规则 `#!version=1.2.2`）。\n- **测试验证**：\n  - Swift 6 严格并发模式下完整测试套件执行 **685 项测试全部通过，0 失败**。\n\n---\n\n### Release Assets / 发布附件\n\n- `WQGuard_v1.2.2.ipa` — Unsigned ad-hoc IPA (`v1.2.2`, Build 16) for iOS 16+ / 17+ / 18+ / 26+\n- `WQGuard-Brotli-Shield.sgmodule` — Surge\n- `WQGuard-Brotli-Shield.module` — Shadowrocket\n- `WQGuard-Brotli-Shield.conf` — Quantumult X\n- `WQGuard-Brotli-Shield.plugin` — Loon\n- `WQGuard-Brotli-Shield.stoverride` — Stash",
+          "downloadURL": "https://github.com/Kianuni/WQGuard/releases/download/v1.2.2/WQGuard_v1.2.2.ipa",
+          "size": 2046154,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "WQToolkit",
+      "bundleIdentifier": "com.zhangfuhao.wqtoolkit",
+      "developerName": "MchinaMd57764",
+      "subtitle": "File browser and maintenance panel for your own app containers",
+      "localizedDescription": "An iOS toolkit built on an App Group container-query primitive: browse, clean and inspect your own app data containers without a jailbreak. Includes a file browser, cache scan, device info, a MobileGestalt cache panel and data lenses, with a bilingual UI and iPhone/iPad layouts.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQToolkit/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQToolkit/images/files.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQToolkit/images/settings.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQToolkit/images/tweaks.jpeg"
+      ],
+      "tintColor": "#6090D0",
+      "versions": [
+        {
+          "version": "1.0",
+          "date": "2026-11-11T22:59:56Z",
+          "localizedDescription": "iOS 27 only. Unsigned build - it contains no signing material, no profile and no team ID.\n\n**Assets**\n- `WQToolkit-unsigned.ipa` - 4.6 MB. Re-sign it with your own developer identity and an App Group entitlement before installing.\n- `WQToolkit_source.tar.gz` - source snapshot (Xcode project included).\n\nNo jailbreak, no Mac at runtime. The app only reaches its own containers and its own App Groups; cross-app access is out of scope.\n\nTested on iPhone 15 Pro Max, iOS 27.3.",
+          "downloadURL": "https://github.com/MchinaMd57764/WQToolkit/releases/download/v1.0/WQToolkit-unsigned.ipa",
+          "size": 4819436,
+          "minOSVersion": "27.0"
         }
       ]
     },
@@ -1729,6 +1963,39 @@
     }
   ],
   "news": [
+    {
+      "appID": "com.ishtiaqsyed.StatsForIOS",
+      "title": "Stats 0.3.17 · 18 Nov 2026",
+      "identifier": "Stats-release-v0.3.26",
+      "caption": "Stats 0.3.17 is available.",
+      "date": "2026-11-18T00:25:30Z",
+      "tintColor": "#2090F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Stats/images/news.png",
+      "notify": true,
+      "url": "https://github.com/ishtiaq156/stats/releases/tag/v0.3.26"
+    },
+    {
+      "appID": "com.jbdotparty.Erosion",
+      "title": "Erosion-CN 1.0.5 · 17 Nov 2026",
+      "identifier": "Erosion-CN-release-v1.0.5",
+      "caption": "Erosion-CN 1.0.5 is available.",
+      "date": "2026-11-17T23:33:43Z",
+      "tintColor": "#D07030",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Erosion-CN/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/Erosion-CN/releases/tag/v1.0.5"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.18 · 17 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.18",
+      "caption": "WQ Files 0.9.18 is available.",
+      "date": "2026-11-17T15:21:21Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.18"
+    },
     {
       "appID": "io.nekohasekai.screensharing",
       "title": "Open Screen Sharing 1.0.7 · 17 Nov 2026",
@@ -1794,6 +2061,50 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
       "notify": true,
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa3"
+    },
+    {
+      "appID": "io.github.vrcmteam.vrcm",
+      "title": "VRCM 1.1.6 · 16 Nov 2026",
+      "identifier": "VRCM-release-1.1.6",
+      "caption": "VRCM 1.1.6 is available.",
+      "date": "2026-11-16T13:50:14Z",
+      "tintColor": "#6451f1",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/VRCM/images/news.png",
+      "notify": true,
+      "url": "https://github.com/vrcm-team/VRCM/releases/tag/1.1.6"
+    },
+    {
+      "appID": "com.wqguard.app",
+      "title": "WQGuard 1.2.2 · 16 Nov 2026",
+      "identifier": "WQGuard-release-v1.2.2",
+      "caption": "WQGuard 1.2.2 is available.",
+      "date": "2026-11-16T12:29:58Z",
+      "tintColor": "#00C7A5",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/WQGuard/releases/tag/v1.2.2"
+    },
+    {
+      "appID": "com.example.HermesEnabler",
+      "title": "HermesEnabler 1.0 · 16 Nov 2026",
+      "identifier": "HermesEnabler-release-1.6.2",
+      "caption": "HermesEnabler 1.0 is available.",
+      "date": "2026-11-16T09:22:09Z",
+      "tintColor": "#70C0F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/HermesEnabler/images/news.png",
+      "notify": true,
+      "url": "https://github.com/pookjw/HermesEnabler/releases/tag/1.6.2"
+    },
+    {
+      "appID": "com.linkpass.kazumi",
+      "title": "Kazumi-Swift 3.0.7 · 16 Nov 2026",
+      "identifier": "Kazumi-Swift-release-3.0.7",
+      "caption": "Kazumi-Swift 3.0.7 is available.",
+      "date": "2026-11-16T02:26:09Z",
+      "tintColor": "#45A992",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi-Swift/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LinkPass888/Kazumi-Swift/releases/tag/3.0.7"
     },
     {
       "appID": "org.moviepilot.app",
@@ -1895,6 +2206,17 @@
       "url": "https://github.com/mengangs/Cloudn/releases/tag/v1.4.2"
     },
     {
+      "appID": "io.nekohasekai.swipt",
+      "title": "Swipt 0.1.0 · 14 Nov 2026",
+      "identifier": "Swipt-release-nightly",
+      "caption": "Swipt 0.1.0 is available.",
+      "date": "2026-11-14T04:28:34Z",
+      "tintColor": "#455A64",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Swipt/images/news.png",
+      "notify": true,
+      "url": "https://github.com/swipt-automation/swipt/releases/tag/nightly"
+    },
+    {
       "appID": "com.christianselig.Apollo",
       "title": "Apollo for Reddit - GLASS 4.1.0 · 14 Nov 2026",
       "identifier": "Apollo for Reddit - GLASS-release-v1.15.11_4.1.0",
@@ -1959,6 +2281,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
       "notify": true,
       "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.4"
+    },
+    {
+      "appID": "com.zhangfuhao.wqtoolkit",
+      "title": "WQToolkit 1.0 · 11 Nov 2026",
+      "identifier": "WQToolkit-release-v1.0",
+      "caption": "WQToolkit 1.0 is available.",
+      "date": "2026-11-11T22:59:56Z",
+      "tintColor": "#6090D0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQToolkit/images/news.png",
+      "notify": true,
+      "url": "https://github.com/MchinaMd57764/WQToolkit/releases/tag/v1.0"
     },
     {
       "appID": "com.neogamelab.neostation",
@@ -2289,6 +2622,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PureLive/images/news.png",
       "notify": true,
       "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.19"
+    },
+    {
+      "appID": "app.anich",
+      "title": "AniCh 1.5.27 · 05 Oct 2026",
+      "identifier": "AniCh-release-1.5.27",
+      "caption": "AniCh 1.5.27 is available.",
+      "date": "2026-10-05T03:15:29Z",
+      "tintColor": "#F0E0D0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniCh/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Sle2p/AniCh/releases/tag/1.5.27"
     },
     {
       "appID": "com.mak5er.aircard",

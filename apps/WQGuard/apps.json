@@ -1,0 +1,47 @@
+{
+  "name": "WQGuard",
+  "subtitle": "WQGuard AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for WQGuard",
+  "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/icon.png",
+  "website": "https://github.com/Kianuni/WQGuard",
+  "tintColor": "#00C7A5",
+  "apps": [
+    {
+      "name": "WQGuard",
+      "bundleIdentifier": "com.wqguard.app",
+      "developerName": "Kianuni",
+      "subtitle": "iOS 沙盒越权检测与侧载 IPA 审查工具",
+      "localizedDescription": "面向 iOS 26.2+ / iOS 27.x 的零依赖、100% 物理只读沙盒逃逸检测引擎、Mach-O 静态二进制审计与多端固件 CVE 防护系统",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/icon.png",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/dashboard.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/firmware.jpeg",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/ipa.jpeg"
+      ],
+      "tintColor": "#00C7A5",
+      "versions": [
+        {
+          "version": "1.2.2",
+          "date": "2026-11-16T12:29:58Z",
+          "localizedDescription": "## WQGuard v1.2.2 (Build 16)\n\n全栈中英双语支持正式发布（解决 Issue #1 / Resolves #1）。\n\n---\n\n### English Release Notes\n\n- **Full-Stack English Localization (`en` / `zh-Hans`)** (Resolves [#1](https://github.com/Kianuni/WQGuard/issues/1), thanks to `@i0ntempest`):\n  - Fixed `WQStrings` explicit `.lproj` bundle lookup so English systems no longer fall back to `CFBundleDevelopmentRegion = zh-Hans`.\n  - Localized all SwiftUI views and `ScanViewModel`, including the **Dashboard** active engine badge & queued `.ipa` summary, the entire **Scan Sources & Pairing** tutorial (`InstalledScanConfigSheet`), and the **IPA Scan** tab lower notes & queue controls (`IPAScanView`).\n  - Localized `InfoPlist.strings` (`en` / `zh-Hans`, including `NSLocalNetworkUsageDescription`).\n  - Localized `WQGuardCore` (`WQLocale`, firmware CVE posture radar, detection indicators, remediation guidance, Lockdown/instproxy diagnostics, and proxy shield headers/comments bumped to `#!version=1.2.2`).\n- **Verification**:\n  - `swift test --disable-sandbox -Xswiftc -strict-concurrency=complete`: **685 tests passed, 0 failures** (`LocalizationBilingualTests`, `SurgeModuleTests`, `SecurityAuditV121RegressionTests`, etc.).\n\n### 中文更新说明\n\n- **全栈中英双语本地化（修复 [#1](https://github.com/Kianuni/WQGuard/issues/1)，感谢 `@i0ntempest` 反馈）**：\n  - 修复 `WQStrings` 在 `CFBundleDevelopmentRegion = zh-Hans` 下部分英文键回退到简体中文的 `.lproj` 解析问题，并同步 `en.lproj` / `zh-Hans.lproj`（含 `InfoPlist.strings`）。\n  - 完整本地化 **仪表盘活跃引擎计数角标与待扫 IPA 摘要**、**扫描源与无线配对完整教程页 (`InstalledScanConfigSheet`)**、**IPA 扫描底部说明与队列控制 (`IPAScanView`)**、设置页及 `ScanViewModel`。\n  - 通过新增 `WQLocale` 完成 `WQGuardCore` 核心引擎全链路双语输出（固件漏洞雷达、风险指标描述与修复建议、配对/代理状态诊断及 5 端流量防护规则 `#!version=1.2.2`）。\n- **测试验证**：\n  - Swift 6 严格并发模式下完整测试套件执行 **685 项测试全部通过，0 失败**。\n\n---\n\n### Release Assets / 发布附件\n\n- `WQGuard_v1.2.2.ipa` — Unsigned ad-hoc IPA (`v1.2.2`, Build 16) for iOS 16+ / 17+ / 18+ / 26+\n- `WQGuard-Brotli-Shield.sgmodule` — Surge\n- `WQGuard-Brotli-Shield.module` — Shadowrocket\n- `WQGuard-Brotli-Shield.conf` — Quantumult X\n- `WQGuard-Brotli-Shield.plugin` — Loon\n- `WQGuard-Brotli-Shield.stoverride` — Stash",
+          "downloadURL": "https://github.com/Kianuni/WQGuard/releases/download/v1.2.2/WQGuard_v1.2.2.ipa",
+          "size": 2046154,
+          "minOSVersion": "16.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.wqguard.app",
+      "title": "WQGuard 1.2.2 · 16 Nov 2026",
+      "identifier": "WQGuard-release-v1.2.2",
+      "caption": "WQGuard 1.2.2 is available.",
+      "date": "2026-11-16T12:29:58Z",
+      "tintColor": "#00C7A5",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Kianuni/WQGuard/releases/tag/v1.2.2"
+    }
+  ]
+}
