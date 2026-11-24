@@ -1,0 +1,41 @@
+# altgen config for the FmRadio AltStore source.
+# IPA from braless/FmRadio releases (unsigned FmRadio-X.Y.Z.ipa).
+# No project AltStore source; fields taken from README and Xcode project.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "braless/FmRadio"
+
+[source]
+name = "FmRadio"
+subtitle = "FmRadio AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for FmRadio"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/FmRadio/icon.png"
+website = "https://github.com/braless/FmRadio"
+tint_color = "#1E4A7A"
+
+[app]
+name = "FmRadio"
+bundle_identifier = "com.oaife.radio"
+developer_name = "braless"
+subtitle = "可配置的 iOS 网络收音机"
+description = "FmRadio，用 SwiftUI 做的开源网络收音机。支持远程 JSON 电台源、按地区浏览、搜索、收藏，以及后台播放和控制中心 / 锁屏控制。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/FmRadio/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/FmRadio/images/screenshot.jpg",
+]
+tint_color = "#1E4A7A"
+min_os_version = "14.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases ship FmRadio-X.Y.Z.ipa.
+asset_pattern = "^FmRadio-.*\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/FmRadio/images/news.png"
+
+[output]
+path = "apps.json"

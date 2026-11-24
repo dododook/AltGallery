@@ -91,6 +91,9 @@ iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱，基于 worse_query�
 ### <a href="https://github.com/Leviidev/Fathom"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Fathom/icon.png" alt="Fathom icon" width="24" align="top"> Fathom</a>
 iOS 上的 x86-64 PC 模拟器，用 FEXCore 把 Linux 可执行文件即时翻译到 ARM64，需要 JIT。
 
+### <a href="https://github.com/braless/FmRadio"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/FmRadio/icon.png" alt="FmRadio icon" width="24" align="top"> FmRadio</a>
+可配置的 iOS 网络收音机，支持远程电台源、按地区浏览、搜索、收藏和后台播放。
+
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Frok-1.0.7"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Frok/icon.png" alt="Frök icon" width="24" align="top"> Frök</a>
 NodeSeek 第三方 iOS 客户端。
 
