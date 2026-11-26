@@ -64,6 +64,9 @@ A native ARM64 PlayStation 2 emulator for iOS and iPadOS, forked from PCSX2.
 ### <a href="https://github.com/breeze-project-org/Breeze"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Breeze/icon.png" alt="Breeze icon" width="24" align="top"> Breeze</a>
 使用 Flutter 构建的开源漫画阅读器，通过插件接入多个漫画源。
 
+### <a href="https://github.com/LinkPass888/CarCanvas"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/CarCanvas/icon.png" alt="CarCanvas icon" width="24" align="top"> CarCanvas</a>
+用自己的照片替换 CarPlay 壁纸，支持原始缓存备份与恢复。
+
 ### <a href="https://github.com/mengangs/Cloudn"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Cloudn/icon.png" alt="Cloudn icon" width="24" align="top"> Cloudn</a>
 开源网盘与短视频解析下载器，粘贴链接即可本地解析并高速下载。
 

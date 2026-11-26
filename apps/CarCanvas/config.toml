@@ -1,0 +1,41 @@
+# altgen config for the CarCanvas AltStore source.
+# Fields taken from LinkPass888/Sideload source.json.
+# IPA from GitHub Releases: CarCanvas-vX.Y.Z-unsigned.ipa
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "LinkPass888/CarCanvas"
+
+[source]
+name = "CarCanvas"
+subtitle = "CarCanvas AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for CarCanvas"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/CarCanvas/icon.png"
+website = "https://github.com/LinkPass888/CarCanvas"
+tint_color = "#5B8DEF"
+
+[app]
+name = "CarCanvas"
+bundle_identifier = "com.carcanvas.wq"
+developer_name = "LinkPass888"
+subtitle = "自定义 CarPlay 壁纸"
+description = "CarCanvas，用自己的照片替换 CarPlay 壁纸，支持原始缓存备份与恢复。基于 worse_query，需要 iOS 26.0–26.7.2 或 27.0–27.2.1，签名时需保留 App Group。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/CarCanvas/icon.png"
+screenshots = [
+  "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/CarCanvas/images/wallpaper-picker.png",
+]
+tint_color = "#5B8DEF"
+min_os_version = "26.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases ship CarCanvas-vX.Y.Z-unsigned.ipa.
+asset_pattern = "^CarCanvas-v.*-unsigned\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/CarCanvas/images/news.png"
+
+[output]
+path = "apps.json"
