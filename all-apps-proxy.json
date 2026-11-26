@@ -1145,11 +1145,11 @@
       "tintColor": "#4CAF50",
       "versions": [
         {
-          "version": "2.4.6",
-          "date": "2026-11-22T05:42:23Z",
-          "localizedDescription": "- 修复 Bangumi 同步无法使用的问题",
-          "downloadURL": "https://gh-proxy.com/https://github.com/Predidit/Kazumi/releases/download/2.4.6/Kazumi_ios_2.4.6_no_sign.ipa",
-          "size": 30369553,
+          "version": "2.4.7",
+          "date": "2026-11-26T05:31:42Z",
+          "localizedDescription": "- 修复 Linux 平台偶发的崩溃问题 (@Predidit)\r\n- 修复 windows 平台偶发的崩溃问题 (#2876) (@Predidit)\r\n- 修复部分规则来源下载只能下载到首个片段的问题 (#2886) (@wanxinlei1)\r\n- 修复桌面平台调整窗体大小时图片闪烁的问题 (@LiggMax)\r\n- 优化 windows/Linux 平台超分辨率性能 (@Predidit)",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Predidit/Kazumi/releases/download/2.4.7/Kazumi_ios_2.4.7_no_sign.ipa",
+          "size": 30376353,
           "minOSVersion": "13.0"
         }
       ]
@@ -1556,11 +1556,11 @@
       "tintColor": "#8844F6",
       "versions": [
         {
-          "version": "2.0.4",
-          "date": "2026-11-25T17:55:21Z",
-          "localizedDescription": "MoviePilot 现已全面提供 **iOS / iPadOS**、**Android** 与 **HarmonyOS NEXT** 三端全原生客户端（统一版本 **`2.0.4`**），基于 Rust 共享业务内核直连 MoviePilot V3 后端，带来一致的核心功能闭环与地道原生界面体验。\n\n### 本版本核心亮点\n\n- **媒体服务器优先直连播放与跨端实时进度同步**：\n  - 支持客户端探测并优先直连媒体服务器（LAN / WAN 媒体流直通），当不具备直连条件或探测超时时自动平滑回退至 MoviePilot 后台代理流，显著降低中转服务器带宽压力。\n  - 新增媒体服务器账号绑定与三端实时播放进度同步（起播、定时心跳、暂停、拖拽与停止上报），多端无缝续播。\n- **三端多内核播放引擎升级**：\n  - 在「设置 → 播放偏好」中提供播放引擎、解码模式、缓冲策略、夜间人声增强、字幕缩放与外部播放器模板等可持久化配置，并在播放器内支持多内核热切换（iOS 支持 AVPlayer / MPV / VLCKit，Android 支持 Media3 / MPV，HarmonyOS NEXT 支持原生 AVPlayer 与增强路由）。\n  - 本地与存储音频全面支持基于 HTTP Range 票据的边加载边播放与锁屏播控体验，同时优化 SMB 存储流式下载兼容性。\n  - 三端音乐播放全面支持读取音频文件内嵌封面与内嵌歌词（支持 FLAC `VORBIS_COMMENT`/`PICTURE`、ID3v2.2~2.4 `APIC`/`USLT`/`SYLT`/`TXXX`、MP4/M4A `covr`/`©lyr` 及 Ogg Vorbis/Opus），兼容同步 LRC 与无时间轴纯文本歌词，并联动动态取色、迷你播控条与系统锁屏封面。\n- **三端原生弹幕系统**：\n  - 视频播放器内置原生弹幕渲染层，支持后端弹幕配置、剧集匹配与手动切换、开关控制、字号/透明度/速度/显示区域/时间偏移调节以及画中画自动避让，并对旧版后端提供友好升级提示。\n- **Vue 联邦插件本地预热运行时与全量原生能力桥接**：\n  - 推出零前端端口依赖的本地预热联邦运行时（`mp-plugin://shell/`），通过热池复用、实例隔离磁盘缓存、零令牌原生代发 API 与四层透明视觉融合大幅提升插件首开速度与视觉一致性，并保留兼容网页容器一键回退开关。\n  - 全面向 Vue 联邦插件开放移动端本地原生能力（录音、流式音频播放与锁屏播控、相机拍照、相册/文件读写、剪贴板、震动、屏幕常亮、原生 Toast/确认框与标题栏动作桥接），优化移动端竖屏响应式布局。\n- **稳定性与网络认证专项修复**：\n  - 全面修复并关闭本期全部 GitHub Issues（`#51`、`#53`–`#62`）：新增 Cloudflare Access OAuth 认证与同源凭据透传（含弹幕与插件音频链路）、支持音频内嵌封面与歌词解析、优化资源搜索下载弹窗与 Android 本地目录浏览、改进 iOS APNs 推送设置体验、强化播放内核稳定性与旧版后端向后兼容。\n\n### 安装包说明\n\n| 平台 | 版本 | 产物文件 | 适用设备与安装说明 |\n| :--- | :--- | :--- | :--- |\n| **iOS / iPadOS** | `2.0.4` | `MoviePilot-2.0.4-ios-unsigned.ipa` | 需要 **iOS 16+**（小组件需 iOS 17+），下载后使用个人或企业证书重签安装（重签小组件请保持一致的 App Groups）。 |\n| **Android（推荐）** | `2.0.4` | `MoviePilot-2.0.4-android-arm64-v8a.apk` | 适用于绝大多数现代 64 位 ARM 手机与平板（**Android 10 / API 29+**），体积更小，可直接安装。 |\n| **Android（通用）** | `2.0.4` | `MoviePilot-2.0.4-android-universal.apk` | 同时包含 `arm64-v8a`、`armeabi-v7a` 与 `x86_64` 架构，兼容 32 位旧设备、电视盒子与桌面模拟器。 |\n| **HarmonyOS NEXT** | `2.0.4` | `MoviePilot-2.0.4-harmony-unsigned.hap` | 适用于 **HarmonyOS NEXT（API 12+）**，供开发者使用 DevEco Studio / 签名工具配置证书后安装至真机或模拟器。 |\n\nRelease 同时提供统一校验文件 `SHA256SUMS`。\n\n构建源码：[5d01666945bd725436e9eae559c1fea264984b80](https://github.com/jxxghp/MoviePilot-App/commit/5d01666945bd725436e9eae559c1fea264984b80)。",
-          "downloadURL": "https://gh-proxy.com/https://github.com/jxxghp/MoviePilot-App/releases/download/v2.0.4/MoviePilot-2.0.4-ios-unsigned.ipa",
-          "size": 50983579,
+          "version": "2.0.5",
+          "date": "2026-11-26T09:01:47Z",
+          "localizedDescription": "MoviePilot 现已全面提供 **iOS / iPadOS**、**Android** 与 **HarmonyOS NEXT** 三端全原生客户端（统一版本 **`2.0.5`**），基于 Rust 共享业务内核直连 MoviePilot V3 后端，带来一致的核心功能闭环与地道原生界面体验。\n\n### 本版本核心亮点\n\n- **订阅顶栏优化与原生订阅历史**：\n  - 将订阅页顶栏的「追剧日历」与「订阅广场」移至左上角，并在右上角新增原生「订阅历史」入口。\n  - 支持按电影 / 电视剧 / 音乐分类分页查看已完成订阅记录，支持查看媒体详情、保留原过滤规则一键重新订阅与删除记录。\n- **剧集季详情页与分集入库状态/连播**：\n  - 媒体详情页各季卡片新增实时入库状态徽章（`已入库` / `已入库 X/Y` / `未入库`），点击任意一季可进入专属季媒体与分集详情页。\n  - 支持浏览单季海报、简介、评分、集数及完整分集列表，展示每一集的入库/开播状态，并支持点击任意已入库单集立即播放与本季连播。\n- **存储媒体纯流式播放与大体积临时文件防护**：\n  - 三端播放存储音视频严格走 HTTP Range 流票据边加载边播放，彻底移除对非 `.strm` 音视频回退整文件下载的逻辑，杜绝在服务端临时目录或手机缓存产生大体积媒体副本。\n- **多选筛选菜单保持展开与三端连续勾选体验**：\n  - 统一优化 iOS、Android 与 HarmonyOS 三端的全局搜索「来源」多选菜单、站点资源搜索「搜索站点」范围菜单与结果多维级联筛选菜单（`#67`）：勾选/取消任意筛选项时菜单保持展开并实时更新勾选项与结果列表，点击互斥重置项（「默认（系统设置）」「全部站点」「清空当前维度」）或外部区域自动收起。\n- **Android 固定正式签名证书与播放内核加固**：\n  - 正式发布构建全面切换并永久锁定官方 Release 签名密钥（附发版签名校验门禁），后续版本支持直接覆盖升级安装，不再因每次构建更换临时证书而要求重装（从旧临时证书版本首次升至 `2.0.5` 需重装一次，此后永久免重装升级）。\n  - 修复 Android 播放器 DEX 寄存器溢出（`VerifyError`）、MPV `SimpleBasePlayer` 递归栈溢出与切集/切核异步释放竞态（`#63`），新增 Android 系统状态栏消息通知同步（`#66`）、文件管理 7 种自然排序与筛选（`#64`）以及 Cloudflare Access OAuth RFC 8707 `resource` 参数兼容（`#65`）。\n\n### 安装包说明\n\n| 平台 | 版本 | 产物文件 | 适用设备与安装说明 |\n| :--- | :--- | :--- | :--- |\n| **iOS / iPadOS** | `2.0.5` | `MoviePilot-2.0.5-ios-unsigned.ipa` | 需要 **iOS 16+**（小组件需 iOS 17+），下载后使用个人或企业证书重签安装（重签小组件请保持一致的 App Groups）。 |\n| **Android（推荐）** | `2.0.5` | `MoviePilot-2.0.5-android-arm64-v8a.apk` | 适用于绝大多数现代 64 位 ARM 手机与平板（**Android 10 / API 29+**），体积更小，可直接安装。 |\n| **Android（通用）** | `2.0.5` | `MoviePilot-2.0.5-android-universal.apk` | 同时包含 `arm64-v8a`、`armeabi-v7a` 与 `x86_64` 架构，兼容 32 位旧设备、电视盒子与桌面模拟器。 |\n| **HarmonyOS NEXT** | `2.0.5` | `MoviePilot-2.0.5-harmony-unsigned.hap` | 适用于 **HarmonyOS NEXT（API 12+）**，供开发者使用 DevEco Studio / 签名工具配置证书后安装至真机或模拟器。 |\n\nRelease 同时提供统一校验文件 `SHA256SUMS`。\n\n构建源码：[32a4967e449aaa7d78c5e70b1785858f0031a1ac](https://github.com/jxxghp/MoviePilot-App/commit/32a4967e449aaa7d78c5e70b1785858f0031a1ac)。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/jxxghp/MoviePilot-App/releases/download/v2.0.5/MoviePilot-2.0.5-ios-unsigned.ipa",
+          "size": 51204146,
           "minOSVersion": "17.0"
         }
       ]
@@ -1734,11 +1734,11 @@
       "tintColor": "#3060F0",
       "versions": [
         {
-          "version": "1.0.10",
-          "date": "2026-11-24T04:34:33Z",
-          "localizedDescription": "* Replace floating toolbar handle with assistive ball\n* Fixes and improvements",
-          "downloadURL": "https://gh-proxy.com/https://github.com/nekohasekai/open-screen-sharing/releases/download/v1.0.10/OpenScreenSharing.ipa",
-          "size": 11765704,
+          "version": "1.0.11",
+          "date": "2026-11-26T04:39:39Z",
+          "localizedDescription": "* Stash idle assistive ball into screen edge\n* Fixes and improvements",
+          "downloadURL": "https://gh-proxy.com/https://github.com/nekohasekai/open-screen-sharing/releases/download/v1.0.11/OpenScreenSharing.ipa",
+          "size": 11813792,
           "minOSVersion": "15.0"
         }
       ]
@@ -1965,11 +1965,11 @@
       "tintColor": "#E85A3C",
       "versions": [
         {
-          "version": "1.0.0",
-          "date": "2026-11-25T18:52:38Z",
-          "localizedDescription": "## Reloc v1.0.0\n\n面向 iOS 17.0+ 的外设级定位模拟工具，通过本机回环实现 iAP2 / MFi-v3 / NMEA 外设定位注入。\n\n### 主要特性\n- **定格定位**：地图点击选点、关键词搜索、手动输入 WGS-84 坐标、自动反地理编码、运行中浏览并热更新定位、停止二次确认恢复真实 GPS\n- **后台稳定保活**：导航级后台定位保活 + 非零次声音频双保险，支持自动引导升级「始终」定位权限、开关系统定位服务刷新缓存后自动重建后台断言与断线自动重连\n- **坐标与地图**：中国大陆地图 GCJ-02 ↔ WGS-84 自动双向纠偏、可选 ±0.6 m 自然 GPS 微幅漂移、标准 / 卫星 / 混合地图切换\n- **本机配对**：支持 `.rppairing` / `.mobiledevicepairing` 导入；iOS 27+ 支持本机直接配对与画中画（PiP）悬浮指引窗实时展示 6 位配对码\n- **收藏与实测**：收藏夹（重命名 / 删除）、最近 30 条使用记录、异常中断一键恢复，内置 `CoreLocation` 实时来源实测面板与协议日志\n\n### 安装说明\n- 附件 `Reloc.ipa` 为未签名 Release 构建产物，请使用个人证书或自签工具签名后安装。\n- 建议安装后在系统 **「设置 → 隐私与安全性 → 定位服务 → Reloc」** 将定位权限设为 **「始终」** 并开启「精确位置」，以保证切后台与在第三方应用中使用时持续稳定。",
-          "downloadURL": "https://gh-proxy.com/https://github.com/Reukix/Reloc/releases/download/v1.0.0/Reloc.ipa",
-          "size": 4500835,
+          "version": "1.0.1",
+          "date": "2026-11-26T11:35:53Z",
+          "localizedDescription": "## Reloc v1.0.1\n\n修复配对文件导入、地名解析与停止恢复定位问题，新增纯 WGS-84 国际地图可选项、极速自动触发与一键画中画（PiP）定位刷新闭环，并增加 iPad 不支持提示。\n\n### 本次更新\n\n- **修复配对文件无法选择**：改用原生 UIDocumentPickerViewController 副本导入模式，在 Info.plist 中声明 .rppairing / .mobiledevicepairing / .mobilepair 文档类型，解决文件置灰无法点选的问题，并支持「用 Reloc 打开」直接导入。\n- **多源地图与无高德选项**：保留 Apple 地图（系统默认），同时新增完全独立于 MKMapView 的纯原生 UIKit WGS-84 瓦片地图（全球街道图 Esri / OpenStreetMap / 全球卫星图），全部免 API Key、无高德地图字样与 GCJ-02 偏移。\n- **修复地名一直解析卡住**：新增 CLGeocoder（2 秒超时）→ OpenStreetMap Nominatim → BigDataCloud → 坐标兜底的四级联反地理编码，解决海外坐标长期卡在「正在解析地名…」的问题。\n- **极速触发与一键 PiP 刷新**：iAP2 鉴权成功后延迟拉起 CoreLocation + 自动脉冲订阅 0xFFFA + 初始高速锁定突发，首页实时显示外设生效状态；若系统沿用旧缓存，可一键启动画中画（PiP）悬浮 5 秒倒计时指引并直达系统「定位服务」（已修复未关定位误闪 5 秒与过渡卡顿）。\n- **修复停止定位后未恢复真实位置**：停止时先下发标准 NMEA 失效报文（GPGGA quality=0 / GPRMC status=V）与 iAP2 RST 链路复位包，随后自动唤醒本机真实 GPS 覆盖缓存，室内弱信号时同样提供一键刷新恢复入口。\n- **新增 iPad 设备检测**：因 iPadOS 不提供 CarPlay / com.apple.carkit.service 外设通道，在 iPad 上启动时将直接提示设备不可用（仅支持 iPhone）。\n\n### 安装说明\n\n- 附件 Reloc.ipa 为未签名 Release 构建产物，请使用个人证书或自签工具签名后安装（仅支持 iPhone）。\n- 建议安装后在系统「设置 → 隐私与安全性 → 定位服务 → Reloc」将定位权限设为「始终」并开启「精确位置」。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Reukix/Reloc/releases/download/v1.0.1/Reloc.ipa",
+          "size": 4441557,
           "minOSVersion": "17.0"
         }
       ]
@@ -2090,7 +2090,7 @@
         {
           "version": "4.2.0",
           "date": "2026-11-25T22:41:34Z",
-          "localizedDescription": "## What's new in 4.2.0\n\n### New\n\n- Added on-device pairing on iOS 27, no computer needed for a pairing file\n- Added certificate reordering with Move to Top, used everywhere you pick a certificate\n- Added certificate search\n- Added Japanese translation by @kinboy56\n\n### Improvements\n\n- Improved installs to show progress while the app is sent to iOS\n\n### Fixes\n\n- Fixed installs failing after the SSL certificate renews\n- Fixed installs staying stuck halfway when iOS hides install progress\n- Fixed untranslated text in the Tweak Manager\n\n\n## Install\n\n- Download **RyukSign.ipa** from the assets below and sign it, or\n- Add the RyukSign source to get updates in the app: `https://raw.githubusercontent.com/faroukbmiled/RyukSign/main/app-repo.json`\n\n**Full changelog:** https://github.com/faroukbmiled/RyukSign/compare/v4.1.0...v4.2.0\n\n<sub>Built 2026-11-25 from [`49ccb30`](https://github.com/faroukbmiled/RyukSign/commit/49ccb3040ad6cf9753a420a8619f33faa186ca31)</sub>",
+          "localizedDescription": "## What's new in 4.2.0\r\n\r\n### New\r\n\r\n- Added on-device pairing on iOS 27, no computer needed for a pairing file\r\n- Added certificate reordering with Move to Top, used everywhere you pick a certificate\r\n- Added certificate search\r\n- Added Japanese translation by @kinboy56\r\n\r\n### Improvements\r\n\r\n- Improved installs to show progress while the app is sent to iOS\r\n\r\n### Fixes\r\n\r\n- Fixed installs failing after the SSL certificate renews\r\n- Fixed installs staying stuck halfway when iOS hides install progress\r\n- Fixed untranslated text in the Tweak Manager\r\n\r\n\r\n**Full changelog:** https://github.com/faroukbmiled/RyukSign/compare/v4.1.0...v4.2.0\r\n\r\n<sub>Built 2026-11-25 from [`49ccb30`](https://github.com/faroukbmiled/RyukSign/commit/49ccb3040ad6cf9753a420a8619f33faa186ca31)</sub>",
           "downloadURL": "https://gh-proxy.com/https://github.com/faroukbmiled/RyukSign/releases/download/v4.2.0/RyukSign.ipa",
           "size": 22247678,
           "minOSVersion": "16.0"
@@ -2206,7 +2206,7 @@
         {
           "version": "1.1.1",
           "date": "2026-11-02T16:14:09Z",
-          "localizedDescription": "> **当前两端下载：** [macOS 1.0.1](https://github.com/akinal5765-byte/Silverphase/releases/tag/v1.0.1) · [iOS 1.1.1](https://github.com/akinal5765-byte/Silverphase/releases/tag/v1.1.1)\n\n新增 **CineStill 800T**，已接入 iOS 与 macOS 的共享胶片目录。\n\n- 采用上游的无防光晕背层回反射模型，提供红色光晕和 **0–8 EV 高光余量**控制。\n- 新增按通用提示词生成的包装风格封面；两端卡片短名称统一为 **800T**，列表保留完整名称 **CineStill 800T**。\n- 复用 Vision3 500T 的原始乳剂数据与印相校准，保留 Hanze Qiu、Andrea Volpato 的来源记录及 GPL / CC BY-SA 声明。\n\n两端独立编号：**macOS 1.0.1（2）**、**iOS 1.1.1（3）**。\n\n[PR #2](https://github.com/akinal5765-byte/Silverphase/pull/2) 已合并。安装包来自提交 `0e0d354c6d4813ec7cdbf6a004a3c3c3fde9525a`，其源码树与合并后的 `main` 一致。包内附构建来源与开源声明，公开包不包含个人照片、私有材料或签名凭据。\n\n## 下载与安装\n\n下载 **`Silverphase-1.1.1-iOS-unsigned.ipa`**，适用于 **arm64、iOS / iPadOS 18 及以上**。\n\n这是**未签名 IPA**，需要自行完成设备签名和描述文件配置；请保留 `Silverphase-iOS-RequiredEntitlements.plist` 中的 Increased Memory Limit 能力。包内不提供证书、私钥或设备描述文件。安装方法见附件 `INSTALL.md`；校验值见 `SHA256SUMS.txt`，构建与来源信息见 `ios-build.json`。\n\n## 验证范围\n\n800T 的模拟器专项检查通过，公共 Release 构建与打包通过。完整移动端冒烟检查在后续读取原图细节时因内存不足中止，因此仍属部分覆盖。\n\n签名开发版本已单独覆盖安装到 Duo，保留照片库和编辑记录；安装后未启动应用或操作验证。此版本不新增真机触控、相册权限、内存能力或全分辨率导出的验收结论。\n\n[详细验证记录](https://github.com/akinal5765-byte/Silverphase/blob/0e0d354c6d4813ec7cdbf6a004a3c3c3fde9525a/performance/VALIDATION-CINESTILL-2026-11-02.md)。",
+          "localizedDescription": "## English\n\n**Historical iOS / iPadOS 1.1.1 (build 3).** Adds CineStill 800T to the shared catalog, including red halation with 0–8 EV highlight headroom and a new illustrated cover. It reuses the Vision3 500T emulsion data and print calibration with upstream attribution.\n\nThe arm64 IPA in Assets is **unsigned**, requires iOS/iPadOS 18 or later, and needs user-managed signing and provisioning. See `INSTALL.md`, `SHA256SUMS.txt` and the included entitlement file. The 800T simulator checks and public packaging passed; the full mobile smoke check later stopped at a memory limit, and the installed Duo development build was not exercised. [Validation record](https://github.com/akinal5765-byte/Silverphase/blob/0e0d354c6d4813ec7cdbf6a004a3c3c3fde9525a/performance/VALIDATION-CINESTILL-2026-11-02.md)\n\n---\n\n## 简体中文\n\n> **当前两端下载：** [macOS 1.0.1](https://github.com/akinal5765-byte/Silverphase/releases/tag/v1.0.1) · [iOS 1.1.1](https://github.com/akinal5765-byte/Silverphase/releases/tag/v1.1.1)\n\n新增 **CineStill 800T**，已接入 iOS 与 macOS 的共享胶片目录。\n\n- 采用上游的无防光晕背层回反射模型，提供红色光晕和 **0–8 EV 高光余量**控制。\n- 新增按通用提示词生成的包装风格封面；两端卡片短名称统一为 **800T**，列表保留完整名称 **CineStill 800T**。\n- 复用 Vision3 500T 的原始乳剂数据与印相校准，保留 Hanze Qiu、Andrea Volpato 的来源记录及 GPL / CC BY-SA 声明。\n\n两端独立编号：**macOS 1.0.1（2）**、**iOS 1.1.1（3）**。\n\n[PR #2](https://github.com/akinal5765-byte/Silverphase/pull/2) 已合并。安装包来自提交 `0e0d354c6d4813ec7cdbf6a004a3c3c3fde9525a`，其源码树与合并后的 `main` 一致。包内附构建来源与开源声明，公开包不包含个人照片、私有材料或签名凭据。\n\n## 下载与安装\n\n下载 **`Silverphase-1.1.1-iOS-unsigned.ipa`**，适用于 **arm64、iOS / iPadOS 18 及以上**。\n\n这是**未签名 IPA**，需要自行完成设备签名和描述文件配置；请保留 `Silverphase-iOS-RequiredEntitlements.plist` 中的 Increased Memory Limit 能力。包内不提供证书、私钥或设备描述文件。安装方法见附件 `INSTALL.md`；校验值见 `SHA256SUMS.txt`，构建与来源信息见 `ios-build.json`。\n\n## 验证范围\n\n800T 的模拟器专项检查通过，公共 Release 构建与打包通过。完整移动端冒烟检查在后续读取原图细节时因内存不足中止，因此仍属部分覆盖。\n\n签名开发版本已单独覆盖安装到 Duo，保留照片库和编辑记录；安装后未启动应用或操作验证。此版本不新增真机触控、相册权限、内存能力或全分辨率导出的验收结论。\n\n[详细验证记录](https://github.com/akinal5765-byte/Silverphase/blob/0e0d354c6d4813ec7cdbf6a004a3c3c3fde9525a/performance/VALIDATION-CINESTILL-2026-11-02.md)。",
           "downloadURL": "https://gh-proxy.com/https://github.com/akinal5765-byte/Silverphase/releases/download/v1.1.1/Silverphase-1.1.1-iOS-unsigned.ipa",
           "size": 92284015,
           "minOSVersion": "18.0"
@@ -2605,11 +2605,11 @@
       "tintColor": "#1E8FC7",
       "versions": [
         {
-          "version": "0.9.20",
-          "date": "2026-11-21T21:41:37Z",
-          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.20\n\nApps Manager backups, and safer handling of databases that are in use.\n\n## New\n\n- **Import Apps Manager backups** ([#19](https://github.com/kolbicz/WQFiles/issues/19)): **Apps** → tap the app → **Import as Backup…** now accepts `.adbk` files from Apps Manager. The app's data is saved as a normal WQ Files backup, ready to restore.\n  - Only the app's own data folder is imported. App Group data in the file isn't, because WQ Files backups don't include App Groups. The keychain items Apps Manager saves are encrypted, so they can't be imported either. When you import, WQ Files lists what it left out.\n  - If the file says it belongs to a different app than the one you tapped, WQ Files asks first, as with any other import.\n  - Opening an `.adbk` from the Files app or the share sheet doesn't start an import; start it from Apps.\n\n## Fixed\n\n- **Files another app is using:** deleting or replacing them, for example an app's database in its App Group while the app runs, failed with \"Resource temporarily unavailable (errno 35)\". WQ Files now says another app is using the file and that quitting that app and trying again should work. Its extensions or widgets can keep the file open even after you quit it.\n- **Databases in use stay intact:** an app's database comes with `-wal` and `-shm` files next to it, and while the app runs, iOS doesn't lock the `-wal` file. WQ Files could delete or replace it while refusing the database file, which lost the app's newest data. Now a database and its `-wal`, `-shm` and `-journal` files are only changed together: if one of them is in use, none of them is touched. This applies to deleting (also whole folders), replacing on import and editing.\n- **Deleting or importing several files at once:** each database is handled before its `-wal` and `-shm` files, which are skipped if the database itself couldn't be deleted or replaced. \"N of M files were imported\" is translated now.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to braless for the Apps Manager sample, and to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `9ddfa3c1ff01de4d76f601d3b6b76390436136d529f029b9bfaa48c501cfe197`",
-          "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.20/WQFiles.ipa",
-          "size": 2199929,
+          "version": "0.9.30",
+          "date": "2026-11-26T11:23:07Z",
+          "localizedDescription": "> **Requires:** iOS 26.0 – 26.7.2, or iOS 27.0 up to 27.3 beta 1. **Not supported:** iOS 27.3 beta 2 and later, where Apple patched worse_query. Tested on iOS 27.0.1, 27.2.1, 27.3 beta 1 (confirmed by a user) and 26.7.1; see [Tested devices](https://github.com/kolbicz/WQFiles#tested-devices).\n> **Needs:** a sideloading tool that keeps the App Group entitlement; see [Signing](https://github.com/kolbicz/WQFiles#signing-the-app-group) in the README.\n\n# Worse Query Files 0.9.30\n\nShortcuts actions, and a round of fixes after a full review of the code: safer restores and imports, fewer hangs, and faster lists.\n\n## New\n\n- **Shortcuts actions:** WQ Files now adds actions to the Shortcuts app, for shortcuts and automations.\n  - **Files:** List Folder, Get File, Save File, Copy, Move, Rename, New Folder and Delete. They take full paths and work in any app's container, like the file browser.\n  - **Apps:** Clean App Caches and Back Up App Data, by bundle identifier. Clean App Caches also takes the identifier of an app extension, as the Cache Cleaner lists them.\n  - List Folder and Get File always work. Everything that changes files needs **Settings → Allow Shortcuts to Change Files**, which is off until you turn it on. Deleting and cleaning also need **Allow Deleting**.\n  - The actions follow the app's rules: deleted files go to Recently Deleted, a replaced file is kept in Backups, and nothing is replaced by accident: Copy and Save File give \"Name 2\" for a name that is taken, and Move, Rename and New Folder refuse it.\n  - An action that had to wait more than 20 seconds because WQ Files was busy is not run, so nothing is changed after Shortcuts has reported a failure.\n  - Most action names and descriptions in the Shortcuts app are in English for now.\n  - See [Shortcuts](https://github.com/kolbicz/WQFiles#shortcuts) in the README.\n- **Cache Cleaner:** the long-press menu of an app has **Copy Bundle ID**, handy for the Shortcuts actions.\n\n## Fixed\n\n### Files and folders\n\n- **Sort by Size:** when folder sizes finished measuring, the list was put in the new order but the rows on screen weren't. A tap, a swipe to delete or the long-press menu could then act on a different item than the row showed. The rows follow the order now.\n- **Folder sizes after an error:** after pulling down on a folder that first couldn't be listed, sizes were not measured until you left and came back.\n- **Folders with é, ü, Korean or similar characters in their path** could leave the access cache stuck, so every folder was refused until **Settings → Reset Access Cache**. They open normally now, and a cache that is already stuck is repaired on its own.\n- **Folders WQ Files couldn't open** were sometimes reported as cleaned or deleted, with nothing removed. They are reported as not accessible.\n- **Pictures over 4 MB** showed cut off, or as a hex dump. They are read whole and scaled down for viewing.\n- **Alphabet index** with Folders on Top listed its letters out of order in folders that hold both folders and files.\n- **Container roots and WQ Files' own backup folders** could be moved or renamed in the file browser. They are refused, as deleting them already was.\n- **Renaming, moving or uploading a file to a `-wal` or `-journal` name** next to a database another app has open is refused, as creating one already was.\n- **Importing several files with Keep Both:** when a database got a new name (\"db 2.sqlite\"), its `-wal` and `-shm` files kept their old names and landed next to the database that was already there, which could damage it. They now get the same new name.\n\n### Apps and backups\n\n- **Import as Backup:** on some devices nothing could be selected in the Files sheet ([#72](https://github.com/kolbicz/WQFiles/issues/72)). It now asks first whether you want to pick a file or a folder, and writes to the Log what the Files sheet returned.\n- **An interrupted restore that can't be undone** (the app was removed or reinstalled since, or its safety backup was deleted) blocked every restore of every app, with the same message at each launch. It is closed with a note that says where the data from before is.\n- **Imported backups with only Documents or only Library:** restoring one emptied the other folder of the app. It is left as it is now, and the import says when a folder is missing.\n- **Import as Backup** says how many symbolic links in the ZIP were left out, instead of calling the result verified without a word.\n- **A restore that was refused before it started** left a full \"Before restore\" copy of the app behind while saying nothing was changed.\n- **Selecting backups to delete:** a checked backup couldn't be unchecked.\n- **Cache Cleaner:** rows you unchecked were checked again by the rescan that starts on its own after 10 minutes or after cleaning. They stay unchecked; pull down to start over.\n- **Recently Deleted:** a database is restored together with its `-wal` and `-shm` files or not at all. Before, a failed restore could still leave the database in place. A `-wal` that was deleted together with its database now comes back with it; before, the database was restored without its latest changes.\n- **Apps reinstalled or updated since the app database was written:** the app's icon, its installed/offloaded state and **Open App Bundle** could point at the bundle of an earlier install. The bundle that exists is used.\n- **Your own Cache Cleaner entries** were offered as \"Add to Cache Cleaner\" again in the file browser after the app was reinstalled. They are recognised by app.\n- **An interrupted restore** could be closed at launch as \"app removed\" when the app's folder only couldn't be seen yet. Access is asked for before that is decided.\n\n### Viewers and editors\n\n- **Custom inspectors:** a faulty script could close WQ Files, or keep every later inspector waiting behind it. Scripts are stopped after about twice the time limit in total, and a replacement that doesn't load puts the inspector from before back. Where iOS offers no time limit for scripts, inspectors are not run.\n- **Syntax colors** stopped at the first very long text value (for example an embedded image in JSON), and a CSS file with a large embedded image could take minutes. Both are colored quickly and completely.\n- **SQLite:**\n  - Tapping **Edit** on a large database froze WQ Files until all row counts were done.\n  - A whole number too large for the database was stored as a different number without a warning.\n  - Scripts whose later statements need the earlier ones (create a table, then fill it) were refused.\n  - Scrolling far into a large table got slower with every page.\n- **Property lists:** negative numbers and numbers with \"e\" couldn't be typed into a Real value on iPhone, and \"1,5\" was refused in regions that write decimals with a comma.\n- **Hex editor on iPad:** changing bytes after rotating or resizing the window could close WQ Files.\n\n### Wi-Fi Sharing\n\n- The sharing screen now says that the connection is **not encrypted**: others on the same network can read the password and the files, so share only on a network you trust.\n- An upload is refused at the start when the device doesn't have room for it, and only one ZIP is prepared at a time, so a browser can't fill the device's storage.\n- A browser that connects and then sends nothing no longer holds a connection for good.\n\n### Start screen and settings\n\n- **Check for Updates** never reported a new version: it looked for the version in the wrong place of the update list. Versions after this one are announced on the start screen.\n- **Sharing Password** in the new design's Settings kept showing the old state after it was changed.\n- **Theme export:** the temporary copy stayed until the next launch after sharing.\n- **Reopen Last Folder** was skipped when the \"Not everything works here\" notice was shown.\n- **Switching New Design** after a failed access check showed \"Access check passed\", and hid the update notice until the next launch.\n- **App Store Icons:** turning the setting on had no effect on lists that were already loaded. Turning it off stops the requests that are under way.\n- **Themes** named \"Default\" or \"Color\" could be imported but never used.\n- **The scan question** (\"Scan all files?\") could disappear without an answer and leave the Apps and Cache scans waiting until WQ Files was restarted.\n\n## Faster\n\n- **Interrupted scans resume:** measuring an app's folder started from the beginning after every interruption. It continues where it stopped.\n- **Less memory** while measuring, cleaning, backing up and restoring large apps.\n- **Sharing a folder** no longer holds up folder listings and the Apps and Cache scans while the ZIP is made.\n- **Backup folders** and the **Backed Up** filter read the disk once per listing, not on every tap and keystroke.\n\n## Housekeeping\n\n- Temporary copies left behind when WQ Files was closed by iOS (database copies, uploads, ZIPs) are removed at the next launch.\n- The in-app Log keeps the newest lines, about 1 MB, and says how many earlier lines it left out.\n\n## Credit\n\nNew design: GpGp700. Sandbox technique: [worse_query](https://github.com/forcequitOS/worse_query) by Taj C (forcequit). Container enumeration: [KAMUI](https://github.com/murk-sus/kamui-escape) by murk-sus. Resumable scans: hhh2210. Custom inspectors idea: deltaII. Translations: iosrxwy and FrogTool (Simplified Chinese), kinboy56 (Japanese), hfip (Arabic), hooray804 (Korean), Reinascape (Russian), romlayvn-93 (Vietnamese), buraakkcayir (Turkish review). Thanks to everyone who sent screenshots and Logs. GPL-3.0-or-later.\n\nSHA-256 of WQFiles.ipa: `28deac3c001962a0431532644452efdba24d97c1913a5d9193f5339aba7b9a11`",
+          "downloadURL": "https://gh-proxy.com/https://github.com/kolbicz/WQFiles/releases/download/v0.9.30/WQFiles.ipa",
+          "size": 2268148,
           "minOSVersion": "26.0"
         }
       ]
@@ -2763,6 +2763,61 @@
   ],
   "news": [
     {
+      "appID": "dev.reloc.ios",
+      "title": "Reloc 1.0.1 · 26 Nov 2026",
+      "identifier": "Reloc-release-v1.0.1",
+      "caption": "Reloc 1.0.1 is available.",
+      "date": "2026-11-26T11:35:53Z",
+      "tintColor": "#E85A3C",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.1"
+    },
+    {
+      "appID": "cz.kolbi.wqfiles",
+      "title": "WQ Files 0.9.30 · 26 Nov 2026",
+      "identifier": "WQ Files-release-v0.9.30",
+      "caption": "WQ Files 0.9.30 is available.",
+      "date": "2026-11-26T11:23:07Z",
+      "tintColor": "#1E8FC7",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQFiles/images/news.png",
+      "notify": true,
+      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.30"
+    },
+    {
+      "appID": "org.moviepilot.app",
+      "title": "MoviePilot 2.0.5 · 26 Nov 2026",
+      "identifier": "MoviePilot-release-v2.0.5",
+      "caption": "MoviePilot 2.0.5 is available.",
+      "date": "2026-11-26T09:01:47Z",
+      "tintColor": "#8844F6",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/images/news.png",
+      "notify": true,
+      "url": "https://github.com/jxxghp/MoviePilot-App/releases/tag/v2.0.5"
+    },
+    {
+      "appID": "com.example.kazumi",
+      "title": "Kazumi 2.4.7 · 26 Nov 2026",
+      "identifier": "Kazumi-release-2.4.7",
+      "caption": "Kazumi 2.4.7 is available.",
+      "date": "2026-11-26T05:31:42Z",
+      "tintColor": "#4CAF50",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.7"
+    },
+    {
+      "appID": "io.nekohasekai.screensharing",
+      "title": "Open Screen Sharing 1.0.11 · 26 Nov 2026",
+      "identifier": "Open Screen Sharing-release-v1.0.11",
+      "caption": "Open Screen Sharing 1.0.11 is available.",
+      "date": "2026-11-26T04:39:39Z",
+      "tintColor": "#3060F0",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png",
+      "notify": true,
+      "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.11"
+    },
+    {
       "appID": "ryuk2.anoxclan.com",
       "title": "RyukSign 4.2.0 · 25 Nov 2026",
       "identifier": "RyukSign-release-v4.2.0",
@@ -2783,28 +2838,6 @@
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/ARMSX2/images/news.png",
       "notify": true,
       "url": "https://github.com/ARMSX2/ARMSX2/releases/tag/nightly-20261125"
-    },
-    {
-      "appID": "dev.reloc.ios",
-      "title": "Reloc 1.0.0 · 25 Nov 2026",
-      "identifier": "Reloc-release-v1.0.0",
-      "caption": "Reloc 1.0.0 is available.",
-      "date": "2026-11-25T18:52:38Z",
-      "tintColor": "#E85A3C",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.0"
-    },
-    {
-      "appID": "org.moviepilot.app",
-      "title": "MoviePilot 2.0.4 · 25 Nov 2026",
-      "identifier": "MoviePilot-release-v2.0.4",
-      "caption": "MoviePilot 2.0.4 is available.",
-      "date": "2026-11-25T17:55:21Z",
-      "tintColor": "#8844F6",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/images/news.png",
-      "notify": true,
-      "url": "https://github.com/jxxghp/MoviePilot-App/releases/tag/v2.0.4"
     },
     {
       "appID": "io.nekohasekai.swipt",
@@ -2950,17 +2983,6 @@
       "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.26"
     },
     {
-      "appID": "io.nekohasekai.screensharing",
-      "title": "Open Screen Sharing 1.0.10 · 24 Nov 2026",
-      "identifier": "Open Screen Sharing-release-v1.0.10",
-      "caption": "Open Screen Sharing 1.0.10 is available.",
-      "date": "2026-11-24T04:34:33Z",
-      "tintColor": "#3060F0",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Open-Screen-Sharing/images/news.png",
-      "notify": true,
-      "url": "https://github.com/nekohasekai/open-screen-sharing/releases/tag/v1.0.10"
-    },
-    {
       "appID": "app.local.iPadn",
       "title": "iPadn 2.3.5 · 23 Nov 2026",
       "identifier": "iPadn-release-v2.3.5",
@@ -3038,17 +3060,6 @@
       "url": "https://github.com/yangokok886/dylix/releases/tag/v1.1.4"
     },
     {
-      "appID": "com.example.kazumi",
-      "title": "Kazumi 2.4.6 · 22 Nov 2026",
-      "identifier": "Kazumi-release-2.4.6",
-      "caption": "Kazumi 2.4.6 is available.",
-      "date": "2026-11-22T05:42:23Z",
-      "tintColor": "#4CAF50",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kazumi/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Predidit/Kazumi/releases/tag/2.4.6"
-    },
-    {
       "appID": "com.ligg.anime_flow",
       "title": "AnimeFlow 2.7.0 · 22 Nov 2026",
       "identifier": "AnimeFlow-release-v2.7.0",
@@ -3058,17 +3069,6 @@
       "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AnimeFlow/images/news.png",
       "notify": true,
       "url": "https://github.com/openAnimeFlow/AnimeFlow/releases/tag/v2.7.0"
-    },
-    {
-      "appID": "cz.kolbi.wqfiles",
-      "title": "WQ Files 0.9.20 · 21 Nov 2026",
-      "identifier": "WQ Files-release-v0.9.20",
-      "caption": "WQ Files 0.9.20 is available.",
-      "date": "2026-11-21T21:41:37Z",
-      "tintColor": "#1E8FC7",
-      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQFiles/images/news.png",
-      "notify": true,
-      "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.20"
     },
     {
       "appID": "com.nuvio.media",
