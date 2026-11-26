@@ -1,0 +1,42 @@
+{
+  "name": "Reloc",
+  "subtitle": "Reloc AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for Reloc",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/icon.png",
+  "website": "https://github.com/Reukix/Reloc",
+  "tintColor": "#E85A3C",
+  "apps": [
+    {
+      "name": "Reloc",
+      "bundleIdentifier": "dev.reloc.ios",
+      "developerName": "Reukix",
+      "subtitle": "iOS 配件级定位模拟",
+      "localizedDescription": "Reloc，开源 iOS 定位模拟工具。通过本地回环以 iAP2 / MFi-v3 / NMEA 向系统注入 GPS 坐标。需要外部代理把 10.7.0.1 指到本机，应用本身不带 VPN。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/icon.png",
+      "tintColor": "#E85A3C",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-11-25T18:52:38Z",
+          "localizedDescription": "## Reloc v1.0.0\n\n面向 iOS 17.0+ 的外设级定位模拟工具，通过本机回环实现 iAP2 / MFi-v3 / NMEA 外设定位注入。\n\n### 主要特性\n- **定格定位**：地图点击选点、关键词搜索、手动输入 WGS-84 坐标、自动反地理编码、运行中浏览并热更新定位、停止二次确认恢复真实 GPS\n- **后台稳定保活**：导航级后台定位保活 + 非零次声音频双保险，支持自动引导升级「始终」定位权限、开关系统定位服务刷新缓存后自动重建后台断言与断线自动重连\n- **坐标与地图**：中国大陆地图 GCJ-02 ↔ WGS-84 自动双向纠偏、可选 ±0.6 m 自然 GPS 微幅漂移、标准 / 卫星 / 混合地图切换\n- **本机配对**：支持 `.rppairing` / `.mobiledevicepairing` 导入；iOS 27+ 支持本机直接配对与画中画（PiP）悬浮指引窗实时展示 6 位配对码\n- **收藏与实测**：收藏夹（重命名 / 删除）、最近 30 条使用记录、异常中断一键恢复，内置 `CoreLocation` 实时来源实测面板与协议日志\n\n### 安装说明\n- 附件 `Reloc.ipa` 为未签名 Release 构建产物，请使用个人证书或自签工具签名后安装。\n- 建议安装后在系统 **「设置 → 隐私与安全性 → 定位服务 → Reloc」** 将定位权限设为 **「始终」** 并开启「精确位置」，以保证切后台与在第三方应用中使用时持续稳定。",
+          "downloadURL": "https://gh-proxy.com/https://github.com/Reukix/Reloc/releases/download/v1.0.0/Reloc.ipa",
+          "size": 4500835,
+          "minOSVersion": "17.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "dev.reloc.ios",
+      "title": "Reloc 1.0.0 · 25 Nov 2026",
+      "identifier": "Reloc-release-v1.0.0",
+      "caption": "Reloc 1.0.0 is available.",
+      "date": "2026-11-25T18:52:38Z",
+      "tintColor": "#E85A3C",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.0"
+    }
+  ]
+}
