@@ -1,0 +1,38 @@
+# altgen config for the Reloc AltStore source.
+# IPA from Reukix/Reloc releases (unsigned Reloc.ipa).
+# No project AltStore source; fields taken from README and project.yml.
+# Run: uvx altgen -c config.toml
+
+[github]
+repo = "Reukix/Reloc"
+
+[source]
+name = "Reloc"
+subtitle = "Reloc AltStore source by AltGallery & altgen"
+description = "Auto-updated AltStore source for Reloc"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/icon.png"
+website = "https://github.com/Reukix/Reloc"
+tint_color = "#E85A3C"
+
+[app]
+name = "Reloc"
+bundle_identifier = "dev.reloc.ios"
+developer_name = "Reukix"
+subtitle = "iOS 配件级定位模拟"
+description = "Reloc，开源 iOS 定位模拟工具。通过本地回环以 iAP2 / MFi-v3 / NMEA 向系统注入 GPS 坐标。需要外部代理把 10.7.0.1 指到本机，应用本身不带 VPN。"
+icon_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/icon.png"
+tint_color = "#E85A3C"
+min_os_version = "17.0"
+
+[versions]
+strip_v_prefix = true
+include_prereleases = false
+# Releases ship a single Reloc.ipa.
+asset_pattern = "^Reloc\\.ipa$"
+
+[news]
+title_template = "{name} {version} · {date}"
+image_url = "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/images/news.png"
+
+[output]
+path = "apps.json"

@@ -1,0 +1,8 @@
+# render_news.py config: python3 templates/render_news.py --out apps/Reloc
+
+name = "Reloc"
+tagline = "iOS 配件级定位模拟"
+
+[colors]
+tint = "#E85A3C"
+tint_alt = "#7EC8E8"

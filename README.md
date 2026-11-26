@@ -205,6 +205,9 @@ A PlayStation 3 emulator for iPhone and iPad, built on RPCS3.
 ### <a href="https://github.com/liuchuancong/pure_live"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PureLive/icon.png" alt="PureLive icon" width="24" align="top"> PureLive</a>
 基于 Flutter 的开源多平台直播聚合播放器，支持 Bilibili、虎牙、斗鱼、快手、抖音、网易 CC、Twitch 及自定义 M3U/M3U8 直播源。
 
+### <a href="https://github.com/Reukix/Reloc"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Reloc/icon.png" alt="Reloc icon" width="24" align="top"> Reloc</a>
+开源 iOS 定位模拟工具，通过本地回环以 iAP2 / NMEA 向系统注入 GPS 坐标。
+
 ### <a href="https://github.com/TarbleFR/RewindBox"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/RewindBox/icon.png" alt="RewindBox icon" width="24" align="top"> RewindBox</a>
 独立维护的 NeoStation iOS 分支，内嵌 Libretro、MeloNX、Dolphin、ARMSX2 与 RPCS3。
 
