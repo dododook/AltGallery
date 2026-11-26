@@ -49,17 +49,26 @@ Riley Testut 的官方侧载商店，2.3 起支持远程 AltServer。
 ### <a href="https://github.com/Apollo-Reborn/Apollo-Reborn"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Apollo-Reborn/icon.png" alt="Apollo Reborn icon" width="24" align="top"> Apollo Reborn</a>
 A community-maintained iOS tweak that keeps Apollo for Reddit working after its June 2023 shutdown.
 
+### <a href="https://github.com/0xjohnnydev/Applesauce"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Applesauce/icon.webp" alt="Applesauce icon" width="24" align="top"> Applesauce</a>
+一款好玩的 iOS 模拟器——无需越狱即可在 iOS 15+ 上运行受支持的 32 位 iPhone 游戏，但每次启动都需要 JIT。
+
 ### <a href="https://github.com/ARMSX2/ARMSX2"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/ARMSX2/icon.png" alt="ARMSX2 icon" width="24" align="top"> ARMSX2</a>
 A native ARM64 PlayStation 2 emulator for iOS and iPadOS, forked from PCSX2.
 
 ### <a href="https://github.com/Lakr233/Asspp"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Asspp/icon.png" alt="Asspp icon" width="24" align="top"> Asspp</a>
 多账户、多区 App Store 管理工具，可下载官方 IPA 和历史版本。
 
+### <a href="https://github.com/thebcd69/bcd-games"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/BCD/icon.png" alt="BCD icon" width="24" align="top"> BCD</a>
+在 iPhone 和 iPad 上运行 Windows 游戏，内置 Steam / GOG，基于 Wine、FEX 与 Metal。
+
 ### <a href="https://github.com/XIaodou0416/Beans-Music"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Beans-Music/icon.png" alt="Beans Music icon" width="24" align="top"> Beans Music</a>
 开源 SwiftUI 多源音乐播放器，聚合网易云、QQ 音乐与酷狗。
 
-### <a href="https://github.com/thebcd69/bcd-games"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/BCD/icon.png" alt="BCD icon" width="24" align="top"> BCD</a>
-在 iPhone 和 iPad 上运行 Windows 游戏，内置 Steam / GOG，基于 Wine、FEX 与 Metal。
+### <a href="https://github.com/lcmovie/BiliSponsorBlock-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/BiliSponsorBlock/icon.webp" alt="BiliSponsorBlock icon" width="24" align="top"> BiliSponsorBlock</a>
+官方哔哩哔哩 iOS App 的 SponsorBlock 空降助手插件——自动跳过赞助、自我推广、片头片尾等片段，支持分类独立设置与进度条彩色标记。
+
+### <a href="https://github.com/maanya145/BitChord-iOS"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/BitChord/icon.webp" alt="BitChord icon" width="24" align="top"> BitChord</a>
+开源 YouTube Music 客户端，iPhone 与 iPad 通用——由 BitChord Android 版移植而来的 SwiftUI 应用，支持十余家歌词源的同步歌词、下载与 Automix 无缝过渡。
 
 ### <a href="https://github.com/breeze-project-org/Breeze"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Breeze/icon.png" alt="Breeze icon" width="24" align="top"> Breeze</a>
 使用 Flutter 构建的开源漫画阅读器，通过插件接入多个漫画源。
@@ -67,20 +76,35 @@ A native ARM64 PlayStation 2 emulator for iOS and iPadOS, forked from PCSX2.
 ### <a href="https://github.com/LinkPass888/CarCanvas"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/CarCanvas/icon.png" alt="CarCanvas icon" width="24" align="top"> CarCanvas</a>
 用自己的照片替换 CarPlay 壁纸，支持原始缓存备份与恢复。
 
+### <a href="https://github.com/moffatman/chan"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Chance/icon.webp" alt="Chance icon" width="24" align="top"> Chance</a>
+适用于 iOS 与 Android 的匿名版浏览器——基于 Flutter 的客户端，支持多栏布局、媒体画廊、收藏串帖、过滤器与归档支持。
+
 ### <a href="https://github.com/mengangs/Cloudn"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Cloudn/icon.png" alt="Cloudn icon" width="24" align="top"> Cloudn</a>
 开源网盘与短视频解析下载器，粘贴链接即可本地解析并高速下载。
 
-### <a href="https://github.com/OatmealDome/dolphin-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DolphiniOS/icon.png" alt="DolphiniOS icon" width="24" align="top"> DolphiniOS</a>
-Dolphin for iOS, reborn — a GameCube and Wii emulator for iPhone and iPad.
+### <a href="https://github.com/d2r-mobile/d2r-mobile"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/D2RMobile/icon.webp" alt="D2R Mobile icon" width="24" align="top"> D2R Mobile</a>
+在 iPhone 和 iPad 上玩《暗黑破坏神 II：狱火重生》——离线运行，支持触屏或手柄，自备 Switch 游戏文件。
 
-### <a href="https://github.com/moliango/doer"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Doer/icon.png" alt="Doer icon" width="24" align="top"> Doer</a>
-原生 iOS Linux.do 客户端，UIKit + Swift，支持多主题、小程序与插件。
+### <a href="https://github.com/aayush2622/Dartotsu"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Dartotsu/icon.webp" alt="Dartotsu icon" width="24" align="top"> Dartotsu</a>
+跨平台的动漫与漫画追番管理客户端——Dantotsu 的 Flutter 重写版，在同一个书库里同步 AniList、MyAnimeList、Simkl、Kitsu、MangaBaka 与 MangaUpdates。
 
 ### <a href="https://github.com/AhmedBafkir/DLiPA"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DLiPA/icon.png" alt="DLiPA icon" width="24" align="top"> DLiPA</a>
 用自己的 Apple ID 搜索 App Store、下载 IPA（含历史版本），并安装或分享，无需越狱。
 
+### <a href="https://github.com/moliango/doer"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Doer/icon.png" alt="Doer icon" width="24" align="top"> Doer</a>
+原生 iOS Linux.do 客户端，UIKit + Swift，支持多主题、小程序与插件。
+
+### <a href="https://github.com/OatmealDome/dolphin-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DolphiniOS/icon.png" alt="DolphiniOS icon" width="24" align="top"> DolphiniOS</a>
+Dolphin for iOS, reborn — a GameCube and Wii emulator for iPhone and iPad.
+
 ### <a href="https://github.com/MaftyManicEMU/DukeX"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/DukeX/icon.png" alt="DukeX icon" width="24" align="top"> DukeX</a>
 Original Xbox emulation for iOS, built from xemu with a native Swift interface.
+
+### <a href="https://github.com/TwilitRealm/dusklight"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Dusklight/icon.webp" alt="Dusklight icon" width="24" align="top"> Dusklight</a>
+经典冒险游戏的原生移植 — 《黄昏公主》的逆向工程重制版，具备现代渲染与灵活操控，需自备游戏镜像。
+
+### <a href="https://github.com/yangokok886/dylix"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Dylix/icon.webp" alt="Dylix icon" width="24" align="top"> Dylix</a>
+iPhone / iPad 上的 AI 插件开发工作台——内嵌 Clang / LLD 与 Logos 在设备本机编译 dylib 与 deb，并支持 GitHub / Gitee 同步与二进制分析。
 
 ### <a href="https://github.com/EhPanda-Team/EhPanda"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/EhPanda/icon.png" alt="EhPanda icon" width="24" align="top"> EhPanda</a>
 An unofficial E-Hentai App for iOS built with SwiftUI & TCA.
@@ -88,11 +112,17 @@ An unofficial E-Hentai App for iOS built with SwiftUI & TCA.
 ### <a href="https://github.com/Kianuni/Erosion-CN"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Erosion-CN/icon.png" alt="Erosion-CN icon" width="24" align="top"> Erosion-CN</a>
 iOS / iPadOS 系统配置与 MobileGestalt 研究工具箱，基于 worse_query，内置写入安全加固与原厂状态恢复。
 
-### <a href="https://github.com/claration/Feather"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Feather/icon.png" alt="Feather icon" width="24" align="top"> Feather</a>
-面向开发者证书的免费开源侧载工具，支持 AltStore 源、签名安装与 Ellekit 注入。
+### <a href="https://github.com/pwnapplehat/EscapeOS"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/EscapeOS/icon.webp" alt="EscapeOS icon" width="24" align="top"> EscapeOS</a>
+设备端浏览与备份其他应用 Data 容器的工具——无需越狱、不碰钥匙串，即可浏览、编辑、备份并恢复其 Documents、Library 与 tmp。
 
 ### <a href="https://github.com/Leviidev/Fathom"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Fathom/icon.png" alt="Fathom icon" width="24" align="top"> Fathom</a>
 iOS 上的 x86-64 PC 模拟器，用 FEXCore 把 Linux 可执行文件即时翻译到 ARM64，需要 JIT。
+
+### <a href="https://github.com/claration/Feather"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Feather/icon.png" alt="Feather icon" width="24" align="top"> Feather</a>
+面向开发者证书的免费开源侧载工具，支持 AltStore 源、签名安装与 Ellekit 注入。
+
+### <a href="https://github.com/DonutWare/Fladder"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Fladder/icon.webp" alt="Fladder icon" width="24" align="top"> Fladder</a>
+基于 Flutter 的跨平台 Jellyfin 客户端——可在线串流或同步媒体到本地，支持多服务器与多用户，并集成 Seerr。
 
 ### <a href="https://github.com/braless/FmRadio"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/FmRadio/icon.png" alt="FmRadio icon" width="24" align="top"> FmRadio</a>
 可配置的 iOS 网络收音机，支持远程电台源、按地区浏览、搜索、收藏和后台播放。
@@ -103,11 +133,20 @@ NodeSeek 第三方 iOS 客户端。
 ### <a href="https://github.com/huamidev/GestaltX"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/GestaltX/icon.png" alt="GestaltX icon" width="24" align="top"> GestaltX</a>
 iOS 27 MobileGestalt 编辑器，支持地区代码、设备预设与备份。
 
+### <a href="https://github.com/owngoal-dev/iGhostVT"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/GhostRemote/icon.webp" alt="Ghost Remote icon" width="24" align="top"> Ghost Remote</a>
+在另一台 iGhostVT 设备上打开终端——用六位数字代码配对，通过局域网或自建中继访问。
+
+### <a href="https://github.com/Yoroin/GlobalRefresh-PiP"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/GlobalRefresh/icon.webp" alt="GlobalRefresh icon" width="24" align="top"> GlobalRefresh</a>
+基于 iOS 画中画的悬浮窗高刷辅助工具——后台保活与完全隐藏，适配 iOS 15–27。
+
 ### <a href="https://github.com/pookjw/HermesEnabler"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/HermesEnabler/icon.png" alt="HermesEnabler icon" width="24" align="top"> HermesEnabler</a>
 给任意 Apple Watch 开启 Hermès / Ultra 表盘，以及显示、传感器与 Siri 调整。需要 watchOS 27.0–27.3 beta 1。
 
 ### <a href="https://github.com/Leviidev/Husk"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Husk/icon.png" alt="Husk icon" width="24" align="top"> Husk</a>
 在 iOS 上运行 Android 应用：导入 APK 即可全屏打开，需要 JIT 与调试器。
+
+### <a href="https://github.com/Absenti/iBuilder"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iBuilder/icon.webp" alt="iBuilder icon" width="24" align="top"> iBuilder</a>
+在 iPhone 上把 Switch 游戏构建成原生 iOS 应用——用你自己的游戏转储在手机上完成打包。需要 A14 或更新芯片、iOS 26。
 
 ### <a href="https://github.com/kuscholar/iDeck"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iDeck/icon.png" alt="iDeck icon" width="24" align="top"> iDeck</a>
 通过 Madeira 在 iPhone / iPad 上运行 Steam Big Picture 和兼容的 Windows 游戏。
@@ -115,11 +154,14 @@ iOS 27 MobileGestalt 编辑器，支持地区代码、设备预设与备份。
 ### <a href="https://github.com/mengangs/ipadn"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iPadn/icon.png" alt="iPadn icon" width="24" align="top"> iPadn</a>
 开源 App Store 客户端，用自己的 Apple 账号搜索、下载已购应用与历史版本。
 
-### <a href="https://github.com/XITRIX/iTorrent"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iTorrent/icon.png" alt="iTorrent icon" width="24" align="top"> iTorrent</a>
-Torrent client for iOS.
+### <a href="https://github.com/NexSideloading/iRAM-Plus"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iRAM-Plus/icon.webp" alt="iRAM+ icon" width="24" align="top"> iRAM+</a>
+在设备上为侧载应用开启 Increased Memory Limit——登录签名该应用的 Apple 账户、添加权限后重新安装即可。仅适用于 Apple 账户签名的应用。
 
 ### <a href="https://github.com/intraducine/iridium"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Iridium/icon.png" alt="Iridium icon" width="24" align="top"> Iridium</a>
 实验性 iPhone / iPad Windows 游戏运行时，支持触控、键鼠与手柄，需要 JIT 和自备游戏文件。
+
+### <a href="https://github.com/XITRIX/iTorrent"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/iTorrent/icon.png" alt="iTorrent icon" width="24" align="top"> iTorrent</a>
+Torrent client for iOS.
 
 ### <a href="https://github.com/xiaoqi419/JoyComic"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/JoyComic/icon.png" alt="JoyComic icon" width="24" align="top"> JoyComic</a>
 哔咔 & 禁漫双源 iOS 漫画阅读器。
@@ -142,14 +184,14 @@ Torrent client for iOS.
 ### <a href="https://github.com/mxhm11cr/LinuxRunner"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/LinuxRunner/icon.png" alt="LinuxRunner icon" width="24" align="top"> LinuxRunner</a>
 在 iOS 上运行 ARM64 Linux 应用和桌面环境，无需越狱、虚拟机或 JIT。
 
+### <a href="https://github.com/LiveContainer/LiveContainer"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/LiveContainer+SideStore/icon.png" alt="LiveContainer+SideStore icon" width="24" align="top"> LiveContainer+SideStore</a>
+An app launcher that runs iOS apps without actually installing them, with a built-in SideStore for refreshing your apps.
+
 ### <a href="https://github.com/lpfoj/lsx4"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/LSX4/icon.png" alt="LSX4 icon" width="24" align="top"> LSX4</a>
 开源 PS4/PS5 模拟器；当前 iOS 构建支持 PS4 游玩，需要 iOS 26+ 与 JIT。
 
 ### <a href="https://github.com/willfaust/Madeira"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Madeira/icon.png" alt="Madeira icon" width="24" align="top"> Madeira</a>
 在 iPhone 上通过 Wine、FEX-Emu 与 Metal 运行未修改的 x86-64 Windows 游戏。
-
-### <a href="https://github.com/LiveContainer/LiveContainer"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/LiveContainer+SideStore/icon.png" alt="LiveContainer+SideStore icon" width="24" align="top"> LiveContainer+SideStore</a>
-An app launcher that runs iOS apps without actually installing them, with a built-in SideStore for refreshing your apps.
 
 ### <a href="https://github.com/kodjodevf/mangayomi"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Mangayomi/icon.png" alt="Mangayomi icon" width="24" align="top"> Mangayomi</a>
 Read manga, novels, and watch anime.
@@ -157,11 +199,20 @@ Read manga, novels, and watch anime.
 ### <a href="https://github.com/Manic-EMU/ManicEMU"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/ManicEMU/icon.png" alt="ManicEMU icon" width="24" align="top"> ManicEMU</a>
 All-in-one retro game emulator for iOS, with a clean interface and broad platform support.
 
+### <a href="https://github.com/EPXiaohua/MD3Music-iOS"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/MD3Music-iOS/icon.webp" alt="MD3Music icon" width="24" align="top"> MD3Music</a>
+基于酷狗音乐 API 的 Material 3 音乐播放器 — 内置嵌入式 Rust API 服务器，支持逐字歌词与多种音频输出。
+
+### <a href="https://github.com/999sian/melee-pc"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Melee-PC/icon.webp" alt="Melee-PC icon" width="24" align="top"> Melee-PC</a>
+《任天堂明星大乱斗DX》的原生移植版 — 需要自行提供原版游戏光盘的转储才能游玩。
+
 ### <a href="https://github.com/youshen2/MeloX"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/MeloX/icon.png" alt="MeloX icon" width="24" align="top"> MeloX</a>
 原生 SwiftUI 第三方网易云音乐客户端，参考 Apple Music 界面。
 
 ### <a href="https://github.com/ResistanceTo/MiniWatts"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/MiniWatts/icon.png" alt="MiniWatts icon" width="24" align="top"> MiniWatts</a>
 基于私有 API 的 iPhone 电池与充电监测，显示充电器功率、电芯功率、发热与各温度传感器。
+
+### <a href="https://github.com/coflyn/Mori"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Mori/icon.webp" alt="Mori icon" width="24" align="top"> Mori</a>
+支持 16 个平台的本地媒体下载器——无水印保存视频、图片与音频，自带流嗅探、音频提取与 PDF 处理工具。
 
 ### <a href="https://github.com/mornyeapp/Mornye"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Mornye/icon.png" alt="Mornye icon" width="24" align="top"> Mornye</a>
 Flutter + Rust 音乐应用，支持高解析播放、逐字歌词、下载扩展，以及 SMB / WebDAV / Subsonic 串流。
@@ -178,6 +229,12 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/dododook/my-ipas/releases/tag/Novella-2.7.0"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Novella/icon.png" alt="Novella icon" width="24" align="top"> Novella</a>
 轻书架第三方客户端，基于 React Native 构建，面向 iOS / iPadOS。上游已归档，源里保留 2.7.0。
 
+### <a href="https://github.com/optimalabsistem/NusaNX"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/NusaNX/icon.webp" alt="NusaNX icon" width="24" align="top"> NusaNX</a>
+在设备上把 Switch 游戏容器转换为原生 iOS/iPadOS 应用——本地解密 .nsp/.xci 并打包成可安装的 .ipa，Switch 着色器直接翻译为 Apple Metal。
+
+### <a href="https://github.com/NuvioMedia/NuvioMobile"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Nuvio/icon.webp" alt="Nuvio icon" width="24" align="top"> Nuvio</a>
+接入自有片源的开源媒体客户端——自动匹配海报、评分与字幕，进度在手机、桌面与电视之间同步。
+
 ### <a href="https://github.com/yaog6700-bit/Odysseus1"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Odysseus/icon.png" alt="Odysseus icon" width="24" align="top"> Odysseus</a>
 基于 Feather 的本机签名商店，用自己的证书或 Apple ID 签名并安装应用。
 
@@ -190,8 +247,14 @@ Free Navidrome client & Subsonic music player with an Apple Music-inspired inter
 ### <a href="https://github.com/hugeBlack/OpenParsec"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/OpenParsec/icon.png" alt="OpenParsec icon" width="24" align="top"> OpenParsec</a>
 开源 Parsec 客户端，支持鼠标、键盘与触屏。
 
+### <a href="https://github.com/huami1314/orca-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Orca/icon.webp" alt="Orca icon" width="24" align="top"> Orca</a>
+Orca（智能体开发环境）的 iPhone 客户端——与智能体对话、在内置 Ghostty 终端里跟踪工具调用，并用画中画保持会话，配对 Mac 上的 Orca 即可使用。
+
 ### <a href="https://github.com/MakrSas/orchard-ios"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Orchard/icon.png" alt="Orchard icon" width="24" align="top"> Orchard</a>
 在 iPhone 上通过 QEMU apple-vm 启动 arm64 macOS Ventura 客户机，需要 JIT 和自备 macOS 虚拟机。
+
+### <a href="https://github.com/g8row/PhotosBackup"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PhotosBackup/icon.webp" alt="Photos Backup icon" width="24" align="top"> Photos Backup</a>
+设备端 Google Photos 备份——无需电脑伴侣，直接从 iPhone 备份选定的照片、视频和相册到 Google Photos。
 
 ### <a href="https://github.com/bggRGjQaUbCoE/PiliPlus"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/PiliPlus/icon.png" alt="PiliPlus icon" width="24" align="top"> PiliPlus</a>
 使用Flutter开发的BiliBili第三方客户端。
@@ -214,8 +277,8 @@ A PlayStation 3 emulator for iPhone and iPad, built on RPCS3.
 ### <a href="https://github.com/TarbleFR/RewindBox"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/RewindBox/icon.png" alt="RewindBox icon" width="24" align="top"> RewindBox</a>
 独立维护的 NeoStation iOS 分支，内嵌 Libretro、MeloNX、Dolphin、ARMSX2 与 RPCS3。
 
-### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.5"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
-V2EX 第三方 iOS 客户端。
+### <a href="https://github.com/iam567/rich4-renew-app"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Rich4Renew/icon.webp" alt="Rich4Renew icon" width="24" align="top"> Rich4Renew</a>
+大富翁4 高清重制版，新增歌舞伎町地图与大富豪模式 — Vite + TypeScript 重写的游戏本体，Capacitor 打包成 iOS App，规则依原版反组译还原。
 
 ### <a href="https://github.com/seanhowarthdev/Roam-Control"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam-Control/icon.png" alt="Roam Control icon" width="24" align="top"> Roam Control</a>
 SwiftUI 位置模拟工具，可在自己的 iPhone 上选择、测试并移动上报位置。
@@ -223,8 +286,17 @@ SwiftUI 位置模拟工具，可在自己的 iPhone 上选择、测试并移动�
 ### <a href="https://github.com/ekomlenovic/rush_hour_ios_android"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/RushHours/icon.png" alt="Rush Hours icon" width="24" align="top"> Rush Hours</a>
 免费滑块交通解谜：挪开车辆让红车出去。700+ 关卡、每日挑战和关卡编辑器，无广告。
 
+### <a href="https://github.com/faroukbmiled/RyukSign"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/RyukSign/icon.webp" alt="RyukSign icon" width="24" align="top"> RyukSign</a>
+iOS 端本地应用签名与安装工具 — Feather 分支，附带插件管理器、WebDAV 文件传输与后台下载。
+
+### <a href="https://github.com/dododook/my-ipas/releases/tag/Roam-1.0.0.5"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Roam/icon.png" alt="Röam icon" width="24" align="top"> Röam</a>
+V2EX 第三方 iOS 客户端。
+
 ### <a href="https://github.com/donbytyqi/scenebox"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/SceneBox/icon.png" alt="SceneBox icon" width="24" align="top"> SceneBox</a>
 Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in SwiftUI.
+
+### <a href="https://github.com/xibrox/Shirox"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Shirox/icon.webp" alt="Shirox icon" width="24" align="top"> Shirox</a>
+面向 iOS 的个人动漫与漫画库管理器——通过 AniList 和 MyAnimeList 追踪进度，并从你连接的来源在 iPhone、iPad 与 Mac 上播放。
 
 ### <a href="https://github.com/SideStore/SideStore"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/SideStore/icon.png" alt="SideStore icon" width="24" align="top"> SideStore</a>
 无需电脑的社区侧载商店，用 Apple ID 在设备上签名并刷新 IPA。
@@ -232,11 +304,17 @@ Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in Sw
 ### <a href="https://github.com/akinal5765-byte/Silverphase"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Silverphase/icon.png" alt="Silverphase icon" width="24" align="top"> Silverphase</a>
 原生胶片与相纸工艺模拟器，从曝光、显影到扫描在同一套成像管线里完成。
 
+### <a href="https://github.com/June6699/dart_simple_live"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/SimpleLive/icon.webp" alt="Simple Live icon" width="24" align="top"> Simple Live</a>
+支持弹幕与 IPTV 的开源多平台直播聚合播放器——基于 Flutter，同一套代码覆盖手机、桌面与电视端。
+
 ### <a href="https://github.com/can4hou6joeng4/Sonar"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sonar/icon.png" alt="Sonar icon" width="24" align="top"> Sonar</a>
 原生 SwiftUI 音乐播放器，支持 QQ / 网易云搜索、歌词与本地歌单。
 
 ### <a href="https://github.com/gholts/sphere."><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Sphere/icon.png" alt="Sphere icon" width="24" align="top"> Sphere</a>
 原生 iOS 局域网代理面板，控制 Mihomo / Sing-box 后端。
+
+### <a href="https://github.com/team-spotube/spotube"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Spotube/icon.webp" alt="Spotube icon" width="24" align="top"> Spotube</a>
+跨平台开源音乐流媒体应用——通过插件接入你自己的音乐源，支持时间同步歌词与离线下载。
 
 ### <a href="https://github.com/ishtiaq156/stats"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Stats/icon.png" alt="Stats icon" width="24" align="top"> Stats</a>
 在 iPhone 上看 Mac 系统状态，本地加密连接，需配套 Mac 端。
@@ -247,11 +325,17 @@ Torrent streaming client for iOS, iPadOS, tvOS and Mac (Catalyst), written in Sw
 ### <a href="https://github.com/swipt-automation/swipt"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Swipt/icon.png" alt="Swipt icon" width="24" align="top"> Swipt</a>
 iOS 自动化平台：JavaScript swiplets、TypeScript SDK 与 MCP API。
 
+### <a href="https://github.com/ndgthuan/tdrive"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/TDrive/icon.webp" alt="TDrive icon" width="24" align="top"> TDrive</a>
+把 Telegram 私人存储变成云盘——浏览、搜索、预览并挂载保存在你自己 Telegram 账号中的文件。
+
 ### <a href="https://github.com/infinityf4p/TiebaPure-iOS"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/TiebaPure/icon.png" alt="TiebaPure icon" width="24" align="top"> TiebaPure</a>
 原生 SwiftUI 构建的非官方贴吧 iOS 客户端，支持浏览、搜索、收藏、媒体查看与本地阅读记录。
 
 ### <a href="https://github.com/Suwayomi/Suwayomi-Tsumiru"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/Suwayomi-Tsumiru/icon.png" alt="Tsumiru icon" width="24" align="top"> Tsumiru</a>
 A native manga & manhwa reader for Suwayomi-Server, built for long webtoon binges.
+
+### <a href="https://github.com/InukaAsith/TwinDesk"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/TwinDesk/icon.webp" alt="TwinDesk icon" width="24" align="top"> TwinDesk</a>
+把 iPhone 与你的电脑合为一台工作台——共享屏幕、文件、剪贴板、通知与摄像头，一套鼠标键盘通用，支持 Wi-Fi、USB 与蓝牙连接。
 
 ### <a href="https://github.com/utmapp/UTM"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/UTM/icon.png" alt="UTM icon" width="24" align="top"> UTM</a>
 A full featured virtual machine host for iOS — run Windows, Android, and more on your iPhone and iPad.
@@ -274,8 +358,14 @@ iOS 26/27 文件管理器（worse_query），可浏览其他 App 容器、编辑
 ### <a href="https://github.com/Kianuni/WQGuard"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/WQGuard/icon.png" alt="WQGuard icon" width="24" align="top"> WQGuard</a>
 iOS 沙盒越权检测与侧载 IPA 审查工具，面向 iOS 26.2+ / 27.x。
 
+### <a href="https://github.com/hseons/WQManager"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/WQManager/icon.webp" alt="WQManager icon" width="24" align="top"> WQManager</a>
+无需越狱的 App 数据备份与缓存清理工具 — 备份可导出为 `.wqbackup` 包，恢复写前自动安全备份、写后哈希校验与失败回滚，清理只动所选 App 的缓存与临时目录。
+
 ### <a href="https://github.com/MchinaMd57764/WQToolkit"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/WQToolkit/icon.png" alt="WQToolkit icon" width="24" align="top"> WQToolkit</a>
 浏览、清理自己的 App 容器与 App Group，无需越狱。
+
+### <a href="https://github.com/suversal/WrapPin"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/WrapPin/icon.webp" alt="WrapPin icon" width="24" align="top"> WrapPin</a>
+本机虚拟定位与步行路线测试工具 — 通过设备配对在 iPhone 上固定位置、模拟步行或驾车路线，停止时恢复真实位置。
 
 ### <a href="https://github.com/mrdrvt99/YouProEXTRA"><img src="https://raw.githubusercontent.com/dododook/AltGallery/master/apps/YouProEXTRA/icon.png" alt="YouProEXTRA icon" width="24" align="top"> YouProEXTRA</a>
 YouTube mod for iOS packed with customizable tweaks — no ads, background playback, downloads, and more.
