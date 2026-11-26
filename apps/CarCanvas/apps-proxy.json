@@ -1,0 +1,45 @@
+{
+  "name": "CarCanvas",
+  "subtitle": "CarCanvas AltStore source by AltGallery & altgen",
+  "description": "Auto-updated AltStore source for CarCanvas",
+  "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/CarCanvas/icon.png",
+  "website": "https://github.com/LinkPass888/CarCanvas",
+  "tintColor": "#5B8DEF",
+  "apps": [
+    {
+      "name": "CarCanvas",
+      "bundleIdentifier": "com.carcanvas.wq",
+      "developerName": "LinkPass888",
+      "subtitle": "自定义 CarPlay 壁纸",
+      "localizedDescription": "CarCanvas，用自己的照片替换 CarPlay 壁纸，支持原始缓存备份与恢复。基于 worse_query，需要 iOS 26.0–26.7.2 或 27.0–27.2.1，签名时需保留 App Group。",
+      "iconURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/CarCanvas/icon.png",
+      "screenshots": [
+        "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/CarCanvas/images/wallpaper-picker.png"
+      ],
+      "tintColor": "#5B8DEF",
+      "versions": [
+        {
+          "version": "2.1.2",
+          "date": "2026-11-18T07:06:55Z",
+          "localizedDescription": "### 简体中文\n\n#### 变更\n- **高对比自适应裁切框。** 重新设计裁切框，加入双色高对比边框、四角加粗角标与三分法九宫格参考线，画布底台与框外 50% 半透明遮罩跟随系统浅色／深色模式自适应，在纯白、纯黑及复杂图案壁纸上均清晰可见，同时高亮当前匹配的尺寸／比例按钮。\n- **优化裁切拖动跟手度。** 裁切蒙版静态缓存免重绘，并将拖动手势起始阈值降至 1pt，消除起手顿挫感。\n- **发版安装包附带版本号。** 构建并发布的未签名安装包文件名改为 `CarCanvas-v<版本号>-unsigned.ipa`（如 `CarCanvas-v2.1.2-unsigned.ipa`）。\n\n### English\n\n#### Changed\n- **High-contrast adaptive crop frame.** Redesigned the crop overlay with dual-contrast borders, bold corner brackets and rule-of-thirds guides over an adaptive light/dark stage and 50% outer scrim, staying legible across pure white, pure black and busy wallpapers while highlighting the active size or ratio preset.\n- **Smoother crop dragging.** Cached the static crop overlay during gestures and lowered the drag activation threshold to 1pt to eliminate initial stutter.\n- **Versioned release IPA filename.** Packaged unsigned IPA artifacts now include the version string (`CarCanvas-v<version>-unsigned.ipa`, e.g. `CarCanvas-v2.1.2-unsigned.ipa`).\n\n### 日本語\n\n#### 変更\n- **高コントラストな自動適応トリミング枠。** 二重コントラストの枠線、四隅の太線コーナー、三分割グリッドを追加し、背景と枠外の 50% 半透明マスクをシステムのライト／ダークモードに合わせて自動切り替え。白一色・黒一色・複雑な柄の壁紙でも見やすくし、選択中のサイズ／比率ボタンを強調表示します。\n- **ドラッグ操作の滑らかさを改善。** トリミングオーバーレイの再描画を抑え、ドラッグ開始のしきい値を 1pt に下げることで動かし始めの引っかかりを解消しました。\n- **リリース IPA ファイル名にバージョンを付与。** 未署名 IPA のファイル名を `CarCanvas-v<バージョン>-unsigned.ipa`（例：`CarCanvas-v2.1.2-unsigned.ipa`）に変更しました。\n\n**安装：** 在 AltStore / SideStore / Feather 中添加软件源 `https://linkpass888.github.io/Sideload/source.json`，即可直接安装与更新，无需手动下载 IPA。入口页 <https://linkpass888.github.io/Sideload/>",
+          "downloadURL": "https://gh-proxy.com/https://github.com/LinkPass888/CarCanvas/releases/download/v2.1.2/CarCanvas-v2.1.2-unsigned.ipa",
+          "size": 1036546,
+          "minOSVersion": "26.0"
+        }
+      ]
+    }
+  ],
+  "news": [
+    {
+      "appID": "com.carcanvas.wq",
+      "title": "CarCanvas 2.1.2 · 18 Nov 2026",
+      "identifier": "CarCanvas-release-v2.1.2",
+      "caption": "CarCanvas 2.1.2 is available.",
+      "date": "2026-11-18T07:06:55Z",
+      "tintColor": "#5B8DEF",
+      "imageURL": "https://gh-proxy.com/https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/CarCanvas/images/news.png",
+      "notify": true,
+      "url": "https://github.com/LinkPass888/CarCanvas/releases/tag/v2.1.2"
+    }
+  ]
+}
