@@ -220,6 +220,30 @@
       ]
     },
     {
+      "name": "Applesauce",
+      "bundleIdentifier": "io.github.johnny901901901.applesauce",
+      "developerName": "Unofficial iOS port contributors",
+      "subtitle": "A playful emulator for iOS",
+      "localizedDescription": "Plays supported 32-bit iPhone games on modern devices, carrying both the HyperHLE v1.0.6 and touchHLE 0.2.3 emulator cores so you can pick which one runs each game. An unaffiliated fork, endorsed by neither project. JIT must be enabled for each new app process. No games are included.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Applesauce/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Applesauce/images/library-games.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Applesauce/images/settings.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Applesauce/images/about.webp"
+      ],
+      "tintColor": "#F01F14",
+      "versions": [
+        {
+          "version": "0.4.2",
+          "date": "2026-08-15T23:21:28Z",
+          "localizedDescription": "# Applesauce 0.4.2\n\nFive fixes, mostly found by pushing Blade Dash and Talking Tom until they\nbroke. Nothing about installing or your library changes — pick the same IPA\nyou used for 0.4.0.\n\nApplesauce is an unaffiliated fork. The emulation is the work of\n[touchHLE](https://github.com/touchHLE/touchHLE) and its fork\n[HyperHLE](https://github.com/HyperHLE/HyperHLE); neither project is connected\nto this one or endorses it. Please report problems here rather than to them.\n\n## The on-screen keyboard now appears in games that use text fields\n\nGames that focus a text field — The Sims Medieval naming your Sim or kingdom,\nPeggle's profile certificate, Blokus, Spore — loaded the iOS keyboard\nsubsystem but no keyboard ever came up, so those names could not be entered.\nThe cause was run-loop starvation: the emulator holds the main thread and only\nlet iOS service its run loop for microseconds per frame, far too little for the\nasynchronous keyboard-presentation handshake to finish, so iOS invalidated the\nkeyboard service connection. The emulator now services the run loop generously\nwhile a text field is focused, which is not performance-sensitive because those\nare name-entry screens.\n\n## Talking-character apps can use the microphone\n\nApps like Talking Tom sat silent because input audio queues were created but\nnever delivered any audio. They now capture through the microphone, and iOS\nshows its normal microphone-permission prompt the first time a game records.\nAlong the way this also fixes two things that made Talking Tom unusable:\n\n- **It no longer freezes after a couple of taps.** Its recorder treated a\n  buffer that reported zero packets as empty and re-enqueued it without ever\n  looking at the audio, so it waited forever for speech that had already\n  arrived. The real sample count is reported now.\n- **Opening the upgrade screen no longer crashes.** That screen loads a\n  UTF-16 text file, the format Apple recommended for older apps, and the\n  loader used to abort on it. It reads UTF-16 in either byte order now.\n\n## Games that crashed on launch now start\n\nBlade Dash — and other games built on Google's protobuf/Tag Manager runtime —\ncrashed immediately with a stack overflow or an infinite loop. Three separate\ncauses:\n\n- The old-toolchain `[super …]` call was unbound, turning every super-call\n  into infinite recursion on the object itself.\n- `NSAllocateObject` was implemented by re-sending `alloc`, which recursed\n  forever whenever an app allocates with a computed size.\n- Legitimately deep start-up chains (protobuf nests initialisation through\n  hundreds of classes) overflowed the small per-thread host stack before the\n  recursion guard could catch it; threads get a much larger stack now.\n\n## Notes\n\nThese fixes are in the HyperHLE core and the shared iOS layer. As always, JIT\nmust be enabled before starting a game, and gameplay behaviour on a physical\ndevice can differ from the simulator — please report anything that still\nmisbehaves, with the log from **On My iPhone → Applesauce → touchhle-host.log**.",
+          "downloadURL": "https://github.com/0xjohnnydev/Applesauce/releases/download/ios-v0.4.2/Applesauce-iOS-unsigned.ipa",
+          "size": 41666853,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
       "name": "ARMSX2",
       "bundleIdentifier": "com.armsx2.ios",
       "developerName": "ARMSX2",
@@ -315,6 +339,54 @@
       ]
     },
     {
+      "name": "BiliSponsorBlock",
+      "bundleIdentifier": "tv.danmaku.bilianime",
+      "developerName": "lcmovie",
+      "subtitle": "官方哔哩哔哩 iOS App 的 SponsorBlock 空降助手插件",
+      "localizedDescription": "适用于官方哔哩哔哩 iOS App 的空降助手插件，通过注入 dylib 的方式提供 SponsorBlock 片段识别、提示与自动跳过功能。可分别为赞助、自我推广、互动提醒、片头片尾、离题等片段分类设置处理方式，并在播放器进度条上以分类颜色标记片段。借助 BilibiliSponsorBlock 项目获取空降片段数据。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BiliSponsorBlock/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BiliSponsorBlock/images/preview-1.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BiliSponsorBlock/images/preview-2.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BiliSponsorBlock/images/preview-3.webp"
+      ],
+      "tintColor": "#FB7299",
+      "versions": [
+        {
+          "version": "9.10.0",
+          "date": "2026-10-19T07:09:39Z",
+          "localizedDescription": "## ✨ 主要更新\r\n\r\n### 片段跳过\r\n- 使用上游 BilibiliSponsorBlock 的片段数据。\r\n- 支持按分类设置总是跳过、每次播放跳过一次、手动跳过、仅显示或禁用。\r\n- 优化半屏、横屏全屏及竖屏播放器适配。\r\n- 优化手动拖动进度后的跳过恢复逻辑。\r\n- 自动跳过后显示提示，支持点击撤销。\r\n- 在进度条中显示片段标记，弹出控制条的标记随控制条显示和收起。\r\n\r\n### 片段提交\r\n- 新增参考 PiliPlus 交互设计的片段提交面板。\r\n- 支持添加多个片段、取当前播放时间、手动编辑时间、选择分类与动作、预览及确认提交。\r\n- 提交按钮随播放器控制菜单显示和收起，减少对视频画面的遮挡。\r\n\r\n### 设置与更新\r\n- 优化设置入口、字体、颜色、间距及开关布局。\r\n- 空降助手入口仅显示在主设置页面顶部。\r\n- 新增 GitHub 稳定发行版更新提醒，支持手动检查。\r\n- 保留跳过次数、节省时间统计及个人提交身份。\r\n- 项目链接统一显示为“本项目地址”和“上游地址”。\r\n\r\n## 📦 安装方式\r\n\r\n1. 下载 `BiliSponsorBlock-v2.0.0.dylib`。\r\n2. 移除旧版插件注入项，只保留本版本。\r\n3. 沿用原来的注入、重签名和安装方式。\r\n4. 重启 App，在「设置 → 空降助手 → 版本号」确认显示 `2.0.0`。\r\n\r\n或自签安装bili-9.10.0-BiliSponsorBlock.V2.0.0.ipa\r\n\r\n升级无需清除 App 数据。完整发行包内附安装说明及 SHA-256 校验信息。\r\n\r\n## 📱 适配说明\r\n\r\n- 架构：ARM64\r\n- 最低系统：iOS 15.0\r\n- 主要适配版本：哔哩哔哩 iOS 9.0.0及以后；哔哩哔哩国际版 v6.3.0及以后（原白哔哩不支持）\r\n\r\n静音和整片标记可提交，当前版本不自动执行静音或整片拦截。\r\n\r\n## 🙏 致谢\r\n\r\n- [BilibiliSponsorBlock](https://github.com/hanydd/BilibiliSponsorBlock)：上游项目与片段数据服务。\r\n- [PiliPlus](https://github.com/bggRGjQaUbCoE/PiliPlus)：空降助手交互与提交方案参考。",
+          "downloadURL": "https://github.com/lcmovie/BiliSponsorBlock-ios/releases/download/v2.0.0/bili-9.10.0-BiliSponsorBlock.V2.0.0.ipa",
+          "size": 279835183,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "BitChord",
+      "bundleIdentifier": "com.music.bitchord",
+      "developerName": "Hero154",
+      "subtitle": "Open-source YouTube Music client for iPhone and iPad",
+      "localizedDescription": "A native SwiftUI port of BitChord for Android. Search, browse and play the YouTube Music catalogue, with synced lyrics from a dozen providers, downloads, crossfade, Automix, SMB and WebDAV libraries, Last.fm scrobbling and Listen Together. Requires iOS 17 or later.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BitChord/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BitChord/images/home.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BitChord/images/explore.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BitChord/images/library.webp"
+      ],
+      "tintColor": "#FC546C",
+      "versions": [
+        {
+          "version": "1.0.2",
+          "date": "2026-11-13T12:21:05Z",
+          "localizedDescription": "Improves playback on slow connections and resolves tester reported issues.\n\nNew\n- Send lyrics as a card, choose which lines to include.\n- Direct source streaming (new option that is disabled by default). \"Queue only\" starts upcoming songs in the queue on a higher priority source found ahead of time. \"Always\" waits up to 12 seconds for one on each track. YouTube will still be used as fallback.\n- Lockscreen animated covers.\n- App icon selector in Settings (5 icons).\n- Audio Quality shown in Discord card when hovering over the cover.\n- Sign-in and Scrobbling working with Last.fm.\n- Log file is stored on the device. This can be shared via the Settings (row) or disabled.\n\nFixed\n- Songs will now start playing on a slow connection and will no longer cut out or jump to the next song.\n- Crossfade will no longer lag.\n- Songs would cut out halfway through due to downloading in the background.\n- A song can no longer be replaced by a copy more than 5 seconds longer or shorter than it.\n- Lyrics would get ahead if you skip through the song. Now in sync again.\n- Offline Backup set to Always now plays from the device.\n- Cover is now shown with the player and if you skip it shows the next cover instantly.\n- Downloads will now restart the track if a partial file goes missing. Songs that have been duplicated are also counted once.\n- Long lists can be scrolled through without rebuilding each row.\n\nOverwrite the previous app. Downloads, Library & Settings are retained.\n\nInstall from the sideload source `https://bitchord.hero154.com/source.json`. The attached IPA is build 9, the same file as on the source. SHA-256: 96da0c1248ca33fee6e9bba4de369fc63c76caced3f6ec487f3a332e0196af42.",
+          "downloadURL": "https://github.com/maanya145/BitChord-iOS/releases/download/v1.0.2/BitChord-1.0.2-9.ipa",
+          "size": 55046727,
+          "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
       "name": "Breeze",
       "bundleIdentifier": "com.zephyr.breeze",
       "developerName": "windy",
@@ -356,6 +428,28 @@
       ]
     },
     {
+      "name": "Chance",
+      "bundleIdentifier": "com.moffatman.chan",
+      "developerName": "Callum Moffat",
+      "subtitle": "Imageboard browser for iOS and Android",
+      "localizedDescription": "Chance is an imageboard browser built with Flutter for iOS and Android, with features like multi-column layout, media gallery, saved threads, filters, and archive support.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Chance/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Chance/images/main.webp"
+      ],
+      "tintColor": "#497C4A",
+      "versions": [
+        {
+          "version": "1.2.9",
+          "date": "2026-11-22T21:26:03Z",
+          "localizedDescription": "**You will not be able to downgrade from this version due to changes in the saved database format. Please backup before upgrading if you want to be able to downgrade**\r\n\r\n---\r\n\r\n## New Features\r\n\r\n- iPhone Duo interface\r\n  - Sidebar aligned with iOS standard\r\n  - Status bar handling\r\n  - New compact sidebar layout for different functions\r\n  - Swipe left/right at bottom of screen to switch tabs even with sidebar layout\r\n- AyaseQuart archive support\r\n- Rewrite of tree comment tracking\r\n  - For \"new posts inserted at bottom\" mode (default)\r\n  - Goal is that posts are never inserted into existing/scrolled-past trees\r\n  - Add the parent as a dimmed context in the inserted subtrees\r\n- Customizable filter highlight color\r\n  - Matched text is highlighted specifically\r\n- Text highlighting combines across multiple sources\r\n\r\n## General Improvements\r\n\r\n- Added video gestures and controls to soundposts\r\n- Better handling of Reddit login firewall\r\n  - Added alternative API to /morechildren\r\n- Added haptic feedback in a lot of places\r\n- Tweaks to the luck algorithm\r\n- Show usernames as Reddit quotelinks instead of identifiers (not relevant)\r\n- Long-press \"#\" button in search page to open a board/thread/comment by URL\r\n- Use alternative FoolFuuka search page to bypass server-side block\r\n- Rewrite archive handling\r\n  - Goal is that thread doesn't get stuck in archived mode\r\n- Optimized new tab board picker\r\n  - If closed without picking a board, the new tab will be closed too\r\n  - Appears instantly without flash of empty catalog\r\n- Added a long-press menu to cross-thread quotelinks\r\n- Drag to reorder saved threads in drawer (when sorting by order added)\r\n\r\n## Tweaks\r\n\r\n- Board switcher optimizations\r\n- Smarter selection of next tab after closing a tab\r\n- Format boards according to site in error messages\r\n- Optimized xenforo-based forum loading performance\r\n- Hero animation from rich link thumbnails\r\n- \"hn\" shortcut for Hacker News in board switcher\r\n- Optimized shorter thread indicator menu error messages\r\n- Don't insert (OP) quotelink on top level Reddit comments\r\n- Try to preserve Reddit title when thread is deleted\r\n- Rewrote search query pagination interface\r\n- Centered active thread in catalog instead of aligning to bottom\r\n- New style for selected threads to match tabs\r\n- Better support for cyclic/infinite threads on dvach and 8chan\r\n- Highlight currently selected board in board switcher\r\n\r\n## Bugfixes\r\n\r\n- Scrolling to top when tapping buttons at top of screen (iPad, iPhone Duo)\r\n- Timeout when trying to register with Firebase notifications\r\n- Gray screen flash in captcha popup\r\n- False-positive compatibility error due to cached GREASE TLS algorithms\r\n- Broken videos when swiping quickly on Reddit\r\n- Some boards on 8chan tried to post 5 images per post instead of 3\r\n- Potential fixes for \"App not responding\" on Android\r\n- (Dead) seen in quotelinks in search results\r\n- (OP) not seen in quotelink search results\r\n- Try to avoid stale site data when files per post changes\r\n- Newly discovered pages were not marked as unread\r\n- Missing handling for loading a forum post from an unloaded page\r\n- Attachment preloading errors popped up for background threads\r\n- Reloading threads could get stuck if switching tab during load\r\n- Post scroll position was not optimal when loading an earlier forum page\r\n- Poor handling of non-existent subreddits\r\n- Cancelling one http/2 request could break the others on the same connection\r\n- Reddit crossposts with quotes had broken OPs\r\n- Cloudflare could popup from reply box image suggestion requests\r\n- Edited posts not properly recognized as changed\r\n- Reddit threads could be come corrupted on boards with very high identifier values\r\n- Error loading reddit children could cause an improper alert popup\r\n- Replies count/button not shown in split tree scenario\r\n- Transient message popups had no height cap\r\n- Thread auto-update would try to extend deep comment chains\r\n  - Since this is now heavily restricted by Reddit, just refresh the thread root\r\n- new/unseen label always shown on unloaded comments on Reddit\r\n- Post highlighting transitioned at end of refresh instead of at beginning\r\n- Comment loading errors were not dismissible by tapping in the background\r\n- Posting on holotower gave an error message since PHP update\r\n- gelbooru image urls could not be loaded due to their hotlink protection\r\n- Reddit username /u/ prefix handling was not consistent\r\n- Non-favourited subreddits would disappear after 3 days\r\n- Many search query fields would not enable the search button when changing them\r\n- OP post always grew in height on load when discovering how many replies it had\r\n- Long search filters got cut off in the search history\r\n- Thread had to reload when switching between one/two pane layout\r\n- Rich links could get cut off when width was limited\r\n- QUIC and HTTP/3 crash fixes\r\n- Poor handling of some weird dvach sticky threads\r\n- Precaching attempted to download deleted files\r\n- Reordering watched threads from drawer broke in reverse-sort order",
+          "downloadURL": "https://github.com/moffatman/chan/releases/download/v1.2.9%2B126-forked-engine/Chance.ipa",
+          "size": 32818095,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
       "name": "Cloudn",
       "bundleIdentifier": "com.mengangs.Cloudn",
       "developerName": "mengangs",
@@ -376,6 +470,55 @@
           "downloadURL": "https://github.com/mengangs/Cloudn/releases/download/v1.4.2/Cloudn-v1.4.2.ipa",
           "size": 9034290,
           "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "D2R Mobile",
+      "bundleIdentifier": "org.d2rmobile.app",
+      "developerName": "d2r-mobile",
+      "subtitle": "Play Diablo II: Resurrected on iPhone and iPad",
+      "localizedDescription": "Play Diablo II: Resurrected offline on iPhone and iPad with touch or controller support. Bring your own Nintendo Switch game files — the app includes no game content.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/D2RMobile/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/D2RMobile/images/map.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/D2RMobile/images/trove.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/D2RMobile/images/score.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/D2RMobile/images/tomb.webp"
+      ],
+      "tintColor": "#F09020",
+      "versions": [
+        {
+          "version": "1.0",
+          "date": "2026-10-13T01:28:21Z",
+          "localizedDescription": "## English\n\n**This release fixes the v1.0 shell, which could not be packaged by anyone.** If you downloaded `D2RMobile-shell.ipa` from v1.0, replace it with the one on this page and update the repository to this version.\n\n### What was wrong in v1.0\n\nPackaging with the v1.0 shell and the public repository went through every step and then stopped at the final check with:\n\n```\n[x] 有 1 项没做出来：dm/bootlist.tsv\n```\n\n(1 item was not produced: `dm/bootlist.tsv`.) The v1.0 shell listed a startup prefetch list among the things the tool must add, but the public repository deliberately does not carry that list, so the tool could never produce it. The shell had been built in a working directory that still held an old copy of the list, and our pre-release check ran in the same directory, so it did not catch the mismatch. Thanks to the reporter of issue #1 for the precise diagnosis.\n\n### What changed\n\n- The shell is now built from the public tree in a fresh working directory; it no longer asks for the prefetch list.\n- When the public tree has no prefetch list, the rewrite step now also removes any old copy left in the build output directory.\n- If the tool still finds an item it could not produce, the error now says the shell and the tool are from different versions and what to do.\n- Before publishing, we now package once with exactly what you get: the shell to be published, the tree to be pushed, and an empty working directory. The shell is published only if that writes an install package. This release passed that check.\n\n### Assets\n\n- `D2RMobile-shell.ipa`: the shell (for both iPhone and iPad). Its checksum is in `SHA256SUMS.txt`. Use it with the source of **this version**.\n\n### Not verified (stated plainly)\n\n- This shell file has not been run on a device. The package made from it was written successfully on a Mac; it has not been signed and installed on a phone.\n- Everything listed as not verified in v1.0 still applies: sideloading tools (Sideloadly, AltStore, ...), devices with 6 GB or 8 GB of RAM, A16 or older chips, `.nsp` game packages, packaging on Linux.\n\n---\n\n## 中文\n\n**这一版修正 v1.0 的壳：它对所有人都做不出安装包。** 如果你下载过 v1.0 的 `D2RMobile-shell.ipa`，请换成本页的这一份，并把仓库更新到这一版。\n\n### v1.0 的问题\n\n用 v1.0 的壳加公开仓库做包，各步都能走完，最后核对时停在：\n\n```\n[x] 有 1 项没做出来：dm/bootlist.tsv\n```\n\nv1.0 的壳把一份启动预取清单列在「工具要补进去的东西」里，而公开仓库有意不带这份清单，工具永远做不出它。出壳用的工作目录里留着这份清单的旧文件，我们发布前的检查又是在同一个目录里做的，所以没有发现两边对不上。感谢 Issue #1 的报告者给出了准确的定位。\n\n### 改了什么\n\n- 壳改为在全新的工作目录里从公开的代码出，不再要求预取清单。\n- 公开的代码没有预取清单时，改写这一步会把产物目录里以前留下的旧清单一并清掉。\n- 工具若仍发现有东西没做出来，报错会直说是壳与工具不是同一版，以及该怎么办。\n- 发布前新增一道检查：用你拿到的那一套——待发布的壳、待推送的代码、空的工作目录——原样做一次包，写出安装包才发布。这一版通过了这道检查。\n\n### 附件\n\n- `D2RMobile-shell.ipa`：壳（同时面向 iPhone 与 iPad），校验值见 `SHA256SUMS.txt`。请与**这一版**的源码一起用。\n\n### 没验过的（直说）\n\n- 这份壳文件本身没上过真机。用它做出的安装包在 Mac 上成功写出，还没有签名装到手机上。\n- v1.0 里列的没验项仍然成立：自签工具（Sideloadly、AltStore 等）、6 GB / 8 GB 内存的机型、A16 及更早的芯片、`.nsp` 格式的游戏包、在 Linux 上做包。",
+          "downloadURL": "https://github.com/d2r-mobile/d2r-mobile/releases/download/v1.0.1/D2RMobile-shell.ipa",
+          "size": 4435542,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
+      "name": "Dartotsu",
+      "bundleIdentifier": "ani.aayush262.dartotsu",
+      "developerName": "aayush2622",
+      "subtitle": "Multiplatform anime and manga tracking client",
+      "localizedDescription": "A Flutter rewrite of Dantotsu: track and manage your anime, manga and novel lists across AniList, MyAnimeList, Simkl, Kitsu, MangaBaka and MangaUpdates, on Android, iOS, Windows, Linux and macOS.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dartotsu/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dartotsu/images/home.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dartotsu/images/anime.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dartotsu/images/manga.webp"
+      ],
+      "tintColor": "#20C0F0",
+      "versions": [
+        {
+          "version": "1.2.2",
+          "date": "2026-11-24T18:50:07Z",
+          "localizedDescription": "### 🎉 New Features\n* [7a7659c7](https://github.com/aayush2622/Dartotsu/commit/7a7659c7): feat: custom download amount and bulk select in the episode and chapter list\n* [a06bdbd4](https://github.com/aayush2622/Dartotsu/commit/a06bdbd4): feat: animated SVGs play in a web view layer so SMIL, CSS animations and external images work\n* [f6933146](https://github.com/aayush2622/Dartotsu/commit/f6933146): feat(mangabaka): add recommended section to home layout (#193)\n* [9e8a9275](https://github.com/aayush2622/Dartotsu/commit/9e8a9275): feat: Simkl home rows split into anime and movies & series, restore the Trakt strings lost in the merge\n* [905b8b93](https://github.com/aayush2622/Dartotsu/commit/905b8b93): feat: own sign-in channel replaces flutter_web_auth_2 (Android Custom Tab with a callback activity, ASWebAuthenticationSession on iOS and macOS, sturdier desktop loopback)\n* [89c93af7](https://github.com/aayush2622/Dartotsu/commit/89c93af7): feat: Simkl list shows anime, shows and movies with type chips\n* [65f9cc89](https://github.com/aayush2622/Dartotsu/commit/65f9cc89): feat: custom Trakt client ID in settings with the redirect URIs to register\n* [56017a0a](https://github.com/aayush2622/Dartotsu/commit/56017a0a): feat: Web Video Cast option in the player's cast sheet and the stream menu\n* [47e71d36](https://github.com/aayush2622/Dartotsu/commit/47e71d36): feat: tap the episode title in the player to open its description, date, runtime and rating\n* [cc26f935](https://github.com/aayush2622/Dartotsu/commit/cc26f935): feat: Discord settings in plain M3 sections, preview small image clipped to a circle\n* [386288e6](https://github.com/aayush2622/Dartotsu/commit/386288e6): feat: watch order from chiaki.site on anime detail pages\n* [68e5bc45](https://github.com/aayush2622/Dartotsu/commit/68e5bc45): feat: stories switch in the AniList home sections sheet\n* [a9e46f1a](https://github.com/aayush2622/Dartotsu/commit/a9e46f1a): feat: tag sources as anime, movies and series or 18+ to rank them on each title\n* [6cf1b1f5](https://github.com/aayush2622/Dartotsu/commit/6cf1b1f5): feat: Mutual and Not mutual filters on follower and following lists\n* [815df40c](https://github.com/aayush2622/Dartotsu/commit/815df40c): feat: reorder and hide media services from General settings\n* [8fa7f5b5](https://github.com/aayush2622/Dartotsu/commit/8fa7f5b5): feat: sync anime between Trakt and Simkl\n* [27493c1f](https://github.com/aayush2622/Dartotsu/commit/27493c1f): feat: per-service sync switches in the main service picker\n* [6ba89ca9](https://github.com/aayush2622/Dartotsu/commit/6ba89ca9): feat: Trakt lists and followers, Comick profile and stats, shared request helpers for both services\n* [df3d020f](https://github.com/aayush2622/Dartotsu/commit/df3d020f): feat: swipe the home avatar up or down to switch service\n* [e187e052](https://github.com/aayush2622/Dartotsu/commit/e187e052): feat(services): add Trakt tracker integration with PKCE auth (#184)\n* [de057abd](https://github.com/aayush2622/Dartotsu/commit/de057abd): feat: add Comick media service and tracker (#183)\n* [14e787a2](https://github.com/aayush2622/Dartotsu/commit/14e787a2): feat: Discord connect opens the Discord app and the activity name follows the account route [build.all] [ping]\n* [55e11e52](https://github.com/aayush2622/Dartotsu/commit/55e11e52): feat: desktop PiP stays bound to the player page, tray shortcuts, and the player starts under non-C locales [build.all] [ping]\n* [84228445](https://github.com/aayush2622/Dartotsu/commit/84228445): feat: the player engine is downloaded on first use, plus a detached PiP window, hide to tray and gamepad navigation\n* [9b40ab8e](https://github.com/aayush2622/Dartotsu/commit/9b40ab8e): feat: gist sync shows its stored counts in the status card and explains what it syncs before sign-in\n* [41f05016](https://github.com/aayush2622/Dartotsu/commit/41f05016): feat: Discord settings show one connection card with every way of sending presence, and panels follow glass mode and d-pad focus\n* [f3442887](https://github.com/aayush2622/Dartotsu/commit/f3442887): feat: desktop picture in picture opens its own always-on-top window, placed by Hyprland when it tiles\n* [eeb047aa](https://github.com/aayush2622/Dartotsu/commit/eeb047aa): feat: faster state engine with computed values, grouped DI, refresh signals that never build controllers, and a lighter startup\n* [cf0ebf7d](https://github.com/aayush2622/Dartotsu/commit/cf0ebf7d): feat: cloud sync covers local lists and continue order, and only scans and stamps once per pass\n* [b23e9781](https://github.com/aayush2622/Dartotsu/commit/b23e9781): feat: local lists and the continue order sync through the settings gist, and the Aniyomi, Kotatsu and iReader desktop managers share their phone lists\n* [a12afed0](https://github.com/aayush2622/Dartotsu/commit/a12afed0): feat: episode metadata is merged from every provider as each one answers\n* [452400e6](https://github.com/aayush2622/Dartotsu/commit/452400e6): feat: connect Discord as an authorized app (#182)\n* [68fb14df](https://github.com/aayush2622/Dartotsu/commit/68fb14df): feat: native Android picture in picture with playback buttons, rebuilt track selector, shortcut fixes and MainActivity split into channels\n* [ef6e005a](https://github.com/aayush2622/Dartotsu/commit/ef6e005a): feat: sync delete category and per-service switch, metadata-only downloads, cookie and Cloudflare fixes\n* [ffe2ab25](https://github.com/aayush2622/Dartotsu/commit/ffe2ab25): feat: reader and novel layouts get a progress bar with button zones above it\n* [fc609a4b](https://github.com/aayush2622/Dartotsu/commit/fc609a4b): feat: local files source, offline reading from downloads, sticky player toggle\n* [01c2d17c](https://github.com/aayush2622/Dartotsu/commit/01c2d17c): feat: shared community list card for stacks and custom lists, simkl lists\n* [80c76e16](https://github.com/aayush2622/Dartotsu/commit/80c76e16): feat: sync can delete what the main service lacks, simkl keeps movies and completed entries right and follows title language\n* [55197194](https://github.com/aayush2622/Dartotsu/commit/55197194): feat: inline trailer player, list sync and service fixes, tts chunking\n\n### 🛠️ Bug Fixes & Improvements\n* [20a13792](https://github.com/aayush2622/Dartotsu/commit/20a13792): fix: Discord desktop presence is cleared and the connection closed when the app quits\n* [6c27df8c](https://github.com/aayush2622/Dartotsu/commit/6c27df8c): fix: activity cards fade in only the first time they are shown so scrolling up no longer flickers\n* [a1037b1c](https://github.com/aayush2622/Dartotsu/commit/a1037b1c): fix: trailers play HLS from the iOS client through the local proxy in every quality\n* [1adc5ee9](https://github.com/aayush2622/Dartotsu/commit/1adc5ee9): fix: retry streams that answer 403 over HTTP/1.1 through an HTTP/2 proxy\n* [32739fdd](https://github.com/aayush2622/Dartotsu/commit/32739fdd): fix: AniList sync counts every aliased mutation against the rate limit\n* [72fb3dea](https://github.com/aayush2622/Dartotsu/commit/72fb3dea): fix: double tap zoom in the webtoon and continuous reader no longer cancelled by the settle animation\n* [65ce7b2c](https://github.com/aayush2622/Dartotsu/commit/65ce7b2c): fix: animated SVG layer only on Android, iOS and macOS and loads by URL, desktop keeps scrolling\n* [3857d9b3](https://github.com/aayush2622/Dartotsu/commit/3857d9b3): fix: MangaBaka recommendations read data or results, skip entries without an id, flag adult ratings, accept string covers, add mapper tests\n* [66ac9e3f](https://github.com/aayush2622/Dartotsu/commit/66ac9e3f): fix: player shortcuts read the real subtitle and audio track, Backspace restores the previous speed, one short on-screen hint\n* [d234a7a4](https://github.com/aayush2622/Dartotsu/commit/d234a7a4): fix: AniList planned rows follow the account's list sort and title language\n* [3bae1f9d](https://github.com/aayush2622/Dartotsu/commit/3bae1f9d): fix: AniList planned rows sorted by last updated\n* [0007e172](https://github.com/aayush2622/Dartotsu/commit/0007e172): fix: audio is picked from the embedded and stream audio lists combined\n* [52979bc3](https://github.com/aayush2622/Dartotsu/commit/52979bc3): fix: auto rotation follows the sensor in all four directions and landscape flips both sides on Android\n* [a9460134](https://github.com/aayush2622/Dartotsu/commit/a9460134): fix: thin line at the bottom of image cards while scrolling, fades now overshoot the clip edge and no bright base sits under card images\n* [3319aa0e](https://github.com/aayush2622/Dartotsu/commit/3319aa0e): fix: player side panel no longer crashes when the window is narrower than 280 px\n* [c5cc1cf8](https://github.com/aayush2622/Dartotsu/commit/c5cc1cf8): fix: desktop sign-in listens on both IPv4 and IPv6 loopback so Comick's 127.0.0.1 redirect connects\n* [5b8bdd40](https://github.com/aayush2622/Dartotsu/commit/5b8bdd40): fix: trailer controls auto-hide, trailers play up to 1080p, trailer quality setting\n* [3c9efde4](https://github.com/aayush2622/Dartotsu/commit/3c9efde4): fix: reader page bar spaced like the layout preview\n* [07c59075](https://github.com/aayush2622/Dartotsu/commit/07c59075): fix: carousel slide paints its last rows in the fade colour so no banner strip shows\n* [952c2c09](https://github.com/aayush2622/Dartotsu/commit/952c2c09): fix: hidden media sections no longer multiply on the AniList home\n* [cfbb7e5c](https://github.com/aayush2622/Dartotsu/commit/cfbb7e5c): fix: reader resume and progress stay on the page, double pages meet in the middle, double-tap zoom on width/height and webtoon pages, free orientation defers to the OS\n* [9cc1f7f3](https://github.com/aayush2622/Dartotsu/commit/9cc1f7f3): fix: faster online subtitle search, subtitles in saved screenshots, Discord gateway and linked fixes\n* [c5888087](https://github.com/aayush2622/Dartotsu/commit/c5888087): fix: reader keeps its place while pages load, auto scroll pauses on touch, manhwa opens as webtoon\n* [4d73c591](https://github.com/aayush2622/Dartotsu/commit/4d73c591): fix: allow activity names for connected Discord apps [build.all]\n* [09982ab7](https://github.com/aayush2622/Dartotsu/commit/09982ab7): fix: clarify Discord connected app activity names [build.all]\n* [6d7cea2a](https://github.com/aayush2622/Dartotsu/commit/6d7cea2a): fix: enable Android cast multicast discovery\n* [0dc0e028](https://github.com/aayush2622/Dartotsu/commit/0dc0e028): fix: tap-to-pick filter fields, visible chips and a one-row tag list\n* [3bcc17fe](https://github.com/aayush2622/Dartotsu/commit/3bcc17fe): fix: trailer controls looked up fullscreen on a deactivated context\n* [606da6d4](https://github.com/aayush2622/Dartotsu/commit/606da6d4): fix: cast discovery no longer throws when multicast sends are refused\n* [c352188c](https://github.com/aayush2622/Dartotsu/commit/c352188c): fix: stop player audio at once when leaving the player\n* [0e6fde72](https://github.com/aayush2622/Dartotsu/commit/0e6fde72): fix: Comick tabs the right way round with the carousel first, Trakt with a single carousel\n* [0f5c2cdb](https://github.com/aayush2622/Dartotsu/commit/0f5c2cdb): fix: Comick and Trakt compile against the current service API and match the live responses\n* [3a3450ed](https://github.com/aayush2622/Dartotsu/commit/3a3450ed): fix: Android keeps the .env asset so update checks find their hash, the tray icon is round, and streams group by hoster when titles carry it [build.apk]\n* [c50b6e33](https://github.com/aayush2622/Dartotsu/commit/c50b6e33): fix: the Android build resolves the bridge whose video plugin holds MediaKitAndroidHelper [build.all] [ping]\n* [7e849fef](https://github.com/aayush2622/Dartotsu/commit/7e849fef): fix: the Android build resolves the bridge version whose video plugin no longer needs media_kit [build.apk]\n* [8a01b801](https://github.com/aayush2622/Dartotsu/commit/8a01b801): fix: Anime-Planet detail keeps your list status and progress [build.all] [ping]\n* [22e4fcec](https://github.com/aayush2622/Dartotsu/commit/22e4fcec): fix: PiP hover bar uses a directional alignment\n* [e4b05a5e](https://github.com/aayush2622/Dartotsu/commit/e4b05a5e): fix: splash screen scales down instead of overflowing in the first tiny window\n* [02d160a3](https://github.com/aayush2622/Dartotsu/commit/02d160a3): fix: small images decode at their size, setState-free widgets use Live, and animations follow the animation speed\n* [9c7eb15b](https://github.com/aayush2622/Dartotsu/commit/9c7eb15b): fix: notifications open for every service, mutual follows are labelled, and sync rows highlight the score difference\n* [600e0b1b](https://github.com/aayush2622/Dartotsu/commit/600e0b1b): fix: DASH downloads say why they cannot keep a folder or are protected, and download badges and local units share one task lookup\n* [9be02927](https://github.com/aayush2622/Dartotsu/commit/9be02927): fix: picture in picture offers only rewind, play and forward and no longer pauses on entry; track selection moves into PlayerEngine\n* [321ab091](https://github.com/aayush2622/Dartotsu/commit/321ab091): fix: the Android log reader stops its logcat process on detach and the Windows second instance raises the real window\n* [e379ac1f](https://github.com/aayush2622/Dartotsu/commit/e379ac1f): fix: a backup restore no longer re-enqueues the values it just wrote and reloads player and reader prefs once\n* [7b1b3f77](https://github.com/aayush2622/Dartotsu/commit/7b1b3f77): fix: profile tabs show the fresh result after a cached profile was painted\n* [88a47ffd](https://github.com/aayush2622/Dartotsu/commit/88a47ffd): fix: macOS release can use the file picker\n* [a955811d](https://github.com/aayush2622/Dartotsu/commit/a955811d): fix: the commit log output no longer goes through shell interpolation\n* [7f5457b9](https://github.com/aayush2622/Dartotsu/commit/7f5457b9): fix: the sync list highlights a score-only difference\n* [c5b7da53](https://github.com/aayush2622/Dartotsu/commit/c5b7da53): fix: file extension lists no longer register .ogg as video and know ogv, m2ts, mka and ac3\n* [984132a0](https://github.com/aayush2622/Dartotsu/commit/984132a0): fix: reader reset asks first and the theme picker and search filters use translated labels\n* [5aaaa03d](https://github.com/aayush2622/Dartotsu/commit/5aaaa03d): fix: each service's notification kinds get their own header\n* [27c96c9c](https://github.com/aayush2622/Dartotsu/commit/27c96c9c): fix: a failed list save restores the entry it had applied\n* [a6e01bbf](https://github.com/aayush2622/Dartotsu/commit/a6e01bbf): fix: detail pages use the service they were opened for and ignore a superseded load\n* [3fbc2d5f](https://github.com/aayush2622/Dartotsu/commit/3fbc2d5f): fix: Android opens Anime-Planet and MangaUpdates links\n* [dab3d12b](https://github.com/aayush2622/Dartotsu/commit/dab3d12b): fix: snackbars no longer remove a newer one early, card shelves recover from a failed load more and the status chip shows in every locale\n* [920a9f8e](https://github.com/aayush2622/Dartotsu/commit/920a9f8e): fix: activity and member lists honour a reset while a page is loading\n* [8f5fb110](https://github.com/aayush2622/Dartotsu/commit/8f5fb110): fix: notifications only get an AniList link on AniList\n* [acbdf655](https://github.com/aayush2622/Dartotsu/commit/acbdf655): fix: the reader keys chapters like the watch tab\n* [b0e533be](https://github.com/aayush2622/Dartotsu/commit/b0e533be): fix: the watch tab keeps a range you picked and a hand-picked title does not fall back to another source\n* [23e257e7](https://github.com/aayush2622/Dartotsu/commit/23e257e7): fix: comments escape html and only link http urls\n* [59072a8e](https://github.com/aayush2622/Dartotsu/commit/59072a8e): fix: a backup restore reloads source subscriptions and local lists, offline edits keep custom lists and card style follows synced prefs\n* [45246e9e](https://github.com/aayush2622/Dartotsu/commit/45246e9e): fix: settings sliders follow external changes, sync skips unresolved pairs and proxy passwords are encoded\n* [50da780c](https://github.com/aayush2622/Dartotsu/commit/50da780c): fix: search, source browse and the extension lists ignore stale responses and count sources correctly\n* [30c5b2a9](https://github.com/aayush2622/Dartotsu/commit/30c5b2a9): fix: downloads no longer start a second run on pause and resume, share one retry path and keep records when the storage root changes\n* [9c3d2054](https://github.com/aayush2622/Dartotsu/commit/9c3d2054): fix: failover does not overwrite the chosen stream, per-title off updates the live settings and setting changes repaint the player\n* [05c97c99](https://github.com/aayush2622/Dartotsu/commit/05c97c99): fix: sheets clear the navigation bar and the player sheets start at half height and expand when scrolled\n* [43f52a9a](https://github.com/aayush2622/Dartotsu/commit/43f52a9a): fix: Together asks before joining a room link, only accepts public stream urls and stops retrying on server errors\n* [b88c2f41](https://github.com/aayush2622/Dartotsu/commit/b88c2f41): fix: the app lock only submits at the PIN length so wrong guesses count toward the lockout\n* [81fffce2](https://github.com/aayush2622/Dartotsu/commit/81fffce2): fix: Kitsu and MAL build their social view once so feed cursors and boards are kept\n* [2252a13f](https://github.com/aayush2622/Dartotsu/commit/2252a13f): fix: pull to refresh on Home reloads the stories row\n* [2dc0ec1b](https://github.com/aayush2622/Dartotsu/commit/2dc0ec1b): fix: Anime-Planet sync no longer sends progress on planned titles, caps progress at the total and falls back to reading for releasing titles\n* [31f12be1](https://github.com/aayush2622/Dartotsu/commit/31f12be1): fix: MangaUpdates sync writes batches of 25 and only rates changed scores, and calls its dropped list Unfinished\n* [61df902d](https://github.com/aayush2622/Dartotsu/commit/61df902d): fix: Simkl list dates and episode totals, and sync deletes only titles that are provably not in the main list\n* [69d58f93](https://github.com/aayush2622/Dartotsu/commit/69d58f93): fix: show Simkl community score and airing dot on list items (#180)\n* [a62b0515](https://github.com/aayush2622/Dartotsu/commit/a62b0515): fix: no Cloudflare snackbar for ordinary 403 and 503 answers\n* [4d80f76b](https://github.com/aayush2622/Dartotsu/commit/4d80f76b): fix: consistency pass for directional layout and theme text styles\n* [c7759503](https://github.com/aayush2622/Dartotsu/commit/c7759503): fix: comment ids resolve from the local table first, layout editor hint no longer duplicates a key\n* [6b4a5e2e](https://github.com/aayush2622/Dartotsu/commit/6b4a5e2e): fix: sync pairs remembered ids, simkl completes entries and keeps english titles, mal reads adult entries\n* [f163b547](https://github.com/aayush2622/Dartotsu/commit/f163b547): fix: extension language filter ignores case so novel sources show and count\n* [5e3c091f](https://github.com/aayush2622/Dartotsu/commit/5e3c091f): fix: guests can read comments, id lookup retries and times out instead of loading forever\n* [f9f2fa8c](https://github.com/aayush2622/Dartotsu/commit/f9f2fa8c): fix: skip saved window restore on tiling compositors\n\n### 🔧 Refactors\n* [fdd642d8](https://github.com/aayush2622/Dartotsu/commit/fdd642d8): refactor: Discord connect uses the shared PKCE helpers\n* [4899cb40](https://github.com/aayush2622/Dartotsu/commit/4899cb40): refactor: the News, Community lists, Groups, Group members and Stacks pagers share one PagedList\n* [ec1d5587](https://github.com/aayush2622/Dartotsu/commit/ec1d5587): refactor: six identical home views become one QueriesHomeView\n* [6164f3f9](https://github.com/aayush2622/Dartotsu/commit/6164f3f9): refactor: one titledSection helper and one Hidden Media title constant for every service\n* [841aa59e](https://github.com/aayush2622/Dartotsu/commit/841aa59e): refactor: keyboard mode lives in its own file so widgets no longer import screens through AppShortcuts\n* [4b2e49df](https://github.com/aayush2622/Dartotsu/commit/4b2e49df): refactor: drop the doubled ScrollConfig wrappers\n* [d28c697f](https://github.com/aayush2622/Dartotsu/commit/d28c697f): refactor: services share the list overlay and PKCE helpers and drop the unused getUserData and refreshUser\n* [fdc9bf00](https://github.com/aayush2622/Dartotsu/commit/fdc9bf00): refactor: feed section layouts are an enum and every poster grid shares one delegate\n\n### 🧹 Chores & Documentation\n* [6c9e6a67](https://github.com/aayush2622/Dartotsu/commit/6c9e6a67): chore: format MangaBaka client and library sync\n* [41964057](https://github.com/aayush2622/Dartotsu/commit/41964057): chore: bump version to 1.2.2 and update platform dependencies\n* [aade7386](https://github.com/aayush2622/Dartotsu/commit/aade7386): chore: bump nix channels.json\n* [dc621c10](https://github.com/aayush2622/Dartotsu/commit/dc621c10): chore: pub upgrade [build.all] [ping]\n* [48d3995e](https://github.com/aayush2622/Dartotsu/commit/48d3995e): chore: pub upgrade [build.all] [ping]\n* [e958e625](https://github.com/aayush2622/Dartotsu/commit/e958e625): ci: update actions/checkout and actions/github-script to supported runner versions\n* [f3d1f9f8](https://github.com/aayush2622/Dartotsu/commit/f3d1f9f8): chore: did all the translations\n* [a95dfe79](https://github.com/aayush2622/Dartotsu/commit/a95dfe79): chore: bump nix channels.json\n* [ec78b995](https://github.com/aayush2622/Dartotsu/commit/ec78b995): ci: fix commit range between builds with artifact search and release tag fallback [build.all]\n* [28cdb5ac](https://github.com/aayush2622/Dartotsu/commit/28cdb5ac): ci: support direct per-architecture APK download links in Discord\n* [0cdab17c](https://github.com/aayush2622/Dartotsu/commit/0cdab17c): chore: bump nix channels.json\n* [a9bd4747](https://github.com/aayush2622/Dartotsu/commit/a9bd4747): chore: pub upgrade [build.all] [ping]\n* [d30c95ac](https://github.com/aayush2622/Dartotsu/commit/d30c95ac): ci: mark alpha releases as latest instead of prerelease\n* [578179cd](https://github.com/aayush2622/Dartotsu/commit/578179cd): chore: bump nix channels.json\n* [50ae4279](https://github.com/aayush2622/Dartotsu/commit/50ae4279): ci: streamline alpha pipeline to direct release without Google Drive\n* [99947ca2](https://github.com/aayush2622/Dartotsu/commit/99947ca2): ci: add workflow_call inputs to update-nix-channels.yml\n* [dd9db1cb](https://github.com/aayush2622/Dartotsu/commit/dd9db1cb): ci: add v2 streamlined pipeline option with dry-run support to dart.yml\n* [2f316eeb](https://github.com/aayush2622/Dartotsu/commit/2f316eeb): chore: bump nix channels.json\n* [32dd720c](https://github.com/aayush2622/Dartotsu/commit/32dd720c): chore: pub upgrade [build.all] [ping]\n* [1cd93b31](https://github.com/aayush2622/Dartotsu/commit/1cd93b31): chore: privacy policy and Trakt notice\n* [7d62e0e3](https://github.com/aayush2622/Dartotsu/commit/7d62e0e3): chore: bump nix channels.json\n* [0fc30625](https://github.com/aayush2622/Dartotsu/commit/0fc30625): chore: pub upgrade [build.all] [ping]\n* [6dd65f66](https://github.com/aayush2622/Dartotsu/commit/6dd65f66): chore: bump nix channels.json\n* [3f0e2d75](https://github.com/aayush2622/Dartotsu/commit/3f0e2d75): chore: bump nix channels.json\n* [290e9551](https://github.com/aayush2622/Dartotsu/commit/290e9551): chore: bump nix channels.json\n* [a9e3143a](https://github.com/aayush2622/Dartotsu/commit/a9e3143a): chore: pub upgrade [build.all] [ping]\n* [9b5944a0](https://github.com/aayush2622/Dartotsu/commit/9b5944a0): chore: strings for source tags, stories toggle and watch order\n* [7edf00d3](https://github.com/aayush2622/Dartotsu/commit/7edf00d3): chore: bump nix channels.json\n* [65428e42](https://github.com/aayush2622/Dartotsu/commit/65428e42): chore: pub upgrade [build.all] [ping]\n* [4e5a7d4a](https://github.com/aayush2622/Dartotsu/commit/4e5a7d4a): chore: keep only the app's languages in Android library resources\n* [80641a78](https://github.com/aayush2622/Dartotsu/commit/80641a78): chore: bump nix channels.json\n* [5d841fb4](https://github.com/aayush2622/Dartotsu/commit/5d841fb4): chore: bump nix channels.json\n* [7b69f122](https://github.com/aayush2622/Dartotsu/commit/7b69f122): chore: drop the wasd fork override, wasd 0.6.2 has the analyzer fix [build.all] [ping]\n* [18dc186e](https://github.com/aayush2622/Dartotsu/commit/18dc186e): docs: Flutter 3.50, state engine, sync, desktop PiP and wasd override\n* [c4dc1264](https://github.com/aayush2622/Dartotsu/commit/c4dc1264): chore: Nix package keeps only the libraries the app needs to run, and gdk-pixbuf for the new window plugin\n* [e8ad6dc7](https://github.com/aayush2622/Dartotsu/commit/e8ad6dc7): chore: Android enables hybrid composition plus plus\n* [a34eb0a6](https://github.com/aayush2622/Dartotsu/commit/a34eb0a6): chore: dependencies for Flutter 3.50, window_manager 0.7 and a local precached_network_image\n* [07d3a447](https://github.com/aayush2622/Dartotsu/commit/07d3a447): chore: CI builds with Flutter 3.50.0\n* [20784812](https://github.com/aayush2622/Dartotsu/commit/20784812): chore: strings for the new messages, PiP strings removed, cloud sync docs\n* [5e8c98bd](https://github.com/aayush2622/Dartotsu/commit/5e8c98bd): chore: Profile, Group, Notifications and Detail screens share FloatingNavLayout\n* [3adccac6](https://github.com/aayush2622/Dartotsu/commit/3adccac6): chore: confirmation dialogs use AlertDialogBuilder.confirm\n* [7289ab80](https://github.com/aayush2622/Dartotsu/commit/7289ab80): chore: MangaBaka, MangaUpdates and Anime-Planet default layouts derive from their section lists\n* [d852967f](https://github.com/aayush2622/Dartotsu/commit/d852967f): chore: drop the unused introduction_screen and blurbox dependencies\n* [e96033d6](https://github.com/aayush2622/Dartotsu/commit/e96033d6): chore: delete the unused web target, scripts/latest.txt and the empty extension issue workflow\n* [d8a771da](https://github.com/aayush2622/Dartotsu/commit/d8a771da): docs: bring CLAUDE.md in line with the code\n* [39e23205](https://github.com/aayush2622/Dartotsu/commit/39e23205): chore: remove Pref.remove, which re-persisted the default\n* [e733996d](https://github.com/aayush2622/Dartotsu/commit/e733996d): chore: remove the unused NavBarProvider, the feed types already decide the shell tabs\n* [91a3a2d2](https://github.com/aayush2622/Dartotsu/commit/91a3a2d2): chore: remove unused methods, classes and helpers\n* [d895a5b7](https://github.com/aayush2622/Dartotsu/commit/d895a5b7): chore: bump nix channels.json\n* [c92cc3fe](https://github.com/aayush2622/Dartotsu/commit/c92cc3fe): chore: pub upgrade [build.all]\n* [68497ac0](https://github.com/aayush2622/Dartotsu/commit/68497ac0): chore: bump nix channels.json\n* [3ff233ad](https://github.com/aayush2622/Dartotsu/commit/3ff233ad): chore: pub upgrade [build.all]\n* [8a7ba73d](https://github.com/aayush2622/Dartotsu/commit/8a7ba73d): chore: pub upgrade [build.all]\n* [fd7845f5](https://github.com/aayush2622/Dartotsu/commit/fd7845f5): chore: bump nix channels.json\n* [92a6c1a6](https://github.com/aayush2622/Dartotsu/commit/92a6c1a6): chore: pub upgrade [build.all]\n* [a15c5203](https://github.com/aayush2622/Dartotsu/commit/a15c5203): chore: ignore .zed\n* [3769a38f](https://github.com/aayush2622/Dartotsu/commit/3769a38f): chore: bump nix channels.json\n* [19baf8f3](https://github.com/aayush2622/Dartotsu/commit/19baf8f3): chore: pub upgrade [build.all]\n* [d3bc690b](https://github.com/aayush2622/Dartotsu/commit/d3bc690b): chore: bump nix channels.json",
+          "downloadURL": "https://github.com/aayush2622/Dartotsu/releases/download/v1.2.2/Dartotsu-iOS-v1.2.2.ipa",
+          "size": 88947089,
+          "minOSVersion": "15.0"
         }
       ]
     },
@@ -476,6 +619,57 @@
       ]
     },
     {
+      "name": "Dusklight",
+      "bundleIdentifier": "dev.twilitrealm.dusk",
+      "developerName": "Twilit Realm",
+      "subtitle": "A native port of a classic adventure",
+      "localizedDescription": "Dusklight brings a classic adventure natively to the iPhone and iPad with modern rendering, flexible controls and quality-of-life options. You must provide a dump of your own copy of the original game to play.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dusklight/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dusklight/images/screenshot-01.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dusklight/images/screenshot-02.webp"
+      ],
+      "tintColor": "#C4901E",
+      "versions": [
+        {
+          "version": "2.0.3",
+          "date": "2026-09-30T07:06:44Z",
+          "localizedDescription": "**What's new:**\r\n\r\n* **Added:** New InterpService: Provides interpolation for custom model rendering. ([#2636](https://github.com/TwilitRealm/dusklight/pull/2636))\r\n* **Added:** GfxService v1.4: Provides backing textures for resolved framebuffers. ([#2643](https://github.com/TwilitRealm/dusklight/pull/2643), [Aurora #260](https://github.com/encounter/aurora/pull/260))\r\n* **Fixed:** Vulkan startup crash on Android devices with Adreno GPUs, including the Galaxy S23 and Odin 2. ([Aurora `bded88e95d`](https://github.com/encounter/aurora/commit/bded88e95d5a1a7c8b2d747843cb8cde17b39838), [#2563](https://github.com/TwilitRealm/dusklight/issues/2563))\r\n* **Fixed:** HTTPS requests failing in Linux AppImage builds because system CA certificates weren't found. ([Borealis `4ac5e7052a`](https://github.com/encounter/borealis/commit/4ac5e7052a8c49a122f8d57f626b5c75c5ca6968))\r\n* **Fixed:** WebSocket service being unavailable in Linux AppImage builds. ([`40457c6adb`](https://github.com/TwilitRealm/dusklight/commit/40457c6adb381928e4b5fef6ed459ed291edd5e2), [Borealis `4ac5e7052a`](https://github.com/encounter/borealis/commit/4ac5e7052a8c49a122f8d57f626b5c75c5ca6968))\r\n* **Fixed:** False memory card corruption errors after resetting and switching game modes. ([`7b60dc8f24`](https://github.com/TwilitRealm/dusklight/commit/7b60dc8f24c03656ca69d51cacec84832df9e227))\r\n* **Fixed:** Incorrect camera framing in the cutscene before Goron Mines. ([#2648](https://github.com/TwilitRealm/dusklight/pull/2648), [#956](https://github.com/TwilitRealm/dusklight/issues/956))\r\n* **Fixed:** Crashes and missing fire when retrying the burning house sequence in Kakariko Village after dying. ([#2649](https://github.com/TwilitRealm/dusklight/pull/2649), [#1441](https://github.com/TwilitRealm/dusklight/issues/1441))\r\n* **Changed:** Significantly improved Mod Manager performance, especially with a large number of mods. ([`ceda410434`](https://github.com/TwilitRealm/dusklight/commit/ceda410434286107741eb43c7e3ade914c5f1751), [`eb5ad19dbc`](https://github.com/TwilitRealm/dusklight/commit/eb5ad19dbc488345163f0c076911fb38368cf115))\r\n* **Changed:** Significantly improved Logs window performance. ([`55e2904ce0`](https://github.com/TwilitRealm/dusklight/commit/55e2904ce03548348021ec0137616e5d65683982))\r\n* **Changed:** Updated bundled Dusklight Randomizer to v1.0.6. ([`b9c370d5d1`](https://github.com/TwilitRealm/dusklight/commit/b9c370d5d1851b83040e8c767cbbbce8e580185b))\r\n  * Fixed entrance randomizer logic incorrectly treating human and wolf abilities as interchangeable in Twilight. ([Randomizer `cfa99c1944`](https://github.com/TwilitRealm/dusklight-randomizer/commit/cfa99c1944f36c4285923be65cbda6916a31ff15))\r\n  * Fixed some logical areas not taking into account that you could change time of day with Midna. ([Randomizer `cfa99c1944`](https://github.com/TwilitRealm/dusklight-randomizer/commit/cfa99c1944f36c4285923be65cbda6916a31ff15))\r\n  * Fixed boss exits when dungeon entrances are shuffled but boss entrances are not. ([Randomizer `6f650ca077`](https://github.com/TwilitRealm/dusklight-randomizer/commit/6f650ca0771375ca3a09679d99d9e60c48b5a59a))\r\n  * Fixed inaccessible doors in Kakariko Twilight before obtaining the village's warp portal, which could cause entrance randomizer softlocks. ([Randomizer `12d7cf807a`](https://github.com/TwilitRealm/dusklight-randomizer/commit/12d7cf807a325da71e264d9e2dd36d4ff09103b7))\r\n  * Fixed music staying muted after entering a shuffled boss room through the Forest Temple boss door. ([Randomizer `ee58b04d21`](https://github.com/TwilitRealm/dusklight-randomizer/commit/ee58b04d21cd413da2607e8fc79e2521d7bc6764), [Randomizer #85](https://github.com/TwilitRealm/dusklight-randomizer/issues/85))\r\n  * Fixed the map not appearing after howling at the Snowpeak Howling Stone. ([Randomizer `2d97aa9a6c`](https://github.com/TwilitRealm/dusklight-randomizer/commit/2d97aa9a6c68e85a51b2a80aabce26d6228a1fbc))\r\n  * Prevented starting the broken goat-catching sequence with Bo in Ordon Village. ([Randomizer `4f5bb4e14d`](https://github.com/TwilitRealm/dusklight-randomizer/commit/4f5bb4e14d76037981ea83fad384d98545f9c337))\r\n  * Fixed some item checks in Ordon Village and south of Castle Town in alternate story states. ([Randomizer `4f5bb4e14d`](https://github.com/TwilitRealm/dusklight-randomizer/commit/4f5bb4e14d76037981ea83fad384d98545f9c337), [`e8d2c020c2`](https://github.com/TwilitRealm/dusklight-randomizer/commit/e8d2c020c27cdbd754a0a5aea8ea4b27335b9d1d))\r\n  * Corrected the logic connection between Snowpeak Ruins' double Freezard room and the west courtyard balcony. ([Randomizer `325fcf9358`](https://github.com/TwilitRealm/dusklight-randomizer/commit/325fcf9358adc41ab56f65b27be79e8eb5721442))\r\n\r\nThanks to all contributors:\r\n@dbalatoni13\r\n@encounter\r\n@gymnast86\r\n@PJB3005\r\n\r\n**Full Changelog**: https://github.com/TwilitRealm/dusklight/compare/v2.0.2...v2.0.3",
+          "downloadURL": "https://github.com/TwilitRealm/dusklight/releases/download/v2.0.3/Dusklight-v2.0.3-ios-arm64.ipa",
+          "size": 37056541,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "Dylix",
+      "bundleIdentifier": "com.xuegao.theosmobilecompiler",
+      "developerName": "yangokok886",
+      "subtitle": "iPhone / iPad 上的 AI 插件开发工作台",
+      "localizedDescription": "原生 iOS 插件开发工作台：在手机上管理源码、编辑代码，调用内嵌 Clang / LLD 和 Logos 生成本机编译的 dylib 与 deb；AI 助手可按权限读取头文件、解释代码并修改项目。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/images/projects.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/images/editor.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/images/chat.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/images/files.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/images/artifacts.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/images/git.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/images/settings.webp"
+      ],
+      "tintColor": "#F0D080",
+      "versions": [
+        {
+          "version": "1.1.4",
+          "date": "2026-11-22T07:30:21Z",
+          "localizedDescription": "# Dylix 1.1.4（284）\n\n1. 优化上下文与缓存：保留稳定请求前缀，完善缓存用量统计和长会话上下文处理，减少重复读取与循环执行。\n2. 完善会话交互：区分空消息续接与普通发送，支持任务执行中补充或修正消息，改进中断后的任务衔接。\n3. 修复项目关联：普通聊天、头文件导出和分享文件会话关联项目时继续使用原会话，保留聊天、附件与任务记录。\n4. 完善协议适配：调整 Anthropic 缓存标记及流式用量处理，保留原始会话证据，区分本地估算与服务商计费用量。\n5. 更新构建与启动配置：使用 Xcode 自带 iOS 27.2 SDK，修复新 SDK 下的场景启动配置，统一版本为 1.1.4（284）。\n\n配套 FLEX 插件版本保持 1.0.3。开源版不包含私有提示词上传服务、后端或个人凭据。\n\n验证范围与结果见 [1.1.4 发布验证](RELEASE_1.1.4_VALIDATION.md)。IPA 为待证书重签名安装包。",
+          "downloadURL": "https://github.com/yangokok886/dylix/releases/download/v1.1.4/Dylix-1.1.4-build284-opensource-unsigned.ipa",
+          "size": 103764788,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
       "name": "EhPanda",
       "bundleIdentifier": "app.ehpanda",
       "developerName": "EhPanda-Team",
@@ -524,6 +718,29 @@
       ]
     },
     {
+      "name": "EscapeOS",
+      "bundleIdentifier": "com.ipaside.escapeos",
+      "developerName": "pwnapplehat",
+      "subtitle": "On-device file browser and backup tool for another app's Data container",
+      "localizedDescription": "Browse, edit, back up and restore another app's Data container on device: Documents, Library and tmp, file copy and compress/extract (zip, 7z, tar, gz, bz2, xz, lz4, lzma, deb), SQLite viewing, and SHA-256 manifests on every backup. No jailbreak, no Keychain. Requires iOS 26.0 or later, LocalDevVPN and a pairing file placed by iPASide.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EscapeOS/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EscapeOS/images/pair.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EscapeOS/images/settings.webp"
+      ],
+      "tintColor": "#3AA39D",
+      "versions": [
+        {
+          "version": "0.3.2",
+          "date": "2026-11-11T14:19:37Z",
+          "localizedDescription": "## Added\n\n- **App Groups.** An app's page lists its groups when the install record includes them, and opens a group that has a folder. Reset App Data still does not touch groups.\n- **Import a backup.** Backups, Import Backup copies an exported EscapeOS backup zip back into Files, On My iPhone, EscapeOS, Backups. A zip that is not one of these backups is refused. An existing name is kept.\n\n## Changed\n\n- **Search Whole App.** A file opens the folder it is in and marks that file. A folder still opens.\n- **iOS 26.0 is the minimum.** The IPA does not install below that.\n\nApp Groups, search, and backup import were confirmed on device the same day.\n\n`EscapeOS-0.3.2.ipa` SHA-256:\n\n```\n49edbca809d4b07c8863971ba40a2551537d433872f03cedd1c13ce2e0975e1e\n```\n\n`libidevice_ffi.a` is unchanged from 0.3.1:\n\n```\n6524066d54ef23e00d46445c04dfc694e180196d54119d718f68434fa225be35\n```",
+          "downloadURL": "https://github.com/pwnapplehat/EscapeOS/releases/download/v0.3.2/EscapeOS-0.3.2.ipa",
+          "size": 7683406,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
       "name": "Fathom",
       "bundleIdentifier": "app.fathom.emulator",
       "developerName": "Leviidev",
@@ -567,6 +784,31 @@
           "downloadURL": "https://github.com/claration/feather/releases/download/v2.9.0/Feather.ipa",
           "size": 14241853,
           "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "Fladder",
+      "bundleIdentifier": "nl.jknaapen.fladder",
+      "developerName": "DonutWare",
+      "subtitle": "A cross-platform Jellyfin frontend built on Flutter",
+      "localizedDescription": "A cross-platform Jellyfin frontend built on top of Flutter, for iOS. Stream or sync media locally, switch between multiple servers and profiles, and download items with their progress kept in sync.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fladder/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fladder/images/Dashboard.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fladder/images/Details.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fladder/images/Library.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fladder/images/Player.webp"
+      ],
+      "tintColor": "#F04040",
+      "versions": [
+        {
+          "version": "0.12.1",
+          "date": "2026-11-20T18:51:46Z",
+          "localizedDescription": "## 📋 What's Changed\r\n\r\n>INFO\r\n0.12.1 is a hot-fix for Linux users, specifically those using Nvidia gpus. Flutter contained a bug causing the screen to render at 1/4 of the actual window size. Other platforms remain the same as 0.12.0\r\n\r\nThis was supposed to be a small release that improves performance for low-end devices I swear.\r\n\r\n## Performance Improvements\r\nFladder now checks the device available RAM and adjusts accordingly disabling things that might overfill the memory, all of this can be tweaked later on by the user in Settings -> Fladder.\r\nThere where also a lot of small performance improvements throughout the app no matter the device or settings.\r\n<img width=\"1017\" height=\"78\" alt=\"image\" src=\"https://github.com/user-attachments/assets/04030c2b-b5c2-47ba-82ba-9f47998f5e56\" />\r\n\r\n## Improved library filters\r\n - Library filters can now be added to the home-screen and/or side \r\n - Filter settings sync to your Jellyfin account so they are shared between devices\r\n - Small bugfixes to how the filters work\r\n\r\n## Dashboard screen\r\nAdd the option to re-order or disable items on the dashboard screens.\r\nThese settings are saved to the Jellyfin profile\r\n<img width=\"1010\" height=\"310\" alt=\"image\" src=\"https://github.com/user-attachments/assets/d685a3ab-39a5-4a92-a36e-41a7f212599b\" />\r\n\r\n## New secure option\r\nYou can now secure a profile with a pattern lock similar to the Android secure lock.\r\nThis works for all platforms except when using dPad navigation\r\n<img width=\"429\" height=\"458\" alt=\"image\" src=\"https://github.com/user-attachments/assets/35c63073-24ed-43ba-85fc-a86bb66b659f\" />\r\n\r\n> [!WARNING]\r\n(Linux)\r\nFladder now uses a new rendering backend (impeller). This gives improved performance, however on some hardware/software combinations could cause issues. If you experience any of these issues use the toggle in Settings -> Fladder to go back to the previous renderer. <img width=\"993\" height=\"108\" alt=\"image\" src=\"https://github.com/user-attachments/assets/97d2a200-84db-4166-97b1-8529e2bb17fc\" />\r\n\r\nSee the full change log for any other features or fixes.\r\n\r\n### New Features 🏕\r\n\r\n- **Music:** Shuffle home playlists by default (1a029097)\r\n- **dPad:** Add a list of buttons to act as \"back\" (3f8f3c07)\r\n- Improve pin input and add pattern input option (dd2a2b54)\r\n- Add websocket for live updates of some screens (6ec02109)\r\n- **Android:** Implement refresh rate matching for native player (#997)\r\n- Previous and next chapter buttons (#1063)\r\n- Hotkey for subtitle offset (#1067)\r\n- Add the option to change the users internet url (42fa3592)\r\n- Autoscroll with the middle mouse button on desktop (#1169)\r\n- Fix/remap deeplinks to fladder:// (9fbf94a8)\r\n- Save filters to server profile and re-order dashboard screen (#1141)\r\n\r\n### Bugfixes 🐞\r\n\r\n- **Linux:** Impeller toggle caused data directory reset (b80aa878)\r\n- **Linux:** Include sqlite in flutters native assets (3267cc32)\r\n- **Linux:** Flatpak connectivity provider failing on network state check (c205efd6)\r\n- **Music:** Replay-gain fix and stabilize the queue mess when skipping (96aa62c7)\r\n- **Windows:** Smtc exception breaking window management (a8816b62)\r\n- When logging in as a existing user, update that user instead of replacing. (f7465b4c)\r\n- Use internal mpv subtrack (ea60414e)\r\n- Make the photo gallery video player more stable and improve cacheNeighbors (ac96cd5f)\r\n- Copy media viewer logic from Polder (0866f2c8)\r\n- Use the correct position values when starting playback (b777ebdb)\r\n- Sync/update media-kit and fix iOS builds (c2ea06d0)\r\n- Circular dependency when using volume gesture (05f568e1)\r\n- **Touch:** Show/hide video controls not properly responding to touch (657e746c)\r\n- **macOS:** Flutter window resizing crash (c63b1f08)\r\n- Full screen music player closing with open dialog (05393509)\r\n- Remove heavy calculations in horizontal list (091cb3a5)\r\n- Quickly scrolling to the left in a horizontal list (9e1d6457)\r\n- Hide chapter buttons on smaller devices (26c04f79)\r\n- Use new linux test branch for media_kit (d6f31220)\r\n- Update podfiles for iOS and macOS (4d7bd84f)\r\n- Predictive back android (86ca55ba)\r\n- Libass fallback font name fix (#1157)\r\n- Keep subtitles visible during Next-up preview (#1150)\r\n- Playback state not being stopped correctly (5d12e7b8)\r\n- **AndroidTV:** Last leanbackmode not being saved (65202bf0)\r\n- Linux build error (de7b5a2a)\r\n- Small loading order issues homescreens (dbdbdeac)\r\n- Dashboard filters loading multiple times (5319e380)\r\n- Multi-window playback status (2fb42f2a)\r\n- **Desktop:** Multi-window instance hitting the file limit and keep api providers (f29baff4)\r\n- Photo album syncing (2e2a7530)\r\n- Settings not applying correctly without \"enter/send\" pressed fix: Constantly polling changes and calling dashboard providers (91992fcd)\r\n- Small fixes for new saved filters (773f3ce4)\r\n- Incorrect display of season and series posters jellyfin 12.0 (#1142)\r\n- Jellyfin 12.0 api_key deprecation (5cff64dd)\r\n\r\n### Documentation 📖\r\n\r\n- Use conventional commits for changelog (5beb8392)\r\n\r\n### Other Changes\r\n\r\n- **Linux:** Add option to enable/disable the impeller renderer (21c65489)\r\n- Updated translations from  Hosted Weblate (#1171)\r\n- Updated to flutter 3.50.0 move all imports to either legacy or the new material library. Updated packages to their latest versions re-generated pidgeons (5b73e14b)\r\n- Update exoplayer (265c42b3)\r\n- Improve dpad navigation focus and performance (cccc9221)\r\n- Update flutter to 3.47.7 (5d4c1487)\r\n- Improve performance on low end devices (#1174)\r\n- Remove scheduled build (#1132)\r\n- Update flatpak summary (#1128)\r\n- Update Flutter SDK version to 3.50.1 (#1195)\r\n- Improve looping mpv (6f9f18e9)\r\n\r\n**Full Changelog:** https://github.com/DonutWare/Fladder/compare/v0.11.1...v0.12.1",
+          "downloadURL": "https://github.com/DonutWare/Fladder/releases/download/v0.12.1/Fladder-iOS-0.12.1.ipa",
+          "size": 36768050,
+          "minOSVersion": "15.0"
         }
       ]
     },
@@ -631,6 +873,54 @@
       ]
     },
     {
+      "name": "Ghost Remote",
+      "bundleIdentifier": "wiki.qaq.GhostRemote",
+      "developerName": "OwnGoal Studio",
+      "subtitle": "Open terminals on your other iGhostVT devices",
+      "localizedDescription": "Ghost Remote opens terminals on your iPhone, iPad or Mac running iGhostVT, from an iPhone or iPad without custom firmware. Turn on remote access on the device running iGhostVT, then tap + in Ghost Remote and pair with the six-digit code it shows. Terminals open over your local network, or from anywhere through a relay you run yourself.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GhostRemote/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GhostRemote/images/main.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GhostRemote/images/settings.webp"
+      ],
+      "tintColor": "#009051",
+      "versions": [
+        {
+          "version": "1.6.41",
+          "date": "2026-11-24T08:59:44Z",
+          "localizedDescription": "iGhostVT 1.6.41 includes the MCP server helper in Mac self-update signature checks and in the Mac install and update scripts; it connects to devices on any 1.6 release.\n\n- Mac self-updates checked the Developer ID team signature of `ighostvtd`, `ighostvtd-io`, `ighostvtd-remote` and `ighostvt-cli`, but omitted `ighostvt-mcp`. The updater now verifies `ighostvt-mcp` on its own alongside the other bundled helpers before installing an update.\n- `Scripts/mac-update-from-github.sh` now re-signs and stops `ighostvt-mcp` when replacing an installed Mac bundle, and `Scripts/mac-install.sh` stops `ighostvt-mcp` alongside the other helpers during an in-place Mac upgrade.\n\nChoose `iphoneos-arm64e` for roothide, `iphoneos-arm64` for a rootless bootstrap, `iGhostVT-1.6.41-macos-notarized.zip` for a Mac — it is signed and notarized, so it opens without clearing quarantine, and updates itself — or `GhostRemote-1.6.41.ipa` for an iPhone or iPad without custom firmware, which your sideloading app signs as it installs it. To run the relay, use the attached `compose.yml`; the image is `ghcr.io/owngoal-dev/ighostvt-relay`, and the digest is in `relay-image.txt`. SHA-256 sums are in `SHA256SUMS`, and the Mac app's in `SHA256SUMS.macos`.",
+          "downloadURL": "https://github.com/owngoal-dev/iGhostVT/releases/download/v1.6.41/GhostRemote-1.6.41.ipa",
+          "size": 7304124,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "GlobalRefresh",
+      "bundleIdentifier": "com.yoroin.globalrefresh",
+      "developerName": "Yoroin",
+      "subtitle": "基于 iOS 画中画的悬浮窗高刷辅助工具",
+      "localizedDescription": "基于 iOS 画中画的悬浮窗工具，可辅助解锁 ProMotion 120Hz 表现，支持自定义悬浮窗大小（可完全隐藏）、后台保活以及多悬浮窗共存。适配 iOS 15–27。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GlobalRefresh/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GlobalRefresh/images/home.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GlobalRefresh/images/frame_rate.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GlobalRefresh/images/tutorial-step-1.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GlobalRefresh/images/tutorial-step-2.webp"
+      ],
+      "tintColor": "#177FFD",
+      "versions": [
+        {
+          "version": "1.1.2",
+          "date": "2026-11-20T10:21:33Z",
+          "localizedDescription": "# 全局高刷 1.1.2（26.11.20）\n\n本版本提供正式版通用未签名 IPA，可通过牛蛙助手、AltStore、Sideloadly 等工具自行签名安装。\n\n构建号：`2026112101`\n\nIPA 文件：`GlobalRefresh_1.1.2_2026112101_unsigned.ipa`\n\nSHA-256：`776b590301dc70314323d8f5b0d3055d6d04e7b093b184d8c8d05eb363537e74`\n\n## 重新打包说明（26.11.21）\n\n构建号更新为 `2026112101`，恢复 iPhone 和 iPad 的图标文件索引，解决部分签名工具导入 IPA 后不显示应用图标的问题。主包 `Info.plist` 仍为 XML；程序、悬浮窗逻辑及图标资源均未改动。\n\n遇到签名工具内图标空白的用户，请下载新版附件后重新导入。已正常安装使用的用户无需仅为此重新安装。\n\n## 更新内容\n\n- \\* 修复 iOS 16 及以上悬浮窗关闭按钮偶尔重新出现的问题（即屏幕中间的水滴图标）\n- \\* 修复部分 iOS 15 设备无法启动悬浮窗的问题，恢复原生启动流程\n- 优化画中画并存，增加当前会话内的检查和有限补试；系统暂时挂起悬浮窗时，不再误判为关闭\n- 默认 VideoCall 与仅 PiP 保活组合的内容更新由 60fps 调整为 30fps，减少后台刷新开销\n- 优化小屏首页布局，避免启动按钮被底栏遮挡\n- 新增当前 App 的运存和线程数显示\n- 修复线程统计资源未释放、离开帧率演示页后刷新驱动未清理的问题；PlayerLayer 兼容方案改为在后台准备视频素材，避免阻塞界面\n- 支持导出和分享诊断日志；减少日志重复写盘，覆盖更新后保留已有退出记录和系统诊断\n- 优化快捷指令链接识别，保留原有入口；修复切换更新渠道时可能显示旧结果的问题，支持检测同版本的新构建\n\n## 来源与署名\n\n感谢 CaiWanFeng 提供原始 PiP 示例。本项目由 Yoroin 在此基础上继续开发和维护。\n\n原 Demo 项目：[CaiWanFeng/PiP](https://github.com/CaiWanFeng/PiP)\n\n当前项目：[Yoroin/GlobalRefresh-PiP](https://github.com/Yoroin/GlobalRefresh-PiP)\n\n基于本项目继续开发或分发时，请保留原作者、后续维护者及对应项目地址，并注明代码来源。\n\n## 自签说明\n\n此 IPA 不绑定个人证书，主程序和内嵌框架均未签名，也不含 `embedded.mobileprovision` 或 `_CodeSignature`。安装前请使用自己的 Apple ID 或证书签名。",
+          "downloadURL": "https://github.com/Yoroin/GlobalRefresh-PiP/releases/download/v1.1.2/GlobalRefresh_1.1.2_2026112101_unsigned.ipa",
+          "size": 7878284,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
       "name": "HermesEnabler",
       "bundleIdentifier": "com.example.HermesEnabler",
       "developerName": "pookjw",
@@ -672,6 +962,30 @@
           "downloadURL": "https://github.com/Leviidev/Husk/releases/download/3.4/Husk.ipa",
           "size": 142303569,
           "minOSVersion": "16.4"
+        }
+      ]
+    },
+    {
+      "name": "iBuilder",
+      "bundleIdentifier": "dev.ibuilder.app",
+      "developerName": "Absenti",
+      "subtitle": "Switch games, built on your iPhone",
+      "localizedDescription": "iBuilder turns a Switch game dump you own into a native iOS build on the iPhone itself: extract, rewrite, translate the shaders, sign and play. Experimental: results differ per game.\n\nNo game, firmware or key is included or downloaded. Use it only with your own games and the prod.keys of your own console. Not affiliated with Nintendo or Apple.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iBuilder/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iBuilder/images/library.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iBuilder/images/build.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iBuilder/images/settings.webp"
+      ],
+      "tintColor": "#EFB15A",
+      "versions": [
+        {
+          "version": "0.1.8",
+          "date": "2026-11-23T14:31:19Z",
+          "localizedDescription": "> [!WARNING]\n> No game, firmware or key is included or downloaded. Use iBuilder only with games you own and the `prod.keys` dumped from your own console. Not affiliated with Nintendo or Apple.\n\n> [!IMPORTANT]\n> **Every game rebuilds its shaders once** after this update: the shader chain moves to `6c53446391cc` (nxnative 033793f0), and a library is named by its chain. iOS's Metal shader cache also starts empty once, so the first play of each game stutters more.\n\n**New**\n- **Shader chain 6c53446391cc**, nxnative's current one: 37 upstream translator and host changes, including the Switch 2 mesh/task fixes. The Rust build gives the same library bytes as upstream (5,348 Ocarina shaders compared).\n- **More games found compatible**: shader readers for EA (FIFA 18: 0 → 330 shaders), CRI CPK, Diablo III, Unreal IoStore and encrypted paks, Smash Bros. Ultimate, Trinity (stored files), Frostbite (stored data), TT Games DAT, Larian LSPK, Blizzard CASC, Camelot CRA, PDAT, Rockstar RPF6, REDengine, RAGE WAD, NXCX, Telltale, GIANTS SHARC, Virtuos VBF, UbiArt IPK v5, MT Framework ARC v9. OpenGL and Vulkan games get their shaders too (glslang is now in the app; the engine compiles them on the phone).\n- **Build screen: Mode Cool / Fast** in place of Close. Cool (default) keeps the app smooth and the phone cooler; Fast builds at full speed, hotter. A running build follows a change.\n- **Faster builds**: a per-shader stream instead of batches; a rebuild after an update or a DLC reuses the shaders that did not change; a build resumed after iOS ended the app keeps half its threads instead of one. The build log now shows where the time went (translator, SPIRV-Cross, cores busy, translator GC).\n- **Settings**: *Check the shader cache* (on: a game iOS's cache forgot after a reboot or an iOS update is prepared again), *Faster shader preparation* (off: the device's full compiler concurrency when cool or charging), *Optimized translator (experimental)* (off: smaller shaders, may show graphics errors).\n- Shader libraries compiled for size (`optimizationLevel = Size`, the engine and the preparation alike).\n\n**Known limits**\n- Still refused: Oodle-compressed shaders (Octopath Traveler 0, FINAL FANTASY RESONANCE, Yoshi and the Mysterious Book, Mario & Luigi: Brothership, EA SPORTS FC 27, LEGO Star Wars base game, Pokémon Legends: Z-A), XNB LZX, Next Level Games archives; Camelot games need a capture of their file-table NRO.\n- The new readers are checked against nxnative on synthetic games, not on every real game; FIFA 18 is split and translated, not yet played. Nothing in this release has been played on an iPhone before publishing.\n\n**Install**: SideStore source `https://raw.githubusercontent.com/Absenti/iBuilder/main/apps.json`, or the `.ipa` below. Bundle id `dev.ibuilder.app`, iOS 26+, iPhone 12 or later. Assets: the `.ipa`, its `.sha256`, and `.ipa.verify.tar.gz` (the verifier that checked it: 261 checks passed).",
+          "downloadURL": "https://github.com/Absenti/iBuilder/releases/download/v0.1.8/GameApp-rust-20261123-142811-rustcf3c2f55.ipa",
+          "size": 42455597,
+          "minOSVersion": "26.0"
         }
       ]
     },
@@ -720,6 +1034,30 @@
           "downloadURL": "https://github.com/mengangs/ipadn/releases/download/v2.3.5/iPadn-2.3.5-lite-unsigned.ipa",
           "size": 49971723,
           "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "iRAM+",
+      "bundleIdentifier": "novadev.iram-plus",
+      "developerName": "NexSideloading",
+      "subtitle": "Enable Increased Memory Limit for sideloaded apps on device",
+      "localizedDescription": "Grant sideloaded apps the Increased Memory Limit and Extended Virtual Addressing entitlements directly on device: sign in with the Apple Account that signed them, pick an app and add the entitlement, then reinstall it. Works only with apps signed by an Apple account, not with enterprise certificates.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iRAM-Plus/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iRAM-Plus/images/start.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iRAM-Plus/images/app.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iRAM-Plus/images/settings.webp"
+      ],
+      "tintColor": "#64BE7E",
+      "versions": [
+        {
+          "version": "1.3.1",
+          "date": "2026-09-18T23:43:28Z",
+          "localizedDescription": "Hey everyone,\r\nSorry for not working on or updating this app in a while, but this release fixes the -80045 sign in issue and other bugs!",
+          "downloadURL": "https://github.com/NexSideloading/iRAM-Plus/releases/download/v1.3.1/iRAM-Plus.ipa",
+          "size": 4562979,
+          "minOSVersion": "16.0"
         }
       ]
     },
@@ -1050,6 +1388,57 @@
       ]
     },
     {
+      "name": "MD3Music",
+      "bundleIdentifier": "com.md3music.md3music",
+      "developerName": "EPXiaohua",
+      "subtitle": "基于酷狗音乐 API 的 Material 3 音乐播放器",
+      "localizedDescription": "基于酷狗音乐 API 的 Flutter 音乐播放器，内置嵌入式 Rust API 服务器，无需外部服务器即可使用。提供 MD3 与 Apple Music 风格播放页、逐字歌词与多种音频输出能力。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MD3Music-iOS/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MD3Music-iOS/images/home.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MD3Music-iOS/images/player.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MD3Music-iOS/images/fm.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MD3Music-iOS/images/comment.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MD3Music-iOS/images/settings.webp"
+      ],
+      "tintColor": "#4F7BCF",
+      "versions": [
+        {
+          "version": "6.2.0",
+          "date": "2026-11-09T08:34:00Z",
+          "localizedDescription": "## 已知问题\n\n- **切歌无声 / 上一首残留问题仍存在**：本版已尝试根治（原生层播放/暂停去早退、切歌意图确立后立即静音旧源、挂起后死亡播放器自愈），真机实测概率性仍可复现——后续版本继续排查\n\n## 上游 6.2.0 移植\n\n- 版本号与上游对齐（6.2.0+53），全量同步上游 md3Music 6.2.0：播放链路重构（本地 API 服务器新增响度参数与预热、媒体会话收敛）、依赖更新（m3_expressive、ort_dart、image、sqflite_common_ffi 等）、桌面小组件服务调整与全部上游修复\n- just_audio 播放内核同步至上游版本，iOS fork 补丁（音频焦点中断转发、均衡器挂载、辅助播放器）全部保留并适配新接口\n\n## iOS 修复\n\n- **iOS 26 桌面小组件按钮全部无响应修复**：iOS 26 弃用了在 extension 中设置 `openAppWhenRun` 的行为（点击 intent 根本不执行）；按钮 intent 改为双 target 共享 + 新 `supportedModes` 属性。播放控制类按钮（播放/暂停、上下曲、FM 控制等）现走系统后台执行协议——**点组件直接切歌，不再跳转打开 app**\n- **短暂挂起回前台后播放不了修复**：挂起会触发系统媒体服务重置，播放器实例死亡但应用状态未更新，点播放走快路径无声无错。新增前台死亡观察：播放中但进度 10 秒不动的判定为死播放器，自动重建并恢复到原进度（锁屏/切后台几分钟后回来自动恢复）\n- **挂起恢复后搜索/解析全部失败修复**：挂起后本地 API 服务器工作线程死亡而监听端口残留，旧探测方式被内核代答误判「服务正常」且永不自愈；探测改为真实 HTTP 请求，回前台主动健康检查并按需重建服务\n- **3D 封面系列修复**：iOS 缓存目录异常曾导致推理链路完全静默失败（不推理也无提示），失败原因现已对用户可见；脏缓存条目（索引在、文件丢）被误判为「设备不支持 shader」导致全进程降级多层视差的问题修复——缓存命中增加完整性校验，缺失自动重新推理\n- **歌词画中画修复**：双行布局在较大字号下上下顶边裁切（行距超界），改为按剩余空间三等分居中——任何字号、单双行都完整居中\n- **显示大小**：调整后未点「保留」就杀后台，不再把未确认档位带进下次启动（确认前仅内存预览，点「保留」才落盘）；iOS 隐藏「硬件解码播放」入口（iOS 播放器恒为系统级硬解，无对应开关可做）\n- CI 构建修复：恢复 Rust 静态库编译产物（上游同步时被覆盖丢失导致 iOS 构建失败）\n\n## 其它\n\n- 签名与小组件兼容说明：App Group 兼容**目前仅支持 [iloader](https://github.com/nab138/iloader)**（电脑签）；SideStore/AltStore 手机签后小组件显示「无法加载」是其签名流程丢弃 App Group 权限所致，主应用功能不受影响\n\n未签名 IPA：下载后自行签名安装（推荐 [iloader](https://github.com/nab138/iloader)，免费 Apple ID 签名即可）。\n\n- `MD3Music-unsigned.ipa`：标准版（无 3D 封面，推荐）\n- `MD3Music-3D-unsigned.ipa`：含 3D 封面支持版（内置 Depth Anything V2 深度模型与 MI-GAN 修补模型，设置中开启 3D 封面即可；生成失败时自动回退平面封面，包体约 +40MB）\n\n仅供学习交流，请勿用于商业用途！详见[免责声明](https://github.com/EPXiaohua/MD3Music-iOS/blob/main/DISCLAIMER.md)。如条件允许请支持原作者项目：[zzyoxml/md3Music](https://github.com/zzyoxml/md3Music/)。",
+          "downloadURL": "https://github.com/EPXiaohua/MD3Music-iOS/releases/download/v6.2.0%2B53/MD3Music-3D-unsigned.ipa",
+          "size": 59561466,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Melee-PC",
+      "bundleIdentifier": "dev.melee.melee-pc.KMT3995P5V",
+      "developerName": "999sian",
+      "subtitle": "Native port of Super Smash Bros. Melee",
+      "localizedDescription": "A native port of Super Smash Bros. Melee (NTSC-U 1.02) built from the decompilation project, with modern rendering and quality-of-life options. You must provide your own dump of the original game disc to play; no game data is included.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Melee-PC/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Melee-PC/images/title.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Melee-PC/images/character-select.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Melee-PC/images/gameplay-4p.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Melee-PC/images/launcher.webp"
+      ],
+      "tintColor": "#F08040",
+      "versions": [
+        {
+          "version": "0.4.2",
+          "date": "2026-10-21T00:08:51Z",
+          "localizedDescription": "**Beta, for testing only.** Expect crashes and missing features.\n\nYou need your own Super Smash Bros. Melee disc image. **No game data ships in\nthese artifacts** — the port reads everything, including its font atlases, from\nthe image you supply at runtime.\n\n**USA revision 2 (NTSC-U 1.02, GALE01)** is the supported disc. A Europe (PAL,\nGALP01) image boots experimentally, running the USA game code on PAL data with\nEnglish (UK) text.\n\n<!-- Published verbatim by the release job (gh release create --notes-file).\n     Per release: replace Highlights and Fixes, refresh Known issues and\n     Requirements, link earlier releases, and update the feature status table\n     in README.md (it is the single source\n     of truth for what works; nothing here may contradict it). -->\n\n## Highlights\n\n- Fixed the Adventure mode Mushroom Kingdom crash when blocks are hit (#144).\n- Fixed macOS bundles missing transitive `@rpath` libraries, including\n  `libbrotlicommon.1.dylib`, which could prevent the app from launching (#145).\n- Fixed coloured bars at the top left of widescreen fights when off-screen\n  fighter magnifiers are drawn. Verified on Linux/Vulkan in Kongo Jungle and\n  Onett; Windows/Direct3D hardware verification is still pending.\n\n## Fixes\n\n- Replaced GameCube byte-offset overlays with native field access for\n  Mushroom Kingdom block objects, Multi-Man Melee record initialization, and\n  Super Scope charge resets. This avoids invalid pointers, missing records,\n  and writes into unrelated CPU state on 64-bit hosts (#144).\n- macOS packaging now resolves and bundles transitive `@rpath` dependencies\n  and rejects bundles with missing libraries before publishing (#145).\n- Magnifier capture cameras now copy and clear their whole temporary viewport,\n  preserving fighter proportions and preventing leftover depth from hiding\n  parts of the stage. Added a regression test for original, widescreen and\n  ultrawide framebuffer aspects.\n\n## Known issues\n\nOpen reports are tracked on the [issue tracker](https://github.com/999sian/melee-pc/issues);\nthe numbers below link there.\n\n**All platforms**\n\n- Rendering artifacts and Kirby grab/throw behaviour remain under investigation (#130).\n- Online play is a prototype. LAN Play, Direct Connect, Unranked and Ranked are\n  implemented and rendezvous through the public DHT, but pairing across two\n  NATs in general and live ranked acceptance are unproven, and cross-platform simulation\n  determinism is not claimed. Ratings are community-computed and unverified.\n  Every datagram is authenticated (protocol 9), and the LAN lobby\n  only pairs identical builds, so both players should use the same release. A\n  connect code is 8 characters after the `#`.\n- Widescreen applies to fights (VS, Sudden Death, Training); menus, results and\n  cutscenes stay at the original aspect. The wide HUD is a separate toggle and\n  only moves the timer and the 2-4 player HUD groups.\n- A move, stage or effect whose shader is still compiling is missing from the\n  picture for a few frames (previously a freeze, #46). The bundled seed is\n  queued for compilation on worker threads when the game starts, and the\n  launcher waits for that queue when you press Play -- press Play again to skip\n  the wait. `MELEE_PIPELINE_SYNC=1` restores the old wait-for-compile\n  behaviour, and `MELEE_PIPELINE_JOBS=<n>` sets the compile thread count.\n  On Android, shaders compile inline to avoid driver failures seen when\n  pipelines are created on a second thread, so expect first-use stutter.\n- Only Vulkan, Direct3D 12/11 and Metal backends are shipped; OpenGL and\n  OpenGL ES-only GPUs and drivers do not run the game (#64, #66).\n- Gamepad buttons, sticks and triggers can be remapped; dash sensitivity,\n  tap-jump disable and input buffer settings are not available (#3).\n- Some users cannot get past the launcher; if the launcher shows but the game\n  never starts, run with the log enabled and attach it (#40).\n\n**Browser**\n\n- Tested in Chrome only; Firefox and Safari WebGPU support is incomplete.\n- Only a raw, uncompressed USA revision 2 (GALE01) image loads: no `.ciso`,\n  `.rvz` or PAL.\n- No online play, and no gamepad remapping (the default mapping is used; the\n  keys are listed under the canvas).\n\n**Windows**\n\n- Classic mode startup crashes remain under investigation (#128).\n- v0.1.6-beta and later can close immediately when starting the game from the\n  launcher on machines where v0.1.5-beta worked (#62, #63). Attach\n  `melee-pc.log` (or run `RUN-AND-LOG.bat`).\n- Intel Gen7 iGPUs (HD 4000/4400/4600, Ivy Bridge/Haswell, e.g. i5-4200U) are\n  refused by D3D12, and the Direct3D 11 path they are meant to fall back to has\n  not been verified on that hardware. A `DXGI_ERROR_DEVICE_HUNG` mid-match\n  there (#67) is the 2020-era Intel driver timing out on the GPU; there is no\n  further API to fall back to on it. The log names the adapter, backend and\n  driver version.\n\n**Android**\n\n- Battle rendering is reported blank unless paused on Pixel 9 Pro (#129).\n  This release does not yet have a verified fix for that device.\n- Startup or Play-button crashes remain reported on Retroid Pocket 6 and\n  AYN Odin 2 (#136, #137); device logs and hardware verification are outstanding.\n- Some devices close the app at launch before the launcher appears, reported\n  on an Honor 200 (Snapdragon 7 Gen 3) and an AYN Odin 2 (#59, #23).\n- Android 9 and devices without Vulkan are not supported (#66).\n\n**macOS**\n\n- The macOS builds are experimental; the Intel one is untested on hardware.\n  The game's C is compiled with Homebrew GCC (`scalar_storage_order`), the\n  C++ with Apple clang.\n\n## Config / save compatibility\n\n- `launcher.cfg` (key/value text in the `melee-pc` preference directory:\n  `~/.local/share/melee-pc`, `%APPDATA%\\melee-pc`, or\n  `~/Library/Application Support/melee-pc`) loads across versions: unknown\n  keys are ignored and missing keys take their defaults.\n- Memory cards are Dolphin-compatible `.gci` files and are unchanged by this\n  release.\n- Gamepad bindings live in aurora's per-device `.controller` files next to\n  `launcher.cfg`.\n- The pipeline cache (`pipeline_cache.db` in the same directory) is rebuilt as\n  needed; deleting it only costs first-use shader stutter.\n\n## Requirements\n\n- Windows 10/11 (x86-64 or ARM64): Direct3D 12 feature level 11_0 or Vulkan\n  1.1; a Direct3D 11 fallback exists but is unverified.\n  Linux (x86-64 or aarch64): Vulkan 1.1. macOS: Metal (Apple Silicon tested).\n  Android: arm64 with Vulkan 1.1. iOS 14+: arm64, Metal. Browser: Chrome or\n  Edge with WebGPU.\n- Keep `resources/` (and on Windows the DLLs) beside the executable.\n- A Melee USA 1.02 (GALE01) disc image (`.iso`, `.gcm`, `.ciso` or `.rvz`).\n\n## Downloads\n\n| Platform | File | Notes |\n|---|---|---|\n| Linux x86-64 | `Melee-x86_64.AppImage` | Needs a Vulkan driver. `chmod +x`, then run. |\n| Linux x86-64 | `melee-linux-x86_64.tar.gz` | Portable directory; run `run.sh`. |\n| Linux aarch64 (ARM64) | `Melee-aarch64.AppImage` | For 64-bit ARM Linux (Raspberry Pi 5, Asahi Linux, Orange Pi). |\n| Linux aarch64 (ARM64) | `melee-linux-aarch64.tar.gz` | Portable directory for 64-bit ARM Linux; run `run.sh`. |\n| Windows x86-64 | `Melee-Windows-x86_64.zip` | Extract and run `melee.exe`. Keep the DLLs and `resources/` beside it. |\n| Windows ARM64 | `Melee-Windows-arm64.zip` | Native 64-bit ARM build for Windows on ARM (Snapdragon X Elite, Surface Pro). |\n| Android arm64 | `Melee-Android-arm64.apk` | Release build, signed. Allow install from unknown sources. |\n| iOS arm64 | `Melee-iOS-arm64.ipa` | Sideloadable IPA (AltStore, Sideloadly, TrollStore) with Metal backend. |\n| macOS arm64 | `Melee-macOS-arm64.zip` | Apple Silicon. Ad-hoc signed: right-click > Open on first launch. |\n| macOS x86_64 | `Melee-macOS-x86_64.zip` | Intel. Same notes; built but not yet tested on Intel hardware. |\n| Browser | [999sian.github.io/melee-pc/play](https://999sian.github.io/melee-pc/play/) | Chrome or Edge with WebGPU. Raw `.iso`/`.gcm` only; no online play. |\n\nLaunch with no arguments to open the launcher and pick a disc, or pass the\nimage path directly:\n\n```sh\n./Melee-x86_64.AppImage /path/to/melee.iso\n```\n\n## Previous releases\n\nSee [earlier releases](https://github.com/999sian/melee-pc/releases) for prior changelogs.\n\n## What works\n\nEvery game mode runs. The per-feature list, including what is only partly\ndone, is the status table in\n[README.md](https://github.com/999sian/melee-pc#status); it is the single\nsource of truth and these notes defer to it.\n\n## Controls\n\nArrows or WASD = stick, IJKL = C-stick, X = A, Z = B, C = X, V = Y, Q/E = L/R,\nTab = Z, Enter = Start, TFGH = D-pad. Gamepads work through SDL and can be\nremapped; an official GameCube adapter is read directly. **F1** opens the\nsettings overlay.\n\n## Contributors\n\n### Project Contributors\n- **@forkyfoo** — Mushroom Kingdom, Multi-Man Melee and Super Scope 64-bit fixes (#144), and macOS library bundling fix (#145).\n- **@999sian** — Project Lead, Phase 1 features, multi-core optimizations, file cache, Android & Windows porting, and stability fixes.\n- **@theofficialgman** — Linux aarch64 (ARM64) support, Nod aarch64 prebuilts, 4-core & ARM scheduling optimizations (#44, #47).\n- **@alexscott2718-gif** — Graphics backend selection, command line overrides, and engine logging.\n- **@r-burns** — Melee decompilation and 64-bit portability foundations.\n- **@MarkMcCaskey** — Decompilation and core engine maintenance.\n- **@ribbanya** (Robin Avery) — Decompilation and memory card subsystem.\n- **@PsiLupan** (Will Carter) — Decompilation and subsystem typing.\n- **@itsgrimetime** (Mike Grimes) — Decompilation foundations.\n- **@Joyastick** — Real two-machine netplay testing and fixes (#91, #92, #93).\n\n### Community Testers & Issue Reporters\nSpecial thanks to our community members whose detailed bug reports and reproduction steps directly helped diagnose and resolve issues in these releases:\n- **@jennywakeman-xj9** (#30, #31, #32, #33, #34, #35, #36, #38, #39, #51, #53, #54, #55, #56, #57, #58)\n- **@omega-tuna** (#48)\n- **@VTuberSkye** (#45)\n- **@4zy1** (#49, #50)\n- **@stevenstallone** (#52)\n- **@mmedeiro1-a11y** (#43)\n- **@Keithmccloud** (#59)\n- **@Smashhacker** (#41, #60)\n- **@whirlwindpedro** (#40)\n- **@zamiba** (#42)\n- **@nitrostemp** (#37)\n\n### Upstream Projects & Foundations\n- **[doldecomp/melee](https://github.com/doldecomp/melee)** — The Super Smash Bros. Melee decompilation team and contributors.\n- **[encounter/aurora](https://github.com/encounter/aurora)** — Luke Street (@encounter) and contributors for the GameCube hardware emulation layer and WebGPU backend.\n- **[TwilitRealm/dusklight](https://github.com/TwilitRealm/dusklight)** — Architectural inspiration for GameCube PC ports.\n- **SDL3, RmlUi, stb_vorbis, and Dawn teams** for the runtime engine libraries.",
+          "downloadURL": "https://github.com/999sian/melee-pc/releases/download/v0.4.2/Melee-iOS-arm64.ipa",
+          "size": 10181174,
+          "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
       "name": "MeloX",
       "bundleIdentifier": "azki.moye.MeloX",
       "developerName": "youshen2",
@@ -1095,6 +1484,35 @@
           "downloadURL": "https://github.com/ResistanceTo/MiniWatts/releases/download/v1.7.0/MiniWatts-unsigned.ipa",
           "size": 3374224,
           "minOSVersion": "17.0"
+        }
+      ]
+    },
+    {
+      "name": "Mori",
+      "bundleIdentifier": "com.mori.downloader",
+      "developerName": "coflyn",
+      "subtitle": "Client-side media downloader for 16 platforms",
+      "localizedDescription": "Save videos, photos and audio from TikTok, Instagram, YouTube, Twitter/X, Spotify, Apple Music, Pinterest, Facebook, Threads, Bandcamp, Pixiv, Bilibili, Douyin, RedNote, Reddit and TeraBox, with built-in tools for stream sniffing, audio extraction, image conversion and PDF compression. Everything runs on-device — no accounts, ads or tracking.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/1.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/2.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/3.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/4.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/5.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/6.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/7.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/8.webp"
+      ],
+      "tintColor": "#27282A",
+      "versions": [
+        {
+          "version": "4.6.1",
+          "date": "2026-11-20T23:42:35Z",
+          "localizedDescription": "# What's New in Mori 4.6.1\r\n\r\n### New Features & Enhancements\r\n\r\n* **Direct iOS Camera Roll Save (#27)**: Added native Photos framework integration (`saveToCameraRoll`) in AppDelegate to save downloaded videos and photos directly to iOS Camera Roll without third-party dialogs.\r\n* **Full Spanish (es) Localization (#30)**: Added complete Spanish language translation across app UI, tools, settings, and documentation.\r\n* **Chinese Share Link Extraction (#26)**: Added parser preserving extraction codes from Chinese cloud drive and media share captions (Quark, UC, Baidu, 115, Lanzou).\r\n* **Multilingual Documentation**: Added localized README and installation guides for Indonesian (`id`), Simplified Chinese (`zh-CN`), and Spanish (`es`) with interactive language switchers.\r\n* **Full i18n Key Synchronization**: Synchronized all 9 locale dictionaries to 630 translation keys and added native Android Indonesian string resources (`values-in`).\r\n\r\n### Bug Fixes & Scraper Repairs\r\n\r\n* **iOS Auto-Zoom on Input Focus (#31)**: Enforced 16px font sizing and locked viewport scale to prevent WebKit auto-zooming when tapping the input or paste bar.\r\n* **Bilibili Akamai 403 & Stream Headers (#31)**: Injected required Referer (`https://www.bilibili.com/`) and User-Agent headers on Akamai CDN streams, removed universal byte-range header to prevent broken HTTP 206 responses, and added HTML error page detection to stop saving corrupt error responses.\r\n* **Mori CLI Playlist Downloads**: Fixed playlist downloads and dynamic version resolution in `@coflyn/mori` (v1.2.2).\r\n\r\n### Performance & Reliability\r\n\r\n* **History & Gallery Memory Optimization**: Cached video thumbnails directly to disk via Filesystem, added paginated progressive rendering for large media lists, and removed redundant background scanning loops.\r\n\r\n**Full Changelog**: https://github.com/coflyn/Mori/compare/v4.6.0...v4.6.1",
+          "downloadURL": "https://github.com/coflyn/Mori/releases/download/v4.6.1/Mori-v4.6.1-iOS-Unsigned.ipa",
+          "size": 2214932,
+          "minOSVersion": "14.0"
         }
       ]
     },
@@ -1220,6 +1638,50 @@
       ]
     },
     {
+      "name": "NusaNX",
+      "bundleIdentifier": "com.nusanx.studio",
+      "developerName": "optimalabsistem",
+      "subtitle": "Convert Switch game containers into native iOS/iPadOS apps on device",
+      "localizedDescription": "Transforms legal Nintendo Switch game containers (.nsp/.xci) into standalone native iOS/iPadOS apps directly on-device — ARM64 game code runs natively while Switch NVN/OpenGL shaders are translated to Apple Metal. Requires an M1 iPad or A17 Pro iPhone with iOS/iPadOS 26 or newer.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/NusaNX/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/NusaNX/images/main.webp"
+      ],
+      "tintColor": "#00C2FF",
+      "versions": [
+        {
+          "version": "0.1.1-beta",
+          "date": "2026-11-18T15:08:38Z",
+          "localizedDescription": "## Fixed & Improved\r\n\r\n    - Fixed a file picker bug.\r\n    - Fixed excessive texture re-uploads causing severe FPS drops in Grand Bazaar and Other Games.\r\n   \r\n    ## Experimental\r\n\r\n    - Added on-device `.nup` support, including updates and DLC.\r\n    - Some shaders and character textures may still appear black.\r\n    - Game compatibility varies; LiveContainer may require the file picker fix.\r\n\r\n    ## Requirements\r\n\r\n    **For running converted games:**\r\n    - **iPad:** Apple M1 chip or later, running iPadOS 26.0 or later.\r\n    - **iPhone:** A17 Pro chip or later, running iOS 26.0 or later.\r\n    - Metal 4 support.\r\n\r\n    **For conversion and installation:**\r\n    - Your own legally obtained game dumps.\r\n    - Your own `prod.keys` for encrypted game containers.\r\n    - Sufficient free storage for extraction and IPA generation.\r\n    - A signing and sideloading method for unsigned IPA packages.\r\n\r\n    ## Installation\r\n\r\n    1. Download `NusaNX.ipa` from the release assets.\r\n    2. Sign and sideload the converter using your preferred method.\r\n    3. Import your `prod.keys` and a supported `.nsp` or `.xci` game dump.\r\n    4. Build the game's IPA, then sign and sideload it separately.\r\n\r\n    ## Known Limitations\r\n\r\n    - This is a beta release; stability, performance, and compatibility vary by game and\r\n    device.\r\n    - Successful conversion does not guarantee that a game will boot or run correctly.\r\n    - `.nup` import is not currently supported by the iPad converter.\r\n    - The Xbox controller mapping fix is included in this build, but still requires\r\n    physical-controller testing.\r\n    - Both the converter and generated IPA packages are unsigned.\r\n\r\n    ## Legal Notice\r\n\r\n    No Nintendo firmware, decryption keys, or game assets are included. Use only game dumps\r\n    and keys you are legally authorized to use.\r\n\r\n    This project is not affiliated with or endorsed by Nintendo.",
+          "downloadURL": "https://github.com/optimalabsistem/NusaNX/releases/download/v0.1.1-beta/NusaNX.0.1.1.Beta.ipa",
+          "size": 4820492,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
+      "name": "Nuvio",
+      "bundleIdentifier": "com.nuvio.media",
+      "developerName": "NuvioMedia",
+      "subtitle": "Open-source media client for your own sources",
+      "localizedDescription": "A free, open-source media app that turns your own sources into a library with artwork, ratings, subtitles and your place saved on every screen. Built with Kotlin Multiplatform and Compose Multiplatform; requires iOS 16.1 or later.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Nuvio/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Nuvio/images/main.webp"
+      ],
+      "tintColor": "#1E88E5",
+      "versions": [
+        {
+          "version": "1.0.1",
+          "date": "2026-11-21T14:50:47Z",
+          "localizedDescription": "- c31c30e1 fix(player): ignore gesture insets for bottom controls on android @skoruppa  \r\n- 4baf886e fix(ios): keep downloads out of iCloud and computer backups @claude  \r\n- f81edc65 fix(debrid): match TorBox alternative-hash cache answers @WhiteGiso  \r\n- 103c5e07 fix(trakt): prevent unbounded library refresh queue @enricopro",
+          "downloadURL": "https://github.com/NuvioMedia/NuvioMobile/releases/download/1.0.1/nuvio-1.0.1-full-release.ipa",
+          "size": 69936384,
+          "minOSVersion": "16.1"
+        }
+      ]
+    },
+    {
       "name": "Odysseus",
       "bundleIdentifier": "com.mirazbakis.Odysseus",
       "developerName": "yaog6700-bit",
@@ -1304,6 +1766,30 @@
       ]
     },
     {
+      "name": "Orca",
+      "bundleIdentifier": "com.thm.orcaios",
+      "developerName": "huami1314",
+      "subtitle": "iPhone client for Orca, the agent development environment",
+      "localizedDescription": "Community-maintained iPhone client for Orca, the agent development environment: pair with Orca on your Mac and chat with agents, follow their tool calls and run commands in an embedded Ghostty terminal, with Live Activities, Picture in Picture and push notifications when the app is closed. Requires iOS 26 and a Mac running Orca.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orca/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orca/images/main.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orca/images/work.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orca/images/notification.webp"
+      ],
+      "tintColor": "#151619",
+      "versions": [
+        {
+          "version": "0.1.4",
+          "date": "2026-11-24T18:05:00Z",
+          "localizedDescription": "## What's Changed\n* feat(pip): refine the two-line agent status overlay by @fobole-openthedoor in https://github.com/huami1314/orca-ios/pull/4\n\n\n**Full Changelog**: https://github.com/huami1314/orca-ios/compare/v0.1.3...v0.1.4",
+          "downloadURL": "https://github.com/huami1314/orca-ios/releases/download/v0.1.4/Orca-iOS-v0.1.4-unsigned.ipa",
+          "size": 14994104,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
       "name": "Orchard",
       "bundleIdentifier": "com.makr.orchard",
       "developerName": "MakrSas",
@@ -1322,6 +1808,29 @@
           "downloadURL": "https://github.com/MakrSas/orchard-ios/releases/download/v0.2/Orchard.ipa",
           "size": 18477287,
           "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
+      "name": "Photos Backup",
+      "bundleIdentifier": "com.g8row.photosbackup",
+      "developerName": "g8row",
+      "subtitle": "On-device Google Photos backup",
+      "localizedDescription": "An experimental, fully on-device iPhone app for backing up selected photos, videos, and albums to Google Photos.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PhotosBackup/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PhotosBackup/images/home.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PhotosBackup/images/activity.webp"
+      ],
+      "tintColor": "#2080F0",
+      "versions": [
+        {
+          "version": "0.3.8",
+          "date": "2026-11-10T17:28:17Z",
+          "localizedDescription": "## New\n\n- **Keep Running in Background.** On by default, in **Settings → Background**. While a backup has work iOS won't move on its own, the app keeps itself from being suspended the way SideStore does, by playing silence mixed with whatever else is playing. No permission is needed, and the backup keeps going with the app closed or the phone locked. When the queue is done, after 12 hours, or if iOS interrupts it, it stops and the app sleeps again. If calls or music keep stopping it, switch **Method** to **Location**, which asks for location permission and uses coarse updates instead. ([#2](https://github.com/g8row/PhotosBackup/issues/2), [#41](https://github.com/g8row/PhotosBackup/pull/41))\n\n- **Backup keeps going after you leave the app (iOS 26), for real this time.** 0.3.7's IPA was built with Xcode 16.4, which left this feature out, so there was no Live Activity. Releases are now built with Xcode 26.3. ([#39](https://github.com/g8row/PhotosBackup/pull/39))\n\n- **An edited video's original is backed up too**, so the Google Photos app counts it, including Cinematic videos, which the camera saves as edited. ([#38](https://github.com/g8row/PhotosBackup/pull/38), thanks @saileshbro)\n\n- **Back Up Live Photo Motion is now on by default.** ([#38](https://github.com/g8row/PhotosBackup/pull/38))\n\n## Fixed\n\n- **The app forgot what it had already backed up.** ([#34](https://github.com/g8row/PhotosBackup/issues/34), [#22](https://github.com/g8row/PhotosBackup/issues/22), [#40](https://github.com/g8row/PhotosBackup/pull/40), thanks @josippapez) The app forgot every photo iOS reported as changed, and iOS reports a lot more than edits: favourites, albums, and the photo analysis it redoes on the whole library after an iOS update. One report had a single background window forget 36,615 backups. A photo is now only re-checked when its edit actually changed, and photos backed up before this release keep their record.\n\n- **Big backups are much lighter on CPU and disk.** ([#13](https://github.com/g8row/PhotosBackup/issues/13), [#34](https://github.com/g8row/PhotosBackup/issues/34), [#42](https://github.com/g8row/PhotosBackup/pull/42)) Uploads were hashing one file at a time, and the queue was rewritten to disk several times a second. That's what iOS was closing the app for in the reports. Hashing now runs alongside the uploads, and the queue is saved at most once a second.\n\n- **The screen stays on while a backup runs in the app** if Keep Running in Background is off. With it on, the phone can lock normally. ([#37](https://github.com/g8row/PhotosBackup/issues/37))\n\n- **The Activity tab is fast on big backups.** ([#8](https://github.com/g8row/PhotosBackup/issues/8), [#42](https://github.com/g8row/PhotosBackup/pull/42)) It drew a row for every item in the queue. It now shows what's in progress or failed, the next 20 and the last 50 finished, and says how many more there are.\n\n## Worth knowing\n\n- **If your progress already reset on 0.3.7**, the first launch may go over those photos once more. Most settle without uploading anything, and it shouldn't happen again.\n- **Keep Running in Background uses more battery**, and swiping the app away in the app switcher still stops it. Charging overnight is still the best time for a big backup.\n- The diagnostic report now has a **Keep-alive** line saying whether it was running.\n\n## Notes\n\n- 208 tests, 206 passing (2 opt-in live tests skipped).\n- Tested on iOS 26.5 and 18.6 simulators. Not tested on a device yet. If something is off, **Settings → Support → Create Diagnostic Report** and attach it to an issue.",
+          "downloadURL": "https://github.com/g8row/PhotosBackup/releases/download/0.3.8/PhotosBackup.ipa",
+          "size": 2816914,
+          "minOSVersion": "15.0"
         }
       ]
     },
@@ -1489,6 +1998,35 @@
       ]
     },
     {
+      "name": "Rich4Renew",
+      "bundleIdentifier": "pro.areu.rich4",
+      "developerName": "iam567",
+      "subtitle": "大富翁4 高清重制版，新增歌舞伎町地图与大富豪模式",
+      "localizedDescription": "《大富翁4》的高清重制版：Vite + TypeScript 重写的游戏本体，Capacitor 打包成 iOS App，规则依原版反组译还原，并加入新玩法「大富豪模式」与新地图「歌舞伎町」。支持 iPhone 与 iPad，iOS 15.0 及以上。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/01-title.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/02-classic-taiwan.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/03-tokyo.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/04-kabukicho.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/05-jiqing-tiananmen.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/06-lottery.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/07-missile-film.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/08-party-taunt.webp"
+      ],
+      "tintColor": "#F0D020",
+      "versions": [
+        {
+          "version": "1.3.0",
+          "date": "2026-11-25T06:52:08Z",
+          "localizedDescription": "## 谢谢大家\n说好的 1.3 来了。谢谢每一位在玩、在报 bug、在评论区出主意的朋友，这一版等得比较久，谢谢大家的耐心。\n\n1.3 最大的心血是两张古代大地图：大唐长安的「开元盛世」，和北宋汴京的「清明上河」——还有八百里水泊梁山。城墙、楼阁、路人、音乐、小报、小游戏，一样一样全是重新做的。\n\n**这个游戏属于每一位喜欢大富翁4的玩家：永远不收任何费用，也不做任何商业用途，大家尽管拿去玩、拿去分享。**\n\n- **想玩两张新地图，请下载这个页面的 1.3.0 安装包覆盖安装**，存档会保留（保险起见，可以先在「游戏设置 → 存档备份」导出一份）。游戏内更新到的是「1.3.0 simple」版：只有几 MB，不含这两张地图，其他功能（私服、联机等）跟完整版一样，可以和完整版的玩家一起玩。iPhone 要连私服，需要装 1.3.0 安装包。\n- **国内下载慢**：在国内提供下载需要备案，我个人没办法申请，建议挂梯子下载，或者等网盘版。\n- **遇到 bug 或小问题**：可以在 [Issues](https://github.com/iam567/rich4-renew-app/issues) 提交，也可以在 B 站 UP 主 **TrustBox**、**阿姆西_MC** 发布的大富翁4 重制版视频下面留言，各个评论区我都会看，能修的一定会修。\n\n祝大家玩得开心，梁山见！\n\n## v1.3 更新内容\n\n- **两张全新的古代大地图，都在「自制地图」里，音乐、界面、开场动画、小报和卦肆（新闻、命运）、路人全是自己的一套，钱也用「文」：**\n  - **开元盛世（大唐长安）**：贡院答题考状元、斗鸡场下注、驿站快马、博戏坊押大小、发配所，路上还有几十个「小事件」格子，踩上去随机前进后退。\n  - **清明上河（北宋汴京）**：城墙、虹桥、樊楼、大相国寺都立起来了。城外是水泊梁山——坐汴河漕运的船过去，打虎、射野猪、跟燕青摔跤、十字坡看碗，抽 108 张「梁山令」，凑齐一组好汉到聚义厅换奖励。\n  - 清明上河的企业各有各的用处：汴河漕运把人送上梁山，东京车坊收加油费，将作监帮你加盖，官窑卖瓷器，常平仓卖保险；当上董事长还有专属好处。\n- **新增「私服」：想自己架一台给朋友玩的人，可以下载「私服架设包」，一条命令装好。** 派对模式的「局域网房间」改成了「私服房间」，里面有局域网、连线私服和私服列表；输入房间码就会自动连到那台私服。私服可以有公告、活动报名、私信、介绍和横幅，掉线两分钟内回来座位还在。iPhone 要装 1.3 的安装包才能连私服。\n- **新增「游戏节奏」：慢节奏、原版、快节奏三种。** 慢节奏：物价涨得慢、过路费六折、周转不灵可以清算资产；快节奏：物价涨得快，房价地价 1.2 倍。排行榜只收原版节奏。\n- **所有股票都能自由买卖：** 企业的保留股份不用再走到那栋楼才能买，在股市就能直接按市价买；买不了的时候会写明原因。\n- **电脑版的存档改放在游戏目录里的 save 文件夹**（Windows 在 Rich4.exe 旁边，Mac 在「大富翁4」旁边），换电脑直接复制走；原来的存档第一次打开会自动复制过去。标题画面多了「回到桌面」。\n- 新增「状态条」：游戏画面右上角显示现在的状态，例如谁坐牢还剩几天、股市休市还剩几天，可以收起来。\n- 结果窗口：一次影响很多人或很多块地时，列成清单慢慢滚动，相同的合并成一行，镜头不再一个个跑。\n- 冬眠的人轮到时只弹一条消息，镜头不再切过去。\n- 地狱难度：研究所做的道具在商店里变灰，点一下老板会说明不能卖。\n- 嫁祸卡可以再嫁祸：被嫁祸的人可以用自己的免罪卡或嫁祸卡，直到有人没有为止。飞弹、核弹炸到旅馆，里面的客人也会受伤住院。\n- 新闻、命运送的道具，只会是商店里买得到的。\n- 大富豪模式：卡片改成全国共用一池，商店没有常备卡片了。\n- 修正：有些新闻的结果写成「undefined 的 12 支股票」。\n- 修正：创作乐园的地图说明太长时，按钮被挤出画面。\n- 修正：很旧的安卓系统和部分电视停在绿色画面打不开（需要装 1.3 的安装包）。\n- 修正：iPhone 上连点屏幕下方会退回主屏幕；现在要滑两次才会退出。\n- 修正：简体显示里「著称」「毕昇」等字。\n- 1.3 只能和 1.3 的玩家一起玩派对模式。存档可以直接沿用。\n\n### v1.2.5（2026-11-17，游戏内更新）\n- 修正：抢夺卡现在是「用抢夺卡换对方一张卡」。卡片栏满了也不会再要你丢掉一张；抢到对方的抢夺卡，自己手里会留下一张（以前地狱难度下两边的抢夺卡都会不见）。派对模式里有旧版本的玩家一起玩时，按旧规则进行。\n- **新增：排行榜「总榜」。** 地图那一排最前面多了「总榜」，所有地图一起排名，每个成绩下面标出是在哪张地图打的。\n- 星座主题、武侠主题、恐龙主题、城市主题四张地图，名字改成「星座」「武侠」「恐龙」「城市」。\n- 自建地图的物件重新分类：地面、道路、格子、地标、建筑、植被、装饰，地标按洲分，建筑、植被、装饰也各有小分类；原版八张地图里的房子、商店、公园、地标也都可以拿来用了。\n\n## 安装\n- 安卓手机：下载 `rich4-1.3.0.apk`，在手机上打开安装（第一次要允许「安装未知来源的应用」）。\n- 安卓电视／电视盒子：下载 `rich4-1.3.0-androidtv.apk` 安装，桌面上会出现「大富翁4 TV」；用遥控器或手柄玩。手机版的 apk 也能装在电视上（两个是同一个 App，装一个就好）。\n- iPhone：`rich4-1.3.0-unsigned.ipa` 是未签名的安装包，需要自己签名后安装。\n- Windows：下载 `rich4-1.3.0-windows.zip`，解压后打开 `Rich4` 文件夹，双击 `Rich4.exe`。第一次打开如果出现「Windows 已保护你的电脑」，点「更多信息 → 仍要执行」。开局域网房间时如果防火墙询问，请选「允许」。存档在 `Rich4` 文件夹里的 `save`。\n- Windows 7 / 8：下载 `rich4-1.3.0-win7.zip`，用法和上面的 Windows 版一样。Windows 10、11 请用上面的 Windows 版。\n- Mac：下载 `rich4-1.3.0-mac.dmg`，打开后把「大富翁4」拖进「应用程序」（Intel 和 M 芯片都能用）。第一次打开请在「应用程序」里对它按右键 →「打开」。\n- 想自己架私服：下载 `rich4-server.zip`，里面有架设说明（README.md）。\n\n装新版会保留原来的存档。",
+          "downloadURL": "https://github.com/iam567/rich4-renew-app/releases/download/v1.3.0/rich4-1.3.0-unsigned.ipa",
+          "size": 1698625747,
+          "minOSVersion": "15.0"
+        }
+      ]
+    },
+    {
       "name": "Roam Control",
       "bundleIdentifier": "com.sean.roamcontrol",
       "developerName": "seanhowarthdev",
@@ -1538,6 +2076,28 @@
       ]
     },
     {
+      "name": "RyukSign",
+      "bundleIdentifier": "ryuk2.anoxclan.com",
+      "developerName": "faroukbmiled",
+      "subtitle": "On-device iOS app signer and installer",
+      "localizedDescription": "RyukSign is an on-device app signer and installer for iOS, derived from Feather (by claration). Sign and install apps with a .p12 / .mobileprovision pair, manage tweaks (.dylib/.deb/.framework/.bundle/.appex), transfer files over HTTP/WebDAV, and track app updates — entirely on-device.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RyukSign/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RyukSign/images/main.webp"
+      ],
+      "tintColor": "#C96FAD",
+      "versions": [
+        {
+          "version": "4.2.0",
+          "date": "2026-11-25T22:41:34Z",
+          "localizedDescription": "## What's new in 4.2.0\n\n### New\n\n- Added on-device pairing on iOS 27, no computer needed for a pairing file\n- Added certificate reordering with Move to Top, used everywhere you pick a certificate\n- Added certificate search\n- Added Japanese translation by @kinboy56\n\n### Improvements\n\n- Improved installs to show progress while the app is sent to iOS\n\n### Fixes\n\n- Fixed installs failing after the SSL certificate renews\n- Fixed installs staying stuck halfway when iOS hides install progress\n- Fixed untranslated text in the Tweak Manager\n\n\n## Install\n\n- Download **RyukSign.ipa** from the assets below and sign it, or\n- Add the RyukSign source to get updates in the app: `https://raw.githubusercontent.com/faroukbmiled/RyukSign/main/app-repo.json`\n\n**Full changelog:** https://github.com/faroukbmiled/RyukSign/compare/v4.1.0...v4.2.0\n\n<sub>Built 2026-11-25 from [`49ccb30`](https://github.com/faroukbmiled/RyukSign/commit/49ccb3040ad6cf9753a420a8619f33faa186ca31)</sub>",
+          "downloadURL": "https://github.com/faroukbmiled/RyukSign/releases/download/v4.2.0/RyukSign.ipa",
+          "size": 22247678,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
       "name": "Röam",
       "bundleIdentifier": "com.mistj.v2ex",
       "developerName": "mistj",
@@ -1577,6 +2137,31 @@
           "downloadURL": "https://github.com/donbytyqi/scenebox/releases/download/v1.0.4/SceneBox-1.0.4.ipa",
           "size": 30593765,
           "minOSVersion": "18.0"
+        }
+      ]
+    },
+    {
+      "name": "Shirox",
+      "bundleIdentifier": "com.shirox.app",
+      "developerName": "xibrox",
+      "subtitle": "Personal anime and manga library manager for iOS",
+      "localizedDescription": "A free, source-available library manager for iPhone, iPad and Mac. Track what you watch and read, keep it in sync with AniList and MyAnimeList, and play it from the sources you connect.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Shirox/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Shirox/images/detail.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Shirox/images/home.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Shirox/images/library.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Shirox/images/player.webp"
+      ],
+      "tintColor": "#1C1C1E",
+      "versions": [
+        {
+          "version": "1.0.6",
+          "date": "2026-10-08T13:11:34Z",
+          "localizedDescription": "Discord: your status now goes out while something plays, not only once you pause, and it has a progress bar that follows seeks and playback speed. Titles played from Simkl show their season (\"Season 2 · Episode 5\"), and manga shows the same TV icon as anime. The status keeps working after the app was away for a while, and two token refreshes at once no longer sign you out of Discord without a word.\n\nSubtitles: every cue on screen is shown at once, so a long sign no longer hides the dialogue under it. Bottom Padding goes up to 400 pt, so subtitles can sit on the picture when you watch in portrait. The units on the Subtitles settings page are translated.\n\nSimkl: episodes of a title opened from Simkl can be downloaded and have their progress reset from their menu, like AniList episodes.\n\nShirox speaks Thai, in Settings › General › Change Language. The Started On and Finished On labels read as dates in every language, and the already downloaded and already queued toasts are translated.\n\nApp icons: Manga, a new home screen icon in Settings › General › App Icon.\n\nAlso: the player's subtitle settings and episode pickers take your accent color, holding the tab bar opens its menu on every tab when the bar minimizes on scroll, and a few spots that could crash on bad input from a server now handle it.\n\n\n**Downloads:** Shirox.ipa (iPhone, iPad), Shirox-macOS.dmg (Mac), Shirox-Catalyst.dmg (Mac, Catalyst build).",
+          "downloadURL": "https://github.com/xibrox/Shirox/releases/download/latest/Shirox.ipa",
+          "size": 27327422,
+          "minOSVersion": "15.0"
         }
       ]
     },
@@ -1629,6 +2214,30 @@
       ]
     },
     {
+      "name": "Simple Live",
+      "bundleIdentifier": "com.xycz.simple-live",
+      "developerName": "June6699",
+      "subtitle": "支持弹幕与 IPTV 的开源多平台直播聚合播放器",
+      "localizedDescription": "简简单单的看直播（Simple Live）是一款使用 Flutter 开发的开源多平台直播聚合播放器，支持虎牙、斗鱼、哔哩哔哩、抖音、快手等平台的直播与弹幕，并内置公开的 IPTV 直播源。支持关注、标签、历史与弹幕屏蔽词，配置可导入导出，并可通过房间服务、局域网或 WebDAV 同步。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SimpleLive/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SimpleLive/images/home.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SimpleLive/images/category.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SimpleLive/images/settings.webp"
+      ],
+      "tintColor": "#24A7EB",
+      "versions": [
+        {
+          "version": "1.13.3",
+          "date": "2026-11-08T13:17:59Z",
+          "localizedDescription": "# Simple Live v1.13.3 更新速览\r\n\r\n发布日期：2026-10-25\r\n\r\n本版主题：发热优化、Windows 退出修复、桌面端快捷键中文输入法适配、B站弹幕缺失修复与虎牙 4K 断流调查结论。2026-11-01 追加全屏四角时钟（#160），2026-11-02 追加音量增强与音量手势修复（#161），2026-11-03 修复抖音部分房间登录墙导致进不去、关注页刷不出，2026-11-08 追加 iOS 系统画中画、取消关注不再触发全量刷新（#163）与 WebDAV 恢复 500 根因修复（#164）。\r\n\r\n经过19次构建，终于解决了，连media_kit都没解决的iOS PIP问题，在一个PR中，获得了思路，经过一些修复，与我们项目实现了兼容。\r\n\r\n在此，感谢各位提供日志的用户：@laobai95 等等多位用户（请在群内提供git用户名）。\r\n## 省电模式（新增，默认关闭）\r\n\r\n- 针对安卓端观看时发热严重的反馈，新增一键「省电模式」（设置 → 直播间设置 → 播放器，置于首位）：视频缩放降档（均衡 → bilinear、画质 → spline36）、弹幕限 60 帧、关闭弹幕描边、放宽安卓播放检测频率、多开上限 4 个且压至最低清晰度。\r\n- 默认关闭，关闭时所有行为与 v1.13.2 完全一致；打开后进入下一个直播间生效。全端开关一致可见（iOS 上为弹幕部分生效）。\r\n\r\n## 弹幕渲染降耗\r\n\r\n- 弹幕描边开关（默认开）：关闭后每条弹幕少一次整段文本绘制，弹幕越密越省。\r\n- 帧率上限（默认跟随屏幕）：高刷屏可限 60 帧，视觉无差异、GPU 负担约减半。\r\n- 修复「描边宽度」设置从未生效的问题（渲染侧此前硬编码为 2）。\r\n- 弹幕层透明度改为逐条并入颜色 alpha，去掉整层离屏合成（视觉不变）。\r\n\r\n## 性能与修复\r\n\r\n- 高热房间 CPU：屏蔽词正则从「每条消息每个词重新编译」改为编译一次缓存，消息量越大收益越明显。\r\n- Windows 退出修复：关闭应用时偶发的「快速异常检测失败」fast-fail 弹窗与进程挂死；本地 fork media_kit_video Windows 部分，纹理与 mpv render context 释放改为同步等待，退出时等待 mpv 关停。\r\n- 关闭窗口弹「Unknown Hard Error」：装有搜狗输入法等第三方输入法的电脑，每次关闭都会弹出系统错误（出错模块 `SogouPY.ime`）；现退出时跳过第三方模块的卸载回调，不再弹窗。\r\n\r\n## 桌面端快捷键（Windows / macOS / Linux）\r\n\r\n- 中文输入法下 F、R、空格等单键快捷键可直接使用，无需先切英文；输入框内照常打中文。\r\n- 带 Ctrl / Alt / Win（macOS 为 Cmd / Ctrl / Option）的组合键不再被拦截，修复 macOS 直播间内 Cmd+Q 无法退出等问题；macOS / Linux 补上空格键播放/暂停；长按只触发一次。\r\n\r\n## B站弹幕缺失修复（#150）\r\n\r\n- B站对弹幕接口的登录态风控（账号被标记后带 cookie 请求被拒）导致弹幕缺失、换号才能恢复；现登录态请求失败时自动回退未登录获取 token，以游客身份连接弹幕。\r\n- 回退不粘连：每次进房先走登录态，风控解除后自动恢复；清晰度与账号其他功能不受影响（取流仍走登录态）。\r\n\r\n## 全屏四角时钟（新增，#160，2026-11-01 追加）\r\n\r\n- 全屏直播画面四角（左上/右上/左下/右下）常驻显示当前时间（HH:mm），不随控制栏隐藏；仅全屏显示，默认关闭、右上角，入口在 直播间设置 → 四角时钟。\r\n- 时钟层不拦截触摸，滑动手势不受影响；组件自管定时器、关闭时零开销。TV 端同版合入同款功能。\r\n\r\n## 音量增强与音量手势修复（#161，2026-11-02 追加）\r\n\r\n- 新增「音量增强」开关（默认关，直播间设置 → 播放器 → 音量）：开启后音量上限 0–300%，超过 100% 为播放器软件增益（最高 ×3.0），不动系统音量；关闭时全部音量入口回到 0–100，与旧版一致。\r\n- 音量弹窗（底栏音量图标，移动端本版起也开放）：滑条 + 预设 0/50/100/200/300（关=0/50/100），增益区显示倍率。\r\n- 修复安卓快速上下滑调音量「实际没有反应」：终值落地不再被丢弃，快速滑动必生效。\r\n- 纯增益在音源响度大时可能破音，调回 200% 以内即可。TV 端同版合入音量控制。\r\n\r\n## 虎牙 4K 断流调查结论（#156，2026-10-31）\r\n\r\n- 虎牙已将 4K / 4K HDR 设为 VIP 专属画质（登录网页端画质列表实测标注）。非 VIP 账号拉 4K 会被 CDN 随机拒绝（`Failed to open`）或限速至不可用带宽，表现为断流卡顿；与客户端参数、登录态、IP 均无关，客户端无解。\r\n- 2K 及以下不受影响，追求流畅建议选 2K；调查中试行的参数修改已验证无效并撤回。\r\n- TV 端结论相同；TV 版本另有轮播列表、标签批量管理与全屏四角时钟。\r\n\r\n## 抖音登录墙房间进不去修复（2026-11-03 追加）\r\n\r\n- 部分抖音房间（如「赛雷三分钟」）App 内报 room 为空进不去、关注页刷不出，但直链导入外部播放器能播。根因是匿名访问被 web 端按房间维度下发扫码登录墙（`enter_mode=1`、不下发 room），换 ttwid / 移动端 UA 均无效。\r\n- 新增移动端 reflow 匿名取房：凭登录墙响应里仍可匿名拿到的主播 `sec_user_id`，请求 reflow 接口（无需 Cookie 与签名）取回真实房间与流地址，在 API 与 HTML 两条路径都做兜底；关注页状态判断同步修复。\r\n- 实网验证 4 档画质真实可播、`getLiveStatus` 正常。TV 端共享核心库同步生效。\r\n\r\n## iOS 系统画中画（新增，2026-11-08 追加）\r\n\r\n- iOS 端新增系统级小窗（画中画，要求 iOS 15+）：直播画面悬浮于桌面与其他应用之上，后台持续观看；采用 AVSampleBufferDisplayLayer 路线，mpv 渲染帧零拷贝桥接进系统小窗。\r\n- 「后台保持画面」开关（设置 → 播放设置 → iOS 小窗，默认开）：开启后进小窗先停播重建管线至软解码+软渲染（纯 CPU，不依赖后台 GPU 权限），切后台画面持续显示，实测连续 76 秒 30fps 零丢帧；关闭为即显省电路线，秒开，切后台画面停住、声音正常。\r\n- 返回 App 自动关闭小窗并恢复应用内播放；小窗内可暂停/恢复播放，与 App 内状态同步。\r\n- 已知说明：重建路线进小窗有 1~2 秒重连空窗；后台持续画面耗电略增，部分设备后台渲染表现不一致，可按实测用开关选择；其他平台（Android 系统小窗、TV）不受本项影响。\r\n\r\n## 取消关注不再触发全量刷新（#163，2026-11-08 追加）\r\n\r\n- 清理关注列表时，每次取消关注都会触发**全部**关注的开播状态刷新（上百关注等于上百次请求），容易触发平台风控。\r\n- 现取消关注仅本地移除（标签归属同步清理），不再发起任何网络请求；开播状态按原有的定时刷新 / 手动刷新节奏更新。\r\n\r\n## WebDAV 恢复 500 根因修复（#164，2026-11-08 追加）\r\n\r\n- 「能上传、不能恢复」的根因确认：Alist 等网关把恢复（GET）请求代理转发到阿里云盘 OSS 签名直链时，应用携带的多余 `Content-Type: text/xml` 头被透传参与签名计算，与直链签名不一致（`SignatureDoesNotMatch`），403 被转成 500 返回。\r\n- 修复：GET 请求不再携带该头（PROPFIND 所需的 XML Content-Type 由组件按规范自行设置，不受影响）。\r\n- 同步失败时的报错增强：附带请求方法、URL、状态码与服务器响应体摘要（300 字符），便于定位服务端问题。\r\n\r\n## 设置页重排\r\n\r\n- 我的-设置入口：直播设置、弹幕设置、多开设置提前聚拢（外观 → 主页 → 直播 → 弹幕 → 多开 → 播放页 → 关注 → 定时 → 其他）。\r\n- 直播设置：省电模式置顶；移动端后台播放相关项并入「直播间」段；实时字幕（实验）移至末尾。\r\n- 弹幕设置拆为屏蔽 / 显示 / 重点动态 / 过滤与延迟四段，屏蔽保持第一。",
+          "downloadURL": "https://github.com/June6699/dart_simple_live/releases/download/v1.13.3/ios_no_sign.ipa",
+          "size": 35414735,
+          "minOSVersion": "13.0"
+        }
+      ]
+    },
+    {
       "name": "Sonar",
       "bundleIdentifier": "cn.bobochang.sonar",
       "developerName": "can4hou6joeng4",
@@ -1670,6 +2279,32 @@
           "downloadURL": "https://github.com/gholts/sphere./releases/download/v1.6.2/sphere-v1.6.2.ipa",
           "size": 3603023,
           "minOSVersion": "26.1"
+        }
+      ]
+    },
+    {
+      "name": "Spotube",
+      "bundleIdentifier": "org.spotube.spotube.Spotube",
+      "developerName": "team-spotube",
+      "subtitle": "Cross-platform open-source music streaming app",
+      "localizedDescription": "A cross-platform, extensible open-source music streaming platform. Bring your own music metadata, playlists and audio sources through community plugins, with time-synced lyrics, downloadable tracks and no telemetry or user data collection.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Spotube/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Spotube/images/phone-1.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Spotube/images/phone-2.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Spotube/images/phone-3.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Spotube/images/phone-4.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Spotube/images/phone-5.webp"
+      ],
+      "tintColor": "#4C7EEB",
+      "versions": [
+        {
+          "version": "6.0.0",
+          "date": "2026-11-10T03:40:12Z",
+          "localizedDescription": "## Spotube V6 is here 🎉🚀\r\n\r\n### 🔥Highlights\r\n\r\n- Migration from Flutter to Compose Multiplatform, [learn why we did it](https://spotube.cc/blog/compose-multiplatform-migration/)\r\n- UI redesign, introducing [Millennium](https://github.com/team-spotube/millennium/) UI. 2000s look and feel with 2026's modernity\r\n- Jam sessions, play music with friends and family in sync. Runs on a new dedicated room server, with host-only controls and device bans to keep rooms safe\r\n- Full Android Auto integration. Browse, Library, Search all are there now, not just queue\r\n- iOS now plays audio through VLC, so every streaming format works, and keeps playing in the background\r\n- Migration from hetu_script to Kotlin for plugin development. Powered by [Zipline by Cashapp](https://github.com/cashapp/zipline/)\r\n- More extensibility, plugin support for Lyrics provider and Scrobbling providers\r\n- Redesigned plugin manager. Plugin login pages can only reach cookies and scripts of the domains they declare\r\n- Native Android APK, with reduced apk size, performance improvements and more native android integrations.\r\n- Relicensed from BSD-4-Clause to AGPL-3.0-or-later for a more Open Source friendly licensing. And for preventing distribution of closed source and maliciously modified Spotube.\r\n\r\n### 💫 Features\r\n\r\n- Migration to Compose Multiplatform\r\n- Add ChipTab component and refactor SearchScreen to use it\r\n- Add AutocompleteTextField component and integrate it into SearchScreen\r\n- Enhance AutocompleteTextField with focus management and dropdown behavior\r\n- Enhance AppSidebar with improved button interactions and visual feedback\r\n- Implement endless playback recommendations in DeviceAudioPlayerQueue\r\n- Add GhostIconButton component and enhance button interactions in TrackList\r\n- Replace IconButton with GhostIconButton in AppExpandedPlayer and AppLargePlayer for improved visual consistency\r\n- Replace IconButton with GhostIconButton in PlayerQueueContent and PlayableCard for visual consistency\r\n- Enhance UI components with LocalBaseUITheme for consistent styling and improved interactions\r\n- Enhance button styles and interactions in Buttons and Theme components for improved UI consistency\r\n- Simplify highlight implementation in UI components for improved readability and maintainability\r\n- Add genre selection and tabs to HomeScreen for improved content navigation\r\n- Implement artist overview screen with loading, error handling, and pagination for albums, related artists, and featured playlists\r\n- Add genre and featured browsing capabilities to MediaBrowseHelper\r\n- Implement playlist creation and editing functionality with UI components\r\n- Add 'Add to Playlist' functionality with UI components and dialogs\r\n- Add Toggle component and update UI to use it in place of Switch\r\n- Implement settings section cards for updates, desktop, language, caching, and plugins\r\n- Update icons in settings sections to use Iconsax library for improved UI consistency\r\n- Replace FeatherIcons with Iconsax in PluginCard and PluginPermissionsDialog for improved UI consistency\r\n- Refactor PluginPermissionsDialog to use custom UI components for improved consistency and readability\r\n- Enhance UI with shared element transitions and improve state management in album and playlist screens\r\n- Integrate Uniffi for audio metadata reading and writing with Lofty library\r\n- Replace FeatherIcons with Iconsax in window controls and update sidebar with better design\r\n- Implement haze effect and UI enhancements in AppLargePlayer and AppShell\r\n- Enhance haze effect integration in AppShell and AppSidebar for improved UI experience\r\n- Add adaptive dialog bottom sheet component and enhance plugin installation UI\r\n- Enhance AdaptiveDialogBottomSheet with dismiss icon and improve plugin screen layout\r\n- Implement CollectionView component and refactor Album, Playlist, SavedTracks screens for improved UI consistency\r\n- Add current time management in AudioPlayer for improved playback control\r\n- Simplify playback control logic in AudioPlayer by removing redundant state checks\r\n- Introduce AudioPlayerInterface and refactor AudioPlayer implementations for better abstraction\r\n- Update skipToNext and skipToPrevious methods in AudioPlayer for improved media item management\r\n- Refactor LyricsViewModel to use AudioPlayerInterface for improved abstraction\r\n- Add Discord Rich Presence integration for enhanced media playback visibility\r\n- Implement System Tray integration for window management and media controls\r\n- Add hover effect to menu items in System Tray for improved user experience\r\n- Add SSH debug session setup on failure for improved troubleshooting\r\n- Implement blacklist functionality for tracks and artists with UI updates\r\n- **systemtray**: Self-manage tray lifecycle via Koin DI\r\n- **plugin_interfaces**: Update Maven publishing configuration and add GitHub Actions workflow\r\n- **plugin_discovery**: Implement GitHub plugin discovery and add logo support in UI\r\n- **plugin_discovery**: Implement GitHub plugin discovery and add logo support and information dialog in UI\r\n- **plugin_install**: Add plugin installation dialog and release fetching functionality\r\n- Update dependencies and configure compose hot reload settings\r\n- Improve NewPipe video rank matching\r\n- Integrate Nucleus framework for enhanced window management and webview support\r\n- Implement system tray functionality with Compose Native Tray integration\r\n- **mediacontrol**: Implement SystemMediaControlService for OS media integration\r\n- **devices**: Add device discovery and remote control features\r\n- **deeplinks**: Implement deep link handling for jam sessions\r\n- **remote-control**: Implement remote playback functionality and UI components\r\n- **remote-control**: Enhance queue management and player state synchronization\r\n- **remote-control**: Enhance remote playback functionality with new commands and UI integration\r\n- **webrtc**: Update ICE server configuration and enhance logging for peer connection events\r\n- **jam-session**: Add connection state management and update UI feedback for session status\r\n- **jam-session**: Enhance jam session functionality with improved playback synchronization and error handling\r\n- **remote-control**: Refactor service registration and cleanup logic for improved reliability\r\n- **jam-session**: Integrate MQTT broker configuration and enhance jam session settings\r\n- **jam-session**: Implement track addition to jam session and enhance UI feedback for jam state\r\n- **jam-session**: Enhance guest functionality with track addition and participant moderation options\r\n- **release**: Add support for Linux ARM64 builds and artifact uploads\r\n- **player-options**: Add PlayerOptionsViewModel and enhance player UI with options menu\r\n- **player-options**: Enhance options menu with localized strings and icons\r\n- **jam-settings**: Implement JamSettings screen and view model for broker configuration\r\n- Refactor track source management to support plugin-specific caching and retrieval\r\n- Implement shuffle play functionality for albums, playlists, and saved tracks\r\n- **navigation**: Refactor sidebar and bottombar navigation structure with new tab and group models\r\n- **search**: Enhance LazyRow with drag scrolling functionality\r\n- **autocomplete**: Simplify focus management and remove unused key event handling\r\n- **update**: Implement update checker with dialog for available updates\r\n- **update**: Refactor update checking mechanism and implement new dialog for app and plugin updates\r\n- **scrobble**: Implement ScrobbleManager to handle track scrobbling and integrate with audio player\r\n- **welcome**: Implement onboarding flow with multiple pages and donation options\r\n- **previews**: Add comprehensive previews for UI components including sliders, toggles, checkboxes, and text fields\r\n- **settings**: Add 'About' section and improve header visibility in settings sections\r\n- **surface**: Implement Frutiger-Aero themed surfaces with glass and acrylic styles\r\n- **ui**: Replace Scaffold with BaseScaffold for consistent surface theming across screens\r\n- **ui**: New custom surface integration on all components\r\n- **onboarding**: Enhance welcome screen with structured guide steps and improved layout\r\n- **player**: Add content descriptions for play, pause, and add to queue actions\r\n- **support**: Implement support reminder dialog and donation options\r\n- **player**: Refactor artist display and improve search field labels\r\n- **search**: Enhance search functionality with recent search suggestions and improved UI components\r\n- **sidebar**: Adjust spacing in sidebar and setting cards for improved layout\r\n- **jam**: Implement group jam functionality with UI components and state management\r\n- **library**: Enhance library UI with new tab titles, filtering options, and improved state management\r\n- **library**: Add Library screen list mode beside grid mode, Local Track, Download screen, Local Library folders dialog visual improvement\r\n- **ui**: Integrate LocalTextStyle for dynamic tinting in player controls and UI components\r\n- **navigation**: Add custom navigation transition specifications for push and pop actions\r\n- **i18n**: Replace hardcoded strings with localized resources across multiple components\r\n- **plugin**: Implement MetadataPluginGuard to manage plugin dependencies and user prompts\r\n- **ui**: Replace IndeterminateProgress with new loading components and enhance dialog structures\r\n- **ui**: Update MillenniumModalBottomSheet with compact padding and spacing adjustments\r\n- **plugin**: Add login prompt for metadata plugin access and implement authentication view model\r\n- **user-agents**: Implement dynamic user agent fetching and caching mechanism\r\n- **lyrics**: Implement SyncedLyricsList component and enhance LyricsViewModel for better state management\r\n- **server**: Implement port fallback mechanism for playback proxy server\r\n- **window**: Implement window state persistence and restoration\r\n- Enhance Android build configuration with stable/nightly flavors and update launcher icons\r\n- **graalvm**: Enable GraalVM native image support and update packaging configurations\r\n- **local-tracks**: Implement LocalFolder screen and view model for folder navigation\r\n- **navigation**: Implement fade-through and stack transition animations for navigation\r\n- **remote**: Redesign remote control and devices screens, fix connection issues\r\n- Download diagnostics, live connect status, remote settings on devices screen\r\n- Enhance loading states for various UI components and update dependencies\r\n- **packaging**: Flathub, AUR, WinGet and Chocolatey publishing\r\n- **plugin**: Implement automatic plugin updates and enhance JSON parsing\r\n- **jam**: Replace MQTT with a Durable Object room server and synced playback\r\n- **jam**: Harden the room server, add device bans and friendly names\r\n- **ios**: Play audio with VLCKit instead of AVPlayer\r\n- **ios**: Drop AVPlayer-era streaming format restrictions\r\n- Add iOS background playback support ([#3170](https://github.com/team-spotube/spotube/issues/3170))\r\n- **update**: Compare app releases with full SemVer\r\n- **plugins**: Redesign the plugin manager\r\n- **plugins**: Limit WebView cookie and script access to declared domains\r\n- **plugins**: Download the public suffix list daily instead of bundling it\r\n- **plugins**: Enhance built-in plugin handling and add removal option for user-installed plugins\r\n\r\n### 🪲 Bug Fixes\r\n\r\n- **newpipe**: Fallback to muxed streams if no audio stream is available\r\n- Dismiss search dropdown and keyboard on submission\r\n- Custom image helper null exception\r\n- **plugin**: Reload Zipline service on same-version replace\r\n- Convert buildCurrentMediaItemList to a suspend function for coroutine support\r\n- Enhance Discord RPC connection management with cooldown and error handling\r\n- Cached track audio not being invalidated causing alternative track source to not being played\r\n- Play next not working\r\n- Update pendingNextIndex when playing a track from the playlist\r\n- **webview**: Linux webview crashing the app\r\n- Add mavenLocal() to plugin and dependency resolution management\r\n- **plugin**: Handle service closure exception during authentication check\r\n- **sidebar**: Add spacer to AppSidebar for improved layout\r\n- **remote-control**: Update connection handling and improve logging for remote control events\r\n- Add window insets to top bar and bottom navigation bar, queue sheet\r\n- **stream-proxy**: Stream upstream audio instead of buffering the whole track\r\n- **newpipe**: Fall back through multiple searches when ISRC search misses\r\n- **audio-api**: Enhance fallback mechanism for text search results in YouTube\r\n- **audio-player**: Android shuffle wasnt working\r\n- **stream-proxy**: Improve logging for cache timeout and handle disconnection scenarios\r\n- **macos**: Add GraalVM runtime dependency and initialize GraalVm in main function\r\n- **android**: Create intermediate directories for Rust targets to prevent runtime errors\r\n- **android**: Update sharing functionality to use chooser intent with new task flag\r\n- **android**: Simplify service start logic for PlaybackService to avoid crashes on background playback\r\n- **android**: Update playback state management to ensure guests follow host's play state\r\n- **android**: App stuck on splash screen from main-thread string loading\r\n- **downloads**: Respect download format/quality and never save manifests or video\r\n- **ios**: Run Zipline on an 8 MiB stack thread\r\n- **server**: Don't crash when the proxy port is still in use\r\n- **ios**: Stream formats AVPlayer can play\r\n- **gradle**: Restore VFS watch setting and clean up properties\r\n- **build**: Restore version catalog lost in dev merge\r\n- **ios**: Make the login WebView identify as Mobile Safari\r\n- **android**: Use desugar_jdk_libs_nio so URLEncoder.encode(String, Charset) is backported on API < 33\r\n- **flatpak**: Grant the Wayland socket so the webview doesn't render black\r\n- **jam**: Keep guests on the host's recording across song changes\r\n- **desktop**: Stop non-composable string lookups from querying the system theme\r\n- Stop memory blow-ups and crashes with large lists and local media\r\n- **ios**: Use MobileVLCKit from CocoaPods instead of a git Swift package\r\n- Crash at startup from a Koin cycle in DeviceAudioPlayerQueue\r\n- Update default Jam server URL to new endpoint\r\n- **linux**: Bundle libselinux in the AppImage\r\n- **artist**: Play the tapped top track instead of the first one\r\n- **welcome**: Keep step tabs and pages readable on narrow windows\r\n- **plugins**: Keep public suffix list updates off the startup and call paths\r\n\r\n## New Contributors\r\n\r\n- @tomasalias made their first contribution in https://github.com/team-spotube/spotube/pull/2919\r\n- @Akshat-104 made their first contribution in https://github.com/team-spotube/spotube/pull/3032\r\n- @henrik242 made their first contribution in https://github.com/team-spotube/spotube/pull/3136\r\n- @wuqqers made their first contribution in https://github.com/team-spotube/spotube/pull/3132\r\n- @samuelegiacomin-stack made their first contribution in https://github.com/team-spotube/spotube/pull/3170\r\n\r\n**Full Changelog**: https://github.com/team-spotube/spotube/compare/v5.1.2...v6.0.0",
+          "downloadURL": "https://github.com/team-spotube/spotube/releases/download/v6.0.0/Spotube-ios.ipa",
+          "size": 45020424,
+          "minOSVersion": "18.2"
         }
       ]
     },
@@ -1744,6 +2379,31 @@
       ]
     },
     {
+      "name": "TDrive",
+      "bundleIdentifier": "com.jeetraj.tdrive",
+      "developerName": "ndgthuan",
+      "subtitle": "Turn your private Telegram storage into a cloud drive",
+      "localizedDescription": "TDrive turns your private Telegram storage into a drive you can browse, search, preview, share and mount, with an AI assistant, automatic photo backup and client-side encryption. Requires Telegram API credentials from my.telegram.org.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TDrive/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TDrive/images/shared_01_home_drive_switcher.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TDrive/images/shared_02_home_shared_drives.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TDrive/images/shared_03_account_folder.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TDrive/images/shared_04_account_drives.webp"
+      ],
+      "tintColor": "#20A0E0",
+      "versions": [
+        {
+          "version": "3.1.9",
+          "date": "2026-11-02T07:08:10Z",
+          "localizedDescription": "# TDrive v3.1.9\n\nThis release changes how Android folder import handles a file that already\nexists on the drive under the same name. Instead of skipping or renaming it\nsilently, TDrive asks what to do. It also creates the folder you picked even\nwhen that folder is empty. Bản phát hành này thay đổi cách nhập thư mục trên\nAndroid khi một tệp đã có trên drive với cùng tên. Thay vì bỏ qua hoặc đổi tên\nâm thầm, TDrive sẽ hỏi bạn muốn làm gì. Thư mục bạn chọn cũng được tạo ngay cả\nkhi thư mục đó trống.\n\n## Highlights\n\n- Same name, different size: before anything is sent, TDrive asks whether to\n  Replace the file on the drive, Keep both, or Skip. Skip is the default, and\n  canceling the question sends nothing. With several clashes, one choice can be\n  applied to all of them.\n- Replace moves the old file to Trash, where you can restore it. The new copy\n  is confirmed on the drive before the old one is moved, and then it takes the\n  original name.\n- Keep both saves the new file as the first free name, such as `photo_1.jpg`.\n  The name also avoids folders that the same import is about to create.\n- An empty folder you pick is created on the drive, even when nothing goes into it.\n- The Transfers entry notes how many files were replaced, kept or skipped.\n\n## Known limits\n\n- Replace uses Trash, so the old file can be restored, but it is not a\n  Telegram revision.\n- A file whose size is unknown, or whose drive check fails, is uploaded as a\n  copy without asking.\n- Retrying a failed import does not carry your clash answers, so the question\n  can appear again.\n- A file name that contains a backslash makes its whole upload batch fail.\n- The Transfers row title can cut off the replaced and kept counts. The full\n  text is in the history and notification.\n- The Android build was tested on an x86_64 emulator with automated tests. The\n  ARM64 release APK was not run on a phone.\n\n## Downloads\n\n| Platform | File | Notes |\n| --- | --- | --- |\n| Windows 10/11 (64-bit) | `TDrive-v3.1.9-windows-amd64-setup.exe` | Installer. A portable `TDrive-v3.1.9-windows-amd64.zip` is also attached. |\n| macOS (Apple silicon) | `TDrive-v3.1.9-macos-arm64.zip` | Unzip and drag TDrive to Applications. |\n| Linux (64-bit) | `TDrive-v3.1.9-x86_64.AppImage` | `chmod +x` it, then run it. Needs glibc 2.35 or newer. |\n| Android 7.0 or newer (ARM64) | `TDrive-v3.1.9-android-arm64.apk` | Allow installs from your browser or file manager when Android asks. |\n| iPhone / iPad (iOS 16 or newer) | `TDrive-v3.1.9-ios-unsigned.ipa` | Not signed. Install with TrollStore, Sideloadly or AltStore. |\n\n## Integrity\n\n- `checksums.txt` lists SHA-256 digests for the downloadable packages.\n- `checksums.txt.sig` authenticates that manifest for the desktop updater using the embedded Ed25519 trust keys.\n- Android release certificate SHA-256: `A8:F4:4A:72:E0:56:E1:79:DE:19:4C:F3:E3:10:84:9D:5C:B6:BA:5A:58:EC:5F:A6:AD:BA:DD:29:FB:DC:22:92`.\n\n## Credits\n\nOriginal TDrive by [Jeetraj](https://github.com/jeetrex17/TDrive), MIT License. This fork is maintained by [Nguyễn Dương Gia Thuận](https://github.com/ndgthuan/tdrive).\n\n**Full changelog:** https://github.com/ndgthuan/tdrive/compare/v3.1.8...v3.1.9",
+          "downloadURL": "https://github.com/ndgthuan/tdrive/releases/download/v3.1.9/TDrive-v3.1.9-ios-unsigned.ipa",
+          "size": 36249723,
+          "minOSVersion": "16.0"
+        }
+      ]
+    },
+    {
       "name": "TiebaPure",
       "bundleIdentifier": "dev.infinityf4p.tiebapure",
       "developerName": "infinityf4p",
@@ -1787,6 +2447,32 @@
           "downloadURL": "https://github.com/Suwayomi/Suwayomi-Tsumiru/releases/download/v1.6.5/tsumiru-v1.6.5-ios.ipa",
           "size": 17346615,
           "minOSVersion": "14.0"
+        }
+      ]
+    },
+    {
+      "name": "TwinDesk",
+      "bundleIdentifier": "com.twindesk.ios",
+      "developerName": "Inuka Asith",
+      "subtitle": "Use your iPhone and your computers as one desk",
+      "localizedDescription": "TwinDesk turns your iPhone or iPad and your Mac, Windows PC or Linux computer into one desk: the computer's screen mirrored or used as a second display, files, clipboard, notifications, sound, camera and remote control, over Wi-Fi, USB or Bluetooth. It needs the TwinDesk desktop app on the computer.",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TwinDesk/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TwinDesk/images/screen-1.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TwinDesk/images/screen-2.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TwinDesk/images/screen-3.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TwinDesk/images/screen-4.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TwinDesk/images/screen-6.webp"
+      ],
+      "tintColor": "#5E5CE6",
+      "versions": [
+        {
+          "version": "3.2.1",
+          "date": "2026-11-15T04:43:39Z",
+          "localizedDescription": "## TwinDesk 3.2.1: TwinDesk pop-ups, a richer Messages, and Photos albums\r\n\r\n3.2.1 adds what's under **New in 3.2.1** below; everything after it is what 3.2 brought.\r\n\r\nhttps://twin-desk.vercel.app\r\n\r\n![TwinDesk 3.2](https://raw.githubusercontent.com/InukaAsith/TwinDesk/main/.github/assets/v32-banner.jpg)\r\n\r\nThe first release since 3.0. Your phone becomes a **Deck** of buttons for the computer, with a window space that arranges your windows. **TwinDesk Drive** keeps one folder the same on all your computers, with no cloud. **Multi-device is out of beta**, with every device's monitors on **one map**. There's also **search everywhere**, an **air mouse with a laser pointer**, **encrypted history**, **updates that install in place**, and a **tour** for someone new, in Multi-device too.\r\n\r\n### ⬇️ Download\r\n\r\n| Device | File |\r\n|---|---|\r\n| **Windows** (Intel / AMD) | [`TwinDesk-Setup-3.2.1.exe`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-Setup-3.2.1.exe) |\r\n| **Windows** (ARM) | [`TwinDesk-Setup-3.2.1-arm64.exe`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-Setup-3.2.1-arm64.exe) |\r\n| **Windows Portable** (Intel / AMD, no install) | [`TwinDesk-Portable-3.2.1.exe`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-Portable-3.2.1.exe) |\r\n| **Windows Portable** (ARM, no install) | [`TwinDesk-Portable-3.2.1-arm64.exe`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-Portable-3.2.1-arm64.exe) |\r\n| **Mac** (Apple silicon, M1 and later) | [`TwinDesk-3.2.1-arm64.dmg`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-3.2.1-arm64.dmg) |\r\n| **Mac** (Intel) | [`TwinDesk-3.2.1-x64_Intel.dmg`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-3.2.1-x64_Intel.dmg) |\r\n| **Mac** (Homebrew) | `brew install --cask inukaasith/twindesk/twindesk` |\r\n| **Linux** (any distro) | [`TwinDesk-3.2.1-x86_64.AppImage`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-3.2.1-x86_64.AppImage) |\r\n| **Linux** (Debian / Ubuntu) | [`TwinDesk-3.2.1-amd64.deb`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-3.2.1-amd64.deb), or our [APT repository](https://inukaasith.github.io/twindesk-apt) |\r\n| **Linux** (Arch) | [`twindesk-bin-3.2.1-1-x86_64.pkg.tar.zst`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/twindesk-bin-3.2.1-1-x86_64.pkg.tar.zst) |\r\n| **Android** | [`TwinDesk-3.2.1.apk`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-3.2.1.apk) |\r\n| **Android** (full: notification access, SMS, Accessibility) | [`TwinDesk-3.2.1-full.apk`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-3.2.1-full.apk) |\r\n| **iPhone and iPad** (sideload) | [`TwinDesk.ipa`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk.ipa) |\r\n| **Any browser** | Turn on **TwinDesk Web** on a computer, then type `twindesk.local` |\r\n\r\n#### Full KVM edition\r\n\r\nThe mouse and keyboard also reach UAC prompts, the lock screen, Ctrl+Alt+Del and, with System-wide, the login screen, through a system service. It installs over the normal TwinDesk (the same app with the service added), so a computer has one or the other.\r\n\r\n| Device | File |\r\n|---|---|\r\n| **Windows** (Intel / AMD) | [`TwinDesk-FullKVM-Setup-3.2.1.exe`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-FullKVM-Setup-3.2.1.exe) |\r\n| **Windows** (ARM) | [`TwinDesk-FullKVM-Setup-3.2.1-arm64.exe`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-FullKVM-Setup-3.2.1-arm64.exe) |\r\n| **Linux** (any distro) | [`TwinDesk-FullKVM-3.2.1-x86_64.AppImage`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-FullKVM-3.2.1-x86_64.AppImage) |\r\n| **Linux** (Debian / Ubuntu) | [`TwinDesk-FullKVM-3.2.1-amd64.deb`](https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk-FullKVM-3.2.1-amd64.deb) |\r\n\r\n**TwinDesk Portable** runs without installing: run normally it does everything that needs no administrator, run as administrator it also does the firewall, folder sharing and Wake on LAN.\r\n\r\nAlready have TwinDesk? The in-app updater picks the right file for your computer, and from 3.2 on, **Install now** updates in place, and each edition updates to its own (Full KVM to Full KVM, Portable to Portable). Update every device you pair: 3.2 still talks to 3.0, but the new features switch on only when both sides have 3.2.\r\n\r\n> **Windows:** the installers aren't code-signed yet (signing is on its way). If SmartScreen stops it, choose **More info › Run anyway**.\r\n> **iPhone and iPad:** the IPA is unsigned. Install it with SideStore, AltStore or any signing tool, or let the computer sign it with your own Apple ID (General › TwinDesk iPhone, opt in).\r\n\r\n---\r\n\r\n### 🆕 New in 3.2.1\r\n\r\nIdeas from [@rahulpatel902](https://github.com/rahulpatel902)'s list of suggestions (#231), in TwinDesk's own look.\r\n\r\n- **TwinDesk pop-ups** (Notifications › Showing here › Pop-ups): pick TwinDesk's own small window for your phone's notifications. Type a **Reply** right in it, use the app's own buttons (Mark as read, Mute…), see the notification's **picture**, **Copy** a one-time code, and watch a download or a timer fill its **progress bar** in place. The system's notifications stay the default, the lightest choice: with them the phone sends no pictures or progress.\r\n- **Buttons on Linux's own notifications:** the phone app's buttons and a code's Copy, as on a Mac.\r\n- **Each app its own way:** Show, No pop-ups (only in Recent) or Hide for each phone app.\r\n- **Pause pop-ups on a schedule**, overnight too. Notifications still go in Recent and Messages.\r\n- **Copy codes by themselves:** a one-time code goes on the clipboard when it arrives, never to your other devices or the clipboard history, and comes off it after 2 minutes.\r\n- **Messages:** contact and chat pictures with the app's badge, a search box, **Delete** for a chat or a thread, and **Apps…** to choose which chat apps show. \"Sending video…\" and other progress notifications no longer turn into chats.\r\n- **Photos:** your phone's **albums** in a sidebar, with covers and counts. **Open**, and on Windows **Open with…**, from the viewer.\r\n- **The media card** stays compact: its chevron slides open back and forward 10 s, the phone's volume and where the sound plays, tinted by the artwork if you like (General).\r\n- **Calls pause the music** (Calls › Sound): a call pauses what plays on the computer, and it plays again when the call ends.\r\n- **Camera:** Mirror, quality from 720p to 4K, the light, zoom and a snapshot for the phone's camera.\r\n- **Keep on top:** a pin in the toolbar of the phone's screen and a computer's shared screen keeps that window over the others.\r\n- **Skip adbd** (Mirroring, off unless you switch it on): over Wi-Fi the phone's screen, sound and input go straight to the computer, encrypted, instead of through wireless debugging's adbd. Its biggest gain is while adb is busy: with a big file going to the phone, a tap showed up in about 90 ms instead of 210 ms. If the phone can't be reached directly, it goes through wireless debugging as before.\r\n- **Low latency** (Mirroring, off): asks the phone's video encoder to send each frame as soon as it's ready. Some phones ignore it.\r\n- **Fixed:** in Multi-device on a Mac, the Camera page's picture showed a broken image.\r\n\r\nAndroid needs 3.2.1 too for pictures, progress bars, contact pictures and albums; with an older phone app the rest works as before.\r\n\r\n---\r\n\r\n### 🎛️ The Deck\r\n\r\nA Stream Deck style grid of buttons on the phone (Android, iPhone and Web) for the computer: spaces and pages, tiles of any size, live sliders for sound and brightness, Bluetooth devices, the sound output and microphone, and files and saved scripts opened like a double-click (never through a shell). Full screen, it shows widgets: a clock, the computer's media player, CPU, RAM and temperature.\r\n\r\n- **The window space**: the computer's windows on the phone. Tap an app, pick a layout and they're arranged. Save a few apps as a set on the shelf and arrange them again with one tap. Snap, minimize, maximize and close from the phone.\r\n\r\n### 🗂️ TwinDesk Drive\r\n\r\nOne folder kept the same on your computers, with no cloud. Each keeps its own copy and works offline, and they swap what changed when they connect. A file changed on two at once keeps both, and deleted files go to the Trash or Recycle Bin. Off until you turn it on in File Sharing. Mac, Windows and Linux, one-to-one and Multi-device.\r\n\r\n### 🖥️ Multi-device, out of beta\r\n\r\n- **The monitor map** (#225): every device's monitors in one picture, arranged by dragging. The pointer crosses only where monitors touch, keeps its place along the edge, and goes through an offline device to the next one.\r\n- **Everything one-to-one has**: fast files (fx and fx2), Camera, Remote, Deck, ReZume with any one device, TwinDesk iPhone, Modules, every device's notifications with Reply and one-time codes, clipboard pictures, Now Playing both ways, and pairing a phone with a QR code.\r\n- **Mouse and keyboard over Bluetooth** between Macs and Windows PCs.\r\n- **The tour and What's new** now open in Multi-device too.\r\n\r\n### ✨ Everywhere\r\n\r\n- **Air mouse and Presentation** in Remote: point the phone to move the pointer, run your slides with a laser pointer. A three-finger tap is a middle click.\r\n- **Hold a key to cross** (#230): pick a key on the Mouse page and the pointer leaves the computer at its edge only while you hold it. In Multi-device it's for that computer's own mouse or trackpad.\r\n- **Emergency return** (#178): a shortcut (Control+Alt+Command+Esc, Win or Super on a PC, or your own) that brings the mouse and keyboard home and turns sharing off, whatever the other side is doing. One-to-one and Multi-device.\r\n- **Search everywhere** (⌘K, Ctrl+K on Windows and Linux): settings, shortcuts and features found by what they do.\r\n- **Arrange** the sidebar and the phone's bottom bar, and switch off pages you don't use in **General › Modules** (they aren't loaded).\r\n- **Clipboard and notification history kept across restarts**, encrypted, for a day up to a year. Off until you turn it on.\r\n- **Updates install in place** on Mac, Windows, Android, and iPhone (re-signed by the computer).\r\n- **TwinDesk iPhone** (opt in): the computer signs TwinDesk for iPhone with your own free Apple ID and keeps it refreshed.\r\n- **A tour for someone new**, and **What's new** after an update, now with the changes and fixes too. Both in General › Tutorial.\r\n- **Linux touchpad** (#222): tap to click, two-finger scrolling and pinch on the other device, read from your desktop's own settings.\r\n- **Pick which Mac display an Android phone mirrors** (#221), and **a custom size for Extend** on Windows (#226).\r\n- **Phone-to-phone sound** between two Android phones (#205), and **Photos** has Copy and Share.\r\n\r\n![What's new in 3.2](https://raw.githubusercontent.com/InukaAsith/TwinDesk/main/.github/assets/v32-whats-new.jpg)\r\n\r\n### 📦 Installing\r\n\r\n- **APT repository** for Debian, Ubuntu, Mint and Pop!_OS, updated by `apt upgrade`.\r\n- **F-Droid** build (the full app without Google's code scanner and without the updater).\r\n\r\n### 🩹 Fixes\r\n\r\n- **Coming back to a PC with two monitors**: the pointer comes back on the edge that touches the device it left, also after a fast move.\r\n- **Clipboard**: copying the same text again after the other side copied something sends it again (#223, #227).\r\n- **Pinch on Android** from a Mac trackpad or a Linux touchpad (#228).\r\n- **Phone keyboard layouts in Multi-device**: Type as a hardware keyboard on Windows and Linux, so AZERTY and other layouts reach Android as they are (#188).\r\n- **Overview cards** side by side end level (#224). **Arrange** has Search's dim and solid panel instead of a blur.\r\n- Android reconnects after a long Wi-Fi interruption (#192, #217), and its settings refresh at once (#190, #191, #214).\r\n- Mac: the screen capture names its display (#198, #199), General asks for a missing screen permission (#200, #201), the viewer fits the Android window (#215), and Universal Clipboard no longer delays pasting (#211).\r\n- Windows: right Shift from some keyboards is no longer lost (#212), clicking TwinDesk's own window buttons from the other computer no longer freezes the session (#203, #208, #209), and Multi-device starts when Windows blocks the helper (#216).\r\n- Multi-device: sound stays on its device when the selection moves (#194, #196), and per-pair switches stay in step (#193, #195).\r\n- Linux: Open at login works under systemd's autostart generator (#189, #202). Nix starts with its window and tray again (#213).\r\n\r\n### 🙏 Thanks\r\n\r\nSuggestions from [@rahulpatel902](https://github.com/rahulpatel902) (#231). Code from [@alexfoxtm](https://github.com/alexfoxtm) (#190, #199, #201, #214, #215, #217, #221, #227, #228), [@youyouhdhd](https://github.com/youyouhdhd) (#226), [@pengusto](https://github.com/pengusto) (#178, #230), [@hughesyadaddy](https://github.com/hughesyadaddy) (#195, #196), [@ShivanshuKantPrasad](https://github.com/ShivanshuKantPrasad) (#205, #213), [@Yashkush06](https://github.com/Yashkush06) (#197) and [@YashvanthSankar](https://github.com/YashvanthSankar) (#202). Reported by [@ElMahaster](https://github.com/ElMahaster) (#188).\r\n\r\nThe full list is in the [changelog](https://github.com/InukaAsith/TwinDesk/blob/main/CHANGELOG.md).\r\n\r\n---\r\n\r\nEarlier release: [3.0.0 notes](https://github.com/InukaAsith/TwinDesk/releases/tag/v3.0.0) (iPhone and iPad app, TwinDesk Web, phone to phone).",
+          "downloadURL": "https://github.com/InukaAsith/TwinDesk/releases/download/v3.2.1/TwinDesk.ipa",
+          "size": 3706522,
+          "minOSVersion": "16.0"
         }
       ]
     },
@@ -1953,6 +2639,31 @@
       ]
     },
     {
+      "name": "WQManager",
+      "bundleIdentifier": "mumu.pduola.WQManager",
+      "developerName": "hseons",
+      "subtitle": "无需越狱的 App 数据备份与缓存清理工具",
+      "localizedDescription": "一款面向 iOS 26+ 的开源 App 数据管理、备份与单应用缓存清理工具，无需越狱。可把某个 App 的数据目录打包成可校验的备份并写回原 App，也能只清理所选 App 的缓存与临时目录。所有数据都在本机处理，没有账号、没有统计、没有云端。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQManager/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQManager/images/apps.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQManager/images/cleaner.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQManager/images/history.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQManager/images/settings.webp"
+      ],
+      "tintColor": "#242529",
+      "versions": [
+        {
+          "version": "0.5",
+          "date": "2026-11-18T11:48:53Z",
+          "localizedDescription": "显示版本 **0.5**，构建 **1**；内部发布修订 **0.5.0**。\n\n这个版本的主题是「找得到、看得懂、拿得走」：\n\n- **全局文件搜索**：跨 App 搜索用户文件，结果边扫边出；支持文件名 / 相对路径 / App 名、类型与最小大小筛选、路径 / 大小 / 最新排序。结果可原地预览或打开所在目录，扫描中可取消。\n- **空间变化**：按「较上次 / 近 7 天 / 近 30 天」比较，按增长排序并显示合计占用与净变化；新增全部 App 合计趋势图，单 App 详情保留当前大小、较上次、近 7 天与扫描历史。\n- **文件审计与导出**：大文件 / 重复文件按 App 分组，重复项经 SHA-256 确认；清理时每个 App 至少保留一份，删除进入空间透镜回收站。导出中心可分享或存储到「文件」，目标写入完成才记成功，取消 / 失败会清理临时目录。\n- **安全与一致性**：跨 App 的相同文件不再被当成可互相替代；重复清理不能选中某个 App 的最后一份；上次中断的导出在重开后显示「已中断」；清理 14 个无用本地化 key，中英文 813 个 key 对齐。\n- **界面**：修复空间变化页底部被悬浮 Tab Bar 遮挡；补充全局搜索、空间趋势、导出选择面板的中英文文案。\n\n验证：23 个本地测试程序、9 条模拟器 UI 流程、Debug 模拟器与 Release arm64 构建、`xcodebuild analyze` 全部通过，编译警告 0 条。\n\n已知边界：本轮 IPA 未签名，未在真机安装；超大 App 的冷扫描耗时、App Group 签名、分享 / 存储到「文件」以及强制中断场景仍需真机验收。空间趋势样本不足时显示「—」，这是预期行为。\n\n**遇到问题或有建议，欢迎到 [GitHub Issues](https://github.com/hseons/WQManager/issues) 提出**。请尽量附上系统版本、App 名称、复现步骤和截图；崩溃日志可配合附件中的 dSYM 定位。\n\n附件为**未签名 IPA**、SHA-256 和 dSYM，请按项目说明保留 App Group 权限重新签名后安装。",
+          "downloadURL": "https://github.com/hseons/WQManager/releases/download/v0.5.0/WQManager-0.5-build1-unsigned.ipa",
+          "size": 952702,
+          "minOSVersion": "26.0"
+        }
+      ]
+    },
+    {
       "name": "WQToolkit",
       "bundleIdentifier": "com.zhangfuhao.wqtoolkit",
       "developerName": "MchinaMd57764",
@@ -1973,6 +2684,31 @@
           "downloadURL": "https://github.com/MchinaMd57764/WQToolkit/releases/download/v1.0/WQToolkit-unsigned.ipa",
           "size": 4819436,
           "minOSVersion": "27.0"
+        }
+      ]
+    },
+    {
+      "name": "WrapPin",
+      "bundleIdentifier": "com.suversal.wrappin",
+      "developerName": "suversal",
+      "subtitle": "本机虚拟定位与步行路线测试工具",
+      "localizedDescription": "WrapPin 是 Sean Howarth 原项目 Roam Control 的非官方社区中文分支，可通过设备配对在 iPhone 上选择固定位置、模拟步行或驾车路线，并在停止时恢复真实位置。",
+      "iconURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WrapPin/icon.webp",
+      "screenshots": [
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WrapPin/images/fixed-location.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WrapPin/images/walking-active.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WrapPin/images/settings.webp",
+        "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WrapPin/images/privacy.webp"
+      ],
+      "tintColor": "#1060F0",
+      "versions": [
+        {
+          "version": "1.0.26",
+          "date": "2026-11-24T07:09:57Z",
+          "localizedDescription": "## WrapPin 1.0.26（Build 96）\n\n- **当前模拟目标** · 固定模拟时，地图单独标出当前目标。选中其他地点后，点「查看模拟位置」可以回到当前目标。#57\n- **精确选点** · 打开地图上的准星按钮，拖动地图或用摇杆微调。点「确认选点」后，再点「开始模拟定位」或「更换模拟位置」应用坐标。#58 #59\n- **选点面板** · 地点标题、收藏和清除按钮固定在面板上方。空间不足时可以滚动下方选项。\n- **收藏重命名** · 在「收藏与历史」里点收藏旁的铅笔，改名后保留原坐标和地址。#61\n\n### 安装\n\n- **Standard** · 使用 SideStore 等工具签装，运行时使用兼容的外部设备隧道。\n- **Tunnel** · 主 App 和内置扩展都需要支持 Packet Tunnel 的签名配置。\n\n两版均为未签名 IPA，支持 iOS/iPadOS 18.0 及以上。覆盖升级时使用原版本类型和签名身份。[安装说明](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Installation.zh-CN.md)\n\n[简体中文更新说明](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Release-1.0.26.zh-CN.md) · [English release notes](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Release-1.0.26.md)",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.26/WrapPin-Standard-1.0.26-build96-unsigned.ipa",
+          "size": 7161177,
+          "minOSVersion": "18.0"
         }
       ]
     },
@@ -2026,6 +2762,17 @@
     }
   ],
   "news": [
+    {
+      "appID": "ryuk2.anoxclan.com",
+      "title": "RyukSign 4.2.0 · 25 Nov 2026",
+      "identifier": "RyukSign-release-v4.2.0",
+      "caption": "RyukSign 4.2.0 is available.",
+      "date": "2026-11-25T22:41:34Z",
+      "tintColor": "#C96FAD",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RyukSign/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/faroukbmiled/RyukSign/releases/tag/v4.2.0"
+    },
     {
       "appID": "com.armsx2.ios",
       "title": "ARMSX2 nightly-20261125 · 25 Nov 2026",
@@ -2093,6 +2840,17 @@
       "url": "https://github.com/huamurui/zhihu-minus-minus/releases/tag/v0.10.1"
     },
     {
+      "appID": "pro.areu.rich4",
+      "title": "Rich4Renew 1.3.0 · 25 Nov 2026",
+      "identifier": "Rich4Renew-release-v1.3.0",
+      "caption": "Rich4Renew 1.3.0 is available.",
+      "date": "2026-11-25T06:52:08Z",
+      "tintColor": "#F0D020",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Rich4Renew/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/iam567/rich4-renew-app/releases/tag/v1.3.0"
+    },
+    {
       "appID": "com.github.cyrilpeng.veneranext",
       "title": "VeneraNext 1.18.5 · 25 Nov 2026",
       "identifier": "VeneraNext-release-v1.18.5",
@@ -2137,6 +2895,28 @@
       "url": "https://github.com/LinkPass888/Kazumi-Swift/releases/tag/v3.1.3"
     },
     {
+      "appID": "ani.aayush262.dartotsu",
+      "title": "Dartotsu 1.2.2 · 24 Nov 2026",
+      "identifier": "Dartotsu-release-v1.2.2",
+      "caption": "Dartotsu 1.2.2 is available.",
+      "date": "2026-11-24T18:50:07Z",
+      "tintColor": "#20C0F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dartotsu/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/aayush2622/Dartotsu/releases/tag/v1.2.2"
+    },
+    {
+      "appID": "com.thm.orcaios",
+      "title": "Orca 0.1.4 · 24 Nov 2026",
+      "identifier": "Orca-release-v0.1.4",
+      "caption": "Orca 0.1.4 is available.",
+      "date": "2026-11-24T18:05:00Z",
+      "tintColor": "#151619",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Orca/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/huami1314/orca-ios/releases/tag/v0.1.4"
+    },
+    {
       "appID": "com.zarz.mornye",
       "title": "Mornye 5.4.5 · 24 Nov 2026",
       "identifier": "Mornye-release-v5.4.5",
@@ -2146,6 +2926,28 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mornye/images/news.png",
       "notify": true,
       "url": "https://github.com/mornyeapp/Mornye/releases/tag/v5.4.5"
+    },
+    {
+      "appID": "wiki.qaq.GhostRemote",
+      "title": "Ghost Remote 1.6.41 · 24 Nov 2026",
+      "identifier": "Ghost Remote-release-v1.6.41",
+      "caption": "Ghost Remote 1.6.41 is available.",
+      "date": "2026-11-24T08:59:44Z",
+      "tintColor": "#009051",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GhostRemote/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/owngoal-dev/iGhostVT/releases/tag/v1.6.41"
+    },
+    {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.26 · 24 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.26",
+      "caption": "WrapPin 1.0.26 is available.",
+      "date": "2026-11-24T07:09:57Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WrapPin/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.26"
     },
     {
       "appID": "io.nekohasekai.screensharing",
@@ -2170,6 +2972,17 @@
       "url": "https://github.com/mengangs/ipadn/releases/tag/v2.3.5"
     },
     {
+      "appID": "dev.ibuilder.app",
+      "title": "iBuilder 0.1.8 · 23 Nov 2026",
+      "identifier": "iBuilder-release-v0.1.8",
+      "caption": "iBuilder 0.1.8 is available.",
+      "date": "2026-11-23T14:31:19Z",
+      "tintColor": "#EFB15A",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iBuilder/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/Absenti/iBuilder/releases/tag/v0.1.8"
+    },
+    {
       "appID": "com.google.ios.youtube",
       "title": "YouProEXTRA 21.33.6 · 23 Nov 2026",
       "identifier": "YouProEXTRA-release-youproextra-ipa2",
@@ -2179,6 +2992,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/YouProEXTRA/images/news.png",
       "notify": true,
       "url": "https://github.com/mrdrvt99/YouProEXTRA/releases/tag/youproextra-ipa2"
+    },
+    {
+      "appID": "com.moffatman.chan",
+      "title": "Chance 1.2.9 · 22 Nov 2026",
+      "identifier": "Chance-release-v1.2.9+126-forked-engine",
+      "caption": "Chance 1.2.9 is available.",
+      "date": "2026-11-22T21:26:03Z",
+      "tintColor": "#497C4A",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Chance/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/moffatman/chan/releases/tag/v1.2.9+126-forked-engine"
     },
     {
       "appID": "com.oaife.radio",
@@ -2201,6 +3025,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Kumone/images/news.png",
       "notify": true,
       "url": "https://github.com/missuo/kumone/releases/tag/v0.3.38"
+    },
+    {
+      "appID": "com.xuegao.theosmobilecompiler",
+      "title": "Dylix 1.1.4 · 22 Nov 2026",
+      "identifier": "Dylix-release-v1.1.4",
+      "caption": "Dylix 1.1.4 is available.",
+      "date": "2026-11-22T07:30:21Z",
+      "tintColor": "#F0D080",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dylix/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/yangokok886/dylix/releases/tag/v1.1.4"
     },
     {
       "appID": "com.example.kazumi",
@@ -2236,6 +3071,17 @@
       "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.20"
     },
     {
+      "appID": "com.nuvio.media",
+      "title": "Nuvio 1.0.1 · 21 Nov 2026",
+      "identifier": "Nuvio-release-1.0.1",
+      "caption": "Nuvio 1.0.1 is available.",
+      "date": "2026-11-21T14:50:47Z",
+      "tintColor": "#1E88E5",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Nuvio/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/NuvioMedia/NuvioMobile/releases/tag/1.0.1"
+    },
+    {
       "appID": "com.zephyr.breeze",
       "title": "Breeze 3.1.0 · 21 Nov 2026",
       "identifier": "Breeze-release-v3.1.0",
@@ -2247,6 +3093,28 @@
       "url": "https://github.com/breeze-project-org/Breeze/releases/tag/v3.1.0"
     },
     {
+      "appID": "com.mori.downloader",
+      "title": "Mori 4.6.1 · 20 Nov 2026",
+      "identifier": "Mori-release-v4.6.1",
+      "caption": "Mori 4.6.1 is available.",
+      "date": "2026-11-20T23:42:35Z",
+      "tintColor": "#27282A",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mori/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/coflyn/Mori/releases/tag/v4.6.1"
+    },
+    {
+      "appID": "nl.jknaapen.fladder",
+      "title": "Fladder 0.12.1 · 20 Nov 2026",
+      "identifier": "Fladder-release-v0.12.1",
+      "caption": "Fladder 0.12.1 is available.",
+      "date": "2026-11-20T18:51:46Z",
+      "tintColor": "#F04040",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Fladder/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/DonutWare/Fladder/releases/tag/v0.12.1"
+    },
+    {
       "appID": "com.kodjodevf.mangayomi",
       "title": "Mangayomi 0.9.97 · 20 Nov 2026",
       "identifier": "Mangayomi-release-v0.9.97",
@@ -2256,6 +3124,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Mangayomi/images/news.png",
       "notify": true,
       "url": "https://github.com/kodjodevf/mangayomi/releases/tag/v0.9.97"
+    },
+    {
+      "appID": "com.yoroin.globalrefresh",
+      "title": "GlobalRefresh 1.1.2 · 20 Nov 2026",
+      "identifier": "GlobalRefresh-release-v1.1.2",
+      "caption": "GlobalRefresh 1.1.2 is available.",
+      "date": "2026-11-20T10:21:33Z",
+      "tintColor": "#177FFD",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/GlobalRefresh/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/Yoroin/GlobalRefresh-PiP/releases/tag/v1.1.2"
     },
     {
       "appID": "com.wqguard.app",
@@ -2291,6 +3170,17 @@
       "url": "https://github.com/pookjw/HermesEnabler/releases/tag/1.6.3"
     },
     {
+      "appID": "com.nusanx.studio",
+      "title": "NusaNX 0.1.1-beta · 18 Nov 2026",
+      "identifier": "NusaNX-release-v0.1.1-beta",
+      "caption": "NusaNX 0.1.1-beta is available.",
+      "date": "2026-11-18T15:08:38Z",
+      "tintColor": "#00C2FF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/NusaNX/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/optimalabsistem/NusaNX/releases/tag/v0.1.1-beta"
+    },
+    {
       "appID": "org.animeko.animeko",
       "title": "Animeko 6.4.1 · 18 Nov 2026",
       "identifier": "Animeko-release-v6.4.1",
@@ -2311,6 +3201,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniBaka/images/news.png",
       "notify": true,
       "url": "https://github.com/AniBakaBaka/AniBaka/releases/tag/5.2.5+261113"
+    },
+    {
+      "appID": "mumu.pduola.WQManager",
+      "title": "WQManager 0.5 · 18 Nov 2026",
+      "identifier": "WQManager-release-v0.5.0",
+      "caption": "WQManager 0.5 is available.",
+      "date": "2026-11-18T11:48:53Z",
+      "tintColor": "#242529",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQManager/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/hseons/WQManager/releases/tag/v0.5.0"
     },
     {
       "appID": "com.utmapp.UTM",
@@ -2379,6 +3280,17 @@
       "url": "https://github.com/vrcm-team/VRCM/releases/tag/1.1.6"
     },
     {
+      "appID": "com.twindesk.ios",
+      "title": "TwinDesk 3.2.1 · 15 Nov 2026",
+      "identifier": "TwinDesk-release-v3.2.1",
+      "caption": "TwinDesk 3.2.1 is available.",
+      "date": "2026-11-15T04:43:39Z",
+      "tintColor": "#5E5CE6",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TwinDesk/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/InukaAsith/TwinDesk/releases/tag/v3.2.1"
+    },
+    {
       "appID": "com.example.PiliPlus",
       "title": "PiliPlus 2.2.1 · 14 Nov 2026",
       "identifier": "PiliPlus-release-2.2.1",
@@ -2423,6 +3335,17 @@
       "url": "https://github.com/huamidev/GestaltX/releases/tag/v1.1.1"
     },
     {
+      "appID": "com.music.bitchord",
+      "title": "BitChord 1.0.2 · 13 Nov 2026",
+      "identifier": "BitChord-release-v1.0.2",
+      "caption": "BitChord 1.0.2 is available.",
+      "date": "2026-11-13T12:21:05Z",
+      "tintColor": "#FC546C",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BitChord/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/maanya145/BitChord-iOS/releases/tag/v1.0.2"
+    },
+    {
       "appID": "com.aigch.OpenParsec",
       "title": "OpenParsec 2.0.0 · 13 Nov 2026",
       "identifier": "OpenParsec-release-2.0.0",
@@ -2443,6 +3366,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQToolkit/images/news.png",
       "notify": true,
       "url": "https://github.com/MchinaMd57764/WQToolkit/releases/tag/v1.0"
+    },
+    {
+      "appID": "com.ipaside.escapeos",
+      "title": "EscapeOS 0.3.2 · 11 Nov 2026",
+      "identifier": "EscapeOS-release-v0.3.2",
+      "caption": "EscapeOS 0.3.2 is available.",
+      "date": "2026-11-11T14:19:37Z",
+      "tintColor": "#3AA39D",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/EscapeOS/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/pwnapplehat/EscapeOS/releases/tag/v0.3.2"
     },
     {
       "appID": "com.neogamelab.neostation",
@@ -2467,6 +3401,17 @@
       "url": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/tag/v2.2.2-b70"
     },
     {
+      "appID": "com.g8row.photosbackup",
+      "title": "Photos Backup 0.3.8 · 10 Nov 2026",
+      "identifier": "Photos Backup-release-0.3.8",
+      "caption": "Photos Backup 0.3.8 is available.",
+      "date": "2026-11-10T17:28:17Z",
+      "tintColor": "#2080F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PhotosBackup/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/g8row/PhotosBackup/releases/tag/0.3.8"
+    },
+    {
       "appID": "sh.celia.novella",
       "title": "Novella 2.7.0 · 10 Nov 2026",
       "identifier": "Novella-release-Novella-2.7.0",
@@ -2478,6 +3423,28 @@
       "url": "https://github.com/dododook/my-ipas/releases/tag/Novella-2.7.0"
     },
     {
+      "appID": "org.spotube.spotube.Spotube",
+      "title": "Spotube 6.0.0 · 10 Nov 2026",
+      "identifier": "Spotube-release-v6.0.0",
+      "caption": "Spotube 6.0.0 is available.",
+      "date": "2026-11-10T03:40:12Z",
+      "tintColor": "#4C7EEB",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Spotube/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/team-spotube/spotube/releases/tag/v6.0.0"
+    },
+    {
+      "appID": "com.md3music.md3music",
+      "title": "MD3Music 6.2.0 · 09 Nov 2026",
+      "identifier": "MD3Music-release-v6.2.0+53",
+      "caption": "MD3Music 6.2.0 is available.",
+      "date": "2026-11-09T08:34:00Z",
+      "tintColor": "#4F7BCF",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MD3Music-iOS/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/EPXiaohua/MD3Music-iOS/releases/tag/v6.2.0+53"
+    },
+    {
       "appID": "com.stik.stikdebug",
       "title": "StikDebug 3.2.2 · 08 Nov 2026",
       "identifier": "StikDebug-release-3.2.2",
@@ -2487,6 +3454,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/StikDebug/images/news.png",
       "notify": true,
       "url": "https://github.com/StikDebug/StikDebug/releases/tag/3.2.2"
+    },
+    {
+      "appID": "com.xycz.simple-live",
+      "title": "Simple Live 1.13.3 · 08 Nov 2026",
+      "identifier": "Simple Live-release-v1.13.3",
+      "caption": "Simple Live 1.13.3 is available.",
+      "date": "2026-11-08T13:17:59Z",
+      "tintColor": "#24A7EB",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SimpleLive/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/June6699/dart_simple_live/releases/tag/v1.13.3"
     },
     {
       "appID": "com.llayerlinux.LSX4RuntimeProbe",
@@ -2588,6 +3566,17 @@
       "url": "https://github.com/Manic-EMU/ManicEMU/releases/tag/v2.0.2"
     },
     {
+      "appID": "com.jeetraj.tdrive",
+      "title": "TDrive 3.1.9 · 02 Nov 2026",
+      "identifier": "TDrive-release-v3.1.9",
+      "caption": "TDrive 3.1.9 is available.",
+      "date": "2026-11-02T07:08:10Z",
+      "tintColor": "#20A0E0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/TDrive/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/ndgthuan/tdrive/releases/tag/v3.1.9"
+    },
+    {
       "appID": "azki.moye.MeloX",
       "title": "MeloX 1.4.1 · 30 Oct 2026",
       "identifier": "MeloX-release-v1.4.1",
@@ -2619,6 +3608,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/LinuxRunner/images/news.png",
       "notify": true,
       "url": "https://github.com/mxhm11cr/LinuxRunner/releases/tag/v1.0.1"
+    },
+    {
+      "appID": "dev.melee.melee-pc.KMT3995P5V",
+      "title": "Melee-PC 0.4.2 · 21 Oct 2026",
+      "identifier": "Melee-PC-release-v0.4.2",
+      "caption": "Melee-PC 0.4.2 is available.",
+      "date": "2026-10-21T00:08:51Z",
+      "tintColor": "#F08040",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Melee-PC/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/999sian/melee-pc/releases/tag/v0.4.2"
     },
     {
       "appID": "com.sean.roamcontrol",
@@ -2665,6 +3665,17 @@
       "url": "https://github.com/LinkPass888/AirBeep/releases/tag/v2.5.2"
     },
     {
+      "appID": "tv.danmaku.bilianime",
+      "title": "BiliSponsorBlock 9.10.0 · 19 Oct 2026",
+      "identifier": "BiliSponsorBlock-release-v2.0.0",
+      "caption": "BiliSponsorBlock 9.10.0 is available.",
+      "date": "2026-10-19T07:09:39Z",
+      "tintColor": "#FB7299",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/BiliSponsorBlock/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/lcmovie/BiliSponsorBlock-ios/releases/tag/v2.0.0"
+    },
+    {
       "appID": "com.johnil.vvebo",
       "title": "VVebo 3.3.31.1 · 19 Oct 2026",
       "identifier": "VVebo-release-VVebo-3.3.31.1",
@@ -2698,6 +3709,17 @@
       "url": "https://github.com/Aidoku/Aidoku/releases/tag/v0.9-4"
     },
     {
+      "appID": "org.d2rmobile.app",
+      "title": "D2R Mobile 1.0 · 13 Oct 2026",
+      "identifier": "D2R Mobile-release-v1.0.1",
+      "caption": "D2R Mobile 1.0 is available.",
+      "date": "2026-10-13T01:28:21Z",
+      "tintColor": "#F09020",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/D2RMobile/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/d2r-mobile/d2r-mobile/releases/tag/v1.0.1"
+    },
+    {
       "appID": "dev.infinityf4p.tiebapure",
       "title": "TiebaPure 1.4.15 · 10 Oct 2026",
       "identifier": "TiebaPure-release-v1.4.15",
@@ -2718,6 +3740,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PureLive/images/news.png",
       "notify": true,
       "url": "https://github.com/liuchuancong/pure_live/releases/tag/v3.1.19"
+    },
+    {
+      "appID": "com.shirox.app",
+      "title": "Shirox 1.0.6 · 08 Oct 2026",
+      "identifier": "Shirox-release-latest",
+      "caption": "Shirox 1.0.6 is available.",
+      "date": "2026-10-08T13:11:34Z",
+      "tintColor": "#1C1C1E",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Shirox/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/xibrox/Shirox/releases/tag/latest"
     },
     {
       "appID": "app.anich",
@@ -2753,6 +3786,17 @@
       "url": "https://github.com/intraducine/iridium/releases/tag/v0.2.0"
     },
     {
+      "appID": "dev.twilitrealm.dusk",
+      "title": "Dusklight 2.0.3 · 30 Sep 2026",
+      "identifier": "Dusklight-release-v2.0.3",
+      "caption": "Dusklight 2.0.3 is available.",
+      "date": "2026-09-30T07:06:44Z",
+      "tintColor": "#C4901E",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Dusklight/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/TwilitRealm/dusklight/releases/tag/v2.0.3"
+    },
+    {
       "appID": "com.makr.orchard",
       "title": "Orchard 0.2 · 25 Sep 2026",
       "identifier": "Orchard-release-v0.2",
@@ -2773,6 +3817,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/SceneBox/images/news.png",
       "notify": true,
       "url": "https://github.com/donbytyqi/scenebox/releases/tag/v1.0.4"
+    },
+    {
+      "appID": "novadev.iram-plus",
+      "title": "iRAM+ 1.3.1 · 18 Sep 2026",
+      "identifier": "iRAM+-release-v1.3.1",
+      "caption": "iRAM+ 1.3.1 is available.",
+      "date": "2026-09-18T23:43:28Z",
+      "tintColor": "#64BE7E",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/iRAM-Plus/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/NexSideloading/iRAM-Plus/releases/tag/v1.3.1"
     },
     {
       "appID": "com.rileytestut.AltStore.Beta",
@@ -2871,6 +3926,17 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/assets/source-avatar.png",
       "notify": true,
       "url": "https://github.com/dododook/AltGallery"
+    },
+    {
+      "appID": "io.github.johnny901901901.applesauce",
+      "title": "Applesauce 0.4.2 · 15 Aug 2026",
+      "identifier": "Applesauce-release-ios-v0.4.2",
+      "caption": "Applesauce 0.4.2 is available.",
+      "date": "2026-08-15T23:21:28Z",
+      "tintColor": "#F01F14",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Applesauce/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/0xjohnnydev/Applesauce/releases/tag/ios-v0.4.2"
     },
     {
       "appID": "dev.gholts.Sphere",
