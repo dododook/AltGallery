@@ -137,11 +137,11 @@
       "tintColor": "#F0E0D0",
       "versions": [
         {
-          "version": "1.5.27",
-          "date": "2026-10-05T03:15:29Z",
-          "localizedDescription": "- 修复内存泄漏的问题",
-          "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.27/anich-ios-no_sign-1.5.27.ipa",
-          "size": 41226765,
+          "version": "1.5.28",
+          "date": "2026-11-27T01:01:29Z",
+          "localizedDescription": "- 播放信息中新增软硬解码状态显示功能\r\n- 画廊来源地址支持点击复制\r\n- 修复画廊每次打开详情评论都会重新加载的问题\r\n- 修复部分线路花屏或缺少前几秒画面的问题\r\n- 修复处于画中画模式时弹幕开关被隐藏的问题\r\n- 修复打开线路面板导致界面卡死的问题\r\n- 修复线路面板部分视频无法正确探测大小的问题\r\n- 修复线路面板无法正确显示错误码的问题\r\n- 修复触控板无法双指滑动滚动的问题 (#107)\r\n- 升级battery_plus的版本 (#106)",
+          "downloadURL": "https://github.com/Sle2p/AniCh/releases/download/1.5.28/anich-ios-no_sign-1.5.28.ipa",
+          "size": 41232889,
           "minOSVersion": "12.0"
         }
       ]
@@ -1556,11 +1556,11 @@
       "tintColor": "#8844F6",
       "versions": [
         {
-          "version": "2.0.5",
-          "date": "2026-11-26T09:01:47Z",
-          "localizedDescription": "MoviePilot 现已全面提供 **iOS / iPadOS**、**Android** 与 **HarmonyOS NEXT** 三端全原生客户端（统一版本 **`2.0.5`**），基于 Rust 共享业务内核直连 MoviePilot V3 后端，带来一致的核心功能闭环与地道原生界面体验。\n\n### 本版本核心亮点\n\n- **订阅顶栏优化与原生订阅历史**：\n  - 将订阅页顶栏的「追剧日历」与「订阅广场」移至左上角，并在右上角新增原生「订阅历史」入口。\n  - 支持按电影 / 电视剧 / 音乐分类分页查看已完成订阅记录，支持查看媒体详情、保留原过滤规则一键重新订阅与删除记录。\n- **剧集季详情页与分集入库状态/连播**：\n  - 媒体详情页各季卡片新增实时入库状态徽章（`已入库` / `已入库 X/Y` / `未入库`），点击任意一季可进入专属季媒体与分集详情页。\n  - 支持浏览单季海报、简介、评分、集数及完整分集列表，展示每一集的入库/开播状态，并支持点击任意已入库单集立即播放与本季连播。\n- **存储媒体纯流式播放与大体积临时文件防护**：\n  - 三端播放存储音视频严格走 HTTP Range 流票据边加载边播放，彻底移除对非 `.strm` 音视频回退整文件下载的逻辑，杜绝在服务端临时目录或手机缓存产生大体积媒体副本。\n- **多选筛选菜单保持展开与三端连续勾选体验**：\n  - 统一优化 iOS、Android 与 HarmonyOS 三端的全局搜索「来源」多选菜单、站点资源搜索「搜索站点」范围菜单与结果多维级联筛选菜单（`#67`）：勾选/取消任意筛选项时菜单保持展开并实时更新勾选项与结果列表，点击互斥重置项（「默认（系统设置）」「全部站点」「清空当前维度」）或外部区域自动收起。\n- **Android 固定正式签名证书与播放内核加固**：\n  - 正式发布构建全面切换并永久锁定官方 Release 签名密钥（附发版签名校验门禁），后续版本支持直接覆盖升级安装，不再因每次构建更换临时证书而要求重装（从旧临时证书版本首次升至 `2.0.5` 需重装一次，此后永久免重装升级）。\n  - 修复 Android 播放器 DEX 寄存器溢出（`VerifyError`）、MPV `SimpleBasePlayer` 递归栈溢出与切集/切核异步释放竞态（`#63`），新增 Android 系统状态栏消息通知同步（`#66`）、文件管理 7 种自然排序与筛选（`#64`）以及 Cloudflare Access OAuth RFC 8707 `resource` 参数兼容（`#65`）。\n\n### 安装包说明\n\n| 平台 | 版本 | 产物文件 | 适用设备与安装说明 |\n| :--- | :--- | :--- | :--- |\n| **iOS / iPadOS** | `2.0.5` | `MoviePilot-2.0.5-ios-unsigned.ipa` | 需要 **iOS 16+**（小组件需 iOS 17+），下载后使用个人或企业证书重签安装（重签小组件请保持一致的 App Groups）。 |\n| **Android（推荐）** | `2.0.5` | `MoviePilot-2.0.5-android-arm64-v8a.apk` | 适用于绝大多数现代 64 位 ARM 手机与平板（**Android 10 / API 29+**），体积更小，可直接安装。 |\n| **Android（通用）** | `2.0.5` | `MoviePilot-2.0.5-android-universal.apk` | 同时包含 `arm64-v8a`、`armeabi-v7a` 与 `x86_64` 架构，兼容 32 位旧设备、电视盒子与桌面模拟器。 |\n| **HarmonyOS NEXT** | `2.0.5` | `MoviePilot-2.0.5-harmony-unsigned.hap` | 适用于 **HarmonyOS NEXT（API 12+）**，供开发者使用 DevEco Studio / 签名工具配置证书后安装至真机或模拟器。 |\n\nRelease 同时提供统一校验文件 `SHA256SUMS`。\n\n构建源码：[32a4967e449aaa7d78c5e70b1785858f0031a1ac](https://github.com/jxxghp/MoviePilot-App/commit/32a4967e449aaa7d78c5e70b1785858f0031a1ac)。",
-          "downloadURL": "https://github.com/jxxghp/MoviePilot-App/releases/download/v2.0.5/MoviePilot-2.0.5-ios-unsigned.ipa",
-          "size": 51204146,
+          "version": "2.0.9",
+          "date": "2026-11-27T09:10:04Z",
+          "localizedDescription": "MoviePilot 现已全面提供 **iOS / iPadOS**、**Android** 与 **HarmonyOS NEXT** 三端全原生客户端（统一版本 **`2.0.9`**），基于 Rust 共享业务内核直连 MoviePilot V3 后端，带来一致的核心功能闭环与地道原生界面体验。\n\n### 本版本核心亮点\n\n- **三端全面支持通行密钥（Passkey）无密码登录**：\n  - iOS / iPadOS、Android 与 HarmonyOS NEXT 统一接入 `moviepilot.passkey` v1 安全认证协议，自动探测服务端 `/api/v1/auth/providers` 启用状态并校验前端静态协议与安全来源。\n  - 支持免输账号密码一键唤起系统通行密钥面板（或按已输入用户名精确发起挑战），事务令牌严格驻留客户端内存，完成浏览器同源与挑战签名校验后自动激活会话并遵循「保持登录」偏好。\n- **三端登录界面视觉层级与按钮布局优化**：\n  - 重构主「登录」实心胶囊与「使用通行密钥登录」玻璃描边次级按钮的视觉主次关系，无需填写表单即可直接点击通行密钥登录；Android 与鸿蒙在短宽横屏下自动切换为左右双列并排按钮布局。\n  - 精简登录页冗余配置项，并在未触发网关拦截且未持有网关会话时将 `Cloudflare Access` 入口收敛为轻量胶囊按钮，消除多卡片堆叠感。\n- **修复外挂字幕显示但提示加载失败的问题**：\n  - 修复 Android 在媒体库详情等直链（`strm_direct` / `server_wan`）起播场景下未透传实例同源基准地址与鉴权头，导致外挂字幕请求缺失凭据触发加载失败的问题，并补齐 Cloudflare Access 同源网关头透传与跨源剥离。\n  - 三端新增反向代理与子路径部署下的 `/api/v1/...` 实例地址安全重绑能力，解决反代环境下后端生成 `http://` 字幕或歌词地址引发的协议失配；同步修正 iOS 省略 `server` 参数时的字幕地址校验规则。\n\n### 安装包说明\n\n| 平台 | 版本 | 产物文件 | 适用设备与安装说明 |\n| :--- | :--- | :--- | :--- |\n| **iOS / iPadOS** | `2.0.9` | `MoviePilot-2.0.9-ios-unsigned.ipa` | 需要 **iOS 16+**（小组件需 iOS 17+），下载后使用个人或企业证书重签安装（重签小组件请保持一致的 App Groups）。 |\n| **Android（推荐）** | `2.0.9` | `MoviePilot-2.0.9-android-arm64-v8a.apk` | 适用于绝大多数现代 64 位 ARM 手机与平板（**Android 10 / API 29+**），体积更小，可直接安装。 |\n| **Android（通用）** | `2.0.9` | `MoviePilot-2.0.9-android-universal.apk` | 同时包含 `arm64-v8a`、`armeabi-v7a` 与 `x86_64` 架构，兼容 32 位旧设备、电视盒子与桌面模拟器。 |\n| **HarmonyOS NEXT** | `2.0.9` | `MoviePilot-2.0.9-harmony-unsigned.hap` | 适用于 **HarmonyOS NEXT（API 12+）**，供开发者使用 DevEco Studio / 签名工具配置证书后安装至真机或模拟器。 |\n\nRelease 同时提供统一校验文件 `SHA256SUMS`。\n\n构建源码：[71897d764880cf79467c4856d2d9115015db651c](https://github.com/jxxghp/MoviePilot-App/commit/71897d764880cf79467c4856d2d9115015db651c)。",
+          "downloadURL": "https://github.com/jxxghp/MoviePilot-App/releases/download/v2.0.9/MoviePilot-2.0.9-ios-unsigned.ipa",
+          "size": 51682733,
           "minOSVersion": "17.0"
         }
       ]
@@ -1581,10 +1581,10 @@
       "versions": [
         {
           "version": "1.3.3",
-          "date": "2026-11-20T06:01:32Z",
-          "localizedDescription": "MoviePilot Release\n\n- Version: 1.3.3\n- Build Date: 2026-11-20\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* fix(push): iOS 设置 JPush Alias 报 6002 超时且提示原始异常串 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/166\n* feat: 适配 Vue 插件（PVE 守护神 / 爱快路由 / 豆瓣档案 / 夸克网盘 / 随机图床） by @xijin285 in https://github.com/singleton-altman/MoviePilotLite/pull/167\n* feat(media_detail): 豆瓣评论与详情页 UI 优化 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/169\n* feat(media_detail): 完善豆瓣评论列表 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/175\n* release: v1.3.2 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/176\n* style(download): 重设计下载资源弹窗 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/180\n* feat(widget): 订阅日历小组件支持多尺寸并修复 ColorOS 尺寸错乱 by @xijin285 in https://github.com/singleton-altman/MoviePilotLite/pull/181\n* release: v1.3.3 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/183\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.3.1-2026-11-06...release-v1.3.3-2026-11-20",
-          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.3.3-2026-11-20/ios-v1.3.3-2026-11-20.ipa",
-          "size": 37758534,
+          "date": "2026-11-27T07:03:46Z",
+          "localizedDescription": "MoviePilot Release\n\n- Version: 1.3.3\n- Build Date: 2026-11-27\n- Android: Signed universal APK\n- Android: Signed arm64-v8a APK\n- iOS: Unsigned IPA\n\niOS 安装说明：\n- IPA 为未签名包\n- 请使用自己的 Apple Developer 账号通过 AltStore、Sideloadly 或 Xcode 进行签名安装\n\n\n## What's Changed\n* fix(push): iOS 设置 JPush Alias 报 6002 超时且提示原始异常串 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/166\n* feat: 适配 Vue 插件（PVE 守护神 / 爱快路由 / 豆瓣档案 / 夸克网盘 / 随机图床） by @xijin285 in https://github.com/singleton-altman/MoviePilotLite/pull/167\n* feat(media_detail): 豆瓣评论与详情页 UI 优化 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/169\n* feat(media_detail): 完善豆瓣评论列表 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/175\n* release: v1.3.2 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/176\n* style(download): 重设计下载资源弹窗 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/180\n* feat(widget): 订阅日历小组件支持多尺寸并修复 ColorOS 尺寸错乱 by @xijin285 in https://github.com/singleton-altman/MoviePilotLite/pull/181\n* release: v1.3.3 by @singleton-altman in https://github.com/singleton-altman/MoviePilotLite/pull/183\n\n\n**Full Changelog**: https://github.com/singleton-altman/MoviePilotLite/compare/release-v1.3.1-2026-11-06...release-v1.3.3-2026-11-27",
+          "downloadURL": "https://github.com/singleton-altman/MoviePilotLite/releases/download/release-v1.3.3-2026-11-27/ios-v1.3.3-2026-11-27.ipa",
+          "size": 37758539,
           "minOSVersion": "15.0"
         }
       ]
@@ -1825,11 +1825,11 @@
       "tintColor": "#2080F0",
       "versions": [
         {
-          "version": "0.3.8",
-          "date": "2026-11-10T17:28:17Z",
-          "localizedDescription": "## New\n\n- **Keep Running in Background.** On by default, in **Settings → Background**. While a backup has work iOS won't move on its own, the app keeps itself from being suspended the way SideStore does, by playing silence mixed with whatever else is playing. No permission is needed, and the backup keeps going with the app closed or the phone locked. When the queue is done, after 12 hours, or if iOS interrupts it, it stops and the app sleeps again. If calls or music keep stopping it, switch **Method** to **Location**, which asks for location permission and uses coarse updates instead. ([#2](https://github.com/g8row/PhotosBackup/issues/2), [#41](https://github.com/g8row/PhotosBackup/pull/41))\n\n- **Backup keeps going after you leave the app (iOS 26), for real this time.** 0.3.7's IPA was built with Xcode 16.4, which left this feature out, so there was no Live Activity. Releases are now built with Xcode 26.3. ([#39](https://github.com/g8row/PhotosBackup/pull/39))\n\n- **An edited video's original is backed up too**, so the Google Photos app counts it, including Cinematic videos, which the camera saves as edited. ([#38](https://github.com/g8row/PhotosBackup/pull/38), thanks @saileshbro)\n\n- **Back Up Live Photo Motion is now on by default.** ([#38](https://github.com/g8row/PhotosBackup/pull/38))\n\n## Fixed\n\n- **The app forgot what it had already backed up.** ([#34](https://github.com/g8row/PhotosBackup/issues/34), [#22](https://github.com/g8row/PhotosBackup/issues/22), [#40](https://github.com/g8row/PhotosBackup/pull/40), thanks @josippapez) The app forgot every photo iOS reported as changed, and iOS reports a lot more than edits: favourites, albums, and the photo analysis it redoes on the whole library after an iOS update. One report had a single background window forget 36,615 backups. A photo is now only re-checked when its edit actually changed, and photos backed up before this release keep their record.\n\n- **Big backups are much lighter on CPU and disk.** ([#13](https://github.com/g8row/PhotosBackup/issues/13), [#34](https://github.com/g8row/PhotosBackup/issues/34), [#42](https://github.com/g8row/PhotosBackup/pull/42)) Uploads were hashing one file at a time, and the queue was rewritten to disk several times a second. That's what iOS was closing the app for in the reports. Hashing now runs alongside the uploads, and the queue is saved at most once a second.\n\n- **The screen stays on while a backup runs in the app** if Keep Running in Background is off. With it on, the phone can lock normally. ([#37](https://github.com/g8row/PhotosBackup/issues/37))\n\n- **The Activity tab is fast on big backups.** ([#8](https://github.com/g8row/PhotosBackup/issues/8), [#42](https://github.com/g8row/PhotosBackup/pull/42)) It drew a row for every item in the queue. It now shows what's in progress or failed, the next 20 and the last 50 finished, and says how many more there are.\n\n## Worth knowing\n\n- **If your progress already reset on 0.3.7**, the first launch may go over those photos once more. Most settle without uploading anything, and it shouldn't happen again.\n- **Keep Running in Background uses more battery**, and swiping the app away in the app switcher still stops it. Charging overnight is still the best time for a big backup.\n- The diagnostic report now has a **Keep-alive** line saying whether it was running.\n\n## Notes\n\n- 208 tests, 206 passing (2 opt-in live tests skipped).\n- Tested on iOS 26.5 and 18.6 simulators. Not tested on a device yet. If something is off, **Settings → Support → Create Diagnostic Report** and attach it to an issue.",
-          "downloadURL": "https://github.com/g8row/PhotosBackup/releases/download/0.3.8/PhotosBackup.ipa",
-          "size": 2816914,
+          "version": "0.4.1",
+          "date": "2026-11-27T13:11:42Z",
+          "localizedDescription": "### What's new\n\n- **Backup filters & limits (#14, #23, #32):**\n  - **Media Types** (`Settings → Backup`): choose **Photos & Videos**, **Photos Only**, or **Videos Only** across selected albums and picked folders.\n  - **Only Back Up After Date** (`Settings → Backup`): back up only items created on or after a chosen date/time, with a quick **Set to Now** button.\n  - **Only While Charging**, **Minimum Battery**, and **Daily Upload Limit** (500 MB–10 GB/day, counting only bytes actually uploaded — duplicates already in Google Photos don't count — and resuming automatically the next day).\n- **Edited photo originals (#33):** Opt-in **Back Up Edited Photo Originals** toggle under `Settings → Backup` to upload the unedited original alongside the edited version (and backfill originals for edited photos already backed up).\n- **Export / Import Backup History (#34):** Save or restore a privacy-safe JSON archive of backed-up item records and Google album links under `Settings → Support → Storage` (no credentials or media), so reinstalling or switching signing certificates doesn't require re-checking your whole library.\n- **Background backup improvements (#47):**\n  - Added `BGAppRefreshTask` scheduling alongside `BGProcessingTask` for more frequent background discovery.\n  - Decoupled background `URLSession` transfer handoff (up to 8 concurrent transfers with a 512 MB staging budget while keeping local export/hashing at 2).\n  - Moved PhotoKit library change scans off the main thread so background expiry and UI turns stay responsive.\n  - Opt-in **Wake on Location Change** (`Settings → Background`, requires Always location permission) to wake and discover new photos when travelling or arriving home; coordinates are ignored.\n\n### Install\n- SideStore / AltStore / Feather source: `https://g8row.github.io/PhotosBackup/apps.json`\n- Or download `PhotosBackup.ipa` (built by GitHub Actions from this tag, verified by `PhotosBackup.ipa.sha256`) once the release workflow finishes attaching it.",
+          "downloadURL": "https://github.com/g8row/PhotosBackup/releases/download/0.4.1/PhotosBackup.ipa",
+          "size": 2973509,
           "minOSVersion": "15.0"
         }
       ]
@@ -1965,11 +1965,11 @@
       "tintColor": "#E85A3C",
       "versions": [
         {
-          "version": "1.0.1",
-          "date": "2026-11-26T11:35:53Z",
-          "localizedDescription": "## Reloc v1.0.1\n\n修复配对文件导入、地名解析与停止恢复定位问题，新增纯 WGS-84 国际地图可选项、极速自动触发与一键画中画（PiP）定位刷新闭环，并增加 iPad 不支持提示。\n\n### 本次更新\n\n- **修复配对文件无法选择**：改用原生 UIDocumentPickerViewController 副本导入模式，在 Info.plist 中声明 .rppairing / .mobiledevicepairing / .mobilepair 文档类型，解决文件置灰无法点选的问题，并支持「用 Reloc 打开」直接导入。\n- **多源地图与无高德选项**：保留 Apple 地图（系统默认），同时新增完全独立于 MKMapView 的纯原生 UIKit WGS-84 瓦片地图（全球街道图 Esri / OpenStreetMap / 全球卫星图），全部免 API Key、无高德地图字样与 GCJ-02 偏移。\n- **修复地名一直解析卡住**：新增 CLGeocoder（2 秒超时）→ OpenStreetMap Nominatim → BigDataCloud → 坐标兜底的四级联反地理编码，解决海外坐标长期卡在「正在解析地名…」的问题。\n- **极速触发与一键 PiP 刷新**：iAP2 鉴权成功后延迟拉起 CoreLocation + 自动脉冲订阅 0xFFFA + 初始高速锁定突发，首页实时显示外设生效状态；若系统沿用旧缓存，可一键启动画中画（PiP）悬浮 5 秒倒计时指引并直达系统「定位服务」（已修复未关定位误闪 5 秒与过渡卡顿）。\n- **修复停止定位后未恢复真实位置**：停止时先下发标准 NMEA 失效报文（GPGGA quality=0 / GPRMC status=V）与 iAP2 RST 链路复位包，随后自动唤醒本机真实 GPS 覆盖缓存，室内弱信号时同样提供一键刷新恢复入口。\n- **新增 iPad 设备检测**：因 iPadOS 不提供 CarPlay / com.apple.carkit.service 外设通道，在 iPad 上启动时将直接提示设备不可用（仅支持 iPhone）。\n\n### 安装说明\n\n- 附件 Reloc.ipa 为未签名 Release 构建产物，请使用个人证书或自签工具签名后安装（仅支持 iPhone）。\n- 建议安装后在系统「设置 → 隐私与安全性 → 定位服务 → Reloc」将定位权限设为「始终」并开启「精确位置」。",
-          "downloadURL": "https://github.com/Reukix/Reloc/releases/download/v1.0.1/Reloc.ipa",
-          "size": 4441557,
+          "version": "1.0.4",
+          "date": "2026-11-27T11:22:31Z",
+          "localizedDescription": "## Reloc v1.0.4\n\n### 更新\n- **正式支持 iPad**：移除原有的仅限 iPhone 限制，现已支持 iPad（iPadOS 17.0+）直接使用，真机实测正常。\n\n---\n\n### What's New\n- **iPad Support**: Removed the iPhone-only restriction — Reloc now supports iPad (iPadOS 17.0+) and has been verified on real iPad hardware.",
+          "downloadURL": "https://github.com/Reukix/Reloc/releases/download/v1.0.4/Reloc.ipa",
+          "size": 3475407,
           "minOSVersion": "17.0"
         }
       ]
@@ -2703,11 +2703,11 @@
       "tintColor": "#1060F0",
       "versions": [
         {
-          "version": "1.0.26",
-          "date": "2026-11-24T07:09:57Z",
-          "localizedDescription": "## WrapPin 1.0.26（Build 96）\n\n- **当前模拟目标** · 固定模拟时，地图单独标出当前目标。选中其他地点后，点「查看模拟位置」可以回到当前目标。#57\n- **精确选点** · 打开地图上的准星按钮，拖动地图或用摇杆微调。点「确认选点」后，再点「开始模拟定位」或「更换模拟位置」应用坐标。#58 #59\n- **选点面板** · 地点标题、收藏和清除按钮固定在面板上方。空间不足时可以滚动下方选项。\n- **收藏重命名** · 在「收藏与历史」里点收藏旁的铅笔，改名后保留原坐标和地址。#61\n\n### 安装\n\n- **Standard** · 使用 SideStore 等工具签装，运行时使用兼容的外部设备隧道。\n- **Tunnel** · 主 App 和内置扩展都需要支持 Packet Tunnel 的签名配置。\n\n两版均为未签名 IPA，支持 iOS/iPadOS 18.0 及以上。覆盖升级时使用原版本类型和签名身份。[安装说明](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Installation.zh-CN.md)\n\n[简体中文更新说明](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Release-1.0.26.zh-CN.md) · [English release notes](https://github.com/suversal/WrapPin/blob/v1.0.26/Documentation/Release-1.0.26.md)",
-          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.26/WrapPin-Standard-1.0.26-build96-unsigned.ipa",
-          "size": 7161177,
+          "version": "1.0.27",
+          "date": "2026-11-26T14:45:47Z",
+          "localizedDescription": "## WrapPin 1.0.27（Build 106）\n\n### 更新内容\n- **支持保存自定义路线**：可在“收藏与历史”中管理、重命名或删除已保存的自定义路线，一键载入路线途经点、坐标模式与速度。\n- **地图最近搜索记录**：在搜索框下方展示近期搜过的地点，点击即可快速复用。\n- **iOS 26+ Liquid Glass 与交互打磨**：适配 Liquid Glass 视觉风格，优化底部面板拖拽物理手感，以及首页地图、路线编辑和精确选点的浮层细节。\n\n### What's New\n- **Saved Custom Routes**: Save custom routes for reuse, rename or delete them in Saved Places, and reload their waypoints, coordinate mode and speed in one tap.\n- **Recent Map Searches**: Show recent searches below the map search bar for quick reuse without retyping.\n- **iOS 26+ Liquid Glass & Interaction Polish**: Refined Liquid Glass styling, smoother bottom-dock drag physics, and cleaner map overlays across the home map, route editors and precision picker.\n\n### 安装包与校验（iOS/iPadOS 18.0+，未签名）\n- **Standard（SideStore 推荐）**：`WrapPin-Standard-1.0.27-build106-unsigned.ipa`\n  - SHA-256: `e4391ec3f1c0bdc04d90551363fd85212e593cb74a0a40a1b4fec27611ecac1a`\n- **Tunnel（内置隧道，需匹配 Packet Tunnel 签名配置）**：`WrapPin-Tunnel-1.0.27-build106-unsigned.ipa`\n  - SHA-256: `4c20b5b1438e4da4aba38bc1cf0ddac716d008715f6d6d1330c51d260e665653`",
+          "downloadURL": "https://github.com/suversal/WrapPin/releases/download/v1.0.27/WrapPin-Standard-1.0.27-build106-unsigned.ipa",
+          "size": 7254821,
           "minOSVersion": "18.0"
         }
       ]
@@ -2763,15 +2763,70 @@
   ],
   "news": [
     {
+      "appID": "com.g8row.photosbackup",
+      "title": "Photos Backup 0.4.1 · 27 Nov 2026",
+      "identifier": "Photos Backup-release-0.4.1",
+      "caption": "Photos Backup 0.4.1 is available.",
+      "date": "2026-11-27T13:11:42Z",
+      "tintColor": "#2080F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PhotosBackup/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/g8row/PhotosBackup/releases/tag/0.4.1"
+    },
+    {
       "appID": "dev.reloc.ios",
-      "title": "Reloc 1.0.1 · 26 Nov 2026",
-      "identifier": "Reloc-release-v1.0.1",
-      "caption": "Reloc 1.0.1 is available.",
-      "date": "2026-11-26T11:35:53Z",
+      "title": "Reloc 1.0.4 · 27 Nov 2026",
+      "identifier": "Reloc-release-v1.0.4",
+      "caption": "Reloc 1.0.4 is available.",
+      "date": "2026-11-27T11:22:31Z",
       "tintColor": "#E85A3C",
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Reloc/images/news.png",
       "notify": true,
-      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.1"
+      "url": "https://github.com/Reukix/Reloc/releases/tag/v1.0.4"
+    },
+    {
+      "appID": "org.moviepilot.app",
+      "title": "MoviePilot 2.0.9 · 27 Nov 2026",
+      "identifier": "MoviePilot-release-v2.0.9",
+      "caption": "MoviePilot 2.0.9 is available.",
+      "date": "2026-11-27T09:10:04Z",
+      "tintColor": "#8844F6",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/images/news.png",
+      "notify": true,
+      "url": "https://github.com/jxxghp/MoviePilot-App/releases/tag/v2.0.9"
+    },
+    {
+      "appID": "com.altman.moviepilot",
+      "title": "MoviePilotLite 1.3.3 · 27 Nov 2026",
+      "identifier": "MoviePilotLite-release-release-v1.3.3-2026-11-27",
+      "caption": "MoviePilotLite 1.3.3 is available.",
+      "date": "2026-11-27T07:03:46Z",
+      "tintColor": "#8050F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
+      "notify": true,
+      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.3.3-2026-11-27"
+    },
+    {
+      "appID": "app.anich",
+      "title": "AniCh 1.5.28 · 27 Nov 2026",
+      "identifier": "AniCh-release-1.5.28",
+      "caption": "AniCh 1.5.28 is available.",
+      "date": "2026-11-27T01:01:29Z",
+      "tintColor": "#F0E0D0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniCh/images/news.png",
+      "notify": true,
+      "url": "https://github.com/Sle2p/AniCh/releases/tag/1.5.28"
+    },
+    {
+      "appID": "com.suversal.wrappin",
+      "title": "WrapPin 1.0.27 · 26 Nov 2026",
+      "identifier": "WrapPin-release-v1.0.27",
+      "caption": "WrapPin 1.0.27 is available.",
+      "date": "2026-11-26T14:45:47Z",
+      "tintColor": "#1060F0",
+      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WrapPin/images/news.webp",
+      "notify": true,
+      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.27"
     },
     {
       "appID": "cz.kolbi.wqfiles",
@@ -2783,17 +2838,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQFiles/images/news.png",
       "notify": true,
       "url": "https://github.com/kolbicz/WQFiles/releases/tag/v0.9.30"
-    },
-    {
-      "appID": "org.moviepilot.app",
-      "title": "MoviePilot 2.0.5 · 26 Nov 2026",
-      "identifier": "MoviePilot-release-v2.0.5",
-      "caption": "MoviePilot 2.0.5 is available.",
-      "date": "2026-11-26T09:01:47Z",
-      "tintColor": "#8844F6",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilot-App/images/news.png",
-      "notify": true,
-      "url": "https://github.com/jxxghp/MoviePilot-App/releases/tag/v2.0.5"
     },
     {
       "appID": "com.example.kazumi",
@@ -2972,17 +3016,6 @@
       "url": "https://github.com/owngoal-dev/iGhostVT/releases/tag/v1.6.41"
     },
     {
-      "appID": "com.suversal.wrappin",
-      "title": "WrapPin 1.0.26 · 24 Nov 2026",
-      "identifier": "WrapPin-release-v1.0.26",
-      "caption": "WrapPin 1.0.26 is available.",
-      "date": "2026-11-24T07:09:57Z",
-      "tintColor": "#1060F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WrapPin/images/news.webp",
-      "notify": true,
-      "url": "https://github.com/suversal/WrapPin/releases/tag/v1.0.26"
-    },
-    {
       "appID": "app.local.iPadn",
       "title": "iPadn 2.3.5 · 23 Nov 2026",
       "identifier": "iPadn-release-v2.3.5",
@@ -3146,17 +3179,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/WQGuard/images/news.png",
       "notify": true,
       "url": "https://github.com/Kianuni/WQGuard/releases/tag/v1.3.6"
-    },
-    {
-      "appID": "com.altman.moviepilot",
-      "title": "MoviePilotLite 1.3.3 · 20 Nov 2026",
-      "identifier": "MoviePilotLite-release-release-v1.3.3-2026-11-20",
-      "caption": "MoviePilotLite 1.3.3 is available.",
-      "date": "2026-11-20T06:01:32Z",
-      "tintColor": "#8050F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/MoviePilotLite/images/news.png",
-      "notify": true,
-      "url": "https://github.com/singleton-altman/MoviePilotLite/releases/tag/release-v1.3.3-2026-11-20"
     },
     {
       "appID": "com.example.HermesEnabler",
@@ -3399,17 +3421,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/RushHours/images/news.png",
       "notify": true,
       "url": "https://github.com/ekomlenovic/rush_hour_ios_android/releases/tag/v2.2.2-b70"
-    },
-    {
-      "appID": "com.g8row.photosbackup",
-      "title": "Photos Backup 0.3.8 · 10 Nov 2026",
-      "identifier": "Photos Backup-release-0.3.8",
-      "caption": "Photos Backup 0.3.8 is available.",
-      "date": "2026-11-10T17:28:17Z",
-      "tintColor": "#2080F0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/PhotosBackup/images/news.webp",
-      "notify": true,
-      "url": "https://github.com/g8row/PhotosBackup/releases/tag/0.3.8"
     },
     {
       "appID": "sh.celia.novella",
@@ -3751,17 +3762,6 @@
       "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/Shirox/images/news.webp",
       "notify": true,
       "url": "https://github.com/xibrox/Shirox/releases/tag/latest"
-    },
-    {
-      "appID": "app.anich",
-      "title": "AniCh 1.5.27 · 05 Oct 2026",
-      "identifier": "AniCh-release-1.5.27",
-      "caption": "AniCh 1.5.27 is available.",
-      "date": "2026-10-05T03:15:29Z",
-      "tintColor": "#F0E0D0",
-      "imageURL": "https://raw.githubusercontent.com/dododook/AltGallery/refs/heads/master/apps/AniCh/images/news.png",
-      "notify": true,
-      "url": "https://github.com/Sle2p/AniCh/releases/tag/1.5.27"
     },
     {
       "appID": "com.mak5er.aircard",
